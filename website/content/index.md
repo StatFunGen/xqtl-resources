@@ -1,7 +1,3 @@
----
-title: "Home"
----
-
 # FunGen-xQTL Data Catalog
 
 This is the landing page.  
