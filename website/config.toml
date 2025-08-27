@@ -1,4 +1,5 @@
 baseURL   = "http://localhost:1313/"     # for local preview
 languageCode = "en-us"
 title     = "FunGen-xQTL Data Catalog"
-theme     = "ananke"                     # or "blowfish" if you want your own
+theme     = "Blowfish"                     # or "blowfish" if you want your own
+
