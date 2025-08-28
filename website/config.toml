@@ -1,5 +1,0 @@
-baseURL   = "https://statfungen.github.io/xqtl-resources/"
-languageCode = "en-us"
-title     = "My Data Repo"
-theme     = "hugo-book"
-publishDir = "docs"

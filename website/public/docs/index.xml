@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>FunGen xQTL</title>
-    <link>http://localhost:55063/</link>
-    <description>Recent content on FunGen xQTL</description>
+    <title>Docs on FunGen xQTL</title>
+    <link>http://localhost:55063/docs/</link>
+    <description>Recent content in Docs on FunGen xQTL</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Aug 2025 15:10:58 -0400</lastBuildDate>
-    <atom:link href="http://localhost:55063/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:55063/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FunGen-xQTL Resources</title>
       <link>http://localhost:55063/docs/test/</link>
