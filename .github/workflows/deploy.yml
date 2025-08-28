@@ -3,26 +3,43 @@ name: Build & Deploy Hugo site
 on:
   push:
     branches: [main]
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # More stable version
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
         submodules: true
+        fetch-depth: 0  # Fetch all history for GitInfo
+    
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
+        extended: true  # Essential for SCSS/SASS
+    
     - name: Build site
       run: |
         cd website
         hugo --minify --destination public
+    
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: website/public
         publish_branch: gh-pages
+        commit_message: ${{ github.event.head_commit.message }}
