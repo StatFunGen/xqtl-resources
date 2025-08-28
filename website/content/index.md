@@ -1,6 +1,12 @@
-# FunGen-xQTL Data Catalog
+---
+layout: default
+title:  Home
+---
 
-This is the landing page.  
-- [Variant, loci and gene summary](/variant-gene-summary/index.md)  
-- [xQTL loci summary](/xqtl-loci-summary/index.md)
-- [AD loci summary](/ad-loci-summary/index.md)
+# Welcome
+
+FunGen-xQTL resources navigation
+
+– [Variant, loci and gene summary](/variant_gene_summary/)  
+– [xQTL loci summary](/xQTL_loci_summary/)  
+– [AD loci summary](/AD_loci_summary/)

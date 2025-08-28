@@ -1,5 +1,4 @@
-baseURL   = "http://localhost:1313/"     # for local preview
+baseURL   = "https://statfungen.github.io/xqtl-resources/"
 languageCode = "en-us"
-title     = "FunGen-xQTL Data Catalog"
-theme     = "Blowfish"                     # or "blowfish" if you want your own
-
+title     = "My Data Repo"
+theme     = "hugo-book"
