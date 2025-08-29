@@ -1,14 +1,14 @@
 {
   "name": "FunGen xQTL",
   "short_name": "FunGen xQTL",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/xqtl-resources/",
+  "scope": "/xqtl-resources/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/xqtl-resources/favicon.svg",
       "sizes": "512x512"
     }
   ]
