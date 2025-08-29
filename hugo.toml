@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://statfungen.github.io/xqtl-resources/'
 languageCode = 'en-us'
 title = 'FunGen xQTL'
 theme = 'hugo-book'
