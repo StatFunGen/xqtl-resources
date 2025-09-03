@@ -4,7 +4,6 @@
   #
   
 
-This is a landing page.
 
   xqtl-resources
   
@@ -56,13 +55,49 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
       
                   ├─ /xQTL_finemapping
           UCSC bed.gz
-          Fine-mapping results, structured by method and modality
+          Fine-mapping results, structured into contexts and modalities
+          —
+      
+      
+                      ├─ /single_context_finemapping
+          UCSC bed.gz
+          Per-QTL-type directory containing eQTL, pQTL, sQTL, mQTL, haQTL, caQTL etc. BED files of exported top loci
+          —
+      
+      
+                      ├─ /multi_context_finemapping
+          UCSC bed.gz
+          Multi-context fine-mapping results (e.g., MSBB, ROSMAP)
+          —
+      
+      
+                      ├─ /multi_gene_finemapping
+          UCSC bed.gz
+          Per-QTL-type BED files of top loci aggregated across multiple genes
+          —
+      
+      
+                      └─ /trans_finemapping
+          UCSC bed.gz
+          Trans fine-mapping BED files, per QTL type and dataset
           —
       
       
                   └─ /xQTL_colocalization
           UCSC bed.gz
-          Colocalization results, structured by method and modality
+          Colocalization results, structured by multi- and pairwise-context
+          —
+      
+      
+                      ├─ /multi_context_colocalization
+          UCSC bed.gz
+          Multi-context colocalization results
+          —
+      
+      
+                      └─ /pairwise_colocalization
+          UCSC bed.gz / TSV / Misc
+          Pairwise colocalization results and related files (bulk mQTL haQTL AD etc.)
           —
       
       
@@ -74,35 +109,47 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
       
                   ├─ /AD_finemapping
           UCSC bed.gz
-          AD fine-mapping results, structured by method and modality
+          AD GWAS/meta-analysis fine-mapping exported top loci BED files
           —
       
       
                   ├─ /AD_colocalization
           UCSC bed.gz
-          AD colocalization results, structured by method and modality
+          AD GWAS/meta-analysis colocalization exported BED files
           —
       
       
-                  └─ /AD_xQTL_colocalization
+                  ├─ /AD_xQTL_colocalization
           UCSC bed.gz
-          AD-xQTL integrated colocalization results
+          Integrated AD-xQTL colocalization results
           —
       
       
-               ├─ /AD_TWAS_MR
+                  ├─ /AD_gene_level
+          —
+          AD gene-level results, including TWAS and cTWAS results
+          —
+      
+      
+                      ├─ /TWAS_MR
           UCSC bed.gz
-          TWAS, cTWAS, and Mendelian Randomization summary outputs (large combined files)
+          TWAS, cTWAS, Mendelian Randomization summary outputs (large combined files)
           Ru Feng (with input from Chunming Liu)
       
       
-               ├─ /AD_xQTL_integration
-          XLSX, TSV for AD_xQTL_loci and AD_xQTL_genes
-          Summarized tables annotating AD loci by xQTL analyses (fine-mapping, colocalization, TWAS, MR)
+                      └─ /cTWAS
+          UCSC bed.gz
+          AD cTWAS results
           —
       
       
-               ├─ /xQTL_SCEEM_scores
+              ├─ /AD_xQTL_integration_summary
+          XLSX, TSV
+          Summary tables for AD loci annotated by xQTL analyses (fine-mapping, colocalization, TWAS, MR)
+          —
+      
+      
+          /xQTL_SCEEM_scores
           UCSC bed.gz
           ML-based xQTL PIP prediction scores on FTP server
           Chirag Lakhani
@@ -114,43 +161,67 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
           —
       
       
-              ├─ /xQTL_finemapping_models
+              ├─ /xQTL_models
+          —
+          xQTL models organized by type
+          —
+      
+      
+                  ├─ /finemapping_models
           RDS
-          Fine-mapping models
-          Ru Feng
+          Fine-mapping models by QTL type (eQTL, pQTL, glycoQTL, sQTL)
+          Ru Feng (main contact)
       
       
-              ├─ /xQTL_regional_sumstats
-          RDS
-          Companion summary statistics for fine-mapping models
-          Ru Feng
-      
-      
-              ├─ /xQTL_colocalization_models
+                  ├─ /colocalization_models
           RDS
           Colocalization models
           Xuewei Cao
       
       
-              ├─ /xQTL_TWAS_models
+                  ├─ /TWAS_models
           RDS
           TWAS models
-          Ru Feng (with inputs/clarifications by Anqi Wang & Chunming Liu)
+          Ru Feng et al.
       
       
-              ├─ /xQTL_qTWAS_models
+                  └─ /qTWAS_models
           RDS
-          Quantile TWAS models on HPC
+          Quantile TWAS models
           Anjing Liu
       
       
-              ├─ /AD_GWAS_finemapping_models
+              ├─ /AD_GWAS_models
           RDS
-          AD GWAS summary stats based fine-mapping models
+          AD GWAS fine-mapping and colocalization models
           Ruixi Li
       
       
-              └─ /AD_cTWAS_input
+                ├─ /AD_colocalization
+          RDS
+          AD GWAS colocalization models
+          Ruixi Li
+      
+      
+                └─  /AD_finemapping
+          RDS
+          AD GWAS fine-mapping models
+          Ruixi Li
+      
+      
+              ├─ /AD_xQTL_integration
+          RDS
+          AD xQTL integration models
+          —
+      
+      
+                  ├─ /AD_xQTL_colocalization_models
+          RDS
+          AD xQTL colocalization models
+          —
+      
+      
+                  └─ /AD_cTWAS_input
           RDS
           AD cTWAS input data
           Chunming Liu
@@ -164,13 +235,25 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
       
               ├─ /xQTL_LR
           UCSC bed.gz (tensorQTL)
-          Linear regression model data on FTP server
+          Linear regression model data and residual sumstats
           Anjing Liu
       
       
+                  ├─ /R_lm_residual_sumstats
+          RDS
+          Residual summary statistics for linear models
+          Anjing Liu
+      
+      
+                  └─ /tensorQTL_sumstats
+          UCSC bed.gz
+          Summary statistics from tensorQTL
+          —
+      
+      
               ├─ /xQTL_QR
-          UCSC bed.gz (tesorQTL)
-          Quantile regression model data on FTP server
+          UCSC bed.gz (tensorQTL)
+          Quantile regression model data
           Anjing Liu
       
       
@@ -194,37 +277,37 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
       
               ├─ /ADSP_LD_reference_data
           —
-          
-          
-      
-      
-                  ├─ /EUR
-          xz (bim format) with meta data
           ADSP LD reference data (on Synapse)
+          Gao Wang
+      
+      
+                  └─ /EUR
+          xz (bim format) with meta data
+          European population LD reference data
           Gao Wang
       
       
               ├─ /LDSC_reference_data
           —
-          
-          
+          LDSC reference files including LD scores and annotations
+          —
       
       
                   ├─ /LD_scores
-          Misc. file
-          LD reference data on HPC
+          Miscellaneous
+          LD scores data on HPC
           Anjing Liu
       
       
-                  ├─ /sldsc_annoatations
-          Misc. file
-          LD reference data on HPC
+                  ├─ /sldsc_annotations
+          Miscellaneous
+          S-LDSC annotation files on HPC
           Anjing Liu
       
       
                   ├─ /GWAS_munged
-          Misc. file
-          LD reference data on HPC
+          Miscellaneous
+          Munged GWAS summary statistics
           Ruixi Li
       
       
@@ -235,12 +318,11 @@ This repository contains a collection of resources related to xQTL, Alzheimer&rs
       
       
               └─ /xQTL_protocol_tutorial
-          Misc. file
+          Miscellaneous
           Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline
           Frank Grenn
       
   
-
 
 
   Contacts Summary
@@ -315,13 +397,12 @@ Folder organization mirrors the structure of cloud storage and HPC deployment fo
 For detailed info on datasets and file conventions, please refer to linked READMEs or contact the respective persons.
 For extended xQTL data descriptions, see: cumc/xqtl-data README
 
-"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://statfungen.github.io/xqtl-resources/"><meta property="og:site_name" content="FunGen xQTL Resources"><meta property="og:title" content="FunGen xQTL Resources"><meta property="og:description" content="Welcome # This is a landing page.
-xqtl-resources # FunGen-xQTL resources navigation # This repository contains a collection of resources related to xQTL, Alzheimer’s Disease (AD) loci, fine-mapping, colocalization, TWAS/Mendelian randomization, models, raw data, reference files, and companion analyses. The structure follows folders, subfolders, and file types organized by method and data modality to facilitate downstream analysis and integration.
-Repository Content Overview # Folder / Subfolder File Types Description / Notes Contact Person / (root) README.md This README summarizing repo contents and links to external data on GitHub/NIAGADS Gao Wang /variant_gene_summary — Summary of variants, loci, and genes annotated by xQTL — ├─ /xQTL_loci_summary — Summary of xQTL loci — ├─ /xQTL_finemapping UCSC bed.gz Fine-mapping results, structured by method and modality — └─ /xQTL_colocalization UCSC bed.gz Colocalization results, structured by method and modality — ├─ /AD_loci_summary — Summary of Alzheimer’s Disease (AD) loci — ├─ /AD_finemapping UCSC bed.gz AD fine-mapping results, structured by method and modality — ├─ /AD_colocalization UCSC bed.gz AD colocalization results, structured by method and modality — └─ /AD_xQTL_colocalization UCSC bed.gz AD-xQTL integrated colocalization results — ├─ /AD_TWAS_MR UCSC bed.gz TWAS, cTWAS, and Mendelian Randomization summary outputs (large combined files) Ru Feng (with input from Chunming Liu) ├─ /AD_xQTL_integration XLSX, TSV for AD_xQTL_loci and AD_xQTL_genes Summarized tables annotating AD loci by xQTL analyses (fine-mapping, colocalization, TWAS, MR) — ├─ /xQTL_SCEEM_scores UCSC bed.gz ML-based xQTL PIP prediction scores on FTP server Chirag Lakhani /xQTL_GWAS_models — Pretrained statistical and ML models for data integration — ├─ /xQTL_finemapping_models RDS Fine-mapping models Ru Feng ├─ /xQTL_regional_sumstats RDS Companion summary statistics for fine-mapping models Ru Feng ├─ /xQTL_colocalization_models RDS Colocalization models Xuewei Cao ├─ /xQTL_TWAS_models RDS TWAS models Ru Feng (with inputs/clarifications by Anqi Wang & Chunming Liu) ├─ /xQTL_qTWAS_models RDS Quantile TWAS models on HPC Anjing Liu ├─ /AD_GWAS_finemapping_models RDS AD GWAS summary stats based fine-mapping models Ruixi Li └─ /AD_cTWAS_input RDS AD cTWAS input data Chunming Liu /xQTL_data (raw pre-release area) — Raw xQTL data prior to NIAGADS harmonization; restricted access — ├─ /xQTL_LR UCSC bed.gz (tensorQTL) Linear regression model data on FTP server Anjing Liu ├─ /xQTL_QR UCSC bed.gz (tesorQTL) Quantile regression model data on FTP server Anjing Liu ├─ /xQTL_interaction UCSC bed.gz (tensorQTL) Interaction analysis data on HPC and cloud Anjing Liu └─ /xQTL_GLMM UCSC bed.gz (ISSAC) Generalized linear mixed model based xQTL calling Yuntian Zhang, Boxiang Liu /reference_files — Companion analysis supporting files — ├─ /ADSP_LD_reference_data — ├─ /EUR xz (bim format) with meta data ADSP LD reference data (on Synapse) Gao Wang ├─ /LDSC_reference_data — ├─ /LD_scores Misc. file LD reference data on HPC Anjing Liu ├─ /sldsc_annoatations Misc. file LD reference data on HPC Anjing Liu ├─ /GWAS_munged Misc. file LD reference data on HPC Ruixi Li ├─ /functional_enrichment_annotations UCSC bed.gz Functional enrichment annotation files on HPC Anjing Liu └─ /xQTL_protocol_tutorial Misc. file Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline Frank Grenn Contacts Summary # Contact Person Area of Responsibility Gao Wang General coordination, README, ADSP LD reference data Ru Feng TWAS/MR outputs, fine-mapping, summary stats, TWAS models Chunming Liu TWAS/MR and cTWAS inputs and model clarifications Chirag Lakhani ML-based prediction scores Xuewei Cao Colocalization models Anqi Wang TWAS models input support Anjing Liu Quantile TWAS models, raw xQTL data, tensorQTL files, reference data (except GWAS munged) Ruixi Li AD GWAS fine-mapping models, GWAS munged data Yuntian Zhang GLMM-based xQTL calling data Boxiang Liu GLMM-based xQTL calling data Frank Grenn Protocol tutorial and example data Additional Notes # Some data, especially raw or pre-release files, require approval for access. Please contact the relevant person for access requests. Folder organization mirrors the structure of cloud storage and HPC deployment for ease of usage. For detailed info on datasets and file conventions, please refer to linked READMEs or contact the respective persons. For extended xQTL data descriptions, see: cumc/xqtl-data README"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>FunGen xQTL Resources | FunGen xQTL Resources</title><link rel=icon href=/xqtl-resources/favicon.png><link rel=manifest href=/xqtl-resources/manifest.json><link rel=canonical href=https://statfungen.github.io/xqtl-resources/><link rel=stylesheet href=/xqtl-resources/book.min.d60d65c9fd57805d29fb9d7109cb03a93c46852bac9bb8cdfec366ee739b3605.css integrity="sha256-1g1lyf1XgF0p+51xCcsDqTxGhSusm7jN/sNm7nObNgU=" crossorigin=anonymous><script defer src=/xqtl-resources/fuse.min.js></script><script defer src=/xqtl-resources/en.search.min.5ba60eb2534cf6fc704c5c83a29f39320919763bfa5a49fe98dbc84c89c760d7.js integrity="sha256-W6YOslNM9vxwTFyDop85MgkZdjv6Wkn+mNvITInHYNc=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://statfungen.github.io/xqtl-resources/index.xml title="FunGen xQTL Resources"></head><body dir=ltr class="book-kind-home book-type-page"><input type=checkbox class="hidden toggle" id=menu-control>
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://statfungen.github.io/xqtl-resources/"><meta property="og:site_name" content="FunGen xQTL Resources"><meta property="og:title" content="FunGen xQTL Resources"><meta property="og:description" content="Welcome # xqtl-resources # FunGen-xQTL resources navigation # This repository contains a collection of resources related to xQTL, Alzheimer’s Disease (AD) loci, fine-mapping, colocalization, TWAS/Mendelian randomization, models, raw data, reference files, and companion analyses. The structure follows folders, subfolders, and file types organized by method and data modality to facilitate downstream analysis and integration.
+Repository Content Overview # Folder / Subfolder File Types Description / Notes Contact Person / (root) README.md This README summarizing repo contents and links to external data on GitHub/NIAGADS Gao Wang /variant_gene_summary — Summary of variants, loci, and genes annotated by xQTL — ├─ /xQTL_loci_summary — Summary of xQTL loci — ├─ /xQTL_finemapping UCSC bed.gz Fine-mapping results, structured into contexts and modalities — ├─ /single_context_finemapping UCSC bed.gz Per-QTL-type directory containing eQTL, pQTL, sQTL, mQTL, haQTL, caQTL etc. BED files of exported top loci — ├─ /multi_context_finemapping UCSC bed.gz Multi-context fine-mapping results (e.g., MSBB, ROSMAP) — ├─ /multi_gene_finemapping UCSC bed.gz Per-QTL-type BED files of top loci aggregated across multiple genes — └─ /trans_finemapping UCSC bed.gz Trans fine-mapping BED files, per QTL type and dataset — └─ /xQTL_colocalization UCSC bed.gz Colocalization results, structured by multi- and pairwise-context — ├─ /multi_context_colocalization UCSC bed.gz Multi-context colocalization results — └─ /pairwise_colocalization UCSC bed.gz / TSV / Misc Pairwise colocalization results and related files (bulk mQTL haQTL AD etc.) — ├─ /AD_loci_summary — Summary of Alzheimer’s Disease (AD) loci — ├─ /AD_finemapping UCSC bed.gz AD GWAS/meta-analysis fine-mapping exported top loci BED files — ├─ /AD_colocalization UCSC bed.gz AD GWAS/meta-analysis colocalization exported BED files — ├─ /AD_xQTL_colocalization UCSC bed.gz Integrated AD-xQTL colocalization results — ├─ /AD_gene_level — AD gene-level results, including TWAS and cTWAS results — ├─ /TWAS_MR UCSC bed.gz TWAS, cTWAS, Mendelian Randomization summary outputs (large combined files) Ru Feng (with input from Chunming Liu) └─ /cTWAS UCSC bed.gz AD cTWAS results — ├─ /AD_xQTL_integration_summary XLSX, TSV Summary tables for AD loci annotated by xQTL analyses (fine-mapping, colocalization, TWAS, MR) — /xQTL_SCEEM_scores UCSC bed.gz ML-based xQTL PIP prediction scores on FTP server Chirag Lakhani /xQTL_GWAS_models — Pretrained statistical and ML models for data integration — ├─ /xQTL_models — xQTL models organized by type — ├─ /finemapping_models RDS Fine-mapping models by QTL type (eQTL, pQTL, glycoQTL, sQTL) Ru Feng (main contact) ├─ /colocalization_models RDS Colocalization models Xuewei Cao ├─ /TWAS_models RDS TWAS models Ru Feng et al. └─ /qTWAS_models RDS Quantile TWAS models Anjing Liu ├─ /AD_GWAS_models RDS AD GWAS fine-mapping and colocalization models Ruixi Li ├─ /AD_colocalization RDS AD GWAS colocalization models Ruixi Li └─ /AD_finemapping RDS AD GWAS fine-mapping models Ruixi Li ├─ /AD_xQTL_integration RDS AD xQTL integration models — ├─ /AD_xQTL_colocalization_models RDS AD xQTL colocalization models — └─ /AD_cTWAS_input RDS AD cTWAS input data Chunming Liu /xQTL_data (raw pre-release area) — Raw xQTL data prior to NIAGADS harmonization; restricted access — ├─ /xQTL_LR UCSC bed.gz (tensorQTL) Linear regression model data and residual sumstats Anjing Liu ├─ /R_lm_residual_sumstats RDS Residual summary statistics for linear models Anjing Liu └─ /tensorQTL_sumstats UCSC bed.gz Summary statistics from tensorQTL — ├─ /xQTL_QR UCSC bed.gz (tensorQTL) Quantile regression model data Anjing Liu ├─ /xQTL_interaction UCSC bed.gz (tensorQTL) Interaction analysis data on HPC and cloud Anjing Liu └─ /xQTL_GLMM UCSC bed.gz (ISSAC) Generalized linear mixed model based xQTL calling Yuntian Zhang, Boxiang Liu /reference_files — Companion analysis supporting files — ├─ /ADSP_LD_reference_data — ADSP LD reference data (on Synapse) Gao Wang └─ /EUR xz (bim format) with meta data European population LD reference data Gao Wang ├─ /LDSC_reference_data — LDSC reference files including LD scores and annotations — ├─ /LD_scores Miscellaneous LD scores data on HPC Anjing Liu ├─ /sldsc_annotations Miscellaneous S-LDSC annotation files on HPC Anjing Liu ├─ /GWAS_munged Miscellaneous Munged GWAS summary statistics Ruixi Li ├─ /functional_enrichment_annotations UCSC bed.gz Functional enrichment annotation files on HPC Anjing Liu └─ /xQTL_protocol_tutorial Miscellaneous Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline Frank Grenn Contacts Summary # Contact Person Area of Responsibility Gao Wang General coordination, README, ADSP LD reference data Ru Feng TWAS/MR outputs, fine-mapping, summary stats, TWAS models Chunming Liu TWAS/MR and cTWAS inputs and model clarifications Chirag Lakhani ML-based prediction scores Xuewei Cao Colocalization models Anqi Wang TWAS models input support Anjing Liu Quantile TWAS models, raw xQTL data, tensorQTL files, reference data (except GWAS munged) Ruixi Li AD GWAS fine-mapping models, GWAS munged data Yuntian Zhang GLMM-based xQTL calling data Boxiang Liu GLMM-based xQTL calling data Frank Grenn Protocol tutorial and example data Additional Notes # Some data, especially raw or pre-release files, require approval for access. Please contact the relevant person for access requests. Folder organization mirrors the structure of cloud storage and HPC deployment for ease of usage. For detailed info on datasets and file conventions, please refer to linked READMEs or contact the respective persons. For extended xQTL data descriptions, see: cumc/xqtl-data README"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>FunGen xQTL Resources | FunGen xQTL Resources</title><link rel=icon href=/xqtl-resources/favicon.png><link rel=manifest href=/xqtl-resources/manifest.json><link rel=canonical href=https://statfungen.github.io/xqtl-resources/><link rel=stylesheet href=/xqtl-resources/book.min.d60d65c9fd57805d29fb9d7109cb03a93c46852bac9bb8cdfec366ee739b3605.css integrity="sha256-1g1lyf1XgF0p+51xCcsDqTxGhSusm7jN/sNm7nObNgU=" crossorigin=anonymous><script defer src=/xqtl-resources/fuse.min.js></script><script defer src=/xqtl-resources/en.search.min.5ba60eb2534cf6fc704c5c83a29f39320919763bfa5a49fe98dbc84c89c760d7.js integrity="sha256-W6YOslNM9vxwTFyDop85MgkZdjv6Wkn+mNvITInHYNc=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://statfungen.github.io/xqtl-resources/index.xml title="FunGen xQTL Resources"></head><body dir=ltr class="book-kind-home book-type-page"><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/xqtl-resources/><span>FunGen xQTL Resources</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/xqtl-resources/svg/menu.svg class=book-icon alt=Menu></label><h3>FunGen xQTL Resources</h3><label for=toc-control><img src=/xqtl-resources/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#fungen-xqtl-resources-navigation>FunGen-xQTL resources navigation</a></li></ul></li><li><a href=#repository-content-overview>Repository Content Overview</a></li><li><a href=#contacts-summary>Contacts Summary</a></li><li><a href=#additional-notes>Additional Notes</a></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=welcome>Welcome
-<a class=anchor href=#welcome>#</a></h1><p>This is a landing page.</p><h1 id=xqtl-resources>xqtl-resources
+<a class=anchor href=#welcome>#</a></h1><h1 id=xqtl-resources>xqtl-resources
 <a class=anchor href=#xqtl-resources>#</a></h1><h3 id=fungen-xqtl-resources-navigation>FunGen-xQTL resources navigation
 <a class=anchor href=#fungen-xqtl-resources-navigation>#</a></h3><p>This repository contains a collection of resources related to xQTL, Alzheimer&rsquo;s Disease (AD) loci, fine-mapping, colocalization, TWAS/Mendelian randomization, models, raw data, reference files, and companion analyses. The structure follows folders, subfolders, and file types organized by method and data modality to facilitate downstream analysis and integration.</p><hr><h2 id=repository-content-overview>Repository Content Overview
-<a class=anchor href=#repository-content-overview>#</a></h2><table><thead><tr><th>Folder / Subfolder</th><th>File Types</th><th>Description / Notes</th><th>Contact Person</th></tr></thead><tbody><tr><td><code>/</code> (root)</td><td>README.md</td><td>This README summarizing repo contents and links to external data on GitHub/NIAGADS</td><td>Gao Wang</td></tr><tr><td><code>/variant_gene_summary</code></td><td>—</td><td>Summary of variants, loci, and genes annotated by xQTL</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_loci_summary</code></td><td>—</td><td>Summary of xQTL loci</td><td>—</td></tr><tr><td>        ├─ <code>/xQTL_finemapping</code></td><td>UCSC bed.gz</td><td>Fine-mapping results, structured by method and modality</td><td>—</td></tr><tr><td>        └─ <code>/xQTL_colocalization</code></td><td>UCSC bed.gz</td><td>Colocalization results, structured by method and modality</td><td>—</td></tr><tr><td>    ├─ <code>/AD_loci_summary</code></td><td>—</td><td>Summary of Alzheimer&rsquo;s Disease (AD) loci</td><td>—</td></tr><tr><td>        ├─ <code>/AD_finemapping</code></td><td>UCSC bed.gz</td><td>AD fine-mapping results, structured by method and modality</td><td>—</td></tr><tr><td>        ├─ <code>/AD_colocalization</code></td><td>UCSC bed.gz</td><td>AD colocalization results, structured by method and modality</td><td>—</td></tr><tr><td>        └─ <code>/AD_xQTL_colocalization</code></td><td>UCSC bed.gz</td><td>AD-xQTL integrated colocalization results</td><td>—</td></tr><tr><td>     ├─ <code>/AD_TWAS_MR</code></td><td>UCSC bed.gz</td><td>TWAS, cTWAS, and Mendelian Randomization summary outputs (large combined files)</td><td>Ru Feng (with input from Chunming Liu)</td></tr><tr><td>     ├─ <code>/AD_xQTL_integration</code></td><td>XLSX, TSV for AD_xQTL_loci and AD_xQTL_genes</td><td>Summarized tables annotating AD loci by xQTL analyses (fine-mapping, colocalization, TWAS, MR)</td><td>—</td></tr><tr><td>     ├─ <code>/xQTL_SCEEM_scores</code></td><td>UCSC bed.gz</td><td>ML-based xQTL PIP prediction scores on FTP server</td><td>Chirag Lakhani</td></tr><tr><td><code>/xQTL_GWAS_models</code></td><td>—</td><td>Pretrained statistical and ML models for data integration</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_finemapping_models</code></td><td>RDS</td><td>Fine-mapping models</td><td>Ru Feng</td></tr><tr><td>    ├─ <code>/xQTL_regional_sumstats</code></td><td>RDS</td><td>Companion summary statistics for fine-mapping models</td><td>Ru Feng</td></tr><tr><td>    ├─ <code>/xQTL_colocalization_models</code></td><td>RDS</td><td>Colocalization models</td><td>Xuewei Cao</td></tr><tr><td>    ├─ <code>/xQTL_TWAS_models</code></td><td>RDS</td><td>TWAS models</td><td>Ru Feng (with inputs/clarifications by Anqi Wang & Chunming Liu)</td></tr><tr><td>    ├─ <code>/xQTL_qTWAS_models</code></td><td>RDS</td><td>Quantile TWAS models on HPC</td><td>Anjing Liu</td></tr><tr><td>    ├─ <code>/AD_GWAS_finemapping_models</code></td><td>RDS</td><td>AD GWAS summary stats based fine-mapping models</td><td>Ruixi Li</td></tr><tr><td>    └─ <code>/AD_cTWAS_input</code></td><td>RDS</td><td>AD cTWAS input data</td><td>Chunming Liu</td></tr><tr><td><code>/xQTL_data</code> (raw pre-release area)</td><td>—</td><td>Raw xQTL data prior to NIAGADS harmonization; restricted access</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_LR</code></td><td>UCSC bed.gz (tensorQTL)</td><td>Linear regression model data on FTP server</td><td>Anjing Liu</td></tr><tr><td>    ├─ <code>/xQTL_QR</code></td><td>UCSC bed.gz (tesorQTL)</td><td>Quantile regression model data on FTP server</td><td>Anjing Liu</td></tr><tr><td>    ├─ <code>/xQTL_interaction</code></td><td>UCSC bed.gz (tensorQTL)</td><td>Interaction analysis data on HPC and cloud</td><td>Anjing Liu</td></tr><tr><td>    └─ <code>/xQTL_GLMM</code></td><td>UCSC bed.gz (ISSAC)</td><td>Generalized linear mixed model based xQTL calling</td><td>Yuntian Zhang, Boxiang Liu</td></tr><tr><td><code>/reference_files</code></td><td>—</td><td>Companion analysis supporting files</td><td>—</td></tr><tr><td>    ├─ <code>/ADSP_LD_reference_data</code></td><td>—</td><td></td><td></td></tr><tr><td>        ├─ <code>/EUR</code></td><td>xz (bim format) with meta data</td><td>ADSP LD reference data (on Synapse)</td><td>Gao Wang</td></tr><tr><td>    ├─ <code>/LDSC_reference_data</code></td><td>—</td><td></td><td></td></tr><tr><td>        ├─ <code>/LD_scores</code></td><td>Misc. file</td><td>LD reference data on HPC</td><td>Anjing Liu</td></tr><tr><td>        ├─ <code>/sldsc_annoatations</code></td><td>Misc. file</td><td>LD reference data on HPC</td><td>Anjing Liu</td></tr><tr><td>        ├─ <code>/GWAS_munged</code></td><td>Misc. file</td><td>LD reference data on HPC</td><td>Ruixi Li</td></tr><tr><td>    ├─ <code>/functional_enrichment_annotations</code></td><td>UCSC bed.gz</td><td>Functional enrichment annotation files on HPC</td><td>Anjing Liu</td></tr><tr><td>    └─ <code>/xQTL_protocol_tutorial</code></td><td>Misc. file</td><td>Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline</td><td>Frank Grenn</td></tr></tbody></table><hr><h2 id=contacts-summary>Contacts Summary
+<a class=anchor href=#repository-content-overview>#</a></h2><table><thead><tr><th>Folder / Subfolder</th><th>File Types</th><th>Description / Notes</th><th>Contact Person</th></tr></thead><tbody><tr><td><code>/</code> (root)</td><td>README.md</td><td>This README summarizing repo contents and links to external data on GitHub/NIAGADS</td><td>Gao Wang</td></tr><tr><td><code>/variant_gene_summary</code></td><td>—</td><td>Summary of variants, loci, and genes annotated by xQTL</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_loci_summary</code></td><td>—</td><td>Summary of xQTL loci</td><td>—</td></tr><tr><td>        ├─ <code>/xQTL_finemapping</code></td><td>UCSC bed.gz</td><td>Fine-mapping results, structured into contexts and modalities</td><td>—</td></tr><tr><td>            ├─ <code>/single_context_finemapping</code></td><td>UCSC bed.gz</td><td>Per-QTL-type directory containing eQTL, pQTL, sQTL, mQTL, haQTL, caQTL etc. BED files of exported top loci</td><td>—</td></tr><tr><td>            ├─ <code>/multi_context_finemapping</code></td><td>UCSC bed.gz</td><td>Multi-context fine-mapping results (e.g., MSBB, ROSMAP)</td><td>—</td></tr><tr><td>            ├─ <code>/multi_gene_finemapping</code></td><td>UCSC bed.gz</td><td>Per-QTL-type BED files of top loci aggregated across multiple genes</td><td>—</td></tr><tr><td>            └─ <code>/trans_finemapping</code></td><td>UCSC bed.gz</td><td>Trans fine-mapping BED files, per QTL type and dataset</td><td>—</td></tr><tr><td>        └─ <code>/xQTL_colocalization</code></td><td>UCSC bed.gz</td><td>Colocalization results, structured by multi- and pairwise-context</td><td>—</td></tr><tr><td>            ├─ <code>/multi_context_colocalization</code></td><td>UCSC bed.gz</td><td>Multi-context colocalization results</td><td>—</td></tr><tr><td>            └─ <code>/pairwise_colocalization</code></td><td>UCSC bed.gz / TSV / Misc</td><td>Pairwise colocalization results and related files (bulk mQTL haQTL AD etc.)</td><td>—</td></tr><tr><td>    ├─ <code>/AD_loci_summary</code></td><td>—</td><td>Summary of Alzheimer&rsquo;s Disease (AD) loci</td><td>—</td></tr><tr><td>        ├─ <code>/AD_finemapping</code></td><td>UCSC bed.gz</td><td>AD GWAS/meta-analysis fine-mapping exported top loci BED files</td><td>—</td></tr><tr><td>        ├─ <code>/AD_colocalization</code></td><td>UCSC bed.gz</td><td>AD GWAS/meta-analysis colocalization exported BED files</td><td>—</td></tr><tr><td>        ├─ <code>/AD_xQTL_colocalization</code></td><td>UCSC bed.gz</td><td>Integrated AD-xQTL colocalization results</td><td>—</td></tr><tr><td>        ├─ <code>/AD_gene_level</code></td><td>—</td><td>AD gene-level results, including TWAS and cTWAS results</td><td>—</td></tr><tr><td>            ├─ <code>/TWAS_MR</code></td><td>UCSC bed.gz</td><td>TWAS, cTWAS, Mendelian Randomization summary outputs (large combined files)</td><td>Ru Feng (with input from Chunming Liu)</td></tr><tr><td>            └─ <code>/cTWAS</code></td><td>UCSC bed.gz</td><td>AD cTWAS results</td><td>—</td></tr><tr><td>    ├─ <code>/AD_xQTL_integration_summary</code></td><td>XLSX, TSV</td><td>Summary tables for AD loci annotated by xQTL analyses (fine-mapping, colocalization, TWAS, MR)</td><td>—</td></tr><tr><td><code>/xQTL_SCEEM_scores</code></td><td>UCSC bed.gz</td><td>ML-based xQTL PIP prediction scores on FTP server</td><td>Chirag Lakhani</td></tr><tr><td><code>/xQTL_GWAS_models</code></td><td>—</td><td>Pretrained statistical and ML models for data integration</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_models</code></td><td>—</td><td>xQTL models organized by type</td><td>—</td></tr><tr><td>        ├─ <code>/finemapping_models</code></td><td>RDS</td><td>Fine-mapping models by QTL type (eQTL, pQTL, glycoQTL, sQTL)</td><td>Ru Feng (main contact)</td></tr><tr><td>        ├─ <code>/colocalization_models</code></td><td>RDS</td><td>Colocalization models</td><td>Xuewei Cao</td></tr><tr><td>        ├─ <code>/TWAS_models</code></td><td>RDS</td><td>TWAS models</td><td>Ru Feng et al.</td></tr><tr><td>        └─ <code>/qTWAS_models</code></td><td>RDS</td><td>Quantile TWAS models</td><td>Anjing Liu</td></tr><tr><td>    ├─ <code>/AD_GWAS_models</code></td><td>RDS</td><td>AD GWAS fine-mapping and colocalization models</td><td>Ruixi Li</td></tr><tr><td>      ├─ <code>/AD_colocalization</code></td><td>RDS</td><td>AD GWAS colocalization models</td><td>Ruixi Li</td></tr><tr><td>      └─ <code>/AD_finemapping</code></td><td>RDS</td><td>AD GWAS fine-mapping models</td><td>Ruixi Li</td></tr><tr><td>    ├─ <code>/AD_xQTL_integration</code></td><td>RDS</td><td>AD xQTL integration models</td><td>—</td></tr><tr><td>        ├─ <code>/AD_xQTL_colocalization_models</code></td><td>RDS</td><td>AD xQTL colocalization models</td><td>—</td></tr><tr><td>        └─ <code>/AD_cTWAS_input</code></td><td>RDS</td><td>AD cTWAS input data</td><td>Chunming Liu</td></tr><tr><td><code>/xQTL_data</code> (raw pre-release area)</td><td>—</td><td>Raw xQTL data prior to NIAGADS harmonization; restricted access</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_LR</code></td><td>UCSC bed.gz (tensorQTL)</td><td>Linear regression model data and residual sumstats</td><td>Anjing Liu</td></tr><tr><td>        ├─ <code>/R_lm_residual_sumstats</code></td><td>RDS</td><td>Residual summary statistics for linear models</td><td>Anjing Liu</td></tr><tr><td>        └─ <code>/tensorQTL_sumstats</code></td><td>UCSC bed.gz</td><td>Summary statistics from tensorQTL</td><td>—</td></tr><tr><td>    ├─ <code>/xQTL_QR</code></td><td>UCSC bed.gz (tensorQTL)</td><td>Quantile regression model data</td><td>Anjing Liu</td></tr><tr><td>    ├─ <code>/xQTL_interaction</code></td><td>UCSC bed.gz (tensorQTL)</td><td>Interaction analysis data on HPC and cloud</td><td>Anjing Liu</td></tr><tr><td>    └─ <code>/xQTL_GLMM</code></td><td>UCSC bed.gz (ISSAC)</td><td>Generalized linear mixed model based xQTL calling</td><td>Yuntian Zhang, Boxiang Liu</td></tr><tr><td><code>/reference_files</code></td><td>—</td><td>Companion analysis supporting files</td><td>—</td></tr><tr><td>    ├─ <code>/ADSP_LD_reference_data</code></td><td>—</td><td>ADSP LD reference data (on Synapse)</td><td>Gao Wang</td></tr><tr><td>        └─ <code>/EUR</code></td><td>xz (bim format) with meta data</td><td>European population LD reference data</td><td>Gao Wang</td></tr><tr><td>    ├─ <code>/LDSC_reference_data</code></td><td>—</td><td>LDSC reference files including LD scores and annotations</td><td>—</td></tr><tr><td>        ├─ <code>/LD_scores</code></td><td>Miscellaneous</td><td>LD scores data on HPC</td><td>Anjing Liu</td></tr><tr><td>        ├─ <code>/sldsc_annotations</code></td><td>Miscellaneous</td><td>S-LDSC annotation files on HPC</td><td>Anjing Liu</td></tr><tr><td>        ├─ <code>/GWAS_munged</code></td><td>Miscellaneous</td><td>Munged GWAS summary statistics</td><td>Ruixi Li</td></tr><tr><td>    ├─ <code>/functional_enrichment_annotations</code></td><td>UCSC bed.gz</td><td>Functional enrichment annotation files on HPC</td><td>Anjing Liu</td></tr><tr><td>    └─ <code>/xQTL_protocol_tutorial</code></td><td>Miscellaneous</td><td>Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline</td><td>Frank Grenn</td></tr></tbody></table><h2 id=contacts-summary>Contacts Summary
 <a class=anchor href=#contacts-summary>#</a></h2><table><thead><tr><th>Contact Person</th><th>Area of Responsibility</th></tr></thead><tbody><tr><td>Gao Wang</td><td>General coordination, README, ADSP LD reference data</td></tr><tr><td>Ru Feng</td><td>TWAS/MR outputs, fine-mapping, summary stats, TWAS models</td></tr><tr><td>Chunming Liu</td><td>TWAS/MR and cTWAS inputs and model clarifications</td></tr><tr><td>Chirag Lakhani</td><td>ML-based prediction scores</td></tr><tr><td>Xuewei Cao</td><td>Colocalization models</td></tr><tr><td>Anqi Wang</td><td>TWAS models input support</td></tr><tr><td>Anjing Liu</td><td>Quantile TWAS models, raw xQTL data, tensorQTL files, reference data (except GWAS munged)</td></tr><tr><td>Ruixi Li</td><td>AD GWAS fine-mapping models, GWAS munged data</td></tr><tr><td>Yuntian Zhang</td><td>GLMM-based xQTL calling data</td></tr><tr><td>Boxiang Liu</td><td>GLMM-based xQTL calling data</td></tr><tr><td>Frank Grenn</td><td>Protocol tutorial and example data</td></tr></tbody></table><hr><h2 id=additional-notes>Additional Notes
 <a class=anchor href=#additional-notes>#</a></h2><ul><li>Some data, especially raw or pre-release files, require approval for access. Please contact the relevant person for access requests.</li><li>Folder organization mirrors the structure of cloud storage and HPC deployment for ease of usage.</li><li>For detailed info on datasets and file conventions, please refer to linked READMEs or contact the respective persons.</li><li>For extended xQTL data descriptions, see: <a href=https://github.com/cumc/xqtl-data/blob/main/release_data/README.md>cumc/xqtl-data README</a></li></ul><hr></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#fungen-xqtl-resources-navigation>FunGen-xQTL resources navigation</a></li></ul></li><li><a href=#repository-content-overview>Repository Content Overview</a></li><li><a href=#contacts-summary>Contacts Summary</a></li><li><a href=#additional-notes>Additional Notes</a></li></ul></nav></div></aside></main></body></html>
