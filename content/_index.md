@@ -1,8 +1,3 @@
-+++
-date = '2025-08-29T11:43:09-04:00'
-draft = false
-title = 'FunGen xQTL Resources'
-+++
 # Molecular QTL (xQTL) and GWAS resources for Alzheimer's disease risk loci and genes
 
 ## Overview
