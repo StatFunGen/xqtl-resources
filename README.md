@@ -1,75 +1,86 @@
-# xqtl-resources
-### FunGen-xQTL resources navigation
+# xQTL and GWAS Resources for Alzheimer's Disease Research
 
-This repository contains a collection of resources related to xQTL, Alzheimer's Disease (AD) loci, fine-mapping, colocalization, TWAS/Mendelian randomization, models, raw data, reference files, and companion analyses. The structure follows folders, subfolders, and file types organized by method and data modality to facilitate downstream analysis and integration.
+## Overview
 
----
+This resource provides molecular quantitative trait loci (xQTL) and genome-wide association study (GWAS) analysis results for Alzheimer's disease research. Beyond traditional xQTL mapping, we employ single-trait and multi-trait fine-mapping, trans-QTL fine-mapping, colocalization, quantile regression QTLs, interaction QTLs, and machine learning-based prediction models to identify causal variants and their molecular mechanisms. Our analyses account for linkage disequilibrium between variants and jointly model across multiple traits, providing posterior inclusion probabilities (PIP), credible sets (CS), colocalization confidence sets (CoS), effect sizes, and machine learning-based functional annotations. We also provide comprehensive fine-mapping, colocalization, and integration analyses including TWAS and Mendelian randomization for contemporary AD GWAS studies integrated with our xQTL resources.
 
-## Repository Content Overview
+This resource is part of the FunGen-xQTL project within the [FunGen-AD Consortium](https://adsp-fgc.niagads.org/research/), which systematically maps genetic variants influencing molecular phenotypes across Alzheimer's disease cohorts. By integrating data from ROSMAP, Knight ADRC, Mount Sinai Brain Bank, and other collaborating studies, FunGen-xQTL provides a comprehensive molecular QTL resource for AD gemetocs research.
 
-| Folder / Subfolder                        | File Types           | Description / Notes                                                                                              | Contact Person                      |
-|------------------------------------------|---------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| `/` (root)                              | README.md              | This README summarizing repo contents and links to external data on GitHub/NIAGADS                                | Gao Wang                          |
-| `/variant_gene_summary`                  | —        | Summary of variants, loci, and genes annotated by xQTL                                                           | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_loci_summary`         | —         | Summary of xQTL loci                                                                                              | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_finemapping`       | UCSC bed.gz         | Fine-mapping results, structured by method and modality                                                          | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ `/xQTL_colocalization`    | UCSC bed.gz         | Colocalization results, structured by method and modality                                                        | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/AD_loci_summary`           | —         | Summary of Alzheimer's Disease (AD) loci                                                                         | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/AD_finemapping`          | UCSC bed.gz         | AD fine-mapping results, structured by method and modality                                                       | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/AD_colocalization`      | UCSC bed.gz         | AD colocalization results, structured by method and modality                                                     | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ `/AD_xQTL_colocalization`  | UCSC bed.gz         | AD-xQTL integrated colocalization results                                                                        | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─ `/AD_TWAS_MR`                           | UCSC bed.gz         | TWAS, cTWAS, and Mendelian Randomization summary outputs (large combined files)                                  | Ru Feng (with input from Chunming Liu) |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─ `/AD_xQTL_integration`                  | XLSX, TSV for AD_xQTL_loci and AD_xQTL_genes           | Summarized tables annotating AD loci by xQTL analyses (fine-mapping, colocalization, TWAS, MR)                   | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─ `/xQTL_SCEEM_scores`                    | UCSC bed.gz         | ML-based xQTL PIP prediction scores on FTP server                                                                              | Chirag Lakhani                   |
-| `/xQTL_GWAS_models`                     | —                 | Pretrained statistical and ML models for data integration                                                         | —                   |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_finemapping_models`   | RDS                 | Fine-mapping models                                                                                                | Ru Feng                         |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_regional_sumstats`    | RDS                 | Companion summary statistics for fine-mapping models                                                              | Ru Feng                         |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_colocalization_models`| RDS                 | Colocalization models                                                                                              | Xuewei Cao                     |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_TWAS_models`          | RDS                 | TWAS models                                             | Ru Feng (with inputs/clarifications by Anqi Wang & Chunming Liu)|
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_qTWAS_models`         | RDS                 | Quantile TWAS models on HPC                                                                                        | Anjing Liu                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/AD_GWAS_finemapping_models`| RDS                 | AD GWAS summary stats based fine-mapping models                                                                                   | Ruixi Li                       |
-| &nbsp;&nbsp;&nbsp;&nbsp;└─ `/AD_cTWAS_input`            | RDS                 | AD cTWAS input data                                                                                               | Chunming Liu                  |
-| `/xQTL_data` (raw pre-release area)     | —        | Raw xQTL data prior to NIAGADS harmonization; restricted access                                                  | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_LR`                 | UCSC bed.gz (tensorQTL)        | Linear regression model data on FTP server                                                                                     | Anjing Liu                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_QR`                 | UCSC bed.gz (tesorQTL)        | Quantile regression model data on FTP server                                                                                   | Anjing Liu                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/xQTL_interaction`         | UCSC bed.gz (tensorQTL)        | Interaction analysis data on HPC and cloud                                                                                         | Anjing Liu                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;└─ `/xQTL_GLMM`                | UCSC bed.gz (ISSAC)        | Generalized linear mixed model based xQTL calling                                                                 | Yuntian Zhang, Boxiang Liu    |
-| `/reference_files`                      |  —              | Companion analysis supporting files                                                       |  —                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/ADSP_LD_reference_data` | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/EUR` | xz (bim format) with meta data    | ADSP LD reference data (on Synapse)                                                                                   | Gao Wang                      |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/LDSC_reference_data` | —                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/LD_scores` | Misc. file     | LD reference data on HPC                                                                                   | Anjing Liu                      |Miscellaneous       | LD scores, S-LDSC annotations, munged GWAS data   
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/sldsc_annoatations` | Misc. file    | LD reference data on HPC                                                                                   | Anjing Liu                      |Miscellaneous       | LD scores, S-LDSC annotations, munged GWAS data  
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `/GWAS_munged` | Misc. file     | LD reference data on HPC                                                                                   | Ruixi Li                      |Miscellaneous       | LD scores, S-LDSC annotations, munged GWAS data                                                                | Anjing Liu (except GWAS munged), Ruixi Li (GWAS munged) |
-| &nbsp;&nbsp;&nbsp;&nbsp;├─ `/functional_enrichment_annotations`| UCSC bed.gz       | Functional enrichment annotation files on HPC                                                                           | Anjing Liu                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;└─ `/xQTL_protocol_tutorial`   | Misc. file             | Toy example and protocol tutorial data compatible with FunGen-xQTL pipeline                                     | Frank Grenn                   |
+The computational protocols generating these results are available at [xQTL Protocol Documentation](https://statfungen.github.io/xqtl-protocol/README.html). Most computations were performed on AWS cloud infrastructure using [MemVerge Memory Machine Cloud](https://www.mmcloud.io/) for automated spot instance management as a cost-effective way for large-scale genomic analyses. This page provides links to variant and gene-level summaries for xQTL and AD, pretrained statistical and machine learning models for use in other projects, raw xQTL data, and reference datasets.
 
----
+## Variant and Gene-Level Summaries
 
-## Contacts Summary
+### Molecular QTL Fine-mapping and Colocalization
 
-| Contact Person      | Area of Responsibility                                             |
-|---------------------|-------------------------------------------------------------------|
-| Gao Wang            | General coordination, README, ADSP LD reference data              |
-| Ru Feng             | TWAS/MR outputs, fine-mapping, summary stats, TWAS models         |
-| Chunming Liu        | TWAS/MR and cTWAS inputs and model clarifications                 |
-| Chirag Lakhani      | ML-based prediction scores                                        |
-| Xuewei Cao          | Colocalization models                                            |
-| Anqi Wang           | TWAS models input support                                        |
-| Anjing Liu          | Quantile TWAS models, raw xQTL data, tensorQTL files, reference data (except GWAS munged) |
-| Ruixi Li            | AD GWAS fine-mapping models, GWAS munged data                    |
-| Yuntian Zhang       | GLMM-based xQTL calling data                                      |
-| Boxiang Liu         | GLMM-based xQTL calling data                                      |
-| Frank Grenn         | Protocol tutorial and example data                               |
+Our xQTL analyses span diverse brain regions and cell types, providing fine-mapped results for [expression QTLs (eQTL)](#single_context_eqtl), [splicing QTLs (sQTL)](#single_context_sqtl), [protein QTLs (pQTL)](#single_context_pqtl), [glycosylation QTLs (glycoQTL)](#single_context_glycoqtl), [methylation QTLs (mQTL)](#single_context_mqtl), [histone acetylation QTLs (haQTL)](#single_context_haqtl), and [chromatin accessibility QTLs (caQTL)](#single_context_caqtl) from single-context fine-mapping across multiple cohorts. We provide [multi-context fine-mapping](#multi_context_finemapping) that integrates signals across brain regions for ROSMAP and MSBB cohorts, and [multi-gene fine-mapping](#multi_gene_finemapping) with separate analyses for [eQTLs](#multi_gene_eqtl) and [pQTLs](#multi_gene_pqtl) that jointly model multiple genes. Additionally, trans-QTL fine-mapping identifies distant regulatory relationships for [trans-eQTLs](#trans_eqtl), [trans-pQTLs](#trans_pqtl), [trans-glycoQTLs](#trans_gpqtl) and [metabolome QTLs](#trans_metabolome).
 
----
+To understand relationships between molecular traits, we conducted colocalization analyses including [multi-context colocalization](#multi_context_colocalization) using [ColocBoost](https://www.medrxiv.org/content/10.1101/2025.04.17.25326042v1) across cohorts and [pairwise colocalization](#pairwise_colocalization) using SuSiE-COLOC to specifically examining [caQTL-eQTL](#caqtl_eqtl) relationships.
 
-## Additional Notes
+### Alzheimer's Disease GWAS Integration
 
-- Some data, especially raw or pre-release files, require approval for access. Please contact the relevant person for access requests.  
-- Folder organization mirrors the structure of cloud storage and HPC deployment for ease of usage.  
-- For detailed info on datasets and file conventions, please refer to linked READMEs or contact the respective persons.  
-- For extended xQTL data descriptions, see: [cumc/xqtl-data README](https://github.com/cumc/xqtl-data/blob/main/release_data/README.md)
+#### AD Loci Fine-mapping and Colocalization
 
----
+We provide [fine-mapped AD GWAS results](#ad_finemapping) from major studies including Bellenguez 2022, Jansen 2021, Wightman 2021, and Kunkle 2019. These undergo systematic [AD colocalization analysis](#ad_colocalization) to identify shared genetic signals across studies. We integrate AD GWAS with xQTL data through [AD-xQTL colocalization](#ad_xqtl_colocalization) across ROSMAP, MSBB, and Knight ADRC cohorts to identify molecular mechanisms underlying genetic risk. Additionally we performed pairwise colocalization analyses include [bulk mQTL-AD](#bulk_mqtl_haqtl_ad), bulk haQTL-AD, and [single-nucleus caQTL-AD](#caqtl_ad) relationships to leverage a [new fine-mapping approach we developed](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) for mapping epigenetic and chromatin-level mechanisms of AD risk variants.
 
+#### Gene-Level AD Analyses
+
+Our gene-level analyses include [transcriptome-wide association studies (TWAS) and Mendelian randomization (MR)](#twas_mr) identifying genes whose regulated expression associates with AD risk. We complement this with [causal TWAS (cTWAS)](#ctwas) that accounts for gene expression correlation and LD structure, addressing LD-hitchhiking issues where non-causal genes appear significant due to correlation with true causal genes.
+
+#### **Integrated AD Summary Tables**
+
+For immediate use by researchers, we provide comprehensive summary tables:
+- [AD loci annotated by xQTL summary table](#ad_loci_xqtl_table) - variant-level integration of AD GWAS loci with all xQTL evidence
+- [AD genes with FunGen and xQTL annotations](#ad_genes_fungen_xqtl) - AD risk genes prioritization through fine-mapping and colocalization
+- [AD genes with TWAS integration](#ad_genes_twas_xqtl) - AD risk genes prioritization that additionally incorporates TWAS and MR
+
+## Predictive Models and Scores
+
+### Single-Cell Expression Prediction
+
+We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](#xqtl_sceem_scores) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data. 
+
+### Variant-to-Function Prediction
+
+The [cv2F (causal variant to function) scores](#cv2f_scores) integrate xQTL data with functional annotations to predict AD risk at the variant level. [A machine learning framework](https://www.biorxiv.org/content/10.1101/2024.11.07.622307v2) is applied to combine multiple lines of molecular evidence, particularly our xQTL resource, to prioritize likely causal variants for GWAS.
+
+## Pretrained Statistical Models
+
+### QTL and GWAS Statistical Models
+
+We provide complete statistical models as RDS files for researchers to conduct custom analyses or integrate with other neurological disorders. Fine-mapping models are available for [eQTL](#finemapping_models_eqtl), [pQTL](#finemapping_models_pqtl), [glycoQTL](#finemapping_models_glycoqtl), and [sQTL](#finemapping_models_sqtl). [Colocalization models](#colocalization_models) preserve the probabilistic framework for identifying shared genetic signals, allowing exploration of alternative colocalization thresholds and model assessment. TWAS models are provided for [eQTL](#twas_models_eqtl), [pQTL](#twas_models_pqtl), [glycoQTL](#twas_models_glycoqtl), and [sQTL](#twas_models_sqtl), along with qTWAS models for [eQTL](#qtwas_models_eqtl), [pQTL](#qtwas_models_pqtl), [glycoQTL](#qtwas_models_glycoqtl), and [sQTL](#qtwas_models_sqtl) that incorporate non-linear QTL effects.
+
+### Alzheimer's Disease Analysis Models
+
+AD-specific models include [AD fine-mapping results](#ad_fine_mapping_models) with Bayes factors, posterior probabilities and credible sets, and [AD colocalization models](#ad_colocalization_models) providing detailed statistical evidence of shared genetic architecture per locus. [AD-xQTL colocalization models](#ad_xqtl_colocalization_models) offer comprehensive colocalization statistics between AD risk and molecular traits. We also provide [cTWAS input files](#ad_ctwas_input) formatted for causal transcriptome-wide association studies in AD.
+
+## Raw QTL Summary Statistics
+
+### Linear Regression and Mixed Model Results
+
+We provide [R-based linear model residuals](#r_lm_residual_sumstats) and tensorQTL outputs in two forms: [raw results for all variants](#tensorqtl_sumstats_raw) and [significant results after multiple testing correction](#tensorqtl_sumstats_significant) containing standard additive genetic effects. For splicing analysis, [generalized linear mixed model sQTL results](#xqtl_glmm) account for the count-based nature of splice junction data while controlling for related observations using meta-cell approaches in single-cell data.
+
+### Non-linear Genetic Effects
+
+[Quantile regression QTL results](#xqtl_qr) identify variants affecting expression variance and outliers, revealing heterogeneous genetic effects relevant to disease states. [QTL interaction analyses](#xqtl_interaction) test for genotype-by-sex, APOE4 genotype, and cell proportion interactions to capture context-dependent genetic effects.
+
+## Reference Data and Resources
+
+### Population-Specific LD References
+
+We provide [ADSP-based LD reference data for European ancestry](#adsp_ld_reference_eur) populations, formatted in plink bim format with xz compression. These panels derive from the Alzheimer's Disease Sequencing Project Release 4, providing improved coverage of low-frequency variants. With larger sample sizes than 1000 Genomes reference panels, they demonstrate superior performance for fine-mapping in GWAS meta-analysis for AD and beyond.
+
+### Functional Annotation Resources
+
+Our LDSC reference data, computed from ADSP LD references rather than default 1000 Genomes panels, includes [LD scores](#ldsc_ld_scores) optimized for AD heritability estimation, [stratified LDSC annotations](#ldsc_sldsc_annotations) for functional enrichment across brain-specific elements, and [pre-processed GWAS summary statistics](#ldsc_gwas_munged). Additionally, [functional enrichment annotations](#functional_enrichment_annotations) in UCSC bed format encompass regulatory elements, cell-type-specific markers, and brain-specific annotations relevant to neurodegeneration.
+
+### Protocols and Tutorials
+
+Comprehensive [xQTL analysis protocols and tutorials](#xqtl_protocol_tutorial) provide instructions with example datasets, guiding users through QTL mapping, fine-mapping, colocalization, and integrative analyses.
+
+## Data Format and Column Descriptions
+
+All exported bed files follow standardized formats with consistent column definitions. See our [comprehensive documentation](https://github.com/cumc/xqtl-data/tree/main/release_data) for detailed specifications.
+
+## Citation and Usage
+
+Please cite appropriate manuscripts and acknowledge consortium data generation efforts. Detailed citation information will be provided upon publication.
