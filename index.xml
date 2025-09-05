@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FunGen xQTL Resources</title><link>https://statfungen.github.io/xqtl-resources/</link><description>Recent content on FunGen xQTL Resources</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://statfungen.github.io/xqtl-resources/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FunGen xQTL Resources</title><link>https://statfungen.github.io/xqtl-resources/</link><description>Recent content on FunGen xQTL Resources</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://statfungen.github.io/xqtl-resources/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://statfungen.github.io/xqtl-resources/file_description/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://statfungen.github.io/xqtl-resources/file_description/</guid><description>&lt;h1 id="fungen-xqtl-resource-file-description"&gt;
+ FunGen-xQTL resource file description
+ 
+ &lt;a class="anchor" href="#fungen-xqtl-resource-file-description"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;h2 id="overview"&gt;
+ Overview
+ 
+ &lt;a class="anchor" href="#overview"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;This repository provides Quantitative Trait Loci (QTL) analysis and GWAS integration results from the FunGen-xQTL project, across diverse aging human brain regions and cell types. The analyses span multiple cohorts including ROSMAP, Knight ADRC, Mount Sinai Brain Bank, MiGA, MetaBrain, and STARNET.&lt;/p&gt;
+&lt;p&gt;For comprehensive metadata of all analyses with harmonized context definitions, see our &lt;a href="all_analysis_summary_tables_metadata.csv"&gt;analysis meta-data table&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="fine-mapping-and-integrative-results-for-xqtl-and-ad-gwas"&gt;
+ Fine-mapping and integrative results for xQTL and AD GWAS
+ 
+ &lt;a class="anchor" href="#fine-mapping-and-integrative-results-for-xqtl-and-ad-gwas"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;The following table catalogs all fine-mapped QTL and AD GWAS integration results, organized by molecular modality, cohort, tissue context, and analytical method. Each entry represents fine-mapped genetic loci for corresponding molecular phenotypes, with top loci and variants exported in standardized BED format.&lt;/p&gt;</description></item></channel></rss>
