@@ -382,7 +382,3 @@ The following table provides paths to marginal QTL association results, includin
 | pQTL | ROSMAP | DLPFC | QR | analysis_result/marginal_significant_qtl/cis_association/ROSMAP/pQTL/DLPFC/QR/ |
 
 For detailed methodology and implementation, refer to our [analysis protocol documentation](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb).
-
-## Data Access and Citation
-
-FIXME

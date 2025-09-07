@@ -27,7 +27,7 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
 Software resources implementing the xQTL analysis are also available:
 
 * **[xQTL Analysis Protocol](https://statfungen.github.io/xqtl-protocol)** - Standardized computational protocols for QTL detection and analysis
-* **[xQTL Companion Statistical Methods Implementation](https://github.com/StatFunGen/pecotmr)** - Post-GWAS enrichment, colocalization, TWAS, and Mendelian randomization tools
+* **[xQTL Companion Statistical Methods Implementation](https://github.com/StatFunGen/pecotmr)** - Fine-mapping, enrichment, colocalization, TWAS, and Mendelian randomization tools
 
 ## Data Access
 
