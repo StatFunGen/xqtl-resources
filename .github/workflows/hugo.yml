@@ -23,6 +23,19 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Download Hugo Book theme
+        run: |
+          mkdir -p website/themes
+          cd website/themes
+          git clone https://github.com/alex-shpak/hugo-book.git
+          cd ../..
+
       - name: Generate xQTL Data Catalog
         run: |
           python scripts/toc.py \
@@ -32,22 +45,14 @@ jobs:
             -b "https://github.com/StatFunGen/xqtl-resources/tree/main/" \
             -c "Lead analysts: "
 
-      - name: Generate Hugo site structure
+      - name: Generate and Build Hugo Site
         run: |
           python scripts/hugo_generator.py \
             --base-url https://statfungen.github.io/xqtl-resources/ \
-            --no-readme
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build Hugo site
-        run: |
-          cd website
-          hugo --minify
+            --no-readme \
+            --no-theme-download \
+            --build \
+            --minify
 
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
