@@ -11,7 +11,7 @@ Each LD block contains two files of interest:
     - the data is stored in the upper triangle of the matrix
 - a [Plink `.bim`](https://www.cog-genomics.org/plink/1.9/formats#bim) file suffixed by `.cor.xz.bim` containing unique IDs for each variant
 
-```{r}
+```r
 ld_block_ref_file = "/path/to/matrix.cor.xz"
 var_names = read.table(paste0(ld_block_ref_file, ".bim"), header = F)$V2
 ld <- scan(xzfile(ld_block_ref_file))

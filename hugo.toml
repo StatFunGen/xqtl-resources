@@ -13,11 +13,11 @@ enableGitInfo = true
 
 # (Optional) Theme is intended for documentation use, therefore it doesn't render taxonomy.
 # You can remove related files with config below
-disableKinds = ['taxonomy', 'taxonomyTerm']
+disableKinds = ['taxonomy']
 
 # For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "RSS"]
 [params]
   # Author of the site, will be used in meta information
   author = "Gao Wang"
@@ -41,6 +41,7 @@ home = [ "HTML", "RSS", "JSON"]
   # When not specified file structure and weights will be used
   # Deprecated, to be removed in June 2022
   BookMenuBundle = '/menu'
+  BookMenuBundlePageDepth = 2  # Limit menu depth to 2 levels
 
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to "*" to render all sections to menu
@@ -87,3 +88,8 @@ home = [ "HTML", "RSS", "JSON"]
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
   BookServiceWorker = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+ignoreLogs = ['warning-goldmark-raw-html']

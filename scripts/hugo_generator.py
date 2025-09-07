@@ -486,7 +486,7 @@ headless: true
         
         content = f"""# FunGen-xQTL Resources
 
-This repository contains {len(all_items)} molecular QTL datasets developed by the ADSP Functional Genomics Consortium.
+This repository contains {len(all_items)} datasets developed by the ADSP Functional Genomics Consortium.
 
 Published at: {self.base_url}
 
@@ -523,9 +523,6 @@ Published at: {self.base_url}
                 content += "\n"
         
         content += """
-## Usage
-
-View the processed site at: """ + self.base_url + """
 
 ## Repository Structure
 

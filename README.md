@@ -1,6 +1,6 @@
 # FunGen-xQTL Resources
 
-This repository contains 91 molecular QTL datasets developed by the ADSP Functional Genomics Consortium.
+This repository contains 91 datasets developed by the ADSP Functional Genomics Consortium.
 
 Published at: https://statfungen.github.io/xqtl-resources/
 
@@ -88,9 +88,9 @@ Published at: https://statfungen.github.io/xqtl-resources/
 - [MAGENTA Non-Hispanic White Blood Gene Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MAGENTA_NHW_blood_expression_qtl.md): Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer’s (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P. Hussman Institute for Human Genomics (HIHG) at the University of Miami Miller School of Medicine (Miami, FL), North Carolina A&T State University (Greensboro, NC), and Case Western Reserve University (Cleveland, OH).  Participants were ascertained as part of the ADSP Follow-up Study and included both cases (>65 years of age of onset) and controls (>65 years of age at age of exam).  All participants were adjudicated by a clinical panel with expertise in AD related disorders and classified as AD according to standard criteria developed by the National Institute of Aging and the Alzheimer’s Association.
 - [MiGA multi-brain region gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MiGA_brain_expression_qtl.md): A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
 - [MSBB brain alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_brain_splicing_qtl.md): Minghui Wang.
-- [MSBB brain gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_brain_expression_qtl.md): Please refer to [this document](../study_info/MSBB.md) for an overview of the MSBB project.
-- [MSBB brain methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_brain_methylation_qtl.md): Please refer to [this document](../study_info/MSBB.md) for an overview of the MSBB project.
-- [MSBB brain proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_proteomics_qtl.md): Please refer to [this document](../study_info/MSBB.md) for an overview of the MSBB project.
+- [MSBB brain gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_brain_expression_qtl.md): Minghui Wang.
+- [MSBB brain methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_brain_methylation_qtl.md): Alexandre Pelletier.
+- [MSBB brain proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MSBB_proteomics_qtl.md): Minghui Wang.
 - [PART working group brain methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/PART_brain_methylation_qtl.md): Alexandre Pelletier, Corey McMillan.
 - [ROSMAP AC alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_AC_splicing_qtl.md): Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) AC alternative splicing.
 - [ROSMAP AC gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_AC_expression_qtl.md): Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) AC gene expression.
@@ -113,9 +113,6 @@ Published at: https://statfungen.github.io/xqtl-resources/
 - [Non-Hispanic White Linkage Disequilibrium Reference Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_reference.md): LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD). Correlation matrices were calculated between SNPs within 1361 LD blocks which were obtained from [this Github page](https://github.com/jmacdon/LDblocks_GRCh38/) (generated from 1000 Genomes EUR samples).
 
 
-## Usage
-
-View the processed site at: https://statfungen.github.io/xqtl-resources/
 
 ## Repository Structure
 
@@ -133,7 +130,7 @@ View the processed site at: https://statfungen.github.io/xqtl-resources/
 
 To add or update content:
 1. Edit markdown files in `content/` directory
-2. Run `python3 scripts/hugo_generator.py --serve` to preview
+2. Run `make` and follow instructions to preview the website locally
 3. Submit a pull request
 
 The `website/` directory is automatically generated and should not be edited directly.

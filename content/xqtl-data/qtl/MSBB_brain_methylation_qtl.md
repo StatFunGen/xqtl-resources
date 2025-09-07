@@ -1,5 +1,4 @@
 # MSBB brain methylation QTL
-Please refer to [this document](../study_info/MSBB.md) for an overview of the MSBB project.
 ## Contact
 
 Alexandre Pelletier
