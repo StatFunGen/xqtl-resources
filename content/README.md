@@ -2,7 +2,7 @@
 
 ## About FunGen-AD
 
-The **[Functional Genomics of Alzheimer's Disease (FunGen-AD)](https://adsp-fgc.niagads.org/)** project is a collaborative initiative under the Alzheimer's Disease Sequencing Project (ADSP) aimed at understanding the molecular mechanisms underlying Alzheimer's disease through comprehensive multi-omic analyses.
+The **[Alzheimer's Disease Sequencing Project Functional Genomics Consortium (FunGen-AD)](https://adsp-fgc.niagads.org/)** is a collaborative initiative aimed at understanding the molecular mechanisms underlying Alzheimer's disease through multi-omic and genetic screening approaches.
 
 ## Available Resources
 
