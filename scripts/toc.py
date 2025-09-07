@@ -7,9 +7,10 @@ python toc.py data/*.md -o toc-data.md -t "Data Resources"
 python toc.py utilities/wiki/*.md -o toc-utils.md -t "Utility Resources"
 '''
 
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 from argparse import ArgumentParser
 import re
+import os
 
 A_TO_Z = '''
 |     |     |     |     |     |     |     |     |     |
@@ -79,6 +80,36 @@ def write_toc(toc, page, title, description, contact, add_link = True):
             else:
                 f.write('* {}{}\n'.format(name, desc_text))
 
+def write_subfolder_readmes(files):
+    '''Create README.md for each subfolder containing the files in that folder'''
+    # Group files by directory
+    folders = defaultdict(list)
+    for filepath in files:
+        folder = os.path.dirname(filepath)
+        if folder:  # Only process if file is in a subfolder
+            folders[folder].append(filepath)
+    
+    # Create README for each folder
+    for folder, folder_files in folders.items():
+        # Get TOC for this folder's files
+        folder_toc = get_toc(folder_files)
+        
+        # Write README.md for this folder
+        readme_path = os.path.join(folder, 'README.md')
+        folder_name = os.path.basename(folder)
+        
+        with open(readme_path, 'w') as f:
+            # Use folder name as title (capitalize and replace underscores)
+            title = folder_name.replace('_', ' ').title()
+            f.write('# {}\n\n'.format(title))
+            
+            # List all files in this folder
+            for name in folder_toc.keys():
+                # Use just the filename for links (no path)
+                filename = os.path.basename(folder_toc[name][0])
+                link = filename[:-3] if filename.endswith('.md') else filename
+                f.write('* [{}]({})\n'.format(name, link))
+
 def main(args):
     if args.base_url:
         env.blob = args.base_url
@@ -86,8 +117,14 @@ def main(args):
         env.exclude = args.exclude
     if not args.output.endswith('.md'):
         args.output = args.output.strip('.') + '.md'
+    
+    # Main catalog generation (original functionality)
     toc = get_toc(args.files)
     write_toc(toc, args.output, args.title, args.description, args.contact_title, not args.no_link)
+    
+    # Generate subfolder READMEs if requested
+    if args.subfolder_readme:
+        write_subfolder_readmes(args.files)
 
 if __name__ == '__main__':
     parser = ArgumentParser(description = 'A program to generate table of contents from markdown files',
@@ -100,4 +137,5 @@ if __name__ == '__main__':
     parser.add_argument('-b', '--base_url', help = 'Base URL for pages')
     parser.add_argument('-e', '--exclude', nargs = '+', help = 'Exclude pages')
     parser.add_argument('-p', '--no-link', action='store_true', help='Plain text, do not include URL')
+    parser.add_argument('-s', '--subfolder-readme', action='store_true', help='Generate README.md for each subfolder')
     main(parser.parse_args())

@@ -43,7 +43,8 @@ jobs:
             -o content/xqtl-data/README.md \
             -t "FunGen-xQTL Data Catalog" \
             -b "https://github.com/StatFunGen/xqtl-resources/tree/main/" \
-            -c "Lead analysts: "
+            -c "Lead analysts: " \
+            --subfolder-readme
 
       - name: Generate and Build Hugo Site
         run: |

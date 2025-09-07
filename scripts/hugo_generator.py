@@ -522,20 +522,24 @@ The `website/` directory is automatically generated and should not be edited dir
                 
         finally:
             os.chdir(original_dir)
-    
+
+
     def serve_site(self, port=1313):
         """Start Hugo development server"""
         if not self.check_hugo_installed():
             return False
-        
+
         original_dir = os.getcwd()
         try:
             os.chdir(self.website_dir)
-            
-            self.log(f"Starting Hugo server at http://localhost:{port}", 'info')
-            self.log("Press Ctrl+C to stop...", 'info')
-            
-            subprocess.run(['hugo', 'server', '--port', str(port)])
+            if port == 1313:
+                self.log(f"Starting Hugo server (Hugo will choose available port)", 'info')
+                self.log("Press Ctrl+C to stop...", 'info')
+                subprocess.run(['hugo', 'server'])
+            else:
+                self.log(f"Starting Hugo server at http://localhost:{port}", 'info')
+                self.log("Press Ctrl+C to stop...", 'info')
+                subprocess.run(['hugo', 'server', '--port', str(port)])
             
         except KeyboardInterrupt:
             self.log("\nServer stopped", 'info')

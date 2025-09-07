@@ -2,7 +2,7 @@
 
 ## About FunGen-AD
 
-The **Functional Genomics of Alzheimer's Disease (FunGen-AD)** project is a collaborative initiative under the [Alzheimer's Disease Sequencing Project (ADSP)](https://adsp-fgc.niagads.org/) aimed at understanding the molecular mechanisms underlying Alzheimer's disease through comprehensive multi-omic analyses.
+The **[Functional Genomics of Alzheimer's Disease (FunGen-AD)](https://adsp-fgc.niagads.org/) ** project is a collaborative initiative under the Alzheimer's Disease Sequencing Project (ADSP) aimed at understanding the molecular mechanisms underlying Alzheimer's disease through comprehensive multi-omic analyses.
 
 ## Available Resources
 
@@ -26,10 +26,10 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
 
 ### Analysis Protocols
 
-* **[xQTL Analysis Pipeline](https://github.com/StatFunGen/xqtl-protocol)** - Standardized computational protocols for QTL detection and analysis
+* **[xQTL Analysis Pipeline](https://statfungen.github.io/xqtl-protocol)** - Standardized computational protocols for QTL detection and analysis
 * **[Companion Statistical Methods Implementation](https://github.com/StatFunGen/pecotmr)** - Post-GWAS enrichment, colocalization, TWAS, and Mendelian randomization tools
 
-### Data Access
+## Data Access
 
 All datasets are available through controlled access via:
 - [Synapse Platform](https://www.synapse.org/) (primary repository)
