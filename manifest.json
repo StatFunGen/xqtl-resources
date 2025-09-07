@@ -1,6 +1,6 @@
 {
-  "name": "FunGen xQTL Resources",
-  "short_name": "FunGen xQTL Resources",
+  "name": "FunGen-xQTL Resources",
+  "short_name": "FunGen-xQTL Resources",
   "start_url": "/xqtl-resources/",
   "scope": "/xqtl-resources/",
   "display": "standalone",

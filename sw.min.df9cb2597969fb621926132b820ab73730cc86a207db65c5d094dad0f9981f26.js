@@ -1,0 +1,1 @@
+navigator.serviceWorker&&navigator.serviceWorker.register("/xqtl-resources/sw.js",{scope:"/xqtl-resources/"})
