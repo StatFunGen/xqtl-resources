@@ -2,23 +2,22 @@
 """
 Hugo site generator for xQTL Resources
 Handles content transformation and organization for Hugo
-Modified to keep original structure only, no alphabetical organization
+Uses Hugo Book theme's automatic navigation generation
 """
 
 import os
 import re
-import glob
 import sys
 import argparse
 import subprocess
 import shutil
 import urllib.request
 import zipfile
+import tempfile
 from pathlib import Path
-from collections import OrderedDict, defaultdict
+from collections import defaultdict
 
 # Configuration defaults
-DEFAULT_DATA_DIR = 'content/xqtl-data'
 DEFAULT_CONTENT_DIR = 'content'
 DEFAULT_WEBSITE_DIR = 'website'
 DEFAULT_BASE_URL = 'https://statfungen.github.io/xqtl-resources/'
@@ -29,13 +28,14 @@ class HugoSiteGenerator:
     """Hugo site generator with content transformation"""
     
     def __init__(self, content_dir=DEFAULT_CONTENT_DIR, website_dir=DEFAULT_WEBSITE_DIR, 
-                 base_url=DEFAULT_BASE_URL, verbose=True):
+                 base_url=DEFAULT_BASE_URL, github_url=DEFAULT_GITHUB_URL, verbose=True):
         self.source_content_dir = content_dir
         self.data_dir = os.path.join(content_dir, 'xqtl-data')
         self.website_dir = website_dir
         self.website_content_dir = os.path.join(website_dir, 'content')
         self.themes_dir = os.path.join(website_dir, 'themes')
         self.base_url = base_url
+        self.github_url = github_url
         self.verbose = verbose
         self.problematic_files = []
         
@@ -44,7 +44,7 @@ class HugoSiteGenerator:
         if self.verbose:
             prefix = {
                 'info': '→',
-                'success': '✓',
+                'success': '✔',
                 'warning': '⚠',
                 'error': '✗'
             }.get(level, '→')
@@ -55,15 +55,14 @@ class HugoSiteGenerator:
         dirs = [
             self.website_dir,
             self.website_content_dir,
-            self.themes_dir,
-            os.path.join(self.website_content_dir, 'menu')
+            self.themes_dir
         ]
         for dir_path in dirs:
             os.makedirs(dir_path, exist_ok=True)
         self.log(f"Created directory structure in {self.website_dir}", 'success')
     
     def download_theme(self, force=False):
-        """Download Hugo Book theme"""
+        """Download Hugo Book theme with proper error handling"""
         theme_path = os.path.join(self.themes_dir, 'hugo-book')
         
         if os.path.exists(theme_path) and not force:
@@ -72,16 +71,19 @@ class HugoSiteGenerator:
         
         self.log("Downloading Hugo Book theme...", 'info')
         
+        # Use temporary file for safer download
+        with tempfile.NamedTemporaryFile(suffix='.zip', delete=False) as tmp_file:
+            tmp_path = tmp_file.name
+        
         try:
             # Download theme
-            zip_path = os.path.join(self.themes_dir, 'hugo-book.zip')
-            urllib.request.urlretrieve(HUGO_BOOK_THEME_URL, zip_path)
+            urllib.request.urlretrieve(HUGO_BOOK_THEME_URL, tmp_path)
             
             # Extract theme
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            with zipfile.ZipFile(tmp_path, 'r') as zip_ref:
                 zip_ref.extractall(self.themes_dir)
             
-            # Find extracted directory and rename to hugo-book
+            # Find and rename extracted directory
             for item in os.listdir(self.themes_dir):
                 if item.startswith('hugo-book') and item != 'hugo-book':
                     old_path = os.path.join(self.themes_dir, item)
@@ -90,32 +92,35 @@ class HugoSiteGenerator:
                     os.rename(old_path, theme_path)
                     break
             
-            # Clean up zip
-            if os.path.exists(zip_path):
-                os.remove(zip_path)
-            
             self.log("Theme downloaded successfully", 'success')
             return True
             
         except Exception as e:
             self.log(f"Failed to download theme: {e}", 'error')
-            self.log("You can manually clone: git clone https://github.com/alex-shpak/hugo-book.git " + theme_path, 'info')
+            self.log(f"You can manually clone: git clone https://github.com/alex-shpak/hugo-book.git {theme_path}", 'info')
             return False
+        finally:
+            # Clean up temp file
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
 
     def create_hugo_config(self):
         """Copy Hugo configuration file from source repository"""
         source_config = 'hugo.toml'
         dest_config = os.path.join(self.website_dir, 'hugo.toml')
     
-        # Check if source hugo.toml exists
         if not os.path.exists(source_config):
             self.log(f"Error: hugo.toml not found in repository root", 'error')
             self.log(f"Expected location: {os.path.abspath(source_config)}", 'error')
-            sys.exit(1)
+            return False
     
-        # Copy the existing hugo.toml to website directory
-        shutil.copy2(source_config, dest_config)
-        self.log(f"Copied hugo.toml to {dest_config}", 'success')
+        try:
+            shutil.copy2(source_config, dest_config)
+            self.log(f"Copied hugo.toml to {dest_config}", 'success')
+            return True
+        except Exception as e:
+            self.log(f"Failed to copy hugo.toml: {e}", 'error')
+            return False
     
     def sanitize_markdown_content(self, content):
         """Sanitize markdown content to avoid Hugo parsing errors"""
@@ -125,48 +130,66 @@ class HugoSiteGenerator:
         # Fix unquoted attributes in links/images
         content = re.sub(r'\{([^}]+)=([^}"]+)\}', r'{$1="$2"}', content)
         
-        # Escape {{ and }} in code blocks
-        def escape_code_blocks(match):
+        # Escape {{ and }} in code blocks and inline code
+        def escape_braces(match, is_block=False):
             code = match.group(1)
-            code = code.replace('{{', '&#123;&#123;')
-            code = code.replace('}}', '&#125;&#125;')
-            return f'```{code}```'
+            code = code.replace('{{', '&#123;&#123;').replace('}}', '&#125;&#125;')
+            return f'```{code}```' if is_block else f'`{code}`'
         
-        content = re.sub(r'```(.*?)```', escape_code_blocks, content, flags=re.DOTALL)
-        
-        # Escape inline code
-        def escape_inline_code(match):
-            code = match.group(1)
-            code = code.replace('{{', '&#123;&#123;')
-            code = code.replace('}}', '&#125;&#125;')
-            return f'`{code}`'
-        
-        content = re.sub(r'`([^`]+)`', escape_inline_code, content)
+        content = re.sub(r'```(.*?)```', lambda m: escape_braces(m, True), content, flags=re.DOTALL)
+        content = re.sub(r'`([^`]+)`', lambda m: escape_braces(m, False), content)
         
         # Remove Pandoc-style attributes
         content = re.sub(r'\{\.[\w\s-]+\}', '', content)
         
         return content
     
-    def add_frontmatter(self, content, title, weight=10, depth_level=1):
-        """Add Hugo frontmatter to markdown content"""
-        # Escape quotes in title
+    def extract_title_from_content(self, content, filepath):
+        """Extract title from markdown content or generate from filepath"""
+        title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+        if title_match:
+            return title_match.group(1).strip()
+        return Path(filepath).stem.replace('-', ' ').replace('_', ' ').title()
+    
+    def calculate_weight(self, filepath, is_index=False):
+        """Calculate weight for ordering in navigation"""
+        if is_index:
+            return 1
+        
+        # Special files get priority
+        filename = os.path.basename(filepath).lower()
+        if 'overview' in filename or 'introduction' in filename:
+            return 5
+        if 'readme' in filename:
+            return 10
+        
+        # Default weight for regular files
+        return 50
+    
+    def add_frontmatter(self, content, title, filepath, depth_level=1):
+        """Add Hugo frontmatter to markdown content
+        
+        Hugo Book theme automatically generates navigation based on:
+        - Directory structure (hierarchy)
+        - _index.md files (create sections) 
+        - Weight values (control ordering)
+        - bookHidden (hide from nav but keep accessible)
+        - bookCollapseSection (collapse sections for cleaner nav)
+        """
         safe_title = title.replace('"', '\\"')
         
-        # For depth limiting: hide items deeper than level 2
-        # Level 1: root content
-        # Level 2: xqtl-data/gwas, xqtl-data/omics, etc.
-        # Level 3+: individual files within those directories
+        # Determine if this is an index file
+        filename = os.path.basename(filepath)
+        is_index = filename == 'README.md' or filename == '_index.md'
         
-        # Don't hide index files or first two levels
-        book_hidden = ""
-        if depth_level > 2 and not content.startswith("# "):
-            book_hidden = "bookHidden: true\n"
+        # Calculate weight
+        weight = self.calculate_weight(filepath, is_index)
         
-        # Collapse sections by default for cleaner navigation
-        book_collapse = ""
-        if depth_level == 2:
-            book_collapse = "bookCollapseSection: true\n"
+        # Only hide deep non-index files from navigation
+        book_hidden = "bookHidden: true\n" if depth_level > 2 and not is_index else ""
+        
+        # Collapse sections at level 2 for cleaner navigation
+        book_collapse = "bookCollapseSection: true\n" if depth_level == 2 and is_index else ""
         
         frontmatter = f"""---
 title: "{safe_title}"
@@ -177,142 +200,110 @@ bookToc: true
 """
         return frontmatter + content
     
-    def copy_content_files(self):
-        """Copy content/*.md files to website/content/ with proper transformation"""
-        self.log("Copying and transforming content files...", 'info')
-        
-        # First, handle files in the root content directory
-        root_files = glob.glob(os.path.join(self.source_content_dir, '*.md'))
-        for source_file in root_files:
-            filename = os.path.basename(source_file)
-            
-            # Transform README.md to _index.md
-            if filename == 'README.md':
-                dest_filename = '_index.md'
-            else:
-                dest_filename = filename
-            
-            dest_file = os.path.join(self.website_content_dir, dest_filename)
-            
-            # Read and process content
+    def process_markdown_file(self, source_file, dest_file, depth_level=1):
+        """Process a single markdown file with all transformations"""
+        try:
+            # Read content
             with open(source_file, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
             
-            # Extract title from first heading or filename
-            title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
-            if title_match:
-                title = title_match.group(1)
-            else:
-                title = Path(source_file).stem.replace('-', ' ').replace('_', ' ').title()
-            
-            # Sanitize and add frontmatter
+            # Extract title and sanitize content
+            title = self.extract_title_from_content(content, source_file)
             content = self.sanitize_markdown_content(content)
-            content = self.add_frontmatter(content, title, weight=1, depth_level=1)
+            
+            # Add frontmatter
+            content = self.add_frontmatter(content, title, source_file, depth_level)
+            
+            # Ensure destination directory exists
+            os.makedirs(os.path.dirname(dest_file), exist_ok=True)
             
             # Write to destination
             with open(dest_file, 'w', encoding='utf-8') as f:
                 f.write(content)
             
-            self.log(f"  Copied: {filename} → {dest_filename}", 'success')
-        
-        # Now handle subdirectories
-        for subdir in os.listdir(self.source_content_dir):
-            source_subdir = os.path.join(self.source_content_dir, subdir)
-            if not os.path.isdir(source_subdir):
-                continue
+            return True
             
-            dest_subdir = os.path.join(self.website_content_dir, subdir)
-            os.makedirs(dest_subdir, exist_ok=True)
-            
-            # Copy all .md files in subdirectory
-            md_files = glob.glob(os.path.join(source_subdir, '**/*.md'), recursive=True)
-            for source_file in md_files:
-                # Calculate relative path and depth
-                rel_path = os.path.relpath(source_file, source_subdir)
-                path_parts = rel_path.split(os.sep)
-                depth_level = len(path_parts) + 1  # +1 for the subdir itself
-                
-                filename = os.path.basename(source_file)
-                
-                # Transform README.md to _index.md
-                if filename == 'README.md':
-                    dest_filename = '_index.md'
-                    # Get the directory path for the index
-                    dest_dir = os.path.dirname(os.path.join(dest_subdir, rel_path))
-                    dest_file = os.path.join(dest_dir, dest_filename)
-                else:
-                    dest_file = os.path.join(dest_subdir, rel_path)
-                
-                # Ensure destination directory exists
-                os.makedirs(os.path.dirname(dest_file), exist_ok=True)
-                
-                # Read and process content
-                with open(source_file, 'r', encoding='utf-8', errors='replace') as f:
-                    content = f.read()
-                
-                # Extract title
-                title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
-                if title_match:
-                    title = title_match.group(1)
-                else:
-                    title = Path(source_file).stem.replace('-', ' ').replace('_', ' ').title()
-                
-                # Sanitize and add frontmatter
-                content = self.sanitize_markdown_content(content)
-                
-                # Determine weight based on position
-                weight = 10
-                if filename == 'README.md' or dest_filename == '_index.md':
-                    weight = 1
-                
-                content = self.add_frontmatter(content, title, weight=weight, depth_level=depth_level)
-                
-                # Write to destination
-                with open(dest_file, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                
-                self.log(f"  Copied: {subdir}/{rel_path} → {os.path.relpath(dest_file, self.website_content_dir)}", 'success')
+        except Exception as e:
+            self.log(f"Error processing {source_file}: {e}", 'error')
+            self.problematic_files.append(source_file)
+            return False
     
-    def collect_xqtl_metadata(self):
-        """Collect metadata from xqtl-data files for README generation"""
-        if not os.path.exists(self.data_dir):
-            self.log(f"xqtl-data directory not found at {self.data_dir}", 'warning')
-            return None
+    def copy_static_files(self):
+        """Copy static files (images, PDFs, etc.) that might be referenced in markdown"""
+        static_extensions = {'.png', '.jpg', '.jpeg', '.gif', '.svg', '.pdf', '.csv', '.json'}
+        copied_count = 0
         
-        # Find all markdown files in xqtl-data
-        patterns = [
-            f'{self.data_dir}/gwas/*.md',
-            f'{self.data_dir}/omics/*.md',
-            f'{self.data_dir}/qtl/*.md',
-            f'{self.data_dir}/study_info/*.md',
-            f'{self.data_dir}/reference_data/*.md'
-        ]
+        for root, dirs, files in os.walk(self.source_content_dir):
+            # Skip hidden directories
+            dirs[:] = [d for d in dirs if not d.startswith('.')]
+            
+            for filename in files:
+                ext = Path(filename).suffix.lower()
+                if ext in static_extensions:
+                    source_file = os.path.join(root, filename)
+                    rel_path = os.path.relpath(source_file, self.source_content_dir)
+                    dest_file = os.path.join(self.website_content_dir, rel_path)
+                    
+                    try:
+                        os.makedirs(os.path.dirname(dest_file), exist_ok=True)
+                        shutil.copy2(source_file, dest_file)
+                        copied_count += 1
+                    except Exception as e:
+                        self.log(f"Failed to copy static file {rel_path}: {e}", 'warning')
         
-        all_files = []
-        for pattern in patterns:
-            files = glob.glob(pattern)
-            all_files.extend(files)
+        if copied_count > 0:
+            self.log(f"Copied {copied_count} static files", 'success')
         
-        # Filter out README and index files
-        all_files = [f for f in all_files if not f.endswith('README.md')]
+        return copied_count
+    
+    def copy_content_files(self):
+        """Copy and transform all content files"""
+        self.log("Copying and transforming content files...", 'info')
         
-        if not all_files:
-            self.log(f"No markdown files found in {self.data_dir}", 'warning')
-            return None
+        processed_count = 0
         
-        self.log(f"Found {len(all_files)} markdown files in xqtl-data", 'info')
+        # Process all markdown files recursively
+        for root, dirs, files in os.walk(self.source_content_dir):
+            # Skip hidden directories and the website directory
+            dirs[:] = [d for d in dirs if not d.startswith('.') and d != 'website']
+            
+            for filename in files:
+                if not filename.endswith('.md'):
+                    continue
+                
+                source_file = os.path.join(root, filename)
+                
+                # Calculate relative path and depth
+                rel_dir = os.path.relpath(root, self.source_content_dir)
+                if rel_dir == '.':
+                    rel_dir = ''
+                    depth_level = 1
+                else:
+                    depth_level = len(rel_dir.split(os.sep)) + 1
+                
+                # Determine destination filename and path
+                dest_filename = '_index.md' if filename == 'README.md' else filename
+                
+                # Build destination path
+                if rel_dir:
+                    dest_dir = os.path.join(self.website_content_dir, rel_dir)
+                    dest_file = os.path.join(dest_dir, dest_filename)
+                    log_path = os.path.join(rel_dir, filename)
+                else:
+                    dest_file = os.path.join(self.website_content_dir, dest_filename)
+                    log_path = filename
+                
+                # Process the file
+                if self.process_markdown_file(source_file, dest_file, depth_level):
+                    dest_log_path = os.path.relpath(dest_file, self.website_content_dir)
+                    self.log(f"  Transformed: {log_path} → {dest_log_path}", 'success')
+                    processed_count += 1
         
-        # Extract metadata from files
-        all_items = []
-        for filepath in all_files:
-            metadata = self.get_metadata_from_file(filepath)
-            if metadata and metadata['title']:
-                all_items.append(metadata)
+        # Copy static files
+        static_count = self.copy_static_files()
         
-        if all_items:
-            self.log(f"Collected metadata from {len(all_items)} xqtl-data items", 'success')
-        
-        return all_items
+        self.log(f"Processed {processed_count} markdown files", 'success')
+        return processed_count
     
     def get_metadata_from_file(self, filepath):
         """Extract metadata from a markdown file"""
@@ -328,78 +319,82 @@ bookToc: true
             with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
             
+            # Extract title
+            metadata['title'] = self.extract_title_from_content(content, filepath)
+            
             lines = content.split('\n')
             
-            # Find the first heading
-            for line in lines:
-                line = line.strip()
-                if line.startswith('# ') and not line.startswith('## '):
-                    metadata['title'] = line[2:].strip()
-                    break
-            
-            if not metadata['title']:
-                # Use filename as title if no heading found
-                metadata['title'] = Path(filepath).stem.replace('-', ' ').replace('_', ' ').title()
-            
-            # Get description
+            # Get description (first non-heading line after title)
             in_description = False
-            for i, line in enumerate(lines):
+            for line in lines:
                 if metadata['title'] and line.strip().startswith('# ' + metadata['title']):
                     in_description = True
                     continue
                 if in_description and line.strip() and not line.startswith('#'):
-                    metadata['description'] = line.strip().rstrip('.')
-                    if metadata['description']:
-                        metadata['description'] += '.'
+                    desc = line.strip().rstrip('.')
+                    if desc:
+                        metadata['description'] = desc + '.'
                     break
             
             # Extract lead analysts
-            full_content = '\n'.join(lines)
-            lead_match = re.search(r'(?:Lead analysts?|Contact):\s*(.+?)(?:\n|$)', 
-                                  full_content, re.IGNORECASE | re.MULTILINE)
+            lead_match = re.search(
+                r'(?:Lead analysts?|Contact|Contributors?):\s*(.+?)(?:\n|$)', 
+                content, 
+                re.IGNORECASE | re.MULTILINE
+            )
             if lead_match:
                 lead = lead_match.group(1).strip()
+                # Clean up the lead analyst text
                 lead = re.sub(r'\([^)]+\)', '', lead)  # Remove parentheses
                 lead = re.sub(r'<[^>]+>', '', lead)     # Remove emails
                 lead = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', lead)  # Remove markdown links
-                lead = re.sub(r'\s+', ' ', lead)        # Normalize whitespace
-                metadata['lead_analysts'] = lead.strip('. ')
+                lead = re.sub(r'\s+', ' ', lead).strip('. ')
+                if lead:
+                    metadata['lead_analysts'] = lead
             
             return metadata
             
         except Exception as e:
-            self.log(f"Error reading {filepath}: {e}", 'error')
-            self.problematic_files.append(filepath)
-            return None
+            self.log(f"Error reading metadata from {filepath}: {e}", 'warning')
+            return metadata
     
-    def create_menu(self):
-        """Create navigation menu for original structure"""
-        menu_dir = os.path.join(self.website_content_dir, 'menu')
-        os.makedirs(menu_dir, exist_ok=True)
+    def collect_xqtl_metadata(self):
+        """Collect metadata from xqtl-data files for README generation"""
+        if not os.path.exists(self.data_dir):
+            self.log(f"xqtl-data directory not found at {self.data_dir}", 'warning')
+            return []
         
-        menu_content = """---
-headless: true
----
-
-- [**Home**]({{< relref "/" >}})
-- [**xQTL Data Repository**]({{< relref "/xqtl-data" >}})
-  - [Study Information]({{< relref "/xqtl-data/study_info" >}})
-  - [GWAS Summary Statistics]({{< relref "/xqtl-data/gwas" >}})
-  - [Omics Data]({{< relref "/xqtl-data/omics" >}})
-  - [QTL Results]({{< relref "/xqtl-data/qtl" >}})
-  - [Reference Data]({{< relref "/xqtl-data/reference_data" >}})
-"""
+        # Find all markdown files in xqtl-data (excluding README files)
+        all_files = []
+        for root, dirs, files in os.walk(self.data_dir):
+            dirs[:] = [d for d in dirs if not d.startswith('.')]
+            for f in files:
+                if f.endswith('.md') and f.lower() != 'readme.md':
+                    all_files.append(os.path.join(root, f))
         
-        menu_path = os.path.join(menu_dir, 'index.md')
-        with open(menu_path, 'w', encoding='utf-8') as f:
-            f.write(menu_content)
+        if not all_files:
+            self.log(f"No markdown files found in {self.data_dir}", 'warning')
+            return []
         
-        self.log("Created navigation menu", 'success')
+        self.log(f"Found {len(all_files)} markdown files in xqtl-data", 'info')
+        
+        # Extract metadata from files
+        all_items = []
+        for filepath in all_files:
+            metadata = self.get_metadata_from_file(filepath)
+            if metadata and metadata.get('title'):
+                all_items.append(metadata)
+        
+        if all_items:
+            self.log(f"Collected metadata from {len(all_items)} xqtl-data items", 'success')
+        
+        return all_items
     
     def generate_readme(self, all_items):
         """Generate README.md for the repository"""
         if not all_items:
-            return
+            self.log("No items to include in README", 'warning')
+            return False
         
         readme_path = 'README.md'
         
@@ -418,7 +413,7 @@ Published at: {self.base_url}
         for item in all_items:
             by_category[item['category']].append(item)
         
-        # Write each category
+        # Category configuration
         category_order = ['study_info', 'gwas', 'omics', 'qtl', 'reference_data']
         category_names = {
             'study_info': 'Study Information',
@@ -428,6 +423,7 @@ Published at: {self.base_url}
             'reference_data': 'Reference Data'
         }
         
+        # Write each category
         for cat in category_order:
             if cat in by_category:
                 cat_title = category_names.get(cat, cat.replace('_', ' ').title())
@@ -436,22 +432,20 @@ Published at: {self.base_url}
                 content += f"### {cat_title} ({len(items)} datasets)\n\n"
                 
                 for item in items:
-                    # Create GitHub link
                     rel_path = os.path.relpath(item['filepath'], '.')
-                    github_link = f"{DEFAULT_GITHUB_URL}{rel_path}"
+                    github_link = f"{self.github_url}{rel_path}"
                     
                     entry = f"- [{item['title']}]({github_link})"
-                    if item['description']:
+                    if item.get('description'):
                         entry += f": {item['description']}"
-                    if item['lead_analysts']:
+                    if item.get('lead_analysts'):
                         entry += f" (Lead: {item['lead_analysts']})"
                     content += entry + "\n"
                 
                 content += "\n"
         
-        content += """
-
-## Repository Structure
+        # Add repository structure and contributing sections
+        content += """## Repository Structure
 
 ```
 .
@@ -472,29 +466,54 @@ Published at: {self.base_url}
 
 To add or update content:
 1. Edit markdown files in `content/` directory
-2. Run `make` and follow instructions to preview the website locally
+2. Run `make` or `python scripts/hugo_generator.py --serve` to preview locally
 3. Submit a pull request
 
 The `website/` directory is automatically generated and should not be edited directly.
+
+## Building the Site
+
+```bash
+# Install Hugo (https://gohugo.io/getting-started/installing/)
+# Then run:
+
+# Generate and serve locally
+python scripts/hugo_generator.py --serve
+
+# Build for production
+python scripts/hugo_generator.py --build --minify
+```
 """
         
-        with open(readme_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        self.log(f"Generated {readme_path}", 'success')
+        try:
+            with open(readme_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            self.log(f"Generated {readme_path}", 'success')
+            return True
+        except Exception as e:
+            self.log(f"Failed to generate README: {e}", 'error')
+            return False
     
     def check_hugo_installed(self):
-        """Check if Hugo is installed"""
+        """Check if Hugo is installed and get version"""
         try:
             result = subprocess.run(['hugo', 'version'], capture_output=True, text=True)
             if result.returncode == 0:
                 version_line = result.stdout.split('\n')[0]
                 self.log(f"Hugo found: {version_line}", 'info')
+                
+                # Check for minimum version (optional)
+                version_match = re.search(r'v(\d+)\.(\d+)', version_line)
+                if version_match:
+                    major, minor = map(int, version_match.groups())
+                    if major == 0 and minor < 80:
+                        self.log("Warning: Hugo version < 0.80, some features may not work", 'warning')
+                
                 return True
         except FileNotFoundError:
             pass
         
-        self.log("Hugo not found. Install from https://gohugo.io", 'warning')
+        self.log("Hugo not found. Install from https://gohugo.io/getting-started/installing/", 'error')
         return False
     
     def build_site(self, minify=False):
@@ -514,7 +533,10 @@ The `website/` directory is automatically generated and should not be edited dir
             result = subprocess.run(cmd, capture_output=True, text=True)
             
             if result.returncode == 0:
-                self.log(f"Site built successfully in {self.website_dir}/public", 'success')
+                public_dir = os.path.join(self.website_dir, 'public')
+                if os.path.exists(public_dir):
+                    file_count = sum(len(files) for _, _, files in os.walk(public_dir))
+                    self.log(f"Site built successfully: {file_count} files in {public_dir}", 'success')
                 return True
             else:
                 self.log(f"Hugo build failed: {result.stderr}", 'error')
@@ -522,7 +544,6 @@ The `website/` directory is automatically generated and should not be edited dir
                 
         finally:
             os.chdir(original_dir)
-
 
     def serve_site(self, port=1313):
         """Start Hugo development server"""
@@ -532,14 +553,15 @@ The `website/` directory is automatically generated and should not be edited dir
         original_dir = os.getcwd()
         try:
             os.chdir(self.website_dir)
-            if port == 1313:
-                self.log(f"Starting Hugo server (Hugo will choose available port)", 'info')
-                self.log("Press Ctrl+C to stop...", 'info')
-                subprocess.run(['hugo', 'server'])
-            else:
-                self.log(f"Starting Hugo server at http://localhost:{port}", 'info')
-                self.log("Press Ctrl+C to stop...", 'info')
-                subprocess.run(['hugo', 'server', '--port', str(port)])
+            
+            cmd = ['hugo', 'server']
+            if port != 1313:
+                cmd.extend(['--port', str(port)])
+            
+            self.log(f"Starting Hugo server on port {port}...", 'info')
+            self.log("Press Ctrl+C to stop", 'info')
+            
+            subprocess.run(cmd)
             
         except KeyboardInterrupt:
             self.log("\nServer stopped", 'info')
@@ -551,64 +573,73 @@ The `website/` directory is automatically generated and should not be edited dir
         """Run the complete processing pipeline"""
         self.log("=== Hugo Site Generator ===\n", 'info')
         
-        # Step 1: Setup directories
+        # Track overall success
+        success = True
+        
+        # Step 1: Setup
         self.log("Step 1: Setting up directories...", 'info')
         self.setup_directories()
         
-        # Step 2: Download theme if requested
+        # Step 2: Theme
         if download_theme:
             self.log("\nStep 2: Downloading theme...", 'info')
-            self.download_theme()
+            if not self.download_theme():
+                success = False
+                self.log("Theme download failed but continuing...", 'warning')
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
         
-        # Step 3: Copy content files with transformation (includes xqtl-data)
-        self.log("\nStep 3: Copying content files with original structure...", 'info')
-        self.copy_content_files()
+        # Step 3: Content
+        self.log("\nStep 3: Processing content files...", 'info')
+        file_count = self.copy_content_files()
+        if file_count == 0:
+            self.log("Warning: No content files were processed", 'warning')
+            success = False
         
-        # Step 4: Collect metadata for README generation (but don't create alphabetical sections)
+        # Step 4: Metadata
         self.log("\nStep 4: Collecting metadata for README...", 'info')
         all_items = self.collect_xqtl_metadata()
         
-        # Step 5: Create navigation menu
-        self.log("\nStep 5: Creating navigation menu...", 'info')
-        self.create_menu()
+        # Step 5: Config
+        self.log("\nStep 5: Creating Hugo configuration...", 'info')
+        if not self.create_hugo_config():
+            self.log("Failed to create Hugo config", 'error')
+            success = False
         
-        # Step 6: Create Hugo config
-        self.log("\nStep 6: Creating Hugo configuration...", 'info')
-        self.create_hugo_config()
-        
-        # Step 7: Generate README if requested
-        if generate_readme and all_items:
-            self.log("\nStep 7: Generating README...", 'info')
+        # Step 6: README
+        if generate_readme:
+            self.log("\nStep 6: Generating README...", 'info')
             self.generate_readme(all_items)
         
-        # Step 8: Build if requested
+        # Step 7: Build
         if build or serve:
-            self.log("\nStep 8: Building site...", 'info')
+            self.log("\nStep 7: Building site...", 'info')
             if not serve:  # Only build without serving
-                self.build_site(minify=minify)
+                if not self.build_site(minify=minify):
+                    success = False
         
-        # Step 9: Serve if requested
+        # Step 8: Serve
         if serve:
-            self.log("\nStep 9: Starting server...", 'info')
+            self.log("\nStep 8: Starting server...", 'info')
             self.serve_site()
         
+        # Final report
         self.log("\n=== Processing complete! ===", 'success')
         
         if not serve and not build:
             self.log("\nNext steps:", 'info')
-            self.log(f"  cd {self.website_dir} && hugo server  # Preview locally", 'info')
-            self.log(f"  cd {self.website_dir} && hugo --minify  # Build for production", 'info')
+            self.log(f"  cd {self.website_dir} && hugo server", 'info')
+            self.log(f"  cd {self.website_dir} && hugo --minify", 'info')
         
         if self.problematic_files:
-            self.log(f"\nWarning: {len(self.problematic_files)} files had processing issues:", 'warning')
-            for f in self.problematic_files[:5]:  # Show first 5
-                self.log(f"  - {f}", 'warning')
+            self.log(f"\nWarning: {len(self.problematic_files)} files had issues:", 'warning')
+            for f in self.problematic_files[:5]:
+                rel_path = os.path.relpath(f, '.')
+                self.log(f"  - {rel_path}", 'warning')
             if len(self.problematic_files) > 5:
                 self.log(f"  ... and {len(self.problematic_files) - 5} more", 'warning')
         
-        return True
+        return success
 
 
 def main():
@@ -625,10 +656,18 @@ Examples:
   %(prog)s --build --minify
   
   # Custom paths
-  %(prog)s --content-dir content --website-dir website --serve
+  %(prog)s --content-dir custom/content --website-dir custom/website
+  
+  # Skip theme download (if already installed)
+  %(prog)s --no-theme-download --serve
   
   # For GitHub Actions
   %(prog)s --base-url https://statfungen.github.io/xqtl-resources/ --build --minify
+
+Notes:
+  - Hugo must be installed: https://gohugo.io/getting-started/installing/
+  - The website/ directory is auto-generated (should be in .gitignore)
+  - Edit content in content/ directory, not in website/
 """
     )
     
@@ -638,7 +677,9 @@ Examples:
     parser.add_argument('--website-dir', default=DEFAULT_WEBSITE_DIR,
                        help=f'Output website directory (default: {DEFAULT_WEBSITE_DIR})')
     parser.add_argument('--base-url', default=DEFAULT_BASE_URL,
-                       help=f'Base URL for Hugo (default: {DEFAULT_BASE_URL})')
+                       help=f'Base URL for the site (default: {DEFAULT_BASE_URL})')
+    parser.add_argument('--github-url', default=DEFAULT_GITHUB_URL,
+                       help=f'GitHub repository URL (default: {DEFAULT_GITHUB_URL})')
     
     # Processing options
     parser.add_argument('--no-theme-download', action='store_true',
@@ -662,11 +703,16 @@ Examples:
     
     args = parser.parse_args()
     
+    # Validate arguments
+    if args.minify and not args.build and not args.serve:
+        parser.error("--minify requires --build or --serve")
+    
     # Create generator instance
     generator = HugoSiteGenerator(
         content_dir=args.content_dir,
         website_dir=args.website_dir,
         base_url=args.base_url,
+        github_url=args.github_url,
         verbose=not args.quiet
     )
     

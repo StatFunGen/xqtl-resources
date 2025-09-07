@@ -81,7 +81,7 @@ Comprehensive [xQTL analysis protocols and tutorials](#xqtl_protocol_tutorial) p
 
 ## Data Format and Column Descriptions
 
-All exported bed files follow standardized formats with consistent column definitions. See our [file and format description page](file_description) for detailed specifications.
+All exported bed files follow standardized formats with consistent column definitions. See our [file and format description page](xqtl_resource_format) for detailed specifications.
 
 ## Citation and Usage
 

@@ -24,7 +24,6 @@
 * [MSBB brain methylation](MSBB_brain_methylation)
 * [MSBB brain proteomics](MSBB_proteomics)
 * [MSBB WGS data](MSBB_WGS)
-* [Omics](README)
 * [PART working group brain methylation](PART_brain_methylation)
 * [ROSMAP AC alternative splicing](ROSMAP_AC_splicing)
 * [ROSMAP AC gene expression](ROSMAP_AC_expression)

@@ -35,6 +35,8 @@ def get_toc(files):
     for item in files:
         if item in env.exclude:
             continue
+        if os.path.split(item)[-1] == "README.md":
+            continue
         n_sec = 0
         lines = [x.strip() for x in open(item).readlines() if x.strip()]
         name = lines[0].strip('#').strip()

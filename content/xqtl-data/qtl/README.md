@@ -21,7 +21,6 @@
 * [MSBB brain methylation QTL](MSBB_brain_methylation_qtl)
 * [MSBB brain proteomics QTL](MSBB_proteomics_qtl)
 * [PART working group brain methylation QTL](PART_brain_methylation_qtl)
-* [Qtl](README)
 * [ROSMAP AC alternative splicing QTL](ROSMAP_AC_splicing_qtl)
 * [ROSMAP AC gene expression QTL](ROSMAP_AC_expression_qtl)
 * [ROSMAP DLPFC alternative splicing QTL](ROSMAP_DLPFC_splicing_qtl)

@@ -112,8 +112,6 @@ Published at: https://statfungen.github.io/xqtl-resources/
 
 - [Non-Hispanic White Linkage Disequilibrium Reference Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_reference.md): LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD). Correlation matrices were calculated between SNPs within 1361 LD blocks which were obtained from [this Github page](https://github.com/jmacdon/LDblocks_GRCh38/) (generated from 1000 Genomes EUR samples).
 
-
-
 ## Repository Structure
 
 ```
@@ -135,7 +133,20 @@ Published at: https://statfungen.github.io/xqtl-resources/
 
 To add or update content:
 1. Edit markdown files in `content/` directory
-2. Run `make` and follow instructions to preview the website locally
+2. Run `make` or `python scripts/hugo_generator.py --serve` to preview locally
 3. Submit a pull request
 
 The `website/` directory is automatically generated and should not be edited directly.
+
+## Building the Site
+
+```bash
+# Install Hugo (https://gohugo.io/getting-started/installing/)
+# Then run:
+
+# Generate and serve locally
+python scripts/hugo_generator.py --serve
+
+# Build for production
+python scripts/hugo_generator.py --build --minify
+```

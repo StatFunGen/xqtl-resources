@@ -11,6 +11,5 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-content/xqtl-data/README.md
 website
 .hugo_build.lock
