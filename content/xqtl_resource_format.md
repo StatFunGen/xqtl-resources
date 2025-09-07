@@ -1,4 +1,4 @@
-# FunGen-xQTL resource file description
+# FunGen-xQTL Resource File Format Description
 
 ## Overview
 

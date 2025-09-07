@@ -2,6 +2,7 @@
 """
 Hugo site generator for xQTL Resources
 Handles content transformation and organization for Hugo
+Modified to keep original structure only, no alphabetical organization
 """
 
 import os
@@ -147,16 +148,31 @@ class HugoSiteGenerator:
         
         return content
     
-    def add_frontmatter(self, content, title, weight=10):
+    def add_frontmatter(self, content, title, weight=10, depth_level=1):
         """Add Hugo frontmatter to markdown content"""
         # Escape quotes in title
         safe_title = title.replace('"', '\\"')
+        
+        # For depth limiting: hide items deeper than level 2
+        # Level 1: root content
+        # Level 2: xqtl-data/gwas, xqtl-data/omics, etc.
+        # Level 3+: individual files within those directories
+        
+        # Don't hide index files or first two levels
+        book_hidden = ""
+        if depth_level > 2 and not content.startswith("# "):
+            book_hidden = "bookHidden: true\n"
+        
+        # Collapse sections by default for cleaner navigation
+        book_collapse = ""
+        if depth_level == 2:
+            book_collapse = "bookCollapseSection: true\n"
         
         frontmatter = f"""---
 title: "{safe_title}"
 weight: {weight}
 bookToc: true
----
+{book_collapse}{book_hidden}---
 
 """
         return frontmatter + content
@@ -191,7 +207,7 @@ bookToc: true
             
             # Sanitize and add frontmatter
             content = self.sanitize_markdown_content(content)
-            content = self.add_frontmatter(content, title, weight=1)
+            content = self.add_frontmatter(content, title, weight=1, depth_level=1)
             
             # Write to destination
             with open(dest_file, 'w', encoding='utf-8') as f:
@@ -211,8 +227,11 @@ bookToc: true
             # Copy all .md files in subdirectory
             md_files = glob.glob(os.path.join(source_subdir, '**/*.md'), recursive=True)
             for source_file in md_files:
-                # Calculate relative path
+                # Calculate relative path and depth
                 rel_path = os.path.relpath(source_file, source_subdir)
+                path_parts = rel_path.split(os.sep)
+                depth_level = len(path_parts) + 1  # +1 for the subdir itself
+                
                 filename = os.path.basename(source_file)
                 
                 # Transform README.md to _index.md
@@ -246,7 +265,7 @@ bookToc: true
                 if filename == 'README.md' or dest_filename == '_index.md':
                     weight = 1
                 
-                content = self.add_frontmatter(content, title, weight=weight)
+                content = self.add_frontmatter(content, title, weight=weight, depth_level=depth_level)
                 
                 # Write to destination
                 with open(dest_file, 'w', encoding='utf-8') as f:
@@ -254,11 +273,11 @@ bookToc: true
                 
                 self.log(f"  Copied: {subdir}/{rel_path} → {os.path.relpath(dest_file, self.website_content_dir)}", 'success')
     
-    def process_xqtl_data_alphabetically(self):
-        """Process xqtl-data files and organize alphabetically"""
+    def collect_xqtl_metadata(self):
+        """Collect metadata from xqtl-data files for README generation"""
         if not os.path.exists(self.data_dir):
-            self.log(f"xqtl-data directory not found at {self.data_dir}, skipping alphabetical organization", 'warning')
-            return None, None
+            self.log(f"xqtl-data directory not found at {self.data_dir}", 'warning')
+            return None
         
         # Find all markdown files in xqtl-data
         patterns = [
@@ -279,43 +298,21 @@ bookToc: true
         
         if not all_files:
             self.log(f"No markdown files found in {self.data_dir}", 'warning')
-            return None, None
+            return None
         
         self.log(f"Found {len(all_files)} markdown files in xqtl-data", 'info')
         
-        # Extract metadata and organize alphabetically
-        categories = OrderedDict()
+        # Extract metadata from files
         all_items = []
-        
         for filepath in all_files:
             metadata = self.get_metadata_from_file(filepath)
-            if not metadata or not metadata['title']:
-                continue
-            
-            # Determine alphabetical category
-            first_char = metadata['title'][0].upper() if metadata['title'] else 'U'
-            if first_char.isdigit():
-                category = '1'  # Numeric category
-            else:
-                category = first_char
-            
-            # Initialize category if new
-            if category not in categories:
-                categories[category] = []
-            
-            # Add to category
-            categories[category].append(metadata)
-            all_items.append(metadata)
+            if metadata and metadata['title']:
+                all_items.append(metadata)
         
-        # Sort items within each category
-        for category in categories:
-            categories[category] = sorted(categories[category], 
-                                         key=lambda x: x['title'].lower())
+        if all_items:
+            self.log(f"Collected metadata from {len(all_items)} xqtl-data items", 'success')
         
-        if categories:
-            self.log(f"Organized {len(all_items)} xqtl-data items into {len(categories)} alphabetical categories", 'success')
-        
-        return categories, all_items
+        return all_items
     
     def get_metadata_from_file(self, filepath):
         """Extract metadata from a markdown file"""
@@ -368,9 +365,6 @@ bookToc: true
                 lead = re.sub(r'\s+', ' ', lead)        # Normalize whitespace
                 metadata['lead_analysts'] = lead.strip('. ')
             
-            # Store sanitized content
-            metadata['content'] = self.sanitize_markdown_content(content)
-            
             return metadata
             
         except Exception as e:
@@ -378,82 +372,8 @@ bookToc: true
             self.problematic_files.append(filepath)
             return None
     
-    def create_safe_filename(self, title):
-        """Create a safe filename from a title"""
-        # Remove special characters and normalize
-        safe_name = re.sub(r'[^\w\s-]', '', title.lower())
-        safe_name = re.sub(r'[-\s]+', '-', safe_name)
-        safe_name = safe_name.strip('-')
-        
-        # Ensure it's not empty
-        if not safe_name:
-            safe_name = 'untitled'
-        
-        # Limit length
-        if len(safe_name) > 100:
-            safe_name = safe_name[:100].rsplit('-', 1)[0]
-        
-        return safe_name
-    
-    def create_alphabetical_sections(self, categories):
-        """Create alphabetical category sections in xqtl-data"""
-        if not categories:
-            return
-        
-        xqtl_dir = os.path.join(self.website_content_dir, 'xqtl-data')
-        os.makedirs(xqtl_dir, exist_ok=True)
-    
-        # Create content for each alphabetical category
-        weight = 1
-        for category, items in categories.items():
-            category_dir = os.path.join(xqtl_dir, category.lower())
-            os.makedirs(category_dir, exist_ok=True)
-            
-            # Create category index
-            index_path = os.path.join(category_dir, '_index.md')
-            title = category if category != '1' else '#'
-            
-            index_content = f"""---
-weight: {weight}
-title: "{title}"
-bookCollapseSection: false
----
-
-# {title if category != '1' else 'Numeric'}
-
-"""
-            # Add items list
-            for idx, item in enumerate(items, 1):
-                safe_name = self.create_safe_filename(item['title'])
-                desc_text = f": {item['description']}" if item['description'] else ""
-                index_content += f"{idx}. [{item['title']}]({safe_name}){desc_text}\n"
-                
-                # Create individual content file
-                content_path = os.path.join(category_dir, f"{safe_name}.md")
-                
-                # Add Hugo frontmatter to the content
-                file_content = f"""---
-title: "{item['title'].replace('"', '\\"')}"
-toc: true
-weight: {idx}
----
-
-{item['content']}
-"""
-                
-                with open(content_path, 'w', encoding='utf-8') as f:
-                    f.write(file_content)
-            
-            # Write category index
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-            
-            weight += 1
-        
-        self.log(f"Created {len(categories)} alphabetical categories in xqtl-data", 'success')
-    
-    def create_menu(self, categories):
-        """Create navigation menu"""
+    def create_menu(self):
+        """Create navigation menu for original structure"""
         menu_dir = os.path.join(self.website_content_dir, 'menu')
         os.makedirs(menu_dir, exist_ok=True)
         
@@ -463,13 +383,12 @@ headless: true
 
 - [**Home**]({{< relref "/" >}})
 - [**xQTL Data Repository**]({{< relref "/xqtl-data" >}})
+  - [Study Information]({{< relref "/xqtl-data/study_info" >}})
+  - [GWAS Summary Statistics]({{< relref "/xqtl-data/gwas" >}})
+  - [Omics Data]({{< relref "/xqtl-data/omics" >}})
+  - [QTL Results]({{< relref "/xqtl-data/qtl" >}})
+  - [Reference Data]({{< relref "/xqtl-data/reference_data" >}})
 """
-        
-        if categories:
-            menu_content += "  - Alphabetical Index\n"
-            for category in sorted(categories.keys()):
-                display_name = category.upper() if category != '1' else '#'
-                menu_content += f'    - [{display_name}]({{{{< relref "/xqtl-data/{category.lower()}" >}}}})\n'
         
         menu_path = os.path.join(menu_dir, 'index.md')
         with open(menu_path, 'w', encoding='utf-8') as f:
@@ -501,9 +420,17 @@ Published at: {self.base_url}
         
         # Write each category
         category_order = ['study_info', 'gwas', 'omics', 'qtl', 'reference_data']
+        category_names = {
+            'study_info': 'Study Information',
+            'gwas': 'GWAS Summary Statistics',
+            'omics': 'Omics Data',
+            'qtl': 'QTL Results',
+            'reference_data': 'Reference Data'
+        }
+        
         for cat in category_order:
             if cat in by_category:
-                cat_title = cat.replace('_', ' ').title()
+                cat_title = category_names.get(cat, cat.replace('_', ' ').title())
                 items = sorted(by_category[cat], key=lambda x: x['title'].lower())
                 
                 content += f"### {cat_title} ({len(items)} datasets)\n\n"
@@ -528,12 +455,17 @@ Published at: {self.base_url}
 
 ```
 .
-├── content/           # Source markdown files
-│   ├── xqtl-data/    # xQTL datasets
-│   └── *.md          # Documentation pages
-├── scripts/          # Processing scripts
+├── content/                  # Source markdown files
+│   ├── xqtl-data/           # xQTL datasets
+│   │   ├── study_info/      # Study descriptions
+│   │   ├── gwas/            # GWAS summary statistics
+│   │   ├── omics/           # Omics data
+│   │   ├── qtl/             # QTL results
+│   │   └── reference_data/  # Reference panels
+│   └── *.md                 # Documentation pages
+├── scripts/                  # Processing scripts
 │   └── hugo_generator.py
-└── website/          # Generated Hugo site (git-ignored)
+└── website/                  # Generated Hugo site (git-ignored)
 ```
 
 ## Contributing
@@ -626,21 +558,17 @@ The `website/` directory is automatically generated and should not be edited dir
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
         
-        # Step 3: Copy content files with transformation
-        self.log("\nStep 3: Copying content files...", 'info')
+        # Step 3: Copy content files with transformation (includes xqtl-data)
+        self.log("\nStep 3: Copying content files with original structure...", 'info')
         self.copy_content_files()
         
-        # Step 4: Process xqtl-data alphabetically (if exists)
-        self.log("\nStep 4: Processing xqtl-data alphabetically...", 'info')
-        categories, all_items = self.process_xqtl_data_alphabetically()
-        
-        if categories:
-            # Create alphabetical sections
-            self.create_alphabetical_sections(categories)
+        # Step 4: Collect metadata for README generation (but don't create alphabetical sections)
+        self.log("\nStep 4: Collecting metadata for README...", 'info')
+        all_items = self.collect_xqtl_metadata()
         
         # Step 5: Create navigation menu
         self.log("\nStep 5: Creating navigation menu...", 'info')
-        self.create_menu(categories)
+        self.create_menu()
         
         # Step 6: Create Hugo config
         self.log("\nStep 6: Creating Hugo configuration...", 'info')
@@ -712,7 +640,7 @@ Examples:
     parser.add_argument('--no-theme-download', action='store_true',
                        help='Skip downloading Hugo theme')
     parser.add_argument('--no-readme', action='store_true',
-                       help='Skip generating README_generated.md')
+                       help='Skip generating README.md')
     
     # Build/serve options
     parser.add_argument('--build', action='store_true',

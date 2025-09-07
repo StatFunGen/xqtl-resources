@@ -6,7 +6,7 @@ Published at: https://statfungen.github.io/xqtl-resources/
 
 ## Dataset Categories
 
-### Study Info (6 datasets)
+### Study Information (6 datasets)
 
 - [Knight-ADRC study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/KnightADRC.md): The Memory and Aging Project at the Charles F. And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC at Washington University in St. Louis) collects collects plasma, CSF, fibroblast, neuroimaging  clinical and cognition data longitudinally and autopsied brain samples. This clinical information combined with deep molecular phenotyping (i.e. genetic, proteomics, transcriptomics and others) will lead to the identification of novel genetic modifiers, protective variants, molecular biomarkers and the novel targets. Participants were recruited by the Knight-ADRC at Washington University in St. Louis (MO). Knight-ADRC participants have to be at least 65 years old and have no memory problems or mild dementia at the time of enrollment.
 - [MAGENTA study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MAGENTA.md): Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer’s (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P. Hussman Institute for Human Genomics (HIHG) at the University of Miami Miller School of Medicine (Miami, FL), North Carolina A&T State University (Greensboro, NC), and Case Western Reserve University (Cleveland, OH).  Participants were ascertained as part of the ADSP Follow-up Study and included both cases (>65 years of age of onset) and controls (>65 years of age at age of exam).  All participants were adjudicated by a clinical panel with expertise in AD related disorders and classified as AD according to standard criteria developed by the National Institute of Aging and the Alzheimer’s Association.
@@ -15,7 +15,7 @@ Published at: https://statfungen.github.io/xqtl-resources/
 - [STARNET](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/STARNET.md): STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery.
 - [The Mount Sinai Brain Bank (MSBB) study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MSBB.md): This cohort study generated large-scale matched multi-Omics data in AD and control brains for exploring novel molecular underpinnings of AD.
 
-### Gwas (5 datasets)
+### GWAS Summary Statistics (5 datasets)
 
 - [ADGC GWAS imputation protocol](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/ADGC_GWAS_imputation_protocol.md): Adapted from [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/) to generate imputed genotype data for xQTL analysis in some cohorts.
 - [Alzheimer's Disease GWAS Summary Data (Bellenguez)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md): The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics. This study uses UK Biobank (UKBB) proxy AD samples.
@@ -23,7 +23,7 @@ Published at: https://statfungen.github.io/xqtl-resources/
 - [Alzheimer's Disease GWAS Summary Data (Kunkle)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Kunkle_AD.md): The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics. Position values were converted from hg19 to hg38 using liftOver.
 - [Alzheimer's Disease GWAS Summary Data (Wightman)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md): The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics. This file contains the meta-analyzed summary statistics of three cohorts: all individuals, all individuals excluding 23andMe, all individuals excluding 23andMe and UKBB.
 
-### Omics (43 datasets)
+### Omics Data (43 datasets)
 
 - [DIAN blood derived methylation](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/dian_blood_methylation.md): TBD, Alan Renton and Carlos Cruchaga.
 - [EFIGA CSF proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/EFIGA_CSF_proteomics.md): Zining Qi.
@@ -69,7 +69,7 @@ Published at: https://statfungen.github.io/xqtl-resources/
 - [STARNET macrophage gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/STARNET_macrophage.md): STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery.
 - [WHICAP (pilot) plasma metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/WHICAP_plasma_metabolomics.md): Zining Qi.
 
-### Qtl (36 datasets)
+### QTL Results (36 datasets)
 
 - [DIAN blood derived methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/dian_blood_methylation_qtl.md): TBD, Alan Renton and Carlos Cruchaga.
 - [EFIGA CSF proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/EFIGA_CSF_proteomics_qtl.md): Zining Qi.
@@ -118,12 +118,17 @@ Published at: https://statfungen.github.io/xqtl-resources/
 
 ```
 .
-├── content/           # Source markdown files
-│   ├── xqtl-data/    # xQTL datasets
-│   └── *.md          # Documentation pages
-├── scripts/          # Processing scripts
+├── content/                  # Source markdown files
+│   ├── xqtl-data/           # xQTL datasets
+│   │   ├── study_info/      # Study descriptions
+│   │   ├── gwas/            # GWAS summary statistics
+│   │   ├── omics/           # Omics data
+│   │   ├── qtl/             # QTL results
+│   │   └── reference_data/  # Reference panels
+│   └── *.md                 # Documentation pages
+├── scripts/                  # Processing scripts
 │   └── hugo_generator.py
-└── website/          # Generated Hugo site (git-ignored)
+└── website/                  # Generated Hugo site (git-ignored)
 ```
 
 ## Contributing

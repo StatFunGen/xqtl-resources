@@ -1,5 +1,5 @@
 languageCode = "en-us"
-title = "FunGen-xQTL Resources"
+title = "FunGen-AD Resources"
 baseURL = "https://statfungen.github.io/xqtl-resources"
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-book"
