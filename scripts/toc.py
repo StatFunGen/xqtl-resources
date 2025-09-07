@@ -102,7 +102,11 @@ def write_subfolder_readmes(files):
         
         with open(readme_path, 'w') as f:
             # Use folder name as title (capitalize and replace underscores)
-            title = folder_name.replace('_', ' ').title()
+            title = folder_name.replace('_', ' ')
+            if title in ["gwas", "qtl"]:
+                title = title.upper()
+            else:
+                title = title.title()
             f.write('# {}\n\n'.format(title))
             
             # List all files in this folder

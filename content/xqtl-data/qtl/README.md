@@ -1,4 +1,4 @@
-# Qtl
+# QTL
 
 * [DIAN blood derived methylation QTL](dian_blood_methylation_qtl)
 * [EFIGA CSF proteomics QTL](EFIGA_CSF_proteomics_qtl)

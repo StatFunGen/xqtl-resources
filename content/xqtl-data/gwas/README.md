@@ -1,4 +1,4 @@
-# Gwas
+# GWAS
 
 * [ADGC GWAS imputation protocol](ADGC_GWAS_imputation_protocol)
 * [Alzheimer's Disease GWAS Summary Data (Bellenguez)](Bellenguez_AD)
