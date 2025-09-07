@@ -4,27 +4,63 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          submodules: false
+          python-version: '3.10'
+
+      - name: Generate xQTL Data Catalog
+        run: |
+          python scripts/toc.py \
+            content/xqtl-data/{gwas,omics,qtl,study_info,reference_data}/*.md \
+            -o content/xqtl-data/README.md \
+            -t "FunGen-xQTL Data Catalog" \
+            -b "https://github.com/StatFunGen/xqtl-resources/tree/main/" \
+            -c "Lead analysts: "
+
+      - name: Generate Hugo site structure
+        run: |
+          python scripts/hugo_generator.py \
+            --base-url https://statfungen.github.io/xqtl-resources/ \
+            --no-readme
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build site
-        run: hugo --minify
+      - name: Build Hugo site
+        run: |
+          cd website
+          hugo --minify
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./website/public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
