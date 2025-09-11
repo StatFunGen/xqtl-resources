@@ -87,6 +87,6 @@ All exported bed files follow standardized formats with consistent column defini
 
 Please cite appropriate manuscripts and acknowledge consortium data generation efforts. Detailed citation information will be provided upon publication.
 
-[ad_loci_xqtl_table]: 
-[ad_genes_fungen_xqtl]:
-[ad_genes_twas_xqtl]: 
+[ad_loci_xqtl_table]: https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/unified_AD_loci_xQTL_summary.xlsx
+[ad_genes_fungen_xqtl]: https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
+[ad_genes_twas_xqtl]: https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
