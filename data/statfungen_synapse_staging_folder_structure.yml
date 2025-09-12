@@ -135,6 +135,9 @@ variant_gene_summary:
           - ROSMAP_CUIMC1_pQTL.exported.toploci.bed.gz
         metabolome:
           - ROSMAP_metabolome.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL_single_context_top_loci_integrated.rds
+          - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
     xQTL_colocalization:
       multi_context_colocalization:
         - xqtl_only_ROSMAP_colocboost_export_release_sorted.bed.gz
