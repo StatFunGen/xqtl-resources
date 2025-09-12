@@ -176,7 +176,6 @@ variant_gene_summary:
       cTWAS:
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary:
-    - Figure_5c_AD_loci_xQTL_annotated.rds
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
@@ -264,5 +263,9 @@ reference_files:
   xQTL_protocol_tutorial:
     # For this let's follow exactly Frank's organization
     - Miscellaneous_protocol_and_toy_example_data
+
+manuscript:
+  xQTL_flagship_2025:
+    - Figure_5c_AD_loci_xQTL_annotated.rds
 
 
