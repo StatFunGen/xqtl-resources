@@ -68,6 +68,9 @@ variant_gene_summary:
           - ROSMAP_snATAC_MIT_Oli.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Mic.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Inh.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL_single_context_top_loci_integrated.rds
+          - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       multi_context_finemapping:
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
@@ -175,12 +178,6 @@ variant_gene_summary:
   AD_xQTL_integration_summary:
     - Figure_5c_AD_loci_xQTL_annotated.rds
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
-    - single_context_top_loci_integrated.rds
-    - MetaBrain.exported.toploci.bed.gz
-    - FunGen_xQTL.trans.nofiltered.exported.toploci.bed.gz
-    - AD_loci_xQTL_context_method_summary.fsusie.rds
-    - unadjusted_PhenotypeID.txt
-    - adjusted_PhenotypeID.txt
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
@@ -267,4 +264,5 @@ reference_files:
   xQTL_protocol_tutorial:
     # For this let's follow exactly Frank's organization
     - Miscellaneous_protocol_and_toy_example_data
+
 
