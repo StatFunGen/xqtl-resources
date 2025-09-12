@@ -243,6 +243,31 @@ Between xQTL and AD, pairwise.
 | `L_PP.H3.abf` | double    | Posterior probability of H3: distinct causal variants at effect level                                       |
 | `L_PP.H4.abf` | double    | Posterior probability of H4: shared causal variant between xQTL and AD at effect level                      |
 
+### Consolidated single context xQTL loci
+
+single_context_top_loci_integrated.rds : FIXME
+
+AD_loci_xQTL_context_method_summary.fsusie.rds : FIXME
+
+| Column Name   | Type      | Description                                                                                                 |
+|---------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `cos_id`      | character | Unique identifier for 95% pairwise colocalization confidence set                                            |
+| `coloc_index` | integer   | Index of pairwise colocalization test in SNP-level COLOC results                                            |
+| `nsnps`       | integer   | Number of SNPs included in colocalization test                                                            |
+| `SNP_PPH4`    | double    | Posterior probability of SNP causality for shared signal given H4 hypothesis                               |
+| `TADB_region` | character | TAD boundary identifier where fSuSiE was conducted                                                         |
+| `AD`          | character | Alzheimer's disease GWAS dataset name (SuSiE-RSS fine-mapped)                                              |
+| `xQTL`        | character | xQTL dataset name (fSuSiE fine-mapped)                                                                     |
+| `xQTL_hit`    | character | Lead SNP of fine-mapped effect in xQTL dataset                                                            |
+| `AD_hit`      | character | Lead SNP of fine-mapped effect in AD GWAS dataset                                                         |
+| `xQTL_L`      | integer   | Fine-mapped effect index in xQTL (from fSuSiE)                                                            |
+| `AD_L`        | integer   | Fine-mapped effect index in AD GWAS (from SuSiE-RSS)                                                      |
+| `PP.H0.abf`   | double    | Posterior probability of H0: no association in either study                                                |
+| `PP.H1.abf`   | double    | Posterior probability of H1: association in xQTL only                                                      |
+| `PP.H2.abf`   | double    | Posterior probability of H2: association in AD GWAS only                                                   |
+| `L_PP.H3.abf` | double    | Posterior probability of H3: distinct causal variants at effect level                                       |
+| `L_PP.H4.abf` | double    | Posterior probability of H4: shared causal variant between xQTL and AD at effect level                      |
+
 ### Usage Guidelines
 
 #### Prioritization Strategies
