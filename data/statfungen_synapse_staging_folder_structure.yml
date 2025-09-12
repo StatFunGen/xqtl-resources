@@ -68,6 +68,9 @@ variant_gene_summary:
           - ROSMAP_snATAC_MIT_Oli.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Mic.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Inh.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL_single_context_top_loci_integrated.rds
+          - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       multi_context_finemapping:
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
@@ -95,9 +98,6 @@ variant_gene_summary:
           - ROSMAP_monocyte_ROSMAP_eQTL.exported.toploci.bed.gz
         pQTL:
           - ROSMAP_DLPFC_Bennett_pQTL.exported.toploci.bed.gz
-        consolidated:
-          - FunGen_xQTL_single_context_top_loci_integrated.rds
-          - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       trans_finemapping:
         eQTL:
           - Knight_eQTL.exported.toploci.bed.gz
