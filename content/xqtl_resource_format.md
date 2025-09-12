@@ -243,6 +243,12 @@ Between xQTL and AD, pairwise.
 | `L_PP.H3.abf` | double    | Posterior probability of H3: distinct causal variants at effect level                                       |
 | `L_PP.H4.abf` | double    | Posterior probability of H4: shared causal variant between xQTL and AD at effect level                      |
 
+Consolidated single context xQTL loci
+
+- `single_context_top_loci_integrated.rds` : FIXME
+
+- `AD_loci_xQTL_context_method_summary.fsusie.rds` : FIXME
+
 ### Usage Guidelines
 
 #### Prioritization Strategies
