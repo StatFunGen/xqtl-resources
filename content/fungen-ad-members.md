@@ -16,7 +16,7 @@
 
 ## FunGen-xQTL Work Group
 
-Columbia University
+### Columbia University
 
 - Xuewei Cao () - R01AG076901
 - Yanghyeon Cho () - R01AG076901
@@ -36,7 +36,7 @@ Columbia University
 - Lu Zeng ()
 - Gao Wang (wang.gao@columbia.edu) - R01AG086467, R01AG076901, U01AG072572
 
-Boston University
+### Boston University
 
 - Xiaoling Zhang
 - Julia TCW
@@ -46,21 +46,21 @@ Boston University
 - Mintao Lin
 - Tosin
 
-Case Western Reserve University
+### Case Western Reserve University
 
 - William Bush
 - Makaela Mews
 
-Clemson University
+### Clemson University
 
 - Fabio Morgante
 - Chunming Liu
 
-Colorado State University
+### Colorado State University
 
 - Tianying Wang ()
 
-Icahn School of Medicine at Mount Sinai 
+### Icahn School of Medicine at Mount Sinai 
 
 - Alison Goate
 - Hao Sun - , R01AG076901
@@ -69,35 +69,34 @@ Icahn School of Medicine at Mount Sinai
 - Dado
 - Alan
 
-Memorial Sloan Kettering Cancer Center
+### Memorial Sloan Kettering Cancer Center
 
 - Kushal K. Key
 - Tabassum Fabiha 
 - Harry Wang
 - Louis Liu
 
-National University of Singapore
+### National University of Singapore
 
 - Boxiang Liu
 - Yuntian Zhang
 
-New York Genome Center
+### New York Genome Center
 
 - Chirag Lakhani
 - David Knowles
 
-Rush University
+### Rush University
 
 - David Bennett
-- 
 
-Stanford University
+### Stanford University
 
 - Stephen Montgomery
 - Danian Nachun
 - Esther A. Robb
 
-University of Chicago
+### University of Chicago
 
 - Yang Li
 - Xuanyao Liu
@@ -109,7 +108,7 @@ University of Chicago
 - Sheng Qian
 - Yunqi Yang
 
-University of Pennsylvania
+### University of Pennsylvania
 
 - Yuk Yee Leung
 - Pavel
@@ -117,11 +116,11 @@ University of Pennsylvania
 - Li-San Wang
 - Travyse Edwards
 
-University of Miami
+### University of Miami
 
 - Anthony J. Griswold ()
 
-Washington University in St. Louis
+### Washington University in St. Louis
 
 - Carlos Cruchaga
 - Chengran Yang
