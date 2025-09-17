@@ -205,7 +205,6 @@ variant_gene_summary:
       cTWAS:
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary:
-    - Figure_5c_AD_loci_xQTL_annotated.rds
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
@@ -299,3 +298,4 @@ manuscript:
     - Figure_5c_AD_loci_xQTL_annotated.rds
   EOO:
     - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.RDS
+    - Figure_EOO.rds
