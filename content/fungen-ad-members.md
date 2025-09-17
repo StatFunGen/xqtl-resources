@@ -54,8 +54,8 @@
 
 ### Clemson University
 
-- Fabio Morgante
-- Chunming Liu
+- Fabio Morgante (fabiom@clemson.edu) - R35GM146868
+- Chunming Liu (chunmil@clemson.edu)- R35GM146868
 
 ### Colorado State University
 
