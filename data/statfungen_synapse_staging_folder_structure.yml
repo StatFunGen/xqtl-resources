@@ -297,5 +297,5 @@ manuscript:
   xQTL_flagship_2025:
     - Figure_5c_AD_loci_xQTL_annotated.rds
   EOO:
-    - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.RDS
+    - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
     - Figure_EOO.rds
