@@ -12,7 +12,7 @@
 - **Sally Temple, PhD** - U01AG072464
 - **Jeffery Vance, PhD** - U01AG072579, RF1AG059018
 - **Gao Wang, PhD** - R01AG086467
-- **Xiaoling Zhang, PhD** - U01AG072577, R01AG086467
+- **Xiaoling Zhang, PhD** - U01AG072577
 
 ## FunGen-xQTL Work Group
 
