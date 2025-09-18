@@ -84,8 +84,8 @@
 
 ### New York Genome Center
 
-- Chirag Lakhani
-- David Knowles
+- Chirag Lakhani (clakhani@nygenome.org) - U01AG068880
+- David Knowles (daknowles@nygenome.org) - U01AG068880
 
 ### Rush University
 
