@@ -63,13 +63,13 @@
 
 ### Icahn School of Medicine at Mount Sinai 
 
-- Alison Goate
-- Hao Sun - , R01AG076901
-- Haochen Sun - , R01AG076901
-- Minghui Wang ()
-- Dado
-- Alan
-
+- Alison Goate (alison.goate@mssm.edu) - U01AG058635 , 
+- Hao Sun  (hao.sun@icahn.mssm.edu) - Freedom Together Foundation, U01AG058635, R01AG076901
+- Haochen Sun (haochen.sun@icahn.mssm.edu) - , R01AG076901
+- Minghui Wang (minghui.wang@mssm.edu) - ,
+- Edoardo.Marcora (Dado) (edoardo.marcora@mssm.edu) - ,
+- Alan Renton (alan.renton@mssm.edu) - , 
+ 
 ### Memorial Sloan Kettering Cancer Center
 
 - Kushal K. Dey
