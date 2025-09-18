@@ -53,8 +53,14 @@ variant_gene_summary:
           - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
         sQTL:
           - ROSMAP_AC_sQTL.exported.toploci.bed.gz
+          - ROSMAP_AC_sQTL.exported.toploci.nofilter.bed.gz
+          - ROSMAP_AC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
           - ROSMAP_DLPFC_sQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.bed.gz
+          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
+          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
+          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
         mQTL:
           - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
           - KnightADRC_mQTL.exported.toploci.bed.gz
@@ -268,6 +274,7 @@ reference_files:
 manuscript:
   xQTL_flagship_2025:
     - Figure_5c_AD_loci_xQTL_annotated.rds
+    - Figure_1b_num_xQTL_loci_single_context.rds 
   EOO:
     - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
     - Figure_EOO.rds
