@@ -1,19 +1,22 @@
 
 ## How to read the unified table	
 Each row correspond to a variant in a locus that have been associated to AD GWAS (Combining finemaping and Coloc results for the 4 GWAS studies data used). 	
-  
-If the variant have been associated also to an xQTL, summary are shown in xQTLs summary part.	 
 
-Context are ordered and green colored according to a confidence score (C1 / darkgreen is best, C6/light green is lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
+For each AD locus, only the variants with inclusion score>0.1 are included or, if no variant with inclusion score>0.1, only the leading variants in term of inclusion score for GWAS or for an xQTL are displayed.  
+Inclusion score correspond to the maximal value for its associated PIPs or VCP (Variant coloc probability) across any GWAS (for GWAS part), or xQTL (for xQTL part)
+
+If the variant have been associated to an xQTL, summary are shown in xQTLs summary part.	 
+
+Contexts are ordered and green colored according to a confidence score (C1 / darkgreen is best, C6/light green is lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
 - C1: the gene is MR significant, the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
 - C2: the gene is MR significant, the variant is colocalizing (using colocboost) between the GWAS and the xQTL
 - C3: the gene is TWAS significant, and the variant is colocalizing or in  CS95% overlapping between the GWAS and the xQTL
 - C4: the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
 - C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70..)
 - C6:  the gene is TWAS significant only
+the '+' or '-' after the context name correspond to the direction of the effect on the gene/molecular trait observed in finemapping (first '+/-') or in colocboost (second '+/-'). 
+'Effect' column correspond to the effect on the molecular traits, 
   
-For each AD locus, only the variants with inclusion score>0.1 are included or, if no variant with inclusion score>0.1, only the leading variants in term of inclusion score for GWAS or for an xQTL are displayed.  
-Inclusion score for a variant correspond to the maximal value for its associated PIPs or VCP (Variant coloc probability) across any GWAS (for GWAS part), or xQTL (for xQTL part)
 
 
 
