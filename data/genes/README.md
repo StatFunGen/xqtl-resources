@@ -1,3 +1,5 @@
+
+
 For more details please check out [this page](https://statfungen.github.io/xqtl-resources/xqtl_resource_description/#alzheimers-disease-gwas-integration)
 
 - `unified_AD_loci_xQTL_summary.xlsx` created by Alexandre Pelletier. Latest version from Aug 16, 2025 containing 197 genes
@@ -25,6 +27,7 @@ cat /mnt/vast/hpc/homes/rf2872/codes/xqtl-analysis/analysis/Wang_Columbia/susie_
 paste context.txt analysis_name.txt | awk '{printf "%-30s %s\n", $1, $2}' >> combined.txt
 ```
 
+
 ```R
 df <- fread('/mnt/vast/hpc/homes/rf2872/codes/CUMC_fungun_xqtl_analysis/analysis/Others/combined.txt', sep = ' ', header = FALSE)
 colnames(df) <- c('context', 'analysis_name')
@@ -33,3 +36,20 @@ df <- df %>% mutate(cohort = str_split(analysis_name, "_", simplify = T) %>% .[,
 df <- df[,c('cohort','context','analysis_name')]
 write_delim(df, '/mnt/vast/hpc/homes/rf2872/codes/xqtl-analysis/resource/context_meta.tsv', delim = '\t')
 ```
+
+## How to read the unified table	
+Each row correspond to a variant in a locus that have been associated to AD GWAS (Combining finemaping and Coloc results for the 4 GWAS studies data used). 	
+  
+If the variant have been associated also to an xQTL, summary are shown in xQTLs summary part.	 
+
+Context are ordered according to a confidence score (C1 best, C6 lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
+- C1: the gene is MR significant, the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
+- C2: the gene is MR significant, the variant is colocalizing (using colocboost) between the GWAS and the xQTL
+- C3: the gene is TWAS significant, and the variant is colocalizing or in  CS95% overlapping between the GWAS and the xQTL
+- C4: the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
+- C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70..)
+- C6:  the gene is TWAS significant only
+  
+For each AD locus, only the variants with inclusion score>0.1 are included or, if no variant with inclusion score>0.1, only the leading variants in term of inclusion score for GWAS or for an xQTL are displayed.  
+Inclusion score for a variant correspond to the maximal value for its associated PIPs or VCP (Variant coloc probability) across any GWAS (for GWAS part), or xQTL (for xQTL part)
+
