@@ -13,8 +13,9 @@ Contexts are ordered and green colored according to a confidence score (C1 / dar
 - C3: the gene is TWAS significant, and the variant is colocalizing or in  CS95% overlapping between the GWAS and the xQTL
 - C4: the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
 - C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70..)
-- C6:  the gene is TWAS significant only
-the '+' or '-' after the context name correspond to the direction of the effect on the gene/molecular trait observed in finemapping (first '+/-') or in colocboost (second '+/-'). 
+- C6:  the gene is TWAS significant only   
+
+The '+' or '-' after the context name correspond to the direction of the effect on the gene/molecular trait observed in finemapping (first '+/-') or in colocboost (second '+/-'). 
 'Effect' column correspond to the effect on the molecular traits, 
   
 
