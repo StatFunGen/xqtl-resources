@@ -79,8 +79,8 @@
 
 ### National University of Singapore
 
-- Boxiang Liu
-- Yuntian Zhang
+- Boxiang Liu (boxiangliu@nus.edu.sg) - Ministry of Education Singapore Tier 2 (MOE-T2EP30123-0015), Tier 1 (FY2023; 23-0434-A0001; 22-5800-A0001), and A*STAR under the Nucleic Acid Therapeutics Initiative (Award no.: H24J5a0066)
+- Yuntian Zhang (e0950183@u.nus.edu) - 
 
 ### New York Genome Center
 
