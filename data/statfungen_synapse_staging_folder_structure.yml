@@ -77,6 +77,7 @@ variant_gene_summary:
         consolidated:
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
+          - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_context_finemapping:
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
@@ -277,6 +278,7 @@ manuscript:
     - Figure_1b_num_xQTL_loci_single_context.rds 
     - Figure_S2_single_context_cs_distance.rds
     - Figure_2b_num_xQTL_loci_multi_context.rds
+    - Figure_2c_multi_context_effect_sign.rds
   EOO:
     - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
     - Figure_EOO.rds
