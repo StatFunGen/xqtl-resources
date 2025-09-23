@@ -1,0 +1,85 @@
+r_name	excel_name	parent_column	grandparent_column	parent_fill	width	keep	to_divide	wrap_text	expanded	to_colorscale	colorlow	colormid	colorhigh
+locus_index	locus index	.	Unified AD associated locus	#ede5dd	10	1	0	0	0				
+ADlocus	ADlocus				0	1	0	0	0				
+ADlocusID	ADlocusID				0	1	0	0	0				
+n.variants	# variants in this locus				7	1	0	0	0				
+n.variants_0.1	# with inclusion score >0.1				7	1	0	0	0				
+variant_ID	Variant ID				15	1	0	0	0				
+SNP	Rsid				7	1	0	0	0				
+chr	Chr				5	1	0	0	0				
+pos	Pos				8	1	0	0	0				
+effect_allele	Effect allele				5	1	0	0	0				
+cV2F	cV2F score	AD variants priorization			7	1	0	0	0				
+max_variant_inclusion_probability	maximum inclusion score				7	1	0	0	0				
+max_variant_inclusion_probability_method	maximum inclusion score method				7	1	0	0	0				
+cV2F_rank	cV2F rank				7	1	0	0	0				
+max_zscore	Maximum zscore				5	1	0	0	0				
+min_pval	Min p-value				5	1	0	0	0				
+gwas_significance	Significance				5	1	0	0	0				
+mlog10pval	log10(pval)				5	1	0	0	0	1	#f5f0f0	#FFEB84	#F8696B
+gwas_sources	gwas_sources	.			0	1	0	0	0				
+gwas_sources_effects	GWAS Sources				4	1	1	0	0				
+GWAS_methods	Detected methods				8	1	0	0	0				
+susie_coverage	Credible set coverage (SuSiE)				7	1	0	0	0				
+gene_name	xQTL target gene	Gene	xQTLs summary per gene	#dde6ed	8	1	0	0	0				
+gene_ID	gene ID				0	1	0	0	0				
+tss	tss				0	1	0	0	0				
+tes	tes				0	1	0	0	0				
+distance_from_tss	Distance from TSS				7	1	0	0	0				
+distance_from_tes	Distance from TES				7	1	0	0	0				
+twas_z_gene_max	Maximum TWAS zscore				6	1	0	0	0	1	#7482D6	#f5f0f0	#F8696B
+TWAS_signif_gene	TWAS significant				6	1	0	0	0				
+MR_signif_gene	MR significant				6	1	0	0	0				
+variant_inclusion_probability_xqtl	Maximum inclusion score	xQTLs variants prioritization			7	1	0	0	0				
+variant_rank_xqtl	Variant rank				7	1	0	0	0				
+method_xqtl	Method				7	1	0	0	0				
+context_xqtl	Context				7	1	0	0	0				
+effect_xqtl	effect				7	1	0	0	0				
+n.variant_xqtl	# variants within the loci				7	1	0	0	0				
+n_contexts	# molecular contexts (datasets)	xQTLs contexts associated			6	1	0	0	0				
+top_confidence	max confidence level				6	1	0	0	0				
+xQTL_effects	Ordered contexts (confidence level , n datasets)				6	1	1	1	0				
+xQTL_contexts	datasets	All datasets associated to this variant			12	1	0	0	0				
+xQTL_methods	Methods				7	1	0	0	0				
+coverage_xqtl	Credible set coverage				7	1	0	0	0				
+n_trans_genes	# trans genes	trans xQTL effect			7	1	0	0	0				
+trans_genes	genes				8	1	0	1	0				
+n_trans_contexts	# trans contexts				8	1	0	1	0				
+trans_contexts	contexts				8	1	0	1	0				
+n.mv_genes	# genes	Multi-genes targets  (mvSuSiE 95% CS)			7	1	0	0	0				
+mv_genes	genes				8	1	0	1	0				
+qr_contexts	QR contexts	Non linear effects			12	1	0	0	0				
+top_qr_context	Top QR context				8	1	0	0	0				
+top_qr_classification	Top QR classification				8	1	0	0	0				
+top_qr_p_bonferroni_adj	Top QR adjusted P-value (bonferroni)				7	1	0	0	0				
+apoe4_interactions	Interactions with APOE4				12	1	0	0	0				
+top_apoe4_p_value	min p-value for APOE4 interaction				7	1	0	0	0				
+msex_interactions	Interactions with Sex (M)				12	1	0	0	0				
+top_msex_p_value	min p-value for Sex interaction				7	1	0	0	0				
+max_inclusion_probability	Maximum inclusion score	$qtl_type	$context_broad2	$color	7	1	0	0	1	1	#f5f0f0	#FFEB84	#F8696B
+max_method_dataset	Method				0	1	0	0	1				
+max_dataset	Dataset				7	1	0	0	1				
+max_finemap_pip	Fine mapping PIP				7	1	0	0	1	1	#f5f0f0	#FFEB84	#F8696B
+max_finemap_effect	Fine mapping effect				7	1	0	0	1				
+max_coloc_vcp	Colocalization VCP				7	1	0	0	1	1	#f5f0f0	#FFEB84	#F8696B
+max_coloc_effect	Colocalization effect				7	1	0	0	1				
+max_multicontext_pip	Multi-context fine mapping PIP				7	1	0	0	1	1	#f5f0f0	#FFEB84	#F8696B
+max_multicontext_effect	Multi-context fine mapping effect				7	1	0	0	1				
+max_TWAS_Z	TWAS zscore				7	1	0	0	1	1	#7482D6	#f5f0f0	#F8696B
+max_MR	MR significant				7	1	0	0	1				
+max_QR_padj	QR bonferroni adj Pval				7	1	0	0	1				
+max_APOE4_interaction_pval	APOE4 interaction Pvalue				7	1	0	0	1				
+max_msex_interaction_pval	Sex interaction Pvalue				7	1	0	0	1				
+nsplice_sites	# splice sites diff spliced (FDR<0.05)				7	1	0	0	1				
+max_splice_sites	Splice sites				7	1	0	0	1				
+max_splice_types	Splice types				7	1	0	0	1				
+max_sn_splice_pval	pvalue				7	1	0	0	1				
+max_sn_splice_beta	beta				7	1	0	0	1				
+max_njunctions	# junctions displiced				7	1	0	0	1				
+max_junctions	Junctions				7	1	0	0	1				
+max_junctions_type	Junctions type				0	1	0	0	1				
+glyco_changes	Glyco changes				7	1	0	0	1				
+top_epi_mark	Epigenetics mark				7	1	0	0	1				
+top_epi_mark_position	Epigenetics mark position				7	1	0	0	1				
+n_datasets	#total datasets				7	1	0	0	1				
+datasets	Datasets or molecular contexts				7	1	0	0	1				

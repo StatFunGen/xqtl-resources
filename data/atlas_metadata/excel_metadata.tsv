@@ -1,0 +1,18 @@
+wildcard	r_name	excel_name	color
+context_broad2	Brain	Brain xQTL	#D1CFCF
+context_broad2	Exc	Exc xQTL	#D5F2CE
+context_broad2	Inh	Inh xQTL	#CED5F2
+context_broad2	Oli	Oli xQTL	#F2CEF1
+context_broad2	OPC	OPC xQTL	#EBCEF2
+context_broad2	Ast	Ast xQTL	#F0E4B4
+context_broad2	Mic	Microglia xQTL	#F7D7CD
+context_broad2	Immune (bulk)	Bulk Immune xQTL	#F2D4CE
+qtl_type	eQTL	eQTL	
+qtl_type	pQTL	pQTL	
+qtl_type	gpQTL	gpQTL	
+qtl_type	sQTL	sQTL	
+qtl_type	p_sQTL	p_sQTL	
+qtl_type	u_sQTL	u_sQTL	
+qtl_type	haQTL	haQTL	
+qtl_type	mQTL	mQTL	
+qtl_type	caQTL	caQTL	

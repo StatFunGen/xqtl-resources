@@ -1,0 +1,11 @@
+pattern	fill_color	font_color	type	description
+B	#fcfcfc	#299da6	beginsWith	
+W	#fcfcfc	#cc5d12	beginsWith	
+K	#fcfcfc	#29a634	beginsWith	
+J	#fcfcfc	#8929a6	beginsWith	
+C1	#31611d	white	contains	TWAS, MR, cs95 single context fine-mapping overlap
+C2	#42a31c	white	contains	TWAS, MR, colocalization
+C3	#64b842	black	contains	TWAS and (cs95 fine-mapping overlap OR colocalization)
+C4	#8ebd7b	black	contains	cs95 single context fine-mapping overlap
+C5	#bfc9bb	black	contains	colocalization OR any fine-mapping overlap (multicontext, cs50, cs70..)
+C6	#dce6d8	black	contains	TWAS only

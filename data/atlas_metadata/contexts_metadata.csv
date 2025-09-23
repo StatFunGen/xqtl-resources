@@ -1,0 +1,80 @@
+context_short,context_hi,context,context_trans,context_coloc,context_qr,context_broad,context_snsQTL,fill_color,font_color
+Ast eQTL,Ast_eQTL,Ast_10_Kellis_eQTL,,,,Ast_eQTL,,#c5fcd5,black
+Ast eQTL,Ast_eQTL,Ast_DeJager_eQTL,ROSMAP_DeJager_eQTL_Ast,DeJager_Ast,ROSMAP_Ast_mega_eQTL,Ast_eQTL,,#c5fcd5,black
+Ast eQTL,Ast_eQTL,Ast_Kellis_eQTL,ROSMAP_Kellis_eQTL_Ast,Kellis_Ast,,Ast_eQTL,,#c5fcd5,black
+Ast eQTL,Ast_eQTL,Ast_mega_eQTL,ROSMAP_mega_eQTL_Ast,,,Ast_eQTL,,#c5fcd5,black
+Ast caQTL,Ast_snATAC,ROSMAP_snATAC_Kelis_Ast,,,,Ast_snATAC,,#bfdec7,black
+B,GWAS,AD_Bellenguez_2022,,AD_Bellenguez_2022,,GWAS,,#fcfcfc,#299da6
+B,GWAS,AD_Bellenguez_EADB_2022,,AD_Bellenguez_EADB_2022,,GWAS,,#fcfcfc,#299da6
+bulk eQTL,bulk_brain_eQTL,AC_DeJager_eQTL,ROSMAP_DeJager_eQTL_AC,ROSMAP_AC,ROSMAP_AC_DeJager_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,BM_10_MSBB_eQTL,MSBB_eQTL_BM10,MSBB_eQTL_BM_10,BM_10_MSBB_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,BM_22_MSBB_eQTL,MSBB_eQTL_BM22,MSBB_eQTL_BM_22,BM_22_MSBB_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,BM_36_MSBB_eQTL,MSBB_eQTL_BM36,MSBB_eQTL_BM_36,BM_36_MSBB_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,BM_44_MSBB_eQTL,MSBB_eQTL_BM44,MSBB_eQTL_BM_44,BM_44_MSBB_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,DLPFC_DeJager_eQTL,ROSMAP_DeJager_eQTL_DLPFC,ROSMAP_DLPFC,ROSMAP_DLPFC_DeJager_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Knight_eQTL_brain,Knight_eQTL,KNIGHT_eQTL,Knight_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Metabrain_Basalganglia,,,,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Metabrain_Cerebellum,,,,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Metabrain_Cortex,,,,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Metabrain_Hippocampus,,,,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,Metabrain_Spinalcord,,,,bulk_brain_eQTL,,#d4d2d4,black
+bulk eQTL,bulk_brain_eQTL,PCC_DeJager_eQTL,ROSMAP_DeJager_eQTL_PCC,ROSMAP_PCC,ROSMAP_PCC_DeJager_eQTL,bulk_brain_eQTL,,#d4d2d4,black
+Exc eQTL,Exc_eQTL,Exc_DeJager_eQTL,ROSMAP_DeJager_eQTL_Exc,DeJager_Exc,,Exc_eQTL,,#c5fcfc,black
+Exc eQTL,Exc_eQTL,Exc_Kellis_eQTL,ROSMAP_Kellis_eQTL_Exc,Kellis_Exc,,Exc_eQTL,,#c5fcfc,black
+Exc eQTL,Exc_eQTL,Exc_mega_eQTL,ROSMAP_mega_eQTL_Exc,,ROSMAP_Exc_mega_eQTL,Exc_eQTL,,#c5fcfc,black
+Exc caQTL,Exc_snATAC,ROSMAP_snATAC_Kelis_Exc,,,,Exc_snATAC,,#bfdcde,black
+Inh eQTL,Inh_eQTL,Inh_DeJager_eQTL,ROSMAP_DeJager_eQTL_Inh,DeJager_Inh,,Inh_eQTL,,#fcfcc5,black
+Inh eQTL,Inh_eQTL,Inh_Kellis_eQTL,ROSMAP_Kellis_eQTL_Inh,Kellis_Inh,,Inh_eQTL,,#fcfcc5,black
+Inh eQTL,Inh_eQTL,Inh_mega_eQTL,ROSMAP_mega_eQTL_Inh,,ROSMAP_Inh_mega_eQTL,Inh_eQTL,,#fcfcc5,black
+Inh caQTL,Inh_snATAC,ROSMAP_snATAC_Kelis_Inh,,,,Inh_snATAC,,#deddc1,black
+J,GWAS,AD_Jansen_2021,,,,GWAS,,#fcfcfc,#8929a6
+K,GWAS,AD_Kunkle_Stage1_2019,,AD_Kunkle_Stage1_2019,,GWAS,,#fcfcfc,#29a634
+Mic eQTL,Mic_eQTL,Mic_12_Kellis_eQTL,,,,Mic_eQTL,,#fad5bb,black
+Mic eQTL,Mic_eQTL,Mic_13_Kellis_eQTL,,,,Mic_eQTL,,#fad5bb,black
+Mic eQTL,Mic_eQTL,Mic_DeJager_eQTL,ROSMAP_DeJager_eQTL_Mic,DeJager_Mic,,Mic_eQTL,,#fad5bb,black
+Mic eQTL,Mic_eQTL,Mic_Kellis_eQTL,ROSMAP_Kellis_eQTL_Mic,Kellis_Mic,,Mic_eQTL,,#fad5bb,black
+Mic eQTL,Mic_eQTL,Mic_mega_eQTL,ROSMAP_mega_eQTL_Mic,,ROSMAP_Mic_mega_eQTL,Mic_eQTL,,#fad5bb,black
+Mic caQTL,Mic_snATAC,ROSMAP_snATAC_Kelis_Mic,,,,Mic_snATAC,,#e8722e,black
+OPC eQTL,OPC_eQTL,OPC_DeJager_eQTL,ROSMAP_DeJager_eQTL_OPC,DeJager_OPC,,OPC_eQTL,,#cec5fc,black
+OPC eQTL,OPC_eQTL,OPC_Kellis_eQTL,ROSMAP_Kellis_eQTL_OPC,Kellis_OPC,,OPC_eQTL,,#cec5fc,black
+OPC eQTL,OPC_eQTL,OPC_mega_eQTL,ROSMAP_mega_eQTL_OPC,,ROSMAP_OPC_mega_eQTL,OPC_eQTL,,#cec5fc,black
+OPC caQTL,OPC_snATAC,ROSMAP_snATAC_Kelis_OPC,,,,OPC_snATAC,,#20269e,white
+Oli eQTL,Oli_eQTL,Oli_DeJager_eQTL,ROSMAP_DeJager_eQTL_Oli,DeJager_Oli,,Oli_eQTL,,#c5cbfc,black
+Oli eQTL,Oli_eQTL,Oli_Kellis_eQTL,ROSMAP_Kellis_eQTL_Oli,Kellis_Oli,,Oli_eQTL,,#c5cbfc,black
+Oli eQTL,Oli_eQTL,Oli_mega_eQTL,ROSMAP_mega_eQTL_Oli,,ROSMAP_Oli_mega_eQTL,Oli_eQTL,,#c5cbfc,black
+Oli caQTL,Oli_snATAC,ROSMAP_snATAC_Kelis_Oli,,,,Oli_snATAC,,#c1d7de,black
+W,GWAS,AD_Wightman_Excluding23andMe_2021,,AD_Wightman_Excluding23andMe_2021,,GWAS,,#fcfcfc,#cc5d12
+W,GWAS,AD_Wightman_ExcludingUKBand23andME_2021,,AD_Wightman_ExcludingUKBand23andME_2021,,GWAS,,#fcfcfc,#cc5d12
+W,GWAS,AD_Wightman_Full_2021,,AD_Wightman_Full_2021,,GWAS,,#fcfcfc,#cc5d12
+bMac eQTL,bulk_macrophage_eQTL,STARNET_eQTL_Mac,STARNET_eQTL,,,bulk_macrophage_eQTL,,#faa7e0,black
+bMic eQTL,bulk_microglia_eQTL,MiGA_GFM_eQTL,,MIGA_GFM,,bulk_microglia_eQTL,,#fae1f9,black
+bMic eQTL,bulk_microglia_eQTL,MiGA_GTS_eQTL,,MIGA_GTS,,bulk_microglia_eQTL,,#fae1f9,black
+bMic eQTL,bulk_microglia_eQTL,MiGA_SVZ_eQTL,,MIGA_SVZ,,bulk_microglia_eQTL,,#fae1f9,black
+bMic eQTL,bulk_microglia_eQTL,MiGA_THA_eQTL,,MIGA_THA,,bulk_microglia_eQTL,,#fae1f9,black
+bMono eQTL,bulk_monocyte_eQTL,monocyte_ROSMAP_eQTL,ROSMAP_DeJager_eQTL_Monocyte,ROSMAP_Monocyte,ROSMAP_monocyte_eQTL,bulk_monocyte_eQTL,,#751c9c,white
+bulk gpQTL,bulk_brain_gpQTL,DLPFC_Klein_gpQTL_adjusted,ROSMAP_adjusted_gpQTL,,,bulk_brain_gpQTL,,#4f4d4f,white
+bulk gpQTL,bulk_brain_gpQTL,DLPFC_Klein_gpQTL_unadjusted,ROSMAP_gpQTL,DLPFC_Klein_gpQTL,,bulk_brain_gpQTL,,#4f4d4f,white
+bulk haQTL,bulk_brain_haQTL,ROSMAP_DLPFC_haQTL,,haQTL,,bulk_brain_haQTL,,#6bfa6e,black
+bulk mQTL,bulk_brain_mQTL,KnightADRC_mQTL,,,,bulk_brain_mQTL,,#0d5218,white
+bulk mQTL,bulk_brain_mQTL,MSBB_mQTL,,,,bulk_brain_mQTL,,#0d5218,white
+bulk mQTL,bulk_brain_mQTL,ROSMAP_DLPFC_mQTL,,,,bulk_brain_mQTL,,#0d5218,white
+metabolome,metabolome,metabolome,,,,metabolome,,,
+bulk pQTL,bulk_brain_pQTL,DLPFC_Bennett_pQTL,ROSMAP_pQTL,DLPFC_Bennett_pQTL,ROSMAP_DLPFC_Bennett_pQTL,bulk_brain_pQTL,,#6b696b,white
+bulk pQTL,bulk_brain_pQTL,Knight_pQTL_brain,Knight_pQTL,KNIGHT_pQTL,Knight_pQTL,bulk_brain_pQTL,,#6b696b,white
+bulk pQTL,bulk_brain_pQTL,MSBB_BM36_pQTL,MSBB_pQTL_BM36,MSBB_pQTL_BM_36,MSBB_BM36_pQTL,bulk_brain_pQTL,,#6b696b,white
+bulk sQTL,bulk_brain_sQTL,ROSMAP_AC_sQTL,,AC_lf2_sQTL,,bulk_brain_sQTL,,#9c9a9c,black
+bulk sQTL,bulk_brain_sQTL,ROSMAP_DLPFC_sQTL,,DLPFC_lf2_sQTL,,bulk_brain_sQTL,,#9c9a9c,black
+bulk sQTL,bulk_brain_sQTL,ROSMAP_PCC_sQTL,,PCC_lf2_sQTL,,bulk_brain_sQTL,,#9c9a9c,black
+bulk u-sQTL,bulk_brain_u_sQTL,ROSMAP_AC_u_sQTL,,AC_lf2_sQTL,,bulk_brain_u_sQTL,,#baa9ba,black
+bulk u-sQTL,bulk_brain_u_sQTL,ROSMAP_DLPFC_u_sQTL,,DLPFC_lf2_sQTL,,bulk_brain_u_sQTL,,#baa9ba,black
+bulk u-sQTL,bulk_brain_u_sQTL,ROSMAP_PCC_u_sQTL,,PCC_lf2_sQTL,,bulk_brain_u_sQTL,,#baa9ba,black
+bulk p-sQTL,bulk_brain_p_sQTL,ROSMAP_AC_p_sQTL,,AC_lf2_sQTL,,bulk_brain_p_sQTL,,#b5b8b4,black
+bulk p-sQTL,bulk_brain_p_sQTL,ROSMAP_DLPFC_p_sQTL,,DLPFC_lf2_sQTL,,bulk_brain_p_sQTL,,#b5b8b4,black
+bulk p-sQTL,bulk_brain_p_sQTL,ROSMAP_PCC_p_sQTL,,PCC_lf2_sQTL,,bulk_brain_p_sQTL,,#b5b8b4,black
+B,GWAS,AD_Bellenguez_EADI_2022,,,,GWAS,,#fcfcfc,#299da6
+Exc sQTL,Exc_sQTL,Exc_Mega_sQTL,,,,Exc_sQTL,Excitatory,#D5F2CE,black
+Inh sQTL,Inh_sQTL,Inh_Mega_sQTL,,,,Inh_sQTL,Inhibitory,#CED5F2,black
+Ast sQTL,Ast_sQTL,Ast_Mega_sQTL,,,,Ast_sQTL,astrocytes,#F0E4B4,black
+Mic sQTL,Mic_sQTL,Mic_Mega_sQTL,,,,Mic_sQTL,microglia,#F7D7CD,black
+Oli sQTL,Oli_sQTL,Oli_Mega_sQTL,,,,Oli_sQTL,oligodendrocyte,#F2CEF1,black
+OPC sQTL,OPC_sQTL,OPC_Mega_sQTL,,,,OPC_sQTL,OPC,#EBCEF2,black
