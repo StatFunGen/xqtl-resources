@@ -203,6 +203,18 @@ Each exported file follows a standardized BED format with compressed storage (`.
 | `is_selected_method`  | logical   | Indicates optimal method (highest CV R² with p < 0.05) for gene-context pair                                                                        |
 | `block`               | character | LD block containing gene TSS, based on predefined LD partitions                                                                                     |
 
+#### cTWAS-Specific Columns
+
+| Column Name           | Type      | Description                                                                                          |
+|-----------------------|-----------|------------------------------------------------------------------------------------------------------|
+| `region_id`           | character | Predefined LD partitions, containing chromosome number, start and end of the genomic position        |
+| `susie_pip`           | double    | PIP (posterior inclusion probability) for each molecular trait and variant                           |
+| `mu`                  | double    | Effect size (posterior means)                                                                        |
+| `cs`                  | character | Credible set identifier                                                                              |
+| `type`                | character | Indicates whether the variant is a 'SNP' or a gene/molecular trait ('eQTL', 'pQTL', 'sQTL', etc.)    |
+
+For detailed documentation, please refer to [cTWAS (causal-TWAS)](https://github.com/xinhe-lab/ctwas/tree/main)
+
 #### fSuSiE-Specific Columns
 
 | Column Name          | Type      | Description                                                                 |
@@ -242,6 +254,12 @@ Between xQTL and AD, pairwise.
 | `PP.H2.abf`   | double    | Posterior probability of H2: association in AD GWAS only                                                   |
 | `L_PP.H3.abf` | double    | Posterior probability of H3: distinct causal variants at effect level                                       |
 | `L_PP.H4.abf` | double    | Posterior probability of H4: shared causal variant between xQTL and AD at effect level                      |
+
+Consolidated single context xQTL loci
+
+- `FunGen_xQTL_single_context_top_loci_integrated.rds` : FIXME
+
+- `FunGen_xQTL_AD_loci_xQTL_context_method_summary.fsusie.rds` : FIXME
 
 ### Usage Guidelines
 

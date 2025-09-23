@@ -1,0 +1,1560 @@
+Track,Assay,Data_Category,Cell_Type,Source,Category
+LHX2_TSS_H3K27ac,"","","",Original_List,CellType_Astrocyte
+LHX2_enhancer,"","","",Original_List,CellType_Astrocyte
+LHX2_enhancer_atac,"","","",Original_List,CellType_Astrocyte
+LHX2_optimal_peak.H3K27,"","","",Original_List,CellType_Astrocyte
+LHX2_optimal_peak.H3K4me3,"","","",Original_List,CellType_Astrocyte
+LHX2_optimal_peak_IDR_ENCODE.ATAC,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_atac,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_enhancer,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_enhancer_500,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_enhancer_atac,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_enhancer_plus_atac,"","","",Original_List,CellType_Astrocyte
+LHX2_promoter_enhancer_plus_atac_500,"","","",Original_List,CellType_Astrocyte
+NeuN_TSS_H3K27ac,"","","",Original_List,CellType_Neuron
+NeuN_enhancer,"","","",Original_List,CellType_Neuron
+NeuN_enhancer_atac,"","","",Original_List,CellType_Neuron
+NeuN_optimal_peak.H3K27,"","","",Original_List,CellType_Neuron
+NeuN_optimal_peak.H3K4me3,"","","",Original_List,CellType_Neuron
+NeuN_optimal_peak_IDR_ENCODE.ATAC,"","","",Original_List,CellType_Neuron
+NeuN_promoter,"","","",Original_List,CellType_Neuron
+NeuN_promoter_atac,"","","",Original_List,CellType_Neuron
+NeuN_promoter_enhancer,"","","",Original_List,CellType_Neuron
+NeuN_promoter_enhancer_500,"","","",Original_List,CellType_Neuron
+NeuN_promoter_enhancer_atac,"","","",Original_List,CellType_Neuron
+NeuN_promoter_enhancer_plus_atac,"","","",Original_List,CellType_Neuron
+NeuN_promoter_enhancer_plus_atac_500,"","","",Original_List,CellType_Neuron
+Olig2_TSS_H3K27ac,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_enhancer,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_enhancer_atac,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_optimal_peak.H3K27,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_optimal_peak.H3K4me3,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_optimal_peak_IDR_ENCODE.ATAC,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_atac,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_enhancer,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_enhancer_500,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_enhancer_atac,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_enhancer_plus_atac,"","","",Original_List,CellType_Oligodendrocyte
+Olig2_promoter_enhancer_plus_atac_500,"","","",Original_List,CellType_Oligodendrocyte
+PU1_LHX2_promoter_enhancer_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_NeuN_promoter_enhancer_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_Olig2_promoter_enhancer_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_TSS_H3K27ac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_enhancer,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_enhancer_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_optimal_peak.H3K27,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_optimal_peak.H3K4me3,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_optimal_peak_IDR_ENCODE.ATAC,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_enhancer,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_enhancer_500,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_enhancer_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_enhancer_plus_atac,"","","",Original_List,CellType_Microglia_Myeloid
+PU1_promoter_enhancer_plus_atac_500,"","","",Original_List,CellType_Microglia_Myeloid
+gene_tss_2000bp,"","","",Original_List,Promoter
+gene_tss_2000bp_sorted,"","","",Original_List,Promoter
+MPRA_targets,"","","",Original_List,Other_Functional_Annotations
+starrseq_enhancers_merged,"","","",Original_List,Enhancer_SuperEnhancer
+Anulus Pulposus Cell,"","","",Original_List,CellType_OtherNonNeural
+Astrocyte - cerebral cortex,"","","",Original_List,CellType_Astrocyte
+CD14+ monocytes - treated with lipopolysaccharide,"","","",Original_List,CellType_Microglia_Myeloid
+CD14+CD16+ Monocytes,"","","",Original_List,CellType_Microglia_Myeloid
+CD14-CD16+ Monocytes,"","","",Original_List,CellType_Microglia_Myeloid
+Fibroblast - Choroid Plexus,"","","",Original_List,CellType_OtherNonNeural
+Meningeal Cells,"","","",Original_List,CellType_OtherNonNeural
+Neural stem cells,"","","",Original_List,CellType_Progenitor
+Neurons,"","","",Original_List,CellType_Neuron
+Nucleus Pulposus Cell,"","","",Original_List,CellType_OtherNonNeural
+Oligodendrocyte - precursors,"","","",Original_List,CellType_Oligodendrocyte
+Perineurial Cells,"","","",Original_List,CellType_OtherNonNeural
+Schwann Cells,"","","",Original_List,CellType_OtherNonNeural
+Smooth Muscle Cells - Brain Vascular,"","","",Original_List,CellType_Vascular
+Coding_UCSC,"","","",Original_List,Genomic_Conservation
+Coding_UCSC.flanking.500,"","","",Original_List,Genomic_Conservation
+Conserved_LindbladToh,"","","",Original_List,Genomic_Conservation
+Conserved_LindbladToh.flanking.500,"","","",Original_List,Genomic_Conservation
+CTCF_Hoffman,"","","",Original_List,Transcription_Factor_Binding
+CTCF_Hoffman.flanking.500,"","","",Original_List,Transcription_Factor_Binding
+DGF_ENCODE,"","","",Original_List,Chromatin_Accessibility
+DGF_ENCODE.flanking.500,"","","",Original_List,Chromatin_Accessibility
+DHS_peaks_Trynka,"","","",Original_List,Chromatin_Accessibility
+DHS_Trynka,"","","",Original_List,Chromatin_Accessibility
+DHS_Trynka.flanking.500,"","","",Original_List,Chromatin_Accessibility
+Enhancer_Andersson,"","","",Original_List,Enhancer_SuperEnhancer
+Enhancer_Andersson.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+Enhancer_Hoffman,"","","",Original_List,Enhancer_SuperEnhancer
+Enhancer_Hoffman.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+FetalDHS_Trynka,"","","",Original_List,Chromatin_Accessibility
+FetalDHS_Trynka.flanking.500,"","","",Original_List,Chromatin_Accessibility
+H3K27ac_Hnisz,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K27ac_Hnisz.flanking.500,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K27ac_PGC2,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K27ac_PGC2.flanking.500,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me1_peaks_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me1_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me1_Trynka.flanking.500,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me3_peaks_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me3_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K4me3_Trynka.flanking.500,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K9ac_peaks_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K9ac_Trynka,"","","",Original_List,Epigenetic_Histone_Modifications
+H3K9ac_Trynka.flanking.500,"","","",Original_List,Epigenetic_Histone_Modifications
+Intron_UCSC,"","","",Original_List,Genomic_Conservation
+Intron_UCSC.flanking.500,"","","",Original_List,Genomic_Conservation
+PromoterFlanking_Hoffman,"","","",Original_List,Promoter
+PromoterFlanking_Hoffman.flanking.500,"","","",Original_List,Promoter
+Promoter_UCSC,"","","",Original_List,Promoter
+Promoter_UCSC.flanking.500,"","","",Original_List,Promoter
+Repressed_Hoffman,"","","",Original_List,Other_Functional_Annotations
+Repressed_Hoffman.flanking.500,"","","",Original_List,Other_Functional_Annotations
+SuperEnhancer_Hnisz,"","","",Original_List,Enhancer_SuperEnhancer
+SuperEnhancer_Hnisz.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+TFBS_ENCODE,"","","",Original_List,Transcription_Factor_Binding
+TFBS_ENCODE.flanking.500,"","","",Original_List,Transcription_Factor_Binding
+Transcr_Hoffman,"","","",Original_List,Other_Functional_Annotations
+Transcr_Hoffman.flanking.500,"","","",Original_List,Other_Functional_Annotations
+TSS_Hoffman,"","","",Original_List,Promoter
+TSS_Hoffman.flanking.500,"","","",Original_List,Promoter
+UTR_3_UCSC,"","","",Original_List,Genomic_Conservation
+UTR_3_UCSC.flanking.500,"","","",Original_List,Genomic_Conservation
+UTR_5_UCSC,"","","",Original_List,Genomic_Conservation
+UTR_5_UCSC.flanking.500,"","","",Original_List,Genomic_Conservation
+WeakEnhancer_Hoffman,"","","",Original_List,Enhancer_SuperEnhancer
+WeakEnhancer_Hoffman.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+GERP.NS,"","","",Original_List,Genomic_Conservation
+GERP.RSsup4,"","","",Original_List,Genomic_Conservation
+MAFbin1,"","","",Original_List,Genomic_Conservation
+MAFbin2,"","","",Original_List,Genomic_Conservation
+MAFbin3,"","","",Original_List,Genomic_Conservation
+MAFbin4,"","","",Original_List,Genomic_Conservation
+MAFbin5,"","","",Original_List,Genomic_Conservation
+MAFbin6,"","","",Original_List,Genomic_Conservation
+MAFbin7,"","","",Original_List,Genomic_Conservation
+MAFbin8,"","","",Original_List,Genomic_Conservation
+MAFbin9,"","","",Original_List,Genomic_Conservation
+MAFbin10,"","","",Original_List,Genomic_Conservation
+MAF_Adj_Predicted_Allele_Age,"","","",Original_List,Genomic_Conservation
+MAF_Adj_LLD_AFR,"","","",Original_List,Genomic_Conservation
+Recomb_Rate_10kb,"","","",Original_List,Genomic_Conservation
+Nucleotide_Diversity_10kb,"","","",Original_List,Genomic_Conservation
+Backgrd_Selection_Stat,"","","",Original_List,Genomic_Conservation
+CpG_Content_50kb,"","","",Original_List,Genomic_Conservation
+MAF_Adj_ASMC,"","","",Original_List,Genomic_Conservation
+GTEx_eQTL_MaxCPP,"","","",Original_List,eQTL
+BLUEPRINT_H3K27acQTL_MaxCPP,"","","",Original_List,Epigenetic_Histone_Modifications
+BLUEPRINT_H3K4me1QTL_MaxCPP,"","","",Original_List,Epigenetic_Histone_Modifications
+BLUEPRINT_DNA_methylation_MaxCPP,"","","",Original_List,Epigenetic_Histone_Modifications
+synonymous,"","","",Original_List,Genomic_Conservation
+non_synonymous,"","","",Original_List,Genomic_Conservation
+Conserved_Vertebrate_phastCons46way,"","","",Original_List,Genomic_Conservation
+Conserved_Vertebrate_phastCons46way.flanking.500,"","","",Original_List,Genomic_Conservation
+Conserved_Mammal_phastCons46way,"","","",Original_List,Genomic_Conservation
+Conserved_Mammal_phastCons46way.flanking.500,"","","",Original_List,Genomic_Conservation
+Conserved_Primate_phastCons46way,"","","",Original_List,Genomic_Conservation
+Conserved_Primate_phastCons46way.flanking.500,"","","",Original_List,Genomic_Conservation
+BivFlnk,"","","",Original_List,Other_Functional_Annotations
+BivFlnk.flanking.500,"","","",Original_List,Other_Functional_Annotations
+Human_Promoter_Villar,"","","",Original_List,Promoter
+Human_Promoter_Villar.flanking.500,"","","",Original_List,Promoter
+Human_Enhancer_Villar,"","","",Original_List,Enhancer_SuperEnhancer
+Human_Enhancer_Villar.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+Ancient_Sequence_Age_Human_Promoter,"","","",Original_List,Other_Functional_Annotations
+Ancient_Sequence_Age_Human_Promoter.flanking.500,"","","",Original_List,Other_Functional_Annotations
+Ancient_Sequence_Age_Human_Enhancer,"","","",Original_List,Enhancer_SuperEnhancer
+Ancient_Sequence_Age_Human_Enhancer.flanking.500,"","","",Original_List,Enhancer_SuperEnhancer
+Human_Enhancer_Villar_Species_Enhancer_Count,"","","",Original_List,Enhancer_SuperEnhancer
+Human_Promoter_Villar_ExAC,"","","",Original_List,Promoter
+Human_Promoter_Villar_ExAC.flanking.500,"","","",Original_List,Promoter
+ENCFF015DGX.bed.gz,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF038KTR.bed.gz,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF370ANN.bed.gz,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Nucleus_accumbens_basal_ganglia_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,eQTL
+parietal%20cortex%2c%20adult%2c%20donor10258.CNhs14226.10373-105G4.hg38.nobarcode.ctss.bed,hCAGE,TSS,Parietal cortex,TSV_File,Promoter
+locus%20coeruleus%2c%20newborn%2c%20donor10223.CNhs14080.10362-105F2.hg38.nobarcode.ctss.bed,hCAGE,TSS,Locus coeruleus,TSV_File,Promoter
+ENCFF281PZP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF779UVO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF787DQP.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Braineac2_putamen_OTHER_significant.bed,eQTL,QTL,Substantia nigra,TSV_File,eQTL
+ENCFF412QKS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF415KGS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF006OHN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF628MOD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF403LNW.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_hippocampus_OTHER_significant.bed,eQTL,QTL,Hippocampus,TSV_File,eQTL
+ENCFF317OOD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01562_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF155KRR.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF337FQE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF245PVD.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF498YPU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Cortex_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Cortex,TSV_File,sQTL
+formatted_output_BSS01469_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Putamen,TSV_File,Enhancer_SuperEnhancer
+ENCFF464YCM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+E029_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCSR318PRQ.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Middle frontal gyrus,TSV_File,Transcription_Factor_Footprints
+ENCFF822SYK_BRSYGCCMYCTRSTGGY_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF761WSV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF269AGR.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+CL:0000540_neuron.bed,CAGE-Seq,Enhancer,Neuron,TSV_File,CellType_Neuron
+ENCFF025EPO.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF676EHG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF020MBB.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF808HCP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF257LSY.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF203MMM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCSR015BGH.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Caudate nucleus,TSV_File,Transcription_Factor_Footprints
+ENCFF431GVT.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Excitatory neurons,TSV_File,CellType_Neuron
+E074_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Substantia nigra,TSV_File,Enhancer_SuperEnhancer
+ENCFF186MDZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF962YYB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF386SCH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF191GNX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF681JQT.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF394MUG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF450EVR_RSYGCCMYCTRGTGGYM_filtered.bed,Motif finding,TFBS,Astrocyte,TSV_File,CellType_Astrocyte
+CL:0000576_monocyte.bed,CAGE-Seq,Enhancer,Monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF856MHY.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF309IEH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Schmitt_2016_Hippocampus_raw_TADs.bed,TAD,TAD,Hippocampus,TSV_File,Chromatin_Interaction_Loops
+ENCFF010FIT.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+cerebral%20meninges%2c%20adult.CNhs12840.10188-103D8.hg38.nobarcode.ctss.bed,hCAGE,TSS,Cerebral meninges,TSV_File,Promoter
+ENCFF953YDR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF140XSI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_anterior_cingulate_cortex_leafcutter_OTHER_significant.bed,sQTL,QTL,Anterior cingulate cortex BA24,TSV_File,sQTL
+ENCFF934YDJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+occipital%20lobe%2c%20fetal%2c%20donor1.CNhs11784.10073-102A1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Occipital lobe,TSV_File,Promoter
+ENCFF483ZLP.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_CommonMind_DLPFC_naive_leafcutter_SNP_significant.bed,sQTL,QTL,Dorsolateral prefrontal cortex,TSV_File,sQTL
+formatted_output_GTEx_nerve_tibial_leafcutter_OTHER_significant.bed,sQTL,QTL,Tibial nerve,TSV_File,sQTL
+ENCFF811WWF.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF642YZU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_Anterior_cingulate_cortex_BA24_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Anterior cingulate cortex BA24,TSV_File,sQTL
+ENCFF767LNC.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+neural-progenitor-cell-rep2_ENCSR828LSC_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Neuronal progenitor cell,TSV_File,CellType_Neuron
+ENCFF475AOE.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF680PVX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF507HNU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF059HRA.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF641PIN.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_nucleus_accumbens_OTHER_significant.bed,eQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,eQTL
+formatted_output_BSS00175_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Caudate nucleus,TSV_File,Enhancer_SuperEnhancer
+ENCFF765ISG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF335DHZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF553GIB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+astrocytoma%20cell%20line%3aTM-31.CNhs10742.10425-106D2.hg38.nobarcode.ctss.bed,hCAGE,TSS,TM-31,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS01125_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Layer - hippocampus,TSV_File,Enhancer_SuperEnhancer
+ENCFF135QIA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF340DQP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF903BAW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF206CGM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF188BNI.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+brainsfg1_GSE59286_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Superior frontal gyrus,TSV_File,Other_Functional_Annotations
+ENCFF705XBU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF747RJQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF621CKS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF222RWJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF083GRL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF146OSU.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF225VHL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_cerebellar_hemisphere_leafcutter_SNP_significant.bed,sQTL,QTL,Cerebellar hemisphere,TSV_File,sQTL
+formatted_output_GTEx_brain_putamen_SNP_significant.bed,eQTL,QTL,Putamen basal ganglia,TSV_File,eQTL
+ENCFF504ODR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF346AYA.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF967YBQ.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_GTEx_brain_frontal_cortex_leafcutter_SNP_significant.bed,sQTL,QTL,Frontal cortex BA9,TSV_File,sQTL
+formatted_output_Hippocampus_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Hippocampus,TSV_File,sQTL
+ENCFF182WTV.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF704SWW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF581AMC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Glial cell,TSV_File,CellType_Astrocyte
+ENCFF456BMA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF158FGV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF160EDG.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF255MMH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+UBERON:0002240_spinal_cord.bed,CAGE-Seq,Enhancer,Spinal cord,TSV_File,Enhancer_SuperEnhancer
+ENCFF302VBR_BYGGCCRSCAGGGGGCGCYVB_filtered.bed,Motif finding,TFBS,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF455ENH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF673ZGJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF476CST.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+Astrocyte%20-%20cerebral%20cortex%2c%20donor2.CNhs11960.11316-117D2.hg38.nobarcode.ctss.bed,hCAGE,TSS,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF057INC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+E081_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Brain,TSV_File,Enhancer_SuperEnhancer
+ENCFF495XEQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF236VNB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF108MXF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF387SXI.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF079EPH.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+E073_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Dorsolateral prefrontal cortex,TSV_File,Enhancer_SuperEnhancer
+formatted_output_GTEx_brain_frontal_cortex_OTHER_significant.bed,eQTL,QTL,Frontal cortex BA9,TSV_File,eQTL
+dura%20mater%2c%20adult%2c%20donor1.CNhs10648.10041-101F5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Dura mater,TSV_File,Promoter
+ENCFF644JBY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF103IOK.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF195DTH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF756LXD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Hippocampus_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Hippocampus,TSV_File,eQTL
+ENCFF116YGO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF367OZX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF970KNQ.bed,TF ChIP-seq,TF ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+formatted_output_BLUEPRINT_PE_monocyte_SNP_significant.bed,eQTL,QTL,CD14+CD16- monocyte,TSV_File,eQTL
+formatted_output_Putamen_basal_ganglia_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Putamen basal ganglia,TSV_File,eQTL
+ENCFF407YNR.bed,TF ChIP-seq,TF ChIP-seq peaks,Epithelial cell,TSV_File,CellType_OtherNonNeural
+ENCFF115JCH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF704HBJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF949AWA.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_Substantia_nigra_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Substantia nigra,TSV_File,eQTL
+formatted_output_Schmiedel_2018_monocyte_CD16_naive_leafcutter_OTHER_significant.bed,sQTL,QTL,CD14-CD16+,TSV_File,sQTL
+ENCFF654AXW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+Fibroblast%20-%20Choroid%20Plexus%2c%20donor1.CNhs11319.11492-119E7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Fibroblast,TSV_File,CellType_OtherNonNeural
+ENCFF530XRA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_nerve_tibial_OTHER_significant.bed,eQTL,QTL,Tibial nerve,TSV_File,eQTL
+formatted_output_BSS01388_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Occipital lobe,TSV_File,Enhancer_SuperEnhancer
+ENCFF273QZM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF149PUN.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_BSS00201_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Cerebellar cortex,TSV_File,Enhancer_SuperEnhancer
+ENCFF988TZC.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCSR000ENA.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_Hippocampus_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Hippocampus,TSV_File,eQTL
+ENCFF623OUJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF831RZS.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF786IFI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF434AWI.bed,TF ChIP-seq,TF ChIP-seq peaks,H54,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS00071_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Ammon's horn,TSV_File,Enhancer_SuperEnhancer
+ENCFF066XVD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF477JAK.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF100CRN.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF128ESL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF646WCN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_hippocampus_leafcutter_SNP_significant.bed,sQTL,QTL,Hippocampus,TSV_File,sQTL
+ENCFF061RYX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF975KXU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF434OHW.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+formatted_output_Schmitt_2016_Cortex_DLPFC_hg38_peakachu_merged_loops.bed,Hi-C,Chromatin interactions,Dorsolateral prefrontal cortex,TSV_File,Chromatin_Interaction_Loops
+formatted_output_GTEx_brain_cerebellar_hemisphere_leafcutter_OTHER_significant.bed,sQTL,QTL,Cerebellar hemisphere,TSV_File,sQTL
+ENCFF373BUI.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF463IWJ.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF430RZK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF092NXX.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF355TRA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+schwannoma%20cell%20line%3aHS-PSS%2c%20tech_rep1.CNhs11183.10442-106F1.hg38.nobarcode.ctss.bed,hCAGE,TSS,HS-PSS,TSV_File,CellType_Neuroblastoma
+neural-cell-rep2_ENCSR000CVP_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Neural cell,TSV_File,CellType_Progenitor
+CD14plus_SRR527681_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_Alasoo_2018_macrophage_naive_leafcutter_SNP_significant.bed,sQTL,QTL,Macrophage,TSV_File,sQTL
+ENCFF857SLT.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF448WKA.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF162IDM.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF930KLN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_MFG_eQTL_significant.bed,eQTL,QTL,Microglia,TSV_File,eQTL
+formatted_output_GTEx_brain_spinal_cord_SNP_significant.bed,eQTL,QTL,Spinal cord cervical c-1,TSV_File,eQTL
+formatted_output_BSS01366_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Neural cell,TSV_File,CellType_Progenitor
+ENCFF063CZH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF538IHT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF905RPO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+occipital-lobe-rep1_ENCSR000AFX_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Occipital lobe,TSV_File,Other_Functional_Annotations
+ENCFF539IKY.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF091NTM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+monocyte-derived-macrophage1_GSE51307_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Macrophage,TSV_File,CellType_Microglia_Myeloid
+ENCFF494FGT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF157HYV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF041CKA.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF679TTH.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF914GPM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF696ASB.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF341BTX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF753PEQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Spinal_cord_cervical_c-1_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Spinal cord cervical c-1,TSV_File,sQTL
+ENCFF611DRW_GGCCACYAGRKGGCRSYVBHG_filtered.bed,Motif finding,TFBS,Neural cell,TSV_File,CellType_Progenitor
+ENCFF680WWW.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF392SGM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF850TQR.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF175PDD_RGCGGCGGCGGCGGCRGSR_filtered.bed,Motif finding,TFBS,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF292CFA_GCYGCHGCYGCCGCC_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF986PCC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF277CZQ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+neural-progenitor-cell-rep2_ENCSR828LSC_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Neuronal progenitor cell,TSV_File,CellType_Neuron
+formatted_output_BSS00144_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Pericyte,TSV_File,CellType_Vascular
+ENCFF917HNR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Brain_all_protein_OTHER_significant.bed,pQTL,QTL,Brain,TSV_File,pQTL
+bipolar-spindle-neuron-rep1_ENCSR603RPC_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Bipolar spindle neuron,TSV_File,CellType_Neuron
+E071_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Hippocampus middle,TSV_File,Enhancer_SuperEnhancer
+ENCFF061GVV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_Nedelec_2016_macrophage_naive_SNP_significant.bed,eQTL,QTL,Macrophage,TSV_File,eQTL
+ENCFF810MUC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF156YGE.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_hippocampus_SNP_significant.bed,eQTL,QTL,Hippocampus,TSV_File,eQTL
+formatted_output_Tibial_nerve_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Tibial nerve,TSV_File,sQTL
+temporal%20lobe%2c%20adult%2c%20pool1.CNhs10637.10031-101E4.hg38.nobarcode.ctss.bed,hCAGE,TSS,Temporal lobe,TSV_File,Promoter
+Neurons%2c%20donor3.CNhs13815.11655-122E8.hg38.nobarcode.ctss.bed,hCAGE,TSS,Neuron,TSV_File,CellType_Neuron
+ENCFF587HTJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cerebellum,TSV_File,Epigenetic_Histone_Modifications
+ENCFF080DXG.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF284EJU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+caudate%20nucleus%2c%20adult%2c%20donor10252.CNhs12321.10164-103B2.hg38.nobarcode.ctss.bed,hCAGE,TSS,Caudate nucleus,TSV_File,Promoter
+ENCFF266BOT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF565YLK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF476NPP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF938UZW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF705VHY.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+formatted_output_BLUEPRINT_monocyte_leafcutter_SNP_significant.bed,sQTL,QTL,CD14+CD16- monocyte,TSV_File,sQTL
+ENCFF225AJA.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+E068_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Anterior caudate,TSV_File,Enhancer_SuperEnhancer
+formatted_output_BSS00220_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Cingulate gyrus,TSV_File,Enhancer_SuperEnhancer
+ENCFF755TTO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF975EBU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF749FBO.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF678TFU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Cortex_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Cortex,TSV_File,eQTL
+brain%2c%20adult%2c%20pool1.CNhs10617.10012-101C3.hg38.nobarcode.ctss.bed,hCAGE,TSS,Brain,TSV_File,Promoter
+ENCFF767XYG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF087XLR.bed,TF ChIP-seq,TF ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_anterior_cingulate_cortex_leafcutter_SNP_significant.bed,sQTL,QTL,Anterior cingulate cortex BA24,TSV_File,sQTL
+ENCFF611BIT.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF686TUI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF312DAQ.bed,ATAC-seq,Accessible chromatin,Sciatic nerve,TSV_File,Chromatin_Accessibility
+ENCFF265AZL.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF633YWZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+ENCFF139ARB.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+formatted_output_Schwartzentruber_2018_sensory_neuron_leafcutter_SNP_significant.bed,sQTL,QTL,Neuron,TSV_File,sQTL
+formatted_output_CSF_all_protein_SNP_significant.bed,pQTL,QTL,Cerebrospinal fluid,TSV_File,pQTL
+ENCFF604JAV.bed,TF ChIP-seq,TF ChIP-seq peaks,Dorsolateral prefrontal cortex,TSV_File,Transcription_Factor_Binding
+formatted_output_Spinal_cord_cervical_c-1_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Spinal cord cervical c-1,TSV_File,eQTL
+ENCFF985PEL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+frontal-cortex-rep2_ENCSR000AFS_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Frontal cortex,TSV_File,Other_Functional_Annotations
+formatted_output_GTEx_brain_nucleus_accumbens_SNP_significant.bed,eQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,eQTL
+formatted_output_BSS00078_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Angular gyrus,TSV_File,Enhancer_SuperEnhancer
+ENCFF670EEZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF541XPH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+synovial%20sarcoma%20cell%20line%3aHS-SY-II.CNhs11244.10441-106E9.hg38.nobarcode.ctss.bed,hCAGE,TSS,HS-SY-II,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_cerebellar_hemisphere_OTHER_significant.bed,eQTL,QTL,Cerebellar hemisphere,TSV_File,eQTL
+CL:0002504_enteric_smooth_muscle_cell.bed,CAGE-Seq,Enhancer,Enteric smooth muscle cell,TSV_File,CellType_OtherNonNeural
+ENCFF059ZTD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF383PUU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF924YQC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+neural-cell-rep1_ENCSR000CVR_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_CSF_all_protein_OTHER_significant.bed,pQTL,QTL,Cerebrospinal fluid,TSV_File,pQTL
+ENCSR000EIJ.brain_hint_20-footprint.bed,DNase-seq,Accessible chromatin,Cerebellum,TSV_File,Transcription_Factor_Footprints
+formatted_output_Cerebellar_hemisphere_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Cerebellar hemisphere,TSV_File,sQTL
+ENCFF691MBD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF685VRG.bed,TF ChIP-seq,TF ChIP-seq peaks,Brain,TSV_File,Transcription_Factor_Binding
+ENCFF005NYD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF923TTW.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF146YHL.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCSR771DAX.brain_hint_20-footprint.bed,DNase-seq,Accessible chromatin,Globus pallidus,TSV_File,Transcription_Factor_Footprints
+peripheral%20neuroectodermal%20tumor%20cell%20line%3aKU-SN.CNhs11830.10697-109G4.hg38.nobarcode.ctss.bed,hCAGE,TSS,KU-SN,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS01250_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Medulla oblongata,TSV_File,Enhancer_SuperEnhancer
+ENCFF056ABK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF799SQY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF266MZL.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF176YMQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Frontal_cortex_BA9_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Frontal cortex BA9,TSV_File,eQTL
+ENCFF485CRM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+formatted_output_Frontal_cortex_BA9_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Frontal cortex BA9,TSV_File,eQTL
+Meningeal%20Cells%2c%20donor3.CNhs12731.11654-122E7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Meningeal cell,TSV_File,CellType_OtherNonNeural
+ENCFF961FSN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF486POY.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF914TVF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF310EGH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+SK-N-SH_SRR527596_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Neuroblastoma cell line,TSV_File,CellType_Neuroblastoma
+CD14%2b%20monocytes%20-%20treated%20with%20lipopolysaccharide%2c%20donor1.CNhs13470.11865-125B2.hg38.nobarcode.ctss.bed,hCAGE,TSS,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF518MFQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_BLUEPRINT_PE_monocyte_OTHER_significant.bed,eQTL,QTL,CD14+CD16- monocyte,TSV_File,eQTL
+ENCFF999DBX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF911CVX.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF542BQU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF952OPK.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF682RNP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF715RXH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+ENCFF912NTH.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF559XXE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF394QNC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF791ZFB.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF030WAO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+tibial-nerve-rep1_ENCSR203DPX_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Tibial nerve,TSV_File,Other_Functional_Annotations
+ENCFF756TDJ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF468RCY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF512MBR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+braintgm1_GSE46131_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Temporal neocortex gray matter,TSV_File,Other_Functional_Annotations
+ENCFF281UIJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF963KDF.bed,TF ChIP-seq,TF ChIP-seq peaks,H54,TSV_File,CellType_Neuroblastoma
+formatted_output_Nucleus_accumbens_basal_ganglia_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,sQTL
+ENCSR000DBW.brain_hint_20-footprint.bed,FAIRE-seq,Accessible chromatin,Frontal cortex,TSV_File,Transcription_Factor_Footprints
+ENCFF928RUD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_spinal_cord_leafcutter_OTHER_significant.bed,sQTL,QTL,Spinal cord cervical c-1,TSV_File,sQTL
+ENCFF331LZR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF964ORU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF674JTC.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF088UPC.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF442YDO.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF405BEL.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF828YVR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+spinal-cord-rep2_ENCSR000AGB_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Spinal cord,TSV_File,Other_Functional_Annotations
+ENCFF529VTU.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_Cerebellum_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Cerebellum,TSV_File,sQTL
+brainpfc2_GSE48552_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Prefrontal cortex,TSV_File,Other_Functional_Annotations
+Nucleus%20Pulposus%20Cell%2c%20donor1.CNhs10881.11252-116F1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Nucleus pulposus cell,TSV_File,CellType_OtherNonNeural
+ENCFF123AJQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF313EKJ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_BSS01676_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Substantia nigra,TSV_File,Enhancer_SuperEnhancer
+substantia%20nigra%2c%20adult%2c%20donor10252.CNhs12318.10158-103A5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Substantia nigra,TSV_File,Promoter
+ENCFF132LFI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF529ZWW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF291AKW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF110FGF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+globus%20pallidus%2c%20adult%2c%20donor10258.CNhs14549.10367-105F7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Globus pallidus,TSV_File,Promoter
+ENCFF926SCZ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF267VHH.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF733NZH.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF087VBI.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF993LBX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF068AIW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_GTEx_brain_putamen_leafcutter_SNP_significant.bed,sQTL,QTL,Putamen basal ganglia,TSV_File,sQTL
+ENCFF446BPS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF145JUM.bed,TF ChIP-seq,TF ChIP-seq peaks,SH-SY5Y,TSV_File,CellType_Neuroblastoma
+formatted_output_Tibial_nerve_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Tibial nerve,TSV_File,sQTL
+SK-N-SH_SRR527596_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Neuroblastoma cell line,TSV_File,CellType_Neuroblastoma
+ENCFF686GFD.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF476NBQ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF470PDK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF947HDZ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_nucleus_accumbens_leafcutter_OTHER_significant.bed,sQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,sQTL
+ENCFF020MRC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF133DZB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF731SSW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF841TWE.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF159XXN.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS00369_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Frontal cortex,TSV_File,Enhancer_SuperEnhancer
+ENCFF588HAO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF785GEE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF458GUG.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_caudate_SNP_significant.bed,eQTL,QTL,Caudate basal ganglia,TSV_File,eQTL
+ENCFF803LWI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+frontal-cortex-rep1_ENCSR000AFS_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Frontal cortex,TSV_File,Other_Functional_Annotations
+ENCFF474ZLP_GCCGCYGCCGCCGCC_filtered.bed,Motif finding,TFBS,Tibial nerve,TSV_File,Transcription_Factor_Binding
+formatted_output_Brain_all_protein_SNP_significant.bed,pQTL,QTL,Brain,TSV_File,pQTL
+ENCFF073LUE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+spinal-cord-rep2_ENCSR000AGB_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Spinal cord,TSV_File,Other_Functional_Annotations
+ENCFF605FCE.bed,TF ChIP-seq,TF ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_Braineac2_substantia_nigra_leafcutter_OTHER_significant.bed,sQTL,QTL,Putamen,TSV_File,sQTL
+ENCFF436TAH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF744SRS.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_nerve_tibial_leafcutter_SNP_significant.bed,sQTL,QTL,Tibial nerve,TSV_File,sQTL
+ENCFF328DTG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF081GSL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF239MHA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF511YNI.bed,TF ChIP-seq,TF ChIP-seq peaks,D721 Med,TSV_File,CellType_Neuroblastoma
+ENCFF185EQB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Excitatory neurons,TSV_File,CellType_Neuron
+ENCFF365YMX.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF910GNA.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF282VBC_GCYGCYGCCGCCGCC_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF311OKJ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF251MZD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_amygdala_leafcutter_OTHER_significant.bed,sQTL,QTL,Amygdala,TSV_File,sQTL
+ENCFF280MBV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_Putamen_basal_ganglia_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Putamen basal ganglia,TSV_File,sQTL
+ENCFF226BZE_GCCGCYGCCGCYGCYGCCGCY_filtered.bed,Motif finding,TFBS,H54,TSV_File,CellType_Neuroblastoma
+ENCFF361AXX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF392VCP.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF756JBS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCSR000ENE.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF701FBE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF164BMC.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF321XXD.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF023KWU.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF564MOT.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+diencephalon-rep2_ENCSR000AFR_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Diencephalon,TSV_File,Other_Functional_Annotations
+ENCFF765KBO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF258RIC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF311KBD.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_Cerebellum_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Cerebellum,TSV_File,sQTL
+formatted_output_GTEx_brain_substantia_nigra_leafcutter_SNP_significant.bed,sQTL,QTL,Substantia nigra,TSV_File,sQTL
+ENCFF700TIG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_Caudate_basal_ganglia_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Caudate basal ganglia,TSV_File,eQTL
+ENCFF665IWH.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+medial%20temporal%20gyrus%2c%20adult%2c%20donor10252.CNhs12316.10156-103A3.hg38.nobarcode.ctss.bed,hCAGE,TSS,Medial frontal gyrus,TSV_File,Promoter
+ENCFF026CLK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF327VHB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF395ETQ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Excitatory neurons,TSV_File,CellType_Neuron
+ENCFF127IBX.bed,TF ChIP-seq,TF ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+nucleus%20accumbens%2c%20adult%2c%20pool1.CNhs10644.10037-101F1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Nucleus accumbens,TSV_File,Promoter
+ENCFF683HRN.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF191CKB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF275YIW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF822KKO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+putamen%2c%20adult%2c%20donor10196.CNhs12324.10176-103C5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Putamen,TSV_File,Promoter
+ENCFF722BPH.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+thalamus%2c%20adult%2c%20donor10258%2c%20tech_rep2.CNhs14551.10370-105G1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Thalamus,TSV_File,Promoter
+ENCFF161ALY.bed,TF ChIP-seq,TF ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF455DYA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01208_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,M059J,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_cortex_leafcutter_SNP_significant.bed,sQTL,QTL,Cortex,TSV_File,sQTL
+ENCFF391NOU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_amygdala_OTHER_significant.bed,eQTL,QTL,Amygdala,TSV_File,eQTL
+ENCFF631JNO.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+CD14plus_SRR527681_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF287RJL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF403GTJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF636OOM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_putamen_leafcutter_OTHER_significant.bed,sQTL,QTL,Putamen basal ganglia,TSV_File,sQTL
+ENCFF851XUX.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF146RLZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+formatted_output_Schwartzentruber_2018_sensory_neuron_OTHER_significant.bed,eQTL,QTL,Neuron,TSV_File,eQTL
+formatted_output_Substantia_nigra_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Substantia nigra,TSV_File,sQTL
+ENCFF260GEA_GKGCMTKCTGGGARTTGTAGT_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS01841_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Tibial nerve,TSV_File,Enhancer_SuperEnhancer
+ENCFF215NXZ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF099GLU.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF289WUU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF596QGG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Cerebellum_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Cerebellum,TSV_File,eQTL
+ENCFF838MCR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Tibial_nerve_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Tibial nerve,TSV_File,eQTL
+locus%20coeruleus%2c%20adult%2c%20donor10252.CNhs12322.10165-103B3.hg38.nobarcode.ctss.bed,hCAGE,TSS,Locus coeruleus,TSV_File,Promoter
+ENCFF325SXS.bed,ATAC-seq,Accessible chromatin,Tibial nerve,TSV_File,Chromatin_Accessibility
+formatted_output_Cerebellar_hemisphere_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Cerebellar hemisphere,TSV_File,sQTL
+ENCFF343RSK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF467CRP.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF527XMC.bed,TF ChIP-seq,TF ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_Braineac2_substantia_nigra_leafcutter_SNP_significant.bed,sQTL,QTL,Putamen,TSV_File,sQTL
+formatted_output_GTEx_brain_hypothalamus_leafcutter_OTHER_significant.bed,sQTL,QTL,Hypothalamus,TSV_File,sQTL
+ENCFF772GAI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF916WSX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF239LAM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00206_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Cerebellum,TSV_File,Enhancer_SuperEnhancer
+formatted_output_Schmiedel_2018_monocyte_CD16_naive_OTHER_significant.bed,eQTL,QTL,CD14-CD16+,TSV_File,eQTL
+ENCFF013COV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF670JYI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF677SUG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_amygdala_SNP_significant.bed,eQTL,QTL,Amygdala,TSV_File,eQTL
+ENCFF419ZAY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+CD14-CD16%2b%20Monocytes%2c%20donor2.CNhs13207.11800-124C9.hg38.nobarcode.ctss.bed,hCAGE,TSS,CD14-CD16+,TSV_File,CellType_Microglia_Myeloid
+ENCFF246PFQ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF377QRX.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+Schwann%20Cells%2c%20donor3.CNhs12621.11659-122F3.hg38.nobarcode.ctss.bed,hCAGE,TSS,Schwann cell,TSV_File,CellType_OtherNonNeural
+ENCFF827ZMH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF146SGG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF118XTF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF101QYI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_cerebellum_leafcutter_OTHER_significant.bed,sQTL,QTL,Cerebellum,TSV_File,sQTL
+ENCFF511KBC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF209NFP.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF904KOG.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF702HVU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF748OLS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF092WRD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF658FMU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF671XCB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF245WBN.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF968BSH_TGGRCTGAATGARGMAAGAGTGACAGCCTA_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF427CXQ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_cortex_OTHER_significant.bed,eQTL,QTL,Cortex,TSV_File,eQTL
+ENCFF316TTS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF495YGQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF534ULU.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF528XFN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF403UKV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF258PHG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+E053_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Neurosphere,TSV_File,CellType_Progenitor
+ENCFF964NBK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF093RXL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF748IBN.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF894XCZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+E010_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Neuron,TSV_File,CellType_Neuron
+ENCFF008ZJU.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF637HNV.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF072NEE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF383ZHH.bed,TF ChIP-seq,TF ChIP-seq peaks,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF958DWA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF712CRW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Mid-neurogenesis radial glial cell,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_putamen_OTHER_significant.bed,eQTL,QTL,Putamen basal ganglia,TSV_File,eQTL
+ENCFF313PXW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF427RET.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF224WKX.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+diencephalon-rep2_ENCSR000AFR_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Diencephalon,TSV_File,Other_Functional_Annotations
+ENCFF489TOJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF197BDR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF315VKB.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF399RHY.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_ENCODE3_Astrocyte_hg38_peakachu_merged_loops.bed,Hi-C,Chromatin interactions,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_Tibial_nerve_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Tibial nerve,TSV_File,eQTL
+formatted_output_Cerebellar_hemisphere_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Cerebellar hemisphere,TSV_File,eQTL
+ENCFF241WRH.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF225SPV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00102_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,BE2C,TSV_File,CellType_Neuroblastoma
+formatted_output_Dixon_2015_H1-NPC_hg38_peakachu_merged_loops.bed,Hi-C,Chromatin interactions,Neural stem progenitor cell,TSV_File,CellType_Progenitor
+ENCFF200HKM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF746TEY.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCSR493VDS.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Putamen,TSV_File,Transcription_Factor_Footprints
+CL:0000235_macrophage.bed,CAGE-Seq,Enhancer,Macrophage,TSV_File,CellType_Microglia_Myeloid
+ENCFF501YCQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_hypothalamus_OTHER_significant.bed,eQTL,QTL,Hypothalamus,TSV_File,eQTL
+ENCFF352XOR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF936JXA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF744NST.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF334JJX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF986HES.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF443GYC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF894CJZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF057KCF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF444PYL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF213OCF.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_BLUEPRINT_monocyte_leafcutter_OTHER_significant.bed,sQTL,QTL,CD14+CD16- monocyte,TSV_File,sQTL
+ENCFF292IGU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF337AWR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF040HXB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF026DBK.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF154SNM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF881WAS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Spinal_cord_cervical_c-1_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Spinal cord cervical c-1,TSV_File,sQTL
+Perineurial%20Cells%2c%20donor1.CNhs12587.11499-119F5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Perineurial cell,TSV_File,CellType_OtherNonNeural
+ENCFF354RKX.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCSR584LUZ.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Ammon's horn,TSV_File,Transcription_Factor_Footprints
+formatted_output_BSS00089_ENCODE_2012_Enh_hg38.bed,ChromHMM,Enhancer,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF943GRI.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF032HHR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF544VFP.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_BSS00385_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Germinal matrix,TSV_File,Enhancer_SuperEnhancer
+ENCFF917MHR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF552DTY.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF029PSV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF811FEK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF778BFL.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_nucleus_accumbens_leafcutter_SNP_significant.bed,sQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,sQTL
+tibial-nerve-rep1_ENCSR203DPX_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Tibial nerve,TSV_File,Other_Functional_Annotations
+ENCFF595WAL.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF672RFZ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF046GNG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_frontal_cortex_SNP_significant.bed,eQTL,QTL,Frontal cortex BA9,TSV_File,eQTL
+ENCFF748ZIP.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF711XAV.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF126UEK.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Excitatory neurons,TSV_File,CellType_Neuron
+ENCFF125AEL.bed,ATAC-seq,Accessible chromatin,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF155PPH.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF294RCS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF206RAA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF628TCI.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF064KLD_TGGGCGCCGCCATGTTGGM_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF480ASG.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF488LZC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF738NPW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+glioblastoma%20cell%20line%3aA172%2c%20tech_rep1.CNhs11185.10444-106F3.hg38.nobarcode.ctss.bed,hCAGE,TSS,A172,TSV_File,CellType_Neuroblastoma
+ENCFF401CGN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF364SUA_GCCASYAGRGGGCGC_filtered.bed,Motif finding,TFBS,D721 Med,TSV_File,CellType_Neuroblastoma
+ENCFF836QOK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+parietal-lobe-rep2_ENCSR000AFY_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Parietal lobe,TSV_File,Other_Functional_Annotations
+E067_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Angular gyrus,TSV_File,Enhancer_SuperEnhancer
+brainpfc4_GSE64977_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Dorsolateral prefrontal cortex,TSV_File,Other_Functional_Annotations
+ENCFF884WVM_CAGCACCATGGACAG_filtered.bed,Motif finding,TFBS,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF545EXO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF659YMY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF365FKF.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF574KPW.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Braineac2_substantia_nigra_SNP_significant.bed,eQTL,QTL,Putamen,TSV_File,eQTL
+ENCFF135MSV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF739OYT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF438VJU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF078LEV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF890BZS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF647JNQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00112_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF068NMN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Nucleus_accumbens_basal_ganglia_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,eQTL
+formatted_output_Substantia_nigra_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Substantia nigra,TSV_File,sQTL
+ENCFF417NSC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF815LQP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF536ACP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+UBERON:0000955_brain.bed,CAGE-Seq,Enhancer,Brain,TSV_File,Enhancer_SuperEnhancer
+ENCFF978WMS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF569DMM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF454BSX.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_Hypothalamus_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Hypothalamus,TSV_File,sQTL
+ENCFF812KXM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+glioma%20cell%20line%3aGI-1.CNhs10731.10413-106B8.hg38.nobarcode.ctss.bed,hCAGE,TSS,GI-1,TSV_File,CellType_Neuroblastoma
+ENCFF655YII.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF430PID.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_caudate_leafcutter_SNP_significant.bed,sQTL,QTL,Caudate basal ganglia,TSV_File,sQTL
+ENCFF287BSB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF960CKY_NVBRGYGCCMCCTRSTGGC_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF066YLG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF858XXS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Cerebellum_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Cerebellum,TSV_File,eQTL
+ENCFF149NRI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF631RWJ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF627GXK.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF060ZDD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF755YHN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF157KZY_GRACTACAHTTCCCAGMA_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+diencephalon%2c%20adult.CNhs12610.10193-103E4.hg38.nobarcode.ctss.bed,hCAGE,TSS,Diencephalon,TSV_File,Promoter
+ENCFF238TTP.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF370FQH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF862HUE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+brainsfg1_GSE59286_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Superior frontal gyrus,TSV_File,Other_Functional_Annotations
+ENCFF831GCT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF953CWR.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF458OBF.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+SK-N-SH-rep3_ENCSR000CSJ_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF321TVF.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+glioblastoma%20cell%20line%3aT98G.CNhs11272.10485-107A8.hg38.nobarcode.ctss.bed,hCAGE,TSS,T98G,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_frontal_cortex_leafcutter_OTHER_significant.bed,sQTL,QTL,Frontal cortex BA9,TSV_File,sQTL
+ENCFF955FVE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF059HBB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF973MQZ.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF126EZD.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+brainpfc2_GSE48552_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Prefrontal cortex,TSV_File,Other_Functional_Annotations
+ENCFF856TJX.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF923IPP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF751DAH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Dixon_2015_H1-NPC_raw_TADs.bed,TAD,TAD,Neuronal progenitor cell,TSV_File,CellType_Neuron
+ENCSR829MXU.brain_hint_20-footprint.bed,DNase-seq,Accessible chromatin,Pons,TSV_File,Transcription_Factor_Footprints
+ENCFF133NID.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF277YTN.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_Putamen_basal_ganglia_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Putamen basal ganglia,TSV_File,eQTL
+ENCFF150WIK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF562MJV.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF088YOL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF851UUK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF823AHN.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF167NAJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Caudate_basal_ganglia_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Caudate basal ganglia,TSV_File,sQTL
+paracentral%20gyrus%2c%20adult%2c%20pool1.CNhs10642.10035-101E8.hg38.nobarcode.ctss.bed,hCAGE,TSS,Paracentral gyrus,TSV_File,Promoter
+ENCFF665AIG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF521ORR.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF235CPK.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF727TTT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF099BUG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+postcentral%20gyrus%2c%20adult%2c%20pool1.CNhs10638.10032-101E5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Postcentral gyrus,TSV_File,Promoter
+ENCFF014FJK.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF010YNV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF105WOU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF667QNG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF333CDF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Schwartzentruber_2018_sensory_neuron_SNP_significant.bed,eQTL,QTL,Neuron,TSV_File,eQTL
+ENCFF806XHK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF281WIN.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF117QYN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF907DJN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF154SUH.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF544TGN.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Schwartzentruber_2018_sensory_neuron_leafcutter_OTHER_significant.bed,sQTL,QTL,Neuron,TSV_File,sQTL
+ENCFF634VPH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01451_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Pons,TSV_File,Enhancer_SuperEnhancer
+ENCFF934FXC.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF380MAP.bed,ATAC-seq,Accessible chromatin,Sciatic nerve,TSV_File,Chromatin_Accessibility
+ENCFF241OHQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS00272_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Ecto neural progenitor cell,TSV_File,CellType_Progenitor
+formatted_output_Schmiedel_2018_monocyte_CD16_naive_leafcutter_SNP_significant.bed,sQTL,QTL,CD14-CD16+,TSV_File,sQTL
+ENCFF030YTF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF662EUG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF549SPA.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF469RYV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF126ZXW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF831OSW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF846ETX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Mid-neurogenesis radial glial cell,TSV_File,Epigenetic_Histone_Modifications
+ENCFF927ROY.bed,TF ChIP-seq,TF ChIP-seq peaks,SH-SY5Y,TSV_File,CellType_Neuroblastoma
+ENCFF554OQU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF478RRB.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF320UWL.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF930ZMQ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF068NJG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Epithelial cell,TSV_File,CellType_OtherNonNeural
+formatted_output_BSS01613_Roadmap_2021_Enh_hg38.bed,ChromHMM,Enhancer,Spinal cord,TSV_File,Enhancer_SuperEnhancer
+formatted_output_GTEx_brain_amygdala_leafcutter_SNP_significant.bed,sQTL,QTL,Amygdala,TSV_File,sQTL
+ENCFF079MKH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF278GDW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Putamen_basal_ganglia_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Putamen basal ganglia,TSV_File,sQTL
+ENCFF046ALR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_caudate_leafcutter_OTHER_significant.bed,sQTL,QTL,Caudate basal ganglia,TSV_File,sQTL
+ENCFF781PYX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF974AQC.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF827AMC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF395TFO.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+formatted_output_Spinal_cord_cervical_c-1_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Spinal cord cervical c-1,TSV_File,eQTL
+ENCFF506EFM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF784LWO.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF883PFA.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_Alasoo_2018_macrophage_naive_leafcutter_OTHER_significant.bed,sQTL,QTL,Macrophage,TSV_File,sQTL
+ENCFF131TLW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF429IQW.bed,TF ChIP-seq,TF ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCSR000ENL.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Epithelial cell,TSV_File,CellType_OtherNonNeural
+ENCFF212YKS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF795YGY.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF486XLR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF166UUO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF213BLR.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+formatted_output_Schmiedel_2018_monocyte_CD16_naive_SNP_significant.bed,eQTL,QTL,CD14-CD16+,TSV_File,eQTL
+ENCFF799TBX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Braineac2_putamen_leafcutter_OTHER_significant.bed,sQTL,QTL,Substantia nigra,TSV_File,sQTL
+ENCFF314DVI.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF725RYW_CGCCGCYGCCGCCGC_filtered.bed,Motif finding,TFBS,Neural cell,TSV_File,CellType_Progenitor
+ENCFF050GXO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+Smooth%20Muscle%20Cells%20-%20Brain%20Vascular%2c%20donor3.CNhs12004.11391-118C5.hg38.nobarcode.ctss.bed,hCAGE,TSS,Smooth muscle cell,TSV_File,CellType_Vascular
+ENCFF593FFW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_Hypothalamus_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Hypothalamus,TSV_File,sQTL
+ENCFF492OBS.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF577MAP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF816DQS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_Anterior_cingulate_cortex_BA24_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Anterior cingulate cortex BA24,TSV_File,eQTL
+formatted_output_Schmitt_2016_Cortex_DLPFC_raw_TADs.bed,TAD,TAD,Dorsolateral prefrontal cortex,TSV_File,Chromatin_Interaction_Loops
+ENCFF596SJJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF027IXL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF562KHN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF179VTO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+E125_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,NHA,TSV_File,CellType_Astrocyte
+ENCFF992PRW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF641RPD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF787JTS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_GTEx_brain_hypothalamus_leafcutter_SNP_significant.bed,sQTL,QTL,Hypothalamus,TSV_File,sQTL
+ENCFF029TQN.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+E072_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Inferior temporal lobe,TSV_File,Enhancer_SuperEnhancer
+brainog1_SRA012516_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Orbital gyrus,TSV_File,Other_Functional_Annotations
+E009_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Neuronal progenitor cell,TSV_File,CellType_Neuron
+ENCFF371YQD.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF507LTC.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF457VYF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF238GNJ.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF290IBP_ACTACAWYTCCCAGAAKS_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF896AZK.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+bipolar-spindle-neuron-rep1_ENCSR603RPC_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Bipolar spindle neuron,TSV_File,CellType_Neuron
+formatted_output_GTEx_brain_cerebellum_OTHER_significant.bed,eQTL,QTL,Cerebellum,TSV_File,eQTL
+occipital%20cortex%2c%20adult%2c%20donor10252.CNhs12320.10163-103B1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Occipital cortex,TSV_File,Promoter
+ENCFF236ADT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF702LXX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF342RCA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+cerebellum%2c%20adult%2c%20donor10252.CNhs12323.10166-103B4.hg38.nobarcode.ctss.bed,hCAGE,TSS,Cerebellum,TSV_File,Promoter
+ENCFF666JZT.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF281OEP.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF803LRA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_caudate_OTHER_significant.bed,eQTL,QTL,Caudate basal ganglia,TSV_File,eQTL
+ENCFF840HUG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+ENCFF548ZVE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF327TYG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+Anulus%20Pulposus%20Cell%2c%20donor1.CNhs10876.11248-116E6.hg38.nobarcode.ctss.bed,hCAGE,TSS,Anulus pulposus cell,TSV_File,CellType_OtherNonNeural
+ENCFF485LSB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF804RHQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF574WJV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF479OFO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF535DBU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF726VPF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF517RQC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF249WVG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF141OIV.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+Neural%20stem%20cells%2c%20donor1.CNhs11063.11275-116H6.hg38.nobarcode.ctss.bed,hCAGE,TSS,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_Frontal_cortex_BA9_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Frontal cortex BA9,TSV_File,sQTL
+ENCFF248ZDT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF041MHX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF994BKU.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF360TSJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_nerve_tibial_SNP_significant.bed,eQTL,QTL,Tibial nerve,TSV_File,eQTL
+SK-N-SH-rep4_ENCSR000CTJ_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF858IXE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF671AKW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF426TKS.bed,ATAC-seq,Accessible chromatin,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF816BTR.bed,TF ChIP-seq,TF ChIP-seq peaks,Excitatory neurons,TSV_File,CellType_Neuron
+formatted_output_Amygdala_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Amygdala,TSV_File,eQTL
+formatted_output_MFG_sQTL_significant.bed,sQTL,QTL,Microglia,TSV_File,sQTL
+ENCFF835ZSJ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+amygdala%2c%20adult%2c%20donor10252.CNhs12311.10151-102I7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Amygdala,TSV_File,Promoter
+ENCFF551PCH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF300JJI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_hippocampus_leafcutter_OTHER_significant.bed,sQTL,QTL,Hippocampus,TSV_File,sQTL
+formatted_output_BSS01714_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Temporal lobe,TSV_File,Enhancer_SuperEnhancer
+ENCFF549EIJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF551DCA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF798HUX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF405FKW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF599EDA.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF422DVB.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF182TAL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+formatted_output_Hypothalamus_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Hypothalamus,TSV_File,eQTL
+ENCFF948LWW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF848BQM.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF381MYY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF762FCF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+pineal%20gland%2c%20adult%2c%20donor10252.CNhs12228.10160-103A7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Pineal gland,TSV_File,Promoter
+ENCFF853HPG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Mid-neurogenesis radial glial cell,TSV_File,Epigenetic_Histone_Modifications
+ENCFF301UWP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF883AEQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF067KUH.bed,TF ChIP-seq,TF ChIP-seq peaks,Brain,TSV_File,Transcription_Factor_Binding
+E069_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Cingulate gyrus,TSV_File,Enhancer_SuperEnhancer
+ENCFF306ZKG.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+temporal-lobe-rep1_ENCSR000AGD_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Temporal lobe,TSV_File,Other_Functional_Annotations
+medulloblastoma%20cell%20line%3aD283%20Med.CNhs12805.10838-111E1.hg38.nobarcode.ctss.bed,hCAGE,TSS,D283 Med,TSV_File,CellType_Neuroblastoma
+ENCFF404SAH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF465IJE.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF680VFW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Caudate_basal_ganglia_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Caudate basal ganglia,TSV_File,sQTL
+formatted_output_BSS00386_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Globus pallidus,TSV_File,Enhancer_SuperEnhancer
+ENCFF010QRA.bed,ATAC-seq,Accessible chromatin,Cerebellum,TSV_File,Chromatin_Accessibility
+formatted_output_mRNA_hg38.bed,Annotation,Genome annotations,Not applicable,TSV_File,Genomic_Conservation
+formatted_output_Cortex_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Cortex,TSV_File,eQTL
+ENCFF677ZTZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_cortex_SNP_significant.bed,eQTL,QTL,Cortex,TSV_File,eQTL
+CL:0002549_fibroblast_of_choroid_plexus.bed,CAGE-Seq,Enhancer,Fibroblast,TSV_File,CellType_OtherNonNeural
+spinal%20cord%20-%20adult%2c%20donor10196.CNhs13807.10181-103D1.hg38.nobarcode.ctss.bed,hCAGE,TSS,Spinal cord,TSV_File,Promoter
+ENCFF675QHY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_cortex_leafcutter_OTHER_significant.bed,sQTL,QTL,Cortex,TSV_File,sQTL
+ENCFF190KNC_GCCASCAGRGGGCGC_filtered.bed,Motif finding,TFBS,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+cerebrospinal%20fluid%2c%20donor2.CNhs13437.10294-104G6.hg38.nobarcode.ctss.bed,hCAGE,TSS,Cerebrospinal fluid,TSV_File,Promoter
+ENCFF613UCQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF393OTE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF398JFP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF114EBR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF828LGP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00004_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,A172,TSV_File,CellType_Neuroblastoma
+formatted_output_ROSMAP_brain_naive_SNP_significant.bed,eQTL,QTL,Dorsolateral prefrontal cortex,TSV_File,eQTL
+ENCFF525DUO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF696JOF.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF246QIY_YCSCRHKGSCTSYYGGGAAWYGTAGTYYT_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF472AKH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF491SVN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+corpus%20callosum%2c%20adult%2c%20pool1.CNhs10649.10042-101F6.hg38.nobarcode.ctss.bed,hCAGE,TSS,Corpus callosum,TSV_File,Promoter
+ENCFF163BBN.bed,TF ChIP-seq,TF ChIP-seq peaks,Brain,TSV_File,Transcription_Factor_Binding
+formatted_output_BSS01677_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Superior temporal gyrus,TSV_File,Enhancer_SuperEnhancer
+ENCFF628GOW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+frontal%20lobe%2c%20adult%2c%20pool1.CNhs10647.10040-101F4.hg38.nobarcode.ctss.bed,hCAGE,TSS,Frontal lobe,TSV_File,Promoter
+ENCFF667QUG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF436XYA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Nucleus_accumbens_basal_ganglia_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Nucleus accumbens basal ganglia,TSV_File,sQTL
+ENCFF523JXA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF405TKN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF623HQN.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_GTEx_brain_spinal_cord_leafcutter_SNP_significant.bed,sQTL,QTL,Spinal cord cervical c-1,TSV_File,sQTL
+ENCFF171BFA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF407LFW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF706FJE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF302HBF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF203KMC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF825VWO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF879DVK_GCHGCCRCHGCCGCCGCCNB_filtered.bed,Motif finding,TFBS,Neural cell,TSV_File,CellType_Progenitor
+ENCFF809NXV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+ENCFF652TPM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF259XZH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+parietal-lobe-rep2_ENCSR000AFY_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Parietal lobe,TSV_File,Other_Functional_Annotations
+ENCFF424MLS_CATTRCAGGVWRTTYAGCWSCATYCYTGGC_filtered.bed,Motif finding,TFBS,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF069TSW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF239LOH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF466MHO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF146MJR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01559_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF476FTK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF755GZM.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_Substantia_nigra_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Substantia nigra,TSV_File,eQTL
+ENCFF951GFL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF537REO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF463RSG.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Glial cell,TSV_File,CellType_Astrocyte
+formatted_output_Hypothalamus_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Hypothalamus,TSV_File,eQTL
+ENCFF548MQR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF408GCJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF022HRD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF878IKV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF786ATD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_anterior_cingulate_cortex_SNP_significant.bed,eQTL,QTL,Anterior cingulate cortex BA24,TSV_File,eQTL
+ENCFF388BBB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00481_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,H4,TSV_File,CellType_Neuroblastoma
+ENCFF900ENX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF494NJB.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Caudate_basal_ganglia_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Caudate basal ganglia,TSV_File,eQTL
+ENCFF493DPN.bed,TF ChIP-seq,TF ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF061HBP.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF372UGG.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF497JDV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+cerebellum-rep2_ENCSR000AFQ_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Cerebellum,TSV_File,Other_Functional_Annotations
+ENCFF248ZBH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF541HHW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+braintgm1_GSE46131_peaks_annot_hg38.bed,Small RNA-Seq,Small RNA,Temporal neocortex gray matter,TSV_File,Other_Functional_Annotations
+formatted_output_Braineac2_substantia_nigra_OTHER_significant.bed,eQTL,QTL,Putamen,TSV_File,eQTL
+formatted_output_Hippocampus_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Hippocampus,TSV_File,sQTL
+ENCFF787GFA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCSR000ENF.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Pericyte,TSV_File,CellType_Vascular
+ENCFF157ZPD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCSR910OQF.spinal_cord_hint_20-footprint.bed,DNase-seq,Accessible chromatin,Spinal cord,TSV_File,Transcription_Factor_Footprints
+ENCFF895YLX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01270_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Midbrain,TSV_File,Enhancer_SuperEnhancer
+ENCFF700POC.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+E124_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF812HQJ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF192GUQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF631DIC.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF385MVM.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF639PON.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF035CSJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF885HOD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF121CVS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF120DTC.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF036UIO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF143HWS.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF749LZC.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF159BQJ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF607ORV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF065BOJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Amygdala_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Amygdala,TSV_File,sQTL
+formatted_output_BSS00482_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,H54,TSV_File,CellType_Neuroblastoma
+ENCFF440XVI.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF174OHU.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF755YSO.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF733GKB_CGCRRGGSMBGCTGGGAAWTGTAGTYYY_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF813SYQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF954CVW_GGSMBGCTGGGARHTGTAGT_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF915VGT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF256HOV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF892SLR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS00218_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Epithelial cell,TSV_File,CellType_OtherNonNeural
+ENCFF917PQS_CYSYSGSSGCCGCCATCTTG_filtered.bed,Motif finding,TFBS,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF715LPM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Glial cell,TSV_File,CellType_Astrocyte
+ENCFF327VLN.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF584GYR.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+meningioma%20cell%20line%3aHKBMM.CNhs11945.10691-109F7.hg38.nobarcode.ctss.bed,hCAGE,TSS,HKBMM,TSV_File,CellType_Neuroblastoma
+ENCFF010MGE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF094BKH.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF210RRB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF558APA.bed,TF ChIP-seq,TF ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF342LPC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF930DQM.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_Frontal_cortex_BA9_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Frontal cortex BA9,TSV_File,sQTL
+ENCFF561CGK.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF049EUJ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF187EKI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Spinal cord,TSV_File,Epigenetic_Histone_Modifications
+ENCFF722WCB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+CD14%2bCD16%2b%20Monocytes%2c%20donor2.CNhs13208.11801-124D1.hg38.nobarcode.ctss.bed,hCAGE,TSS,CD14+CD16- monocyte,TSV_File,CellType_Microglia_Myeloid
+neuroepithelioma%20cell%20line%3aSK-N-MC.CNhs11853.10728-110A8.hg38.nobarcode.ctss.bed,hCAGE,TSS,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF359BHR.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_Cortex_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Cortex,TSV_File,sQTL
+formatted_output_BSS00125_Roadmap_2021_Enh_hg38.bed,ChromHMM,Enhancer,Brain,TSV_File,Enhancer_SuperEnhancer
+ENCFF017XZH.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCSR475VQD.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Brain,TSV_File,Transcription_Factor_Footprints
+ENCFF644HJL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_GTEx_brain_cerebellum_leafcutter_SNP_significant.bed,sQTL,QTL,Cerebellum,TSV_File,sQTL
+ENCFF299AOR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF099ASU.bed,TF ChIP-seq,TF ChIP-seq peaks,Brain,TSV_File,Transcription_Factor_Binding
+formatted_output_Amygdala_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Amygdala,TSV_File,eQTL
+ENCFF200QGV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF433UFM.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF576USN.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF944QAD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF470UTN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF867NWR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF415KQQ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF886SMI.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+ENCFF790BCA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF215PDH.bed,TF ChIP-seq,TF ChIP-seq peaks,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_BSS00178_ENCODE_2012_Enh_hg38.bed,ChromHMM,Enhancer,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF259UMI.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF791OFW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+Monocyte-derived%20macrophages%20response%20to%20udorn%20influenza%20infection%2c%2024hr00min%2c%20donor2%20%28150_120%3aUd_24h%29.CNhs13560.13320-143A8.hg38.nobarcode.ctss.bed,hCAGE,TSS,Macrophage,TSV_File,CellType_Microglia_Myeloid
+formatted_output_BSS01606_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Smooth muscle cell,TSV_File,CellType_Vascular
+ENCFF957FAH.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+cerebellum-rep2_ENCSR000AFQ_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Cerebellum,TSV_File,Other_Functional_Annotations
+neurofibroma%20cell%20line%3aHs%2053%2eT.CNhs11854.10729-110A9.hg38.nobarcode.ctss.bed,hCAGE,TSS,Hs 53.T,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS01273_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Middle frontal gyrus,TSV_File,Enhancer_SuperEnhancer
+ENCFF404IOA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF507JST.bed,ATAC-seq,Accessible chromatin,Lower motor neurons,TSV_File,CellType_Neuron
+formatted_output_GTEx_brain_cerebellar_hemisphere_SNP_significant.bed,eQTL,QTL,Cerebellar hemisphere,TSV_File,eQTL
+hippocampus%2c%20adult%2c%20donor10252.CNhs12312.10153-102I9.hg38.nobarcode.ctss.bed,hCAGE,TSS,Hippocampus,TSV_File,Promoter
+ENCFF117YEM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF945YMA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF490FXW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF371TYE.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF230SFD.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF107DYH.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+parietal%20lobe%2c%20adult%2c%20pool1.CNhs10641.10034-101E7.hg38.nobarcode.ctss.bed,hCAGE,TSS,Parietal lobe,TSV_File,Promoter
+ENCFF621SYA.bed,ATAC-seq,Accessible chromatin,Posterior cingulate cortex,TSV_File,Chromatin_Accessibility
+ENCSR224IYD.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Medulla oblongata,TSV_File,Transcription_Factor_Footprints
+ENCFF082BVV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF289VOQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF084RXJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_cerebellum_SNP_significant.bed,eQTL,QTL,Cerebellum,TSV_File,eQTL
+ENCFF833JKZ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF255IXZ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF255MAF.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF354QBJ.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS00729_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Inferior parietal cortex,TSV_File,Enhancer_SuperEnhancer
+ENCFF804IOL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF573CVV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+ENCFF559CHM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,BE2C,TSV_File,CellType_Neuroblastoma
+ENCFF892JFQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Amygdala_sQTL_GTEx_signif_SNP.bed,sQTL,QTL,Amygdala,TSV_File,sQTL
+ENCFF733BXL.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-MC,TSV_File,CellType_Neuroblastoma
+ENCFF321HNK.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF017LHO.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF240HOE.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_GTEx_brain_hypothalamus_SNP_significant.bed,eQTL,QTL,Hypothalamus,TSV_File,eQTL
+formatted_output_ROSMAP_brain_naive_OTHER_significant.bed,eQTL,QTL,Dorsolateral prefrontal cortex,TSV_File,eQTL
+insula%2c%20adult%2c%20pool1.CNhs10646.10039-101F3.hg38.nobarcode.ctss.bed,hCAGE,TSS,Insula,TSV_File,Promoter
+ENCFF974LSP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF099UUR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF354YIN.bed,TF ChIP-seq,TF ChIP-seq peaks,PFSK-1,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS00246_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Daoy,TSV_File,CellType_Neuroblastoma
+ENCFF576TVQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_CommonMind_DLPFC_naive_leafcutter_OTHER_significant.bed,sQTL,QTL,Dorsolateral prefrontal cortex,TSV_File,sQTL
+ENCFF946IMQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+ENCFF785BWR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+ENCFF831EAA.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF002HYD.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF920GZU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GTEx_brain_spinal_cord_OTHER_significant.bed,eQTL,QTL,Spinal cord cervical c-1,TSV_File,eQTL
+formatted_output_Cerebellar_hemisphere_eQTL_GTEx_signif_SNP.bed,eQTL,QTL,Cerebellar hemisphere,TSV_File,eQTL
+ENCFF649XXC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Schmitt_2016_Hippocampus_hg38_peakachu_merged_loops.bed,Hi-C,Chromatin interactions,Hippocampus,TSV_File,Chromatin_Interaction_Loops
+brainog1_SRA012516_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Orbital gyrus,TSV_File,Other_Functional_Annotations
+ENCFF321RPV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF626KJL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF558RLT.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF555EZX_GGWGGYDGCGGCDGCGGCDG_filtered.bed,Motif finding,TFBS,Neural cell,TSV_File,CellType_Progenitor
+ENCFF688PPB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF208ROD.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF887JRI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCSR503HIB.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Cerebellar cortex,TSV_File,Transcription_Factor_Footprints
+ENCFF253TSV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF162PRG.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+pons%2c%20adult%2c%20pool1.CNhs10640.10033-101E6.hg38.nobarcode.ctss.bed,hCAGE,TSS,Pons,TSV_File,Promoter
+ENCFF480KMW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF876KGY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF834CEE.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF942MTV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+formatted_output_Anterior_cingulate_cortex_BA24_eQTL_GTEx_signif_OTHER.bed,eQTL,QTL,Anterior cingulate cortex BA24,TSV_File,eQTL
+ENCFF406ZHG.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+UBERON:0002360_meninx.bed,CAGE-Seq,Enhancer,Meninx,TSV_File,Enhancer_SuperEnhancer
+ENCFF426JGY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF487BBI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Anterior_cingulate_cortex_BA24_sQTL_GTEx_signif_OTHER.bed,sQTL,QTL,Anterior cingulate cortex BA24,TSV_File,sQTL
+ENCFF115NJP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF420SAZ.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF277DUM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF997MZY.bed,ATAC-seq,Accessible chromatin,Sciatic nerve,TSV_File,Chromatin_Accessibility
+ENCFF697ULR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_BSS01272_Roadmap_2015_Enh_hg38.bed,ChromHMM,Enhancer,Middle frontal area BA46,TSV_File,Enhancer_SuperEnhancer
+CL:0000127_astrocyte.bed,CAGE-Seq,Enhancer,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF967BVX.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF176FAR.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF259KRO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF514PNC.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_anterior_cingulate_cortex_OTHER_significant.bed,eQTL,QTL,Anterior cingulate cortex BA24,TSV_File,eQTL
+ENCFF836LBP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF988JIR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF015HXV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF786KTR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+ENCFF942ADV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF745UIC_GTGTGTGCAGGTGTG_filtered.bed,Motif finding,TFBS,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF655XQW.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF301SME.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF078VTL_SGCCRCCAGRKGGCGCY_filtered.bed,Motif finding,TFBS,Neural cell,TSV_File,CellType_Progenitor
+ENCFF669VZN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF887OJR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF467SFP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF032TDV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF018CKB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF775NCQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF346SVY.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Mid-neurogenesis radial glial cell,TSV_File,Epigenetic_Histone_Modifications
+ENCFF457ZGY.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF009GTV.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF983HAU.bed,TF ChIP-seq,TF ChIP-seq peaks,Tibial nerve,TSV_File,Transcription_Factor_Binding
+ENCFF560ANU.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+ENCFF920BLL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+brainpfc4_GSE64977_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Dorsolateral prefrontal cortex,TSV_File,Other_Functional_Annotations
+ENCFF812JWS.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+formatted_output_GTEx_brain_substantia_nigra_SNP_significant.bed,eQTL,QTL,Substantia nigra,TSV_File,eQTL
+formatted_output_Nedelec_2016_macrophage_naive_OTHER_significant.bed,eQTL,QTL,Macrophage,TSV_File,eQTL
+ENCSR706IDL.brain_hint_16-footprint.bed,DNase-seq,Accessible chromatin,Midbrain,TSV_File,Transcription_Factor_Footprints
+ENCFF183BLP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF338KEP.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+occipital-lobe-rep1_ENCSR000AFX_peaks_annot_hg38.bed,short total RNA-Seq,Small RNA,Occipital lobe,TSV_File,Other_Functional_Annotations
+ENCFF250LGS.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+ENCFF297WUP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF368YRQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Lower motor neurons,TSV_File,CellType_Neuron
+E070_15_coreMarks_hg38lift_mnemonics_enhancer.bed,ChIP-seq,Enhancer,Germinal matrix,TSV_File,Enhancer_SuperEnhancer
+ENCFF809HTN.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+temporal-lobe-rep1_ENCSR000AGD_peaks_unannot_hg38.bed,short total RNA-Seq,Small RNA,Temporal lobe,TSV_File,Other_Functional_Annotations
+formatted_output_BSS00143_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,Endothelial cell,TSV_File,CellType_Vascular
+ENCFF403GEI.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF388LVO.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF551EDM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Bipolar neuron,TSV_File,CellType_Neuron
+ENCFF448WZL.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+medulloblastoma%20cell%20line%3aONS-76.CNhs11861.10759-110E3.hg38.nobarcode.ctss.bed,hCAGE,TSS,ONS-76,TSV_File,CellType_Neuroblastoma
+formatted_output_BSS01558_ENCODE_Enh_hg38.bed,ChromHMM,Enhancer,SK-N-DZ,TSV_File,CellType_Neuroblastoma
+ENCFF994MCP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+ENCFF196LKC.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+ENCFF347BFF.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF595ZWP.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF637YKR.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neural progenitor cell,TSV_File,CellType_Progenitor
+ENCFF377YBQ.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF282ONV.bed,TF ChIP-seq,TF ChIP-seq peaks,Middle frontal area BA46,TSV_File,Transcription_Factor_Binding
+ENCFF150QAB.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Glial cell,TSV_File,CellType_Astrocyte
+ENCFF454DUP.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+monocyte-derived-macrophage1_GSE51307_peaks_unannot_hg38.bed,Small RNA-Seq,Small RNA,Macrophage,TSV_File,CellType_Microglia_Myeloid
+Oligodendrocyte%20-%20precursors%2c%20donor1.CNhs12586.11496-119F2.hg38.nobarcode.ctss.bed,hCAGE,TSS,Oligodendrocyte precursors,TSV_File,CellType_Oligodendrocyte
+ENCFF650LAZ_GGMGCTGTCCRTGGTGCTGAA_filtered.bed,Motif finding,TFBS,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF231XYM.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+medulla%20oblongata%2c%20adult%2c%20donor10252.CNhs12315.10155-103A2.hg38.nobarcode.ctss.bed,hCAGE,TSS,Medulla oblongata,TSV_File,Promoter
+ENCFF466VOJ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Middle frontal area BA46,TSV_File,Epigenetic_Histone_Modifications
+ENCFF236NGQ.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Tibial nerve,TSV_File,Epigenetic_Histone_Modifications
+ENCFF812MNO.bed,TF ChIP-seq,TF ChIP-seq peaks,SK-N-SH,TSV_File,CellType_Neuroblastoma
+ENCFF483TMM.bed,ATAC-seq,Accessible chromatin,Sciatic nerve,TSV_File,Chromatin_Accessibility
+ENCFF236KKS.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Caudate nucleus,TSV_File,Epigenetic_Histone_Modifications
+ENCFF626IPV.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Layer - hippocampus,TSV_File,Epigenetic_Histone_Modifications
+neuroblastoma%20cell%20line%3aNH-12.CNhs11811.10555-107I6.hg38.nobarcode.ctss.bed,hCAGE,TSS,NH-12,TSV_File,CellType_Neuroblastoma
+ENCFF924MBC.bed,Mint-ChIP-seq,Histone ChIP-seq peaks,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+Sample_1453_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Cerebellum,TSV_File,Chromatin_Accessibility
+UCSF-UBC.Neurosphere_Cultured_Cells_Cortex_Derived.H3K36me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell cortex derived,TSV_File,CellType_Progenitor
+BI.Brain_Substantia_Nigra.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_GSM3598048_motor.cutoff.5.washU_lifted.bed,pcHi-C,Chromatin interactions,Lower motor neurons,TSV_File,CellType_Neuron
+BI.H9_Derived_Neuron_Cultured_Cells.H3K36me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+UW.Fetal_Brain.Digital_Genomic_Footprinting.H-22510.DGF.DS11872.narrowPeak.lifted.bed,DNase-seq,Accessible chromatin,Brain,TSV_File,Chromatin_Accessibility
+formatted_output_GSM3106832_cortical.cutoff.5.washU_lifted.bed,pcHi-C,Chromatin interactions,Excitatory neurons,TSV_File,CellType_Neuron
+BI.Brain_Angular_Gyrus.H3K36me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K36me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+BI.H9_Derived_Neuronal_Progenitor_Cultured_Cells.H3K27me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuronal progenitor cell,TSV_File,CellType_Neuron
+formatted_output_Olig_PLAC_seq_lifted.bed,PLAC-seq,Chromatin interactions,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+UCSF-UBC.Brain_Germinal_Matrix.H3K27me3.HuFGM02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+Sample_0470_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Nucleus accumbens,TSV_File,Chromatin_Accessibility
+formatted_output_astrocyte-ENCODE_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Astrocyte,TSV_File,CellType_Astrocyte
+Sample_1330_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Frontal cortex,TSV_File,Chromatin_Accessibility
+BI.Brain_Inferior_Temporal_Lobe.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Fetal_Brain.H3K4me1.UW_H22676.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Fetal_Brain.H3K4me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Neurosphere_Cultured_Cells_Cortex_Derived.H3K4me1.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell cortex derived,TSV_File,CellType_Progenitor
+UCSF-UBC.Neurosphere_Cultured_Cells_Cortex_Derived.H3K4me3.HuFNSC02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell cortex derived,TSV_File,CellType_Progenitor
+Sample_1311_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,SK-N-MC,TSV_File,CellType_Neuroblastoma
+formatted_output_NeuN_PLAC_seq_lifted.bed,PLAC-seq,Chromatin interactions,Neuron,TSV_File,CellType_Neuron
+BI.Brain_Angular_Gyrus.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Fetal_Brain.H3K9me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Neurosphere_Cultured_Cells_Cortex_Derived.H3K9me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell cortex derived,TSV_File,CellType_Progenitor
+Sample_0453_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Inferior temporal lobe,TSV_File,Chromatin_Accessibility
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K27ac.HuFNSC04.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+BI.Brain_Cingulate_Gyrus.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Inferior_Temporal_Lobe.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+Sample_0431_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,G-13063 Glioblastoma derived cell line,TSV_File,CellType_Neuroblastoma
+BI.H9_Derived_Neuron_Cultured_Cells.H3K4me1.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+BI.H9_Derived_Neuron_Cultured_Cells.H3K4me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+formatted_output_SK-N-SH-ENCODE_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,SK-N-SH,TSV_File,CellType_Neuroblastoma
+BI.H9_Derived_Neuron_Cultured_Cells.H3K9me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+Sample_0976_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Glioblastoma,TSV_File,Chromatin_Accessibility
+Sample_0364_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,T98G,TSV_File,CellType_Neuroblastoma
+Sample_0054_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Neuron,TSV_File,CellType_Neuron
+BI.Brain_Mid_Frontal_Lobe.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_IM-PET_H1_derived_neural_progenitors_lifted.bed,IM-PET,Chromatin interactions,Neural stem progenitor cell,TSV_File,CellType_Progenitor
+formatted_output_DLPFC.po_lifted.bed,pcHi-C,Chromatin interactions,Dorsolateral prefrontal cortex,TSV_File,Chromatin_Interaction_Loops
+Sample_0972_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Cortex,TSV_File,Chromatin_Accessibility
+Sample_1063_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Macrophage,TSV_File,CellType_Microglia_Myeloid
+Sample_0966_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Neural cell,TSV_File,CellType_Progenitor
+formatted_output_PU1_superEnhancer_L1_lifted.bed,Super-enhancer,Enhancer,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+formatted_output_PU1_optimal_peak_IDR_ENCODE.H3K27_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+BI.H9_Derived_Neuron_Cultured_Cells.H2A.Z.DNA_Lib_294.narrowPeak.lifted.bed,ChIP-seq,TF ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+formatted_output_bipolar_neuron_from_iPSC-ENCODE_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Bipolar neuron,TSV_File,CellType_Neuron
+Sample_0455_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Primary visual cortex,TSV_File,Chromatin_Accessibility
+UCSF-UBC.Neurosphere_Cultured_Cells_Cortex_Derived.H3K27me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell cortex derived,TSV_File,CellType_Progenitor
+Sample_0454_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Prefrontal cortex,TSV_File,Chromatin_Accessibility
+formatted_output_NeuN_optimal_peak_IDR_ENCODE.H3K27_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+BI.Brain_Mid_Frontal_Lobe.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Inferior_Temporal_Lobe.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Inferior_Temporal_Lobe.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Hippocampus_Middle.H3K4me1.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+BI.H9_Derived_Neuron_Cultured_Cells.H3K27me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+BI.Brain_Hippocampus_Middle.H3K4me3.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_LHX2_optimal_peak_IDR_ENCODE.ATAC_lifted.bed,ATAC-seq,Accessible chromatin,Astrocyte,TSV_File,CellType_Astrocyte
+BI.Brain_Angular_Gyrus.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Anterior_Caudate.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+UW.Fetal_Spinal_Cord.ChromatinAccessibility.H-24111.DS18501.narrowPeak.lifted.bed,DNase-seq,Accessible chromatin,Spinal cord,TSV_File,Chromatin_Accessibility
+BI.Brain_Angular_Gyrus.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Substantia_Nigra.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Substantia_Nigra.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Inferior_Temporal_Lobe.H3K9me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Hippocampus_Middle.H3K9me3.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Cingulate_Gyrus.H3K36me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Hippocampus_Middle.H3K27me3.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_THP-1_macrophage-VanBortle2017_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Macrophage,TSV_File,CellType_Microglia_Myeloid
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K27me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+formatted_output_LHX2_optimal_peak_IDR_ENCODE.H3K27_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+UCSF-UBC.Fetal_Brain.H3K36me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+Sample_0456_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Temporal cortex,TSV_File,Chromatin_Accessibility
+BI.Brain_Substantia_Nigra.H3K9me3.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Microglia_enhancers_lifted.bed,Enhancer,Enhancer,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+BI.Brain_Angular_Gyrus.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Angular_Gyrus.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+Sample_0971_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,MGE organoids,TSV_File,Chromatin_Accessibility
+Sample_0469_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Thalamus,TSV_File,Chromatin_Accessibility
+BI.Brain_Angular_Gyrus.H3K9me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Angular gyrus,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K4me1.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+BI.Brain_Cingulate_Gyrus.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K4me3.HuFNSC02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+BI.Brain_Cingulate_Gyrus.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Substantia_Nigra.H3K36me3.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Anterior_Caudate.H3K36me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+Sample_0466_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Hippocampus,TSV_File,Chromatin_Accessibility
+UCSF-UBC.Neurosphere_Cultured_Cells_Ganglionic_Eminence_Derived.H3K9me3.HuFNSC01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neurosphere cultured cell ganglionic eminence derived,TSV_File,CellType_Progenitor
+BI.Brain_Cingulate_Gyrus.H3K9me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_OLIG2_superEnhancer_L1_lifted.bed,Super-enhancer,Enhancer,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+formatted_output_NeuN_enhancers_lifted.bed,Enhancer,Enhancer,Neuron,TSV_File,CellType_Neuron
+formatted_output_cutoff5_Mon_lifted.bed,pcHi-C,Chromatin interactions,Monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_cutoff5_Mac0_lifted.bed,pcHi-C,Chromatin interactions,Macrophage,TSV_File,CellType_Microglia_Myeloid
+Sample_0661_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Neural progenitor cell,TSV_File,CellType_Progenitor
+formatted_output_Olig2_optimal_peak_IDR_ENCODE.H3K27_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+formatted_output_Olig_enhancers_lifted.bed,Enhancer,Enhancer,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+BI.Brain_Substantia_Nigra.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+Sample_0237_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Monocyte,TSV_File,CellType_Microglia_Myeloid
+Sample_0712_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,NGP,TSV_File,CellType_Neuroblastoma
+formatted_output_GSM3106838_astrocyte.cutoff.5.washU_lifted.bed,pcHi-C,Chromatin interactions,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_NeuN_optimal_peak_IDR_ENCODE.ATAC_lifted.bed,ATAC-seq,Accessible chromatin,Neuron,TSV_File,CellType_Neuron
+formatted_output_IM-PET_Brain_hippocampus_middle_lifted.bed,IM-PET,Chromatin interactions,Hippocampus middle,TSV_File,Chromatin_Interaction_Loops
+Sample_0472_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Primary motor cortex,TSV_File,Chromatin_Accessibility
+BI.Brain_Anterior_Caudate.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_Olig2_optimal_peak_IDR_ENCODE.ATAC_lifted.bed,ATAC-seq,Accessible chromatin,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+Sample_0461_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Putamen,TSV_File,Chromatin_Accessibility
+Sample_0973_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,G523NS,TSV_File,CellType_Neuroblastoma
+formatted_output_H1_Derived_Neuronal_Progenitor_Cultured_Cells-Roadmap_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Neural progenitor cell,TSV_File,CellType_Neuron
+formatted_output_PU1_optimal_peak_IDR_ENCODE.ATAC_lifted.bed,ATAC-seq,Accessible chromatin,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+BI.Brain_Hippocampus_Middle.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+BI.H9_Derived_Neuronal_Progenitor_Cultured_Cells.H3K36me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuronal progenitor cell,TSV_File,CellType_Neuron
+UCSF-UBC.Fetal_Brain.H3K9ac.HuFNSC-T.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Brain_Germinal_Matrix.H3K36me3.HuFGM01.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_NeuN_optimal_peak_IDR_ENCODE.H3K4me3_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Neuron,TSV_File,CellType_Neuron
+BI.H9_Derived_Neuronal_Progenitor_Cultured_Cells.H3K4me1.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuronal progenitor cell,TSV_File,CellType_Neuron
+BI.Brain_Anterior_Caudate.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+BI.H9_Derived_Neuronal_Progenitor_Cultured_Cells.H3K4me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuronal progenitor cell,TSV_File,CellType_Neuron
+BI.Brain_Anterior_Caudate.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+UW.Fetal_Brain.ChromatinAccessibility.H-23399.DS15453.narrowPeak.lifted.bed,DNase-seq,Accessible chromatin,Brain,TSV_File,Chromatin_Accessibility
+formatted_output_PU1_optimal_peak_IDR_ENCODE.H3K4me3_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+Sample_0451_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Dorsolateral prefrontal cortex,TSV_File,Chromatin_Accessibility
+BI.H9_Derived_Neuronal_Progenitor_Cultured_Cells.H3K9me3.113.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Neuronal progenitor cell,TSV_File,CellType_Neuron
+BI.Brain_Anterior_Caudate.H3K9me3.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_LHX2_optimal_peak_IDR_ENCODE.H3K4me3_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Astrocyte,TSV_File,CellType_Astrocyte
+formatted_output_spinal_cord_fetal-ENCODE_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Spinal cord,TSV_File,Enhancer_SuperEnhancer
+UCSF-UBC.Brain_Germinal_Matrix.H3K4me1.HuFGM02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+UCSF-UBC.Brain_Germinal_Matrix.H3K4me3.HuFGM02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_THP-1_monocyte-VanBortle2017_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,Monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_LHX2_enhancers_lifted.bed,Enhancer,Enhancer,Astrocyte,TSV_File,CellType_Astrocyte
+Sample_0450_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Anterior cingulate cortex BA24,TSV_File,Chromatin_Accessibility
+UCSF-UBC.Brain_Germinal_Matrix.H3K9me3.HuFGM02.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Germinal matrix,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Inferior_Temporal_Lobe.H3K36me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Cingulate_Gyrus.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Mid_Frontal_Lobe.H3K4me1.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Mid_Frontal_Lobe.H3K4me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+Sample_0464_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Amygdala,TSV_File,Chromatin_Accessibility
+BI.Fetal_Brain.H3K27me3.UW_H22676.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Brain,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Mid_Frontal_Lobe.H3K9me3.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Mid_Frontal_Lobe.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+Sample_0452_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Insula,TSV_File,Chromatin_Accessibility
+formatted_output_Microglia_PLAC_seq_lifted.bed,PLAC-seq,Chromatin interactions,PU.1+ Microglia,TSV_File,CellType_Microglia_Myeloid
+BI.Brain_Substantia_Nigra.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Substantia nigra,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_HC.po_lifted.bed,pcHi-C,Chromatin interactions,Hippocampus,TSV_File,Chromatin_Interaction_Loops
+BI.Brain_Anterior_Caudate.H3K27me3.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Anterior caudate,TSV_File,Epigenetic_Histone_Modifications
+Sample_0134_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,WT-hiPSC 1,TSV_File,CellType_Progenitor
+formatted_output_GSM3598046_hippocampal.cutoff.5.washU_lifted.bed,pcHi-C,Chromatin interactions,DG-like neurons,TSV_File,CellType_Neuron
+BI.Brain_Mid_Frontal_Lobe.H3K36me3.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Mid frontal lobe,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_CD14-positive_monocyte-ENCODE_EnhancerPredictionsFull_lifted.bed,ABC_[Activity-by-Contact_model],Chromatin interactions,CD14+ monocyte,TSV_File,CellType_Microglia_Myeloid
+formatted_output_npc.po_lifted.bed,pcHi-C,Chromatin interactions,Neural progenitor cell,TSV_File,CellType_Progenitor
+formatted_output_NEUN_superEnhancer_L1_lifted.bed,Super-enhancer,Enhancer,Neuron,TSV_File,CellType_Neuron
+Sample_0581_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,Kelly,TSV_File,CellType_Neuroblastoma
+Sample_1087_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,D283 Med,TSV_File,CellType_Neuroblastoma
+formatted_output_Olig2_optimal_peak_IDR_ENCODE.H3K4me3_lifted.bed,Histone ChIP-seq,Histone ChIP-seq peaks,Oligodendrocyte,TSV_File,CellType_Oligodendrocyte
+BI.Brain_Hippocampus_Middle.H3K36me3.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Cingulate_Gyrus.H3K9ac.112.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Cingulate gyrus,TSV_File,Epigenetic_Histone_Modifications
+Sample_0580_rearranged_sorted_hg38_lifted.bed,ATAC-seq,Accessible chromatin,BE2C,TSV_File,CellType_Neuroblastoma
+BI.Brain_Inferior_Temporal_Lobe.H3K27ac.149.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Inferior temporal lobe,TSV_File,Epigenetic_Histone_Modifications
+BI.Brain_Hippocampus_Middle.H3K27ac.150.narrowPeak.lifted.bed,ChIP-seq,Histone ChIP-seq peaks,Hippocampus middle,TSV_File,Epigenetic_Histone_Modifications
+formatted_output_LHX2_superEnhancer_L1_lifted.bed,Super-enhancer,Enhancer,Astrocyte,TSV_File,CellType_Astrocyte
+1_GATA2-Interval-Track,"","","",ENCODE,Transcription_Factor_Binding
+1_GATA2_1-Interval-Track,"","","",ENCODE,Transcription_Factor_Binding
+All_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,Miscellaneous
+CN8_hg38.cleaned.merged,"","","",ENCODE,CellType_Neuron
+CN_all_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,CellType_Neuron
+CN_all_peaks.overlap.Conserved,"","","",ENCODE,CellType_Neuron
+CN_all_peaks.overlap.footprint,"","","",ENCODE,CellType_Neuron
+CN_footprint,"","","",ENCODE,CellType_Neuron
+CN_merged_cutsite_peaks.narrowPeak,"","","",ENCODE,CellType_Neuron
+CN_merged_footprint.dnase2tf,"","","",ENCODE,CellType_Neuron
+CTCF_Hoffman,"","","",ENCODE,Transcription_Factor_Binding
+Coding_UCSC,"","","",ENCODE,Genomic_Conservation
+Conserved_LindbladToh,"","","",ENCODE,Genomic_Conservation
+DHS_peaks_Trynka,"","","",ENCODE,Chromatin_Accessibility
+DN_all_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,CellType_Neuron
+DN_all_peaks.overlap.Conserved,"","","",ENCODE,CellType_Neuron
+DN_all_peaks.overlap.footprint,"","","",ENCODE,CellType_Neuron
+DN_footprint,"","","",ENCODE,CellType_Neuron
+DN_merged_cutsite_peaks.narrowPeak,"","","",ENCODE,CellType_Neuron
+DN_merged_footprint.dnase2tf,"","","",ENCODE,CellType_Neuron
+DNaseI,"","","",ENCODE,Chromatin_Accessibility
+E081-DNase.macs2.narrowPeak,"","","",ENCODE,Chromatin_Accessibility
+E082-DNase.macs2.narrowPeak,"","","",ENCODE,Chromatin_Accessibility
+E8_TCM_D_48h,"","","",ENCODE,Other_Functional_Annotations
+E8_TCM_T_48h,"","","",ENCODE,Other_Functional_Annotations
+Enhancer_Andersson,"","","",ENCODE,Enhancer_SuperEnhancer
+Enhancer_Hoffman,"","","",ENCODE,Enhancer_SuperEnhancer
+FAIRE,"","","",ENCODE,Chromatin_Accessibility
+FOSL2,"","","",ENCODE,Transcription_Factor_Binding
+FOXO1_DeMayo,"","","",ENCODE,Transcription_Factor_Binding
+FetalDHS_Trynka,"","","",ENCODE,Chromatin_Accessibility
+GA_all_peaks.narrowPeak.cleaned.merged.100418,"","","",ENCODE,CellType_Neuron
+GA_all_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,CellType_Neuron
+GA_all_peaks.overlap.Conserved,"","","",ENCODE,CellType_Neuron
+GA_merged_cutsite_peaks.narrowPeak,"","","",ENCODE,CellType_Neuron
+GA_merged_footprint.dnase2tf,"","","",ENCODE,CellType_Neuron
+GSM1820082_d27_fdr0.05.hot,"","","",ENCODE,Chromatin_Accessibility
+GSM1820085_d411_fdr0.05.hot,"","","",ENCODE,Chromatin_Accessibility
+GSM1820087_d412_fdr0.05.hot,"","","",ENCODE,Chromatin_Accessibility
+H3K27ac,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K27ac_Hnisz,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K27ac_PGC2,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K27me3,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K4me1_peaks_Trynka,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K4me3,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K4me3_peaks_Trynka,"","","",ENCODE,Epigenetic_Histone_Modifications
+H3K9ac_peaks_Trynka,"","","",ENCODE,Epigenetic_Histone_Modifications
+Humanfrontcortex,"","","",ENCODE,Other_Functional_Annotations
+IPS_merged_footprint.dnase2tf,"","","",ENCODE,CellType_Progenitor
+Intron_UCSC,"","","",ENCODE,Genomic_Conservation
+NR2F2,"","","",ENCODE,Transcription_Factor_Binding
+NSC_all_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,CellType_Progenitor
+NSC_all_peaks.overlap.Conserved,"","","",ENCODE,Genomic_Conservation
+NSC_all_peaks.overlap.footprint,"","","",ENCODE,CellType_Progenitor
+NSC_footprint.s+,"","","",ENCODE,CellType_Progenitor
+NSC_footprint.s-,"","","",ENCODE,CellType_Progenitor
+NSC_footprint,"","","",ENCODE,CellType_Progenitor
+NSC_merged_cutsite_peaks.narrowPeak,"","","",ENCODE,CellType_Progenitor
+NSC_merged_footprint.dnase2tf,"","","",ENCODE,CellType_Progenitor
+Noonan_hNSC_50_peaks,"","","",ENCODE,CellType_Progenitor
+Noonan_hNSC_P15-1_peaks,"","","",ENCODE,CellType_Progenitor
+Noonan_hNSC_P5-1_peaks,"","","",ENCODE,CellType_Progenitor
+Noonan_hNSC_P5-2_peaks,"","","",ENCODE,CellType_Progenitor
+Noonan_union,"","","",ENCODE,CellType_Progenitor
+Noonan_union.bed,"","","",ENCODE,CellType_Progenitor
+PGR-A_Bagchi,"","","",ENCODE,Transcription_Factor_Binding
+PGR-B_Bagchi,"","","",ENCODE,Transcription_Factor_Binding
+PGR_Demayo,"","","",ENCODE,Transcription_Factor_Binding
+PLZF,"","","",ENCODE,Transcription_Factor_Binding
+POLII_DeMayo,"","","",ENCODE,Transcription_Factor_Binding
+PromoterFlanking_Hoffman,"","","",ENCODE,Promoter
+Promoter_UCSC,"","","",ENCODE,Promoter
+Repressed_Hoffman,"","","",ENCODE,Other_Functional_Annotations
+SuperEnhancer_Hnisz,"","","",ENCODE,Enhancer_SuperEnhancer
+TFBS_ENCODE,"","","",ENCODE,Transcription_Factor_Binding
+TSS_Hoffman,"","","",ENCODE,Promoter
+UTR_3_UCSC,"","","",ENCODE,Genomic_Conservation
+UTR_5_UCSC,"","","",ENCODE,Genomic_Conservation
+WeakEnhancer_Hoffman,"","","",ENCODE,Enhancer_SuperEnhancer
+adult_peaks,"","","",ENCODE,Miscellaneous
+eQTL_0.05_FDR,"","","",ENCODE,eQTL
+eQTL_0.1_FDR,"","","",ENCODE,eQTL
+eur_ld_breakpoints,"","","",ENCODE,Miscellaneous
+eur_ld_breakpoints_named,"","","",ENCODE,Miscellaneous
+eur_ld_breakpoints_named_sorted,"","","",ENCODE,Miscellaneous
+eur_ld_breakpoints_sorted,"","","",ENCODE,Miscellaneous
+fantomFetalBrainCage.gt10,"","","",ENCODE,Promoter
+fantomFetalBrainCage.eq0.bed,"","","",ENCODE,Promoter
+h3k27ac-final-C-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+h3k27ac-final-D-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+h3k4me1-final-C-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+h3k4me1-final-D-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+h3k4me3-final-C-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+h3k4me3-final-D-48h,"","","",ENCODE,Epigenetic_Histone_Modifications
+hic_all_interacting_DT1_dTL4_D_48h,"","","",ENCODE,Chromatin_Interaction_Loops
+hic_all_interacting_DT1_dTL4_D_48h_expanded,"","","",ENCODE,Chromatin_Interaction_Loops
+hic_harmonizome_interacting_DT1_dTL4_D_48h,"","","",ENCODE,Chromatin_Interaction_Loops
+hic_human_gain_interacting_DT1_dTL4_D_48h,"","","",ENCODE,Chromatin_Interaction_Loops
+in.sorted,"","","",ENCODE,Genomic_Conservation
+ips_all_peaks.narrowPeak.cleaned.merged,"","","",ENCODE,CellType_Progenitor
+ips_all_peaks.overlap.Conserved,"","","",ENCODE,Genomic_Conservation
+ips_all_peaks.overlap.footprint,"","","",ENCODE,CellType_Progenitor
+ips_footprint.s+,"","","",ENCODE,CellType_Progenitor
+ips_footprint.s-,"","","",ENCODE,CellType_Progenitor
+ips_footprint,"","","",ENCODE,CellType_Progenitor
+ips_merged_cutsite_peaks.narrowPeak,"","","",ENCODE,CellType_Progenitor
+pooled_ASD_cand_peaks,"","","",ENCODE,Miscellaneous
+pooled_ASD_sign_peaks,"","","",ENCODE,Miscellaneous
