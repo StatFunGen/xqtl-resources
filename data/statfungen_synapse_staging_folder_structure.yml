@@ -77,10 +77,11 @@ variant_gene_summary:
         consolidated:
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
-          - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_context_finemapping:
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_gene_finemapping:
         eQTL:
           - MSBB_BM_10_eQTL.exported.toploci.bed.gz
