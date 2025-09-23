@@ -80,6 +80,8 @@ variant_gene_summary:
       multi_context_finemapping:
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_gene_finemapping:
         eQTL:
           - MSBB_BM_10_eQTL.exported.toploci.bed.gz
@@ -275,6 +277,9 @@ manuscript:
   xQTL_flagship_2025:
     - Figure_5c_AD_loci_xQTL_annotated.rds
     - Figure_1b_num_xQTL_loci_single_context.rds 
+    - Figure_S2_single_context_cs_distance.rds
+    - Figure_2b_num_xQTL_loci_multi_context.rds
+    - Figure_2c_multi_context_effect_sign.rds
   EOO:
     - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
     - Figure_EOO.rds
