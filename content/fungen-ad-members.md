@@ -12,7 +12,7 @@
 - **Sally Temple, PhD** - U01AG072464
 - **Jeffery Vance, PhD** - U01AG072579, RF1AG059018
 - **Gao Wang, PhD** - R01AG086467
-- **Xiaoling Zhang, PhD** - U01AG072577
+- **Xiaoling Zhang, PhD** - U01AG072577, R01AG080810, R01AG086467
 
 ## FunGen-xQTL Work Group
 
@@ -39,13 +39,14 @@
 
 ### Boston University
 
-- Xiaoling Zhang
+- Xiaoling Zhang (zhangxl@bu.edu) - U01AG072577, R01AG080810, R01AG086467
 - Julia TCW
 - Alexandre Pelletier
-- Frank Grenn
+- Francis Grenn (fgrennjr@bu.edu) - U01AG058654, U01AG072577
 - Pengjiao Wang
-- Mintao Lin
-- Tosin
+- Mintao Lin (minty@bu.edu) - U01AG072577, R01AG080810
+- Oluwatosin Olayinka (oaolayin@bu.edu) - U01AG058654
+- Jenny Anak Empawi (jaempawi@bu.edu) - U01AG072577, R01AG086467
 
 ### Case Western Reserve University
 
