@@ -280,6 +280,11 @@ manuscript:
     - Figure_S2_single_context_cs_distance.rds
     - Figure_2b_num_xQTL_loci_multi_context.rds
     - Figure_2c_multi_context_effect_sign.rds
-  EOO:
-    - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
-    - Figure_EOO.rds
+    - Figure_6_AD_loci_table_visualization.rds
+    - Figure_5g_cV2F.rds
+    EOO:
+      - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
+      - Figure_EOO.rds
+    sLDSC:
+      - Figure_sLDSC_GWAS_specific.rds
+      - Figure_sLDSC_meta_analysis.rds
