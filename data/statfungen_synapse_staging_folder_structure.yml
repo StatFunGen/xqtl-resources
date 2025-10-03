@@ -195,26 +195,67 @@ xQTL_SCEEM_scores:
 
 xQTL_GWAS_models:
   xQTL_models:
-    finemapping_models:
-      eQTL:
-        - RDS_files
-      pQTL:
-        - RDS_files
-      glycoQTL:
-        - RDS_files
-      sQTL:
-        - RDS_files
+    xQTL_finemapping:
+      single_context:
+        KNIGHT_eQTL:
+          export:
+          fine_mapping:
+        KNIGHT_pQTL:
+          export:
+          fine_mapping:
+        MetaBrain:
+          export:
+          fine_mapping:
+        MiGA_eQTL:
+          export:
+          fine_mapping:
+        MSBB_eQTL:
+          export:
+          fine_mapping:
+        MSBB_pQTL:
+          export:
+          fine_mapping:
+        MSBB_sQTL:
+          export:
+          fine_mapping:
+        ROSMAP_eQTL:
+          export:
+          fine_mapping:
+        ROSMAP_pQTL:
+          export:
+          fine_mapping:
+        ROSMAP_sQTL:
+          export:
+          fine_mapping:
+        STARNET_eQTL:
+          export:
+          fine_mapping:
     colocalization_models:
       - RDS_files
     TWAS_models:
-      eQTL:
-        - RDS_files
-      pQTL:
-        - RDS_files
-      glycoQTL:
-        - RDS_files
-      sQTL:
-        - RDS_files
+      single_context:
+        KNIGHT_eQTL:
+          - RDS_files
+        KNIGHT_pQTL:
+          - RDS_files
+        MetaBrain:
+          - RDS_files
+        MiGA_eQTL:
+          - RDS_files
+        MSBB_eQTL:
+          - RDS_files
+        MSBB_pQTL:
+          - RDS_files
+        MSBB_sQTL:
+          - RDS_files
+        ROSMAP_eQTL:
+          - RDS_files
+        ROSMAP_pQTL:
+          - RDS_files
+        ROSMAP_sQTL:
+          - RDS_files
+        STARNET_eQTL:
+          - RDS_files
     qTWAS_models:
       eQTL:
         - RDS_files
@@ -250,9 +291,83 @@ xQTL_data:
     # For this part let's follow exactly how it is currently organized on the cloud
     - UCSC_bed.gz
   xQTL_GLMM:
-    sQTL:
-      # For this part I believe the NUS group will upload it 
-      - UCSC_bed.gz_ISSAC
+    Ast:
+      - Ast.10_sub_sQTL.tar.gz
+      - Ast.1_sub_sQTL.tar.gz
+      - Ast.2_sub_sQTL.tar.gz
+      - Ast.3_sub_sQTL.tar.gz
+      - Ast.4_sub_sQTL.tar.gz
+      - Ast.5_sub_sQTL.tar.gz
+      - Ast.6_sub_sQTL.tar.gz
+      - Ast.7_sub_sQTL.tar.gz
+      - Ast.9_sub_sQTL.tar.gz
+    End:
+      - End.2_sub_sQTL.tar.gz
+    Exc:
+      - Exc.2_sub_sQTL.tar.gz
+      - Exc.10_sub_sQTL.tar.gz
+      - Exc.11_sub_sQTL.tar.gz
+      - Exc.12_sub_sQTL.tar.gz
+      - Exc.13_sub_sQTL.tar.gz
+      - Exc.14_sub_sQTL.tar.gz
+      - Exc.15_sub_sQTL.tar.gz
+      - Exc.16_sub_sQTL.tar.gz
+      - Exc.1_sub_sQTL.tar.gz
+      - Exc.3_sub_sQTL.tar.gz
+      - Exc.4_sub_sQTL.tar.gz
+      - Exc.5_sub_sQTL.tar.gz
+      - Exc.6_sub_sQTL.tar.gz
+      - Exc.7_sub_sQTL.tar.gz
+      - Exc.8_sub_sQTL.tar.gz
+      - Exc.9_sub_sQTL.tar.gz
+    Fib:
+      - Fib.3_sub_sQTL.tar.gz
+    Inh:
+      - Inh.10_sub_sQTL.tar.gz
+      - Inh.11_sub_sQTL.tar.gz
+      - Inh.12_sub_sQTL.tar.gz
+      - Inh.13_sub_sQTL.tar.gz
+      - Inh.15_sub_sQTL.tar.gz
+      - Inh.16_sub_sQTL.tar.gz
+      - Inh.2_sub_sQTL.tar.gz
+      - Inh.3_sub_sQTL.tar.gz
+      - Inh.4_sub_sQTL.tar.gz
+      - Inh.5_sub_sQTL.tar.gz
+      - Inh.6_sub_sQTL.tar.gz
+      - Inh.7_sub_sQTL.tar.gz
+      - Inh.8_sub_sQTL.tar.gz
+      - Inh.9_sub_sQTL.tar.gz
+    Macrophages:
+      - Macrophages_sub_sQTL.tar.gz
+    Mic:
+      - Mic.15_sub_sQTL.tar.gz
+      - Mic.2_sub_sQTL.tar.gz
+      - Mic.3_sub_sQTL.tar.gz
+      - Mic.4_sub_sQTL.tar.gz
+      - Mic.5_sub_sQTL.tar.gz
+      - Mic.6_sub_sQTL.tar.gz
+      - Mic.7_sub_sQTL.tar.gz
+      - Mic.8_sub_sQTL.tar.gz
+      - Mic.9_sub_sQTL.tar.gz
+      - Mic.10_sub_sQTL.tar.gz
+      - Mic.12_sub_sQTL.tar.gz
+      - Mic.13_sub_sQTL.tar.gz
+    Oli:
+      - Oli.1_sub_sQTL.tar.gz
+      - Oli.2_sub_sQTL.tar.gz
+      - Oli.3_sub_sQTL.tar.gz
+      - Oli.4_sub_sQTL.tar.gz
+      - Oli.5_sub_sQTL.tar.gz
+      - Oli.6_sub_sQTL.tar.gz
+      - Oli.7_sub_sQTL.tar.gz
+      - Oli.8_sub_sQTL.tar.gz
+      - Oli.9_sub_sQTL.tar.gz
+    OPC:
+      - OPC.1_sub_sQTL.tar.gz
+      - OPC.2_sub_sQTL.tar.gz
+      - OPC.3_sub_sQTL.tar.gz
+    Peri:
+      - Peri.2_sub_sQTL.tar.gz
 
 reference_files:
   ADSP_LD_reference_data:
