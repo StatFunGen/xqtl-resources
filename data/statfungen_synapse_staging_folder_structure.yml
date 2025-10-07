@@ -144,7 +144,7 @@ variant_gene_summary:
           - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
         glycoQTL:
           - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz        
+          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
         metabolome:
           - ROSMAP_metabolome.exported.toploci.bed.gz
     xQTL_colocalization:
@@ -159,7 +159,7 @@ variant_gene_summary:
         caQTL_AD:
           - snATAC_MIT_AD_coloc_export_filtered.bed.gz
         caQTL_eQTL:
-          # FIXME: this is not yet bed.gz exported format. And the file name is also not informative. 
+          # FIXME: this is not yet bed.gz exported format. And the file name is also not informative.
           # We need Hao Sun to fix this
           - snatac_ROSMAP.coloc.tsv.gz
   AD_loci_summary:
@@ -190,46 +190,46 @@ variant_gene_summary:
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
 xQTL_SCEEM_scores:
-    # For this part let's follow exactly Chirag's organization. We will upload it as is when he's ready for the release
-    - UCSC_bed.gz
+  # For this part let's follow exactly Chirag's organization. We will upload it as is when he's ready for the release
+  - UCSC_bed.gz
 
 xQTL_GWAS_models:
   xQTL_models:
     xQTL_finemapping:
       single_context:
         KNIGHT_eQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         KNIGHT_pQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         MetaBrain:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         MiGA_eQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         MSBB_eQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         MSBB_pQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         MSBB_sQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         ROSMAP_eQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         ROSMAP_pQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         ROSMAP_sQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
         STARNET_eQTL:
-          export:
-          fine_mapping:
+          export: []
+          fine_mapping: []
     colocalization_models:
       - RDS_files
     TWAS_models:
@@ -291,83 +291,92 @@ xQTL_data:
     # For this part let's follow exactly how it is currently organized on the cloud
     - UCSC_bed.gz
   xQTL_GLMM:
-    Ast:
-      - Ast.10_sub_sQTL.tar.gz
-      - Ast.1_sub_sQTL.tar.gz
-      - Ast.2_sub_sQTL.tar.gz
-      - Ast.3_sub_sQTL.tar.gz
-      - Ast.4_sub_sQTL.tar.gz
-      - Ast.5_sub_sQTL.tar.gz
-      - Ast.6_sub_sQTL.tar.gz
-      - Ast.7_sub_sQTL.tar.gz
-      - Ast.9_sub_sQTL.tar.gz
-    End:
-      - End.2_sub_sQTL.tar.gz
-    Exc:
-      - Exc.2_sub_sQTL.tar.gz
-      - Exc.10_sub_sQTL.tar.gz
-      - Exc.11_sub_sQTL.tar.gz
-      - Exc.12_sub_sQTL.tar.gz
-      - Exc.13_sub_sQTL.tar.gz
-      - Exc.14_sub_sQTL.tar.gz
-      - Exc.15_sub_sQTL.tar.gz
-      - Exc.16_sub_sQTL.tar.gz
-      - Exc.1_sub_sQTL.tar.gz
-      - Exc.3_sub_sQTL.tar.gz
-      - Exc.4_sub_sQTL.tar.gz
-      - Exc.5_sub_sQTL.tar.gz
-      - Exc.6_sub_sQTL.tar.gz
-      - Exc.7_sub_sQTL.tar.gz
-      - Exc.8_sub_sQTL.tar.gz
-      - Exc.9_sub_sQTL.tar.gz
-    Fib:
-      - Fib.3_sub_sQTL.tar.gz
-    Inh:
-      - Inh.10_sub_sQTL.tar.gz
-      - Inh.11_sub_sQTL.tar.gz
-      - Inh.12_sub_sQTL.tar.gz
-      - Inh.13_sub_sQTL.tar.gz
-      - Inh.15_sub_sQTL.tar.gz
-      - Inh.16_sub_sQTL.tar.gz
-      - Inh.2_sub_sQTL.tar.gz
-      - Inh.3_sub_sQTL.tar.gz
-      - Inh.4_sub_sQTL.tar.gz
-      - Inh.5_sub_sQTL.tar.gz
-      - Inh.6_sub_sQTL.tar.gz
-      - Inh.7_sub_sQTL.tar.gz
-      - Inh.8_sub_sQTL.tar.gz
-      - Inh.9_sub_sQTL.tar.gz
-    Macrophages:
-      - Macrophages_sub_sQTL.tar.gz
-    Mic:
-      - Mic.15_sub_sQTL.tar.gz
-      - Mic.2_sub_sQTL.tar.gz
-      - Mic.3_sub_sQTL.tar.gz
-      - Mic.4_sub_sQTL.tar.gz
-      - Mic.5_sub_sQTL.tar.gz
-      - Mic.6_sub_sQTL.tar.gz
-      - Mic.7_sub_sQTL.tar.gz
-      - Mic.8_sub_sQTL.tar.gz
-      - Mic.9_sub_sQTL.tar.gz
-      - Mic.10_sub_sQTL.tar.gz
-      - Mic.12_sub_sQTL.tar.gz
-      - Mic.13_sub_sQTL.tar.gz
-    Oli:
-      - Oli.1_sub_sQTL.tar.gz
-      - Oli.2_sub_sQTL.tar.gz
-      - Oli.3_sub_sQTL.tar.gz
-      - Oli.4_sub_sQTL.tar.gz
-      - Oli.5_sub_sQTL.tar.gz
-      - Oli.6_sub_sQTL.tar.gz
-      - Oli.7_sub_sQTL.tar.gz
-      - Oli.8_sub_sQTL.tar.gz
-      - Oli.9_sub_sQTL.tar.gz
-    OPC:
-      - OPC.1_sub_sQTL.tar.gz
-      - OPC.2_sub_sQTL.tar.gz
-      - OPC.3_sub_sQTL.tar.gz
-    Peri:
-      - Peri.2_sub_sQTL.tar.gz
+    major:
+      - astrocytes_major_sQTL.txt.gz
+      - Excitatory_major_sQTL.txt.gz
+      - Inhibitory_major_sQTL.txt.gz
+      - microglia_major_sQTL.txt.gz
+      - oligodendrocyte_major_sQTL.txt.gz
+      - OPC_major_sQTL.txt.gz
+      - vascular_major_sQTL.txt.gz
+    sub:
+      Ast:
+        - Ast.10_sub_sQTL.tar.gz
+        - Ast.1_sub_sQTL.tar.gz
+        - Ast.2_sub_sQTL.tar.gz
+        - Ast.3_sub_sQTL.tar.gz
+        - Ast.4_sub_sQTL.tar.gz
+        - Ast.5_sub_sQTL.tar.gz
+        - Ast.6_sub_sQTL.tar.gz
+        - Ast.7_sub_sQTL.tar.gz
+        - Ast.9_sub_sQTL.tar.gz
+      End:
+        - End.2_sub_sQTL.tar.gz
+      Exc:
+        - Exc.2_sub_sQTL.tar.gz
+        - Exc.10_sub_sQTL.tar.gz
+        - Exc.11_sub_sQTL.tar.gz
+        - Exc.12_sub_sQTL.tar.gz
+        - Exc.13_sub_sQTL.tar.gz
+        - Exc.14_sub_sQTL.tar.gz
+        - Exc.15_sub_sQTL.tar.gz
+        - Exc.16_sub_sQTL.tar.gz
+        - Exc.1_sub_sQTL.tar.gz
+        - Exc.3_sub_sQTL.tar.gz
+        - Exc.4_sub_sQTL.tar.gz
+        - Exc.5_sub_sQTL.tar.gz
+        - Exc.6_sub_sQTL.tar.gz
+        - Exc.7_sub_sQTL.tar.gz
+        - Exc.8_sub_sQTL.tar.gz
+        - Exc.9_sub_sQTL.tar.gz
+      Fib:
+        - Fib.3_sub_sQTL.tar.gz
+      Inh:
+        - Inh.10_sub_sQTL.tar.gz
+        - Inh.11_sub_sQTL.tar.gz
+        - Inh.12_sub_sQTL.tar.gz
+        - Inh.13_sub_sQTL.tar.gz
+        - Inh.15_sub_sQTL.tar.gz
+        - Inh.16_sub_sQTL.tar.gz
+        - Inh.2_sub_sQTL.tar.gz
+        - Inh.3_sub_sQTL.tar.gz
+        - Inh.4_sub_sQTL.tar.gz
+        - Inh.5_sub_sQTL.tar.gz
+        - Inh.6_sub_sQTL.tar.gz
+        - Inh.7_sub_sQTL.tar.gz
+        - Inh.8_sub_sQTL.tar.gz
+        - Inh.9_sub_sQTL.tar.gz
+      Macrophages:
+        - Macrophages_sub_sQTL.tar.gz
+      Mic:
+        - Mic.15_sub_sQTL.tar.gz
+        - Mic.2_sub_sQTL.tar.gz
+        - Mic.3_sub_sQTL.tar.gz
+        - Mic.4_sub_sQTL.tar.gz
+        - Mic.5_sub_sQTL.tar.gz
+        - Mic.6_sub_sQTL.tar.gz
+        - Mic.7_sub_sQTL.tar.gz
+        - Mic.8_sub_sQTL.tar.gz
+        - Mic.9_sub_sQTL.tar.gz
+        - Mic.10_sub_sQTL.tar.gz
+        - Mic.12_sub_sQTL.tar.gz
+        - Mic.13_sub_sQTL.tar.gz
+      Oli:
+        - Oli.1_sub_sQTL.tar.gz
+        - Oli.2_sub_sQTL.tar.gz
+        - Oli.3_sub_sQTL.tar.gz
+        - Oli.4_sub_sQTL.tar.gz
+        - Oli.5_sub_sQTL.tar.gz
+        - Oli.6_sub_sQTL.tar.gz
+        - Oli.7_sub_sQTL.tar.gz
+        - Oli.8_sub_sQTL.tar.gz
+        - Oli.9_sub_sQTL.tar.gz
+      OPC:
+        - OPC.1_sub_sQTL.tar.gz
+        - OPC.2_sub_sQTL.tar.gz
+        - OPC.3_sub_sQTL.tar.gz
+      Peri:
+        - Peri.2_sub_sQTL.tar.gz
 
 reference_files:
   ADSP_LD_reference_data:
@@ -391,7 +400,7 @@ reference_files:
 manuscript:
   xQTL_flagship_2025:
     - Figure_5c_AD_loci_xQTL_annotated.rds
-    - Figure_1b_num_xQTL_loci_single_context.rds 
+    - Figure_1b_num_xQTL_loci_single_context.rds
     - Figure_S2_single_context_cs_distance.rds
     - Figure_2b_num_xQTL_loci_multi_context.rds
     - Figure_2c_multi_context_effect_sign.rds
