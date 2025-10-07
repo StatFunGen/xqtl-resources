@@ -301,82 +301,82 @@ xQTL_data:
       - vascular_major_sQTL.txt.gz
     sub:
       Ast:
-        - Ast.10_sub_sQTL.tar.gz
-        - Ast.1_sub_sQTL.tar.gz
-        - Ast.2_sub_sQTL.tar.gz
-        - Ast.3_sub_sQTL.tar.gz
-        - Ast.4_sub_sQTL.tar.gz
-        - Ast.5_sub_sQTL.tar.gz
-        - Ast.6_sub_sQTL.tar.gz
-        - Ast.7_sub_sQTL.tar.gz
-        - Ast.9_sub_sQTL.tar.gz
+        - Ast.10_sub_sQTL.txt.gz
+        - Ast.1_sub_sQTL.txt.gz
+        - Ast.2_sub_sQTL.txt.gz
+        - Ast.3_sub_sQTL.txt.gz
+        - Ast.4_sub_sQTL.txt.gz
+        - Ast.5_sub_sQTL.txt.gz
+        - Ast.6_sub_sQTL.txt.gz
+        - Ast.7_sub_sQTL.txt.gz
+        - Ast.9_sub_sQTL.txt.gz
       End:
-        - End.2_sub_sQTL.tar.gz
+        - End.2_sub_sQTL.txt.gz
       Exc:
-        - Exc.2_sub_sQTL.tar.gz
-        - Exc.10_sub_sQTL.tar.gz
-        - Exc.11_sub_sQTL.tar.gz
-        - Exc.12_sub_sQTL.tar.gz
-        - Exc.13_sub_sQTL.tar.gz
-        - Exc.14_sub_sQTL.tar.gz
-        - Exc.15_sub_sQTL.tar.gz
-        - Exc.16_sub_sQTL.tar.gz
-        - Exc.1_sub_sQTL.tar.gz
-        - Exc.3_sub_sQTL.tar.gz
-        - Exc.4_sub_sQTL.tar.gz
-        - Exc.5_sub_sQTL.tar.gz
-        - Exc.6_sub_sQTL.tar.gz
-        - Exc.7_sub_sQTL.tar.gz
-        - Exc.8_sub_sQTL.tar.gz
-        - Exc.9_sub_sQTL.tar.gz
+        - Exc.2_sub_sQTL.txt.gz
+        - Exc.10_sub_sQTL.txt.gz
+        - Exc.11_sub_sQTL.txt.gz
+        - Exc.12_sub_sQTL.txt.gz
+        - Exc.13_sub_sQTL.txt.gz
+        - Exc.14_sub_sQTL.txt.gz
+        - Exc.15_sub_sQTL.txt.gz
+        - Exc.16_sub_sQTL.txt.gz
+        - Exc.1_sub_sQTL.txt.gz
+        - Exc.3_sub_sQTL.txt.gz
+        - Exc.4_sub_sQTL.txt.gz
+        - Exc.5_sub_sQTL.txt.gz
+        - Exc.6_sub_sQTL.txt.gz
+        - Exc.7_sub_sQTL.txt.gz
+        - Exc.8_sub_sQTL.txt.gz
+        - Exc.9_sub_sQTL.txt.gz
       Fib:
-        - Fib.3_sub_sQTL.tar.gz
+        - Fib.3_sub_sQTL.txt.gz
       Inh:
-        - Inh.10_sub_sQTL.tar.gz
-        - Inh.11_sub_sQTL.tar.gz
-        - Inh.12_sub_sQTL.tar.gz
-        - Inh.13_sub_sQTL.tar.gz
-        - Inh.15_sub_sQTL.tar.gz
-        - Inh.16_sub_sQTL.tar.gz
-        - Inh.2_sub_sQTL.tar.gz
-        - Inh.3_sub_sQTL.tar.gz
-        - Inh.4_sub_sQTL.tar.gz
-        - Inh.5_sub_sQTL.tar.gz
-        - Inh.6_sub_sQTL.tar.gz
-        - Inh.7_sub_sQTL.tar.gz
-        - Inh.8_sub_sQTL.tar.gz
-        - Inh.9_sub_sQTL.tar.gz
+        - Inh.10_sub_sQTL.txt.gz
+        - Inh.11_sub_sQTL.txt.gz
+        - Inh.12_sub_sQTL.txt.gz
+        - Inh.13_sub_sQTL.txt.gz
+        - Inh.15_sub_sQTL.txt.gz
+        - Inh.16_sub_sQTL.txt.gz
+        - Inh.2_sub_sQTL.txt.gz
+        - Inh.3_sub_sQTL.txt.gz
+        - Inh.4_sub_sQTL.txt.gz
+        - Inh.5_sub_sQTL.txt.gz
+        - Inh.6_sub_sQTL.txt.gz
+        - Inh.7_sub_sQTL.txt.gz
+        - Inh.8_sub_sQTL.txt.gz
+        - Inh.9_sub_sQTL.txt.gz
       Macrophages:
-        - Macrophages_sub_sQTL.tar.gz
+        - Macrophages_sub_sQTL.txt.gz
       Mic:
-        - Mic.15_sub_sQTL.tar.gz
-        - Mic.2_sub_sQTL.tar.gz
-        - Mic.3_sub_sQTL.tar.gz
-        - Mic.4_sub_sQTL.tar.gz
-        - Mic.5_sub_sQTL.tar.gz
-        - Mic.6_sub_sQTL.tar.gz
-        - Mic.7_sub_sQTL.tar.gz
-        - Mic.8_sub_sQTL.tar.gz
-        - Mic.9_sub_sQTL.tar.gz
-        - Mic.10_sub_sQTL.tar.gz
-        - Mic.12_sub_sQTL.tar.gz
-        - Mic.13_sub_sQTL.tar.gz
+        - Mic.15_sub_sQTL.txt.gz
+        - Mic.2_sub_sQTL.txt.gz
+        - Mic.3_sub_sQTL.txt.gz
+        - Mic.4_sub_sQTL.txt.gz
+        - Mic.5_sub_sQTL.txt.gz
+        - Mic.6_sub_sQTL.txt.gz
+        - Mic.7_sub_sQTL.txt.gz
+        - Mic.8_sub_sQTL.txt.gz
+        - Mic.9_sub_sQTL.txt.gz
+        - Mic.10_sub_sQTL.txt.gz
+        - Mic.12_sub_sQTL.txt.gz
+        - Mic.13_sub_sQTL.txt.gz
       Oli:
-        - Oli.1_sub_sQTL.tar.gz
-        - Oli.2_sub_sQTL.tar.gz
-        - Oli.3_sub_sQTL.tar.gz
-        - Oli.4_sub_sQTL.tar.gz
-        - Oli.5_sub_sQTL.tar.gz
-        - Oli.6_sub_sQTL.tar.gz
-        - Oli.7_sub_sQTL.tar.gz
-        - Oli.8_sub_sQTL.tar.gz
-        - Oli.9_sub_sQTL.tar.gz
+        - Oli.1_sub_sQTL.txt.gz
+        - Oli.2_sub_sQTL.txt.gz
+        - Oli.3_sub_sQTL.txt.gz
+        - Oli.4_sub_sQTL.txt.gz
+        - Oli.5_sub_sQTL.txt.gz
+        - Oli.6_sub_sQTL.txt.gz
+        - Oli.7_sub_sQTL.txt.gz
+        - Oli.8_sub_sQTL.txt.gz
+        - Oli.9_sub_sQTL.txt.gz
       OPC:
-        - OPC.1_sub_sQTL.tar.gz
-        - OPC.2_sub_sQTL.tar.gz
-        - OPC.3_sub_sQTL.tar.gz
+        - OPC.1_sub_sQTL.txt.gz
+        - OPC.2_sub_sQTL.txt.gz
+        - OPC.3_sub_sQTL.txt.gz
       Peri:
-        - Peri.2_sub_sQTL.tar.gz
+        - Peri.2_sub_sQTL.txt.gz
 
 reference_files:
   ADSP_LD_reference_data:
