@@ -195,7 +195,7 @@ xQTL_SCEEM_scores:
 
 xQTL_GWAS_models:
   xQTL_models:
-    xQTL_finemapping:
+    finemapping_models:
       single_context:
         KNIGHT_eQTL:
           export: []
