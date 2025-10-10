@@ -1,7 +1,7 @@
 README
 variant_gene_summary:
   xQTL_loci_summary:
-    finemapping_models:
+    xQTL_finemapping:
       single_context_finemapping:
         eQTL:
           - Knight_eQTL_brain.exported.toploci.bed.gz
