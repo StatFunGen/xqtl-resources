@@ -1,11 +1,15 @@
 
-## the unified_AD_loci_xQTL_summary.xlxs table	
+## The unified AD GWAS-xQTL loci table (`unified_AD_loci_xQTL_summary.xlxs`)
+
 Each row correspond to a variant in a locus that have been associated to AD GWAS (Combining finemaping and Coloc results for the 4 GWAS studies data used). 	
+
+### Unified metric of support for variant level priorization
 
 For each AD locus, only the variants with maximum GWAS PIP/VCP ('inclusion score') >0.1 are included, and we take only the top5 based on GWAS PIP/VCP + the top5 based on cV2F score. If no variant with inclusion score>0.1, only the top1 variant of GWAS PIP/VCP, xQTL PIP/VCP and cV2F score  is displayed.  
 
 If the variant have been associated to an xQTL, summary are shown in xQTLs summary part.	 
 
+### Unified metric of support for gene level prioritization
 Contexts are ordered and green colored according to a confidence score (C1 / darkgreen is best, C6/light green is lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
 
 - C1: cTWAS/MR, cs95 single context fine-mapping overlap
