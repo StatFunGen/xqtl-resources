@@ -2,7 +2,11 @@
 ## the unified_AD_loci_xQTL_summary.xlxs table	
 Each row correspond to a variant in a locus that have been associated to AD GWAS (Combining finemaping and Coloc results for the 4 GWAS studies data used). 	
 
-For each AD locus, only the variants with maximum GWAS PIP/VCP ('inclusion score') >0.1 are included, and we take only the top5 based on GWAS PIP/VCP + the top5 based on cV2F score. If no variant with inclusion score>0.1, only the top1 variant of GWAS PIP/VCP, xQTL PIP/VCP and cV2F score  is displayed.  
+For each AD locus, variants following this criteria are included:
+- with maximum GWAS PIP/VCP ('inclusion score') >0.1 
+- the top5 variants based on cV2F score are included. 
+- the top1 variant based on GWAS PIP/VCP
+- the top1 variant based on xQTL PIP/VCP, for each broad context.  
 
 If the variant have been associated to an xQTL, summary are shown in xQTLs summary part.	 
 #### xQTL confidence score
@@ -11,7 +15,7 @@ xQTL contexts are ordered and green colored according to a confidence score (C1 
 - C2: the gene is MR or cTWAS significant, and the variant is colocalizing (using colocboost) between the GWAS and the xQTL
 - C3: the gene is TWAS significant, and the variant is colocalizing or in  CS95% overlapping between the GWAS and the xQTL
 - C4: the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
-- C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70..)
+- C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70) or with sn-sQTL
 - C6:  the gene is TWAS significant only
 
 **Notes:**  
