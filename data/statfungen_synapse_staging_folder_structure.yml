@@ -179,6 +179,7 @@ variant_gene_summary:
       - AD_xQTL_MSBB_colocboost_export_release_sorted.bed.gz
       - AD_xQTL_KNIGHT_colocboost_export_release_sorted.bed.gz
       - AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz
+      - AD_xQTL_colocboost_export_filtered_bed.gz
     AD_gene_level:
       TWAS_MR:
         - FunGen_twas.exported.bed.gz
@@ -406,9 +407,14 @@ manuscript:
     - Figure_2c_multi_context_effect_sign.rds
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
+    - Figure_5e_GSEA.rds
     - EOO:
       - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
       - Figure_EOO.rds
     - sLDSC:
       - Figure_sLDSC_GWAS_specific.rds
       - Figure_sLDSC_meta_analysis.rds
+    - PPI:
+      - Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.region_list
+      - Non_proxy_AD_gene_xQTL.txt
+      - Figure_5f_PPI.rds
