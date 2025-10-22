@@ -2,17 +2,26 @@
 ## the unified_AD_loci_xQTL_summary.xlxs table	
 Each row correspond to a variant in a locus that have been associated to AD GWAS (Combining finemaping and Coloc results for the 4 GWAS studies data used). 	
 
-For each AD locus, only the variants with maximum GWAS PIP/VCP ('inclusion score') >0.1 are included, and we take only the top5 based on GWAS PIP/VCP + the top5 based on cV2F score. If no variant with inclusion score>0.1, only the top1 variant of GWAS PIP/VCP, xQTL PIP/VCP and cV2F score  is displayed.  
+For each AD locus, variants following this criteria are included:
+- with maximum GWAS PIP/VCP ('inclusion score') >0.1 
+- the top5 variants based on cV2F score are included. 
+- the top1 variant based on GWAS PIP/VCP
+- the top1 variant based on xQTL PIP/VCP, for each broad context.  
 
 If the variant have been associated to an xQTL, summary are shown in xQTLs summary part.	 
-
-Contexts are ordered and green colored according to a confidence score (C1 / darkgreen is best, C6/light green is lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
-- C1: the gene is MR significant, the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
-- C2: the gene is MR significant, the variant is colocalizing (using colocboost) between the GWAS and the xQTL
+#### xQTL confidence score
+xQTL contexts are ordered and green colored according to a confidence score (C1 / darkgreen is best, C6/light green is lowest confidence) which combined TWAS, MR, finemapping and coloc results:	 
+- C1: the gene is MR or cTWAS significant, and the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
+- C2: the gene is MR or cTWAS significant, and the variant is colocalizing (using colocboost) between the GWAS and the xQTL
 - C3: the gene is TWAS significant, and the variant is colocalizing or in  CS95% overlapping between the GWAS and the xQTL
 - C4: the variant is in a CS95% overlapping between the GWAS and the xQTL (from single context finemapping)
-- C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70..)
-- C6:  the gene is TWAS significant only   
+- C5: the variant is colocalizing or overlapping with any xQTL CS (multicontext, cs50, cs70) or with sn-sQTL
+- C6:  the gene is TWAS significant only
+
+**Notes:**  
+TWAS significant: having TWAS pvalue <2.5e-6for the best method OR for more than 50% of the methods.  
+MR significant: being TWAS significant + having cpip>0.5 & num_CS >=2& I2<0.5.  
+cTWAS significant: the xQTL explain the GWAS zscore with pip > 0.75  
 
 The '+' or '-' after the context name correspond to the direction of the effect on the gene/molecular trait observed in finemapping (first '+/-') or in colocboost (second '+/-'). 
 'Effect' column correspond to the effect on the molecular traits, 
