@@ -102,6 +102,7 @@ variant_gene_summary:
           - ROSMAP_Oli_CUIMC1_eQTL.exported.toploci.bed.gz
           - ROSMAP_Oli_mega_eQTL.exported.toploci.bed.gz
           - ROSMAP_PCC_DeJager_eQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_DeJager_eQTL.exported.toploci.bed.gz
         pQTL:
           - ROSMAP_DLPFC_Bennett_pQTL.exported.toploci.bed.gz
       trans_finemapping:
