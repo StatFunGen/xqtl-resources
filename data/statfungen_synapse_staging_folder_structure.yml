@@ -61,13 +61,13 @@ variant_gene_summary:
           - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-        mQTL:
+        mQTL: # not uploaded
           - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
           - KnightADRC_mQTL.exported.toploci.bed.gz
           - MSBB_mQTL.exported.toploci.bed.gz
-        haQTL:
+        haQTL: # not uploaded
           - ROSMAP_DLPFC_haQTL.exported.toploci.bed.gz
-        caQTL:
+        caQTL: # not uploaded
           - ROSMAP_snATAC_MIT_OPC.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Exc.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Ast.exported.toploci.bed.gz
@@ -157,11 +157,11 @@ variant_gene_summary:
         - xqtl_only_KNIGHT_colocboost_export_release_sorted.bed.gz
         - xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz
       pairwise_colocalization:
-        bulk_mQTL_haQTL_AD:
-          - bulk_fsusie_AD_coloc_export_filtered.bed.gz
+        bulk_mQTL_haQTL_AD: 
+          - bulk_fsusie_AD_coloc_export_filtered.bed.gz # not uploaded
         caQTL_AD:
-          - snATAC_MIT_AD_coloc_export_filtered.bed.gz
-        caQTL_eQTL:
+          - snATAC_MIT_AD_coloc_export_filtered.bed.gz # not uploaded
+        caQTL_eQTL: # not uploaded
           # FIXME: this is not yet bed.gz exported format. And the file name is also not informative.
           # We need Hao Sun to fix this
           - snatac_ROSMAP.coloc.tsv.gz
@@ -184,10 +184,10 @@ variant_gene_summary:
       - AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz
       - AD_xQTL_colocboost_export_filtered_bed.gz
     AD_gene_level:
-      TWAS_MR:
-        - FunGen_twas.exported.bed.gz
+      TWAS_MR: 
+        - FunGen_twas.exported.bed.gz # not upload
       cTWAS:
-        - FunGen_ctwas.exported.bed.gz
+        - FunGen_ctwas.exported.bed.gz # not upload
   AD_xQTL_integration_summary:
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
@@ -201,7 +201,7 @@ xQTL_SCEEM_scores:
   # For this part let's follow exactly Chirag's organization. We will upload it as is when he's ready for the release
   - UCSC_bed.gz
 
-xQTL_GWAS_models:
+xQTL_GWAS_models: # cold storage: bucket-to-bucket transfer by William - pending
   xQTL_models:
     finemapping_models:
       single_context:
@@ -240,7 +240,7 @@ xQTL_GWAS_models:
           fine_mapping: []
     colocalization_models:
       - RDS_files
-    TWAS_models:
+    TWAS_models: # hot storage: bucket-to-bucket transfer by William
       single_context:
         KNIGHT_eQTL:
           - RDS_files
