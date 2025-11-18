@@ -144,6 +144,7 @@ variant_gene_summary:
           - Knight_pQTL_brain.exported.toploci.bed.gz
           - MSBB_BM36_pQTL.exported.toploci.bed.gz
           - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
+          - ROSMAP_DeJager_pQTL.exported.toploci.bed.gz
         glycoQTL:
           - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
