@@ -78,6 +78,8 @@ variant_gene_summary:
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       multi_context_finemapping:
+        - mash_model:
+          - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
         - consolidated:
