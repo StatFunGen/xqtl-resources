@@ -191,13 +191,11 @@ variant_gene_summary:
       cTWAS:
         - FunGen_ctwas.exported.bed.gz # not upload
   AD_xQTL_integration_summary:
-    - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
-    - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
-    - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
     - AD_loci_unified_cs95orColocs.csv.gz
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
-   
+    - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
+    - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
 xQTL_SCEEM_scores:
   # For this part let's follow exactly Chirag's organization. We will upload it as is when he's ready for the release
