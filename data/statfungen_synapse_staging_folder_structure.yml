@@ -81,6 +81,14 @@ variant_gene_summary:
         - mash_model:
           - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.V_simple.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.prior.rds
+          - mash_34_contexts_ed_bovy_1e3.canonical.rds
+          - mash_34_contexts_ed_bovy_1e3.flash.model.rds
+          - mash_34_contexts_ed_bovy_1e3.flash.rds
+          - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
+          - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
+          - mash_34_contexts_ed_bovy_1e3.pca.rds
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
         - consolidated:
