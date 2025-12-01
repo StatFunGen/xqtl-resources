@@ -80,6 +80,7 @@ variant_gene_summary:
       multi_context_finemapping:
         - mash_model:
           - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
         - consolidated:
