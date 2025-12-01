@@ -61,13 +61,13 @@ variant_gene_summary:
           - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-        mQTL:
+        mQTL: # not uploaded
           - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
           - KnightADRC_mQTL.exported.toploci.bed.gz
           - MSBB_mQTL.exported.toploci.bed.gz
-        haQTL:
+        haQTL: # not uploaded
           - ROSMAP_DLPFC_haQTL.exported.toploci.bed.gz
-        caQTL:
+        caQTL: # not uploaded
           - ROSMAP_snATAC_MIT_OPC.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Exc.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Ast.exported.toploci.bed.gz
@@ -78,6 +78,17 @@ variant_gene_summary:
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       multi_context_finemapping:
+        - mash_model:
+          - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.V_simple.rds
+          - mash_34_contexts_ed_bovy_1e3.EZ.prior.rds
+          - mash_34_contexts_ed_bovy_1e3.canonical.rds
+          - mash_34_contexts_ed_bovy_1e3.flash.model.rds
+          - mash_34_contexts_ed_bovy_1e3.flash.rds
+          - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
+          - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
+          - mash_34_contexts_ed_bovy_1e3.pca.rds
         - MSBB.exported.toploci.bed.gz
         - ROSMAP.exported.toploci.bed.gz
         - consolidated:
@@ -102,6 +113,8 @@ variant_gene_summary:
           - ROSMAP_Oli_CUIMC1_eQTL.exported.toploci.bed.gz
           - ROSMAP_Oli_mega_eQTL.exported.toploci.bed.gz
           - ROSMAP_PCC_DeJager_eQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_DeJager_eQTL.exported.toploci.bed.gz
+          - ROSMAP_monocyte_ROSMAP_eQTL.exported.toploci.bed.gz
         pQTL:
           - ROSMAP_DLPFC_Bennett_pQTL.exported.toploci.bed.gz
       trans_finemapping:
@@ -142,6 +155,7 @@ variant_gene_summary:
           - Knight_pQTL_brain.exported.toploci.bed.gz
           - MSBB_BM36_pQTL.exported.toploci.bed.gz
           - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
+          - ROSMAP_DeJager_pQTL.exported.toploci.bed.gz
         glycoQTL:
           - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
@@ -154,11 +168,11 @@ variant_gene_summary:
         - xqtl_only_KNIGHT_colocboost_export_release_sorted.bed.gz
         - xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz
       pairwise_colocalization:
-        bulk_mQTL_haQTL_AD:
-          - bulk_fsusie_AD_coloc_export_filtered.bed.gz
+        bulk_mQTL_haQTL_AD: 
+          - bulk_fsusie_AD_coloc_export_filtered.bed.gz # not uploaded
         caQTL_AD:
-          - snATAC_MIT_AD_coloc_export_filtered.bed.gz
-        caQTL_eQTL:
+          - snATAC_MIT_AD_coloc_export_filtered.bed.gz # not uploaded
+        caQTL_eQTL: # not uploaded
           # FIXME: this is not yet bed.gz exported format. And the file name is also not informative.
           # We need Hao Sun to fix this
           - snatac_ROSMAP.coloc.tsv.gz
@@ -181,10 +195,10 @@ variant_gene_summary:
       - AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz
       - AD_xQTL_colocboost_export_filtered_bed.gz
     AD_gene_level:
-      TWAS_MR:
-        - FunGen_twas.exported.bed.gz
+      TWAS_MR: 
+        - FunGen_twas.exported.bed.gz 
       cTWAS:
-        - FunGen_ctwas.exported.bed.gz
+        - FunGen_ctwas.exported.bed.gz # not upload
   AD_xQTL_integration_summary:
     - AD_loci_unified_cs95orColocs.csv.gz
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
@@ -196,7 +210,7 @@ xQTL_SCEEM_scores:
   # For this part let's follow exactly Chirag's organization. We will upload it as is when he's ready for the release
   - UCSC_bed.gz
 
-xQTL_GWAS_models:
+xQTL_GWAS_models: # cold storage: bucket-to-bucket transfer by William - pending
   xQTL_models:
     finemapping_models:
       single_context:
@@ -235,7 +249,7 @@ xQTL_GWAS_models:
           fine_mapping: []
     colocalization_models:
       - RDS_files
-    TWAS_models:
+    TWAS_models: # hot storage: bucket-to-bucket transfer by William
       single_context:
         KNIGHT_eQTL:
           - RDS_files
