@@ -185,11 +185,11 @@
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_snRNAseq_pseudo_bulk_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC).
 	* Lead analysts: **Hao Sun (eQTL), Masashi Fujita (eQTL), Haochen Sun (fine-mapping), Jiajun Tao (replication).**
 * [ROSMAP CUIMC1 snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_CUIMC1.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from CUIMC1 (Columbia University), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts:
+	* Lead analysts: **Anjing Liu (al4225@cumc.columbia.edu).**
 * [ROSMAP MIT snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_MIT.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from MIT (Massachusetts Institute of Technology), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts: 
+	* Lead analysts: **Anjing Liu (al4225@cumc.columbia.edu).**
 * [ROSMAP Mega snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_mega.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC1, MIT, and CUIMC2, covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts: 
+	* Lead analysts: **Anjing Liu (al4225@cumc.columbia.edu).**
 * [ROSMAP study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/ROSMAP.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) study: ROS is a longitudinal clinical-pathologic cohort study of aging and Alzheimer's disease (AD) run from Rush University that enrolled individuals from religious communities for longitudinal clinical analysis and brain donation.
 	* Lead analysts: **Xuanhe Chen (xuanhechenxhc@163.com).**
 * [ROSMAP WGS data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_WGS.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) whole-genome sequence data.
