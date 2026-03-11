@@ -18,40 +18,40 @@
 
 ### Columbia University
 
-- Xuewei Cao () - R01AG076901
-- Yanghyeon Cho () - R01AG076901
-- Natacha Comandante-Lou () - 
-- Philip De Jager () - U01AG072572
-- Rui Dong () - None
-- Ru Feng () - U01AG072572
-- Masashi Fujita
-- Hans Klein
-- Ruixi Li - R01AG076901
-- Anjing Liu - R01AG076901
-- Yiyi Ma () - 
-- Alexander McCreight () - R01AG076901
-- Min Qiao () - RF1AG066107, R01AG067501
-- Sheema Sameen () - 
-- Badri Vardarajan - RF1AG066107, R01AG067501
-- Anqi Wang () - R01AG076901, U01AG072572
-- Lu Zeng ()
+- Xuewei Cao (xueweic@mtu.edu) - R01AG076901
+- Yanghyeon Cho (yhcho@iastate.edu) - R01AG076901
+- Natacha Comandante-Lou (nc3018@cumc.columbia.edu) - 
+- Philip De Jager (pld2115@cumc.columbia.edu) - U01AG072572
+- Rui Dong (rui.dong.dr@gmail.com) - None
+- Ru Feng (rf2872@cumc.columbia.edu) - U01AG072572
+- Masashi Fujita (mf3362@cumc.columbia.edu)
+- Hans Klein (hk2948@cumc.columbia.edu)
+- Ruixi Li (rl3328@cumc.columbia.edu) - R01AG076901
+- Anjing Liu (al4225@cumc.columbia.edu) - R01AG076901
+- Yiyi Ma (ym2666@cumc.columbia.edu) - 
+- Alexander McCreight (alexmccreight01@gmail.com) - R01AG076901
+- Min Qiao (qiaomin312@gmail.com) - RF1AG066107, R01AG067501
+- Sheema Sameen (ss7112@cumc.columbia.edu) - 
+- Badri Vardarajan (bnv2103@cumc.columbia.edu) - RF1AG066107, R01AG067501
+- Anqi Wang (u3007799@connect.hku.hk) - R01AG076901, U01AG072572
+- Lu Zeng (lz2838@cumc.columbia.edu)
 - Gao Wang (wang.gao@columbia.edu) - R01AG086467, R01AG076901, U01AG072572
 
 ### Boston University
 
 - Xiaoling Zhang (zhangxl@bu.edu) - U01AG072577, R01AG080810, R01AG086467
-- Julia TCW
-- Alexandre Pelletier
+- Julia TCW (juliatcw@bu.edu)
+- Alexandre Pelletier (adpelle1@bu.edu)
 - Francis Grenn (fgrennjr@bu.edu) - U01AG058654, U01AG072577
-- Pengjiao Wang
+- Pengjiao Wang (pwang1@bu.edu)
 - Mintao Lin (minty@bu.edu) - U01AG072577, R01AG080810
 - Oluwatosin Olayinka (oaolayin@bu.edu) - U01AG058654
 - Jenny Anak Empawi (jaempawi@bu.edu) - U01AG072577, R01AG086467
 
 ### Case Western Reserve University
 
-- William Bush
-- Makaela Mews
+- William Bush (wsb36@case.edu)
+- Makaela Mews (mxm1368@case.edu)
 
 ### Clemson University
 
@@ -60,7 +60,7 @@
 
 ### Colorado State University
 
-- Tianying Wang ()
+- Tianying Wang (tianying.wang@colostate.edu)
 
 ### Icahn School of Medicine at Mount Sinai 
 
@@ -73,10 +73,10 @@
  
 ### Memorial Sloan Kettering Cancer Center
 
-- Kushal K. Dey
-- Tabassum Fabiha 
+- Kushal K. Dey (kshldey@gmail.com)
+- Tabassum Fabiha (tf2478@columbia.edu)
 - Harry Wang
-- Louis Liu
+- Louis Liu (liuj11@mskcc.org)
 
 ### National University of Singapore
 
@@ -90,39 +90,39 @@
 
 ### Rush University
 
-- David Bennett
+- David Bennett (David_A_Bennett@rush.edu)
 
 ### Stanford University
 
-- Stephen Montgomery
-- Danian Nachun
-- Esther A. Robb
+- Stephen Montgomery (smontgom@stanford.edu)
+- Daniel Nachun (dnachun@stanford.edu)
+- Esther A. Robb (erobb@stanford.edu)
 
 ### University of Chicago
 
-- Yang Li
-- Xuanyao Liu
-- Matthew Stephens
-- Peter Carbonetto
-- Carlos
-- William Denault
-- Zining Qi
-- Sheng Qian
-- Yunqi Yang
+- Yang Li (yangili1@uchicago.edu)
+- Xuanyao Liu (xuanyao@uchicago.edu)
+- Matthew Stephens (mstephens@uchicago.edu)
+- Peter Carbonetto (pcarbo@uchicago.edu)
+- Carlos F Buen Abad Najar (cnajar@uchicago.edu)
+- William Denault (wdenault@uchicago.edu)
+- Zining Qi (zqi@uchicago.edu)
+- Sheng Qian (shengqian@uchicago.edu)
+- Yunqi Yang (yunqiy@uchicago.edu)
 
 ### University of Pennsylvania
 
-- Yuk Yee Leung
-- Pavel
-- Jeffery
-- Li-San Wang
-- Travyse Edwards
+- Yuk Yee Leung (yyee@pennmedicine.upenn.edu)
+- Pavel P Kuksa (pkuksa@pennmedicine.upenn.edu)
+- Jeffery Cifello (Jeffrey.Cifello@pennmedicine.upenn.edu)
+- Li-San Wang (lswang@pennmedicine.upenn.edu)
+- Travyse Edwards (travyse.edwards@icahn.mssm.edu)
 
 ### University of Miami
 
-- Anthony J. Griswold ()
+- Anthony J. Griswold (agriswold@miami.edu)
 
 ### Washington University in St. Louis
 
-- Carlos Cruchaga
-- Chengran Yang
+- Carlos Cruchaga (cruchagac@wustl.edu)
+- Chengran Yang (chengranyang@wustl.edu)
