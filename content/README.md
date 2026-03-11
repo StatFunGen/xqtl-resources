@@ -18,7 +18,7 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
   - Histone modification
   - DNA methylation
   - Gene expression (bulk RNA-seq, single-cell/nucleus RNA-seq)
-  - Alternative splicing (bulk RNA-seq, single-cell/nucleus RNA-seq)g
+  - Alternative splicing (bulk RNA-seq, single-cell/nucleus RNA-seq)
   - Proteomics
   - Metabolomics
 * **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations across brain regions, cell types, and molecular phenotypes
