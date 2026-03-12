@@ -18,12 +18,6 @@
 * [Alzheimer's Disease GWAS Summary Data (Wightman)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
 
-## D
-* [DIAN blood derived methylation](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/dian_blood_methylation.md).
-	* Lead analysts: **TBD, Alan Renton and Carlos Cruchaga.**
-* [DIAN blood derived methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/dian_blood_methylation_qtl.md).
-	* Lead analysts: **TBD, Alan Renton and Carlos Cruchaga.**
-
 ## E
 * [EFIGA CSF proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/EFIGA_CSF_proteomics.md).
 	* Lead analysts: **Zining Qi.**
@@ -39,14 +33,6 @@
 ## F
 * [FunGen-xQTL protocol data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/FunGen_xQTL_protocol_data.md). A toy data-set consisting of 49 de-identified samples from ROSMAP project, used to illustrates the computational protocols we developed for the detection and analysis of molecular QTLs (xQTLs).
 	* Lead analysts: **Hao Sun.**
-
-## H
-* [HIHG African American blood alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/MAGENTA_AA_blood_splicing.md).
-	* Lead analysts: **Makaela Mews.**
-* [HIHG genotype data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/MAGENTA_genotype.md).
-	* Lead analysts: **Makaela Mews.**
-* [HIHG Non-Hispanic White blood alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/MAGENTA_NHW_blood_splicing_qtl.md).
-	* Lead analysts: **Makaela Mews.**
 
 ## K
 * [Knight ADRC brain gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/Knight_ADRC_brain_expression.md).
@@ -127,12 +113,6 @@
 ## N
 * [Non-Hispanic White Linkage Disequilibrium Reference Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_reference.md). LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD).
 	* Lead analysts: **Oluwatosin Olayinka.**
-
-## P
-* [PART working group brain methylation](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/PART_brain_methylation.md).
-	* Lead analysts: **Alexandre Pelletier, Corey McMillan.**
-* [PART working group brain methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/PART_brain_methylation_qtl.md).
-	* Lead analysts: **Alexandre Pelletier, Corey McMillan.**
 
 ## R
 * [ROSMAP AC alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_AC_splicing.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) AC alternative splicing.
