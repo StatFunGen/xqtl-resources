@@ -5,6 +5,7 @@
 | [#](#0) 	| [A](#a) 	| [B](#b) 	| [C](#c) 	| [D](#d) 	| [E](#e) 	| [F](#f) 	| [G](#g) 	| [H](#h) 	|
 | [I](#i) 	| [J](#j) 	| [K](#k) 	| [L](#l) 	| [M](#m) 	| [N](#n) 	| [O](#o) 	| [P](#p) 	| [Q](#q) 	|
 | [R](#r) 	| [S](#s) 	| [T](#t) 	| [U](#u) 	| [V](#v) 	| [W](#w) 	| [X](#x) 	| [Y](#y) 	| [Z](#z)  	|
+
 ## A
 * [ADGC GWAS imputation protocol](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/ADGC_GWAS_imputation_protocol.md). Adapted from [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/) to generate imputed genotype data for xQTL analysis in some cohorts.
 	* Lead analysts: **Xuanhe Chen.**
@@ -63,7 +64,7 @@
 * [Knight ADRC brain proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/Knight_ADRC_brain_proteomics.md). Charles F And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC).
 	* Lead analysts: **Zining Qi.**
 * [Knight ADRC brain proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/Knight_ADRC_brain_proteomics_qtl.md). Charles F.
-	* Lead analysts: **Zining Qi(zq2209@cumc.columbia.edu).**
+	* Lead analysts: **Zining Qi.**
 * [Knight ADRC brain splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/Knight_ADRC_brain_splicing.md).
 	* Lead analysts: **Xuanhe Chen.**
 * [Knight ADRC brain splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/Knight_ADRC_brain_splicing_qtl.md).
@@ -144,6 +145,8 @@
 	* Lead analysts: **Frank Grenn.**
 * [ROSMAP Covariates data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_covariates.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) covariates data.
 	* Lead analysts: **There are couple of versions of covariates files been used for QTL calling, which may lead to inconsistency of data production and downstream integration analysis.**
+* [ROSMAP CUIMC1 snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_CUIMC1.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from CUIMC1 (Columbia University), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
+	* Lead analysts: **Anjing Liu.**
 * [ROSMAP DLPFC alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_DLPFC_splicing.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing.
 	* Lead analysts: **Xuanhe Chen; Shrishtee Kandoi.**
 * [ROSMAP DLPFC alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_DLPFC_splicing_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing.
@@ -164,13 +167,17 @@
 	* Lead analysts: **Zining Qi.**
 * [ROSMAP DLPFC protein expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_DLPFC_proteomics_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC protein expression.
 	* Lead analysts: **Zining Qi(zq2209@cumc.columbia.edu).**
+* [ROSMAP Mega snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_mega.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC1, MIT, and CUIMC2, covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
+	* Lead analysts: **Anjing Liu.**
+* [ROSMAP MIT snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_MIT.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from MIT (Massachusetts Institute of Technology), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
+	* Lead analysts: **Anjing Liu.**
 * [ROSMAP PCC alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_PCC_splicing.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing.
 	* Lead analysts: **Frank Grenn.**
 * [ROSMAP PCC alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_PCC_splicing_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing.
 	* Lead analysts: **Frank Grenn.**
-* [ROSMAP PCC Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_PCC_expression_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing.
+* [ROSMAP PCC Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_PCC_expression_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC gene expression.
 	* Lead analysts: **Frank Grenn.**
-* [ROSMAP PCC gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_PCC_expression.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing.
+* [ROSMAP PCC gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_PCC_expression.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC gene expression.
 	* Lead analysts: **Frank Grenn.**
 * [ROSMAP RNA-seq microglia gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_microglia_expression.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) microglia data-set.
 	* Lead analysts: **Travyse Edwards.**
@@ -184,12 +191,6 @@
 	* Lead analysts: **Hao Sun and Masashi Fujita.**
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/ROSMAP_snRNAseq_pseudo_bulk_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC).
 	* Lead analysts: **Hao Sun (eQTL), Masashi Fujita (eQTL), Haochen Sun (fine-mapping), Jiajun Tao (replication).**
-* [ROSMAP CUIMC1 snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_CUIMC1.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from CUIMC1 (Columbia University), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts: **Anjing Liu.**
-* [ROSMAP MIT snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_MIT.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq data from MIT (Massachusetts Institute of Technology), covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts: **Anjing Liu.**
-* [ROSMAP Mega snRNA-seq expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_snuc_mega.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC1, MIT, and CUIMC2, covering cell types: Astrocyte, Excitatory neurons, Inhibitory neurons, Microglia, Oligodendrocyte, and Oligodendrocyte progenitor cells.
-	* Lead analysts: **Anjing Liu.**
 * [ROSMAP study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/ROSMAP.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) study: ROS is a longitudinal clinical-pathologic cohort study of aging and Alzheimer's disease (AD) run from Rush University that enrolled individuals from religious communities for longitudinal clinical analysis and brain donation.
 	* Lead analysts: **Xuanhe Chen (xuanhechenxhc@163.com).**
 * [ROSMAP WGS data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/ROSMAP_WGS.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) whole-genome sequence data.
@@ -201,7 +202,7 @@
 * [STARNET genotype data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/STARNET_genotype.md). STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD).
 	* Lead analysts: **Travyse Edwards.**
 * [STARNET macrophage gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/STARNET_macrophage_qtl.md). STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD).
-	* Lead analysts: **- Contact Name: Travyse Edwards.**
+	* Lead analysts: **Travyse Edwards.**
 
 ## T
 * [The Mount Sinai Brain Bank (MSBB) study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MSBB.md). This cohort study generated large-scale matched multi-Omics data in AD and control brains for exploring novel molecular underpinnings of AD.
