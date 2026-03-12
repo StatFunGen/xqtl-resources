@@ -1,6 +1,4 @@
 # Omics
-
-* [DIAN blood derived methylation](dian_blood_methylation)
 * [EFIGA CSF proteomics](EFIGA_CSF_proteomics)
 * [EFIGA genotype](WHICAP_genotype)
 * [EFIGA plasma metabolomics](EFIGA_plasma_metabolomics)
@@ -25,11 +23,14 @@
 * [ROSMAP AC alternative splicing](ROSMAP_AC_splicing)
 * [ROSMAP AC gene expression](ROSMAP_AC_expression)
 * [ROSMAP Covariates data](ROSMAP_covariates)
+* [ROSMAP CUIMC1 snRNA-seq expression](ROSMAP_snuc_CUIMC1)
 * [ROSMAP DLPFC alternative splicing](ROSMAP_DLPFC_splicing)
 * [ROSMAP DLPFC gene expression](ROSMAP_DLPFC_expression)
 * [ROSMAP DLPFC H3K9ac](ROSMAP_DLPFC_ChIPSeq_H3K9ac)
 * [ROSMAP DLPFC methylation](ROSMAP_DLPFC_methylation)
 * [ROSMAP DLPFC protein expression](ROSMAP_DLPFC_proteomics)
+* [ROSMAP Mega snRNA-seq expression](ROSMAP_snuc_mega)
+* [ROSMAP MIT snRNA-seq expression](ROSMAP_snuc_MIT)
 * [ROSMAP PCC alternative splicing](ROSMAP_PCC_splicing)
 * [ROSMAP PCC gene expression](ROSMAP_PCC_expression)
 * [ROSMAP RNA-seq microglia gene expression](ROSMAP_microglia_expression)
