@@ -279,4 +279,14 @@ ls -lh *.txt
 -rw-r--r-- 1 hs3163 hs3163 3.5M Apr 21 16:19 /mnt/vast/hpc/csg/molecular_phenotype_calling/QTL_fine_mapping/output/haQTL_pure_completed_unlimited.tsv
 ```
 
-### Path(s) to fine-mapping with SuSiE RSS model
+### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
+
+Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+
+### Path(s) to colocalization
+
+Pairwise colocalization models (SuSiE-coloc): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+
+AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+
+AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

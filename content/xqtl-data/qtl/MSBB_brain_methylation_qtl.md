@@ -30,3 +30,15 @@ details please see https://github.com/cumc/xqtl-analysis/tree/main/analysis/TCW_
 **output of TensorQTL.ipynb**
 
 - `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/MSBB/mQTL/`
+
+### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
+
+Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+
+### Path(s) to colocalization
+
+Pairwise colocalization models (SuSiE-coloc): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+
+AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+
+AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

@@ -22,3 +22,13 @@ Further information about the STARNET patients:
 ## Contact
 
 Travyse Edwards
+
+## QTL Analyses
+
+STARNET datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+
+| Dataset | Modality | QTL File |
+|---------|----------|----------|
+| Macrophage RNA-seq | eQTL | [STARNET_macrophage_qtl](../qtl/STARNET_macrophage_qtl.md) |
+
+Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

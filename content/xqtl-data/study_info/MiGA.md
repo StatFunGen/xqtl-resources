@@ -20,3 +20,13 @@ Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropatho
 ## Contact
 
 Travyse Edwards
+
+## QTL Analyses
+
+MiGA datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+
+| Dataset | Modality | QTL File |
+|---------|----------|----------|
+| Brain microglia RNA-seq | eQTL | [MiGA_brain_expression_qtl](../qtl/MiGA_brain_expression_qtl.md) |
+
+Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

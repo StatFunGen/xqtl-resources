@@ -12,13 +12,15 @@ Xuanhe Chen (xuanhechenxhc@163.com)
 
 ## Study Overview
 
-- Grant number : R01 AG076901 (temporary using Gao's grant number)
-- Publication : 
-- Acknowledgement : 
+- PI : David A. Bennett (Rush University Medical Center, Chicago, IL, USA)
+- Grant number : U01AG046152, R01AG048015, U01AG061356, R01AG15819, U01AG061359
+- Publication : PMID: 30084846
+- Genetics Publication : PMID: 40407102
+- Acknowledgement : Study data were generated from postmortem brain tissue provided by the Religious Orders Study and Rush Memory and Aging Project (ROSMAP) cohort at Rush Alzheimer’s Disease Center, Rush University Medical Center, Chicago.
 - Study name : ROSMAP DLPFC RNA-seq Bulk Brain
-- Study Description : Samples were extracted using Qiagen's miRNeasy mini kit (cat. no. 217004) and the RNase free DNase Set (cat. no. 79254), and quantified by Nanodrop and quality was evaluated by Agilent Bioanalyzer.
+- Study Description : Samples were extracted using Qiagen’s miRNeasy mini kit (cat. no. 217004) and the RNase free DNase Set (cat. no. 79254), and quantified by Nanodrop and quality was evaluated by Agilent Bioanalyzer.
 - Disease : Alzheimer’s Disease
-- Data Citation : https://www.synapse.org/#!Synapse:syn3388564
+- Data Citation : Omics data: [syn3388564](https://www.synapse.org/Synapse:syn3388564); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
 - Additional study information : 
 
 ## Dataset Details
@@ -71,3 +73,14 @@ ROSMAP DLPFC Gene Expression (RNA seq - bulk brain):
 ## Links to omics data analysis notebooks
 
 1. Exploratory anlaysis on ROSMAP DLPFC sample information: https://github.com/cumc/fungen-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/ROSMAP_DLPFC_expression_qtl.md](../qtl/ROSMAP_DLPFC_expression_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

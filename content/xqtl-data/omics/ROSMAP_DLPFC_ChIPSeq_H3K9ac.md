@@ -15,13 +15,13 @@ Xuanhe Chen; Hao Sun; Hans Klein
 
 ## Study Overview
 
-- Grant number : R01 AG076901 (temporary using Gao's grant number)
-- Publication : 
-- Acknowledgement : 
+- Grant number : U01AG046152, R01AG048015, U01AG061356, R01AG15819, U01AG061359
+- Publication : PMID: 30084846
+- Acknowledgement : Study data were generated from postmortem brain tissue provided by the Religious Orders Study and Rush Memory and Aging Project (ROSMAP) cohort at Rush Alzheimer's Disease Center, Rush University Medical Center, Chicago.
 - Study name : ROSMAP DLPFC H3K9ac peak calling
 - Study Description : Performed peak calling on 669 ROSMAP samples' h3k9ac samples via the ADSP FGC xQTL pipeline. The output format is prepared for haQTL analysis.
 - Disease : Alzheimer’s Disease
-- Data Citation : ROSMAP WGS data: https://www.synapse.org/#!Synapse:syn10901595. 
+- Data Citation : Omics data: [syn4896408](https://www.synapse.org/Synapse:syn4896408); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/) 
 - Additional study information : The phenotype data is an improved version (used advanced method and identified more peaks) of this published ROSMAP hak9ac readcounts: https://www.synapse.org/#!Synapse:syn17016212. 
 
 ## Dataset Details
@@ -71,3 +71,15 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 1. [h3k9ac_exploratory_analysis.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/haqtl/h3k9ac_exploratory_analysis.ipynb) provides information about the data source.
 
 2. [annotate_peaks_to_gene.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/haqtl/annotate_peaks_to_gene.ipynb) a record of steps used to annotate each h3k9ac peaks to genes using tabix. Each peak was mapped with multiple genes according to start and end overlap and kept as an reference.
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md](../qtl/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (fSuSiE/SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- Pairwise colocalization (SuSiE-coloc): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
+
+- Genetics Publication : PMID: 40407102
+- PI : David A. Bennett (Rush University Medical Center, Chicago, IL, USA)

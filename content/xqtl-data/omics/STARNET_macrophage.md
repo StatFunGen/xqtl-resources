@@ -78,3 +78,14 @@ The notebooks in [this folder](https://github.com/cumc/fungen-xqtl-analysis/tree
 - `covariate_preprocessing.ipynb` shows the commands used for the covariate data processing and preparation steps.
   - This includes factor analysis steps
 - `association_scan_cis.ipynb` provides information about the TensorQTL cis association scan.
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/STARNET_macrophage_qtl.md](../qtl/STARNET_macrophage_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

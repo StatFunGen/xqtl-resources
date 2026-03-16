@@ -10,13 +10,15 @@ Zining Qi
 
 ## Study Overview
 
-- Grant number : R01 AG076901 (temporary using Gao's grant number)
-- Publication : 
-- Acknowledgement : 
+- PI : Carlos Cruchaga (Washington University in St. Louis)
+- Grant number : R01AG044546, P01AG003991, RF1AG053303, R01AG058501, U01AG058922, RF1AG058501, R01AG057777, P50AG05681, P01AG03991, P01AG026276
+- Publication : PMID: 38997326, PMID: 34239129
+- Genetics Publication : PMID: 38997326
+- Acknowledgement : This work was supported by grants from the National Institutes of Health (R01AG044546, P01AG003991, RF1AG053303, R01AG058501, U01AG058922, RF1AG058501 and R01AG057777). The recruitment and clinical characterization of research participants at Washington University were supported by NIH P50 AG05681, P01 AG03991, and P01 AG026276. This work was supported by access to equipment made possible by the Hope Center for Neurological Disorders, and the Departments of Neurology and Psychiatry at Washington University School of Medicine.
 - Study name : ROSMAP DLPFC proteomics analysis
 - Study Description : Performed analysis on 442 Knight proteomics samples via the ADSP FGC xQTL pipeline. The output format is prepared for pQTL analysis.
 - Disease : Alzheimer’s Disease
-- Data Citation : Knight data: https://www.niagads.org/knight-adrc-collection
+- Data Citation : Omics data: [ng00102](https://dss.niagads.org/datasets/ng00102/); Genetics data: [ng00127](https://dss.niagads.org/datasets/ng00127/)
 
 ## Dataset Description
 
@@ -79,3 +81,14 @@ Phenotype data were processed via the following workflow: [phenotype_preprocessi
 ### Other procedures / files
 1. [proteomics_pheno_whole_genome.proteomics_cov.ROSMAP_NIA_WGS.leftnorm.filtered.filtered.prune.pca.resid.PEER.diag.pdf](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Wang_Columbia/knigt/pqtl/figure/proteomics_pheno_whole_genome.proteomics_cov.ROSMAP_NIA_WGS.leftnorm.filtered.filtered.prune.pca.resid.PEER.diag.pdf) view of PCA result of the pQTL analysis (steps included in `genotype_preprocessing.ipynb`)
 2. [AD gene list](https://docs.google.com/spreadsheets/d/166P7ThONaIDyPh2luJHoXDxlnhpsr56a8c_OE_uPQ3w/edit#gid=0) includes 76 AD genes for trans-QTL analysis.
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/Knight_ADRC_brain_proteomics_qtl.md](../qtl/Knight_ADRC_brain_proteomics_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

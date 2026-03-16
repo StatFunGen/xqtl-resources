@@ -14,74 +14,96 @@ The computational protocols generating these results are available at [xQTL Prot
 
 ### Molecular QTL Fine-mapping and Colocalization
 
-Our xQTL analyses span diverse brain regions and cell types, providing fine-mapped results for [expression QTLs (eQTL)](#single_context_eqtl), [splicing QTLs (sQTL)](#single_context_sqtl), [protein QTLs (pQTL)](#single_context_pqtl), [glycosylation QTLs (glycoQTL)](#single_context_glycoqtl), [methylation QTLs (mQTL)](#single_context_mqtl), [histone acetylation QTLs (haQTL)](#single_context_haqtl), and [chromatin accessibility QTLs (caQTL)](#single_context_caqtl) from single-context fine-mapping across multiple cohorts: ROS/MAP (Rush University, Columbia and MIT), Mount Sinai Brain Bank (MSBB), Knight ADRC (WashU), MiGA and STARNET. We provide [multi-context fine-mapping](#multi_context_finemapping) that integrates signals across brain regions for ROSMAP and MSBB cohorts, and [multi-gene fine-mapping](#multi_gene_finemapping) with separate analyses for [eQTLs](#multi_gene_eqtl) and [pQTLs](#multi_gene_pqtl) that jointly model multiple genes. Additionally, trans-QTL fine-mapping identifies distant regulatory relationships for [trans-eQTLs](#trans_eqtl), [trans-pQTLs](#trans_pqtl), [trans-glycoQTLs](#trans_gpqtl) and [metabolome QTLs](#trans_metabolome).
+Our xQTL analyses span diverse brain regions and cell types, providing fine-mapped results for [expression QTLs (eQTL)](xqtl-data/qtl/), [splicing QTLs (sQTL)](xqtl-data/qtl/), [protein QTLs (pQTL)](xqtl-data/qtl/), [glycosylation QTLs (glycoQTL)](xqtl-data/qtl/), [methylation QTLs (mQTL)](xqtl-data/qtl/), [histone acetylation QTLs (haQTL)](xqtl-data/qtl/), and [chromatin accessibility QTLs (caQTL)](xqtl-data/qtl/) from single-context fine-mapping across multiple cohorts: ROS/MAP (Rush University, Columbia and MIT), Mount Sinai Brain Bank (MSBB), Knight ADRC (WashU), MiGA and STARNET. We provide [multi-context fine-mapping](https://www.synapse.org/Synapse:syn69670592) that integrates signals across brain regions for ROSMAP and MSBB cohorts, and [multi-gene fine-mapping](https://www.synapse.org/Synapse:syn69670592) with separate analyses for [eQTLs](https://www.synapse.org/Synapse:syn69670592) and [pQTLs](https://www.synapse.org/Synapse:syn69670592) that jointly model multiple genes. Additionally, trans-QTL fine-mapping identifies distant regulatory relationships for [trans-eQTLs](xqtl-data/qtl/), [trans-pQTLs](xqtl-data/qtl/), [trans-glycoQTLs](xqtl-data/qtl/) and [metabolome QTLs](xqtl-data/qtl/).
 
-To understand relationships between molecular traits, we conducted colocalization analyses including [multi-context colocalization](#multi_context_colocalization) using [ColocBoost](https://www.medrxiv.org/content/10.1101/2025.04.17.25326042v1) across cohorts and [pairwise colocalization](#pairwise_colocalization) using SuSiE-COLOC to specifically examine [caQTL-eQTL](#caqtl_eqtl) relationships.
+To understand relationships between molecular traits, we conducted colocalization analyses including [multi-context colocalization](https://www.synapse.org/Synapse:syn69670597) using [ColocBoost](https://www.medrxiv.org/content/10.1101/2025.04.17.25326042v1) across cohorts ([syn69670597](https://www.synapse.org/Synapse:syn69670597)) and [pairwise colocalization](https://www.synapse.org/Synapse:syn69670597) using SuSiE-COLOC to specifically examine [caQTL-eQTL](https://www.synapse.org/Synapse:syn69670597) relationships.
 
 ### Alzheimer's Disease GWAS Integration
 
 #### AD Loci Fine-mapping and Colocalization
 
-We provide [fine-mapped AD GWAS results](#ad_finemapping) from major studies including Bellenguez 2022, Jansen 2021, Wightman 2021, and Kunkle 2019. These undergo systematic [AD colocalization analysis](#ad_colocalization) to identify shared genetic signals across studies. We integrate AD GWAS with xQTL data through [AD-xQTL colocalization](#ad_xqtl_colocalization) across ROSMAP, MSBB, and Knight ADRC cohorts to identify molecular mechanisms underlying genetic risk. Additionally, we performed pairwise colocalization analyses include [bulk mQTL-AD](#bulk_mqtl_haqtl_ad), bulk haQTL-AD, and [single-nucleus caQTL-AD](#caqtl_ad) relationships to leverage a [new fine-mapping approach we developed](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) for mapping epigenetic and chromatin-level mechanisms of AD risk variants.
+We provide [fine-mapped AD GWAS results](xqtl-data/gwas/AD_GWAS) from major studies including Bellenguez 2022, Jansen 2021, Wightman 2021, and Kunkle 2019 ([syn69670625](https://www.synapse.org/Synapse:syn69670625)). These undergo systematic [AD colocalization analysis](xqtl-data/gwas/AD_GWAS) to identify shared genetic signals across studies ([syn69696846](https://www.synapse.org/Synapse:syn69696846), [syn69865824](https://www.synapse.org/Synapse:syn69865824)). We integrate AD GWAS with xQTL data through [AD-xQTL colocalization](xqtl-data/gwas/AD_GWAS) across ROSMAP, MSBB, and Knight ADRC cohorts to identify molecular mechanisms underlying genetic risk ([syn69865816](https://www.synapse.org/Synapse:syn69865816), [syn69670630](https://www.synapse.org/Synapse:syn69670630)). Additionally, we performed pairwise colocalization analyses include [bulk mQTL-AD](https://www.synapse.org/Synapse:syn69865816), bulk haQTL-AD, and [single-nucleus caQTL-AD](https://www.synapse.org/Synapse:syn69865816) relationships to leverage a [new fine-mapping approach we developed](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) for mapping epigenetic and chromatin-level mechanisms of AD risk variants.
 
 #### Gene-Level AD Analyses
 
-Our gene-level analyses include [transcriptome-wide association studies (TWAS) and Mendelian randomization (MR)](#twas_mr) identifying genes whose regulated expression associates with AD risk. We complement this with [causal TWAS (cTWAS)](#ctwas) that accounts for gene expression correlation and LD structure, addressing LD-hitchhiking issues where non-causal genes appear significant due to correlation with true causal genes.
+Our gene-level analyses include [transcriptome-wide association studies (TWAS) and Mendelian randomization (MR)](https://www.synapse.org/Synapse:syn69670600) identifying genes whose regulated expression associates with AD risk, using pre-trained TWAS weight models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and quantile TWAS (qTWAS) models ([syn69670611](https://www.synapse.org/Synapse:syn69670611)). We complement this with [causal TWAS (cTWAS)](https://www.synapse.org/Synapse:syn70095142) ([syn70095142](https://www.synapse.org/Synapse:syn70095142)) that accounts for gene expression correlation and LD structure, addressing LD-hitchhiking issues where non-causal genes appear significant due to correlation with true causal genes.
 
 #### **Integrated AD Summary Tables**
 
 For immediate use by researchers, we provide comprehensive summary tables:
-- [AD loci annotated by xQTL summary table](#ad_loci_xqtl_table) - variant-level integration of AD GWAS loci with all xQTL evidence
-- [AD genes with FunGen and xQTL annotations](#ad_genes_fungen_xqtl) - AD risk genes prioritization through fine-mapping and colocalization
-- [AD genes with TWAS integration](#ad_genes_twas_xqtl) - AD risk genes prioritization that additionally incorporates TWAS and MR
+- [AD loci annotated by xQTL summary table](https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/unified_AD_loci_xQTL_summary.xlsx) - variant-level integration of AD GWAS loci with all xQTL evidence
+- [AD genes with FunGen and xQTL annotations](https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv) - AD risk genes prioritization through fine-mapping and colocalization
+- [AD genes with TWAS integration](https://github.com/StatFunGen/xqtl-resources/blob/main/data/genes/AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv) - AD risk genes prioritization that additionally incorporates TWAS and MR
 
 ## Predictive Models and Scores
 
 ### Single-Cell Expression Prediction
 
-We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](#xqtl_sceem_scores) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data. 
+We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](xqtl-data/qtl/) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data. 
 
 ### Variant-to-Function Prediction
 
-The [cv2F (causal variant to function) scores](#cv2f_scores) integrate xQTL data with functional annotations to predict AD risk at the variant level. [A machine learning framework](https://www.biorxiv.org/content/10.1101/2024.11.07.622307v2) is applied to combine multiple lines of molecular evidence, particularly our xQTL resource, to prioritize likely causal variants for GWAS.
+The [cv2F (causal variant to function) scores](https://www.biorxiv.org/content/10.1101/2024.11.07.622307v2) integrate xQTL data with functional annotations to predict AD risk at the variant level. [A machine learning framework](https://www.biorxiv.org/content/10.1101/2024.11.07.622307v2) is applied to combine multiple lines of molecular evidence, particularly our xQTL resource, to prioritize likely causal variants for GWAS.
 
 ## Pretrained Statistical Models
 
 ### QTL and GWAS Statistical Models
 
-We provide complete statistical models as RDS files for researchers to conduct custom analyses or integrate with other complex traits and diseases. Fine-mapping models are available for [eQTL](#finemapping_models_eqtl), [pQTL](#finemapping_models_pqtl), [glycoQTL](#finemapping_models_glycoqtl), and [sQTL](#finemapping_models_sqtl). [Colocalization models](#colocalization_models) preserve the probabilistic framework for identifying shared genetic signals, allowing exploration of alternative colocalization thresholds and model assessment. TWAS models are provided for [eQTL](#twas_models_eqtl), [pQTL](#twas_models_pqtl), [glycoQTL](#twas_models_glycoqtl), and [sQTL](#twas_models_sqtl), along with qTWAS models for [eQTL](#qtwas_models_eqtl), [pQTL](#qtwas_models_pqtl), [glycoQTL](#qtwas_models_glycoqtl), and [sQTL](#qtwas_models_sqtl) that incorporate non-linear QTL effects.
+We provide complete statistical models as RDS files for researchers to conduct custom analyses or integrate with other complex traits and diseases. Fine-mapping models are available for [eQTL](https://www.synapse.org/Synapse:syn69670592), [pQTL](https://www.synapse.org/Synapse:syn69670592), [glycoQTL](https://www.synapse.org/Synapse:syn69670592), and [sQTL](https://www.synapse.org/Synapse:syn69670592) ([syn69670592](https://www.synapse.org/Synapse:syn69670592)). [Colocalization models](https://www.synapse.org/Synapse:syn69670597) preserve the probabilistic framework for identifying shared genetic signals, allowing exploration of alternative colocalization thresholds and model assessment ([syn69670597](https://www.synapse.org/Synapse:syn69670597)). TWAS models are provided for [eQTL](https://www.synapse.org/Synapse:syn69670600), [pQTL](https://www.synapse.org/Synapse:syn69670600), [glycoQTL](https://www.synapse.org/Synapse:syn69670600), and [sQTL](https://www.synapse.org/Synapse:syn69670600) ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), along with qTWAS models for [eQTL](https://www.synapse.org/Synapse:syn69670611), [pQTL](https://www.synapse.org/Synapse:syn69670611), [glycoQTL](https://www.synapse.org/Synapse:syn69670611), and [sQTL](https://www.synapse.org/Synapse:syn69670611) ([syn69670611](https://www.synapse.org/Synapse:syn69670611)) that incorporate non-linear QTL effects.
 
 ### Alzheimer's Disease Analysis Models
 
-AD-specific models include [AD fine-mapping results](#ad_fine_mapping_models) with Bayes factors, posterior probabilities and credible sets, and [AD colocalization models](#ad_colocalization_models) providing detailed statistical evidence of shared genetic architecture per locus. [AD-xQTL colocalization models](#ad_xqtl_colocalization_models) offer comprehensive colocalization statistics between AD risk and molecular traits. We also provide [cTWAS input files](#ad_ctwas_input) formatted for causal transcriptome-wide association studies in AD.
+AD-specific models include [AD fine-mapping results](https://www.synapse.org/Synapse:syn69670625) with Bayes factors, posterior probabilities and credible sets ([syn69670625](https://www.synapse.org/Synapse:syn69670625)), and [AD colocalization models](https://www.synapse.org/Synapse:syn69865824) providing detailed statistical evidence of shared genetic architecture per locus ([syn69696846](https://www.synapse.org/Synapse:syn69696846), [syn69865824](https://www.synapse.org/Synapse:syn69865824)). [AD-xQTL colocalization models](https://www.synapse.org/Synapse:syn69865816) offer comprehensive colocalization statistics between AD risk and molecular traits ([syn69865816](https://www.synapse.org/Synapse:syn69865816), [syn69670630](https://www.synapse.org/Synapse:syn69670630)). We also provide [cTWAS input files](https://www.synapse.org/Synapse:syn70095142) formatted for causal transcriptome-wide association studies in AD ([syn70095142](https://www.synapse.org/Synapse:syn70095142)).
 
 ## Raw QTL Summary Statistics
 
 ### Linear Regression and Mixed Model Results
 
-We provide [R-based linear model residuals](#r_lm_residual_sumstats) and tensorQTL outputs in two forms: [raw results for all variants](#tensorqtl_sumstats_raw) and [significant results after multiple testing correction](#tensorqtl_sumstats_significant) containing standard additive genetic effects. For splicing analysis, [generalized linear mixed model sQTL results](#xqtl_glmm) account for the count-based nature of splice junction data while controlling for related observations using meta-cell approaches in single-cell data.
+We provide [R-based linear model residuals](xqtl-data/qtl/) and tensorQTL outputs in two forms: [raw results for all variants](xqtl-data/qtl/) and [significant results after multiple testing correction](xqtl-data/qtl/) containing standard additive genetic effects. For splicing analysis, [generalized linear mixed model sQTL results](xqtl-data/qtl/) account for the count-based nature of splice junction data while controlling for related observations using meta-cell approaches in single-cell data.
 
 ### Non-linear Genetic Effects
 
-[Quantile regression QTL results](#xqtl_qr) identify variants affecting expression variance and outliers, revealing heterogeneous genetic effects relevant to disease states. [QTL interaction analyses](#xqtl_interaction) test for genotype-by-sex, APOE4 genotype, and cell proportion interactions to capture context-dependent genetic effects.
+[Quantile regression QTL results](xqtl-data/qtl/) identify variants affecting expression variance and outliers, revealing heterogeneous genetic effects relevant to disease states. [QTL interaction analyses](xqtl-data/qtl/) test for genotype-by-sex, APOE4 genotype, and cell proportion interactions to capture context-dependent genetic effects.
 
 ## Reference Data and Resources
 
 ### Population-Specific LD References
 
-We provide [ADSP-based LD reference data for European ancestry](#adsp_ld_reference_eur) populations, formatted in plink bim format with xz compression. These panels derive from the Alzheimer's Disease Sequencing Project Release 4, providing improved coverage of low-frequency variants. With larger sample sizes than 1000 Genomes reference panels, they demonstrate superior performance for fine-mapping in GWAS meta-analysis for AD and beyond.
+We provide [ADSP-based LD reference data for European ancestry](xqtl-data/reference_data/ld_reference) populations, formatted in plink bim format with xz compression ([syn69670651](https://www.synapse.org/Synapse:syn69670651), [syn69670652](https://www.synapse.org/Synapse:syn69670652)). These panels derive from the Alzheimer's Disease Sequencing Project whole genome sequencing data (16,905 European ancestry samples), providing improved coverage of low-frequency variants. With larger sample sizes than 1000 Genomes reference panels, they demonstrate superior performance for fine-mapping in GWAS meta-analysis for AD and beyond.
 
 ### Functional Annotation Resources
 
-Our LDSC reference data, computed from ADSP LD references rather than default 1000 Genomes panels, includes [LD scores](#ldsc_ld_scores) optimized for AD heritability estimation, [stratified LDSC annotations](#ldsc_sldsc_annotations) for functional enrichment across brain-specific elements, and [pre-processed GWAS summary statistics](#ldsc_gwas_munged). Additionally, [functional enrichment annotations](#functional_enrichment_annotations) in UCSC bed format encompass regulatory elements, cell-type-specific markers, and brain-specific annotations relevant to neurodegeneration.
+Our LDSC reference data, computed from ADSP LD references rather than default 1000 Genomes panels, includes [LD scores](xqtl-data/reference_data/) optimized for AD heritability estimation, [stratified LDSC annotations](xqtl-data/reference_data/) for functional enrichment across brain-specific elements, and [pre-processed GWAS summary statistics](xqtl-data/reference_data/). Additionally, [functional enrichment annotations](xqtl-data/reference_data/) in UCSC bed format encompass regulatory elements, cell-type-specific markers, and brain-specific annotations relevant to neurodegeneration.
 
 ### Protocols and Tutorials
 
-Comprehensive [xQTL analysis protocols and tutorials](#xqtl_protocol_tutorial) provide instructions with example datasets, guiding users through QTL mapping, fine-mapping, colocalization, and integrative analyses.
+Comprehensive [xQTL analysis protocols and tutorials](https://statfungen.github.io/xqtl-protocol/README.html) provide instructions with example datasets, guiding users through QTL mapping, fine-mapping, colocalization, and integrative analyses.
 
 ## Data Format and Column Descriptions
 
 All exported bed files follow standardized formats with consistent column definitions. See our [file and format description page](xqtl_resource_format) for detailed specifications.
+
+
+## Synapse Data Access
+
+All FunGen-xQTL flagship paper datasets are hosted on [Synapse](https://www.synapse.org/). The table below summarizes the primary resource folders.
+
+| Resource | Description | Synapse ID |
+|----------|-------------|------------|
+| Fine-mapping models | SuSiE-RSS / fSuSiE model objects (.rds) for all xQTL datasets | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| Colocalization models | ColocBoost multi-context + SuSiE-coloc pairwise models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
+| TWAS weight models | Pre-trained TWAS weight models (eQTL, sQTL, pQTL, gpQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
+| qTWAS models | Quantile TWAS weight models | [syn69670611](https://www.synapse.org/Synapse:syn69670611) |
+| AD GWAS fine-mapping | SuSiE-RSS fine-mapping results for AD GWAS | [syn69670625](https://www.synapse.org/Synapse:syn69670625) |
+| AD GWAS colocalization results | Cross-GWAS colocalization summary statistics | [syn69696846](https://www.synapse.org/Synapse:syn69696846) |
+| AD GWAS colocalization models | Cross-GWAS colocalization model objects | [syn69865824](https://www.synapse.org/Synapse:syn69865824) |
+| AD–xQTL colocalization results | AD GWAS × xQTL colocalization summary statistics | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |
+| AD–xQTL colocalization models | AD GWAS × xQTL colocalization model objects | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |
+| AD–xQTL colocalization (additional) | Supplementary AD–xQTL colocalization results | [syn69670626](https://www.synapse.org/Synapse:syn69670626) |
+| cTWAS input files | Causal TWAS formatted inputs for AD | [syn70095142](https://www.synapse.org/Synapse:syn70095142) |
+| cTWAS results | Causal TWAS output results for AD | [syn70095143](https://www.synapse.org/Synapse:syn70095143) |
+| ADSP LD reference (genotypes) | 16,905 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
+| ADSP LD reference (LD matrices) | Pre-computed LD matrices for fine-mapping | [syn69670652](https://www.synapse.org/Synapse:syn69670652) |
 
 ## Citation and Usage
 

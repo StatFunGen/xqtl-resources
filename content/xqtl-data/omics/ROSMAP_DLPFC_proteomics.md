@@ -14,13 +14,15 @@ Zining Qi
 
 ## Study Overview
 
-- Grant number : R01 AG076901 (temporary using Gao's grant number)
-- Publication : 
-- Acknowledgement : 
+- PI : David A. Bennett (Rush University Medical Center, Chicago, IL, USA)
+- Grant number : U01AG046152, R01AG048015, U01AG061356, R01AG15819, U01AG061359
+- Publication : PMID: 30084846
+- Genetics Publication : PMID: 40407102
+- Acknowledgement : Study data were generated from postmortem brain tissue provided by the Religious Orders Study and Rush Memory and Aging Project (ROSMAP) cohort at Rush Alzheimer’s Disease Center, Rush University Medical Center, Chicago.
 - Study name : ROSMAP DLPFC protein expression
 - Study Description : Performed on 596 ROSMAP proteomics samples via the ADSP FGC xQTL pipeline. The output format is prepared for pQTL analysis.
 - Disease : Alzheimer’s Disease
-- Data Citation : ROSMAP WGS data: https://www.synapseorg#!Synapse:syn17015098
+- Data Citation : Omics data: [syn17015098](https://www.synapse.org/Synapse:syn17015098); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
 
 ## Dataset Description
 
@@ -88,3 +90,14 @@ Age at death, sex and pmi covariates will be extract from ROSMAP raw data:
 ### Other procedures / files
 1. [TADB window list](https://github.com/cumc/fungen-xqtl-analysis/blob/main/resource/extended_cis_before_winsorize.tsv)
 2. [AD gene list](https://github.com/cumc/fungen-xqtl-analysis/blob/main/resource/combined_AD_genes.csv) includes 76 AD genes for trans-QTL analysis.
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/ROSMAP_DLPFC_proteomics_qtl.md](../qtl/ROSMAP_DLPFC_proteomics_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

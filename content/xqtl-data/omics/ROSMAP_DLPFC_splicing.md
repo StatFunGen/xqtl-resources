@@ -15,13 +15,15 @@ Xuanhe Chen; Shrishtee Kandoi
 
 ## Study Overview
 
-- Grant number : R01 AG076901 (temporary using Gao's grant number)
-- Publication : 
-- Acknowledgement : 
+- PI : David A. Bennett (Rush University Medical Center, Chicago, IL, USA)
+- Grant number : U01AG046152, R01AG048015, U01AG061356, R01AG15819, U01AG061359
+- Publication : PMID: 30084846
+- Genetics Publication : PMID: 40407102
+- Acknowledgement : Study data were generated from postmortem brain tissue provided by the Religious Orders Study and Rush Memory and Aging Project (ROSMAP) cohort at Rush Alzheimer’s Disease Center, Rush University Medical Center, Chicago.
 - Study name : splicing phenotype processing using ROSMAP DLPFC RNAseq Bulk Brain
 - Study Description : From STAR alignment output of ROSMAP DLPFC RNAseq Bulk Brain data (sample size 1141), we used leafCutter package to find intron usage ratio data for intron clusters and psichomics package to find percent spliced in (PSI) values for different alternative splicing events. All phenotype processing was done using the ADSP FGC xQTL pipeline and the output format is prepared for sQTL analysis.
 - Disease : Alzheimer’s Disease
-- Data Citation : ROSMAP WGS data: https://www.synapse.org/#!Synapse:syn10901595. ROSMAP DLPFC RNAseq Bulk Brain: https://www.synapse.org/#!Synapse:syn3388564
+- Data Citation : Omics data: [syn3388564](https://www.synapse.org/Synapse:syn3388564); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
 - Additional study information : 
 
 ## Dataset Details
@@ -66,3 +68,14 @@ The splicing related phenotype data were generated via the following workflow: [
 ### Exploratory analysis
 
 1. [Data_Information.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Zhang_BU/ROSMAP_DLPFC/Data_Information.ipynb) provides data description and sample overlap checking between ROSMAP DLPFC RNAseq Bulk Brain and ROSMAP WGS.
+
+## QTL Analysis
+QTL analysis for this dataset is documented in [../qtl/ROSMAP_DLPFC_splicing_qtl.md](../qtl/ROSMAP_DLPFC_splicing_qtl.md).
+
+Flagship paper analyses:
+- Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
+- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
+- AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+- AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
