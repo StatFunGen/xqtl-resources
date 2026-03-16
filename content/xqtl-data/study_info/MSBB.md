@@ -26,9 +26,9 @@ MSBB datasets were used in the following xQTL analyses in the FunGen-xQTL flagsh
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
-| Brain bulk RNA-seq | eQTL | [MSBB_brain_expression_qtl](../qtl/MSBB_brain_expression_qtl.md) |
-| Brain RNA splicing | sQTL | [MSBB_brain_splicing_qtl](../qtl/MSBB_brain_splicing_qtl.md) |
-| Brain methylation | mQTL | [MSBB_brain_methylation_qtl](../qtl/MSBB_brain_methylation_qtl.md) |
-| Brain proteomics | pQTL | [MSBB_proteomics_qtl](../qtl/MSBB_proteomics_qtl.md) |
+| Brain bulk RNA-seq | eQTL | [MSBB_brain_expression_qtl](../qtl/eQTL/MSBB_brain_expression_qtl.md) |
+| Brain RNA splicing | sQTL | [MSBB_brain_splicing_qtl](../qtl/sQTL/MSBB_brain_splicing_qtl.md) |
+| Brain methylation | mQTL | [MSBB_brain_methylation_qtl](../qtl/mQTL/MSBB_brain_methylation_qtl.md) |
+| Brain proteomics | pQTL | [MSBB_proteomics_qtl](../qtl/pQTL/MSBB_proteomics_qtl.md) |
 
 Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

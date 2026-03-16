@@ -12,24 +12,24 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 | Dataset | Brain Region / Cell Type | Method | Synapse |
 |---------|--------------------------|--------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_splicing_qtl) | Dorsolateral prefrontal cortex (bulk) | LeafCutter + tensorQTL | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [ROSMAP PCC](../ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
-| [ROSMAP AC](../ROSMAP_AC_splicing_qtl) | Anterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
-| [ROSMAP snuc (ISSAC)](../ROSMAP_snuc_splicing_qtl) | Single-nucleus (7 major + 95 subcell types) | ISSAC binomial GLMM | — |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_splicing_qtl) | Dorsolateral prefrontal cortex (bulk) | LeafCutter + tensorQTL | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [ROSMAP PCC](ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
+| [ROSMAP AC](ROSMAP_AC_splicing_qtl) | Anterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
+| [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing_qtl) | Single-nucleus (7 major + 95 subcell types) | ISSAC binomial GLMM | — |
 
 ### Brain Tissue — Other Cohorts
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [MSBB](../MSBB_brain_splicing_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC](../Knight_ADRC_brain_splicing_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_brain_splicing_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
+| [Knight ADRC](Knight_ADRC_brain_splicing_qtl) | Knight ADRC brain (WashU) | — |
 
 ### Blood / Peripheral Tissue
 
 | Dataset | Cohort / Tissue | Synapse |
 |---------|-----------------|---------|
-| [MAGENTA African American](../MAGENTA_AA_blood_splicing_qtl) | MAGENTA cohort, African American whole blood | — |
-| [MAGENTA Non-Hispanic White](../MAGENTA_NHW_blood_splicing_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
+| [MAGENTA African American](MAGENTA_AA_blood_splicing_qtl) | MAGENTA cohort, African American whole blood | — |
+| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_splicing_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
 
 ## Analyses Performed
 

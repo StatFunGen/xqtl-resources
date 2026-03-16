@@ -12,7 +12,7 @@ haQTL mapping was performed on H3K9ac ChIP-seq data from brain tissue using the 
 
 | Dataset | Cohort / Brain Region | Assay | Synapse |
 |---------|-----------------------|-------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl) | ROSMAP dorsolateral prefrontal cortex | H3K9ac ChIP-seq | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl) | ROSMAP dorsolateral prefrontal cortex | H3K9ac ChIP-seq | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 
 ## Analyses Performed
 

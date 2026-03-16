@@ -12,9 +12,9 @@ mQTL mapping was performed on EPIC or 450K array methylation data from brain tis
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_methylation_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [MSBB](../MSBB_brain_methylation_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC](../Knight_ADRC_brain_methylation_qtl) | Knight ADRC brain (WashU) | — |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_methylation_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [MSBB](MSBB_brain_methylation_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
+| [Knight ADRC](Knight_ADRC_brain_methylation_qtl) | Knight ADRC brain (WashU) | — |
 
 ## Analyses Performed
 

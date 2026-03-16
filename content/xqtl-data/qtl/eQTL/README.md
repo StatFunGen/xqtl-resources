@@ -12,29 +12,29 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 | Dataset | Brain Region / Cell Type | Synapse |
 |---------|--------------------------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_expression_qtl) | Dorsolateral prefrontal cortex (bulk RNA-seq) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [ROSMAP PCC](../ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | — |
-| [ROSMAP AC](../ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | — |
-| [ROSMAP microglia](../ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | — |
-| [ROSMAP monocyte](../ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | — |
-| [ROSMAP snRNA-seq pseudo-bulk](../ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC + MIT) | — |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl) | Dorsolateral prefrontal cortex (bulk RNA-seq) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [ROSMAP PCC](ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | — |
+| [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | — |
+| [ROSMAP microglia](ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | — |
+| [ROSMAP monocyte](ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | — |
+| [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC + MIT) | — |
 
 ### Brain Tissue — Other Cohorts
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [MSBB](../MSBB_brain_expression_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [MiGA](../MiGA_brain_expression_qtl) | Microglia in Genomics and Aging (multi-brain region) | — |
-| [MetaBrain](../MetaBrain_brain_expression_qtl) | MetaBrain consortium (multi-brain region) | — |
-| [Knight ADRC](../Knight_ADRC_brain_expression_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_brain_expression_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
+| [MiGA](MiGA_brain_expression_qtl) | Microglia in Genomics and Aging (multi-brain region) | — |
+| [MetaBrain](MetaBrain_brain_expression_qtl) | MetaBrain consortium (multi-brain region) | — |
+| [Knight ADRC](Knight_ADRC_brain_expression_qtl) | Knight ADRC brain (WashU) | — |
 
 ### Blood / Peripheral Tissue
 
 | Dataset | Cohort / Tissue | Synapse |
 |---------|-----------------|---------|
-| [MAGENTA African American](../MAGENTA_AA_blood_expression_qtl) | MAGENTA cohort, African American whole blood | — |
-| [MAGENTA Non-Hispanic White](../MAGENTA_NHW_blood_expression_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
-| [STARNET macrophage](../STARNET_macrophage_qtl) | STARNET macrophage gene expression | — |
+| [MAGENTA African American](MAGENTA_AA_blood_expression_qtl) | MAGENTA cohort, African American whole blood | — |
+| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_expression_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
+| [STARNET macrophage](STARNET_macrophage_qtl) | STARNET macrophage gene expression | — |
 
 ## Analyses Performed
 
@@ -55,7 +55,7 @@ Separate multi-gene fine-mapping analyses for eQTLs jointly model nearby genes t
 
 ### Trans-eQTL Fine-Mapping
 
-Genome-wide trans-eQTL analyses identify distant regulatory relationships (>5 Mb or inter-chromosomal). Trans-eQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](../ROSMAP_DLPFC_expression_qtl).
+Genome-wide trans-eQTL analyses identify distant regulatory relationships (>5 Mb or inter-chromosomal). Trans-eQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl).
 
 ### TWAS / qTWAS Models
 
@@ -70,7 +70,7 @@ Multi-context colocalization using **ColocBoost** across cohorts and brain regio
 
 ### Single-Cell eQTL Prediction (scEEMs)
 
-The **scEEMs (Single-Cell Expression Expectation Maximization)** model predicts cell-type-specific eQTL effects from bulk data. CatBoost-based models trained on ROSMAP snRNA-seq pseudo-bulk data are described in [ROSMAP snRNA-seq pseudo-bulk](../ROSMAP_snRNAseq_pseudo_bulk_qtl).
+The **scEEMs (Single-Cell Expression Expectation Maximization)** model predicts cell-type-specific eQTL effects from bulk data. CatBoost-based models trained on ROSMAP snRNA-seq pseudo-bulk data are described in [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl).
 
 ## Data Access
 

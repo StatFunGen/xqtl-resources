@@ -12,16 +12,16 @@ pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_proteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [MSBB](../MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC brain](../Knight_ADRC_brain_proteomics_qtl) | Knight ADRC brain (WashU) | — |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_proteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [MSBB](MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
+| [Knight ADRC brain](Knight_ADRC_brain_proteomics_qtl) | Knight ADRC brain (WashU) | — |
 
 ### Cerebrospinal Fluid (CSF)
 
 | Dataset | Cohort | Synapse |
 |---------|--------|---------|
-| [Knight ADRC CSF](../Knight_ADRC_CSF_proteomics_qtl) | Knight ADRC CSF proteomics (WashU) | — |
-| [EFIGA CSF](../EFIGA_CSF_proteomics_qtl) | EFIGA cohort CSF proteomics | — |
+| [Knight ADRC CSF](Knight_ADRC_CSF_proteomics_qtl) | Knight ADRC CSF proteomics (WashU) | — |
+| [EFIGA CSF](EFIGA_CSF_proteomics_qtl) | EFIGA cohort CSF proteomics | — |
 
 ## Analyses Performed
 
@@ -38,7 +38,7 @@ Multi-gene fine-mapping for pQTLs jointly models co-regulated proteins in a geno
 
 ### Trans-pQTL Fine-Mapping
 
-Genome-wide trans-pQTL analyses identify distant protein regulatory relationships. Trans-pQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](../ROSMAP_DLPFC_proteomics_qtl).
+Genome-wide trans-pQTL analyses identify distant protein regulatory relationships. Trans-pQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_proteomics_qtl).
 
 ### TWAS / qTWAS Models
 

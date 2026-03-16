@@ -35,21 +35,21 @@ ROSMAP datasets were used in the following xQTL analyses in the FunGen-xQTL flag
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
-| DLPFC bulk RNA-seq | eQTL | [ROSMAP_DLPFC_expression_qtl](../qtl/ROSMAP_DLPFC_expression_qtl.md) |
-| PCC bulk RNA-seq | eQTL | [ROSMAP_PCC_expression_qtl](../qtl/ROSMAP_PCC_expression_qtl.md) |
-| AC bulk RNA-seq | eQTL | [ROSMAP_AC_expression_qtl](../qtl/ROSMAP_AC_expression_qtl.md) |
-| Monocyte RNA-seq | eQTL | [ROSMAP_monocyte_expression_qtl](../qtl/ROSMAP_monocyte_expression_qtl.md) |
-| Microglia RNA-seq | eQTL | [ROSMAP_microglia_expression_qtl](../qtl/ROSMAP_microglia_expression_qtl.md) |
-| snRNA-seq pseudo-bulk | eQTL | [ROSMAP_snRNAseq_pseudo_bulk_qtl](../qtl/ROSMAP_snRNAseq_pseudo_bulk_qtl.md) |
-| DLPFC RNA splicing | sQTL | [ROSMAP_DLPFC_splicing_qtl](../qtl/ROSMAP_DLPFC_splicing_qtl.md) |
-| PCC RNA splicing | sQTL | [ROSMAP_PCC_splicing_qtl](../qtl/ROSMAP_PCC_splicing_qtl.md) |
-| AC RNA splicing | sQTL | [ROSMAP_AC_splicing_qtl](../qtl/ROSMAP_AC_splicing_qtl.md) |
-| snRNA-seq splicing (ISSAC-seq) | sQTL | [ROSMAP_snuc_splicing_qtl](../qtl/ROSMAP_snuc_splicing_qtl.md) |
-| DLPFC methylation | mQTL | [ROSMAP_DLPFC_methylation_qtl](../qtl/ROSMAP_DLPFC_methylation_qtl.md) |
-| DLPFC H3K9ac ChIP-seq | haQTL | [ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl](../qtl/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md) |
-| snATAC-seq (CUIMC + MIT) | caQTL | [ROSMAP_snuc_caQTL_qtl](../qtl/ROSMAP_snuc_caQTL_qtl.md) |
-| DLPFC proteomics | pQTL | [ROSMAP_DLPFC_proteomics_qtl](../qtl/ROSMAP_DLPFC_proteomics_qtl.md) |
-| DLPFC glycoproteomics | gpQTL | [ROSMAP_DLPFC_glycoproteomics_qtl](../qtl/ROSMAP_DLPFC_glycoproteomics_qtl.md) |
-| Brain metabolomics | metaQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/ROSMAP_DLPFC_metabolomics_qtl.md) |
+| DLPFC bulk RNA-seq | eQTL | [ROSMAP_DLPFC_expression_qtl](../qtl/eQTL/ROSMAP_DLPFC_expression_qtl.md) |
+| PCC bulk RNA-seq | eQTL | [ROSMAP_PCC_expression_qtl](../qtl/eQTL/ROSMAP_PCC_expression_qtl.md) |
+| AC bulk RNA-seq | eQTL | [ROSMAP_AC_expression_qtl](../qtl/eQTL/ROSMAP_AC_expression_qtl.md) |
+| Monocyte RNA-seq | eQTL | [ROSMAP_monocyte_expression_qtl](../qtl/eQTL/ROSMAP_monocyte_expression_qtl.md) |
+| Microglia RNA-seq | eQTL | [ROSMAP_microglia_expression_qtl](../qtl/eQTL/ROSMAP_microglia_expression_qtl.md) |
+| snRNA-seq pseudo-bulk | eQTL | [ROSMAP_snRNAseq_pseudo_bulk_qtl](../qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md) |
+| DLPFC RNA splicing | sQTL | [ROSMAP_DLPFC_splicing_qtl](../qtl/sQTL/ROSMAP_DLPFC_splicing_qtl.md) |
+| PCC RNA splicing | sQTL | [ROSMAP_PCC_splicing_qtl](../qtl/sQTL/ROSMAP_PCC_splicing_qtl.md) |
+| AC RNA splicing | sQTL | [ROSMAP_AC_splicing_qtl](../qtl/sQTL/ROSMAP_AC_splicing_qtl.md) |
+| snRNA-seq splicing (ISSAC-seq) | sQTL | [ROSMAP_snuc_splicing_qtl](../qtl/sQTL/ROSMAP_snuc_splicing_qtl.md) |
+| DLPFC methylation | mQTL | [ROSMAP_DLPFC_methylation_qtl](../qtl/mQTL/ROSMAP_DLPFC_methylation_qtl.md) |
+| DLPFC H3K9ac ChIP-seq | haQTL | [ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl](../qtl/haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md) |
+| snATAC-seq (CUIMC + MIT) | caQTL | [ROSMAP_snuc_caQTL_qtl](../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md) |
+| DLPFC proteomics | pQTL | [ROSMAP_DLPFC_proteomics_qtl](../qtl/pQTL/ROSMAP_DLPFC_proteomics_qtl.md) |
+| DLPFC glycoproteomics | gpQTL | [ROSMAP_DLPFC_glycoproteomics_qtl](../qtl/gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md) |
+| Brain metabolomics | metaQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/metaQTL/ROSMAP_DLPFC_metabolomics_qtl.md) |
 
 Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

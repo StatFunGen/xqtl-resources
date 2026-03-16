@@ -12,7 +12,7 @@ gpQTL mapping was performed on glycopeptide-level mass spectrometry data from br
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_glycoproteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_glycoproteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 
 ## Analyses Performed
 
@@ -29,7 +29,7 @@ Multi-gene fine-mapping for gpQTLs jointly models co-regulated glycoproteins to 
 
 ### Trans-gpQTL Fine-Mapping
 
-Genome-wide trans-gpQTL analyses identify distant genetic influences on glycosylation patterns. Trans-gpQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](../ROSMAP_DLPFC_glycoproteomics_qtl).
+Genome-wide trans-gpQTL analyses identify distant genetic influences on glycosylation patterns. Trans-gpQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_glycoproteomics_qtl).
 
 ### TWAS / qTWAS Models
 

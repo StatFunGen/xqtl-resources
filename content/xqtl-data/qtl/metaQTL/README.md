@@ -12,21 +12,21 @@ metaQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfunge
 
 | Dataset | Cohort / Brain Region | Synapse |
 |---------|-----------------------|---------|
-| [ROSMAP DLPFC](../ROSMAP_DLPFC_metabolomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [Knight ADRC brain](../Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | — |
+| [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| [Knight ADRC brain](Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | — |
 
 ### Cerebrospinal Fluid (CSF)
 
 | Dataset | Cohort | Synapse |
 |---------|--------|---------|
-| [Knight ADRC CSF](../Knight_ADRC_CSF_metabolomics_qtl) | Knight ADRC CSF (WashU) | — |
+| [Knight ADRC CSF](Knight_ADRC_CSF_metabolomics_qtl) | Knight ADRC CSF (WashU) | — |
 
 ### Plasma
 
 | Dataset | Cohort | Synapse |
 |---------|--------|---------|
-| [EFIGA plasma](../EFIGA_plasma_metabolomics_qtl) | EFIGA cohort plasma metabolomics | — |
-| [WHICAP plasma (pilot)](../WHICAP_plasma_metabolomics_qtl) | Washington Heights–Inwood Columbia Aging Project pilot | — |
+| [EFIGA plasma](EFIGA_plasma_metabolomics_qtl) | EFIGA cohort plasma metabolomics | — |
+| [WHICAP plasma (pilot)](WHICAP_plasma_metabolomics_qtl) | Washington Heights–Inwood Columbia Aging Project pilot | — |
 
 ## Analyses Performed
 
@@ -39,7 +39,7 @@ Fine-mapping using **SuSiE-RSS** per metabolite, providing:
 
 ### Trans-metaQTL Fine-Mapping
 
-Genome-wide trans-metaQTL analyses identify distant genetic influences on metabolite levels. Trans-metaQTL results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](../ROSMAP_DLPFC_metabolomics_qtl).
+Genome-wide trans-metaQTL analyses identify distant genetic influences on metabolite levels. Trans-metaQTL results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl).
 
 ### Colocalization
 
