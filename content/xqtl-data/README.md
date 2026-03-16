@@ -1,6 +1,6 @@
 # FunGen-xQTL Data Catalog
 
-All datasets are available on the [FunGen-xQTL Synapse project](https://www.synapse.org/Synapse:syn72381203) ([syn72381203](https://www.synapse.org/Synapse:syn72381203)).
+All datasets are available on Synapse. Key folders: [variant & gene summary results](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
 
 |     |     |     |     |     |     |     |     |     |     |
 |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |

@@ -4,7 +4,7 @@ This repository contains 100 datasets developed by the ADSP Functional Genomics 
 
 Published at: https://statfungen.github.io/xqtl-resources/
 
-All datasets are hosted on Synapse: [FunGen-xQTL Project (syn72381203)](https://www.synapse.org/Synapse:syn72381203)
+All datasets are hosted on Synapse: [variant & gene summaries (syn69865684)](https://www.synapse.org/Synapse:syn69865684) · [xQTL models (syn69670588)](https://www.synapse.org/Synapse:syn69670588) · [raw QTL data (syn69670632)](https://www.synapse.org/Synapse:syn69670632) · [reference files (syn69670634)](https://www.synapse.org/Synapse:syn69670634)
 
 ## Dataset Categories
 

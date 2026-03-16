@@ -6,7 +6,7 @@ The **[Alzheimer's Disease Sequencing Project Functional Genomics Consortium (Fu
 ## Available Resources
 
 ### FunGen-xQTL
-The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. All datasets are hosted on Synapse at the [FunGen-xQTL project page (syn72381203)](https://www.synapse.org/Synapse:syn72381203).
+The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. All datasets are hosted on Synapse: [variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)).
 
 * **[xQTL Analysis and xQTL-GWAS Integration Results](xqtl_resource_description)** along with **[File Format Description](xqtl_resource_format)**
 * **[Study Cohorts](xqtl-data/study_info/)** - Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, MAGENTA, STARNET, EFIGA, WHICAP, and MetaBrain
@@ -31,7 +31,10 @@ Software resources implementing the xQTL analysis are also available:
 
 ## Data Access
 All datasets are available through controlled access via:
-- [Synapse Platform](https://www.synapse.org/Synapse:syn72381203) (primary repository — FunGen-xQTL project syn72381203)
+- [Synapse — variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684))
+- [Synapse — xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588))
+- [Synapse — raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632))
+- [Synapse — reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634))
 - [NIAGADS](https://www.niagads.org/) (genomics data)
 
 ---

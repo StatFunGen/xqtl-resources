@@ -1,6 +1,6 @@
 # QTL
 
-All QTL datasets are hosted on the [FunGen-xQTL Synapse project](https://www.synapse.org/Synapse:syn72381203) ([syn72381203](https://www.synapse.org/Synapse:syn72381203)).
+All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)) for raw summary statistics and [xQTL_GWAS_models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)) for fine-mapping, TWAS, and colocalization models.
 
 ## Browse by Modality
 
