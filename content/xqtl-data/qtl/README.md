@@ -1,5 +1,7 @@
 # QTL
 
+All QTL datasets are hosted on the [FunGen-xQTL Synapse project](https://www.synapse.org/Synapse:syn72381203) ([syn72381203](https://www.synapse.org/Synapse:syn72381203)).
+
 ## Browse by Modality
 
 * [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, MAGENTA, STARNET

@@ -1,5 +1,7 @@
 # FunGen-xQTL Data Catalog
 
+All datasets are available on the [FunGen-xQTL Synapse project](https://www.synapse.org/Synapse:syn72381203) ([syn72381203](https://www.synapse.org/Synapse:syn72381203)).
+
 |     |     |     |     |     |     |     |     |     |     |
 |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |
 | [A](#a) | [E](#e) | [F](#f) | [K](#k) | [M](#m) | [N](#n) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
