@@ -10,7 +10,7 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
 
 * **[xQTL Analysis and xQTL-GWAS Integration Results](xqtl_resource_description)** along with **[File Format Description](xqtl_resource_format)**
 * **[Study Cohorts](xqtl-data/study_info/)** - Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, MAGENTA, STARNET, EFIGA, WHICAP, and MetaBrain
-* **[GWAS Summary Statistics](xqtl-data/gwas/)** - Alzheimer's disease GWAS data from major studies (Bellenguez 2022, Kunkle 2019, Wightman 2021, Jansen 2021) and integrated AD fine-mapping and colocalization analyses
+* **[GWAS Summary Statistics](xqtl-data/gwas/)** - Alzheimer's disease GWAS data from major studies (Bellenguez 2022, Kunkle 2019, Wightman 2021, Jansen 2019) and integrated AD fine-mapping and colocalization analyses
 * **[Molecular Phenotypes](xqtl-data/omics/)** - Multi-omic data including:
   - Gene expression (bulk RNA-seq: ROSMAP DLPFC/PCC/AC/microglia/monocyte, MSBB, Knight ADRC, MetaBrain, MiGA, MAGENTA, STARNET)
   - Alternative splicing (bulk RNA-seq and single-nucleus with ISSAC method)

@@ -1,6 +1,6 @@
 # Alzheimer's Disease GWAS Summary Data (Jansen)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2021 Nature Genetics. This study uses proxy AD individuals from UK Biobank.
+The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics. This study uses proxy AD individuals from UK Biobank.
 
 ## Contact
 Oluwatosin Olayinka

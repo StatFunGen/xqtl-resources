@@ -47,7 +47,7 @@ Fine-mapping using **SuSiE-RSS** is performed per dataset and per molecular phen
 
 ### Multi-Context Fine-Mapping
 
-For ROSMAP (DLPFC, PCC, AC) and MSBB cohorts, **fSuSiE** integrates signals across multiple brain regions jointly to improve power and resolution. Multi-context results are deposited in [syn69670592](https://www.synapse.org/Synapse:syn69670592).
+For ROSMAP (DLPFC, PCC, AC) and MSBB cohorts, **mvSuSiE** (multivariate SuSiE with MASH prior) integrates signals across multiple brain regions jointly to improve power and resolution. Multi-context results are deposited in [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
 ### Multi-Gene Fine-Mapping
 
@@ -70,7 +70,7 @@ Multi-context colocalization using **ColocBoost** across cohorts and brain regio
 
 ### Single-Cell eQTL Prediction (scEEMs)
 
-The **scEEMs (Single-Cell Expression Expectation Maximization)** model predicts cell-type-specific eQTL effects from bulk data. CatBoost-based models trained on ROSMAP snRNA-seq pseudo-bulk data are described in [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl).
+The **scEEMs** model predicts cell-type-specific eQTL effects using a CatBoost binary classifier trained on 4,839 genomic features (TSS distance, ABC scores, baseline annotations, cell-type-specific annotations, deep learning variant effect predictions, and gene features) with leave-one-chromosome-out cross-validation. Models trained on ROSMAP snRNA-seq pseudo-bulk data are described in [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl).
 
 ## Data Access
 
