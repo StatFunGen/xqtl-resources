@@ -4,7 +4,7 @@ Splicing quantitative trait loci (sQTL) identify genetic variants that influence
 
 ## Overview
 
-sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** (Integrative Single-cell Splicing Analysis for Context) method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
+sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
 
 ## Available Datasets
 
@@ -43,14 +43,14 @@ Fine-mapping using **SuSiE-RSS** is applied per splicing phenotype (intron clust
 ### ISSAC — Single-Nucleus sQTL Method
 
 For ROSMAP snuc data, **ISSAC** implements:
-- **Metacell aggregation**: 23,143 major-cell-type and 87,936 subcell-type metacells from 3,177,748 nuclei (530 donors: CUIMC 424 + MIT 298)
+- **Metacell aggregation**: 23,143 metacells for 7 major cell types and 87,936 metacells for 67 retained subcell types, from 3,177,748 nuclei (530 unique donors from 722 specimens: CUIMC N=424, MIT N=298, 192 shared donors)
 - **Splice site usage quantification** with junctools (UMI-level collapsed)
 - **Binomial GLMM** sQTL mapping with PCG/REML for random effects
 - **Context-dependent sQTL** analyses: AD-biased (FDR < 0.01), sex-biased (FDR < 0.05), and cell-state-dependent
 
 ### Multi-Context Fine-Mapping
 
-For ROSMAP multi-region bulk sQTL, **fSuSiE** integrates splicing signals across DLPFC, PCC, and AC jointly. Multi-context fine-mapping results are at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
+For ROSMAP multi-region bulk sQTL, **mvSuSiE** (multivariate SuSiE with MASH prior) integrates splicing signals across DLPFC, PCC, and AC jointly. Multi-context fine-mapping results are at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
 ### TWAS / qTWAS Models
 
