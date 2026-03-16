@@ -14,7 +14,25 @@ The computational protocols generating these results are available at [xQTL Prot
 
 ### Molecular QTL Fine-mapping and Colocalization
 
-Our xQTL analyses span diverse brain regions and cell types, providing fine-mapped results for [expression QTLs (eQTL)](xqtl-data/qtl/), [splicing QTLs (sQTL)](xqtl-data/qtl/), [protein QTLs (pQTL)](xqtl-data/qtl/), [glycosylation QTLs (glycoQTL)](xqtl-data/qtl/), [methylation QTLs (mQTL)](xqtl-data/qtl/), [histone acetylation QTLs (haQTL)](xqtl-data/qtl/), and [chromatin accessibility QTLs (caQTL)](xqtl-data/qtl/) from single-context fine-mapping across multiple cohorts: ROS/MAP (Rush University, Columbia and MIT), Mount Sinai Brain Bank (MSBB), Knight ADRC (WashU), MiGA and STARNET. We provide [multi-context fine-mapping](https://www.synapse.org/Synapse:syn69670592) that integrates signals across brain regions for ROSMAP and MSBB cohorts, and [multi-gene fine-mapping](https://www.synapse.org/Synapse:syn69670592) with separate analyses for [eQTLs](https://www.synapse.org/Synapse:syn69670592) and [pQTLs](https://www.synapse.org/Synapse:syn69670592) that jointly model multiple genes. Additionally, trans-QTL fine-mapping identifies distant regulatory relationships for [trans-eQTLs](xqtl-data/qtl/), [trans-pQTLs](xqtl-data/qtl/), [trans-glycoQTLs](xqtl-data/qtl/) and [metabolome QTLs](xqtl-data/qtl/).
+Our xQTL analyses span diverse brain regions and cell types across multiple cohorts, providing fine-mapped results for the following modalities:
+
+- **[Expression QTLs (eQTL)](xqtl-data/qtl/eQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_expression_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_expression_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_expression_qtl), [ROSMAP microglia](xqtl-data/qtl/ROSMAP_microglia_expression_qtl), [ROSMAP monocyte](xqtl-data/qtl/ROSMAP_monocyte_expression_qtl), [ROSMAP snRNA-seq pseudo-bulk](xqtl-data/qtl/ROSMAP_snRNAseq_pseudo_bulk_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_expression_qtl), [MiGA](xqtl-data/qtl/MiGA_brain_expression_qtl), [MetaBrain](xqtl-data/qtl/MetaBrain_brain_expression_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_expression_qtl), [MAGENTA AA](xqtl-data/qtl/MAGENTA_AA_blood_expression_qtl), [MAGENTA NHW](xqtl-data/qtl/MAGENTA_NHW_blood_expression_qtl), [STARNET](xqtl-data/qtl/STARNET_macrophage_qtl)
+
+- **[Splicing QTLs (sQTL)](xqtl-data/qtl/sQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_splicing_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_splicing_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_splicing_qtl), [ROSMAP snuc](xqtl-data/qtl/ROSMAP_snuc_splicing_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_splicing_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_splicing_qtl), [MAGENTA AA](xqtl-data/qtl/MAGENTA_AA_blood_splicing_qtl), [MAGENTA NHW](xqtl-data/qtl/MAGENTA_NHW_blood_splicing_qtl)
+
+- **[Protein QTLs (pQTL)](xqtl-data/qtl/pQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_proteomics_qtl), [MSBB](xqtl-data/qtl/MSBB_proteomics_qtl), [Knight ADRC brain](xqtl-data/qtl/Knight_ADRC_brain_proteomics_qtl), [Knight ADRC CSF](xqtl-data/qtl/Knight_ADRC_CSF_proteomics_qtl), [EFIGA CSF](xqtl-data/qtl/EFIGA_CSF_proteomics_qtl)
+
+- **[Glycosylation QTLs (gpQTL)](xqtl-data/qtl/gpQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_glycoproteomics_qtl)
+
+- **[Methylation QTLs (mQTL)](xqtl-data/qtl/mQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_methylation_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_methylation_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_methylation_qtl)
+
+- **[Histone acetylation QTLs (haQTL)](xqtl-data/qtl/haQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl)
+
+- **[Chromatin accessibility QTLs (caQTL)](xqtl-data/qtl/caQTL):** [ROSMAP snuc](xqtl-data/qtl/ROSMAP_snuc_caQTL_qtl)
+
+- **[Metabolome QTLs (metaQTL)](xqtl-data/qtl/metaQTL):** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_metabolomics_qtl), [Knight ADRC brain](xqtl-data/qtl/Knight_ADRC_brain_metabolomics_qtl), [Knight ADRC CSF](xqtl-data/qtl/Knight_ADRC_CSF_metabolomics_qtl), [EFIGA plasma](xqtl-data/qtl/EFIGA_plasma_metabolomics_qtl), [WHICAP plasma](xqtl-data/qtl/WHICAP_plasma_metabolomics_qtl)
+
+We provide [multi-context fine-mapping](https://www.synapse.org/Synapse:syn69670592) that integrates signals across brain regions for ROSMAP and MSBB cohorts, and [multi-gene fine-mapping](https://www.synapse.org/Synapse:syn69670592) with separate analyses for eQTLs and pQTLs that jointly model multiple genes. Additionally, trans-QTL fine-mapping identifies distant regulatory relationships for trans-eQTLs ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_expression_qtl)), trans-pQTLs ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_proteomics_qtl)), trans-gpQTLs ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_glycoproteomics_qtl)), and metabolome QTLs ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_metabolomics_qtl)).
 
 To understand relationships between molecular traits, we conducted colocalization analyses including [multi-context colocalization](https://www.synapse.org/Synapse:syn69670597) using [ColocBoost](https://www.medrxiv.org/content/10.1101/2025.04.17.25326042v1) across cohorts ([syn69670597](https://www.synapse.org/Synapse:syn69670597)) and [pairwise colocalization](https://www.synapse.org/Synapse:syn69670597) using SuSiE-COLOC to specifically examine [caQTL-eQTL](https://www.synapse.org/Synapse:syn69670597) relationships.
 
@@ -39,7 +57,7 @@ For immediate use by researchers, we provide comprehensive summary tables:
 
 ### Single-Cell Expression Prediction
 
-We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](xqtl-data/qtl/) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data. 
+We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](xqtl-data/qtl/ROSMAP_snRNAseq_pseudo_bulk_qtl) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data. 
 
 ### Variant-to-Function Prediction
 
@@ -49,7 +67,17 @@ The [cv2F (causal variant to function) scores](https://www.biorxiv.org/content/1
 
 ### QTL and GWAS Statistical Models
 
-We provide complete statistical models as RDS files for researchers to conduct custom analyses or integrate with other complex traits and diseases. Fine-mapping models are available for [eQTL](https://www.synapse.org/Synapse:syn69670592), [pQTL](https://www.synapse.org/Synapse:syn69670592), [glycoQTL](https://www.synapse.org/Synapse:syn69670592), and [sQTL](https://www.synapse.org/Synapse:syn69670592) ([syn69670592](https://www.synapse.org/Synapse:syn69670592)). [Colocalization models](https://www.synapse.org/Synapse:syn69670597) preserve the probabilistic framework for identifying shared genetic signals, allowing exploration of alternative colocalization thresholds and model assessment ([syn69670597](https://www.synapse.org/Synapse:syn69670597)). TWAS models are provided for [eQTL](https://www.synapse.org/Synapse:syn69670600), [pQTL](https://www.synapse.org/Synapse:syn69670600), [glycoQTL](https://www.synapse.org/Synapse:syn69670600), and [sQTL](https://www.synapse.org/Synapse:syn69670600) ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), along with qTWAS models for [eQTL](https://www.synapse.org/Synapse:syn69670611), [pQTL](https://www.synapse.org/Synapse:syn69670611), [glycoQTL](https://www.synapse.org/Synapse:syn69670611), and [sQTL](https://www.synapse.org/Synapse:syn69670611) ([syn69670611](https://www.synapse.org/Synapse:syn69670611)) that incorporate non-linear QTL effects.
+We provide complete statistical models as RDS files for researchers to conduct custom analyses or integrate with other complex traits and diseases. Fine-mapping models ([syn69670592](https://www.synapse.org/Synapse:syn69670592)) are available for:
+
+- **eQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_expression_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_expression_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_expression_qtl), [ROSMAP microglia](xqtl-data/qtl/ROSMAP_microglia_expression_qtl), [ROSMAP monocyte](xqtl-data/qtl/ROSMAP_monocyte_expression_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_expression_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_expression_qtl), [MiGA](xqtl-data/qtl/MiGA_brain_expression_qtl), [MetaBrain](xqtl-data/qtl/MetaBrain_brain_expression_qtl)
+- **sQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_splicing_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_splicing_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_splicing_qtl), [ROSMAP snuc](xqtl-data/qtl/ROSMAP_snuc_splicing_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_splicing_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_splicing_qtl)
+- **pQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_proteomics_qtl), [MSBB](xqtl-data/qtl/MSBB_proteomics_qtl), [Knight ADRC brain](xqtl-data/qtl/Knight_ADRC_brain_proteomics_qtl)
+- **gpQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_glycoproteomics_qtl)
+- **mQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_methylation_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_methylation_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_methylation_qtl)
+- **haQTL:** [ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl)
+- **caQTL:** [ROSMAP snuc](xqtl-data/qtl/ROSMAP_snuc_caQTL_qtl)
+
+[Colocalization models](https://www.synapse.org/Synapse:syn69670597) preserve the probabilistic framework for identifying shared genetic signals, allowing exploration of alternative colocalization thresholds and model assessment ([syn69670597](https://www.synapse.org/Synapse:syn69670597)). TWAS weight models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and qTWAS models ([syn69670611](https://www.synapse.org/Synapse:syn69670611)) are provided for eQTL ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_expression_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_expression_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_expression_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_expression_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_expression_qtl)), pQTL ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_proteomics_qtl), [MSBB](xqtl-data/qtl/MSBB_proteomics_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_proteomics_qtl)), gpQTL ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_glycoproteomics_qtl)), and sQTL ([ROSMAP DLPFC](xqtl-data/qtl/ROSMAP_DLPFC_splicing_qtl), [ROSMAP PCC](xqtl-data/qtl/ROSMAP_PCC_splicing_qtl), [ROSMAP AC](xqtl-data/qtl/ROSMAP_AC_splicing_qtl), [MSBB](xqtl-data/qtl/MSBB_brain_splicing_qtl), [Knight ADRC](xqtl-data/qtl/Knight_ADRC_brain_splicing_qtl)), incorporating non-linear QTL effects.
 
 ### Alzheimer's Disease Analysis Models
 

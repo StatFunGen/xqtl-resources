@@ -1,4 +1,4 @@
-# HIHG genotype data 
+# MAGENTA genotype data 
 
 ## Contact
 

@@ -1,4 +1,4 @@
-# HIHG African American blood alternative splicing
+# MAGENTA African American blood alternative splicing
 
 ## Contact
 

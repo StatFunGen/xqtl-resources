@@ -1,4 +1,4 @@
-# HIHG Non-Hispanic White blood alternative splicing QTL
+# MAGENTA Non-Hispanic White blood alternative splicing QTL
 
 ## Contact
 
