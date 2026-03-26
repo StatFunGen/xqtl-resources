@@ -1,6 +1,6 @@
 # Alzheimer's Disease GWAS Summary Data (Jansen)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2021 Nature Genetics. This study uses proxy AD individuals from UK Biobank.
+The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics. This study uses proxy AD individuals from UK Biobank.
 
 ## Contact
 Oluwatosin Olayinka
@@ -17,6 +17,24 @@ This data is derived from summary statistics from the [Jansen et al.](https://ct
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Jansen/`
+- AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
+- Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
+- Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)
+
+## AD GWAS–xQTL Integration
+
+AD GWAS–xQTL colocalization results (ColocBoost): [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+
+AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
+
+AD colocalization models (all GWAS studies): [syn69670626](https://www.synapse.org/Synapse:syn69670626)
+
+### Integrated AD Gene-Level Summary
+
+AD risk genes prioritized by xQTL + GVC: [syn70095142](https://www.synapse.org/Synapse:syn70095142)
+
+AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synapse.org/Synapse:syn70095143)
+
 
 ## File Schema
 

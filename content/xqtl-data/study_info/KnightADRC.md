@@ -18,3 +18,16 @@ The Memory and Aging Project at the Charles F. And Joanne Knight Alzheimer's Dis
 ## Contact 
 
 Xuanhe
+
+## QTL Analyses
+
+Knight ADRC datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+
+| Dataset | Modality | QTL File |
+|---------|----------|----------|
+| Brain bulk RNA-seq | eQTL | [Knight_ADRC_brain_expression_qtl](../qtl/eQTL/Knight_ADRC_brain_expression_qtl.md) |
+| Brain RNA splicing | sQTL | [Knight_ADRC_brain_splicing_qtl](../qtl/sQTL/Knight_ADRC_brain_splicing_qtl.md) |
+| Brain methylation | mQTL | [Knight_ADRC_brain_methylation_qtl](../qtl/mQTL/Knight_ADRC_brain_methylation_qtl.md) |
+| Brain proteomics | pQTL | [Knight_ADRC_brain_proteomics_qtl](../qtl/pQTL/Knight_ADRC_brain_proteomics_qtl.md) |
+
+Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

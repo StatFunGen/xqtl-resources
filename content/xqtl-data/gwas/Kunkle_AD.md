@@ -19,6 +19,24 @@ Oluwatosin Olayinka
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Kunkle/`
+- AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
+- Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
+- Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)
+
+## AD GWAS–xQTL Integration
+
+AD GWAS–xQTL colocalization results (ColocBoost): [syn69865816](https://www.synapse.org/Synapse:syn69865816)
+
+AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
+
+AD colocalization models (all GWAS studies): [syn69670626](https://www.synapse.org/Synapse:syn69670626)
+
+### Integrated AD Gene-Level Summary
+
+AD risk genes prioritized by xQTL + GVC: [syn70095142](https://www.synapse.org/Synapse:syn70095142)
+
+AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synapse.org/Synapse:syn70095143)
+
  
 ## Download source
 This data is derived from summary statistics from the [Kunkle et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST007001-GCST008000/GCST007511/Kunkle_etal_Stage1_results.txt) Nature Genetics paper.

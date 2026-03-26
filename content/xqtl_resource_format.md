@@ -102,12 +102,12 @@ The following table catalogs all fine-mapped QTL and AD GWAS integration results
 | eQTL | ROSMAP | DeJager_PCC | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_DeJager_eQTL_PCC.exported.toploci.bed.gz |
 | eQTL | ROSMAP | DeJager_monocyte | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_DeJager_eQTL_monocyte.exported.toploci.bed.gz |
 | pQTL | ROSMAP | DeJager | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_DeJager_pQTL.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_Ast | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Ast.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_Exc | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Exc.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_Inh | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Inh.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_Mic | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Mic.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_OPC | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_OPC.exported.toploci.bed.gz |
-| eQTL | ROSMAP | Kelli_Oli | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Oli.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_Ast | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Ast.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_Exc | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Exc.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_Inh | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Inh.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_Mic | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Mic.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_OPC | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_OPC.exported.toploci.bed.gz |
+| eQTL | ROSMAP | Kellis_Oli | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_Kellis_eQTL_Oli.exported.toploci.bed.gz |
 | eQTL | ROSMAP | mega_Ast | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_mega_eQTL_Ast.exported.toploci.bed.gz |
 | eQTL | ROSMAP | mega_Exc | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_mega_eQTL_Exc.exported.toploci.bed.gz |
 | eQTL | ROSMAP | mega_Inh | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_mega_eQTL_Inh.exported.toploci.bed.gz |
@@ -132,8 +132,8 @@ The following table catalogs all fine-mapped QTL and AD GWAS integration results
 | QTL & GWAS | MSBB & AD | AD_xQTL_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/AD_xQTL_MSBB_colocboost_export_release_sorted.bed.gz |
 | QTL | KNIGHT | xQTL_only_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/xqtl_only_KNIGHT_colocboost_export_release_sorted.bed.gz |
 | QTL & GWAS | KNIGHT & AD | AD_xQTL_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/AD_xQTL_KNIGHT_colocboost_export_release_sorted.bed.gz |
-| QTL | MIGA | xQTL_only_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz |
-| QTL & GWAS | MIGA & AD | AD_xQTL_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz |
+| QTL | MiGA | xQTL_only_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz |
+| QTL & GWAS | MiGA & AD | AD_xQTL_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz |
 | GWAS | AD | AD_meta_colocalization | multi_context_colocalization | analysis_result/ColocBoost/export/summary/ad_meta_colocboost_export_filtered.bed.gz |
 | Gene & GWAS | ROSMAP & MSBB & AD | - | TWAS | analysis_result/twas/AD/export/summary/FunGen_twas.exported.bed.gz |
 | Gene & GWAS | ROSMAP & AD | - | cTWAS | analysis_result/ctwas/export/summary/FunGen_ctwas.exported.bed.gz |
@@ -142,15 +142,15 @@ The following table catalogs all fine-mapped QTL and AD GWAS integration results
 | mQTL     | ROSMAP      | DLPFC          | single_context_finemapping (fSuSiE) | analysis_result/finemapping_twas/fsusie/export/summary/context_specific/ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz  |
 | mQTL     | KNIGHT  | Brain             | single_context_finemapping (fSuSiE) | analysis_result/finemapping_twas/fsusie/export/summary/context_specific/KnightADRC_mQTL.exported.toploci.bed.gz    |
 | mQTL     | MSBB        | -              | single_context_finemapping (fSuSiE) | analysis_result/finemapping_twas/fsusie/export/summary/context_specific/MSBB_mQTL.exported.toploci.bed.gz         |
-| snATAC   | ROSMAP      | Kelis_OPC       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_OPC.exported.toploci.bed.gz                  |
-| snATAC   | ROSMAP      | Kelis_Exc       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_Exc.exported.toploci.bed.gz                  |
-| snATAC   | ROSMAP      | Kelis_Ast       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_Ast.exported.toploci.bed.gz                  |
-| snATAC   | ROSMAP      | Kelis_Oli       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_Oli.exported.toploci.bed.gz                  |
-| snATAC   | ROSMAP      | Kelis_Mic       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_Mic.exported.toploci.bed.gz                  |
-| snATAC   | ROSMAP      | Kelis_Inh       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kelis_Inh.exported.toploci.bed.gz                  |
-| snATAC  & AD   | ROSMAP & AD      | Kelis Celltypes      | pairwise_colocalization | analysis_result/coloc/fsusie_AD_coloc/snATAC_Kelis_AD_coloc_export_filtered.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_OPC       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_OPC.exported.toploci.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_Exc       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_Exc.exported.toploci.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_Ast       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_Ast.exported.toploci.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_Oli       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_Oli.exported.toploci.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_Mic       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_Mic.exported.toploci.bed.gz                  |
+| snATAC   | ROSMAP      | Kellis_Inh       | single_context_finemapping (fSuSiE) | analysis_result/snatac_fsusie/top_loci/context_specific/ROSMAP_snATAC_Kellis_Inh.exported.toploci.bed.gz                  |
+| snATAC  & AD   | ROSMAP & AD      | Kellis Celltypes      | pairwise_colocalization | analysis_result/coloc/fsusie_AD_coloc/snATAC_Kellis_AD_coloc_export_filtered.bed.gz                  |
 | Bulk mQTL and haQTL  & AD   | ROSMAP & AD      | Brain      | pairwise_colocalization | analysis_result/coloc/fsusie_AD_coloc/bulk_fsusie_AD_coloc_export_filtered.bed.gz                  |
-| snATAC  & Gene   | ROSMAP      | Kelis Celltypes      | pairwise_colocalization | analysis_result/coloc/fsusie_AD_coloc/snatac_ROSMAP.coloc.tsv.gz                  |
+| snATAC  & Gene   | ROSMAP      | Kellis Celltypes      | pairwise_colocalization | analysis_result/coloc/fsusie_AD_coloc/snatac_ROSMAP.coloc.tsv.gz                  |
 
 * AD_xQTL_colocalization results include "AD_Bellenguez_2022", "AD_Wightman_Excluding23andMe_2021", "AD_Wightman_ExcludingUKBand23andME_2021", "AD_Kunkle_Stage1_2019", "AD_Wightman_Full_2021"
 
