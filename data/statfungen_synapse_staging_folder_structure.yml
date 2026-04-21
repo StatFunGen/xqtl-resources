@@ -61,13 +61,13 @@ variant_gene_summary:
           - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-        mQTL: # not uploaded
+        mQTL:
           - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
           - KnightADRC_mQTL.exported.toploci.bed.gz
           - MSBB_mQTL.exported.toploci.bed.gz
-        haQTL: # not uploaded
+        haQTL:
           - ROSMAP_DLPFC_haQTL.exported.toploci.bed.gz
-        caQTL: # not uploaded
+        caQTL:
           - ROSMAP_snATAC_MIT_OPC.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Exc.exported.toploci.bed.gz
           - ROSMAP_snATAC_MIT_Ast.exported.toploci.bed.gz
@@ -169,12 +169,10 @@ variant_gene_summary:
         - xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz
       pairwise_colocalization:
         bulk_mQTL_haQTL_AD: 
-          - bulk_fsusie_AD_coloc_export_filtered.bed.gz # not uploaded
+          - bulk_fsusie_AD_coloc_export_filtered.bed.gz
         caQTL_AD:
-          - snATAC_MIT_AD_coloc_export_filtered.bed.gz # not uploaded
-        caQTL_eQTL: # not uploaded
-          # FIXME: this is not yet bed.gz exported format. And the file name is also not informative.
-          # We need Hao Sun to fix this
+          - snATAC_MIT_AD_coloc_export_filtered.bed.gz
+        caQTL_eQTL:
           - snatac_ROSMAP.coloc.tsv.gz
   AD_loci_summary:
     AD_finemapping:
@@ -198,7 +196,7 @@ variant_gene_summary:
       TWAS_MR: 
         - FunGen_twas.exported.bed.gz 
       cTWAS:
-        - FunGen_ctwas.exported.bed.gz # not upload
+        - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary:
     - AD_loci_unified_cs95orColocs.csv.gz
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
@@ -785,46 +783,40 @@ xQTL_SCEEM_scores:
       - predictions_OPC_mega_eQTL_22.tsv.gz
       - predictions_OPC_mega_eQTL_22.tsv.gz.tbi
 
-xQTL_GWAS_models: # cold storage: bucket-to-bucket transfer by William - pending
+xQTL_GWAS_models:
   xQTL_models:
     finemapping_models:
       single_context:
         KNIGHT_eQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         KNIGHT_pQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         MetaBrain:
-          export: []
-          fine_mapping: []
+          - RDS_files
         MiGA_eQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         MSBB_eQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         MSBB_pQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         MSBB_sQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         ROSMAP_eQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         ROSMAP_pQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         ROSMAP_sQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
         STARNET_eQTL:
-          export: []
-          fine_mapping: []
+          - RDS_files
+      trans:
+        eQTL: []
+        pQTL: []
+        glycoQTL: []
+        metabolome: []
     colocalization_models:
       - RDS_files
-    TWAS_models: # hot storage: bucket-to-bucket transfer by William
+    TWAS_models:
       single_context:
         KNIGHT_eQTL:
           - RDS_files
@@ -841,46 +833,53 @@ xQTL_GWAS_models: # cold storage: bucket-to-bucket transfer by William - pending
         MSBB_sQTL:
           - RDS_files
         ROSMAP_eQTL:
-          - RDS_files
+          mega:
+            - RDS_files
+          Kellis:
+            - RDS_files
+          CUIMC1:
+            - RDS_files
         ROSMAP_pQTL:
           - RDS_files
         ROSMAP_sQTL:
-          - RDS_files
+          LeafCutter2:
+            - RDS_files
         STARNET_eQTL:
           - RDS_files
-    qTWAS_models:
-      eQTL:
-        - RDS_files
-      pQTL:
-        - RDS_files
-      glycoQTL:
-        - RDS_files
-      sQTL:
-        - RDS_files
+      multi_context:
+        ROSMAP_CUIMC1:
+          - RDS_files
+        ROSMAP_DeJager:
+          - RDS_files
+        MSBB_eQTL:
+          - RDS_files
   AD_GWAS_models:
     AD_fine_mapping:
       - RDS_files
     AD_colocalization:
       - RDS_files
+    AD_TWAS_association:
+      - TSV_files
   AD_xQTL_integration:
     AD_xQTL_colocalization_models:
       - RDS_files
     AD_cTWAS_input:
       - RDS_files
+    cTWAS_results:
+      M_cTWAS:
+        - TSV_files
+      single_group_cTWAS:
+        - TSV_files
 
 xQTL_data:
   xQTL_LR:
     R_lm_residual_sumstats:
-      # For this part please follow exactly how we organize the xQTL finemapping models
       - RDS_files
     tensorQTL_sumstats:
-      # For this part let's follow exactly how it is currently organized on the cloud
       - UCSC_bed.gz
   xQTL_QR:
-    # For this part let's follow exactly how it is currently organized on the cloud
     - UCSC_bed.gz
   xQTL_interaction:
-    # For this part let's follow exactly how it is currently organized on the cloud
     - UCSC_bed.gz
   xQTL_GLMM:
     major:
@@ -973,10 +972,8 @@ xQTL_data:
 reference_files:
   ADSP_LD_reference_data:
     EUR:
-      # For this we follow exactly the contents currently in other repos on synapse
       - xz_files_with_meta_data_in_bim_format
   LDSC_reference_data:
-    # Anjing can take care of this part with you
     ld_scores:
       - Misc_file_formats
     sldsc_annotations:
@@ -986,7 +983,6 @@ reference_files:
   functional_enrichment_annotations:
     - UCSC_bed.gz
   xQTL_protocol_tutorial:
-    # For this let's follow exactly Frank's organization
     - Miscellaneous_protocol_and_toy_example_data
 
 manuscript:
