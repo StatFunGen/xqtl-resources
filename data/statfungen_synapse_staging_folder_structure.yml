@@ -180,6 +180,7 @@ variant_gene_summary:
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
           - MSBB_pQTL_BM36.trans.top_loci.bed.gz     
           - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_pQTL.trans.top_loci.bed.gz
         glycoQTL:
           - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
