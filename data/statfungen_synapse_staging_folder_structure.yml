@@ -4,76 +4,76 @@ variant_gene_summary:
     xQTL_finemapping:
       single_context_finemapping:
         eQTL:
-          - Knight_eQTL_brain.exported.toploci.bed.gz
-          - BM_10_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_22_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_36_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_44_MSBB_eQTL.exported.toploci.bed.gz
-          - Metabrain_Basalganglia.exported.toploci.bed.gz
-          - Metabrain_Cerebellum.exported.toploci.bed.gz
-          - Metabrain_Cortex.exported.toploci.bed.gz
-          - Metabrain_Hippocampus.exported.toploci.bed.gz
-          - Metabrain_Spinalcord.exported.toploci.bed.gz
-          - MiGA_GFM_eQTL.exported.toploci.bed.gz
-          - MiGA_GTS_eQTL.exported.toploci.bed.gz
-          - MiGA_SVZ_eQTL.exported.toploci.bed.gz
-          - MiGA_THA_eQTL.exported.toploci.bed.gz
-          - AC_DeJager_eQTL.exported.toploci.bed.gz
-          - Ast_10_MIT_eQTL.exported.toploci.bed.gz
-          - Ast_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Ast_MIT_eQTL.exported.toploci.bed.gz
-          - Ast_mega_eQTL.exported.toploci.bed.gz
-          - DLPFC_DeJager_eQTL.exported.toploci.bed.gz
-          - Exc_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Exc_MIT_eQTL.exported.toploci.bed.gz
-          - Exc_mega_eQTL.exported.toploci.bed.gz
-          - Inh_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Inh_MIT_eQTL.exported.toploci.bed.gz
-          - Inh_mega_eQTL.exported.toploci.bed.gz
-          - Mic_12_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_13_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Mic_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_mega_eQTL.exported.toploci.bed.gz
-          - OPC_CUIMC1_eQTL.exported.toploci.bed.gz
-          - OPC_MIT_eQTL.exported.toploci.bed.gz
-          - OPC_mega_eQTL.exported.toploci.bed.gz
-          - Oli_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Oli_MIT_eQTL.exported.toploci.bed.gz
-          - Oli_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_monocyte_eQTL.exported.toploci.bed.gz
-          - STARNET_eQTL_Mac.exported.toploci.bed.gz
-          - PCC_DeJager_eQTL.exported.toploci.bed.gz
+          - Knight_eQTL_brain.cis.top_loci.bed.gz
+          - BM_10_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_22_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_36_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_44_MSBB_eQTL.cis.top_loci.bed.gz
+          - Metabrain_Basalganglia.cis.top_loci.bed.gz
+          - Metabrain_Cerebellum.cis.top_loci.bed.gz
+          - Metabrain_Cortex.cis.top_loci.bed.gz
+          - Metabrain_Hippocampus.cis.top_loci.bed.gz
+          - Metabrain_Spinalcord.cis.top_loci.bed.gz
+          - MiGA_GFM_eQTL.cis.top_loci.bed.gz
+          - MiGA_GTS_eQTL.cis.top_loci.bed.gz
+          - MiGA_SVZ_eQTL.cis.top_loci.bed.gz
+          - MiGA_THA_eQTL.cis.top_loci.bed.gz
+          - AC_DeJager_eQTL.cis.top_loci.bed.gz
+          - Ast_10_MIT_eQTL.cis.top_loci.bed.gz
+          - Ast_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Ast_MIT_eQTL.cis.top_loci.bed.gz
+          - Ast_mega_eQTL.cis.top_loci.bed.gz
+          - DLPFC_DeJager_eQTL.cis.top_loci.bed.gz
+          - Exc_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Exc_MIT_eQTL.cis.top_loci.bed.gz
+          - Exc_mega_eQTL.cis.top_loci.bed.gz
+          - Inh_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Inh_MIT_eQTL.cis.top_loci.bed.gz
+          - Inh_mega_eQTL.cis.top_loci.bed.gz
+          - Mic_12_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_13_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Mic_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_mega_eQTL.cis.top_loci.bed.gz
+          - OPC_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - OPC_MIT_eQTL.cis.top_loci.bed.gz
+          - OPC_mega_eQTL.cis.top_loci.bed.gz
+          - Oli_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Oli_MIT_eQTL.cis.top_loci.bed.gz
+          - Oli_mega_eQTL.cis.top_loci.bed.gz
+          - ROSMAP_monocyte_eQTL.cis.top_loci.bed.gz
+          - STARNET_eQTL_Mac.cis.top_loci.bed.gz
+          - PCC_DeJager_eQTL.cis.top_loci.bed.gz
         pQTL:
-          - Knight_pQTL_brain.exported.toploci.bed.gz
-          - MSBB_BM36_pQTL.exported.toploci.bed.gz
-          - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
+          - Knight_pQTL_brain.cis.top_loci.bed.gz
+          - MSBB_BM36_pQTL.cis.top_loci.bed.gz
+          - DLPFC_Bennett_pQTL.cis.top_loci.bed.gz
         glycoQTL:
-          - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
+          - DLPFC_Klein_gpQTL_adjusted.cis.top_loci.bed.gz
+          - DLPFC_Klein_gpQTL_unadjusted.cis.top_loci.bed.gz
         sQTL:
-          - ROSMAP_AC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_AC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_AC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_AC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_AC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_AC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
         mQTL:
-          - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
-          - KnightADRC_mQTL.exported.toploci.bed.gz
-          - MSBB_mQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
+          - KnightADRC_mQTL.cis.top_loci.bed.gz
+          - MSBB_mQTL.cis.top_loci.bed.gz
         haQTL:
-          - ROSMAP_DLPFC_haQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_haQTL.cis.top_loci.bed.gz
         caQTL:
-          - ROSMAP_snATAC_MIT_OPC.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Exc.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Ast.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Oli.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Mic.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Inh.exported.toploci.bed.gz
+          - ROSMAP_snATAC_MIT_OPC.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Exc.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Ast.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Oli.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Mic.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Inh.cis.top_loci.bed.gz
         consolidated:
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
@@ -89,34 +89,34 @@ variant_gene_summary:
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
           - mash_34_contexts_ed_bovy_1e3.pca.rds
-        - MSBB.exported.toploci.bed.gz
-        - ROSMAP.exported.toploci.bed.gz
+        - MSBB.cis.top_loci.bed.gz
+        - ROSMAP.cis.top_loci.bed.gz
         - consolidated:
           - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_gene_finemapping:
         eQTL:
-          - MSBB_BM_10_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_22_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_36_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_44_eQTL.exported.toploci.bed.gz
-          - ROSMAP_AC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Ast_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Ast_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Exc_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Exc_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Inh_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Inh_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Mic_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Mic_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_OPC_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_OPC_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Oli_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Oli_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_PCC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_DLPFC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_monocyte_ROSMAP_eQTL.exported.toploci.bed.gz
+          - MSBB_BM_10_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_22_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_36_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_44_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_AC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Ast_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Ast_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Exc_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Exc_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Inh_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Inh_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Mic_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Mic_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_OPC_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_OPC_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Oli_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Oli_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_PCC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_DLPFC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_monocyte_ROSMAP_eQTL.cis.multi_gene.top_loci.bed.gz
         pQTL:
-          - ROSMAP_DLPFC_Bennett_pQTL.exported.toploci.bed.gz
+          - ROSMAP_DLPFC_Bennett_pQTL.cis.multi_gene.top_loci.bed.gz
       trans_finemapping:
         eQTL:
           - Knight_eQTL.trans.top_loci.bed.gz              
@@ -177,20 +177,20 @@ variant_gene_summary:
           - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
         pQTL:
           - Knight_pQTL.trans.top_loci.bed.gz   
-          - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
-          - ROSMAP_DeJager_pQTL.exported.toploci.bed.gz
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
           - MSBB_pQTL_BM36.trans.top_loci.bed.gz     
           - ROSMAP_pQTL.trans.top_loci.bed.gz
+          - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_CUIMC1_pQTL.trans.top_loci.bed.gz
         glycoQTL:
-          - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
+          - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
+          - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
           - trans_gpQTL_adj.trans.no_HF.top_loci.bed.gz
           - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
           - ROSMAP_gpQTL.trans.top_loci.bed.gz
           - ROSMAP_adjusted_gpQTL.trans.top_loci.bed.gz  
         metabolome:
-          - ROSMAP_metabolome.exported.toploci.bed.gz
+          - ROSMAP_metabolome.trans.top_loci.bed.gz
         consolidated:
           - FunGen_xQTL.trans.exported.toploci.bed.gz
     xQTL_colocalization:
