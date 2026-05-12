@@ -89,8 +89,8 @@ variant_gene_summary:
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
           - mash_34_contexts_ed_bovy_1e3.pca.rds
-        - MSBB.cis.top_loci.bed.gz
-        - ROSMAP.cis.top_loci.bed.gz
+        - MSBB.cis.multi_context.top_loci.bed.gz
+        - ROSMAP.cis.multi_context.top_loci.bed.gz
         - consolidated:
           - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_gene_finemapping:
@@ -203,7 +203,7 @@ variant_gene_summary:
         bulk_mQTL_haQTL_AD: 
           - bulk_fsusie_AD_coloc_filtered.bed.gz
         caQTL_AD:
-          - snATAC_MIT_AD_coloc_export_filtered.bed.gz
+          - snATAC_MIT_AD_coloc_filtered.bed.gz
         caQTL_eQTL:
           - snatac_ROSMAP.coloc.tsv.gz
   AD_loci_summary:
