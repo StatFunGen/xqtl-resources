@@ -188,6 +188,8 @@ variant_gene_summary:
           - trans_gpQTL_adj.maf005.withoutHF.exported.toploci.bed.gz
         metabolome:
           - ROSMAP_metabolome.exported.toploci.bed.gz
+        consolidated:
+          - FunGen_xQTL.trans.exported.toploci.bed.gz
     xQTL_colocalization:
       multi_context_colocalization:
         - xqtl_only_ROSMAP_colocboost_export_release_sorted.bed.gz
