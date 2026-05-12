@@ -151,14 +151,41 @@ variant_gene_summary:
           - ROSMAP_mega_OPC.exported.toploci.bed.gz
           - ROSMAP_mega_Oli.exported.toploci.bed.gz
           - STARNET_eQTL.exported.toploci.bed.gz
+          - Exc_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - Mic_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - OPC_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - Oli_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - Inh_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - Ast_DeJager_eQTL.trans_single_gene.maf005.withoutHF.exported.toploci.bed.gz
+          - AC_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - AC_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Ast_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Ast_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - DLPFC_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - DLPFC_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Exc_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Exc_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Inh_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Inh_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Mic_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Mic_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Oli_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - Oli_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - OPC_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - OPC_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
+          - PCC_Dejager_eQTL.transcca_program.maf005.withoutHF.exported.toploci.bed.gz
+          - PCC_Dejager_eQTL.transhotspot_wpc_program.maf005.withoutHF.exported.toploci.bed.gz
         pQTL:
           - Knight_pQTL_brain.exported.toploci.bed.gz
           - MSBB_BM36_pQTL.exported.toploci.bed.gz
           - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
           - ROSMAP_DeJager_pQTL.exported.toploci.bed.gz
+          - trans_pQTL.maf005.withoutHF.exported.toploci.bed
         glycoQTL:
           - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
+          - trans_gpQTL_unadj.maf005.withoutHF.exported.toploci.bed.gz
+          - trans_gpQTL_adj.maf005.withoutHF.exported.toploci.bed.gz
         metabolome:
           - ROSMAP_metabolome.exported.toploci.bed.gz
     xQTL_colocalization:
