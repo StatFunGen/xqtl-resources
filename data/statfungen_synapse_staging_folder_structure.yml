@@ -176,7 +176,7 @@ variant_gene_summary:
           - Exc_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
           - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
         pQTL:
-          - Knight_pQTL.trans.top_loci.bed.gz   
+          - Knight_pQTL_brain.trans.top_loci.bed.gz   
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
           - MSBB_pQTL_BM36.trans.top_loci.bed.gz     
           - ROSMAP_pQTL.trans.top_loci.bed.gz
