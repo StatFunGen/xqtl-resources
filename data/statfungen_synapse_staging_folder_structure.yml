@@ -192,16 +192,16 @@ variant_gene_summary:
         metabolome:
           - ROSMAP_metabolome.trans.top_loci.bed.gz
         consolidated:
-          - FunGen_xQTL.trans.exported.toploci.bed.gz
+          - FunGen_xQTL.trans.top_loci.bed.gz
     xQTL_colocalization:
       multi_context_colocalization:
-        - xqtl_only_ROSMAP_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_MSBB_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_KNIGHT_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz
+        - xqtl_only_ROSMAP_colocboost_sorted.bed.gz
+        - xqtl_only_MSBB_colocboost_sorted.bed.gz
+        - xqtl_only_KNIGHT_colocboost_sorted.bed.gz
+        - xqtl_only_MIGA_colocboost_sorted.bed.gz
       pairwise_colocalization:
         bulk_mQTL_haQTL_AD: 
-          - bulk_fsusie_AD_coloc_export_filtered.bed.gz
+          - bulk_fsusie_AD_coloc_filtered.bed.gz
         caQTL_AD:
           - snATAC_MIT_AD_coloc_export_filtered.bed.gz
         caQTL_eQTL:
