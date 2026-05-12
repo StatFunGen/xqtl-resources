@@ -876,9 +876,7 @@ xQTL_GWAS_models:
         STARNET_eQTL:
           - RDS_files
       multi_context:
-        ROSMAP_CUIMC1:
-          - RDS_files
-        ROSMAP_mega:
+        ROSMAP_all:
           - RDS_files
         MSBB_eQTL:
           - RDS_files
