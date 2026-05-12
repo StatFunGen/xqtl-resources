@@ -208,22 +208,22 @@ variant_gene_summary:
           - snatac_ROSMAP.coloc.tsv.gz
   AD_loci_summary:
     AD_finemapping:
-      - AD_Bellenguez_2022.exported.toploci.bed.gz
-      - AD_Jansen_2021.exported.toploci.bed.gz
-      - AD_Wightman_Full_2021.exported.toploci.bed.gz
-      - AD_Bellenguez_EADB_2022.exported.toploci.bed.gz
-      - AD_Kunkle_Stage1_2019.exported.toploci.bed.gz
-      - AD_Wightman_Excluding23andMe_2021.exported.toploci.bed.gz
-      - AD_Wightman_ExcludingUKBand23andME_2021.exported.toploci.bed.gz
-      - AD_Bellenguez_EADI_2022.exported.toploci.bed.gz
+      - AD_Bellenguez_2022.top_loci.bed.gz
+      - AD_Jansen_2021.top_loci.bed.gz
+      - AD_Wightman_Full_2021.top_loci.bed.gz
+      - AD_Bellenguez_EADB_2022.top_loci.bed.gz
+      - AD_Kunkle_Stage1_2019.top_loci.bed.gz
+      - AD_Wightman_Excluding23andMe_2021.top_loci.bed.gz
+      - AD_Wightman_ExcludingUKBand23andME_2022.top_loci.bed.gz
+      - AD_Bellenguez_EADI_2022.top_loci.bed.gz
     AD_colocalization:
-      - ad_meta_colocboost_export_filtered.bed.gz
+      - AD_meta_colocboost_filtered.bed.gz
     AD_xQTL_colocalization:
-      - AD_xQTL_ROSMAP_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_MSBB_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_KNIGHT_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_colocboost_export_filtered_bed.gz
+      - AD_xQTL_ROSMAP_colocboost_sorted.bed.gz
+      - AD_xQTL_MSBB_colocboost_sorted.bed.gz
+      - AD_xQTL_KNIGHT_colocboost_sorted.bed.gz
+      - AD_xQTL_MIGA_colocboost_sorted.bed.gz
+      - AD_xQTL_colocboost_filtered_bed.gz
     AD_gene_level:
       TWAS_MR: 
         - FunGen_twas.exported.bed.gz 
