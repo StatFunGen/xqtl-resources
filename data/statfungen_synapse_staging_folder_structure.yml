@@ -360,8 +360,8 @@ xQTL_GWAS_models:
         MSBB_eQTL:
           - RDS_files
   AD_GWAS_models:
-    AD_fine_mapping:
-      - RDS_files
+    AD_finemapping: #syn69670625
+      - RSS_QC_RAISS_imputed.{tag_variant}.univariate_susie_rss.rds
     AD_colocalization:
       - RDS_files
     AD_TWAS_association:
