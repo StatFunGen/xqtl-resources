@@ -331,6 +331,7 @@ xQTL_GWAS_models: #syn69670588
         MSBB_eQTL: #syn70095508
           export: #syn70095506
           fine_mapping: #syn70095507
+            - MSBB_eQTL.*.univariate.bvsr.rds
         MSBB_pQTL: #syn70090821
           export: #syn70095512
             batch{1..5}: #syn726676{77..81}
