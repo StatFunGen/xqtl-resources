@@ -325,6 +325,7 @@ xQTL_GWAS_models: #syn69670588
               - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
               - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn70095504
+            - RSS_QC_RAISS_imputed.*1.univariate_susie_rss.rds
         MiGA_eQTL: #syn70095505
           export: #syn70095506
           fine_mapping: #syn70095507
