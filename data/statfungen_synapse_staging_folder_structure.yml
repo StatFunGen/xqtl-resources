@@ -431,7 +431,7 @@ xQTL_GWAS_models: #syn69670588
           - RDS_files
   AD_GWAS_models: #syn69670621
     AD_finemapping: #syn69670625
-      susie_rss_v1: 
+      susie_rss_v1: #syn74957553
         - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
       susie_rss_v2:
         - RDS_files
