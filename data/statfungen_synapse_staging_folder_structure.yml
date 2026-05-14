@@ -322,75 +322,74 @@ xQTL_GWAS_models: #syn69670588
         pQTL: []
         glycoQTL: []
         metabolome: []
-    colocalization_models:
+    colocalization_models: #syn69670597
       - RDS_files
-    TWAS_models:
-      single_context:
-        KNIGHT_eQTL:
+    TWAS_models: #syn69670600
+      single_context: #syn70090842
+        KNIGHT_eQTL: #syn70090844
           - RDS_files
-        KNIGHT_pQTL:
+        KNIGHT_pQTL: #syn70090845
           - RDS_files
         MetaBrain:
           - RDS_files
         MiGA_eQTL:
           - RDS_files
-        MSBB_eQTL:
+        MSBB_eQTL: #syn70094766
           - RDS_files
-        MSBB_pQTL:
+        MSBB_pQTL: #syn70090848
           - RDS_files
-        MSBB_sQTL:
+        MSBB_sQTL: #syn70090851
           - RDS_files
-        ROSMAP_eQTL:
-          mega:
+        ROSMAP_eQTL: #syn72280606
+          mega: #syn74907867
             - RDS_files
-          MIT:
+          MIT: #syn74908478
             - RDS_files
-          CUIMC1:
+          CUIMC1: #syn74908574
             - RDS_files
-        ROSMAP_pQTL:
+        ROSMAP_pQTL: #syn70090857
           - RDS_files
-        ROSMAP_sQTL:
-          LeafCutter2:
-            - RDS_files
-        STARNET_eQTL:
+        ROSMAP_sQTL: #syn70094771
           - RDS_files
-      multi_context:
-        ROSMAP_all:
+        STARNET_eQTL: #syn70090859
           - RDS_files
-        MSBB_eQTL:
+      multi_context: #syn74907900
+        ROSMAP_All: #syn74909252
           - RDS_files
-  AD_GWAS_models:
+        MSBB_eQTL: #syn74907964
+          - RDS_files
+  AD_GWAS_models: #syn69670621
     AD_finemapping: #syn69670625
       susie_rss_v1: 
         - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
       susie_rss_v2:
         - RDS_files
-    AD_colocalization:
+    AD_colocalization: #syn69670626
       - RDS_files
-    AD_TWAS_association:
+    AD_TWAS_association: #syn74908416
       - TSV_files
-  AD_xQTL_integration:
-    AD_xQTL_colocalization_models:
+  AD_xQTL_integration: #syn69670622
+    AD_xQTL_colocalization_models: #syn69670630
       - RDS_files
-    AD_cTWAS_input:
+    AD_cTWAS_input: #syn69670631 
       - RDS_files
-    cTWAS_results:
-      multi_group_cTWAS:
+    cTWAS_results: #syn74908389
+      multi_group_cTWAS: #syn74908390
         - TSV_files
-      single_group_cTWAS:
+      single_group_cTWAS: #syn74908397
         - TSV_files
 
-xQTL_data:
-  xQTL_LR:
-    R_lm_residual_sumstats:
+xQTL_data: #syn69670632
+  xQTL_LR: #syn69670638
+    R_lm_residual_sumstats: #syn69670640
       - RDS_files
-    tensorQTL_sumstats:
+    tensorQTL_sumstats: #syn69670641
       - UCSC_bed.gz
-  xQTL_QR:
+  xQTL_QR: #syn69670643
     - UCSC_bed.gz
-  xQTL_interaction:
+  xQTL_interaction: #syn69670644
     - UCSC_bed.gz
-  xQTL_GLMM:
+  xQTL_GLMM: 
     major:
       - Astrocytes_major_sQTL.txt.gz
       - Excitatory_major_sQTL.txt.gz
@@ -423,24 +422,24 @@ xQTL_data:
       Peri:
         - Peri.2_sub_sQTL.txt.gz
 
-reference_files:
-  ADSP_R4_ld_sketch:
-    EUR:
+reference_files: #syn69670634
+  ADSP_R4_ld_sketch: #syn69670651
+    EUR: #syn69670652
       - xz_files_with_meta_data_in_bim_format
-  LDSC_reference_data:
-    ld_scores:
+  LDSC_reference_data: #syn69670653
+    ld_scores: #syn69670654
       - Misc_file_formats
-    sldsc_annotations:
+    sldsc_annotations: #syn69670655
       - Misc_file_formats
-    GWAS_munged:
+    GWAS_munged: #syn69670656
       - Misc_file_formats
-  functional_enrichment_annotations:
+  functional_enrichment_annotations: #syn69670657
     - UCSC_bed.gz
-  xQTL_protocol_tutorial:
+  xQTL_protocol_tutorial: #syn69670658
     - Miscellaneous_protocol_and_toy_example_data
 
-manuscript:
-  xQTL_flagship_2025:
+manuscript: #syn69832123
+  xQTL_flagship_2025: #syn69835233
     - Figure_5c_AD_loci_xQTL_annotated.rds
     - Figure_1b_num_xQTL_loci_single_context.rds
     - Figure_S2_single_context_cs_distance.rds
@@ -449,13 +448,13 @@ manuscript:
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
     - Figure_5e_GSEA.rds
-    - EOO:
+    - EOO: #syn70094903
       - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
       - Figure_EOO.rds
-    - sLDSC:
+    - sLDSC: #syn70094904
       - Figure_sLDSC_GWAS_specific.rds
       - Figure_sLDSC_meta_analysis.rds
-    - PPI:
+    - PPI: #syn71538047
       - Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.region_list
       - Non_proxy_AD_gene_xQTL.txt
       - Figure_5f_PPI.rds
