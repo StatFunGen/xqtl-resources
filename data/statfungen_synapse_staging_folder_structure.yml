@@ -237,39 +237,39 @@ variant_gene_summary: #syn69865684
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
-xQTL_SCEEM_scores:
-  model_training:
-    columns_dict:
+xQTL_SCEEM_scores: #syn69670587
+  model_training: #syn72248754
+    columns_dict: #syn72248797
       - columns_dict.pkl
-    gene_lof:
+    gene_lof: #syn72248800
       - 41588_2024_1820_MOESM4_ESM.xlsx
-    gnomad_MAF:
+    gnomad_MAF: #syn72248799
       - gnomad_MAF_chr{1..22}.tsv
-    test:
-      Ast_mega_eQTL:
+    test: #syn72248801
+      Ast_mega_eQTL: #syn72248942
         - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet
-      Exc_mega_eQTL:
+      Exc_mega_eQTL: #syn72248940
         - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet
-      Inh_mega_eQTL:
+      Inh_mega_eQTL: #syn72248941
         - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet
-      Mic_mega_eQTL:
+      Mic_mega_eQTL: #syn72248939
         - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet
-      Oli_mega_eQTL:
+      Oli_mega_eQTL: #syn72248943
         - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet
-      OPC_mega_eQTL:
+      OPC_mega_eQTL: #syn72248944
         - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet
-    train:
-      Ast_mega_eQTL:
+    train: #syn72248798
+      Ast_mega_eQTL: #syn72248805
         - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet
-      Exc_mega_eQTL:
+      Exc_mega_eQTL: #syn72248803
         - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet
-      Inh_mega_eQTL:
+      Inh_mega_eQTL: #syn72248804
         - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet
-      Mic_mega_eQTL:
+      Mic_mega_eQTL: #syn72248802
         - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet
-      Oli_mega_eQTL:
+      Oli_mega_eQTL: #syn72248806
         - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet
-      OPC_mega_eQTL:
+      OPC_mega_eQTL: #syn72248807
         - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet
   predictions:
     Ast_mega_eQTL:
@@ -389,8 +389,8 @@ xQTL_data: #syn69670632
     - UCSC_bed.gz
   xQTL_interaction: #syn69670644
     - UCSC_bed.gz
-  xQTL_GLMM: 
-    major:
+  xQTL_GLMM: #syn69670647
+    major: #syn70094793
       - Astrocytes_major_sQTL.txt.gz
       - Excitatory_major_sQTL.txt.gz
       - Inhibitory_major_sQTL.txt.gz
@@ -398,28 +398,28 @@ xQTL_data: #syn69670632
       - Oligodendrocyte_major_sQTL.txt.gz
       - OPC_major_sQTL.txt.gz
       - Vascular_major_sQTL.txt.gz
-    sub:
-      Ast:
+    sub: #syn70094805
+      Ast: #syn70094806
         - Ast.{1..10}_sub_sQTL.txt.gz
-      End:
+      End: #syn70094822
         - End.2_sub_sQTL.txt.gz
-      Exc:
+      Exc: #syn70094824
         - Exc.{1..16}_sub_sQTL.txt.gz
-      Fib:
+      Fib: #syn70094841
         - Fib.3_sub_sQTL.txt.gz
-      Inh:
+      Inh: #syn70094843
         - Inh.{1..16}_sub_sQTL.txt.gz
-      Macrophages:
+      Macrophages: #syn70094858
         - Macrophages_sub_sQTL.txt.gz
-      Mic:
+      Mic: #syn70094860
         - Mic.15_sub_sQTL.txt.gz
         - Mic.{2..10}_sub_sQTL.txt.gz
         - Mic.{12..13}_sub_sQTL.txt.gz
-      Oli:
+      Oli: #syn70094873
         - Oli.{1..9}_sub_sQTL.txt.gz
-      OPC:
+      OPC: #syn70094883
         - OPC.{1..3}_sub_sQTL.txt.gz
-      Peri:
+      Peri: #syn70094889
         - Peri.2_sub_sQTL.txt.gz
 
 reference_files: #syn69670634
