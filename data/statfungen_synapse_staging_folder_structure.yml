@@ -296,7 +296,14 @@ xQTL_GWAS_models: #syn69670588
     finemapping_models: #syn69670592
       single_context: #syn70090810
         KNIGHT_eQTL: #syn70090816
-          - RDS_files
+          export:
+            - KNIGHT_eQTL.*.cis_results_db.export.rds
+            - KNIGHT_eQTL.*.cis_results_db.export.rds.md5
+            - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds
+            - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds.md5
+            - KNIGHT_eQTL.*.pip_sum
+          fine_mapping: 
+            - KNIGHT_eQTL.*.univariate_bvsr.rds
         KNIGHT_pQTL: #syn70090817
           - RDS_files
         MetaBrain: #syn70090820
