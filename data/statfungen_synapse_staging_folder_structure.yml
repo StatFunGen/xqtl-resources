@@ -296,34 +296,98 @@ xQTL_GWAS_models: #syn69670588
     finemapping_models: #syn69670592
       single_context: #syn70090810
         KNIGHT_eQTL: #syn70090816
-          export:
-            - KNIGHT_eQTL.*.cis_results_db.export.rds
-            - KNIGHT_eQTL.*.cis_results_db.export.rds.md5
-            - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds
-            - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds.md5
-            - KNIGHT_eQTL.*.pip_sum
-          fine_mapping: 
+          export: #syn70095497
+            batch{1..9}: #syn726676{37..45}
+              - KNIGHT_eQTL.*.cis_results_db.export.rds
+              - KNIGHT_eQTL.*.cis_results_db.export.rds.md5
+              - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds
+              - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - KNIGHT_eQTL.*.pip_sum
+          fine_mapping: #syn70095498
+            batch{1..2}: #syn726676{46..47}
             - KNIGHT_eQTL.*.univariate_bvsr.rds
         KNIGHT_pQTL: #syn70090817
-          - RDS_files
+          export: #syn70095500
+            batch1: #syn72667648
+              - KNIGHT_pQTL.*.cis_results_db.export.rds
+              - KNIGHT_pQTL.*.cis_results_db.export.rds.md5
+              - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds
+              - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - KNIGHT_pQTL.*.pip_sum
+          finemapping: #syn70095501
+            batch1: #syn72667649
+              - KNIGHT_pQTL.*.univariate_bvsr.rds
         MetaBrain: #syn70090820
-          - RDS_files
+          export: #syn70095503
+            batch{1..23}: #syn726676{50..76}
+              - FunGen_xQTL.*.cis_results_db.export.rds
+              - FunGen_xQTL.*.cis_results_db.export.rds.md5
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
+          fine_mapping: #syn70095504
         MiGA_eQTL: #syn70095505
           - RDS_files
         MSBB_eQTL: #syn70095508
-          - RDS_files
+          export: #syn70095506
+          fine_mapping: #syn70095507
         MSBB_pQTL: #syn70090821
-          - RDS_files
+          export: #syn70095512
+            batch{1..5}: #syn726676{77..81}
+              - MSBB_pQTL.*.cis_results_db.export.rds
+              - MSBB_pQTL.*.cis_results_db.export.rds.md5
+              - MSBB_pQTL.*.cis_results_db.export_sumstats.rds
+              - MSBB_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MSBB_pQTL.*.pip_sum
+          fine_mapping: #syn70095513
+            batch1: #syn72667682
+              - MSBB_pQTL.*.univariate.bvsr.rds
         MSBB_sQTL: #syn70090827
-          - RDS_files
+          export: #syn70095515
+            batch{1..7}: #syn7266768{3..9}
+              - MSBB_sQTL.*.cis_results_db.export.rds
+              - MSBB_sQTL.*.cis_results_db.export.rds.md5
+              - MSBB_sQTL.*.cis_results_db.export_sumstats.rds
+              - MSBB_sQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MSBB_sQTL.*.pip_sum
+          fine_mapping: #syn70095516
+            batch{1..2}: #syn7266769{0..1}
+              - MSBB_sQTL.*.univariate.bvsr.rds
         ROSMAP_eQTL: #syn70090830
-          - RDS_files
+          export: #syn70095518
+            batch{1..9}: #syn72667{692..700}
+              - ROSMAP_eQTL.*.cis_results_db.export.rds
+              - ROSMAP_eQTL.*.cis_results_db.export.rds.md5
+              - ROSMAP_eQTL.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_eQTL.*.pip_sum
+          fine_mapping: #syn70095519
+            batch{1..5}: #syn7266770{1..5}
+              -  ROSMAP_DeJager_eQTL.*.univariate.bvsr.rds
         ROSMAP_pQTL: #syn70090831
-          - RDS_files
+          export: #syn70095521
+            batch{1..7}: #syn726677{06..12}
+              - ROSMAP_pQTL.*.cis_results_db.export.rds
+              - ROSMAP_pQTL.*.cis_results_db.export.rds.md5
+              - ROSMAP_pQTL.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_pQTL.*.pip_sum
+          fine_mapping: #syn70095522
+            batch{1..2}: #syn7266771{3..4}
+              - ROSMAP_Bennett_Klein_pQTL.*.univariate.bvsr.rds
         ROSMAP_sQTL: #syn70095523
-          - RDS_files
+          export: #syn70095524
+          fine_mapping: #syn70095525
         STARNET_eQTL: #syn70090832
-          - RDS_files
+          export: #syn70095527
+            batch{1..7}: #syn726677{15..21}
+              - STARNET_eQTL.*.cis_results_db.export.rds
+              - STARNET_eQTL.*.cis_results_db.export.rds.md5
+              - STARNET_eQTL.*.cis_results_db.export_sumstats.rds
+              - STARNET_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - STARNET_eQTL.*.pip_sum
+          fine_mapping: #syn70095528
+            batch{1..2}: #syn7266772{2..3}
+              - STARNET_eQTL.*.univariate.bvsr.rds
       trans:
         eQTL: []
         pQTL: []
