@@ -271,23 +271,23 @@ xQTL_SCEEM_scores: #syn69670587
         - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet
       OPC_mega_eQTL: #syn72248807
         - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet
-  predictions:
-    Ast_mega_eQTL:
+  predictions: #syn71338354
+    Ast_mega_eQTL: #syn71338358
       - predictions_Ast_mega_eQTL_{1..22}.tsv.gz
       - predictions_Ast_mega_eQTL_{1..22}.tsv.gz.tbi
-    Exc_mega_eQTL:
+    Exc_mega_eQTL: #syn71338356
       - predictions_Exc_mega_eQTL_{1..22}.tsv.gz
       - predictions_Exc_mega_eQTL_{1..22}.tsv.gz.tbi
-    Inh_mega_eQTL:
+    Inh_mega_eQTL: #syn71338357
       - predictions_Inh_mega_eQTL_{1..22}.tsv.gz
       - predictions_Inh_mega_eQTL_{1..22}.tsv.gz.tbi
-    Mic_mega_eQTL:
+    Mic_mega_eQTL: #syn71338355
       - predictions_Mic_mega_eQTL_{1..22}.tsv.gz
       - predictions_Mic_mega_eQTL_{1..22}.tsv.gz.tbi
-    Oli_mega_eQTL:
+    Oli_mega_eQTL: #syn71338359
       - predictions_Oli_mega_eQTL_{1..22}.tsv.gz
       - predictions_Oli_mega_eQTL_{1..22}.tsv.gz.tbi
-    OPC_mega_eQTL:
+    OPC_mega_eQTL: #syn71338360
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz.tbi
 
