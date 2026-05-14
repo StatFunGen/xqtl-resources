@@ -453,7 +453,7 @@ xQTL_GWAS_models: #syn69670588
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
       ROSMAP:
-        - AD_DNE_xQTL.*.rds
+        - AD_xQTL.*.rds
       MSBB:
         - AD_xQTL_MSBB.*.rds
       KNIGHT:
