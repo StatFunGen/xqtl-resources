@@ -329,6 +329,7 @@ xQTL_GWAS_models: #syn69670588
         MiGA_eQTL: #syn70095505
           export: #syn70095506
           fine_mapping: #syn70095507
+            - MiGA_eQTL.*.univariate_bvsr.rds
         MSBB_eQTL: #syn70095508
           export: #syn70095506
           fine_mapping: #syn70095507
