@@ -1,9 +1,9 @@
 README
-variant_gene_summary:
-  xQTL_loci_summary:
-    xQTL_finemapping:
-      single_context_finemapping:
-        eQTL:
+variant_gene_summary: #syn69865684
+  xQTL_loci_summary: #syn69865685
+    xQTL_finemapping: #syn69865686
+      single_context_finemapping: #syn69865687
+        eQTL: #syn69865689
           - Knight_eQTL_brain.cis.top_loci.bed.gz
           - BM_10_MSBB_eQTL.cis.top_loci.bed.gz
           - BM_22_MSBB_eQTL.cis.top_loci.bed.gz
@@ -44,14 +44,14 @@ variant_gene_summary:
           - ROSMAP_monocyte_eQTL.cis.top_loci.bed.gz
           - STARNET_eQTL_Mac.cis.top_loci.bed.gz
           - PCC_DeJager_eQTL.cis.top_loci.bed.gz
-        pQTL:
+        pQTL: #syn69865740
           - Knight_pQTL_brain.cis.top_loci.bed.gz
           - MSBB_BM36_pQTL.cis.top_loci.bed.gz
           - DLPFC_Bennett_pQTL.cis.top_loci.bed.gz
-        glycoQTL:
+        glycoQTL: #syn69865744
           - DLPFC_Klein_gpQTL_adjusted.cis.top_loci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.cis.top_loci.bed.gz
-        sQTL:
+        sQTL: #syn69865747
           - ROSMAP_AC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_AC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_AC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
@@ -61,24 +61,24 @@ variant_gene_summary:
           - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
-        mQTL:
+        mQTL: #syn69865748
           - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
           - KnightADRC_mQTL.cis.top_loci.bed.gz
           - MSBB_mQTL.cis.top_loci.bed.gz
-        haQTL:
+        haQTL: #syn69865749
           - ROSMAP_DLPFC_haQTL.cis.top_loci.bed.gz
-        caQTL:
+        caQTL: #syn69865750
           - ROSMAP_snATAC_MIT_OPC.cis.top_loci.bed.gz
           - ROSMAP_snATAC_MIT_Exc.cis.top_loci.bed.gz
           - ROSMAP_snATAC_MIT_Ast.cis.top_loci.bed.gz
           - ROSMAP_snATAC_MIT_Oli.cis.top_loci.bed.gz
           - ROSMAP_snATAC_MIT_Mic.cis.top_loci.bed.gz
           - ROSMAP_snATAC_MIT_Inh.cis.top_loci.bed.gz
-        consolidated:
+        consolidated: #syn69865751
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
-      multi_context_finemapping:
-        - mash_model:
+      multi_context_finemapping: #syn69865754
+        - mash_model: #syn71722950
           - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.V_simple.rds
@@ -89,12 +89,12 @@ variant_gene_summary:
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
           - mash_34_contexts_ed_bovy_1e3.pca.rds
-        - MSBB.cis.multi_context.top_loci.bed.gz
-        - ROSMAP.cis.multi_context.top_loci.bed.gz
-        - consolidated:
+        - MSBB.cis.multi_context.top_loci.bed.gz #syn69865755
+        - ROSMAP.cis.multi_context.top_loci.bed.gz #syn69865756
+        - consolidated: #syn70094695
           - FunGen_xQTL_multi_context_top_loci_integrated.rds
-      multi_gene_finemapping:
-        eQTL:
+      multi_gene_finemapping: #syn69865757
+        eQTL: #syn69865758
           - MSBB_BM_10_eQTL.cis.multi_gene.top_loci.bed.gz
           - MSBB_BM_22_eQTL.cis.multi_gene.top_loci.bed.gz
           - MSBB_BM_36_eQTL.cis.multi_gene.top_loci.bed.gz
@@ -115,10 +115,10 @@ variant_gene_summary:
           - ROSMAP_PCC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_DLPFC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_monocyte_ROSMAP_eQTL.cis.multi_gene.top_loci.bed.gz
-        pQTL:
+        pQTL: #syn69865771
           - ROSMAP_DLPFC_Bennett_pQTL.cis.multi_gene.top_loci.bed.gz
-      trans_finemapping:
-        eQTL:
+      trans_finemapping: #syn69865773
+        eQTL: #syn69865774
           - Knight_eQTL.trans.top_loci.bed.gz              
           - ROSMAP_CUIMC1_eQTL_Oli.trans.top_loci.bed.gz    
           - ROSMAP_CUIMC1_eQTL_Exc.trans.top_loci.bed.gz  
@@ -175,38 +175,38 @@ variant_gene_summary:
           - PCC_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz
           - Exc_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
           - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
-        pQTL:
+        pQTL: #syn69865791
           - Knight_pQTL_brain.trans.top_loci.bed.gz   
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
           - MSBB_pQTL_BM36.trans.top_loci.bed.gz     
           - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
           - ROSMAP_pQTL.trans.top_loci.bed.gz
-        glycoQTL:
+        glycoQTL: #syn70094703
           - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
           - trans_gpQTL_adj.trans.no_HF.top_loci.bed.gz
           - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
           - ROSMAP_gpQTL.trans.top_loci.bed.gz
           - ROSMAP_adjusted_gpQTL.trans.top_loci.bed.gz  
-        metabolome:
+        metabolome: #syn69865793
           - ROSMAP_metabolome.trans.top_loci.bed.gz
-        consolidated:
+        consolidated: #syn74916771
           - FunGen_xQTL.trans.top_loci.bed.gz
-    xQTL_colocalization:
-      multi_context_colocalization:
+    xQTL_colocalization: #syn69865795
+      multi_context_colocalization: #syn69865796
         - xqtl_only_ROSMAP_colocboost_sorted.bed.gz
         - xqtl_only_MSBB_colocboost_sorted.bed.gz
         - xqtl_only_KNIGHT_colocboost_sorted.bed.gz
         - xqtl_only_MIGA_colocboost_sorted.bed.gz
-      pairwise_colocalization:
-        bulk_mQTL_haQTL_AD: 
+      pairwise_colocalization: #syn69865800
+        bulk_mQTL_haQTL_AD: #syn69865801
           - bulk_fsusie_AD_coloc_filtered.bed.gz
-        caQTL_AD:
+        caQTL_AD: #syn69865802
           - snATAC_MIT_AD_coloc_filtered.bed.gz
-        caQTL_eQTL:
+        caQTL_eQTL: #syn69865803
           - snatac_ROSMAP.coloc.tsv.gz
-  AD_loci_summary:
-    AD_finemapping:
+  AD_loci_summary: #syn69865804
+    AD_finemapping: #syn69865805
       - AD_Bellenguez_2022.top_loci.bed.gz
       - AD_Jansen_2021.top_loci.bed.gz
       - AD_Wightman_Full_2021.top_loci.bed.gz
@@ -215,21 +215,21 @@ variant_gene_summary:
       - AD_Wightman_Excluding23andMe_2021.top_loci.bed.gz
       - AD_Wightman_ExcludingUKBand23andME_2021.top_loci.bed.gz
       - AD_Bellenguez_EADI_2022.top_loci.bed.gz
-    AD_colocalization:
+    AD_colocalization: #syn69865814
       - AD_meta_colocboost_filtered.bed.gz
-    AD_xQTL_colocalization:
+    AD_xQTL_colocalization: #syn69865816
       - AD_xQTL_ROSMAP_colocboost_sorted.bed.gz
       - AD_xQTL_MSBB_colocboost_sorted.bed.gz
       - AD_xQTL_KNIGHT_colocboost_sorted.bed.gz
       - AD_xQTL_MIGA_colocboost_sorted.bed.gz
       - AD_xQTL_colocboost_filtered.bed.gz
-    AD_gene_level:
-      TWAS_MR: 
+    AD_gene_level: #syn69865820
+      TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
         - FunGen_mr.exported.bed.gz
-      cTWAS:
+      cTWAS: #syn69865822
         - FunGen_ctwas.exported.bed.gz
-  AD_xQTL_integration_summary:
+  AD_xQTL_integration_summary: #syn69865823
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_loci_unified_cs95orColocs.csv.gz
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
@@ -291,31 +291,31 @@ xQTL_SCEEM_scores:
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz.tbi
 
-xQTL_GWAS_models:
-  xQTL_models:
-    finemapping_models:
-      single_context:
-        KNIGHT_eQTL:
+xQTL_GWAS_models: #syn69670588
+  xQTL_models: #syn69670589
+    finemapping_models: #syn69670592
+      single_context: #syn70090810
+        KNIGHT_eQTL: #syn70090816
           - RDS_files
-        KNIGHT_pQTL:
+        KNIGHT_pQTL: #syn70090817
           - RDS_files
-        MetaBrain:
+        MetaBrain: #syn70090820
           - RDS_files
-        MiGA_eQTL:
+        MiGA_eQTL: #syn70095505
           - RDS_files
-        MSBB_eQTL:
+        MSBB_eQTL: #syn70095508
           - RDS_files
-        MSBB_pQTL:
+        MSBB_pQTL: #syn70090821
           - RDS_files
-        MSBB_sQTL:
+        MSBB_sQTL: #syn70090827
           - RDS_files
-        ROSMAP_eQTL:
+        ROSMAP_eQTL: #syn70090830
           - RDS_files
-        ROSMAP_pQTL:
+        ROSMAP_pQTL: #syn70090831
           - RDS_files
-        ROSMAP_sQTL:
+        ROSMAP_sQTL: #syn70095523
           - RDS_files
-        STARNET_eQTL:
+        STARNET_eQTL: #syn70090832
           - RDS_files
       trans:
         eQTL: []
@@ -361,7 +361,10 @@ xQTL_GWAS_models:
           - RDS_files
   AD_GWAS_models:
     AD_finemapping: #syn69670625
-      - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
+      susie_rss_v1: 
+        - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
+      susie_rss_v2:
+        - RDS_files
     AD_colocalization:
       - RDS_files
     AD_TWAS_association:
