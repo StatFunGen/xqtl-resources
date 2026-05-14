@@ -326,7 +326,8 @@ xQTL_GWAS_models: #syn69670588
               - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn70095504
         MiGA_eQTL: #syn70095505
-          - RDS_files
+          export: #syn70095506
+          fine_mapping: #syn70095507
         MSBB_eQTL: #syn70095508
           export: #syn70095506
           fine_mapping: #syn70095507
