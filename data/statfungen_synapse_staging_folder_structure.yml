@@ -460,9 +460,9 @@ xQTL_GWAS_models: #syn69670588
         - AD_xQTL_KNIGHT.*.rds
       MiGA:
         - AD_eQTL_MIGA.*.rds
-    AD_cTWAS_input: #syn69670631 
-      - RDS_files
     cTWAS_results: #syn74908389
+      AD_cTWAS_input: #syn69670631
+        - RDS_files
       multi_group_cTWAS: #syn74908390
         - TSV_files
       single_group_cTWAS: #syn74908397
