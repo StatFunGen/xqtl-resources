@@ -399,13 +399,13 @@ xQTL_GWAS_models: #syn69670588
         metabolome: []
     colocalization_models: #syn69670597
       ROSMAP:
-        - xQTL_only_ROSMAP.*.rds
+        - ROSMAP.*.cb_xqtl.rds
       MSBB:
-        - AD_xQTL_MSBB.*.cb_xqtl.rds
+        - MSBB.*.cb_xqtl.rds
       KNIGHT:
-        - AD_xQTL_KNIGHT.*.cb_xqtl.rds
+        - KNIGHT.*.cb_xqtl.rds
       MiGA: 
-        - AD_eQTL_MIGA.*.cb_xqtl.rds
+        - MIGA.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
