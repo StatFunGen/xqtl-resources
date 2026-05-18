@@ -526,7 +526,7 @@ reference_files: #syn69670634
       - Misc_file_formats
     sldsc_annotations: #syn69670655
       - Misc_file_formats
-    GWAS_munged: #syn69670656
+    reference_GWAS: #syn69670656
       - Misc_file_formats
   functional_enrichment_annotations: #syn69670657
     - UCSC_bed.gz
