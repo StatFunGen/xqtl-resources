@@ -512,9 +512,15 @@ xQTL_data: #syn69670632
         - Peri.2_sub_sQTL.txt.gz
 
 reference_files: #syn69670634
-  ADSP_R4_ld_sketch: #syn69670651
+  ADSP_R4_LD: #syn69670651
     EUR: #syn69670652
-      - xz_files_with_meta_data_in_bim_format
+       in_sample_ld: #syn75082259
+       - xz_files_with_meta_data_in_bim_format
+       ld_sketch: #syn75082260
+       - ADSP_R4.EUR.chr{1..22}.pgen
+       - ADSP_R4.EUR.chr{1..22}.pvar.zst
+       - ADSP_R4.EUR.chr{1..22}.psam
+       - ADSP_R4.EUR.chr{1..22}.afreq
   LDSC_reference_data: #syn69670653
     ld_scores: #syn69670654
       - Misc_file_formats
