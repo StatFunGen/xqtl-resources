@@ -398,13 +398,13 @@ xQTL_GWAS_models: #syn69670588
         glycoQTL: []
         metabolome: []
     colocalization_models: #syn69670597
-      ROSMAP:
+      ROSMAP: #syn74987506
         - ROSMAP.*.cb_xqtl.rds
-      MSBB:
+      MSBB: #syn74987534
         - MSBB.*.cb_xqtl.rds
-      KNIGHT:
+      KNIGHT: #syn74987548
         - KNIGHT.*.cb_xqtl.rds
-      MiGA: 
+      MiGA: #syn74987560
         - MIGA.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
