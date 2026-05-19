@@ -119,38 +119,38 @@ variant_gene_summary: #syn69865684
           - ROSMAP_DLPFC_Bennett_pQTL.cis.multi_gene.top_loci.bed.gz
       trans_finemapping: #syn69865773
         eQTL: #syn69865774
-          - Knight_eQTL.trans.top_loci.bed.gz              
-          - ROSMAP_CUIMC1_eQTL_Oli.trans.top_loci.bed.gz    
-          - ROSMAP_CUIMC1_eQTL_Exc.trans.top_loci.bed.gz  
-          - ROSMAP_CUIMC1_eQTL_Inh.trans.top_loci.bed.gz     
-          - ROSMAP_CUIMC1_eQTL_OPC.trans.top_loci.bed.gz
-          - ROSMAP_CUIMC1_eQTL_Ast.trans.top_loci.bed.gz  
-          - ROSMAP_CUIMC1_eQTL_Mic.trans.top_loci.bed.gz      
-          - ROSMAP_CUIMC1_eQTL_DLPFC.trans.top_loci.bed.gz    
-          - ROSMAP_CUIMC1_eQTL_PCC.trans.top_loci.bed.gz
-          - ROSMAP_CUIMC1_eQTL_AC.trans.top_loci.bed.gz 
-          - ROSMAP_CUIMC1_eQTL_Monocyte.trans.top_loci.bed.gz
-          - MIGA_eQTL_GFM.trans.top_loci.bed.gz                
-          - MIGA_eQTL_GTS.trans.top_loci.bed.gz                
-          - MIGA_eQTL_SVZ.trans.top_loci.bed.gz 
-          - MIGA_eQTL_THA.trans.top_loci.bed.gz   
-          - ROSMAP_mega_eQTL_Ast.trans.top_loci.bed.gz
-          - ROSMAP_mega_eQTL_Exc.trans.top_loci.bed.gz
-          - ROSMAP_mega_eQTL_Inh.trans.top_loci.bed.gz
-          - ROSMAP_mega_eQTL_Mic.trans.top_loci.bed.gz
-          - ROSMAP_mega_eQTL_Oli.trans.top_loci.bed.gz
-          - ROSMAP_mega_eQTL_OPC.trans.top_loci.bed.gz
-          - MSBB_eQTL_BM10.trans.top_loci.bed.gz              
-          - MSBB_eQTL_BM22.trans.top_loci.bed.gz           
-          - MSBB_eQTL_BM36.trans.top_loci.bed.gz     
-          - MSBB_eQTL_BM44.trans.top_loci.bed.gz             
-          - ROSMAP_MIT_eQTL_Ast.trans.top_loci.bed.gz
-          - ROSMAP_MIT_eQTL_Exc.trans.top_loci.bed.gz
-          - ROSMAP_MIT_eQTL_Inh.trans.top_loci.bed.gz
-          - ROSMAP_MIT_eQTL_Mic.trans.top_loci.bed.gz
-          - ROSMAP_MIT_eQTL_Oli.trans.top_loci.bed.gz
-          - ROSMAP_MIT_eQTL_OPC.trans.top_loci.bed.gz
-          - STARNET_eQTL.trans.top_loci.bed.gz
+          - Knight_eQTL.trans.tag_variants.top_loci.bed.gz            
+          - ROSMAP_CUIMC1_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Inh.trans.tag_variants.top_loci.bed.gz     
+          - ROSMAP_CUIMC1_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Mic.trans.tag_variants.top_loci.bed.gz    
+          - ROSMAP_CUIMC1_eQTL_DLPFC.trans.tag_variants.top_loci.bed.gz   
+          - ROSMAP_CUIMC1_eQTL_PCC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_AC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Monocyte.trans.tag_variants.top_loci.bed.gz
+          - MIGA_eQTL_GFM.trans.tag_variants.top_loci.bed.gz  
+          - MIGA_eQTL_GTS.trans.tag_variants.top_loci.bed.gz           
+          - MIGA_eQTL_SVZ.trans.tag_variants.top_loci.bed.gz
+          - MIGA_eQTL_THA.trans.tag_variants.top_loci.bed.gz 
+          - ROSMAP_mega_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Inh.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Mic.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - MSBB_eQTL_BM10.trans.tag_variants.top_loci.bed.gz          
+          - MSBB_eQTL_BM22.trans.tag_variants.top_loci.bed.gz    
+          - MSBB_eQTL_BM36.trans.tag_variants.top_loci.bed.gz
+          - MSBB_eQTL_BM44.trans.tag_variants.top_loci.bed.gz            
+          - ROSMAP_MIT_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Inh.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Mic.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - STARNET_eQTL.trans.tag_variants.top_loci.bed.gz
           - Ast_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
           - Inh_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
           - Oli_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
@@ -176,18 +176,18 @@ variant_gene_summary: #syn69865684
           - Exc_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
           - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
         pQTL: #syn69865791
-          - Knight_pQTL_brain.trans.top_loci.bed.gz   
+          - Knight_pQTL_brain.trans.tag_variants.top_loci.bed.gz  
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
-          - MSBB_pQTL_BM36.trans.top_loci.bed.gz     
+          - MSBB_pQTL_BM36.trans.tag_variants.top_loci.bed.gz
           - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
-          - ROSMAP_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_pQTL.trans.tag_variants.top_loci.bed.gz
         glycoQTL: #syn70094703
           - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
           - trans_gpQTL_adj.trans.no_HF.top_loci.bed.gz
           - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
           - ROSMAP_gpQTL.trans.top_loci.bed.gz
-          - ROSMAP_adjusted_gpQTL.trans.top_loci.bed.gz  
+          - ROSMAP_adjusted_gpQTL.trans.tag_variants.top_loci.bed.gz
         metabolome: #syn69865793
           - ROSMAP_metabolome.trans.top_loci.bed.gz
         consolidated: #syn74916771
