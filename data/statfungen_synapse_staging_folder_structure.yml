@@ -452,14 +452,34 @@ xQTL_GWAS_models: #syn69670588
       - TSV_files
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
-      ROSMAP:
-        - AD_xQTL.*.rds
-      MSBB:
-        - AD_xQTL_MSBB.*.rds
-      KNIGHT:
-        - AD_xQTL_KNIGHT.*.rds
-      MiGA:
-        - AD_eQTL_MIGA.*.rds
+      ROSMAP: #syn74986543
+        - ROSMAP.*.cb_xqtl_AD_Bellenguez.rds
+        - ROSMAP.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - ROSMAP.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      MSBB: #syn74986553
+        - MSBB.*.cb_xqtl_AD_Bellenguez.rds
+        - MSBB.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - MSBB.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      KNIGHT: #syn74986587
+        - KNIGHT.*.cb_xqtl_AD_Bellenguez.rds
+        - KNIGHT.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - KNIGHT.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      MiGA: #syn74986600
+        - MiGA.*.cb_xqtl_AD_Bellenguez.rds
+        - MiGA.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - MiGA.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn69670631
         - RDS_files
