@@ -409,19 +409,25 @@ xQTL_GWAS_models: #syn69670588
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
-          - RDS_files
+          batch{1..2} : #syn715489{43,45}
+            - KNIGHT_eQTL.*.univariate_twas_weights.rds
         KNIGHT_pQTL: #syn70090845
-          - RDS_files
+          batch1 : #syn71548946
+            - KNIGHT_pQTL.*.univariate_twas_weights.rds
         MetaBrain:
           - RDS_files
-        MiGA_eQTL:
-          - RDS_files
+        MiGA_eQTL: #syn70094765
+          batch{1..4}: #syn734626{87,89..91}
+           - MiGA_eQTL.*.univariate_bvsr.rds
         MSBB_eQTL: #syn70094766
-          - RDS_files
+          batch{1..6}: #syn7346268{1..6}
+            - MSBB_eQTL.*.univariate_twas_weights.rds
         MSBB_pQTL: #syn70090848
-          - RDS_files
+          batch1: #syn71548947
+            - MSBB_pQTL.*.univariate_twas_weights.rds
         MSBB_sQTL: #syn70090851
-          - RDS_files
+          batch{1..2}: #syn7154894{8..9}
+            - MSBB_sQTL.*.univariate_twas_weights.rds
         ROSMAP_eQTL: #syn72280606
           mega: #syn74907867
             - RDS_files
@@ -430,11 +436,14 @@ xQTL_GWAS_models: #syn69670588
           CUIMC1: #syn74908574
             - RDS_files
         ROSMAP_pQTL: #syn70090857
-          - RDS_files
+          batch{1..2}: #syn7154895{5..6}
+            - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
         ROSMAP_sQTL: #syn70094771
-          - RDS_files
+          batch{1..2}: #syn7346269{3,5}
+            - ROSMAP_sQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
-          - RDS_files
+          batch{1..2}: #syn7154895{8..9}
+          - STARNET_eQTL.*.univariate_twas_weights.rds
       multi_context: #syn74907900
         ROSMAP_All: #syn74909252
           - RDS_files
