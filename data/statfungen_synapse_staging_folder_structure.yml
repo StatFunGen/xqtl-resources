@@ -328,7 +328,7 @@ xQTL_GWAS_models: #syn69670588
             - RSS_QC_RAISS_imputed.*1.univariate_susie_rss.rds
         MiGA_eQTL: #syn70095505
           export: #syn70095506
-          fine_mapping: #syn70095507
+          fine_mapping: #syn75134502
             - MiGA_eQTL.*.univariate_bvsr.rds
         MSBB_eQTL: #syn70095508
           export: #syn70095509
