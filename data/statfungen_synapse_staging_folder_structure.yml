@@ -552,37 +552,37 @@ reference_files: #syn69670634
          - ADSP_R4.EUR.chr{1..22}.pvar.zst
          - ADSP_R4.EUR.chr{1..22}.psam
          - ADSP_R4.EUR.chr{1..22}.afreq
-  sLDSC_reference_data:
-    gwas_sumstats: 
-      reference_sumstats_parquet:
+  sLDSC_reference_data: #syn75157484
+    gwas_sumstats: #syn75157485
+      reference_sumstats_parquet: #syn75157492
         - 
-      traits_group:
+      traits_group: #syn75157493
         - 
-    hm3_snplist:
+    hm3_snplist: #syn75157488
         - hm3_snp_list.txt
-    reference_panel:
-      1000G: 
-        frq:
+    reference_panel: #syn75157489
+      1000G: #syn75157496
+        frq: #syn75157506
           -
-        hm3_print_snp:
-          baselineLD_v2.2:
+        hm3_print_snp: #syn75157509
+          baselineLD_v2.2: #syn75157510
             - 
-          weights:
+          weights: #syn75157511
             - 
-      ADSP_baselinev2.2_overlap:
-        frq:
+      ADSP_baselinev2.2_overlap: #syn75157500
+        frq: #syn75157514
           -
-        hm3_print_snp:
-          baselineLD_v2.2:
+        hm3_print_snp: #syn75157515
+          baselineLD_v2.2: #syn75157516
             -
-          weights:
+          weights: #syn75157519
             -
-        without_hm3_print_snp:
-          baselineLD_v2.2:
+        without_hm3_print_snp: #syn75157520
+          baselineLD_v2.2: #syn75157521
             -
-          minimal_baselineLD:
+          minimal_baselineLD: #syn75157526
             -
-          weights:
+          weights: #syn75157527
             -
   LDSC_reference_data: #syn69670653
     ld_scores: #syn69670654
