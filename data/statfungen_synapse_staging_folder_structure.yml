@@ -598,8 +598,8 @@ reference_files: #syn69670634
             - ADSP_chr{1..22}.l2.ldscore.parquet
             - ADSP_chr{1..22}.l2.ldscore.parquet.log
           minimal_baselineLD: #syn75157526
-            eQTL:
-              multigene:
+            multigene:
+              eQTL:
                 MSBB_BM_22:
                   - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.M
                   - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.ldscore.parquet.log
@@ -616,91 +616,95 @@ reference_files: #syn69670634
                   - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.annot
                 MSBB_BM_44:
-                  - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.M
-                  - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.annot
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.M
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.annot
                 ROSMAP_Ast_mega:
                   - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.annot
-                ROSMAP_AC:
-                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.annot
-                ROSMAP_Ast_CUIMC1:
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.annot
-                ROSMAP_DLPFC:
-                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.annot
-                ROSMAP_Exc_CUIMC1:
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.annot
                 ROSMAP_Exc_mega:
                   - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.annot
-                ROSMAP_Inh_CUIMC1:
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.annot
                 ROSMAP_Inh_mega:
                   - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.annot
-                ROSMAP_PCC:
-                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.annot
-                ROSMAP_monocyte:
-                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.annot
-                ROSMAP_Oli_CUIMC1:
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.annot
                 ROSMAP_Oli_mega:
                   - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.annot
-                ROSMAP_OPC_CUIMC1:
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.annot
                 ROSMAP_OPC_mega:
                   - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.annot
-                ROSMAP_Mic_CUIMC1:
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.annot
                 ROSMAP_Mic_mega:
                   - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.annot
-              single_context:
+                ROSMAP_AC:
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.annot
+                ROSMAP_DLPFC:
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.annot
+                ROSMAP_PCC:
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet                    - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.annot
+                ROSMAP_monocyte:
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.annot
+                ROSMAP_Ast_CUIMC1:                   
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.annot
+                ROSMAP_Exc_CUIMC1:
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.annot
+                ROSMAP_Inh_CUIMC1:
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.annot
+                ROSMAP_Oli_CUIMC1:
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.annot
+                ROSMAP_OPC_CUIMC1:
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.annot
+                ROSMAP_Mic_CUIMC1:
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.annot
+              pQTL:
+                ROSMAP_DLPFC_Bennett:
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet
+            single_context:
+              eQTL:
                 STARNET_Mac:
                   - STARNET_eQTL_Mac_single_1.{1..22}.l2.M
                   - STARNET_eQTL_Mac_single_1.{1..22}.l2.ldscore.parquet
@@ -722,7 +726,7 @@ reference_files: #syn69670634
                 ROSMAP_Ast_MIT:
                   - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.ldscore.parquet
-               ROSMAP_Ast_10_MIT:
+                ROSMAP_Ast_10_MIT:
                   - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.ldscore.parquet
                 ROSMAP_Mic_13_MIT:
@@ -746,9 +750,6 @@ reference_files: #syn69670634
                 ROSMAP_OPC_mega:
                   - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.l2.ldscore.parquet
-                ROSMAP_Inh_mega:
-                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.l2.ldscore.parquet
                 ROSMAP_Mic_mega:
                   - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.l2.ldscore.parquet
@@ -782,9 +783,125 @@ reference_files: #syn69670634
                 MiGA_SVZ:
                   - MiGA_eQTL_SVZ_single_1.{1..22}.l2.M
                   - MiGA_eQTL_SVZ_single_1.{1..22}.l2.ldscore.parquet
-                MiGA_SVZ:
-                  - MiGA_eQTL_SVZ_single_1.{1..22}.l2.M
-                  - MiGA_eQTL_SVZ_single_1.{1..22}.l2.ldscore.parquet
+                MiGA_GFM:
+                  - MiGA_eQTL_GFM_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_GFM_single_1.{1..22}.l2.ldscore.parquet
+                MiGA_THA:
+                  - MiGA_eQTL_THA_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_THA_single_1.{1..22}.l2.ldscore.parquet
+                MiGA_GTS:
+                  - MiGA_eQTL_GTS_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_GTS_single_1.{1..22}.l2.ldscore.parquet
+                MetaBrain_Cortex:
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.l2.ldscore.parquet
+                MetaBrain_Cerebellum:
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.l2.ldscore.parquet
+                MetaBrain_Spinalcord:
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.l2.ldscore.parquet
+                MetaBrain_Hippocampus:
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.l2.ldscore.parquet
+                MetaBrain_Basalganglia:
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.l2.ldscore.parquet
+                MSBB_BM_22:
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.l2.ldscore.parquet
+                MSBB_BM_10:
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.l2.ldscore.parquet
+                MSBB_BM_36:
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet
+                MSBB_BM_44:
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.l2.ldscore.parquet
+                KNIGHT_Brain:
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+              sQTL:
+                ROSMAP_PCC:
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.ldscore.parquet
+                ROSMAP_DLPFC:
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                ROSMAP_AC:
+                  - ROSMAP_sQTL_AC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_AC_single_1.{1..222}.l2.ldscore.parquet
+              pQTL:
+                ROSMAP_DLPFC_Bennett:
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.M
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.ldscore.parquet
+                MSBB_BM_36:
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.l2.M
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet
+                KNIGHT_Brain:
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+              mQTL:
+                ROSMAP_DLPFC:
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                MSBB:
+                  - MSBB_mQTL_single_1.{1..22}.l2.M
+                  - MSBB_mQTL_single_1.{1..22}.l2.ldscore.parquet
+                KNIGHT_Brain:
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+              gpQTL:
+                ROSMAP_DLPFC_Klein_unadjusted:
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet
+                ROSMAP_DLPFC_Klein_adjusted:
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet
+              haQTL:
+                ROSMAP_DLPFC:
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+            trans:
+               ROSMAP_snuc_Oli_CUIMC1:
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet
+              ROSMAP_snuc_Inh_CUIMC1:
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet
+              ROSMAP_snuc_OPC_CUIMC1:
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet
+              ROSMAP_snuc_Exc_CUIMC1:
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet
+              ROSMAP_snuc_Mic_CUIMC1:
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet
+              ROSMAP_snuc_Ast_CUIMC1:
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.M                  
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet
+            colocalization:
+              ROSMAP:
+                - ROSMAP_colocboost_single_1.{1..22}.l2.M
+                - ROSMAP_colocboost_single_1.{1..22}.l2.ldscore.parquet
+              MiGA:
+                - MiGA_colocboost_single_1.{1..22}.l2.M
+                - MiGA_colocboost_single_1.{1..22}.l2.ldscore.parquet
+              MSBB:
+                - MSBB_colocboost_single_1.{1..22}.l2.M
+                - MSBB_colocboost_single_1.{1..22}.l2.ldscore.parquet
+              KNIGHT:
+                - KNIGHT_colocboost_single_1.{1..22}.l2.M
+                - KNIGHT_colocboost_single_1.{1..22}.l2.ldscore.parquet
+            multi_context:
+              ROSMAP:
+                - ROSMAP_Multi_All_single_1.{1..22}.l2.M
+                - ROSMAP_Multi_All_single_1.{1..22}.l2.ldscore.parquet
+              MSBB:
+                - MSBB_Multi_All_single_1.{1..22}.l2.M
+                - MSBB_Multi_All_single_1.{1..22}.l2.ldscore.parquet
           weights: #syn75157527
             - weights_chr{1..22}.log
             - weights_chr{1..22}.l2.ldscore.gz
