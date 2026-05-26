@@ -555,35 +555,55 @@ reference_files: #syn69670634
   sLDSC_reference_data: #syn75157484
     gwas_sumstats: #syn75157485
       reference_sumstats_parquet: #syn75157492
-        - 
+        - *.sumstats.parquet
       traits_group: #syn75157493
-        - 
+        - sumstats_*.txt
     hm3_snplist: #syn75157488
         - hm3_snp_list.txt
     reference_panel: #syn75157489
       1000G: #syn75157496
         frq: #syn75157506
-          -
+          - 1000G_EUR.hg38.{1..22}.frq
         hm3_print_snp: #syn75157509
           baselineLD_v2.2: #syn75157510
-            - 
+            - baselineLD.{1..22}.log
+            - baselineLD.{1..22}.l2.ldscore.gz
+            - baselineLD.{1..22}.l2.M_5_50
+            - baselineLD.{1..22}.l2.M
+            - baselineLD.{1..22}.annot.gz
           weights: #syn75157511
-            - 
+            - weights.hm3_noMHC.{1..22}.log
+            - weights.hm3_noMHC.{1..22}.l2.ldscore.gz
+            - weights.hm3_noMHC.{1..22}.l2.M_5_50
+            - weights.hm3_noMHC.{1..22}.l2.M
       ADSP_baselinev2.2_overlap: #syn75157500
         frq: #syn75157514
-          -
+          - ADSP_chr{1..22}.frq
         hm3_print_snp: #syn75157515
           baselineLD_v2.2: #syn75157516
-            -
+            - ADSP_chr{1..22}.l2.ldscore.gz
+            - ADSP_chr{1..22}.l2.M_5_50
+            - ADSP_chr{1..22}.l2.M
+            - ADSP_chr{1..22}.annot.gz
           weights: #syn75157519
-            -
+            - weights_chr{1..22}.log
+            - weights_chr{1..22}.l2.ldscore.gz
+            - weights_chr{1..22}.l2.M_5_50
+            - weights_chr{1..22}.l2.M
         without_hm3_print_snp: #syn75157520
           baselineLD_v2.2: #syn75157521
-            -
+            - ADSP_chr{1..22}.l2.M_5_50
+            - ADSP_chr{1..22}.l2.M
+            - ADSP_chr{1..22}.annot.gz
+            - ADSP_chr{1..22}.l2.ldscore.parquet
+            - ADSP_chr{1..22}.l2.ldscore.parquet.log
           minimal_baselineLD: #syn75157526
-            -
+            - 
           weights: #syn75157527
-            -
+            - weights_chr{1..22}.log
+            - weights_chr{1..22}.l2.ldscore.gz
+            - weights_chr{1..22}.l2.M_5_50
+            - weights_chr{1..22}.l2.M
   LDSC_reference_data: #syn69670653
     ld_scores: #syn69670654
       - Misc_file_formats
