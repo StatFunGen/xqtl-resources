@@ -1,84 +1,84 @@
 README
-variant_gene_summary:
-  xQTL_loci_summary:
-    xQTL_finemapping:
-      single_context_finemapping:
-        eQTL:
-          - Knight_eQTL_brain.exported.toploci.bed.gz
-          - BM_10_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_22_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_36_MSBB_eQTL.exported.toploci.bed.gz
-          - BM_44_MSBB_eQTL.exported.toploci.bed.gz
-          - Metabrain_Basalganglia.exported.toploci.bed.gz
-          - Metabrain_Cerebellum.exported.toploci.bed.gz
-          - Metabrain_Cortex.exported.toploci.bed.gz
-          - Metabrain_Hippocampus.exported.toploci.bed.gz
-          - Metabrain_Spinalcord.exported.toploci.bed.gz
-          - MiGA_GFM_eQTL.exported.toploci.bed.gz
-          - MiGA_GTS_eQTL.exported.toploci.bed.gz
-          - MiGA_SVZ_eQTL.exported.toploci.bed.gz
-          - MiGA_THA_eQTL.exported.toploci.bed.gz
-          - AC_DeJager_eQTL.exported.toploci.bed.gz
-          - Ast_10_MIT_eQTL.exported.toploci.bed.gz
-          - Ast_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Ast_MIT_eQTL.exported.toploci.bed.gz
-          - Ast_mega_eQTL.exported.toploci.bed.gz
-          - DLPFC_DeJager_eQTL.exported.toploci.bed.gz
-          - Exc_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Exc_MIT_eQTL.exported.toploci.bed.gz
-          - Exc_mega_eQTL.exported.toploci.bed.gz
-          - Inh_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Inh_MIT_eQTL.exported.toploci.bed.gz
-          - Inh_mega_eQTL.exported.toploci.bed.gz
-          - Mic_12_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_13_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Mic_MIT_eQTL.exported.toploci.bed.gz
-          - Mic_mega_eQTL.exported.toploci.bed.gz
-          - OPC_CUIMC1_eQTL.exported.toploci.bed.gz
-          - OPC_MIT_eQTL.exported.toploci.bed.gz
-          - OPC_mega_eQTL.exported.toploci.bed.gz
-          - Oli_CUIMC1_eQTL.exported.toploci.bed.gz
-          - Oli_MIT_eQTL.exported.toploci.bed.gz
-          - Oli_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_monocyte_eQTL.exported.toploci.bed.gz
-          - STARNET_eQTL_Mac.exported.toploci.bed.gz
-          - PCC_DeJager_eQTL.exported.toploci.bed.gz
-        pQTL:
-          - Knight_pQTL_brain.exported.toploci.bed.gz
-          - MSBB_BM36_pQTL.exported.toploci.bed.gz
-          - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
-        glycoQTL:
-          - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
-        sQTL:
-          - ROSMAP_AC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_AC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_AC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_DLPFC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.bed.gz
-          - ROSMAP_PCC_sQTL.exported.toploci.nofilter.rare_filtered_0.8.bed.gz
-        mQTL:
-          - ROSMAP_DLPFC_mQTL.exported.toploci.bed.gz
-          - KnightADRC_mQTL.exported.toploci.bed.gz
-          - MSBB_mQTL.exported.toploci.bed.gz
-        haQTL:
-          - ROSMAP_DLPFC_haQTL.exported.toploci.bed.gz
-        caQTL:
-          - ROSMAP_snATAC_MIT_OPC.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Exc.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Ast.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Oli.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Mic.exported.toploci.bed.gz
-          - ROSMAP_snATAC_MIT_Inh.exported.toploci.bed.gz
-        consolidated:
+variant_gene_summary: #syn69865684
+  xQTL_loci_summary: #syn69865685
+    xQTL_finemapping: #syn69865686
+      single_context_finemapping: #syn69865687
+        eQTL: #syn69865689
+          - Knight_eQTL_brain.cis.top_loci.bed.gz
+          - BM_10_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_22_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_36_MSBB_eQTL.cis.top_loci.bed.gz
+          - BM_44_MSBB_eQTL.cis.top_loci.bed.gz
+          - Metabrain_Basalganglia.cis.top_loci.bed.gz
+          - Metabrain_Cerebellum.cis.top_loci.bed.gz
+          - Metabrain_Cortex.cis.top_loci.bed.gz
+          - Metabrain_Hippocampus.cis.top_loci.bed.gz
+          - Metabrain_Spinalcord.cis.top_loci.bed.gz
+          - MiGA_GFM_eQTL.cis.top_loci.bed.gz
+          - MiGA_GTS_eQTL.cis.top_loci.bed.gz
+          - MiGA_SVZ_eQTL.cis.top_loci.bed.gz
+          - MiGA_THA_eQTL.cis.top_loci.bed.gz
+          - AC_DeJager_eQTL.cis.top_loci.bed.gz
+          - Ast_10_MIT_eQTL.cis.top_loci.bed.gz
+          - Ast_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Ast_MIT_eQTL.cis.top_loci.bed.gz
+          - Ast_mega_eQTL.cis.top_loci.bed.gz
+          - DLPFC_DeJager_eQTL.cis.top_loci.bed.gz
+          - Exc_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Exc_MIT_eQTL.cis.top_loci.bed.gz
+          - Exc_mega_eQTL.cis.top_loci.bed.gz
+          - Inh_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Inh_MIT_eQTL.cis.top_loci.bed.gz
+          - Inh_mega_eQTL.cis.top_loci.bed.gz
+          - Mic_12_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_13_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Mic_MIT_eQTL.cis.top_loci.bed.gz
+          - Mic_mega_eQTL.cis.top_loci.bed.gz
+          - OPC_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - OPC_MIT_eQTL.cis.top_loci.bed.gz
+          - OPC_mega_eQTL.cis.top_loci.bed.gz
+          - Oli_CUIMC1_eQTL.cis.top_loci.bed.gz
+          - Oli_MIT_eQTL.cis.top_loci.bed.gz
+          - Oli_mega_eQTL.cis.top_loci.bed.gz
+          - ROSMAP_monocyte_eQTL.cis.top_loci.bed.gz
+          - STARNET_eQTL_Mac.cis.top_loci.bed.gz
+          - PCC_DeJager_eQTL.cis.top_loci.bed.gz
+        pQTL: #syn69865740
+          - Knight_pQTL_brain.cis.top_loci.bed.gz
+          - MSBB_BM36_pQTL.cis.top_loci.bed.gz
+          - DLPFC_Bennett_pQTL.cis.top_loci.bed.gz
+        glycoQTL: #syn69865744
+          - DLPFC_Klein_gpQTL_adjusted.cis.top_loci.bed.gz
+          - DLPFC_Klein_gpQTL_unadjusted.cis.top_loci.bed.gz
+        sQTL: #syn69865747
+          - ROSMAP_AC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_AC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_AC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_DLPFC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
+          - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+        mQTL: #syn69865748
+          - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
+          - KnightADRC_mQTL.cis.top_loci.bed.gz
+          - MSBB_mQTL.cis.top_loci.bed.gz
+        haQTL: #syn69865749
+          - ROSMAP_DLPFC_haQTL.cis.top_loci.bed.gz
+        caQTL: #syn69865750
+          - ROSMAP_snATAC_MIT_OPC.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Exc.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Ast.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Oli.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Mic.cis.top_loci.bed.gz
+          - ROSMAP_snATAC_MIT_Inh.cis.top_loci.bed.gz
+        consolidated: #syn69865751
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
-      multi_context_finemapping:
-        - mash_model:
+      multi_context_finemapping: #syn69865754
+        - mash_model: #syn71722950
           - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.V_simple.rds
@@ -89,800 +89,426 @@ variant_gene_summary:
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.model.rds
           - mash_34_contexts_ed_bovy_1e3.flash_nonneg.rds
           - mash_34_contexts_ed_bovy_1e3.pca.rds
-        - MSBB.exported.toploci.bed.gz
-        - ROSMAP.exported.toploci.bed.gz
-        - consolidated:
+        - MSBB.cis.multi_context.top_loci.bed.gz #syn69865755
+        - ROSMAP.cis.multi_context.top_loci.bed.gz #syn69865756
+        - consolidated: #syn70094695
           - FunGen_xQTL_multi_context_top_loci_integrated.rds
-      multi_gene_finemapping:
-        eQTL:
-          - MSBB_BM_10_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_22_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_36_eQTL.exported.toploci.bed.gz
-          - MSBB_BM_44_eQTL.exported.toploci.bed.gz
-          - ROSMAP_AC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Ast_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Ast_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Exc_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Exc_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Inh_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Inh_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Mic_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Mic_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_OPC_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_OPC_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Oli_CUIMC1_eQTL.exported.toploci.bed.gz
-          - ROSMAP_Oli_mega_eQTL.exported.toploci.bed.gz
-          - ROSMAP_PCC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_DLPFC_DeJager_eQTL.exported.toploci.bed.gz
-          - ROSMAP_monocyte_ROSMAP_eQTL.exported.toploci.bed.gz
-        pQTL:
-          - ROSMAP_DLPFC_Bennett_pQTL.exported.toploci.bed.gz
-      trans_finemapping:
-        eQTL:
-          - Knight_eQTL.exported.toploci.bed.gz
-          - MSBB_eQTL_BM10.exported.toploci.bed.gz
-          - MSBB_eQTL_BM22.exported.toploci.bed.gz
-          - MSBB_eQTL_BM36.exported.toploci.bed.gz
-          - MSBB_eQTL_BM44.exported.toploci.bed.gz
-          - MiGA_eQTL_GFM.exported.toploci.bed.gz
-          - MiGA_eQTL_GTS.exported.toploci.bed.gz
-          - MiGA_eQTL_SVZ.exported.toploci.bed.gz
-          - MiGA_eQTL_THA.exported.toploci.bed.gz
-          - ROSMAP_DeJager_AC.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_Ast.exported.toploci.bed.gz
-          - ROSMAP_DeJager_DLPFC.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_Exc.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_Inh.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_Mic.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_OPC.exported.toploci.bed.gz
-          - ROSMAP_CUIMC1_Oli.exported.toploci.bed.gz
-          - ROSMAP_DeJager_PCC.exported.toploci.bed.gz
-          - ROSMAP_DeJager_monocyte.exported.toploci.bed.gz
-          - ROSMAP_MIT_Ast.exported.toploci.bed.gz
-          - ROSMAP_MIT_Exc.exported.toploci.bed.gz
-          - ROSMAP_MIT_Inh.exported.toploci.bed.gz
-          - ROSMAP_MIT_Mic.exported.toploci.bed.gz
-          - ROSMAP_MIT_OPC.exported.toploci.bed.gz
-          - ROSMAP_MIT_Oli.exported.toploci.bed.gz
-          - ROSMAP_mega_Ast.exported.toploci.bed.gz
-          - ROSMAP_mega_Exc.exported.toploci.bed.gz
-          - ROSMAP_mega_Inh.exported.toploci.bed.gz
-          - ROSMAP_mega_Mic.exported.toploci.bed.gz
-          - ROSMAP_mega_OPC.exported.toploci.bed.gz
-          - ROSMAP_mega_Oli.exported.toploci.bed.gz
-          - STARNET_eQTL.exported.toploci.bed.gz
-        pQTL:
-          - Knight_pQTL_brain.exported.toploci.bed.gz
-          - MSBB_BM36_pQTL.exported.toploci.bed.gz
-          - DLPFC_Bennett_pQTL.exported.toploci.bed.gz
-          - ROSMAP_DeJager_pQTL.exported.toploci.bed.gz
-        glycoQTL:
-          - DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz
-        metabolome:
-          - ROSMAP_metabolome.exported.toploci.bed.gz
-    xQTL_colocalization:
-      multi_context_colocalization:
-        - xqtl_only_ROSMAP_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_MSBB_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_KNIGHT_colocboost_export_release_sorted.bed.gz
-        - xqtl_only_MIGA_colocboost_export_release_sorted.bed.gz
-      pairwise_colocalization:
-        bulk_mQTL_haQTL_AD: 
-          - bulk_fsusie_AD_coloc_export_filtered.bed.gz
-        caQTL_AD:
-          - snATAC_MIT_AD_coloc_export_filtered.bed.gz
-        caQTL_eQTL:
+      multi_gene_finemapping: #syn69865757
+        eQTL: #syn69865758
+          - MSBB_BM_10_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_22_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_36_eQTL.cis.multi_gene.top_loci.bed.gz
+          - MSBB_BM_44_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_AC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Ast_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Ast_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Exc_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Exc_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Inh_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Inh_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Mic_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Mic_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_OPC_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_OPC_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Oli_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_Oli_mega_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_PCC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_DLPFC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_monocyte_ROSMAP_eQTL.cis.multi_gene.top_loci.bed.gz
+        pQTL: #syn69865771
+          - ROSMAP_DLPFC_Bennett_pQTL.cis.multi_gene.top_loci.bed.gz
+      trans_finemapping: #syn69865773
+        eQTL: #syn69865774
+          - Knight_eQTL.trans.tag_variants.top_loci.bed.gz            
+          - ROSMAP_CUIMC1_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Inh.trans.tag_variants.top_loci.bed.gz     
+          - ROSMAP_CUIMC1_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Mic.trans.tag_variants.top_loci.bed.gz    
+          - ROSMAP_CUIMC1_eQTL_DLPFC.trans.tag_variants.top_loci.bed.gz   
+          - ROSMAP_CUIMC1_eQTL_PCC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_AC.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_CUIMC1_eQTL_Monocyte.trans.tag_variants.top_loci.bed.gz
+          - MIGA_eQTL_GFM.trans.tag_variants.top_loci.bed.gz  
+          - MIGA_eQTL_GTS.trans.tag_variants.top_loci.bed.gz           
+          - MIGA_eQTL_SVZ.trans.tag_variants.top_loci.bed.gz
+          - MIGA_eQTL_THA.trans.tag_variants.top_loci.bed.gz 
+          - ROSMAP_mega_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Inh.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Mic.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_mega_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - MSBB_eQTL_BM10.trans.tag_variants.top_loci.bed.gz          
+          - MSBB_eQTL_BM22.trans.tag_variants.top_loci.bed.gz    
+          - MSBB_eQTL_BM36.trans.tag_variants.top_loci.bed.gz
+          - MSBB_eQTL_BM44.trans.tag_variants.top_loci.bed.gz            
+          - ROSMAP_MIT_eQTL_Ast.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Exc.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Inh.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Mic.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_Oli.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_MIT_eQTL_OPC.trans.tag_variants.top_loci.bed.gz
+          - STARNET_eQTL.trans.tag_variants.top_loci.bed.gz
+          - Ast_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - Inh_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - Oli_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - Exc_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - Mic_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - OPC_CUIMC1_eQTL.trans.no_HF.top_loci.bed.gz
+          - AC_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz  
+          - Oli_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz
+          - Ast_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz 
+          - OPC_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz
+          - DLPFC_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz    
+          - PCC_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz
+          - Exc_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz  
+          - Inh_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz 
+          - Mic_CUIMC1_eQTL.transcca_program.no_HF.top_loci.bed.gz
+          - Mic_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz 
+          - AC_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz
+          - Oli_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz
+          - Ast_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
+          - OPC_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz
+          - DLPFC_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz 
+          - PCC_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz
+          - Exc_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
+          - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
+        pQTL: #syn69865791
+          - Knight_pQTL_brain.trans.tag_variants.top_loci.bed.gz  
+          - trans_pQTL.trans.no_HF.top_loci.bed.gz
+          - MSBB_pQTL_BM36.trans.tag_variants.top_loci.bed.gz
+          - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_pQTL.trans.tag_variants.top_loci.bed.gz
+        glycoQTL: #syn70094703
+          - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
+          - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
+          - trans_gpQTL_adj.trans.no_HF.top_loci.bed.gz
+          - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
+          - ROSMAP_gpQTL.trans.top_loci.bed.gz
+          - ROSMAP_adjusted_gpQTL.trans.tag_variants.top_loci.bed.gz
+        metabolome: #syn69865793
+          - ROSMAP_metabolome.trans.top_loci.bed.gz
+        consolidated: #syn74916771
+          - FunGen_xQTL.trans.top_loci.bed.gz
+    xQTL_colocalization: #syn69865795
+      multi_context_colocalization: #syn69865796
+        - xqtl_only_ROSMAP_colocboost_sorted.bed.gz
+        - xqtl_only_MSBB_colocboost_sorted.bed.gz
+        - xqtl_only_KNIGHT_colocboost_sorted.bed.gz
+        - xqtl_only_MIGA_colocboost_sorted.bed.gz
+      pairwise_colocalization: #syn69865800
+        bulk_mQTL_haQTL_AD: #syn69865801
+          - bulk_fsusie_AD_coloc_filtered.bed.gz
+        caQTL_AD: #syn69865802
+          - snATAC_MIT_AD_coloc_filtered.bed.gz
+        caQTL_eQTL: #syn69865803
           - snatac_ROSMAP.coloc.tsv.gz
-  AD_loci_summary:
-    AD_finemapping:
-      - AD_Bellenguez_2022.exported.toploci.bed.gz
-      - AD_Jansen_2021.exported.toploci.bed.gz
-      - AD_Wightman_Full_2021.exported.toploci.bed.gz
-      - AD_Bellenguez_EADB_2022.exported.toploci.bed.gz
-      - AD_Kunkle_Stage1_2019.exported.toploci.bed.gz
-      - AD_Wightman_Excluding23andMe_2021.exported.toploci.bed.gz
-      - AD_Wightman_ExcludingUKBand23andME_2021.exported.toploci.bed.gz
-      - AD_Bellenguez_EADI_2022.exported.toploci.bed.gz
-    AD_colocalization:
-      - ad_meta_colocboost_export_filtered.bed.gz
-    AD_xQTL_colocalization:
-      - AD_xQTL_ROSMAP_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_MSBB_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_KNIGHT_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_MIGA_colocboost_export_release_sorted.bed.gz
-      - AD_xQTL_colocboost_export_filtered_bed.gz
-    AD_gene_level:
-      TWAS_MR: 
+  AD_loci_summary: #syn69865804
+    AD_finemapping: #syn69865805
+      - AD_Bellenguez_2022.top_loci.bed.gz
+      - AD_Jansen_2021.top_loci.bed.gz
+      - AD_Wightman_Full_2021.top_loci.bed.gz
+      - AD_Bellenguez_EADB_2022.top_loci.bed.gz
+      - AD_Kunkle_Stage1_2019.top_loci.bed.gz
+      - AD_Wightman_Excluding23andMe_2021.top_loci.bed.gz
+      - AD_Wightman_ExcludingUKBand23andME_2021.top_loci.bed.gz
+      - AD_Bellenguez_EADI_2022.top_loci.bed.gz
+    AD_colocalization: #syn69865814
+      - AD_meta_colocboost_filtered.bed.gz
+    AD_xQTL_colocalization: #syn69865816
+      - AD_xQTL_ROSMAP_colocboost_sorted.bed.gz
+      - AD_xQTL_MSBB_colocboost_sorted.bed.gz
+      - AD_xQTL_KNIGHT_colocboost_sorted.bed.gz
+      - AD_xQTL_MIGA_colocboost_sorted.bed.gz
+      - AD_xQTL_colocboost_filtered.bed.gz
+    AD_gene_level: #syn69865820
+      TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
-      cTWAS:
+        - FunGen_mr.exported.bed.gz
+      cTWAS: #syn69865822
         - FunGen_ctwas.exported.bed.gz
-  AD_xQTL_integration_summary:
+  AD_xQTL_integration_summary: #syn69865823
+    - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_loci_unified_cs95orColocs.csv.gz
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
-xQTL_SCEEM_scores:
-  model_training:
-    columns_dict:
+xQTL_SCEEM_scores: #syn69670587
+  model_training: #syn72248754
+    columns_dict: #syn72248797
       - columns_dict.pkl
-    gene_lof:
+    gene_lof: #syn72248800
       - 41588_2024_1820_MOESM4_ESM.xlsx
-    gnomad_MAF:
-      - gnomad_MAF_chr1.tsv
-      - gnomad_MAF_chr2.tsv
-      - gnomad_MAF_chr3.tsv
-      - gnomad_MAF_chr4.tsv
-      - gnomad_MAF_chr5.tsv
-      - gnomad_MAF_chr6.tsv
-      - gnomad_MAF_chr7.tsv
-      - gnomad_MAF_chr8.tsv
-      - gnomad_MAF_chr9.tsv
-      - gnomad_MAF_chr10.tsv
-      - gnomad_MAF_chr11.tsv
-      - gnomad_MAF_chr12.tsv
-      - gnomad_MAF_chr13.tsv
-      - gnomad_MAF_chr14.tsv
-      - gnomad_MAF_chr15.tsv
-      - gnomad_MAF_chr16.tsv
-      - gnomad_MAF_chr17.tsv
-      - gnomad_MAF_chr18.tsv
-      - gnomad_MAF_chr19.tsv
-      - gnomad_MAF_chr20.tsv
-      - gnomad_MAF_chr21.tsv
-      - gnomad_MAF_chr22.tsv
-    test:
-      Ast_mega_eQTL:
-        - annotated_data_Ast_mega_eQTL_chr1.parquet
-        - annotated_data_Ast_mega_eQTL_chr2.parquet
-        - annotated_data_Ast_mega_eQTL_chr3.parquet
-        - annotated_data_Ast_mega_eQTL_chr4.parquet
-        - annotated_data_Ast_mega_eQTL_chr5.parquet
-        - annotated_data_Ast_mega_eQTL_chr6.parquet
-        - annotated_data_Ast_mega_eQTL_chr7.parquet
-        - annotated_data_Ast_mega_eQTL_chr8.parquet
-        - annotated_data_Ast_mega_eQTL_chr9.parquet
-        - annotated_data_Ast_mega_eQTL_chr10.parquet
-        - annotated_data_Ast_mega_eQTL_chr11.parquet
-        - annotated_data_Ast_mega_eQTL_chr12.parquet
-        - annotated_data_Ast_mega_eQTL_chr13.parquet
-        - annotated_data_Ast_mega_eQTL_chr14.parquet
-        - annotated_data_Ast_mega_eQTL_chr15.parquet
-        - annotated_data_Ast_mega_eQTL_chr16.parquet
-        - annotated_data_Ast_mega_eQTL_chr17.parquet
-        - annotated_data_Ast_mega_eQTL_chr18.parquet
-        - annotated_data_Ast_mega_eQTL_chr19.parquet
-        - annotated_data_Ast_mega_eQTL_chr20.parquet
-        - annotated_data_Ast_mega_eQTL_chr21.parquet
-        - annotated_data_Ast_mega_eQTL_chr22.parquet
-      Exc_mega_eQTL:
-        - annotated_data_Exc_mega_eQTL_chr1.parquet
-        - annotated_data_Exc_mega_eQTL_chr2.parquet
-        - annotated_data_Exc_mega_eQTL_chr3.parquet
-        - annotated_data_Exc_mega_eQTL_chr4.parquet
-        - annotated_data_Exc_mega_eQTL_chr5.parquet
-        - annotated_data_Exc_mega_eQTL_chr6.parquet
-        - annotated_data_Exc_mega_eQTL_chr7.parquet
-        - annotated_data_Exc_mega_eQTL_chr8.parquet
-        - annotated_data_Exc_mega_eQTL_chr9.parquet
-        - annotated_data_Exc_mega_eQTL_chr10.parquet
-        - annotated_data_Exc_mega_eQTL_chr11.parquet
-        - annotated_data_Exc_mega_eQTL_chr12.parquet
-        - annotated_data_Exc_mega_eQTL_chr13.parquet
-        - annotated_data_Exc_mega_eQTL_chr14.parquet
-        - annotated_data_Exc_mega_eQTL_chr15.parquet
-        - annotated_data_Exc_mega_eQTL_chr16.parquet
-        - annotated_data_Exc_mega_eQTL_chr17.parquet
-        - annotated_data_Exc_mega_eQTL_chr18.parquet
-        - annotated_data_Exc_mega_eQTL_chr19.parquet
-        - annotated_data_Exc_mega_eQTL_chr20.parquet
-        - annotated_data_Exc_mega_eQTL_chr21.parquet
-        - annotated_data_Exc_mega_eQTL_chr22.parquet
-      Inh_mega_eQTL:
-        - annotated_data_Inh_mega_eQTL_chr1.parquet
-        - annotated_data_Inh_mega_eQTL_chr2.parquet
-        - annotated_data_Inh_mega_eQTL_chr3.parquet
-        - annotated_data_Inh_mega_eQTL_chr4.parquet
-        - annotated_data_Inh_mega_eQTL_chr5.parquet
-        - annotated_data_Inh_mega_eQTL_chr6.parquet
-        - annotated_data_Inh_mega_eQTL_chr7.parquet
-        - annotated_data_Inh_mega_eQTL_chr8.parquet
-        - annotated_data_Inh_mega_eQTL_chr9.parquet
-        - annotated_data_Inh_mega_eQTL_chr10.parquet
-        - annotated_data_Inh_mega_eQTL_chr11.parquet
-        - annotated_data_Inh_mega_eQTL_chr12.parquet
-        - annotated_data_Inh_mega_eQTL_chr13.parquet
-        - annotated_data_Inh_mega_eQTL_chr14.parquet
-        - annotated_data_Inh_mega_eQTL_chr15.parquet
-        - annotated_data_Inh_mega_eQTL_chr16.parquet
-        - annotated_data_Inh_mega_eQTL_chr17.parquet
-        - annotated_data_Inh_mega_eQTL_chr18.parquet
-        - annotated_data_Inh_mega_eQTL_chr19.parquet
-        - annotated_data_Inh_mega_eQTL_chr20.parquet
-        - annotated_data_Inh_mega_eQTL_chr21.parquet
-        - annotated_data_Inh_mega_eQTL_chr22.parquet
-      Mic_mega_eQTL:
-        - annotated_data_Mic_mega_eQTL_chr1.parquet
-        - annotated_data_Mic_mega_eQTL_chr2.parquet
-        - annotated_data_Mic_mega_eQTL_chr3.parquet
-        - annotated_data_Mic_mega_eQTL_chr4.parquet
-        - annotated_data_Mic_mega_eQTL_chr5.parquet
-        - annotated_data_Mic_mega_eQTL_chr6.parquet
-        - annotated_data_Mic_mega_eQTL_chr7.parquet
-        - annotated_data_Mic_mega_eQTL_chr8.parquet
-        - annotated_data_Mic_mega_eQTL_chr9.parquet
-        - annotated_data_Mic_mega_eQTL_chr10.parquet
-        - annotated_data_Mic_mega_eQTL_chr11.parquet
-        - annotated_data_Mic_mega_eQTL_chr12.parquet
-        - annotated_data_Mic_mega_eQTL_chr13.parquet
-        - annotated_data_Mic_mega_eQTL_chr14.parquet
-        - annotated_data_Mic_mega_eQTL_chr15.parquet
-        - annotated_data_Mic_mega_eQTL_chr16.parquet
-        - annotated_data_Mic_mega_eQTL_chr17.parquet
-        - annotated_data_Mic_mega_eQTL_chr18.parquet
-        - annotated_data_Mic_mega_eQTL_chr19.parquet
-        - annotated_data_Mic_mega_eQTL_chr20.parquet
-        - annotated_data_Mic_mega_eQTL_chr21.parquet
-        - annotated_data_Mic_mega_eQTL_chr22.parquet
-      Oli_mega_eQTL:
-        - annotated_data_Oli_mega_eQTL_chr1.parquet
-        - annotated_data_Oli_mega_eQTL_chr2.parquet
-        - annotated_data_Oli_mega_eQTL_chr3.parquet
-        - annotated_data_Oli_mega_eQTL_chr4.parquet
-        - annotated_data_Oli_mega_eQTL_chr5.parquet
-        - annotated_data_Oli_mega_eQTL_chr6.parquet
-        - annotated_data_Oli_mega_eQTL_chr7.parquet
-        - annotated_data_Oli_mega_eQTL_chr8.parquet
-        - annotated_data_Oli_mega_eQTL_chr9.parquet
-        - annotated_data_Oli_mega_eQTL_chr10.parquet
-        - annotated_data_Oli_mega_eQTL_chr11.parquet
-        - annotated_data_Oli_mega_eQTL_chr12.parquet
-        - annotated_data_Oli_mega_eQTL_chr13.parquet
-        - annotated_data_Oli_mega_eQTL_chr14.parquet
-        - annotated_data_Oli_mega_eQTL_chr15.parquet
-        - annotated_data_Oli_mega_eQTL_chr16.parquet
-        - annotated_data_Oli_mega_eQTL_chr17.parquet
-        - annotated_data_Oli_mega_eQTL_chr18.parquet
-        - annotated_data_Oli_mega_eQTL_chr19.parquet
-        - annotated_data_Oli_mega_eQTL_chr20.parquet
-        - annotated_data_Oli_mega_eQTL_chr21.parquet
-        - annotated_data_Oli_mega_eQTL_chr22.parquet
-      OPC_mega_eQTL:
-        - annotated_data_OPC_mega_eQTL_chr1.parquet
-        - annotated_data_OPC_mega_eQTL_chr2.parquet
-        - annotated_data_OPC_mega_eQTL_chr3.parquet
-        - annotated_data_OPC_mega_eQTL_chr4.parquet
-        - annotated_data_OPC_mega_eQTL_chr5.parquet
-        - annotated_data_OPC_mega_eQTL_chr6.parquet
-        - annotated_data_OPC_mega_eQTL_chr7.parquet
-        - annotated_data_OPC_mega_eQTL_chr8.parquet
-        - annotated_data_OPC_mega_eQTL_chr9.parquet
-        - annotated_data_OPC_mega_eQTL_chr10.parquet
-        - annotated_data_OPC_mega_eQTL_chr11.parquet
-        - annotated_data_OPC_mega_eQTL_chr12.parquet
-        - annotated_data_OPC_mega_eQTL_chr13.parquet
-        - annotated_data_OPC_mega_eQTL_chr14.parquet
-        - annotated_data_OPC_mega_eQTL_chr15.parquet
-        - annotated_data_OPC_mega_eQTL_chr16.parquet
-        - annotated_data_OPC_mega_eQTL_chr17.parquet
-        - annotated_data_OPC_mega_eQTL_chr18.parquet
-        - annotated_data_OPC_mega_eQTL_chr19.parquet
-        - annotated_data_OPC_mega_eQTL_chr20.parquet
-        - annotated_data_OPC_mega_eQTL_chr21.parquet
-        - annotated_data_OPC_mega_eQTL_chr22.parquet
-    train:
-      Ast_mega_eQTL:
-        - annotated_data_Ast_mega_eQTL_chr1.parquet
-        - annotated_data_Ast_mega_eQTL_chr2.parquet
-        - annotated_data_Ast_mega_eQTL_chr3.parquet
-        - annotated_data_Ast_mega_eQTL_chr4.parquet
-        - annotated_data_Ast_mega_eQTL_chr5.parquet
-        - annotated_data_Ast_mega_eQTL_chr6.parquet
-        - annotated_data_Ast_mega_eQTL_chr7.parquet
-        - annotated_data_Ast_mega_eQTL_chr8.parquet
-        - annotated_data_Ast_mega_eQTL_chr9.parquet
-        - annotated_data_Ast_mega_eQTL_chr10.parquet
-        - annotated_data_Ast_mega_eQTL_chr11.parquet
-        - annotated_data_Ast_mega_eQTL_chr12.parquet
-        - annotated_data_Ast_mega_eQTL_chr13.parquet
-        - annotated_data_Ast_mega_eQTL_chr14.parquet
-        - annotated_data_Ast_mega_eQTL_chr15.parquet
-        - annotated_data_Ast_mega_eQTL_chr16.parquet
-        - annotated_data_Ast_mega_eQTL_chr17.parquet
-        - annotated_data_Ast_mega_eQTL_chr18.parquet
-        - annotated_data_Ast_mega_eQTL_chr19.parquet
-        - annotated_data_Ast_mega_eQTL_chr20.parquet
-        - annotated_data_Ast_mega_eQTL_chr21.parquet
-        - annotated_data_Ast_mega_eQTL_chr22.parquet
-      Exc_mega_eQTL:
-        - annotated_data_Exc_mega_eQTL_chr1.parquet
-        - annotated_data_Exc_mega_eQTL_chr2.parquet
-        - annotated_data_Exc_mega_eQTL_chr3.parquet
-        - annotated_data_Exc_mega_eQTL_chr4.parquet
-        - annotated_data_Exc_mega_eQTL_chr5.parquet
-        - annotated_data_Exc_mega_eQTL_chr6.parquet
-        - annotated_data_Exc_mega_eQTL_chr7.parquet
-        - annotated_data_Exc_mega_eQTL_chr8.parquet
-        - annotated_data_Exc_mega_eQTL_chr9.parquet
-        - annotated_data_Exc_mega_eQTL_chr10.parquet
-        - annotated_data_Exc_mega_eQTL_chr11.parquet
-        - annotated_data_Exc_mega_eQTL_chr12.parquet
-        - annotated_data_Exc_mega_eQTL_chr13.parquet
-        - annotated_data_Exc_mega_eQTL_chr14.parquet
-        - annotated_data_Exc_mega_eQTL_chr15.parquet
-        - annotated_data_Exc_mega_eQTL_chr16.parquet
-        - annotated_data_Exc_mega_eQTL_chr17.parquet
-        - annotated_data_Exc_mega_eQTL_chr18.parquet
-        - annotated_data_Exc_mega_eQTL_chr19.parquet
-        - annotated_data_Exc_mega_eQTL_chr20.parquet
-        - annotated_data_Exc_mega_eQTL_chr21.parquet
-        - annotated_data_Exc_mega_eQTL_chr22.parquet
-      Inh_mega_eQTL:
-        - annotated_data_Inh_mega_eQTL_chr1.parquet
-        - annotated_data_Inh_mega_eQTL_chr2.parquet
-        - annotated_data_Inh_mega_eQTL_chr3.parquet
-        - annotated_data_Inh_mega_eQTL_chr4.parquet
-        - annotated_data_Inh_mega_eQTL_chr5.parquet
-        - annotated_data_Inh_mega_eQTL_chr6.parquet
-        - annotated_data_Inh_mega_eQTL_chr7.parquet
-        - annotated_data_Inh_mega_eQTL_chr8.parquet
-        - annotated_data_Inh_mega_eQTL_chr9.parquet
-        - annotated_data_Inh_mega_eQTL_chr10.parquet
-        - annotated_data_Inh_mega_eQTL_chr11.parquet
-        - annotated_data_Inh_mega_eQTL_chr12.parquet
-        - annotated_data_Inh_mega_eQTL_chr13.parquet
-        - annotated_data_Inh_mega_eQTL_chr14.parquet
-        - annotated_data_Inh_mega_eQTL_chr15.parquet
-        - annotated_data_Inh_mega_eQTL_chr16.parquet
-        - annotated_data_Inh_mega_eQTL_chr17.parquet
-        - annotated_data_Inh_mega_eQTL_chr18.parquet
-        - annotated_data_Inh_mega_eQTL_chr19.parquet
-        - annotated_data_Inh_mega_eQTL_chr20.parquet
-        - annotated_data_Inh_mega_eQTL_chr21.parquet
-        - annotated_data_Inh_mega_eQTL_chr22.parquet
-      Mic_mega_eQTL:
-        - annotated_data_Mic_mega_eQTL_chr1.parquet
-        - annotated_data_Mic_mega_eQTL_chr2.parquet
-        - annotated_data_Mic_mega_eQTL_chr3.parquet
-        - annotated_data_Mic_mega_eQTL_chr4.parquet
-        - annotated_data_Mic_mega_eQTL_chr5.parquet
-        - annotated_data_Mic_mega_eQTL_chr6.parquet
-        - annotated_data_Mic_mega_eQTL_chr7.parquet
-        - annotated_data_Mic_mega_eQTL_chr8.parquet
-        - annotated_data_Mic_mega_eQTL_chr9.parquet
-        - annotated_data_Mic_mega_eQTL_chr10.parquet
-        - annotated_data_Mic_mega_eQTL_chr11.parquet
-        - annotated_data_Mic_mega_eQTL_chr12.parquet
-        - annotated_data_Mic_mega_eQTL_chr13.parquet
-        - annotated_data_Mic_mega_eQTL_chr14.parquet
-        - annotated_data_Mic_mega_eQTL_chr15.parquet
-        - annotated_data_Mic_mega_eQTL_chr16.parquet
-        - annotated_data_Mic_mega_eQTL_chr17.parquet
-        - annotated_data_Mic_mega_eQTL_chr18.parquet
-        - annotated_data_Mic_mega_eQTL_chr19.parquet
-        - annotated_data_Mic_mega_eQTL_chr20.parquet
-        - annotated_data_Mic_mega_eQTL_chr21.parquet
-        - annotated_data_Mic_mega_eQTL_chr22.parquet
-      Oli_mega_eQTL:
-        - annotated_data_Oli_mega_eQTL_chr1.parquet
-        - annotated_data_Oli_mega_eQTL_chr2.parquet
-        - annotated_data_Oli_mega_eQTL_chr3.parquet
-        - annotated_data_Oli_mega_eQTL_chr4.parquet
-        - annotated_data_Oli_mega_eQTL_chr5.parquet
-        - annotated_data_Oli_mega_eQTL_chr6.parquet
-        - annotated_data_Oli_mega_eQTL_chr7.parquet
-        - annotated_data_Oli_mega_eQTL_chr8.parquet
-        - annotated_data_Oli_mega_eQTL_chr9.parquet
-        - annotated_data_Oli_mega_eQTL_chr10.parquet
-        - annotated_data_Oli_mega_eQTL_chr11.parquet
-        - annotated_data_Oli_mega_eQTL_chr12.parquet
-        - annotated_data_Oli_mega_eQTL_chr13.parquet
-        - annotated_data_Oli_mega_eQTL_chr14.parquet
-        - annotated_data_Oli_mega_eQTL_chr15.parquet
-        - annotated_data_Oli_mega_eQTL_chr16.parquet
-        - annotated_data_Oli_mega_eQTL_chr17.parquet
-        - annotated_data_Oli_mega_eQTL_chr18.parquet
-        - annotated_data_Oli_mega_eQTL_chr19.parquet
-        - annotated_data_Oli_mega_eQTL_chr20.parquet
-        - annotated_data_Oli_mega_eQTL_chr21.parquet
-        - annotated_data_Oli_mega_eQTL_chr22.parquet
-      OPC_mega_eQTL:
-        - annotated_data_OPC_mega_eQTL_chr1.parquet
-        - annotated_data_OPC_mega_eQTL_chr2.parquet
-        - annotated_data_OPC_mega_eQTL_chr3.parquet
-        - annotated_data_OPC_mega_eQTL_chr4.parquet
-        - annotated_data_OPC_mega_eQTL_chr5.parquet
-        - annotated_data_OPC_mega_eQTL_chr6.parquet
-        - annotated_data_OPC_mega_eQTL_chr7.parquet
-        - annotated_data_OPC_mega_eQTL_chr8.parquet
-        - annotated_data_OPC_mega_eQTL_chr9.parquet
-        - annotated_data_OPC_mega_eQTL_chr10.parquet
-        - annotated_data_OPC_mega_eQTL_chr11.parquet
-        - annotated_data_OPC_mega_eQTL_chr12.parquet
-        - annotated_data_OPC_mega_eQTL_chr13.parquet
-        - annotated_data_OPC_mega_eQTL_chr14.parquet
-        - annotated_data_OPC_mega_eQTL_chr15.parquet
-        - annotated_data_OPC_mega_eQTL_chr16.parquet
-        - annotated_data_OPC_mega_eQTL_chr17.parquet
-        - annotated_data_OPC_mega_eQTL_chr18.parquet
-        - annotated_data_OPC_mega_eQTL_chr19.parquet
-        - annotated_data_OPC_mega_eQTL_chr20.parquet
-        - annotated_data_OPC_mega_eQTL_chr21.parquet
-        - annotated_data_OPC_mega_eQTL_chr22.parquet
-  predictions:
-    Ast_mega_eQTL:
-      - predictions_Ast_mega_eQTL_1.tsv.gz
-      - predictions_Ast_mega_eQTL_1.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_2.tsv.gz
-      - predictions_Ast_mega_eQTL_2.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_3.tsv.gz
-      - predictions_Ast_mega_eQTL_3.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_4.tsv.gz
-      - predictions_Ast_mega_eQTL_4.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_5.tsv.gz
-      - predictions_Ast_mega_eQTL_5.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_6.tsv.gz
-      - predictions_Ast_mega_eQTL_6.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_7.tsv.gz
-      - predictions_Ast_mega_eQTL_7.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_8.tsv.gz
-      - predictions_Ast_mega_eQTL_8.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_9.tsv.gz
-      - predictions_Ast_mega_eQTL_9.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_10.tsv.gz
-      - predictions_Ast_mega_eQTL_10.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_11.tsv.gz
-      - predictions_Ast_mega_eQTL_11.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_12.tsv.gz
-      - predictions_Ast_mega_eQTL_12.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_13.tsv.gz
-      - predictions_Ast_mega_eQTL_13.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_14.tsv.gz
-      - predictions_Ast_mega_eQTL_14.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_15.tsv.gz
-      - predictions_Ast_mega_eQTL_15.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_16.tsv.gz
-      - predictions_Ast_mega_eQTL_16.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_17.tsv.gz
-      - predictions_Ast_mega_eQTL_17.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_18.tsv.gz
-      - predictions_Ast_mega_eQTL_18.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_19.tsv.gz
-      - predictions_Ast_mega_eQTL_19.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_20.tsv.gz
-      - predictions_Ast_mega_eQTL_20.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_21.tsv.gz
-      - predictions_Ast_mega_eQTL_21.tsv.gz.tbi
-      - predictions_Ast_mega_eQTL_22.tsv.gz
-      - predictions_Ast_mega_eQTL_22.tsv.gz.tbi
-    Exc_mega_eQTL:
-      - predictions_Exc_mega_eQTL_1.tsv.gz
-      - predictions_Exc_mega_eQTL_1.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_2.tsv.gz
-      - predictions_Exc_mega_eQTL_2.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_3.tsv.gz
-      - predictions_Exc_mega_eQTL_3.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_4.tsv.gz
-      - predictions_Exc_mega_eQTL_4.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_5.tsv.gz
-      - predictions_Exc_mega_eQTL_5.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_6.tsv.gz
-      - predictions_Exc_mega_eQTL_6.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_7.tsv.gz
-      - predictions_Exc_mega_eQTL_7.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_8.tsv.gz
-      - predictions_Exc_mega_eQTL_8.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_9.tsv.gz
-      - predictions_Exc_mega_eQTL_9.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_10.tsv.gz
-      - predictions_Exc_mega_eQTL_10.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_11.tsv.gz
-      - predictions_Exc_mega_eQTL_11.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_12.tsv.gz
-      - predictions_Exc_mega_eQTL_12.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_13.tsv.gz
-      - predictions_Exc_mega_eQTL_13.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_14.tsv.gz
-      - predictions_Exc_mega_eQTL_14.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_15.tsv.gz
-      - predictions_Exc_mega_eQTL_15.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_16.tsv.gz
-      - predictions_Exc_mega_eQTL_16.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_17.tsv.gz
-      - predictions_Exc_mega_eQTL_17.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_18.tsv.gz
-      - predictions_Exc_mega_eQTL_18.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_19.tsv.gz
-      - predictions_Exc_mega_eQTL_19.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_20.tsv.gz
-      - predictions_Exc_mega_eQTL_20.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_21.tsv.gz
-      - predictions_Exc_mega_eQTL_21.tsv.gz.tbi
-      - predictions_Exc_mega_eQTL_22.tsv.gz
-      - predictions_Exc_mega_eQTL_22.tsv.gz.tbi
-    Inh_mega_eQTL:
-      - predictions_Inh_mega_eQTL_1.tsv.gz
-      - predictions_Inh_mega_eQTL_1.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_2.tsv.gz
-      - predictions_Inh_mega_eQTL_2.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_3.tsv.gz
-      - predictions_Inh_mega_eQTL_3.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_4.tsv.gz
-      - predictions_Inh_mega_eQTL_4.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_5.tsv.gz
-      - predictions_Inh_mega_eQTL_5.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_6.tsv.gz
-      - predictions_Inh_mega_eQTL_6.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_7.tsv.gz
-      - predictions_Inh_mega_eQTL_7.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_8.tsv.gz
-      - predictions_Inh_mega_eQTL_8.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_9.tsv.gz
-      - predictions_Inh_mega_eQTL_9.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_10.tsv.gz
-      - predictions_Inh_mega_eQTL_10.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_11.tsv.gz
-      - predictions_Inh_mega_eQTL_11.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_12.tsv.gz
-      - predictions_Inh_mega_eQTL_12.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_13.tsv.gz
-      - predictions_Inh_mega_eQTL_13.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_14.tsv.gz
-      - predictions_Inh_mega_eQTL_14.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_15.tsv.gz
-      - predictions_Inh_mega_eQTL_15.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_16.tsv.gz
-      - predictions_Inh_mega_eQTL_16.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_17.tsv.gz
-      - predictions_Inh_mega_eQTL_17.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_18.tsv.gz
-      - predictions_Inh_mega_eQTL_18.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_19.tsv.gz
-      - predictions_Inh_mega_eQTL_19.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_20.tsv.gz
-      - predictions_Inh_mega_eQTL_20.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_21.tsv.gz
-      - predictions_Inh_mega_eQTL_21.tsv.gz.tbi
-      - predictions_Inh_mega_eQTL_22.tsv.gz
-      - predictions_Inh_mega_eQTL_22.tsv.gz.tbi
-    Mic_mega_eQTL:
-      - predictions_Mic_mega_eQTL_1.tsv.gz
-      - predictions_Mic_mega_eQTL_1.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_2.tsv.gz
-      - predictions_Mic_mega_eQTL_2.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_3.tsv.gz
-      - predictions_Mic_mega_eQTL_3.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_4.tsv.gz
-      - predictions_Mic_mega_eQTL_4.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_5.tsv.gz
-      - predictions_Mic_mega_eQTL_5.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_6.tsv.gz
-      - predictions_Mic_mega_eQTL_6.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_7.tsv.gz
-      - predictions_Mic_mega_eQTL_7.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_8.tsv.gz
-      - predictions_Mic_mega_eQTL_8.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_9.tsv.gz
-      - predictions_Mic_mega_eQTL_9.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_10.tsv.gz
-      - predictions_Mic_mega_eQTL_10.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_11.tsv.gz
-      - predictions_Mic_mega_eQTL_11.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_12.tsv.gz
-      - predictions_Mic_mega_eQTL_12.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_13.tsv.gz
-      - predictions_Mic_mega_eQTL_13.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_14.tsv.gz
-      - predictions_Mic_mega_eQTL_14.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_15.tsv.gz
-      - predictions_Mic_mega_eQTL_15.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_16.tsv.gz
-      - predictions_Mic_mega_eQTL_16.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_17.tsv.gz
-      - predictions_Mic_mega_eQTL_17.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_18.tsv.gz
-      - predictions_Mic_mega_eQTL_18.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_19.tsv.gz
-      - predictions_Mic_mega_eQTL_19.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_20.tsv.gz
-      - predictions_Mic_mega_eQTL_20.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_21.tsv.gz
-      - predictions_Mic_mega_eQTL_21.tsv.gz.tbi
-      - predictions_Mic_mega_eQTL_22.tsv.gz
-      - predictions_Mic_mega_eQTL_22.tsv.gz.tbi
-    Oli_mega_eQTL:
-      - predictions_Oli_mega_eQTL_1.tsv.gz
-      - predictions_Oli_mega_eQTL_1.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_2.tsv.gz
-      - predictions_Oli_mega_eQTL_2.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_3.tsv.gz
-      - predictions_Oli_mega_eQTL_3.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_4.tsv.gz
-      - predictions_Oli_mega_eQTL_4.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_5.tsv.gz
-      - predictions_Oli_mega_eQTL_5.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_6.tsv.gz
-      - predictions_Oli_mega_eQTL_6.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_7.tsv.gz
-      - predictions_Oli_mega_eQTL_7.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_8.tsv.gz
-      - predictions_Oli_mega_eQTL_8.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_9.tsv.gz
-      - predictions_Oli_mega_eQTL_9.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_10.tsv.gz
-      - predictions_Oli_mega_eQTL_10.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_11.tsv.gz
-      - predictions_Oli_mega_eQTL_11.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_12.tsv.gz
-      - predictions_Oli_mega_eQTL_12.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_13.tsv.gz
-      - predictions_Oli_mega_eQTL_13.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_14.tsv.gz
-      - predictions_Oli_mega_eQTL_14.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_15.tsv.gz
-      - predictions_Oli_mega_eQTL_15.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_16.tsv.gz
-      - predictions_Oli_mega_eQTL_16.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_17.tsv.gz
-      - predictions_Oli_mega_eQTL_17.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_18.tsv.gz
-      - predictions_Oli_mega_eQTL_18.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_19.tsv.gz
-      - predictions_Oli_mega_eQTL_19.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_20.tsv.gz
-      - predictions_Oli_mega_eQTL_20.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_21.tsv.gz
-      - predictions_Oli_mega_eQTL_21.tsv.gz.tbi
-      - predictions_Oli_mega_eQTL_22.tsv.gz
-      - predictions_Oli_mega_eQTL_22.tsv.gz.tbi
-    OPC_mega_eQTL:
-      - predictions_OPC_mega_eQTL_1.tsv.gz
-      - predictions_OPC_mega_eQTL_1.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_2.tsv.gz
-      - predictions_OPC_mega_eQTL_2.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_3.tsv.gz
-      - predictions_OPC_mega_eQTL_3.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_4.tsv.gz
-      - predictions_OPC_mega_eQTL_4.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_5.tsv.gz
-      - predictions_OPC_mega_eQTL_5.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_6.tsv.gz
-      - predictions_OPC_mega_eQTL_6.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_7.tsv.gz
-      - predictions_OPC_mega_eQTL_7.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_8.tsv.gz
-      - predictions_OPC_mega_eQTL_8.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_9.tsv.gz
-      - predictions_OPC_mega_eQTL_9.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_10.tsv.gz
-      - predictions_OPC_mega_eQTL_10.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_11.tsv.gz
-      - predictions_OPC_mega_eQTL_11.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_12.tsv.gz
-      - predictions_OPC_mega_eQTL_12.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_13.tsv.gz
-      - predictions_OPC_mega_eQTL_13.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_14.tsv.gz
-      - predictions_OPC_mega_eQTL_14.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_15.tsv.gz
-      - predictions_OPC_mega_eQTL_15.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_16.tsv.gz
-      - predictions_OPC_mega_eQTL_16.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_17.tsv.gz
-      - predictions_OPC_mega_eQTL_17.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_18.tsv.gz
-      - predictions_OPC_mega_eQTL_18.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_19.tsv.gz
-      - predictions_OPC_mega_eQTL_19.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_20.tsv.gz
-      - predictions_OPC_mega_eQTL_20.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_21.tsv.gz
-      - predictions_OPC_mega_eQTL_21.tsv.gz.tbi
-      - predictions_OPC_mega_eQTL_22.tsv.gz
-      - predictions_OPC_mega_eQTL_22.tsv.gz.tbi
+    gnomad_MAF: #syn72248799
+      - gnomad_MAF_chr{1..22}.tsv
+    test: #syn72248801
+      Ast_mega_eQTL: #syn72248942
+        - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet
+      Exc_mega_eQTL: #syn72248940
+        - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet
+      Inh_mega_eQTL: #syn72248941
+        - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet
+      Mic_mega_eQTL: #syn72248939
+        - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet
+      Oli_mega_eQTL: #syn72248943
+        - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet
+      OPC_mega_eQTL: #syn72248944
+        - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet
+    train: #syn72248798
+      Ast_mega_eQTL: #syn72248805
+        - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet
+      Exc_mega_eQTL: #syn72248803
+        - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet
+      Inh_mega_eQTL: #syn72248804
+        - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet
+      Mic_mega_eQTL: #syn72248802
+        - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet
+      Oli_mega_eQTL: #syn72248806
+        - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet
+      OPC_mega_eQTL: #syn72248807
+        - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet
+  predictions: #syn71338354
+    Ast_mega_eQTL: #syn71338358
+      - predictions_Ast_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Ast_mega_eQTL_{1..22}.tsv.gz.tbi
+    Exc_mega_eQTL: #syn71338356
+      - predictions_Exc_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Exc_mega_eQTL_{1..22}.tsv.gz.tbi
+    Inh_mega_eQTL: #syn71338357
+      - predictions_Inh_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Inh_mega_eQTL_{1..22}.tsv.gz.tbi
+    Mic_mega_eQTL: #syn71338355
+      - predictions_Mic_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Mic_mega_eQTL_{1..22}.tsv.gz.tbi
+    Oli_mega_eQTL: #syn71338359
+      - predictions_Oli_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Oli_mega_eQTL_{1..22}.tsv.gz.tbi
+    OPC_mega_eQTL: #syn71338360
+      - predictions_OPC_mega_eQTL_{1..22}.tsv.gz
+      - predictions_OPC_mega_eQTL_{1..22}.tsv.gz.tbi
 
-xQTL_GWAS_models:
-  xQTL_models:
-    finemapping_models:
-      single_context:
-        KNIGHT_eQTL:
-          - RDS_files
-        KNIGHT_pQTL:
-          - RDS_files
-        MetaBrain:
-          - RDS_files
-        MiGA_eQTL:
-          - RDS_files
-        MSBB_eQTL:
-          - RDS_files
-        MSBB_pQTL:
-          - RDS_files
-        MSBB_sQTL:
-          - RDS_files
-        ROSMAP_eQTL:
-          - RDS_files
-        ROSMAP_pQTL:
-          - RDS_files
-        ROSMAP_sQTL:
-          - RDS_files
-        STARNET_eQTL:
-          - RDS_files
+xQTL_GWAS_models: #syn69670588
+  xQTL_models: #syn69670589
+    finemapping_models: #syn69670592
+      single_context: #syn70090810
+        KNIGHT_eQTL: #syn70090816
+          export: #syn70095497
+            batch{1..9}: #syn726676{37..45}
+              - KNIGHT_eQTL.*.cis_results_db.export.rds
+              - KNIGHT_eQTL.*.cis_results_db.export.rds.md5
+              - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds
+              - KNIGHT_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - KNIGHT_eQTL.*.pip_sum
+          fine_mapping: #syn70095498
+            batch{1..2}: #syn726676{46..47}
+            - KNIGHT_eQTL.*.univariate_bvsr.rds
+        KNIGHT_pQTL: #syn70090817
+          export: #syn70095500
+            batch1: #syn72667648
+              - KNIGHT_pQTL.*.cis_results_db.export.rds
+              - KNIGHT_pQTL.*.cis_results_db.export.rds.md5
+              - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds
+              - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - KNIGHT_pQTL.*.pip_sum
+          finemapping: #syn70095501
+            batch1: #syn72667649
+              - KNIGHT_pQTL.*.univariate_bvsr.rds
+        MetaBrain: #syn70090820
+          export: #syn70095503
+            batch{1..23}: #syn726676{50..76}
+              - FunGen_xQTL.*.cis_results_db.export.rds
+              - FunGen_xQTL.*.cis_results_db.export.rds.md5
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
+          fine_mapping: #syn75134491
+            - RSS_QC_RAISS_imputed.*1.univariate_susie_rss.rds
+        MiGA_eQTL: #syn70095505
+          export: #syn70095506
+          fine_mapping: #syn75134502
+            - MiGA_eQTL.*.univariate_bvsr.rds
+        MSBB_eQTL: #syn70095508
+          export: #syn70095509
+          fine_mapping: #syn70095510
+            - MSBB_eQTL.*.univariate.bvsr.rds
+        MSBB_pQTL: #syn70090821
+          export: #syn70095512
+            batch{1..5}: #syn726676{77..81}
+              - MSBB_pQTL.*.cis_results_db.export.rds
+              - MSBB_pQTL.*.cis_results_db.export.rds.md5
+              - MSBB_pQTL.*.cis_results_db.export_sumstats.rds
+              - MSBB_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MSBB_pQTL.*.pip_sum
+          fine_mapping: #syn70095513
+            batch1: #syn72667682
+              - MSBB_pQTL.*.univariate.bvsr.rds
+        MSBB_sQTL: #syn70090827
+          export: #syn70095515
+            batch{1..7}: #syn7266768{3..9}
+              - MSBB_sQTL.*.cis_results_db.export.rds
+              - MSBB_sQTL.*.cis_results_db.export.rds.md5
+              - MSBB_sQTL.*.cis_results_db.export_sumstats.rds
+              - MSBB_sQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MSBB_sQTL.*.pip_sum
+          fine_mapping: #syn70095516
+            batch{1..2}: #syn7266769{0..1}
+              - MSBB_sQTL.*.univariate.bvsr.rds
+        ROSMAP_eQTL: #syn70090830
+          export: #syn70095518
+            batch{1..9}: #syn72667{692..700}
+              - ROSMAP_eQTL.*.cis_results_db.export.rds
+              - ROSMAP_eQTL.*.cis_results_db.export.rds.md5
+              - ROSMAP_eQTL.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_eQTL.*.pip_sum
+          fine_mapping: #syn70095519
+            batch{1..5}: #syn7266770{1..5}
+              -  ROSMAP_DeJager_eQTL.*.univariate.bvsr.rds
+        ROSMAP_pQTL: #syn70090831
+          export: #syn70095521
+            batch{1..7}: #syn726677{06..12}
+              - ROSMAP_pQTL.*.cis_results_db.export.rds
+              - ROSMAP_pQTL.*.cis_results_db.export.rds.md5
+              - ROSMAP_pQTL.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_pQTL.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_pQTL.*.pip_sum
+          fine_mapping: #syn70095522
+            batch{1..2}: #syn7266771{3..4}
+              - ROSMAP_Bennett_Klein_pQTL.*.univariate.bvsr.rds
+        ROSMAP_sQTL: #syn70095523
+          export: #syn70095524
+          fine_mapping: #syn70095525
+        STARNET_eQTL: #syn70090832
+          export: #syn70095527
+            batch{1..7}: #syn726677{15..21}
+              - STARNET_eQTL.*.cis_results_db.export.rds
+              - STARNET_eQTL.*.cis_results_db.export.rds.md5
+              - STARNET_eQTL.*.cis_results_db.export_sumstats.rds
+              - STARNET_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - STARNET_eQTL.*.pip_sum
+          fine_mapping: #syn70095528
+            batch{1..2}: #syn7266772{2..3}
+              - STARNET_eQTL.*.univariate.bvsr.rds
       trans:
         eQTL: []
         pQTL: []
         glycoQTL: []
         metabolome: []
-    colocalization_models:
-      - RDS_files
-    TWAS_models:
-      single_context:
-        KNIGHT_eQTL:
-          - RDS_files
-        KNIGHT_pQTL:
-          - RDS_files
+    colocalization_models: #syn69670597
+      ROSMAP: #syn74987506
+        - ROSMAP.*.cb_xqtl.rds
+      MSBB: #syn74987534
+        - MSBB.*.cb_xqtl.rds
+      KNIGHT: #syn74987548
+        - KNIGHT.*.cb_xqtl.rds
+      MiGA: #syn74987560
+        - MIGA.*.cb_xqtl.rds
+    TWAS_models: #syn69670600
+      single_context: #syn70090842
+        KNIGHT_eQTL: #syn70090844
+          batch{1..2} : #syn715489{43,45}
+            - KNIGHT_eQTL.*.univariate_twas_weights.rds
+        KNIGHT_pQTL: #syn70090845
+          batch1 : #syn71548946
+            - KNIGHT_pQTL.*.univariate_twas_weights.rds
         MetaBrain:
           - RDS_files
-        MiGA_eQTL:
-          - RDS_files
-        MSBB_eQTL:
-          - RDS_files
-        MSBB_pQTL:
-          - RDS_files
-        MSBB_sQTL:
-          - RDS_files
-        ROSMAP_eQTL:
-          mega:
+        MiGA_eQTL: #syn70094765
+          batch{1..4}: #syn734626{87,89..91}
+           - MiGA_eQTL.*.univariate_bvsr.rds
+        MSBB_eQTL: #syn70094766
+          batch{1..6}: #syn7346268{1..6}
+            - MSBB_eQTL.*.univariate_twas_weights.rds
+        MSBB_pQTL: #syn70090848
+          batch1: #syn71548947
+            - MSBB_pQTL.*.univariate_twas_weights.rds
+        MSBB_sQTL: #syn70090851
+          batch{1..2}: #syn7154894{8..9}
+            - MSBB_sQTL.*.univariate_twas_weights.rds
+        ROSMAP_eQTL: #syn72280606
+          mega: #syn74907867
             - RDS_files
-          Kellis:
+          MIT: #syn74908478
             - RDS_files
-          CUIMC1:
+          CUIMC1: #syn74908574
             - RDS_files
-        ROSMAP_pQTL:
+        ROSMAP_pQTL: #syn70090857
+          batch{1..2}: #syn7154895{5..6}
+            - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
+        ROSMAP_sQTL: #syn70094771
+          batch{1..2}: #syn7346269{3,5}
+            - ROSMAP_sQTL.*.univariate_twas_weights.rds
+        STARNET_eQTL: #syn70090859
+          batch{1..2}: #syn7154895{8..9}
+          - STARNET_eQTL.*.univariate_twas_weights.rds
+      multi_context: #syn74907900
+        ROSMAP_All: #syn74909252
           - RDS_files
-        ROSMAP_sQTL:
-          LeafCutter2:
-            - RDS_files
-        STARNET_eQTL:
+        MSBB_eQTL: #syn74907964
           - RDS_files
-      multi_context:
-        ROSMAP_CUIMC1:
-          - RDS_files
-        ROSMAP_DeJager:
-          - RDS_files
-        MSBB_eQTL:
-          - RDS_files
-  AD_GWAS_models:
-    AD_fine_mapping:
+  AD_GWAS_models: #syn69670621
+    AD_finemapping: #syn69670625
+      susie_rss_v1: #syn74957553
+        - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
+      susie_rss_v2:
+        - RDS_files
+    AD_colocalization: #syn69670626
       - RDS_files
-    AD_colocalization:
-      - RDS_files
-    AD_TWAS_association:
+    AD_TWAS_association: #syn74908416
       - TSV_files
-  AD_xQTL_integration:
-    AD_xQTL_colocalization_models:
-      - RDS_files
-    AD_cTWAS_input:
-      - RDS_files
-    cTWAS_results:
-      M_cTWAS:
+  AD_xQTL_integration: #syn69670622
+    AD_xQTL_colocalization_models: #syn69670630
+      ROSMAP: #syn74986543
+        - ROSMAP.*.cb_xqtl_AD_Bellenguez.rds
+        - ROSMAP.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - ROSMAP.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - ROSMAP.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      MSBB: #syn74986553
+        - MSBB.*.cb_xqtl_AD_Bellenguez.rds
+        - MSBB.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - MSBB.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - MSBB.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      KNIGHT: #syn74986587
+        - KNIGHT.*.cb_xqtl_AD_Bellenguez.rds
+        - KNIGHT.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - KNIGHT.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - KNIGHT.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      MiGA: #syn74986600
+        - MiGA.*.cb_xqtl_AD_Bellenguez.rds
+        - MiGA.*.cb_xqtl_AD_Bellenguez_EADB_2022.rds
+        - MiGA.*.cb_xqtl_AD_Kunkle_Stage1_2019.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
+        - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
+    cTWAS_results: #syn74908389
+      AD_cTWAS_input: #syn69670631
+        - RDS_files
+      multi_group_cTWAS: #syn74908390
         - TSV_files
-      single_group_cTWAS:
+      single_group_cTWAS: #syn74908397
         - TSV_files
 
-xQTL_data:
-  xQTL_LR:
-    R_lm_residual_sumstats:
+xQTL_data: #syn69670632
+  xQTL_LR: #syn69670638
+    R_lm_residual_sumstats: #syn69670640
       - RDS_files
-    tensorQTL_sumstats:
+    tensorQTL_sumstats: #syn69670641
       - UCSC_bed.gz
-  xQTL_QR:
+  xQTL_QR: #syn69670643
     - UCSC_bed.gz
-  xQTL_interaction:
+  xQTL_interaction: #syn69670644
     - UCSC_bed.gz
-  xQTL_GLMM:
-    major:
+  xQTL_GLMM: #syn69670647
+    major: #syn70094793
       - Astrocytes_major_sQTL.txt.gz
       - Excitatory_major_sQTL.txt.gz
       - Inhibitory_major_sQTL.txt.gz
@@ -890,103 +516,545 @@ xQTL_data:
       - Oligodendrocyte_major_sQTL.txt.gz
       - OPC_major_sQTL.txt.gz
       - Vascular_major_sQTL.txt.gz
-    sub:
-      Ast:
-        - Ast.10_sub_sQTL.txt.gz
-        - Ast.1_sub_sQTL.txt.gz
-        - Ast.2_sub_sQTL.txt.gz
-        - Ast.3_sub_sQTL.txt.gz
-        - Ast.4_sub_sQTL.txt.gz
-        - Ast.5_sub_sQTL.txt.gz
-        - Ast.6_sub_sQTL.txt.gz
-        - Ast.7_sub_sQTL.txt.gz
-        - Ast.9_sub_sQTL.txt.gz
-      End:
+    sub: #syn70094805
+      Ast: #syn70094806
+        - Ast.{1..10}_sub_sQTL.txt.gz
+      End: #syn70094822
         - End.2_sub_sQTL.txt.gz
-      Exc:
-        - Exc.2_sub_sQTL.txt.gz
-        - Exc.10_sub_sQTL.txt.gz
-        - Exc.11_sub_sQTL.txt.gz
-        - Exc.12_sub_sQTL.txt.gz
-        - Exc.13_sub_sQTL.txt.gz
-        - Exc.14_sub_sQTL.txt.gz
-        - Exc.15_sub_sQTL.txt.gz
-        - Exc.16_sub_sQTL.txt.gz
-        - Exc.1_sub_sQTL.txt.gz
-        - Exc.3_sub_sQTL.txt.gz
-        - Exc.4_sub_sQTL.txt.gz
-        - Exc.5_sub_sQTL.txt.gz
-        - Exc.6_sub_sQTL.txt.gz
-        - Exc.7_sub_sQTL.txt.gz
-        - Exc.8_sub_sQTL.txt.gz
-        - Exc.9_sub_sQTL.txt.gz
-      Fib:
+      Exc: #syn70094824
+        - Exc.{1..16}_sub_sQTL.txt.gz
+      Fib: #syn70094841
         - Fib.3_sub_sQTL.txt.gz
-      Inh:
-        - Inh.10_sub_sQTL.txt.gz
-        - Inh.11_sub_sQTL.txt.gz
-        - Inh.12_sub_sQTL.txt.gz
-        - Inh.13_sub_sQTL.txt.gz
-        - Inh.15_sub_sQTL.txt.gz
-        - Inh.16_sub_sQTL.txt.gz
-        - Inh.2_sub_sQTL.txt.gz
-        - Inh.3_sub_sQTL.txt.gz
-        - Inh.4_sub_sQTL.txt.gz
-        - Inh.5_sub_sQTL.txt.gz
-        - Inh.6_sub_sQTL.txt.gz
-        - Inh.7_sub_sQTL.txt.gz
-        - Inh.8_sub_sQTL.txt.gz
-        - Inh.9_sub_sQTL.txt.gz
-      Macrophages:
+      Inh: #syn70094843
+        - Inh.{1..16}_sub_sQTL.txt.gz
+      Macrophages: #syn70094858
         - Macrophages_sub_sQTL.txt.gz
-      Mic:
+      Mic: #syn70094860
         - Mic.15_sub_sQTL.txt.gz
-        - Mic.2_sub_sQTL.txt.gz
-        - Mic.3_sub_sQTL.txt.gz
-        - Mic.4_sub_sQTL.txt.gz
-        - Mic.5_sub_sQTL.txt.gz
-        - Mic.6_sub_sQTL.txt.gz
-        - Mic.7_sub_sQTL.txt.gz
-        - Mic.8_sub_sQTL.txt.gz
-        - Mic.9_sub_sQTL.txt.gz
-        - Mic.10_sub_sQTL.txt.gz
-        - Mic.12_sub_sQTL.txt.gz
-        - Mic.13_sub_sQTL.txt.gz
-      Oli:
-        - Oli.1_sub_sQTL.txt.gz
-        - Oli.2_sub_sQTL.txt.gz
-        - Oli.3_sub_sQTL.txt.gz
-        - Oli.4_sub_sQTL.txt.gz
-        - Oli.5_sub_sQTL.txt.gz
-        - Oli.6_sub_sQTL.txt.gz
-        - Oli.7_sub_sQTL.txt.gz
-        - Oli.8_sub_sQTL.txt.gz
-        - Oli.9_sub_sQTL.txt.gz
-      OPC:
-        - OPC.1_sub_sQTL.txt.gz
-        - OPC.2_sub_sQTL.txt.gz
-        - OPC.3_sub_sQTL.txt.gz
-      Peri:
+        - Mic.{2..10}_sub_sQTL.txt.gz
+        - Mic.{12..13}_sub_sQTL.txt.gz
+      Oli: #syn70094873
+        - Oli.{1..9}_sub_sQTL.txt.gz
+      OPC: #syn70094883
+        - OPC.{1..3}_sub_sQTL.txt.gz
+      Peri: #syn70094889
         - Peri.2_sub_sQTL.txt.gz
 
-reference_files:
-  ADSP_LD_reference_data:
-    EUR:
-      - xz_files_with_meta_data_in_bim_format
-  LDSC_reference_data:
-    ld_scores:
+reference_files: #syn69670634
+  ADSP_R4_LD: #syn69670651
+    EUR: #syn69670652
+       in_sample_ld: #syn75082259
+         - chr*.cor.xz
+         - chr*.xz.bim
+         - xz_files_with_meta_data_in_bim_format
+       ld_sketch: #syn75082260
+         - ADSP_R4.EUR.chr{1..22}.pgen
+         - ADSP_R4.EUR.chr{1..22}.pvar.zst
+         - ADSP_R4.EUR.chr{1..22}.psam
+         - ADSP_R4.EUR.chr{1..22}.afreq
+  sLDSC_reference_data: #syn75157484
+    gwas_sumstats: #syn75157485
+      reference_sumstats_parquet: #syn75157492
+        - *.sumstats.parquet
+      traits_group: #syn75157493
+        - sumstats_*.txt
+    hm3_snplist: #syn75157488
+        - hm3_snp_list.txt
+    reference_panel: #syn75157489
+      1000G: #syn75157496
+        frq: #syn75157506
+          - 1000G_EUR.hg38.{1..22}.frq
+        hm3_print_snp: #syn75157509
+          baselineLD_v2.2: #syn75157510
+            - baselineLD.{1..22}.log
+            - baselineLD.{1..22}.l2.ldscore.gz
+            - baselineLD.{1..22}.l2.M_5_50
+            - baselineLD.{1..22}.l2.M
+            - baselineLD.{1..22}.annot.gz
+          regression_weight_ldscores: #syn75157511
+            - weights.hm3_noMHC.{1..22}.log
+            - weights.hm3_noMHC.{1..22}.l2.ldscore.gz
+            - weights.hm3_noMHC.{1..22}.l2.M_5_50
+            - weights.hm3_noMHC.{1..22}.l2.M
+      ADSP_baseline_v2.2_overlap: #syn75157500
+        frq: #syn75157514
+          - ADSP_chr{1..22}.frq
+        hm3_print_snp: #syn75157515
+          baseline_ldscores_v2.2: #syn75157516
+            - ADSP_chr{1..22}.l2.ldscore.gz
+            - ADSP_chr{1..22}.l2.M_5_50
+            - ADSP_chr{1..22}.l2.M
+            - ADSP_chr{1..22}.annot.gz
+          regression_weight_ldscores: #syn75157519
+            - weights_chr{1..22}.log
+            - weights_chr{1..22}.l2.ldscore.gz
+            - weights_chr{1..22}.l2.M_5_50
+            - weights_chr{1..22}.l2.M
+        without_hm3_print_snp: #syn75157520
+          baseline_ldscores_v2.2: #syn75157521
+            - ADSP_chr{1..22}.l2.M_5_50
+            - ADSP_chr{1..22}.l2.M
+            - ADSP_chr{1..22}.annot.gz
+            - ADSP_chr{1..22}.l2.ldscore.parquet
+            - ADSP_chr{1..22}.l2.ldscore.parquet.log
+          xQTL_ldscores: #syn75157526
+            multigene: #syn75167249
+              eQTL: #syn75167290
+                MSBB_BM_22: #syn75187201
+                  - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.annot.gz
+                MSBB_BM_10: #syn75187224
+                  - MSBB_eQTL_BM_10_multigene_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_10_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_10_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_10_multigene_single_1.{1..22}.annot.gz
+                MSBB_BM_36: #syn75187321
+                  - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_36_multigene_single_1.{1..22}.annot.gz
+                MSBB_BM_44: #syn75187410
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.M
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.l2.ldscore.parquet
+                 - MSBB_eQTL_BM_44_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_mega: #syn75187501
+                  - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Exc_mega: #syn75187598
+                  - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Inh_mega: #syn75187691
+                  - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Oli_mega: #syn75187718
+                  - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_OPC_mega: #syn75187817
+                  - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_mega: #syn75187906
+                  - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_mega_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_AC: #syn75188001
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_AC_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_DLPFC: #syn75188103
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_DLPFC_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_PCC: #syn75188196
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.l2.ldscore.parquet                    
+                  - ROSMAP_eQTL_PCC_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_monocyte: #syn75188287
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_CUIMC1: #syn75188378                   
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Exc_CUIMC1: #syn75188475
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Inh_CUIMC1: #syn75188570
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Oli_CUIMC1: #syn75188661
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_OPC_CUIMC1: #syn75188756
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_CUIMC1: #syn75188869
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.annot.gz
+              pQTL: #syn75180819
+                ROSMAP_DLPFC_Bennett: #syn75188964
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.annot.gz
+            single_context: #syn75180826
+              eQTL: #syn75180831
+                STARNET_Mac: #syn75180884
+                  - STARNET_eQTL_Mac_single_1.{1..22}.l2.M
+                  - STARNET_eQTL_Mac_single_1.{1..22}.l2.ldscore.parquet
+                  - STARNET_eQTL_Mac_single_1.{1..22}.l2.ldscore.parquet.log
+                  - STARNET_eQTL_Mac_single_1.{1..22}.annot.gz
+                ROSMAP_monocyte: #syn75181012
+                  - ROSMAP_eQTL_monocyte_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_monocyte_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_monocyte_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_monocyte_single_1.{1..22}.annot.gz
+                ROSMAP_Oli_MIT: #syn75181187
+                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_MIT: #syn75181296
+                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_OPC_MIT: #syn75181419
+                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Exc_MIT: #syn75181545
+                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_MIT: #syn75181637
+                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Inh_MIT: #syn75189164
+                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_10_MIT: #syn75181758
+                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_13_MIT: #syn75181868
+                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_12_MIT: #syn75181977
+                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.annot.gz
+                ROSMAP_PCC: #syn75182084
+                  - ROSMAP_eQTL_PCC_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_PCC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_PCC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_PCC_single_1.{1..22}.annot.gz
+                ROSMAP_DLPFC: #syn75182184
+                  - ROSMAP_eQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_DLPFC_single_1.{1..22}.annot.gz
+                ROSMAP_AC: #syn75182284
+                  - ROSMAP_eQTL_AC_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_AC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_AC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_AC_single_1.{1..22}.annot.gz
+                ROSMAP_Oli_mega: #syn75182394
+                  - ROSMAP_eQTL_Oli_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_mega_single_1.{1..22}.annot.gz
+                ROSMAP_OPC_mega: #syn75182503
+                  - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_mega_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_mega: #syn75182612
+                  - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_mega_single_1.{1..22}.annot.gz
+                ROSMAP_Exc_mega: #syn75182716
+                  - ROSMAP_eQTL_Exc_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_mega_single_1.{1..22}.annot.gz
+                ROSMAP_Inh_mega: #syn75182820
+                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_mega_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_mega: #syn75182913
+                  - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.annot.gz
+                ROSMAP_OPC_CUIMC1: #syn75183016
+                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.annot.gz
+                ROSMAP_Oli_CUIMC1: #syn75183108
+                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.annot.gz
+                ROSMAP_Mic_CUIMC1: #syn75183197
+                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.annot.gz
+                ROSMAP_Inh_CUIMC1: #syn75183292
+                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.annot.gz
+                ROSMAP_Exc_CUIMC1: #syn75183444
+                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.annot.gz
+                ROSMAP_Ast_CUIMC1: #syn75183537
+                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.annot.gz
+                MiGA_SVZ: #syn75183626
+                  - MiGA_eQTL_SVZ_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_SVZ_single_1.{1..22}.l2.ldscore.parquet
+                  - MiGA_eQTL_SVZ_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MiGA_eQTL_SVZ_single_1.{1..22}.annot.gz
+                MiGA_GFM: #syn75183717
+                  - MiGA_eQTL_GFM_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_GFM_single_1.{1..22}.l2.ldscore.parquet
+                  - MiGA_eQTL_GFM_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MiGA_eQTL_GFM_single_1.{1..22}.annot.gz
+                MiGA_THA: #syn75183807
+                  - MiGA_eQTL_THA_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_THA_single_1.{1..22}.l2.ldscore.parquet
+                  - MiGA_eQTL_THA_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MiGA_eQTL_THA_single_1.{1..22}.annot.gz
+                MiGA_GTS: #syn75183901
+                  - MiGA_eQTL_GTS_single_1.{1..22}.l2.M
+                  - MiGA_eQTL_GTS_single_1.{1..22}.l2.ldscore.parquet
+                  - MiGA_eQTL_GTS_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MiGA_eQTL_GTS_single_1.{1..22}.annot.gz
+                MetaBrain_Cortex: #syn75183990
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.l2.ldscore.parquet
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MetaBrain_eQTL_Cortex_single_1.{1..22}.annot.gz
+                MetaBrain_Cerebellum: #syn75184082
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.l2.ldscore.parquet
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MetaBrain_eQTL_Cerebellum_single_1.{1..22}.annot.gz
+                MetaBrain_Spinalcord: #syn75184171
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.l2.ldscore.parquet
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MetaBrain_eQTL_Spinalcord_single_1.{1..22}.annot.gz
+                MetaBrain_Hippocampus: #syn75184266
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.l2.ldscore.parquet
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MetaBrain_eQTL_Hippocampus_single_1.{1..22}.annot.gz
+                MetaBrain_Basalganglia: #syn75184362
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.l2.M
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.l2.ldscore.parquet
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MetaBrain_eQTL_Basalganglia_single_1.{1..22}.annot.gz
+                MSBB_BM_22: #syn75184462
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_22_single_1.{1..22}.annot.gz
+                MSBB_BM_10: #syn75184555
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_10_single_1.{1..22}.annot.gz
+                MSBB_BM_36: #syn75184652
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_36_single_1.{1..22}.annot.gz
+                MSBB_BM_44: #syn75184743
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.l2.M
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_eQTL_BM_44_single_1.{1..22}.annot.gz
+                KNIGHT_Brain: #syn75184838
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.l2.ldscore.parquet.log
+                  - KNIGHT_eQTL_Brain_single_1.{1..22}.annot.gz
+              sQTL: #syn75180835
+                ROSMAP_PCC: #syn75184931
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_sQTL_PCC__single_1.{1..22}.annot.gz
+                ROSMAP_DLPFC: #syn75185022
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_sQTL_DLPFC_single_1.{1..22}.annot.gz
+                ROSMAP_AC: #syn75185115
+                  - ROSMAP_sQTL_AC_single_1.{1..22}.l2.M
+                  - ROSMAP_sQTL_AC_single_1.{1..222}.l2.ldscore.parquet
+                  - ROSMAP_sQTL_AC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_sQTL_AC__single_1.{1..22}.annot.gz
+              pQTL: #syn75180838
+                ROSMAP_DLPFC_Bennett: #syn75185208
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.M
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.annot.gz
+                MSBB_BM_36: #syn75185303
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.l2.M
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_pQTL_BM_36_single_1.{1..22}.annot.gz
+                KNIGHT_Brain: #syn75185396
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.l2.ldscore.parquet.log
+                  - KNIGHT_pQTL_Brain_single_1.{1..22}.annot.gz
+              mQTL: #syn75180843
+                ROSMAP_DLPFC: #syn75185489
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_mQTL_DLPFC_single_1.{1..22}.annot.gz
+                MSBB: #syn75185582
+                  - MSBB_mQTL_single_1.{1..22}.l2.M
+                  - MSBB_mQTL_single_1.{1..22}.l2.ldscore.parquet
+                  - MSBB_mQTL_single_1.{1..22}.l2.ldscore.parquet.log
+                  - MSBB_mQTL_single_1.{1..22}.annot.gz
+                KNIGHT_Brain: #syn75185671
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.M
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.ldscore.parquet.log
+                  - KNIGHT_mQTL_Brain_single_1.{1..22}.annot.gz
+              gpQTL: #syn75180848
+                ROSMAP_DLPFC_Klein_unadjusted: #syn75185768
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.annot.gz
+                ROSMAP_DLPFC_Klein_adjusted: #syn75185863
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.annot.gz
+              haQTL: #syn75180857
+                ROSMAP_DLPFC: #syn75185960
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.M
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_haQTL_DLPFC_single_1.{1..22}.annot.gz
+            trans: #syn75180877 
+               ROSMAP_snuc_Oli_CUIMC1: #syn75186055
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.annot.gz
+              ROSMAP_snuc_Inh_CUIMC1: #syn75186145
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.annot.gz
+              ROSMAP_snuc_OPC_CUIMC1: #syn75186237
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.annot.gz
+              ROSMAP_snuc_Exc_CUIMC1: #syn75186334
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.annot.gz
+              ROSMAP_snuc_Mic_CUIMC1: #syn75186424
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.annot.gz
+              ROSMAP_snuc_Ast_CUIMC1: #syn75186515
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.M                  
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.annot.gz
+            colocalization: #syn75180878
+              ROSMAP: #syn75186616
+                - ROSMAP_colocboost_single_1.{1..22}.l2.M
+                - ROSMAP_colocboost_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_colocboost_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_colocboost_single_1.{1..22}.annot.gz
+              MiGA: #syn75186716
+                - MiGA_colocboost_single_1.{1..22}.l2.M
+                - MiGA_colocboost_single_1.{1..22}.l2.ldscore.parquet
+                - MiGA_colocboost_single_1.{1..22}.l2.ldscore.parquet.log
+                - MiGA_colocboost_single_1.{1..22}.annot.gz
+              MSBB: #syn75186806
+                - MSBB_colocboost_single_1.{1..22}.l2.M
+                - MSBB_colocboost_single_1.{1..22}.l2.ldscore.parquet
+                - MSBB_colocboost_single_1.{1..22}.l2.ldscore.parquet.log
+                - MSBB_colocboost_single_1.{1..22}.annot.gz
+              KNIGHT: #syn75186903
+                - KNIGHT_colocboost_single_1.{1..22}.l2.M
+                - KNIGHT_colocboost_single_1.{1..22}.l2.ldscore.parquet
+                - KNIGHT_colocboost_single_1.{1..22}.l2.ldscore.parquet.log
+                - KNIGHT_colocboost_single_1.{1..22}.annot.gz
+            multi_context: #syn75180880
+              ROSMAP: #syn75187008 
+                - ROSMAP_Multi_All_single_1.{1..22}.l2.M
+                - ROSMAP_Multi_All_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_Multi_All_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_Multi_All_single_1.{1..22}.annot.gz
+              MSBB: #syn75187104
+                - MSBB_Multi_All_single_1.{1..22}.l2.M
+                - MSBB_Multi_All_single_1.{1..22}.l2.ldscore.parquet
+                - MSBB_Multi_All_single_1.{1..22}.l2.ldscore.parquet.log
+                - MSBB_Multi_All_single_1.{1..22}.annot.gz
+          regression_weight_ldscores: #syn75157527
+            - weights_chr{1..22}.log
+            - weights_chr{1..22}.l2.ldscore.gz
+            - weights_chr{1..22}.l2.M_5_50
+            - weights_chr{1..22}.l2.M
+  LDSC_reference_data: #syn69670653
+    ld_scores: #syn69670654
       - Misc_file_formats
-    sldsc_annotations:
+    sldsc_annotations: #syn69670655
       - Misc_file_formats
-    GWAS_munged:
+    reference_GWAS: #syn69670656
       - Misc_file_formats
-  functional_enrichment_annotations:
+  functional_enrichment_annotations: #syn69670657
     - UCSC_bed.gz
-  xQTL_protocol_tutorial:
+  xQTL_protocol_tutorial: #syn69670658
     - Miscellaneous_protocol_and_toy_example_data
 
-manuscript:
-  xQTL_flagship_2025:
+manuscript: #syn69832123
+  xQTL_flagship_2025: #syn69835233
     - Figure_5c_AD_loci_xQTL_annotated.rds
     - Figure_1b_num_xQTL_loci_single_context.rds
     - Figure_S2_single_context_cs_distance.rds
@@ -995,13 +1063,13 @@ manuscript:
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
     - Figure_5e_GSEA.rds
-    - EOO:
+    - EOO: #syn70094903
       - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
       - Figure_EOO.rds
-    - sLDSC:
+    - sLDSC: #syn70094904
       - Figure_sLDSC_GWAS_specific.rds
       - Figure_sLDSC_meta_analysis.rds
-    - PPI:
+    - PPI: #syn71538047
       - Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.region_list
       - Non_proxy_AD_gene_xQTL.txt
       - Figure_5f_PPI.rds
