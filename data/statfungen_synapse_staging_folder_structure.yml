@@ -490,7 +490,7 @@ xQTL_GWAS_models: #syn69670588
         - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
     cTWAS_results: #syn74908389
-      AD_cTWAS_input: #syn69670631
+      AD_cTWAS_input: #syn75047699
         - RDS_files
       multi_group_cTWAS: #syn74908390
         - TSV_files
