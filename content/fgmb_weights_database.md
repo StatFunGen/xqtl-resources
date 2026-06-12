@@ -51,17 +51,28 @@ Synapse:
 
 ## Citation
 
-If you use FGMB Atlas resource or derived results, please cite the FGMB Atlas manuscript and the relevant Synapse accessions. 
+If you use FGMB Atlas resource or derived results, please cite the FGMB Atlas manuscript, FunGen-AD data resources. 
 > Liu C, Wang A, Sun H, Luo K, Qian S, Li Y, He X, De Jager PL, Bennett DA, Wang M, Cruchaga C, The Alzheimer’s Disease Functional Genomics Consortium, Wang G, Morgante F. (2026). A multi-context regulome-wide association atlas for genetic studies of aging brain disorders. medRxiv. https://doi.org/10.64898/2026.05.15.26353329
+
+>  Cifello J, Feng R, Grenn FP, Carter L, Liu A, Sun H, Li R, Empawi JA, Greenfest-Allen E, Katanic Z, Valladares O, Kuzma AB, White H, Farrer LA, Goate AM, Raj T, Wang M, Cruchaga C, Wang L-S, Klein H, De Jager PL, Chen H, The ADSP Functional Genomics Consortium, Marcora E, Julia TCW, Zhang X, Kuksa PP, Wang G, Leung YY. (2026). A TAD-informed aging-brain xQTL atlas of multi-modal and cell-type-resolved regulatory variation. medRxiv. https://doi.org/10.64898/2026.05.21.26353713
 ```
 @misc{liu_multi-context_2026,
 	title = {A {Multi}-{Context} {Regulome}-{Wide} {Association} {Atlas} for {Genetic} {Studies} of {Aging} {Brain} {Disorders}},
 	url = {https://www.medrxiv.org/content/10.64898/2026.05.15.26353329v1},
 	doi = {10.64898/2026.05.15.26353329},
-	urldate = {2026-05-25},
 	publisher = {medRxiv},
 	author = {Liu, Chunming and Wang, Anqi and Sun, Hao and Luo, Kaixuan and Qian, Sheng and Li, Yining and He, Xin and Jager, Philip De and Bennett, David and Wang, Minghui and Cruchaga, Carlos and Consortium, The Alzheimer’s Disease Functional Genomics and Wang, Gao and Morgante, Fabio},
 	month = may,
+	year = {2026}
+}
+
+@misc{cifello_tad-informed_2026,
+	title = {A {TAD}-informed aging-brain {xQTL} atlas of multi-modal and cell-type-resolved regulatory variation},
+	url = {https://www.medrxiv.org/content/10.64898/2026.05.21.26353713v1},
+	doi = {10.64898/2026.05.21.26353713},
+	publisher = {medRxiv},
+	author = {Cifello, Jeffrey and Feng, Ru and Grenn, Francis P. and Carter, Luke and Liu, Anjing and Sun, Hao and Li, Ruixi and Empawi, Jenny Anak and Greenfest-Allen, Emily and Katanic, Zivadin and Valladares, Otto and Kuzma, Amanda B. and White, Heather and Farrer, Lindsay A. and Goate, Alison M. and Raj, Towfique and Wang, Minghui and Cruchaga, Carlos and Wang, Li-San and Klein, Hans and Jager, Philip L. De and Chen, Han and Consortium, ADSP Functional Genomics and Marcora, Edoardo and Julia, T. C. W. and Zhang, Xiaoling and Kuksa, Pavel P. and Wang, Gao and Leung, Yuk Yee},
+	month = jun,
 	year = {2026}
 }
 ```
