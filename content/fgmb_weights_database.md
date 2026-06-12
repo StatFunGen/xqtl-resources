@@ -4,7 +4,8 @@
 
 FunGen-xQTL Multi-Brain (FGMB) Atlas is a multi-context regulome-wide association study (RWAS) resource for studying genetic regulation in aging-brain-related disease traits. It provides molecular expression prediction models across brain regions, cell types, cohorts, and molecular modalities, capturing both shared and context-specific regulatory effects.  
 
-The released prediction model database and analysis outputs are available through Synapse. Supporting documentation is available through the FGMB Atlas manuscript resource site, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
+The released prediction model database and analysis outputs are available through Synapse. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
+
 
 ## Available Resources
 
@@ -23,12 +24,16 @@ The **`FGMB Atlas`** [resource site](https://morgantelab.github.io/FGMB-atlas-pa
 - **[Inferring TWAS Z-Scores from GWAS Summary Statistics](https://statfungen.github.io/pecotmr/articles/twas-zscore.html)** - Apply learned weights to GWAS summary statistics to compute per-gene TWAS/RWAS Z-scores, including harmonization, LD sketch use, and optional missing-variant imputation.
 
 ### xQTL Analysis Protocol
-**`xQTL Analysis Protocol`** analysis pipeline protocol documentation for model training, association-testing, and fine-mapping
+**`xQTL Analysis Protocol`** analysis [pipeline protocol](https://github.com/StatFunGen/xqtl-protocol) documentation for model training, association-testing, and fine-mapping
 TWAS/RWAS-style weights is also available:
 
 - **[Univariate Fine-Mapping and TWAS with SuSiE](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/univariate_fine_mapping_twas_vignette.html)** - Protocol workflow for univariate fine-mapping and TWAS weight generation.
 - **[Multivariate Fine-Mapping for multiple genes](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)** - Protocol workflow for multivariate, multi-gene fine-mapping and TWAS weights.
 - **[TWAS, cTWAS and MR](https://statfungen.github.io/xqtl-protocol/code/pecotmr_integration/twas_ctwas.html)** - Protocol workflow for TWAS analysis and cTWAS fine-mapping.
+
+### ADSP-FunGen AD Resources
+
+The **`ADSP-FunGen AD Resources`** provides access to [Alzheimer’s Disease Sequencing Project Functional Genomics Consortium (FunGen-AD) molecular QTL resources](https://adsp-fgc.niagads.org/xqtl-resources) for Alzheimer's disease research. The catalog includes study cohort descriptions, AD GWAS summary statistics, multi-omic molecular phenotype datasets, xQTL association and integration results, ADSP-based reference data, Synapse accessions, and links to companion analysis protocols and software.
 
 
 ## Data Access
@@ -43,9 +48,10 @@ Synapse:
 | Single-context and multi-context joint variant-gene fine-mapping results | [`syn74908389`](https://www.synapse.org/Synapse:syn74908389) | Fine-mapping outputs for single-context and multi-context analyses. |
 | LD reference panel for RWAS association testing and fine-mapping | [`syn75082260`](https://www.synapse.org/Synapse:syn75082260) | LD reference panel built from whole-genome sequencing data from European-ancestry participants in ADSP Release 4. |
 
+
 ## Citation
 
-If you use these models or derived results, please cite the FGMB Atlas manuscript and the relevant Synapse accessions. 
+If you use FGMB Atlas resource or derived results, please cite the FGMB Atlas manuscript and the relevant Synapse accessions. 
 > Liu C, Wang A, Sun H, Luo K, Qian S, Li Y, He X, De Jager PL, Bennett DA, Wang M, Cruchaga C, The Alzheimer’s Disease Functional Genomics Consortium, Wang G, Morgante F. (2026). A multi-context regulome-wide association atlas for genetic studies of aging brain disorders. medRxiv. https://doi.org/10.64898/2026.05.15.26353329
 ```
 @misc{liu_multi-context_2026,
