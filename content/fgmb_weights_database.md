@@ -31,10 +31,6 @@ TWAS/RWAS-style weights is also available:
 - **[Multivariate Fine-Mapping for multiple genes](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)** - Protocol workflow for multivariate, multi-gene fine-mapping and TWAS weights.
 - **[TWAS, cTWAS and MR](https://statfungen.github.io/xqtl-protocol/code/pecotmr_integration/twas_ctwas.html)** - Protocol workflow for TWAS analysis and cTWAS fine-mapping.
 
-### ADSP-FunGen AD Resources
-
-The **`ADSP-FunGen AD Resources`** provides access to [Alzheimer’s Disease Sequencing Project Functional Genomics Consortium (FunGen-AD) molecular QTL resources](https://adsp-fgc.niagads.org/xqtl-resources) for Alzheimer's disease research. The catalog includes study cohort descriptions, AD GWAS summary statistics, multi-omic molecular phenotype datasets, xQTL association and integration results, ADSP-based reference data, Synapse accessions, and links to companion analysis protocols and software.
-
 
 ## Data Access
 
