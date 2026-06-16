@@ -22,6 +22,7 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
   - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC, MIT, and mega cohorts)
   - Genotype (WGS) and covariates
 * **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metaQTL](xqtl-data/qtl/metaQTL)
+* **[FGMB Atlas](fgmb_weights_database)** - Multi-context regulome-wide association study (RWAS) prediction model resources, including Synapse accessions for models, gene-level association results, causal fine-mapping outputs.
 * **[Reference Data](xqtl-data/reference_data/)** - ADSP-based LD reference panels (16,905 European ancestry samples) and other analytical resources
 
 Software resources implementing the xQTL analysis are also available:
