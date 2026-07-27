@@ -378,6 +378,15 @@ xQTL_GWAS_models: #syn69670588
           fine_mapping: #syn70095522
             batch{1..2}: #syn7266771{3..4}
               - ROSMAP_Bennett_Klein_pQTL.*.univariate.bvsr.rds
+        ROSMAP_glycoQTL:  
+          export:  
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds.md5
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds.md5
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.pip_sum
+          fine_mapping:  
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate.bvsr.rds
         ROSMAP_sQTL: #syn70095523
           export: #syn70095524
           fine_mapping: #syn70095525
@@ -1063,6 +1072,9 @@ manuscript: #syn69832123
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
     - Figure_5e_GSEA.rds
+    - Metabolome:
+      - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.rds
+      - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.flatten.tsv
     - EOO: #syn70094903
       - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
       - Figure_EOO.rds
