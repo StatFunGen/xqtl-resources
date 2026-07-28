@@ -447,6 +447,8 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_pQTL: #syn70090857
           batch{1..2}: #syn7154895{5..6}
             - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
+        ROSMAP_glycoQTL: 
+          - ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate_twas_weights.rds
         ROSMAP_sQTL: #syn70094771
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
