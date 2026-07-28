@@ -420,11 +420,11 @@ xQTL_GWAS_models: #syn69670588
         - KNIGHT.*.cb_xqtl.rds
       MiGA: #syn74987560
         - MIGA.*.cb_xqtl.rds
-      ROSMAP glycoQTL: 
-        glycoQTL with eQTL:
+      ROSMAP_glycoQTL: 
+        glycoQTL_eQTL:
           unadjusted:
             - eQTL_gpQTL.*.cb_xqtl.rds
-        glycoQTL with pQTL:
+        glycoQTL_pQTL:
           adjusted:
             - adj_glyco*.cb_xqtl.rds
           unadjusted:
@@ -514,7 +514,7 @@ xQTL_GWAS_models: #syn69670588
         - MiGA.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
-      ROSMAP glycoQTL: 
+      ROSMAP_glycoQTL: 
         - adjusted:
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
         - unadjusted: 
