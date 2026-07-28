@@ -198,6 +198,9 @@ variant_gene_summary: #syn69865684
         - xqtl_only_MSBB_colocboost_sorted.bed.gz
         - xqtl_only_KNIGHT_colocboost_sorted.bed.gz
         - xqtl_only_MIGA_colocboost_sorted.bed.gz
+        - ROSMAP_glycoQTL_unadjusted_eQTL_summary_pv1e4.tsv
+        - ROSMAP_pQTL_glycoQTL_adjusted_summary_pv1e4.tsv
+        - ROSMAP_pQTL_glycoQTL_unadjusted_summary_pv1e4.tsv
       pairwise_colocalization: #syn69865800
         bulk_mQTL_haQTL_AD: #syn69865801
           - bulk_fsusie_AD_coloc_filtered.bed.gz
@@ -223,6 +226,8 @@ variant_gene_summary: #syn69865684
       - AD_xQTL_KNIGHT_colocboost_sorted.bed.gz
       - AD_xQTL_MIGA_colocboost_sorted.bed.gz
       - AD_xQTL_colocboost_filtered.bed.gz
+      - ROSMAP_pQTL_glycoQTL_adjusted_AD_summary_pv1e4.tsv
+      - ROSMAP_pQTL_glycoQTL_unadjusted_AD_summary_pv1e4.tsv
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -415,6 +420,15 @@ xQTL_GWAS_models: #syn69670588
         - KNIGHT.*.cb_xqtl.rds
       MiGA: #syn74987560
         - MIGA.*.cb_xqtl.rds
+      ROSMAP glycoQTL: 
+        glycoQTL with eQTL:
+          unadjusted:
+            - eQTL_gpQTL.*.cb_xqtl.rds
+        glycoQTL with pQTL:
+          adjusted:
+            - adj_glyco*.cb_xqtl.rds
+          unadjusted:
+            - unadj_glyco*.cb_xqtl.rds        
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
@@ -500,6 +514,11 @@ xQTL_GWAS_models: #syn69670588
         - MiGA.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
+      ROSMAP glycoQTL: 
+        - adjusted:
+          - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
+        - unadjusted: 
+          - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
