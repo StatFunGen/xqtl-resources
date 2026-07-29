@@ -420,14 +420,14 @@ xQTL_GWAS_models: #syn69670588
         - KNIGHT.*.cb_xqtl.rds
       MiGA: #syn74987560
         - MIGA.*.cb_xqtl.rds
-      ROSMAP_glycoQTL: 
-        glycoQTL_eQTL:
-          unadjusted:
+      ROSMAP_glycoQTL: #syn76489398
+        glycoQTL_eQTL: #syn76489401
+          unadjusted: #syn76489409
             - eQTL_gpQTL.*.cb_xqtl.rds
-        glycoQTL_pQTL:
-          adjusted:
+        glycoQTL_pQTL: #syn76489404
+          adjusted: #syn76489412
             - adj_glyco*.cb_xqtl.rds
-          unadjusted:
+          unadjusted: #syn76489413
             - unadj_glyco*.cb_xqtl.rds        
     TWAS_models: #syn69670600
       single_context: #syn70090842
@@ -514,10 +514,10 @@ xQTL_GWAS_models: #syn69670588
         - MiGA.*.cb_xqtl_AD_Wightman_Excluding23andMe_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
-      ROSMAP_glycoQTL: 
-        - adjusted:
+      ROSMAP_glycoQTL: #syn76490205
+        - adjusted: #syn76490248
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
-        - unadjusted: 
+        - unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
