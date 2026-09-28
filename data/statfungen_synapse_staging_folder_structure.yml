@@ -245,6 +245,8 @@ variant_gene_summary: #syn69865684
       - ROSMAP_pQTL_glycoQTL_adjusted_AD_summary_pv1e4.tsv
       - ROSMAP_pQTL_glycoQTL_unadjusted_AD_summary_pv1e4.tsv
       - ROSMAP_sQTL_factor_K5_AD_Bellenguez_2022.colocalization.txt.gz
+      - ROSMAP_sQTL_factor_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt
+      - ROSMAP_sQTL_factor_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
