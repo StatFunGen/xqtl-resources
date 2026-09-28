@@ -61,6 +61,7 @@ variant_gene_summary: #syn69865684
           - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_sQTL_factor.GenomeWide.exported.toploci.bed.gz
         mQTL: #syn69865748
           - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
           - KnightADRC_mQTL.cis.top_loci.bed.gz
@@ -242,6 +243,7 @@ variant_gene_summary: #syn69865684
       - AD_xQTL_colocboost_filtered.bed.gz
       - ROSMAP_pQTL_glycoQTL_adjusted_AD_summary_pv1e4.tsv
       - ROSMAP_pQTL_glycoQTL_unadjusted_AD_summary_pv1e4.tsv
+      - ROSMAP_sQTL_factor_K5_AD_Bellenguez_2022.colocalization.txt.gz
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -425,6 +427,17 @@ xQTL_GWAS_models: #syn69670588
           fine_mapping: #syn75362741
             batch{1..2}: #syn7542734{5..6}
               - ROSMAP_sQTL.*.univariate_bvsr.rds
+        ROSMAP_sQTL_factor:
+          K3:
+            export:
+              - Misc_file_formats
+            fine_mapping:
+              - RDS_files
+          K5:
+            export:
+              - Misc_file_formats
+            fine_mapping:
+              - RDS_files
         STARNET_eQTL: #syn70090832
           export: #syn70095527
             batch{1..7}: #syn726677{15..21}
@@ -500,6 +513,11 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_sQTL: #syn70094771
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
+        ROSMAP_sQTL_factor:
+          K3:
+            - RDS_files
+          K5:
+            - RDS_files
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
           - STARNET_eQTL.*.univariate_twas_weights.rds
@@ -566,6 +584,9 @@ xQTL_GWAS_models: #syn69670588
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
         - unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
+      ROSMAP_sQTL_factor:
+        K5:
+          - RDS_files
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
