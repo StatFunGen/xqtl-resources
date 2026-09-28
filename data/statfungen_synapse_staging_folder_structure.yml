@@ -62,6 +62,7 @@ variant_gene_summary: #syn69865684
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
           - ROSMAP_sQTL_factor.GenomeWide.exported.toploci.bed.gz
+          - ROSMAP_sQTL_factor.GenomeWide.exported.toploci.bed.gz.tbi
         mQTL: #syn69865748
           - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
           - KnightADRC_mQTL.cis.top_loci.bed.gz
@@ -430,14 +431,24 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_sQTL_factor:
           K3:
             export:
-              - Misc_file_formats
+              - ROSMAP_sQTL_factor.*.cis_results_db.rds
+              - ROSMAP_sQTL_factor.*.cis_results_db.rds.md5
+              - ROSMAP_sQTL_factor.*.cis_results_db.sumstats.rds
+              - ROSMAP_sQTL_factor.*.cis_results_db.sumstats.rds.md5
+              - ROSMAP_sQTL_factor.*.pip_sum
             fine_mapping:
-              - RDS_files
+              - ROSMAP_sQTL_factor.*.univariate_bvsr.rds
           K5:
             export:
-              - Misc_file_formats
+              batch{1..7}:
+                - ROSMAP_sQTL_factor.*.cis_results_db.export.rds
+                - ROSMAP_sQTL_factor.*.cis_results_db.export.rds.md5
+                - ROSMAP_sQTL_factor.*.cis_results_db.export_sumstats.rds
+                - ROSMAP_sQTL_factor.*.cis_results_db.export_sumstats.rds.md5
+                - ROSMAP_sQTL_factor.*.pip_sum
             fine_mapping:
-              - RDS_files
+              batch{1..2}:
+                - ROSMAP_sQTL_factor.*.univariate_bvsr.rds
         STARNET_eQTL: #syn70090832
           export: #syn70095527
             batch{1..7}: #syn726677{15..21}
@@ -473,6 +484,10 @@ xQTL_GWAS_models: #syn69670588
             - adj_glyco*.cb_xqtl.rds
           unadjusted: #syn76489413
             - unadj_glyco*.cb_xqtl.rds        
+      ROSMAP_sQTL_factor:
+        K5:
+          batch{1..2}:
+            - AD_UofC_sQTL.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
@@ -515,9 +530,9 @@ xQTL_GWAS_models: #syn69670588
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
         ROSMAP_sQTL_factor:
           K3:
-            - RDS_files
+            - ROSMAP_sQTL_factor.*.univariate_twas_weights.rds
           K5:
-            - RDS_files
+            - ROSMAP_sQTL_factor.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
           - STARNET_eQTL.*.univariate_twas_weights.rds
@@ -586,7 +601,8 @@ xQTL_GWAS_models: #syn69670588
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
       ROSMAP_sQTL_factor:
         K5:
-          - RDS_files
+          batch{1..2}:
+            - AD_UofC_sQTL.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
