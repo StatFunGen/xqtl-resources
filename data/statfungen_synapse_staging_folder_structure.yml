@@ -18,12 +18,12 @@ variant_gene_summary: #syn69865684
           - MiGA_GTS_eQTL.cis.top_loci.bed.gz
           - MiGA_SVZ_eQTL.cis.top_loci.bed.gz
           - MiGA_THA_eQTL.cis.top_loci.bed.gz
-          - AC_DeJager_eQTL.cis.top_loci.bed.gz
+          - AC_CUIMC1_eQTL.cis.top_loci.bed.gz
           - Ast_10_MIT_eQTL.cis.top_loci.bed.gz
           - Ast_CUIMC1_eQTL.cis.top_loci.bed.gz
           - Ast_MIT_eQTL.cis.top_loci.bed.gz
           - Ast_mega_eQTL.cis.top_loci.bed.gz
-          - DLPFC_DeJager_eQTL.cis.top_loci.bed.gz
+          - DLPFC_CUIMC1_eQTL.cis.top_loci.bed.gz
           - Exc_CUIMC1_eQTL.cis.top_loci.bed.gz
           - Exc_MIT_eQTL.cis.top_loci.bed.gz
           - Exc_mega_eQTL.cis.top_loci.bed.gz
@@ -43,7 +43,7 @@ variant_gene_summary: #syn69865684
           - Oli_mega_eQTL.cis.top_loci.bed.gz
           - ROSMAP_monocyte_eQTL.cis.top_loci.bed.gz
           - STARNET_eQTL_Mac.cis.top_loci.bed.gz
-          - PCC_DeJager_eQTL.cis.top_loci.bed.gz
+          - PCC_CUIMC1_eQTL.cis.top_loci.bed.gz
         pQTL: #syn69865740
           - Knight_pQTL_brain.cis.top_loci.bed.gz
           - MSBB_BM36_pQTL.cis.top_loci.bed.gz
@@ -61,6 +61,8 @@ variant_gene_summary: #syn69865684
           - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
+          - ROSMAP_tpQTL.K5.GenomeWide.exported.toploci.bed.gz
+          - ROSMAP_tpQTL.K5.GenomeWide.exported.toploci.bed.gz.tbi
         mQTL: #syn69865748
           - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
           - KnightADRC_mQTL.cis.top_loci.bed.gz
@@ -99,7 +101,7 @@ variant_gene_summary: #syn69865684
           - MSBB_BM_22_eQTL.cis.multi_gene.top_loci.bed.gz
           - MSBB_BM_36_eQTL.cis.multi_gene.top_loci.bed.gz
           - MSBB_BM_44_eQTL.cis.multi_gene.top_loci.bed.gz
-          - ROSMAP_AC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_AC_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_Ast_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_Ast_mega_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_Exc_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
@@ -112,8 +114,8 @@ variant_gene_summary: #syn69865684
           - ROSMAP_OPC_mega_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_Oli_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_Oli_mega_eQTL.cis.multi_gene.top_loci.bed.gz
-          - ROSMAP_PCC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
-          - ROSMAP_DLPFC_DeJager_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_PCC_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
+          - ROSMAP_DLPFC_CUIMC1_eQTL.cis.multi_gene.top_loci.bed.gz
           - ROSMAP_monocyte_ROSMAP_eQTL.cis.multi_gene.top_loci.bed.gz
         pQTL: #syn69865771
           - ROSMAP_DLPFC_Bennett_pQTL.cis.multi_gene.top_loci.bed.gz
@@ -176,11 +178,15 @@ variant_gene_summary: #syn69865684
           - Exc_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz    
           - Inh_CUIMC1_eQTL.transhotspot_wpc_program.no_HF.top_loci.bed.gz   
         pQTL: #syn69865791
-          - Knight_pQTL_brain.trans.tag_variants.top_loci.bed.gz  
+          - Knight_pQTL.trans.tag_variants.top_loci.bed.gz  
           - trans_pQTL.trans.no_HF.top_loci.bed.gz
           - MSBB_pQTL_BM36.trans.tag_variants.top_loci.bed.gz
           - DLPFC_Bennett_pQTL.trans.top_loci.bed.gz
           - ROSMAP_pQTL.trans.tag_variants.top_loci.bed.gz
+          - Knight_pQTL_brain.trans.top_loci.bed.gz
+          - MSBB_BM36_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_CUIMC1_pQTL.trans.top_loci.bed.gz
+          - ROSMAP_pQTL.trans.top_loci.bed.gz
         glycoQTL: #syn70094703
           - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
           - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
@@ -188,6 +194,8 @@ variant_gene_summary: #syn69865684
           - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
           - ROSMAP_gpQTL.trans.top_loci.bed.gz
           - ROSMAP_adjusted_gpQTL.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_gpQTL.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_adjusted_gpQTL.trans.top_loci.bed.gz
         metabolome: #syn69865793
           - ROSMAP_metabolome.trans.top_loci.bed.gz
         consolidated: #syn74916771
@@ -198,9 +206,12 @@ variant_gene_summary: #syn69865684
         - xqtl_only_MSBB_colocboost_sorted.bed.gz
         - xqtl_only_KNIGHT_colocboost_sorted.bed.gz
         - xqtl_only_MIGA_colocboost_sorted.bed.gz
+        - xqtl_only_colocboost_filtered.bed.gz
         - ROSMAP_glycoQTL_unadjusted_eQTL_summary_pv1e4.tsv
         - ROSMAP_pQTL_glycoQTL_adjusted_summary_pv1e4.tsv
         - ROSMAP_pQTL_glycoQTL_unadjusted_summary_pv1e4.tsv
+      trans_colocalization: #syn77579916
+        - xqtl_only_ROSMAP_transmap_colocboost_sorted.bed.gz
       pairwise_colocalization: #syn69865800
         bulk_mQTL_haQTL_AD: #syn69865801
           - bulk_fsusie_AD_coloc_filtered.bed.gz
@@ -210,24 +221,32 @@ variant_gene_summary: #syn69865684
           - snatac_ROSMAP.coloc.tsv.gz
   AD_loci_summary: #syn69865804
     AD_finemapping: #syn69865805
-      - AD_Bellenguez_2022.top_loci.bed.gz
-      - AD_Jansen_2021.top_loci.bed.gz
-      - AD_Wightman_Full_2021.top_loci.bed.gz
-      - AD_Bellenguez_EADB_2022.top_loci.bed.gz
-      - AD_Kunkle_Stage1_2019.top_loci.bed.gz
-      - AD_Wightman_Excluding23andMe_2021.top_loci.bed.gz
-      - AD_Wightman_ExcludingUKBand23andME_2021.top_loci.bed.gz
-      - AD_Bellenguez_EADI_2022.top_loci.bed.gz
+      - AD_Bellenguez_2022.gwas.top_loci.bed.gz           
+      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_EADB_2022.gwas.top_loci.bed.gz
+      - AD_Jansen_2021.gwas.top_loci.bed.gz
+      - AD_Bellenguez_EADI_2022.gwas.top_loci.bed.gz
+      - AD_Kunkle_Stage1_2019.gwas.top_loci.bed.gz
+      - AD_Bellenguez_GRACE_2022.gwas.top_loci.bed.gz
+      - AD_Wightman_Excluding23andMe_2021.gwas.top_loci.bed.gz
+      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
+      - AD_Wightman_ExcludingUKBand23andME_2021.gwas.top_loci.bed.gz
+      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
+      - AD_Wightman_Full_2021.gwas.top_loci.bed.gz
     AD_colocalization: #syn69865814
       - AD_meta_colocboost_filtered.bed.gz
     AD_xQTL_colocalization: #syn69865816
-      - AD_xQTL_ROSMAP_colocboost_sorted.bed.gz
+      - AD_xQTL_ROSMAP_colocboost_sorted.bed
+      - AD_xQTL_ROSMAP_transmap_colocboost_sorted.bed.gz
       - AD_xQTL_MSBB_colocboost_sorted.bed.gz
       - AD_xQTL_KNIGHT_colocboost_sorted.bed.gz
       - AD_xQTL_MIGA_colocboost_sorted.bed.gz
       - AD_xQTL_colocboost_filtered.bed.gz
       - ROSMAP_pQTL_glycoQTL_adjusted_AD_summary_pv1e4.tsv
       - ROSMAP_pQTL_glycoQTL_unadjusted_AD_summary_pv1e4.tsv
+      - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.colocalization.txt.gz
+      - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt.gz
+      - ROSMAP_tpQTL_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -236,8 +255,8 @@ variant_gene_summary: #syn69865684
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary: #syn69865823
     - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
-    - AD_loci_unified_cs95orColocs.csv.gz
-    - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv.gz
+    - AD_loci_unified_cs95orColocs.csv
+    - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
@@ -310,7 +329,7 @@ xQTL_GWAS_models: #syn69670588
               - KNIGHT_eQTL.*.pip_sum
           fine_mapping: #syn70095498
             batch{1..2}: #syn726676{46..47}
-            - KNIGHT_eQTL.*.univariate_bvsr.rds
+              - KNIGHT_eQTL.*.univariate_bvsr.rds
         KNIGHT_pQTL: #syn70090817
           export: #syn70095500
             batch1: #syn72667648
@@ -319,7 +338,7 @@ xQTL_GWAS_models: #syn69670588
               - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds
               - KNIGHT_pQTL.*.cis_results_db.export_sumstats.rds.md5
               - KNIGHT_pQTL.*.pip_sum
-          finemapping: #syn70095501
+          fine_mapping: #syn70095501
             batch1: #syn72667649
               - KNIGHT_pQTL.*.univariate_bvsr.rds
         MetaBrain: #syn70090820
@@ -330,15 +349,20 @@ xQTL_GWAS_models: #syn69670588
               - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
               - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn75134491
-            - RSS_QC_RAISS_imputed.*1.univariate_susie_rss.rds
+            batch{1..6}: #syn754273{33..38}
+              - Metabrain.*.univariate_susie_rss.rds
         MiGA_eQTL: #syn70095505
           export: #syn70095506
           fine_mapping: #syn75134502
-            - MiGA_eQTL.*.univariate_bvsr.rds
+            batch{1..2}: #syn754273{39..40}
+              - MiGA_eQTL.*.univariate_bvsr.rds
         MSBB_eQTL: #syn70095508
-          export: #syn70095509
-          fine_mapping: #syn70095510
-            - MSBB_eQTL.*.univariate.bvsr.rds
+          export: #syn75362961
+            batch{1..10}: #syn754273{57,59..66,58}
+              - MSBB_eQTL.*.cis_results_db.export*.rds
+          fine_mapping: #syn75362684
+            batch{1..2}: #syn754273{43..44}
+              - MSBB_eQTL.*.univariate_bvsr.rds
         MSBB_pQTL: #syn70090821
           export: #syn70095512
             batch{1..5}: #syn726676{77..81}
@@ -349,7 +373,7 @@ xQTL_GWAS_models: #syn69670588
               - MSBB_pQTL.*.pip_sum
           fine_mapping: #syn70095513
             batch1: #syn72667682
-              - MSBB_pQTL.*.univariate.bvsr.rds
+              - MSBB_pQTL.*.univariate_bvsr.rds
         MSBB_sQTL: #syn70090827
           export: #syn70095515
             batch{1..7}: #syn7266768{3..9}
@@ -360,7 +384,7 @@ xQTL_GWAS_models: #syn69670588
               - MSBB_sQTL.*.pip_sum
           fine_mapping: #syn70095516
             batch{1..2}: #syn7266769{0..1}
-              - MSBB_sQTL.*.univariate.bvsr.rds
+              - MSBB_sQTL.*.univariate_bvsr.rds
         ROSMAP_eQTL: #syn70090830
           export: #syn70095518
             batch{1..9}: #syn72667{692..700}
@@ -371,7 +395,9 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_eQTL.*.pip_sum
           fine_mapping: #syn70095519
             batch{1..5}: #syn7266770{1..5}
-              -  ROSMAP_DeJager_eQTL.*.univariate.bvsr.rds
+              - ROSMAP_CUIMC1_eQTL.*.univariate_bvsr.rds
+              - ROSMAP_MIT_eQTL.*.univariate_bvsr.rds
+              - ROSMAP_mega_eQTL.*.univariate_bvsr.rds
         ROSMAP_pQTL: #syn70090831
           export: #syn70095521
             batch{1..7}: #syn726677{06..12}
@@ -382,19 +408,49 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_pQTL.*.pip_sum
           fine_mapping: #syn70095522
             batch{1..2}: #syn7266771{3..4}
-              - ROSMAP_Bennett_Klein_pQTL.*.univariate.bvsr.rds
+              - ROSMAP_Bennett_Klein_pQTL.*.univariate_bvsr.rds
         ROSMAP_glycoQTL: #syn76495192
           export: #syn76495388
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds.md5
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds.md5
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.pip_sum
-          fine_mapping: #syn76495488
-            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate.bvsr.rds
+            batch{1..4}: #syn7649609{4..7}
+              - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds
+              - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export.rds.md5
+              - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_Bennett_Klein_glycoQTL_twas.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_Bennett_Klein_glycoQTL_twas.*.pip_sum
+          finemapping: #syn76495488
+            - ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate_bvsr.rds
         ROSMAP_sQTL: #syn70095523
-          export: #syn70095524
-          fine_mapping: #syn70095525
+          export: #syn75362851
+            batch{1..8}: #syn754273{48,50..56}
+              - ROSMAP_sQTL.*.cis_results_db.export.rds
+              - ROSMAP_sQTL.*.cis_results_db.export.rds.md5
+              - ROSMAP_sQTL.*.cis_results_db.export_sumstats.rds
+              - ROSMAP_sQTL.*.cis_results_db.export_sumstats.rds.md5
+              - ROSMAP_sQTL.*.pip_sum
+          fine_mapping: #syn75362741
+            batch{1..2}: #syn7542734{5..6}
+              - ROSMAP_sQTL.*.univariate_bvsr.rds
+        ROSMAP_tpQTL:
+          K3:
+            export:
+              - ROSMAP_tpQTL.*.cis_results_db.rds
+              - ROSMAP_tpQTL.*.cis_results_db.rds.md5
+              - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds
+              - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds.md5
+              - ROSMAP_tpQTL.*.pip_sum
+            fine_mapping:
+              - ROSMAP_tpQTL.*.univariate_bvsr.rds
+          K5:
+            export:
+              batch{1..7}:
+                - ROSMAP_tpQTL.*.cis_results_db.export.rds
+                - ROSMAP_tpQTL.*.cis_results_db.export.rds.md5
+                - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds
+                - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds.md5
+                - ROSMAP_tpQTL.*.pip_sum
+            fine_mapping:
+              batch{1..2}:
+                - ROSMAP_tpQTL.*.univariate_bvsr.rds
         STARNET_eQTL: #syn70090832
           export: #syn70095527
             batch{1..7}: #syn726677{15..21}
@@ -405,15 +461,16 @@ xQTL_GWAS_models: #syn69670588
               - STARNET_eQTL.*.pip_sum
           fine_mapping: #syn70095528
             batch{1..2}: #syn7266772{2..3}
-              - STARNET_eQTL.*.univariate.bvsr.rds
+              - STARNET_eQTL.*.univariate_bvsr.rds
       trans:
         eQTL: []
         pQTL: []
         glycoQTL: []
         metabolome: []
     colocalization_models: #syn69670597
-      ROSMAP: #syn74987506
-        - ROSMAP.*.cb_xqtl.rds
+      ROSMAP: #syn75362558
+        batch{1..2}: #syn754273{41..42}
+          - ROSMAP.*.cb_xqtl.rds
       MSBB: #syn74987534
         - MSBB.*.cb_xqtl.rds
       KNIGHT: #syn74987548
@@ -429,6 +486,10 @@ xQTL_GWAS_models: #syn69670588
             - adj_glyco*.cb_xqtl.rds
           unadjusted: #syn76489413
             - unadj_glyco*.cb_xqtl.rds        
+      ROSMAP_tpQTL:
+        K5:
+          batch{1..2}:
+            - ROSMAP_tpQTL.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
@@ -453,11 +514,14 @@ xQTL_GWAS_models: #syn69670588
             - MSBB_sQTL.*.univariate_twas_weights.rds
         ROSMAP_eQTL: #syn72280606
           mega: #syn74907867
-            - RDS_files
+            batch{1..2}: #syn7542732{4..5}
+              - ROSMAP_mega_eQTL.*.univariate_twas_weights.rds
           MIT: #syn74908478
-            - RDS_files
+            batch{1..2}: #syn754273{29..30}
+            - ROSMAP_MIT_eQTL.*.univariate_susie_twas_weights.rds
           CUIMC1: #syn74908574
-            - RDS_files
+            batch{1..2}: #syn722806{09..10}
+            - ROSMAP_CUIMC1.*.univariate_twas_weights.rds
         ROSMAP_pQTL: #syn70090857
           batch{1..2}: #syn7154895{5..6}
             - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
@@ -466,24 +530,42 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_sQTL: #syn70094771
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
+        ROSMAP_tpQTL:
+          K3:
+            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
+          K5:
+            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
           - STARNET_eQTL.*.univariate_twas_weights.rds
       multi_context: #syn74907900
         ROSMAP_All: #syn74909252
-          - RDS_files
+          batch{1..2}: #syn7542733{1..2}
+            - ROSMAP_All.*.multicontext_twas_weights.rds
         MSBB_eQTL: #syn74907964
-          - RDS_files
+          batch{1..2}: #syn7542732{6..7}
+            - MSBB_eQTL.*.multicontext_twas_weights.rds
   AD_GWAS_models: #syn69670621
     AD_finemapping: #syn69670625
-      susie_rss_v1: #syn74957553
-        - RSS_QC_RAISS_imputed.*.univariate_susie_rss.rds
-      susie_rss_v2:
-        - RDS_files
+      susie_rss: #syn74957553
+        batch{1..2}: #syn7723894{5..6}
+          - AD_Bellenguez_2022.*.gwas_finemap.rds   
+          - AD_Bellenguez_noproxy_2026.*.gwas_finemap.rds  
+          - AD_Bellenguez_EADB_2022.*.gwas_finemap.rds  
+          - AD_Jansen_2021.*.gwas_finemap.rds  
+          - AD_Bellenguez_EADI_2022.*.gwas_finemap.rds  
+          - AD_Kunkle_Stage1_2019.*.gwas_finemap.rds  
+          - AD_Bellenguez_GRACE_2022.*.gwas_finemap.rds  
+          - AD_Wightman_Excluding23andMe_2021.*.gwas_finemap.rds  
+          - AD_Bellenguez_main_2026.*.gwas_finemap.rds  
+          - AD_Wightman_ExcludingUKBand23andME_2021.*.gwas_finemap.rds  
+          - AD_Bellenguez_nobiobank_2026.*.gwas_finemap.rds  
+          - AD_Wightman_Full_2021.*.gwas_finemap.rds  
     AD_colocalization: #syn69670626
       - RDS_files
     AD_TWAS_association: #syn74908416
-      - TSV_files
+      batch1: #syn75427328
+        - KNIGHT_eQTL_pQTL.*.twas.tsv.gz
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
       ROSMAP: #syn74986543
@@ -519,6 +601,10 @@ xQTL_GWAS_models: #syn69670588
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
         - unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
+      ROSMAP_tpQTL:
+        K5:
+          batch{1..2}:
+            - ROSMAP_tpQTL.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
@@ -530,7 +616,14 @@ xQTL_GWAS_models: #syn69670588
 xQTL_data: #syn69670632
   xQTL_LR: #syn69670638
     R_lm_residual_sumstats: #syn69670640
-      - RDS_files
+      eQTL: #syn69670659
+        - RDS_files
+      glycoQTL: #syn69670661
+        - RDS_files
+      pQTL: #syn69670660
+        - RDS_files
+      sQTL: #syn69670662
+        - RDS_files
     tensorQTL_sumstats: #syn69670641
       - UCSC_bed.gz
   xQTL_QR: #syn69670643
@@ -583,17 +676,12 @@ reference_files: #syn69670634
          - ADSP_R4.EUR.chr{1..22}.psam
          - ADSP_R4.EUR.chr{1..22}.afreq
   sLDSC_reference_data: #syn75157484
-    gwas_sumstats: #syn75157485
-      reference_sumstats_parquet: #syn75157492
-        - *.sumstats.parquet
-      traits_group: #syn75157493
-        - sumstats_*.txt
     hm3_snplist: #syn75157488
         - hm3_snp_list.txt
     reference_panel: #syn75157489
       1000G: #syn75157496
         frq: #syn75157506
-          - 1000G_EUR.hg38.{1..22}.frq
+          - 1000G.EUR.hg38.{1..22}.frq
         hm3_print_snp: #syn75157509
           baselineLD_v2.2: #syn75157510
             - baselineLD.{1..22}.log
@@ -601,12 +689,12 @@ reference_files: #syn69670634
             - baselineLD.{1..22}.l2.M_5_50
             - baselineLD.{1..22}.l2.M
             - baselineLD.{1..22}.annot.gz
-          regression_weight_ldscores: #syn75157511
+          weights: #syn75157511
             - weights.hm3_noMHC.{1..22}.log
             - weights.hm3_noMHC.{1..22}.l2.ldscore.gz
             - weights.hm3_noMHC.{1..22}.l2.M_5_50
             - weights.hm3_noMHC.{1..22}.l2.M
-      ADSP_baseline_v2.2_overlap: #syn75157500
+      ADSP_baselinev2.2_overlap: #syn75157500
         frq: #syn75157514
           - ADSP_chr{1..22}.frq
         hm3_print_snp: #syn75157515
@@ -628,7 +716,7 @@ reference_files: #syn69670634
             - ADSP_chr{1..22}.l2.ldscore.parquet
             - ADSP_chr{1..22}.l2.ldscore.parquet.log
           xQTL_ldscores: #syn75157526
-            multigene: #syn75167249
+            multi_gene: #syn75167249
               eQTL: #syn75167290
                 MSBB_BM_22: #syn75187201
                   - MSBB_eQTL_BM_22_multigene_single_1.{1..22}.l2.M
@@ -701,35 +789,35 @@ reference_files: #syn69670634
                   - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_eQTL_monocyte_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_Ast_CUIMC1: #syn75188378                   
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Ast_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Ast_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_CUIMC1_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_Exc_CUIMC1: #syn75188475
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Exc_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Exc_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_CUIMC1_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_Inh_CUIMC1: #syn75188570
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Inh_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Inh_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_CUIMC1_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_Oli_CUIMC1: #syn75188661
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Oli_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Oli_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_CUIMC1_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_OPC_CUIMC1: #syn75188756
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_OPC_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_OPC_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_CUIMC1_multigene_single_1.{1..22}.annot.gz
                 ROSMAP_Mic_CUIMC1: #syn75188869
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_DeJager_multigene_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Mic_CUIMC1_multigene_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_CUIMC1_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_CUIMC1_multigene_single_1.{1..22}.annot.gz
               pQTL: #syn75180819
                 ROSMAP_DLPFC_Bennett: #syn75188964
                   - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.M
@@ -749,50 +837,50 @@ reference_files: #syn69670634
                   - ROSMAP_eQTL_monocyte_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_monocyte_single_1.{1..22}.annot.gz
                 ROSMAP_Oli_MIT: #syn75181187
-                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Oli_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Oli_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Mic_MIT: #syn75181296
-                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Mic_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_OPC_MIT: #syn75181419
-                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_OPC_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_OPC_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Exc_MIT: #syn75181545
-                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Exc_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Exc_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Ast_MIT: #syn75181637
-                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Ast_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Ast_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Inh_MIT: #syn75189164
-                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Inh_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Inh_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Ast_10_MIT: #syn75181758
-                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Ast_10_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Ast_10_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_10_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_10_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_10_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Mic_13_MIT: #syn75181868
-                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_13_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Mic_13_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_13_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_13_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_13_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_Mic_12_MIT: #syn75181977
-                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_12_Kellis_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Mic_12_MIT_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_12_MIT_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_12_MIT_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_12_MIT_single_1.{1..22}.annot.gz
                 ROSMAP_PCC: #syn75182084
                   - ROSMAP_eQTL_PCC_single_1.{1..22}.l2.M
                   - ROSMAP_eQTL_PCC_single_1.{1..22}.l2.ldscore.parquet
@@ -839,35 +927,35 @@ reference_files: #syn69670634
                   - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_eQTL_Ast_mega_single_1.{1..22}.annot.gz
                 ROSMAP_OPC_CUIMC1: #syn75183016
-                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_OPC_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_OPC_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_OPC_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_OPC_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_OPC_CUIMC1_single_1.{1..22}.annot.gz
                 ROSMAP_Oli_CUIMC1: #syn75183108
-                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Oli_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Oli_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Oli_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Oli_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Oli_CUIMC1_single_1.{1..22}.annot.gz
                 ROSMAP_Mic_CUIMC1: #syn75183197
-                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Mic_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Mic_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Mic_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Mic_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Mic_CUIMC1_single_1.{1..22}.annot.gz
                 ROSMAP_Inh_CUIMC1: #syn75183292
-                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Inh_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Inh_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Inh_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Inh_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Inh_CUIMC1_single_1.{1..22}.annot.gz
                 ROSMAP_Exc_CUIMC1: #syn75183444
-                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Exc_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Exc_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Exc_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Exc_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Exc_CUIMC1_single_1.{1..22}.annot.gz
                 ROSMAP_Ast_CUIMC1: #syn75183537
-                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.M
-                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_eQTL_Ast_DeJager_single_1.{1..22}.annot.gz
+                  - ROSMAP_eQTL_Ast_CUIMC1_single_1.{1..22}.l2.M
+                  - ROSMAP_eQTL_Ast_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_eQTL_Ast_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_eQTL_Ast_CUIMC1_single_1.{1..22}.annot.gz
                 MiGA_SVZ: #syn75183626
                   - MiGA_eQTL_SVZ_single_1.{1..22}.l2.M
                   - MiGA_eQTL_SVZ_single_1.{1..22}.l2.ldscore.parquet
@@ -943,7 +1031,7 @@ reference_files: #syn69670634
                   - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.M
                   - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_sQTL_PCC_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_sQTL_PCC__single_1.{1..22}.annot.gz
+                  - ROSMAP_sQTL_PCC_single_1.{1..22}.annot.gz
                 ROSMAP_DLPFC: #syn75185022
                   - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.M
                   - ROSMAP_sQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
@@ -951,9 +1039,9 @@ reference_files: #syn69670634
                   - ROSMAP_sQTL_DLPFC_single_1.{1..22}.annot.gz
                 ROSMAP_AC: #syn75185115
                   - ROSMAP_sQTL_AC_single_1.{1..22}.l2.M
-                  - ROSMAP_sQTL_AC_single_1.{1..222}.l2.ldscore.parquet
+                  - ROSMAP_sQTL_AC_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_sQTL_AC_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_sQTL_AC__single_1.{1..22}.annot.gz
+                  - ROSMAP_sQTL_AC_single_1.{1..22}.annot.gz
               pQTL: #syn75180838
                 ROSMAP_DLPFC_Bennett: #syn75185208
                   - ROSMAP_pQTL_DLPFC_Bennett_single_1.{1..22}.l2.M
@@ -1003,37 +1091,37 @@ reference_files: #syn69670634
                   - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet
                   - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_haQTL_DLPFC_single_1.{1..22}.annot.gz
-            trans: #syn75180877 
-               ROSMAP_snuc_Oli_CUIMC1: #syn75186055
-                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.M
-                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_Oli_DeJager_single_1.{1..22}.annot.gz
+            trans: #syn75180877
+              ROSMAP_snuc_Oli_CUIMC1: #syn75186055
+                - ROSMAP_trans_snuc_Oli_CUIMC1_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Oli_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Oli_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Oli_CUIMC1_single_1.{1..22}.annot.gz
               ROSMAP_snuc_Inh_CUIMC1: #syn75186145
-                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.M
-                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_Inh_DeJager_single_1.{1..22}.annot.gz
+                - ROSMAP_trans_snuc_Inh_CUIMC1_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Inh_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Inh_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Inh_CUIMC1_single_1.{1..22}.annot.gz
               ROSMAP_snuc_OPC_CUIMC1: #syn75186237
-                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.M
-                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_OPC_DeJager_single_1.{1..22}.annot.gz
+                - ROSMAP_trans_snuc_OPC_CUIMC1_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_OPC_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_OPC_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_OPC_CUIMC1_single_1.{1..22}.annot.gz
               ROSMAP_snuc_Exc_CUIMC1: #syn75186334
-                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.M
-                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_Exc_DeJager_single_1.{1..22}.annot.gz
+                - ROSMAP_trans_snuc_Exc_CUIMC1_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Exc_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Exc_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Exc_CUIMC1_single_1.{1..22}.annot.gz
               ROSMAP_snuc_Mic_CUIMC1: #syn75186424
-                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.M
-                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_Mic_DeJager_single_1.{1..22}.annot.gz
+                - ROSMAP_trans_snuc_Mic_CUIMC1_single_1.{1..22}.l2.M
+                - ROSMAP_trans_snuc_Mic_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Mic_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Mic_CUIMC1_single_1.{1..22}.annot.gz
               ROSMAP_snuc_Ast_CUIMC1: #syn75186515
-                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.M                  
-                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet
-                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.l2.ldscore.parquet.log
-                - ROSMAP_trans_snuc_Ast_DeJager_single_1.{1..22}.annot.gz
+                - ROSMAP_trans_snuc_Ast_CUIMC1_single_1.{1..22}.l2.M                  
+                - ROSMAP_trans_snuc_Ast_CUIMC1_single_1.{1..22}.l2.ldscore.parquet
+                - ROSMAP_trans_snuc_Ast_CUIMC1_single_1.{1..22}.l2.ldscore.parquet.log
+                - ROSMAP_trans_snuc_Ast_CUIMC1_single_1.{1..22}.annot.gz
             colocalization: #syn75180878
               ROSMAP: #syn75186616
                 - ROSMAP_colocboost_single_1.{1..22}.l2.M
@@ -1076,7 +1164,7 @@ reference_files: #syn69670634
       - Misc_file_formats
     sldsc_annotations: #syn69670655
       - Misc_file_formats
-    reference_GWAS: #syn69670656
+    GWAS_munged: #syn69670656
       - Misc_file_formats
   functional_enrichment_annotations: #syn69670657
     - UCSC_bed.gz
