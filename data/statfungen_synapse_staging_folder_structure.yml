@@ -1181,7 +1181,7 @@ manuscript: #syn69832123
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
     - Figure_5e_GSEA.rds
-    - Metabolome:
+    - Metabolome: #syn76495536
       - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.rds
       - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.flatten.tsv
     - EOO: #syn70094903
