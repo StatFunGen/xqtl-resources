@@ -61,8 +61,8 @@ variant_gene_summary: #syn69865684
           - ROSMAP_PCC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.bed.gz
           - ROSMAP_PCC_sQTL.cis.top_loci.nofilter.rare_filtered_0.8.bed.gz
-          - ROSMAP_sQTL_factor.GenomeWide.exported.toploci.bed.gz
-          - ROSMAP_sQTL_factor.GenomeWide.exported.toploci.bed.gz.tbi
+          - ROSMAP_tpQTL.K5.GenomeWide.exported.toploci.bed.gz
+          - ROSMAP_tpQTL.K5.GenomeWide.exported.toploci.bed.gz.tbi
         mQTL: #syn69865748
           - ROSMAP_DLPFC_mQTL.cis.top_loci.bed.gz
           - KnightADRC_mQTL.cis.top_loci.bed.gz
@@ -244,9 +244,9 @@ variant_gene_summary: #syn69865684
       - AD_xQTL_colocboost_filtered.bed.gz
       - ROSMAP_pQTL_glycoQTL_adjusted_AD_summary_pv1e4.tsv
       - ROSMAP_pQTL_glycoQTL_unadjusted_AD_summary_pv1e4.tsv
-      - ROSMAP_sQTL_factor_K5_AD_Bellenguez_2022.colocalization.txt.gz
-      - ROSMAP_sQTL_factor_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt
-      - ROSMAP_sQTL_factor_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
+      - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.colocalization.txt.gz
+      - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt.gz
+      - ROSMAP_tpQTL_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -430,27 +430,27 @@ xQTL_GWAS_models: #syn69670588
           fine_mapping: #syn75362741
             batch{1..2}: #syn7542734{5..6}
               - ROSMAP_sQTL.*.univariate_bvsr.rds
-        ROSMAP_sQTL_factor:
+        ROSMAP_tpQTL:
           K3:
             export:
-              - ROSMAP_sQTL_factor.*.cis_results_db.rds
-              - ROSMAP_sQTL_factor.*.cis_results_db.rds.md5
-              - ROSMAP_sQTL_factor.*.cis_results_db.sumstats.rds
-              - ROSMAP_sQTL_factor.*.cis_results_db.sumstats.rds.md5
-              - ROSMAP_sQTL_factor.*.pip_sum
+              - ROSMAP_tpQTL.*.cis_results_db.rds
+              - ROSMAP_tpQTL.*.cis_results_db.rds.md5
+              - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds
+              - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds.md5
+              - ROSMAP_tpQTL.*.pip_sum
             fine_mapping:
-              - ROSMAP_sQTL_factor.*.univariate_bvsr.rds
+              - ROSMAP_tpQTL.*.univariate_bvsr.rds
           K5:
             export:
               batch{1..7}:
-                - ROSMAP_sQTL_factor.*.cis_results_db.export.rds
-                - ROSMAP_sQTL_factor.*.cis_results_db.export.rds.md5
-                - ROSMAP_sQTL_factor.*.cis_results_db.export_sumstats.rds
-                - ROSMAP_sQTL_factor.*.cis_results_db.export_sumstats.rds.md5
-                - ROSMAP_sQTL_factor.*.pip_sum
+                - ROSMAP_tpQTL.*.cis_results_db.export.rds
+                - ROSMAP_tpQTL.*.cis_results_db.export.rds.md5
+                - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds
+                - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds.md5
+                - ROSMAP_tpQTL.*.pip_sum
             fine_mapping:
               batch{1..2}:
-                - ROSMAP_sQTL_factor.*.univariate_bvsr.rds
+                - ROSMAP_tpQTL.*.univariate_bvsr.rds
         STARNET_eQTL: #syn70090832
           export: #syn70095527
             batch{1..7}: #syn726677{15..21}
@@ -486,10 +486,10 @@ xQTL_GWAS_models: #syn69670588
             - adj_glyco*.cb_xqtl.rds
           unadjusted: #syn76489413
             - unadj_glyco*.cb_xqtl.rds        
-      ROSMAP_sQTL_factor:
+      ROSMAP_tpQTL:
         K5:
           batch{1..2}:
-            - AD_UofC_sQTL.*.cb_xqtl.rds
+            - ROSMAP_tpQTL.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
         KNIGHT_eQTL: #syn70090844
@@ -530,11 +530,11 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_sQTL: #syn70094771
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
-        ROSMAP_sQTL_factor:
+        ROSMAP_tpQTL:
           K3:
-            - ROSMAP_sQTL_factor.*.univariate_twas_weights.rds
+            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
           K5:
-            - ROSMAP_sQTL_factor.*.univariate_twas_weights.rds
+            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
           - STARNET_eQTL.*.univariate_twas_weights.rds
@@ -601,10 +601,10 @@ xQTL_GWAS_models: #syn69670588
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
         - unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
-      ROSMAP_sQTL_factor:
+      ROSMAP_tpQTL:
         K5:
           batch{1..2}:
-            - AD_UofC_sQTL.*.cb_xqtl_AD_Bellenguez.rds
+            - ROSMAP_tpQTL.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
