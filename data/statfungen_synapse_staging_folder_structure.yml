@@ -432,24 +432,24 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_sQTL.*.univariate_bvsr.rds
         ROSMAP_tpQTL:
           K3:
-            export:
+            export: #syn77651082
               - ROSMAP_tpQTL.*.cis_results_db.rds
               - ROSMAP_tpQTL.*.cis_results_db.rds.md5
               - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds
               - ROSMAP_tpQTL.*.cis_results_db.sumstats.rds.md5
               - ROSMAP_tpQTL.*.pip_sum
-            fine_mapping:
+            fine_mapping: #syn77650758
               - ROSMAP_tpQTL.*.univariate_bvsr.rds
           K5:
             export:
-              batch{1..7}:
+              batch{1..7}: #syn77652405, syn77691401, syn77720405, syn77741816, syn77773371, syn77751610, syn77750815
                 - ROSMAP_tpQTL.*.cis_results_db.export.rds
                 - ROSMAP_tpQTL.*.cis_results_db.export.rds.md5
                 - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds
                 - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds.md5
                 - ROSMAP_tpQTL.*.pip_sum
             fine_mapping:
-              batch{1..2}:
+              batch{1..2}: #syn77652324, syn77684573
                 - ROSMAP_tpQTL.*.univariate_bvsr.rds
         STARNET_eQTL: #syn70090832
           export: #syn70095527
@@ -488,7 +488,7 @@ xQTL_GWAS_models: #syn69670588
             - unadj_glyco*.cb_xqtl.rds        
       ROSMAP_tpQTL:
         K5:
-          batch{1..2}:
+          batch{1..2}: #syn77652328, syn77684979
             - ROSMAP_tpQTL.*.cb_xqtl.rds
     TWAS_models: #syn69670600
       single_context: #syn70090842
@@ -531,10 +531,12 @@ xQTL_GWAS_models: #syn69670588
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
         ROSMAP_tpQTL:
-          K3:
-            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
-          K5:
-            - ROSMAP_tpQTL.*.univariate_twas_weights.rds
+          K3: # held back (parent is in Temp_Public_Folder, no write access yet)
+            batch{1..2}:
+              - ROSMAP_tpQTL.*.univariate_twas_weights.rds
+          K5: # held back (same reason)
+            batch{1..2}:
+              - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
           - STARNET_eQTL.*.univariate_twas_weights.rds
@@ -603,7 +605,7 @@ xQTL_GWAS_models: #syn69670588
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
       ROSMAP_tpQTL:
         K5:
-          batch{1..2}:
+          batch{1..2}: #syn77716949, syn77732271
             - ROSMAP_tpQTL.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
