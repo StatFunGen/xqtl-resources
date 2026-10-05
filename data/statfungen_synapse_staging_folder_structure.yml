@@ -255,6 +255,7 @@ variant_gene_summary: #syn69865684
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary: #syn69865823
     - unified_AD_loci_xQTL_summary_20261002.xlsx
+    - AD_loci_unified_cs95orColocs.csv
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
 
