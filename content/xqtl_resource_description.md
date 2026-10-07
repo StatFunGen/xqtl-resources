@@ -55,7 +55,7 @@ For immediate use by researchers, we provide comprehensive summary tables in the
 - [AD genes with FunGen and xQTL annotations](https://www.synapse.org/Synapse:syn70095142) - AD risk gene prioritization through fine-mapping and colocalization (March 2025)
 - [AD genes with TWAS integration](https://www.synapse.org/Synapse:syn70095143) - AD risk gene prioritization that additionally incorporates TWAS and MR (March 2025)
 
-The same release can be browsed interactively in the [xQTL-AD-loci-explorer](https://jenny-empawi.shinyapps.io/xQTL-AD-loci-explorer/).
+The same release can be browsed interactively in the [xQTL-AD-loci-explorer](https://wanggroup.org/xQTL-AD-loci-explorer/).
 
 ## Predictive Models and Scores
 
