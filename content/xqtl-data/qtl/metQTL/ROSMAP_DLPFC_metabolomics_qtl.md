@@ -10,8 +10,8 @@ FunGen-xQTL Analysis Team
 
 ## Study Overview
 
-- Study name: ROSMAP DLPFC brain metabolomics QTL (metaQTL)
-- Study Description: Metabolite quantitative trait loci (metaQTL) analysis using 600 metabolites measured in DLPFC brain tissue from ROSMAP donors. Metabolomics data were profiled using untargeted mass spectrometry.
+- Study name: ROSMAP DLPFC brain metabolomics QTL (metQTL)
+- Study Description: Metabolite quantitative trait loci (metQTL) analysis using 600 metabolites measured in DLPFC brain tissue from ROSMAP donors. Metabolomics data were profiled using untargeted mass spectrometry.
 - Tissue: Dorsolateral prefrontal cortex (DLPFC)
 - Metabolites: ~600 metabolites (untargeted mass spectrometry)
 - Cohort: ROSMAP

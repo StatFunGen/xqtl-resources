@@ -1,6 +1,6 @@
 # Metabolomics Data
 
-Mass spectrometry-based metabolite abundance measurements from brain tissue, CSF, and plasma, used for metaQTL mapping. → See [metaQTL results](../../qtl/metaQTL)
+Mass spectrometry-based metabolite abundance measurements from brain tissue, CSF, and plasma, used for metQTL mapping. → See [metQTL results](../../qtl/metQTL)
 
 ## Brain Tissue
 

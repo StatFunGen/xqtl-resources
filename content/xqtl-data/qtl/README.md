@@ -11,19 +11,19 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
 * [Histone acetylation QTLs (haQTL)](haQTL) — ROSMAP DLPFC
 * [Chromatin accessibility QTLs (caQTL)](caQTL) — ROSMAP snuc
-* [Metabolome QTLs (metaQTL)](metaQTL) — ROSMAP DLPFC, Knight ADRC (brain/CSF), EFIGA plasma, WHICAP plasma
+* [Metabolome QTLs (metQTL)](metQTL) — ROSMAP DLPFC, Knight ADRC (brain/CSF), EFIGA plasma, WHICAP plasma
 
 ## All Datasets
 
 * [EFIGA CSF proteomics QTL](pQTL/EFIGA_CSF_proteomics_qtl)
-* [EFIGA plasma metabolomics QTL](metaQTL/EFIGA_plasma_metabolomics_qtl)
+* [EFIGA plasma metabolomics QTL](metQTL/EFIGA_plasma_metabolomics_qtl)
 * [FunGen-xQTL protocol data](FunGen_xQTL_protocol_data)
 * [Knight ADRC brain gene expression QTL](eQTL/Knight_ADRC_brain_expression_qtl)
-* [Knight ADRC brain metabolomics QTL](metaQTL/Knight_ADRC_brain_metabolomics_qtl)
+* [Knight ADRC brain metabolomics QTL](metQTL/Knight_ADRC_brain_metabolomics_qtl)
 * [Knight ADRC brain methylation QTL](mQTL/Knight_ADRC_brain_methylation_qtl)
 * [Knight ADRC brain proteomics QTL](pQTL/Knight_ADRC_brain_proteomics_qtl)
 * [Knight ADRC brain splicing QTL](sQTL/Knight_ADRC_brain_splicing_qtl)
-* [Knight ADRC CSF metabolomics QTL](metaQTL/Knight_ADRC_CSF_metabolomics_qtl)
+* [Knight ADRC CSF metabolomics QTL](metQTL/Knight_ADRC_CSF_metabolomics_qtl)
 * [Knight ADRC CSF proteomics QTL](pQTL/Knight_ADRC_CSF_proteomics_qtl)
 * [MAGENTA African American blood alternative splicing QTL](sQTL/MAGENTA_AA_blood_splicing_qtl)
 * [MAGENTA African American Blood Gene Expression QTL](eQTL/MAGENTA_AA_blood_expression_qtl)
@@ -41,7 +41,7 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [ROSMAP DLPFC gene expression QTL](eQTL/ROSMAP_DLPFC_expression_qtl)
 * [ROSMAP DLPFC glycoproteomics QTL](gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl)
 * [ROSMAP DLPFC H3K9ac QTL](haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl)
-* [ROSMAP DLPFC metabolomics QTL](metaQTL/ROSMAP_DLPFC_metabolomics_qtl)
+* [ROSMAP DLPFC metabolomics QTL](metQTL/ROSMAP_DLPFC_metabolomics_qtl)
 * [ROSMAP DLPFC methylation QTL](mQTL/ROSMAP_DLPFC_methylation_qtl)
 * [ROSMAP DLPFC protein expression QTL](pQTL/ROSMAP_DLPFC_proteomics_qtl)
 * [ROSMAP PCC alternative splicing QTL](sQTL/ROSMAP_PCC_splicing_qtl)
@@ -52,4 +52,4 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl)
 * [ROSMAP snuc splicing QTL (ISSAC)](sQTL/ROSMAP_snuc_splicing_qtl)
 * [STARNET macrophage gene expression QTL](eQTL/STARNET_macrophage_qtl)
-* [WHICAP (pilot) plasma metabolomics QTL](metaQTL/WHICAP_plasma_metabolomics_qtl)
+* [WHICAP (pilot) plasma metabolomics QTL](metQTL/WHICAP_plasma_metabolomics_qtl)

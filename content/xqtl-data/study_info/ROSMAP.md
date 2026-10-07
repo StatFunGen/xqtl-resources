@@ -50,6 +50,6 @@ ROSMAP datasets were used in the following xQTL analyses in the FunGen-xQTL flag
 | snATAC-seq (CUIMC + MIT) | caQTL | [ROSMAP_snuc_caQTL_qtl](../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md) |
 | DLPFC proteomics | pQTL | [ROSMAP_DLPFC_proteomics_qtl](../qtl/pQTL/ROSMAP_DLPFC_proteomics_qtl.md) |
 | DLPFC glycoproteomics | gpQTL | [ROSMAP_DLPFC_glycoproteomics_qtl](../qtl/gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md) |
-| Brain metabolomics | metaQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/metaQTL/ROSMAP_DLPFC_metabolomics_qtl.md) |
+| Brain metabolomics | metQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md) |
 
 Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
