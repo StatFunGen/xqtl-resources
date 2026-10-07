@@ -21,14 +21,14 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
   - Metabolomics (brain, CSF, and plasma)
   - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC, MIT, and mega cohorts)
   - Genotype (WGS) and covariates
-* **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metaQTL](xqtl-data/qtl/metaQTL), plus ROSMAP transcriptomic pattern QTLs (tpQTL) and trans-xQTLs
+* **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metQTL](xqtl-data/qtl/metQTL), plus ROSMAP transcriptomic pattern QTLs (tpQTL) and trans-xQTLs
 * **[FGMB Atlas](fgmb_weights_database)** - Multi-context regulome-wide association study (RWAS) prediction model resources, including Synapse accessions for models, gene-level association results, causal fine-mapping outputs.
 * **AD Loci Integration Summary** - The 195-locus AD GWAS × xQTL summary (October 2026 release) on Synapse ([syn69865823](https://www.synapse.org/Synapse:syn69865823)), also browsable in the interactive [xQTL-AD-loci-explorer](https://jenny-empawi.shinyapps.io/xQTL-AD-loci-explorer/)
 * **[Reference Data](xqtl-data/reference_data/)** - ADSP-based LD reference panels (16,905 European ancestry samples), including an LD sketch panel, and other analytical resources
 
 Software resources implementing the xQTL analysis are also available:
 
-* **[xQTL Analysis Protocol](https://statfungen.github.io/xqtl-protocol)** - Standardized computational protocols for QTL mapping, fine-mapping, colocalization, and integrative analyses
+* **[xQTL Analysis Protocol](https://statfungen.github.io/xqtl-protocol)** - Standardized computational protocols for QTL mapping, fine-mapping, colocalization, and integrative analyses, with tutorials and an [xQTL Analysis Workflow Builder](https://statfungen.github.io/xqtl-protocol/xqtl_protocol_workflow_builder.html) that picks the modules and commands for your data
 * **[xQTL Companion Statistical Methods Implementation](https://github.com/StatFunGen/pecotmr)** - Fine-mapping, enrichment, colocalization, TWAS, and Mendelian randomization tools
 
 ## Data Access

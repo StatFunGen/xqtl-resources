@@ -27,7 +27,7 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Zining Qi.**
 * [EFIGA plasma metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/EFIGA_plasma_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [EFIGA plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/EFIGA_plasma_metabolomics_qtl.md).
+* [EFIGA plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/EFIGA_plasma_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
 
 ## F
@@ -41,7 +41,7 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Chunming Liu.**
 * [Knight ADRC brain metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/Knight_ADRC_brain_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [Knight ADRC brain metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/Knight_ADRC_brain_metabolomics_qtl.md).
+* [Knight ADRC brain metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/Knight_ADRC_brain_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
 * [Knight ADRC brain methylation](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/methylation/Knight_ADRC_brain_methylation.md).
 	* Lead analysts: **Alexandre Pelletier.**
@@ -57,7 +57,7 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Xuanhe Chen.**
 * [Knight ADRC CSF metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/Knight_ADRC_CSF_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [Knight ADRC CSF metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/Knight_ADRC_CSF_metabolomics_qtl.md).
+* [Knight ADRC CSF metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/Knight_ADRC_CSF_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
 * [Knight ADRC CSF proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/proteomics/Knight_ADRC_CSF_proteomics.md).
 	* Lead analysts: **Zining Qi.**
@@ -191,5 +191,5 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 ## W
 * [WHICAP (pilot) plasma metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/WHICAP_plasma_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [WHICAP (pilot) plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/WHICAP_plasma_metabolomics_qtl.md).
+* [WHICAP (pilot) plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/WHICAP_plasma_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**

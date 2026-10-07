@@ -166,13 +166,13 @@ All datasets are hosted on Synapse: [variant & gene summaries (syn69865684)](htt
 
 - [ROSMAP snuc chromatin accessibility QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md): Single-nucleus chromatin accessibility QTL from ROSMAP DLPFC using snATAC-seq, with pairwise SuSiE-COLOC colocalization against eQTLs.
 
-**Metabolome QTLs — metaQTL (5 datasets)**
+**Metabolome QTLs — metQTL (5 datasets)**
 
-- [EFIGA plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/EFIGA_plasma_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
-- [Knight ADRC brain metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/Knight_ADRC_brain_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
-- [Knight ADRC CSF metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/Knight_ADRC_CSF_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
-- [ROSMAP DLPFC metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/ROSMAP_DLPFC_metabolomics_qtl.md): Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC metabolomics QTL.
-- [WHICAP (pilot) plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metaQTL/WHICAP_plasma_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
+- [EFIGA plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/EFIGA_plasma_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
+- [Knight ADRC brain metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/Knight_ADRC_brain_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
+- [Knight ADRC CSF metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/Knight_ADRC_CSF_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
+- [ROSMAP DLPFC metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md): Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC metabolomics QTL.
+- [WHICAP (pilot) plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/WHICAP_plasma_metabolomics_qtl.md): Lead analysts: **Zining Qi.**
 
 ### Reference Data (1 dataset)
 
@@ -206,7 +206,7 @@ All datasets are hosted on Synapse: [variant & gene summaries (syn69865684)](htt
 │   │   │   ├── mQTL/            # Methylation QTLs (3 datasets)
 │   │   │   ├── haQTL/           # Histone acetylation QTLs (1 dataset)
 │   │   │   ├── caQTL/           # Chromatin accessibility QTLs (1 dataset)
-│   │   │   └── metaQTL/         # Metabolome QTLs (5 datasets)
+│   │   │   └── metQTL/         # Metabolome QTLs (5 datasets)
 │   │   └── reference_data/  # LD reference panels (1 dataset)
 │   └── *.md                 # Documentation pages
 ├── scripts/                  # Processing scripts

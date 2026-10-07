@@ -19,7 +19,7 @@ Brain metabolomics data from the Religious Orders Study and Memory and Aging Pro
 Metabolite abundance data available through Synapse.
 
 ## QTL Analysis
-QTL analysis for this dataset is documented in [../../qtl/metaQTL/ROSMAP_DLPFC_metabolomics_qtl.md](../../qtl/metaQTL/ROSMAP_DLPFC_metabolomics_qtl.md).
+QTL analysis for this dataset is documented in [../../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md](../../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md).
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
