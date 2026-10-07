@@ -315,6 +315,221 @@ xQTL_SCEEM_scores: #syn69670587
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz
       - predictions_OPC_mega_eQTL_{1..22}.tsv.gz.tbi
 
+scEEMS_data_GPN: #syn77875113
+  model_training: #syn77875154
+    - README_model_training.txt
+    - model_features.tsv
+    columns_dict: #syn77875155
+      - columns_dict.pkl
+    feature_weights: #syn77875156
+      - best_configs_*.json
+    gene_lof: #syn77875157
+      - 41588_2024_1820_MOESM4_ESM.xlsx
+    gnomad_MAF: #syn77875158
+      - gnomad_MAF_chr{1..22}.tsv
+    gpn_star: #syn77875159
+      - gpn_star_scores_all.parquet
+    models: #syn77875160
+      Ast_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+      Exc_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+      Inh_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+      Mic_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+      OPC_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+      Oli_mega_eQTL:
+        - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
+    train: #syn77875312
+      Ast_mega_eQTL:
+        - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Exc_mega_eQTL:
+        - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Inh_mega_eQTL:
+        - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Mic_mega_eQTL:
+        - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      OPC_mega_eQTL:
+        - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Oli_mega_eQTL:
+        - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+    train_restricted: #syn77875459
+      Ast_mega_eQTL:
+        - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Exc_mega_eQTL:
+        - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Inh_mega_eQTL:
+        - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Mic_mega_eQTL:
+        - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      OPC_mega_eQTL:
+        - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Oli_mega_eQTL:
+        - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+    test: #syn77875167
+      Ast_mega_eQTL:
+        - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Exc_mega_eQTL:
+        - annotated_data_Exc_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Inh_mega_eQTL:
+        - annotated_data_Inh_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Mic_mega_eQTL:
+        - annotated_data_Mic_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      OPC_mega_eQTL:
+        - annotated_data_OPC_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+      Oli_mega_eQTL:
+        - annotated_data_Oli_mega_eQTL_chr{1..22}.parquet/part.*.parquet
+  predictions: #syn77875605
+    - README_predictions.txt
+    Ast_mega_eQTL: #syn77875606
+      - predictions_Ast_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Ast_mega_eQTL_{1..22}.tsv.gz.tbi
+    Exc_mega_eQTL: #syn77875607
+      - predictions_Exc_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Exc_mega_eQTL_{1..22}.tsv.gz.tbi
+    Inh_mega_eQTL: #syn77875608
+      - predictions_Inh_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Inh_mega_eQTL_{1..22}.tsv.gz.tbi
+    Mic_mega_eQTL: #syn77875609
+      - predictions_Mic_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Mic_mega_eQTL_{1..22}.tsv.gz.tbi
+    OPC_mega_eQTL: #syn77875610
+      - predictions_OPC_mega_eQTL_{1..22}.tsv.gz
+      - predictions_OPC_mega_eQTL_{1..22}.tsv.gz.tbi
+    Oli_mega_eQTL: #syn77875611
+      - predictions_Oli_mega_eQTL_{1..22}.tsv.gz
+      - predictions_Oli_mega_eQTL_{1..22}.tsv.gz.tbi
+  fine_mapping: #syn77875116
+    - README_fine_mapping.txt
+    - credible_set_counts.tsv
+    uniform: #syn77875145
+      Ast_mega_eQTL:
+        - credible_sets_Ast_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_Ast_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+      Exc_mega_eQTL:
+        - credible_sets_Exc_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_Exc_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+      Inh_mega_eQTL:
+        - credible_sets_Inh_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_Inh_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+      Mic_mega_eQTL:
+        - credible_sets_Mic_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_Mic_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+      OPC_mega_eQTL:
+        - credible_sets_OPC_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_OPC_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+      Oli_mega_eQTL:
+        - credible_sets_Oli_mega_eQTL_uniform_{1..22}.tsv.gz
+        - credible_sets_Oli_mega_eQTL_uniform_{1..22}.tsv.gz.tbi
+    EMS: #syn77875117
+      Ast_mega_eQTL:
+        - credible_sets_Ast_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_Ast_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+      Exc_mega_eQTL:
+        - credible_sets_Exc_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_Exc_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+      Inh_mega_eQTL:
+        - credible_sets_Inh_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_Inh_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+      Mic_mega_eQTL:
+        - credible_sets_Mic_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_Mic_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+      OPC_mega_eQTL:
+        - credible_sets_OPC_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_OPC_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+      Oli_mega_eQTL:
+        - credible_sets_Oli_mega_eQTL_EMS_{1..22}.tsv.gz
+        - credible_sets_Oli_mega_eQTL_EMS_{1..22}.tsv.gz.tbi
+    scEEMS_Weighted_Full: #syn77875131
+      Ast_mega_eQTL:
+        - credible_sets_Ast_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_Ast_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+      Exc_mega_eQTL:
+        - credible_sets_Exc_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_Exc_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+      Inh_mega_eQTL:
+        - credible_sets_Inh_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_Inh_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+      Mic_mega_eQTL:
+        - credible_sets_Mic_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_Mic_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+      OPC_mega_eQTL:
+        - credible_sets_OPC_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_OPC_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+      Oli_mega_eQTL:
+        - credible_sets_Oli_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz
+        - credible_sets_Oli_mega_eQTL_scEEMS_Weighted_Full_{1..22}.tsv.gz.tbi
+    scEEMS_Unweighted_Full: #syn77875124
+      Ast_mega_eQTL:
+        - credible_sets_Ast_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_Ast_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+      Exc_mega_eQTL:
+        - credible_sets_Exc_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_Exc_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+      Inh_mega_eQTL:
+        - credible_sets_Inh_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_Inh_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+      Mic_mega_eQTL:
+        - credible_sets_Mic_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_Mic_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+      OPC_mega_eQTL:
+        - credible_sets_OPC_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_OPC_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+      Oli_mega_eQTL:
+        - credible_sets_Oli_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz
+        - credible_sets_Oli_mega_eQTL_scEEMS_Unweighted_Full_{1..22}.tsv.gz.tbi
+    scEEMS_Weighted_Restricted: #syn77875138
+      Ast_mega_eQTL:
+        - credible_sets_Ast_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_Ast_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+      Exc_mega_eQTL:
+        - credible_sets_Exc_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_Exc_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+      Inh_mega_eQTL:
+        - credible_sets_Inh_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_Inh_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+      Mic_mega_eQTL:
+        - credible_sets_Mic_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_Mic_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+      OPC_mega_eQTL:
+        - credible_sets_OPC_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_OPC_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+      Oli_mega_eQTL:
+        - credible_sets_Oli_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz
+        - credible_sets_Oli_mega_eQTL_scEEMS_Weighted_Restricted_{1..22}.tsv.gz.tbi
+  featurization: #syn77875114
+    - README_featurization.txt
+    - MANIFEST.tsv
+    - abc_scores.tsv.gz
+    - celltype_annotations.bed.gz
+    - chrombpnet_peaks.tsv.gz
+    - genes.tsv
+    - targets_human.txt
+    chrombpnet_models: #syn77875115
+      - ATAC_*_fold_*.chrombpnet_nobias.h5
+      - H3K27ac_*_fold_*.final.torch
+      - H3K4me3_*_fold_*.final.torch
+
 xQTL_GWAS_models: #syn69670588
   xQTL_models: #syn69670589
     finemapping_models: #syn69670592
@@ -344,10 +559,10 @@ xQTL_GWAS_models: #syn69670588
         MetaBrain: #syn70090820
           export: #syn70095503
             batch{1..23}: #syn726676{50..76}
-              - FunGen_xQTL.*.cis_results_db.export.rds
-              - FunGen_xQTL.*.cis_results_db.export.rds.md5
-              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
-              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
+              - Metabrain.*.cis_results_db.export.rds
+              - Metabrain.*.cis_results_db.export.rds.md5
+              - Metabrain.*.cis_results_db.export_sumstats.rds
+              - Metabrain.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn75134491
             batch{1..6}: #syn754273{33..38}
               - Metabrain.*.univariate_susie_rss.rds
@@ -359,7 +574,11 @@ xQTL_GWAS_models: #syn69670588
         MSBB_eQTL: #syn70095508
           export: #syn75362961
             batch{1..10}: #syn754273{57,59..66,58}
-              - MSBB_eQTL.*.cis_results_db.export*.rds
+              - MSBB_eQTL.*.cis_results_db.export.rds
+              - MSBB_eQTL.*.cis_results_db.export.rds.md5
+              - MSBB_eQTL.*.cis_results_db.export_sumstats.rds
+              - MSBB_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MSBB_eQTL.*.pip_sum
           fine_mapping: #syn75362684
             batch{1..2}: #syn754273{43..44}
               - MSBB_eQTL.*.univariate_bvsr.rds
@@ -477,6 +696,7 @@ xQTL_GWAS_models: #syn69670588
         - KNIGHT.*.cb_xqtl.rds
       MiGA: #syn74987560
         - MIGA.*.cb_xqtl.rds
+        - MiGA.*.cb_xqtl.rds
       ROSMAP_glycoQTL: #syn76489398
         glycoQTL_eQTL: #syn76489401
           unadjusted: #syn76489409
@@ -525,17 +745,17 @@ xQTL_GWAS_models: #syn69670588
         ROSMAP_pQTL: #syn70090857
           batch{1..2}: #syn7154895{5..6}
             - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
-        ROSMAP_glycoQTL: 
+        ROSMAP_glycoQTL: #syn77828034 (currently in TWAS_pending_move)
           - ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate_twas_weights.rds
         ROSMAP_sQTL: #syn70094771
           batch{1..2}: #syn7346269{3,5}
             - ROSMAP_sQTL.*.univariate_twas_weights.rds
-        ROSMAP_tpQTL:
-          K3: # held back (parent is in Temp_Public_Folder, no write access yet)
-            batch{1..2}:
+        ROSMAP_tpQTL: #syn77827202 (currently in TWAS_pending_move)
+          K3: #syn77827203
+            batch{1..2}: #syn77827204, syn77856903
               - ROSMAP_tpQTL.*.univariate_twas_weights.rds
-          K5: # held back (same reason)
-            batch{1..2}:
+          K5: #syn77827406
+            batch{1..2}: #syn77827408, syn77844354
               - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
@@ -824,7 +1044,7 @@ reference_files: #syn69670634
                 ROSMAP_DLPFC_Bennett: #syn75188964
                   - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.M
                   - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.l2.ldscore.parquet.log
                   - ROSMAP_pQTL_DLPFC_Bennett_multigene_single_1.{1..22}.annot.gz
             single_context: #syn75180826
               eQTL: #syn75180831
