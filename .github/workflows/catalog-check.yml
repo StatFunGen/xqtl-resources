@@ -1,0 +1,47 @@
+name: Catalog check
+
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'template/**'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Generate the catalog as the site build does
+        run: |
+          python scripts/toc.py \
+            $(find content/xqtl-data/gwas content/xqtl-data/omics content/xqtl-data/qtl content/xqtl-data/study_info content/xqtl-data/reference_data -name '*.md' ! -name README.md | sort) \
+            -o /tmp/catalog.md \
+            -t "FunGen-xQTL Data Catalog" \
+            -b "https://github.com/StatFunGen/xqtl-resources/tree/main/" \
+            -c "Lead analysts: "
+
+      - name: Audit pages
+        run: |
+          # Warning mode. The job fails only if a dataset page is missing from the generated catalog.
+          python scripts/audit_catalog.py --repo . --catalog /tmp/catalog.md --fail-on-drift --out audit_catalog_report.tsv
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-catalog-report
+          path: audit_catalog_report.tsv
