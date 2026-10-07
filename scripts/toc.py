@@ -11,6 +11,10 @@ from collections import OrderedDict, defaultdict
 from argparse import ArgumentParser
 import re
 import os
+try:
+    import yaml
+except ImportError:
+    yaml = None
 
 A_TO_Z = '''
 |     |     |     |     |     |     |     |     |     |
@@ -27,6 +31,24 @@ class Environment:
 
 env = Environment()
 
+def split_header(text):
+    '''Split an optional YAML metadata header (between two --- lines at the top of a page)
+    from the page body. Returns (dict, body). Pages without a header are returned unchanged.'''
+    if not text.startswith('---\n'):
+        return {}, text
+    end = text.find('\n---', 4)
+    if end < 0:
+        return {}, text
+    header = text[4:end]
+    body = text[end + 4:].lstrip('\n')
+    meta = {}
+    if yaml is not None:
+        try:
+            meta = yaml.safe_load(header) or {}
+        except Exception:
+            meta = {}
+    return (meta if isinstance(meta, dict) else {}), body
+
 def get_toc(files):
     '''Input: a list of *.md files
     Procedure: parse and get the title and description line in each file
@@ -38,8 +60,12 @@ def get_toc(files):
         if os.path.split(item)[-1] == "README.md":
             continue
         n_sec = 0
-        lines = [x.strip() for x in open(item).readlines() if x.strip()]
+        meta, body = split_header(open(item, encoding='utf-8').read())
+        lines = [x.strip() for x in body.split('\n') if x.strip()]
         name = lines[0].strip('#').strip()
+        if name in res:
+            # two pages with the same title must not overwrite each other
+            name = '{} ({})'.format(name, os.path.splitext(os.path.basename(item))[0])
         res[name] = [item]
         for line in lines[1:]:
             if line.startswith('#'):
@@ -56,6 +82,12 @@ def get_toc(files):
                     res[name][-1] += '.'
             if len(res[name]) == 3:
                 break
+        la = meta.get('lead_analysts')
+        if la:
+            la = ', '.join(la) if isinstance(la, list) else str(la)
+            if not la.endswith('.'):
+                la += '.'
+            res[name] = res[name][:2] + [la]
     return OrderedDict(sorted(res.items(), key=lambda i: i[0].lower()))
 
 def write_toc(toc, page, title, description, contact, add_link = True):

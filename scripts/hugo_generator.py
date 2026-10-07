@@ -166,6 +166,14 @@ class HugoSiteGenerator:
         # Default weight for regular files
         return 50
     
+    def strip_source_header(self, content):
+        """Remove a leading YAML metadata header from a source page"""
+        if content.startswith('---\n'):
+            end = content.find('\n---', 4)
+            if end >= 0:
+                return content[end + 4:].lstrip('\n')
+        return content
+
     def add_frontmatter(self, content, title, filepath, depth_level=1):
         """Add Hugo frontmatter to markdown content
         
@@ -207,6 +215,10 @@ bookToc: true
             with open(source_file, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
             
+            # Strip the optional source metadata header (--- ... ---) so that it is not
+            # rendered and does not collide with the Hugo front matter added below
+            content = self.strip_source_header(content)
+
             # Extract title and sanitize content
             title = self.extract_title_from_content(content, source_file)
             content = self.sanitize_markdown_content(content)
