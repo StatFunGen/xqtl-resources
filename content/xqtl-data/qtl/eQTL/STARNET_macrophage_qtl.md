@@ -253,7 +253,6 @@ $ ls -lh *.cis_long_table.txt
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/STARNET/eQTL/`
 - 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

@@ -18,9 +18,7 @@ FunGen-xQTL Analysis Team
 
 ## Analysis Details
 
-### Path(s) to cis-QTL association testing
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/metaQTL/DLPFC/`
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

@@ -2,36 +2,23 @@
 
 ## Browse by Data Type
 
-* [Gene Expression](expression) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq pseudo-bulk), MSBB, MiGA, MetaBrain, Knight ADRC, MAGENTA, STARNET
-* [RNA Splicing](splicing) — ROSMAP (DLPFC/PCC/AC/snuc ISSAC), MSBB, Knight ADRC, MAGENTA
-* [Proteomics](proteomics) — ROSMAP DLPFC, MSBB, Knight ADRC (brain/CSF), EFIGA CSF
+* [Gene Expression](expression) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq pseudo-bulk), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
+* [RNA Splicing](splicing) — ROSMAP (DLPFC/PCC/AC/snuc ISSAC), MSBB, Knight ADRC
 * [Glycoproteomics](glycoproteomics) — ROSMAP DLPFC
 * [DNA Methylation](methylation) — ROSMAP DLPFC, MSBB, Knight ADRC
 * [Histone ChIP-seq](histone_ChIPSeq) — ROSMAP DLPFC (H3K9ac)
 * [Single-Nucleus ATAC-seq](snATAC) — ROSMAP snuc
-* [Metabolomics](metabolomics) — ROSMAP DLPFC, Knight ADRC (brain/CSF), EFIGA plasma, WHICAP plasma
 * [Single-Nucleus RNA-seq](snRNA_seq) — ROSMAP (CUIMC1, MIT, Mega)
-* [Genotype / WGS](genotype) — ROSMAP, MSBB, Knight ADRC, MiGA, MAGENTA, STARNET, EFIGA, WHICAP
 * [Covariates](covariates) — ROSMAP
 
 ## All Datasets
 
-* [EFIGA CSF proteomics](proteomics/EFIGA_CSF_proteomics)
-* [EFIGA genotype](genotype/EFIGA_genotype)
-* [EFIGA plasma metabolomics](metabolomics/EFIGA_plasma_metabolomics)
 * [Knight ADRC brain gene expression](expression/Knight_ADRC_brain_expression)
 * [Knight ADRC brain metabolomics](metabolomics/Knight_ADRC_brain_metabolomics)
 * [Knight ADRC brain methylation](methylation/Knight_ADRC_brain_methylation)
 * [Knight ADRC brain proteomics](proteomics/Knight_ADRC_brain_proteomics)
 * [Knight ADRC brain splicing](splicing/Knight_ADRC_brain_splicing)
-* [Knight ADRC CSF metabolomics](metabolomics/Knight_ADRC_CSF_metabolomics)
-* [Knight ADRC CSF proteomics](proteomics/Knight_ADRC_CSF_proteomics)
 * [Knight ADRC genotype data](genotype/Knight_ADRC_genotype)
-* [MAGENTA African American blood gene expression](expression/MAGENTA_AA_blood_expression)
-* [MAGENTA African American blood splicing](splicing/MAGENTA_AA_blood_splicing)
-* [MAGENTA genotype data](genotype/MAGENTA_genotype)
-* [MAGENTA Non-Hispanic White blood gene expression](expression/MAGENTA_NHW_blood_expression)
-* [MAGENTA Non-Hispanic White blood splicing](splicing/MAGENTA_NHW_blood_splicing)
 * [MetaBrain multi-brain region gene expression](expression/MetaBrain_brain_expression)
 * [MiGA genotype data](genotype/MiGA_genotype)
 * [MiGA multi-brain region gene expression](expression/MiGA_brain_expression)
@@ -63,5 +50,3 @@
 * [ROSMAP WGS data](genotype/ROSMAP_WGS)
 * [STARNET genotype data](genotype/STARNET_genotype)
 * [STARNET macrophage gene expression](expression/STARNET_macrophage)
-* [WHICAP genotype data](genotype/WHICAP_genotype)
-* [WHICAP plasma metabolomics](metabolomics/WHICAP_plasma_metabolomics)

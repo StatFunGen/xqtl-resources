@@ -109,82 +109,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of genotype_qc.ipynb**
 
-- BU cluster, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
-- Wang Lab, `/mnt/mfs/hgrcgrid/homes/zq2209/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
 
-```
-$ cd /mnt/vast/hpc/csg/molecular_phenotype_calling/genotype_arch/
-$ ls -lh *.{bim,bed,fam}
--rw-r--r-- 1 hs3163 hs3163 220M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bed
--rw-r--r-- 1 hs3163 hs3163  33M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.fam
--rw-r--r-- 1 hs3163 hs3163 207M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.11.bed
--rw-r--r-- 1 hs3163 hs3163  31M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.11.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.11.fam
--rw-r--r-- 1 hs3163 hs3163 207M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.12.bed
--rw-r--r-- 1 hs3163 hs3163  31M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.12.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.12.fam
--rw-r--r-- 1 hs3163 hs3163 156M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.13.bed
--rw-r--r-- 1 hs3163 hs3163  23M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.13.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.13.fam
--rw-r--r-- 1 hs3163 hs3163 141M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.14.bed
--rw-r--r-- 1 hs3163 hs3163  21M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.14.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.14.fam
--rw-r--r-- 1 hs3163 hs3163 123M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.15.bed
--rw-r--r-- 1 hs3163 hs3163  18M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.15.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.15.fam
--rw-r--r-- 1 hs3163 hs3163 137M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.16.bed
--rw-r--r-- 1 hs3163 hs3163  21M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.16.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.16.fam
--rw-r--r-- 1 hs3163 hs3163 125M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.17.bed
--rw-r--r-- 1 hs3163 hs3163  19M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.17.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.17.fam
--rw-r--r-- 1 hs3163 hs3163 121M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.18.bed
--rw-r--r-- 1 hs3163 hs3163  18M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.18.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.18.fam
--rw-r--r-- 1 hs3163 hs3163 106M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.19.bed
--rw-r--r-- 1 hs3163 hs3163  16M Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.19.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:10 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.19.fam
--rw-r--r-- 1 hs3163 hs3163 345M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.1.bed
--rw-r--r-- 1 hs3163 hs3163  50M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.1.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.1.fam
--rw-r--r-- 1 hs3163 hs3163 101M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.20.bed
--rw-r--r-- 1 hs3163 hs3163  15M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.20.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.20.fam
--rw-r--r-- 1 hs3163 hs3163  60M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.21.bed
--rw-r--r-- 1 hs3163 hs3163 9.1M Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.21.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:11 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.21.fam
--rw-r--r-- 1 hs3163 hs3163  66M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.22.bed
--rw-r--r-- 1 hs3163 hs3163  11M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.22.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.22.fam
--rw-r--r-- 1 hs3163 hs3163 359M Sep 29 15:05 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.2.bed
--rw-r--r-- 1 hs3163 hs3163  52M Sep 29 15:05 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.2.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:05 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.2.fam
--rw-r--r-- 1 hs3163 hs3163 302M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.3.bed
--rw-r--r-- 1 hs3163 hs3163  42M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.3.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.3.fam
--rw-r--r-- 1 hs3163 hs3163 302M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.4.bed
--rw-r--r-- 1 hs3163 hs3163  43M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.4.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.4.fam
--rw-r--r-- 1 hs3163 hs3163 274M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.5.bed
--rw-r--r-- 1 hs3163 hs3163  39M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.5.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.5.fam
--rw-r--r-- 1 hs3163 hs3163 280M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.6.bed
--rw-r--r-- 1 hs3163 hs3163  40M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.6.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.6.fam
--rw-r--r-- 1 hs3163 hs3163 255M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.7.bed
--rw-r--r-- 1 hs3163 hs3163  37M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.7.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.7.fam
--rw-r--r-- 1 hs3163 hs3163 232M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.8.bed
--rw-r--r-- 1 hs3163 hs3163  33M Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.8.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:07 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.8.fam
--rw-r--r-- 1 hs3163 hs3163 190M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.9.bed
--rw-r--r-- 1 hs3163 hs3163  27M Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.9.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 29 15:08 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.9.fam
--rw-r--r-- 1 hs3163 hs3163 4.2G Sep 28 20:02 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.bed
--rw-r--r-- 1 hs3163 hs3163 619M Sep 28 20:02 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.bim
--rw-r--r-- 1 hs3163 hs3163  23K Sep 28 20:02 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.fam
-```
 
 
 ### Path(s) to omics-data matrix 
@@ -193,11 +118,9 @@ $ ls -lh *.{bim,bed,fam}
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/phenotype_preprocessing/`
 
 psichomics:
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/pheno`
 
 ```
 $ ls -lh *.{txt,bed}
@@ -235,12 +158,10 @@ $ ls -lh *.{txt,bed}
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/covariate_preprocessing/leafcutter.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.gz`
    
 
 psichomics:
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/cov`
 
 ```
 $ ls -lh *.gz
@@ -253,11 +174,9 @@ $ ls -lh *.gz
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/association_scan`
    
 psichomics:
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/output`
 
 ```
 $ls -lh *.txt
@@ -310,7 +229,6 @@ $ls -lh *.txt
 
 psichomics (grouped by each gene - event_type pair):
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/event_sep/output`
 
 ```
 $ ls -lh *.txt
@@ -365,7 +283,6 @@ $ ls -lh *.txt
 
 **output of fine_mapping.ipynb**
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/sQTL_finemapping/ROSMAP_psichomics`
 
 The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
 
@@ -373,7 +290,6 @@ The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/sQTL/DLPFC/leafcutter2/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

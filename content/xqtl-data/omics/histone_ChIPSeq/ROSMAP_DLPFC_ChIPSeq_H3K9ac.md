@@ -44,14 +44,12 @@ After the identification of peaks, a subsequent quality control phase was undert
 To define and quantify H3K9ac domains, we parsed BED files for genomic region data and identified H3K9ac marked domains. Quantification for each sample was conducted by counting reads extended towards the 3'-end, ensuring the precision of our methodology.
 
 Read counts:
-- Wang Lab: `/mnt/mfs/ctcn/datasets/rosmap/h3k9ac/dlpfcTissue/batch1/values/counts/H3K9acCounts.txt` (185M)
 
 Annotation:
-- Wang Lab: `/mnt/mfs/ctcn/datasets/rosmap/h3k9ac/dlpfcTissue/batch1/values/counts/H3K9acDomains.csv` (6.5M)
 
 The H3K9acCounts.txt contains 92401 peaks (rows) from 669 samples (columns). The column names are ROSMAP project IDs (eight digit #) and row names are peak No. (peak_#), sorted by asending chromosome number and start location.
 
-The H3K9acDomains.csv contains peak info summarized as follows: chr, start, end, width (length of peak region), strand, log10p, log10q, foldEnrichment(fold enrichment for this peak summit against random Poisson distribution with local lambda), pileup (pileup height at peak summit), name (peak_#), blacklist (blacklist True/False according to `/mnt/mfs/ctcn/resources/encodeBlacklists/hg38-blacklist.v2.clean.bed.gz`). 
+The H3K9acDomains.csv contains peak info summarized as follows: chr, start, end, width (length of peak region), strand, log10p, log10q, foldEnrichment(fold enrichment for this peak summit against random Poisson distribution with local lambda), pileup (pileup height at peak summit), name (peak_#), blacklist (blacklist True/False according to).
 
 
 ## Links to omics data analysis notebooks

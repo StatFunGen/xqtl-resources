@@ -49,13 +49,12 @@ ROSMAP DLPFC Gene Expression (RNA seq - bulk brain):
 
 Data Processing:
 
-The raw data were aligned using the STAR-WASP pipeline, which utilizes the reference file available at ftp: `/ftp_fgc_xqtl/ref-data/ROSMAP_rnaseq/ref/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta.chrom.size` and `/ftp_fgc_xqtl/ref-data/ROSMAP_rnaseq/ref/ZOD14598_AD_GRM_WGS_2021-04-29_all.recalibrated_variants.leftnorm.filtered.AF.WASP.vcf.gz` The alignment results was processed via ADSP FGC xQTL pipeline, splicing QTL module, using two packages, leafCutter and psichomics. Within the 1141 samples, 95310 intron clusters were found by leafCutter and 176917 different alternative splicing event were found by psichomics.
+The raw data were aligned using the STAR-WASP pipeline. The alignment results was processed via ADSP FGC xQTL pipeline, splicing QTL module, using two packages, leafCutter and psichomics. Within the 1141 samples, 95310 intron clusters were found by leafCutter and 176917 different alternative splicing event were found by psichomics.
 
-For leafCutter, the recipe of chromosome seperated phenotype matrices can be found at BU cluster: `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/PDP_leafcutter/leafcutter_bam_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.processed_phenotype.per_chrom.recipe`. The recipe and matrices can be found on FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/phenotype_preprocessing/`
 
 The phenotype matrices are processed bed format files, with chr, start, end, ID and sample IDs as column names, each row represents one intron cluster and the values are intron usage ratio (for details please check [leafCutter publication](https://www.nature.com/articles/s41588-017-0004-9) ). The ID of leafcutter phenotype will be like [chromosome]:[intron_start]:[intron_end]:clu_[cluster No.]_[strandness]:[gene mapped for this intron cluster], for example: chr14:19062466:19064583:clu_26162_+:ENSG00000225210
 
-For psichomics, the recipe of chromosome seperated phenotype matrices can be found at CU cluster: `/mnt/mfs/hgrcgrid/homes/xc2610/psichomics_rerun2/pheno/ROSMAP_psichomics_bed_recipe.txt`.
+For psichomics, the recipe of chromosome seperated phenotype matrices can be found at CU cluster:.
 
 The phenotype matrices are processed bed format files, with chr, start, end, ID and sample IDs as column names, each row represents one alternative splicing event and the values are percent spliced in value (for details please check [psichomics publication](https://www.biorxiv.org/content/10.1101/261180v2.full) ). The ID of psichomics phenotype will be like [Alternative splicing event type]_[chromosome]_[strandness]_[splicing locations depend on event type]_[gene mapped for this splicing event], for example: SE_10_+_135559_179994_180128_209889_ENSG00000015171
 

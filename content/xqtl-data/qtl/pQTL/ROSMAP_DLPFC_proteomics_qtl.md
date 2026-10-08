@@ -88,7 +88,6 @@ Final covariates: Sex, Age at death, PMI, PCs(12), hidden factors(41)
 
 ### Path(s) to genotype matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/FunGen_xQTL/ROSMAP/Genotype` Whole Genotype
 
 ```
 $ ls -lh *.{bim,bed,fam}
@@ -97,7 +96,6 @@ $ ls -lh *.{bim,bed,fam}
 -rw-r--r-- 1 zq2209 zq2209  23K Aug 14 19:47 ROSMAP_NIA_WGS.leftnorm.bcftools_qc.plink_qc.fam
 ```
 
-- Wang Lab, `/mnt/vast/hpc/csg/FunGen_xQTL/ROSMAP/Genotype/plink_by_chr` Genotype by chromosome 
 
 ```
 $ ls -lh *.{bim,bed,fam}
@@ -172,7 +170,6 @@ $ ls -lh *.{bim,bed,fam}
 
 ### Path(s) to omics-data matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/zq2209/data_production/proteomics/rosmap/pheno`
 
 ```
 $ ls -lh *.{gz}
@@ -205,7 +202,6 @@ $ ls -lh *.{gz}
 
 ### Path(s) to covariate data matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/zq2209/data_production/proteomics/rosmap/cov`
 
 ```
 $ ls -lh *.gz
@@ -214,7 +210,6 @@ $ ls -lh *.gz
 
 ### Path(s) to QTL results
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/pQTL_cis/rosmap`
 ```
 ls -lh *.txt
 -rw-r--r-- 1 zq2209 zq2209  76K May 22 13:50 pheno_recipe_rosmap_pheno.rosmap_cov.ROSMAP_NIA_WGS.leftnorm.filtered.filtered.prune.pca.resid.Marchenko_pc.10.emprical.cis_sumstats.txt
@@ -270,7 +265,6 @@ ls -lh *.txt
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/pQTL/DLPFC/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

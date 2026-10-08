@@ -22,5 +22,3 @@ Bulk and single-nucleus RNA splicing datasets used for sQTL mapping. Bulk data u
 
 | Dataset | Cohort |
 |---------|--------|
-| [MAGENTA African American](MAGENTA_AA_blood_splicing) | Whole blood, African American |
-| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_splicing) | Whole blood, Non-Hispanic White |

@@ -117,63 +117,43 @@ Alternatively you can also use a somewhat free style as long as it is clear from
 - Imputation Panel : imputation panel used
 
 
-### Path(s) to genotype matrix
+### Access to genotype matrix
+
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 Here please document the exact genotype matrix used for QTL calling. 
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/genotype_partition/ROSMAP_NIA_WGS_plink_files/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
 
-A summary of the genotype data including size. We suggest using `ls -lh` command to show them. For example:
+Report the number of files and total size only.
 
-```
-$ ls -lh *.{bim,bed,fam}
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP_NIA_WGS.###.bed
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP_NIA_WGS.###.bim
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP_NIA_WGS.###.fam
-```
+### Access to omics-data matrix
 
-### Path(s) to omics-data matrix
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 Here please document the exact omics-data matrix used for QTL calling.
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/phenotype/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
 
-A summary of the phenotype data including size. We suggest using `ls -lh` command to show them. For example:
+Report the number of files and total size only.
 
-```
-$ ls -lh *.tsv
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP.###.tsv
-```
+### Access to covariate data matrix
 
-### Path(s) to covariate data matrix
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 Here please document the exact covariate matrix used for QTL calling, **including selected covariates from sample attribute file, genotype PC and phenotype hidden counfounding factors computed in your previous analysis**
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/covariate/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
 
-A summary of the phenotype data including size. We suggest using `ls -lh` command to show them. For example:
+Report the number of files and total size only.
 
-```
-$ ls -lh *.tsv
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP.###.tsv
-```
+### Access to QTL results
 
-### Path(s) to QTL results
+### Access to fine-mapping with SuSiE model
 
-### Path(s) to fine-mapping with SuSiE model
+### Access to fine-mapping with SuSiE RSS model
 
-### Path(s) to fine-mapping with SuSiE RSS model
-
-### Path(s) to colocalization with SuSiE-coloc
+### Access to colocalization with SuSiE-coloc

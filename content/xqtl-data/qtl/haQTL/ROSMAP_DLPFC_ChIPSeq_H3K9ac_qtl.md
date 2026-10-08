@@ -117,7 +117,6 @@ During this process, we strategically expanded the cis window to capture signals
 
 **output of genotype_preprocessing.ipynb**
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/genotype_arch`
 
 ```
 $ ls -lh *.{bim,bed,fam}
@@ -196,7 +195,6 @@ $ ls -lh *.{bim,bed,fam}
 
 **output of phenotype_preprocessing.ipynb**
 
-- Wang Lab, `/mnt/mfs/hgrcgrid/homes/xc2610/k9_data/pheno/`
 
 ```
 $ ls -lh *.{txt,gz}
@@ -229,7 +227,6 @@ $ ls -lh *.{txt,gz}
 
 **output of covariate_preprocessing.ipynb**
 
-- Wang Lab, `/mnt/mfs/hgrcgrid/homes/xc2610/k9_data/pheno/cov_new`
 
 ```
 $ ls -lh *.gz
@@ -267,17 +264,11 @@ ls -lh *.txt
 -rw-r--r-- 1 xc2610 root 7.0G Nov 29 14:05 h3k9ac_bed_recipe_h3k9ac_whole.k9_cov.xqtl_protocol_data.filtered.related.filtered.extracted.pca.projected.resid.PEER.merged.9.norminal.cis_long_table.txt
 -rw-r--r-- 1 xc2610 root  32M Nov 29 14:05 h3k9ac_bed_recipe_h3k9ac_whole.k9_cov.xqtl_protocol_data.filtered.related.filtered.extracted.pca.projected.resid.PEER.merged.emprical.cis_sumstats.txt
 ```
-- FTP: `/ftp_fgc_xqtl/projects/histone-methylation/CU/h3k9_sumstats/`
-- AWS: `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/haQTL/DLPFC/`
 ### Path(s) to fine-mapping with SuSiE model 
 
 **output of univariate_fine_mapping.ipynb**
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/QTL_fine_mapping/output/haQTL_pure_completed_unlimited.tsv`
 
-```
--rw-r--r-- 1 hs3163 hs3163 3.5M Apr 21 16:19 /mnt/vast/hpc/csg/molecular_phenotype_calling/QTL_fine_mapping/output/haQTL_pure_completed_unlimited.tsv
-```
 
 ### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
 
