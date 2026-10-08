@@ -35,7 +35,6 @@ For questions about this page, contact the person above.
 
 CU cluster
 
-FTP: `/ftp_fgc_xqtl/ref-data/ROSMAP_covariates/dataset_707_basic_02-08-2022.clean.txt`, `RADC_codebook_data_set_707_02-08-2022/RADC_codebook_data_set_707_02-08-2022`
 
 These files are the raw ROSMAP metadata. They hold covariate information and a codebook that explains each column. Age at death, sex and PMI are the covariates most often used in xQTL analysis. Others worth investigating include education level, emotional neglect and financial need.
 

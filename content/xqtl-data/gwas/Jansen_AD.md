@@ -18,11 +18,9 @@ Oluwatosin Olayinka
 The data are derived from the summary statistics of [Jansen et al.](https://ctg.cncr.nl/documents/p1651/AD_sumstats_Jansenetal_2019sept.txt.gz).
 
 ## Path(s) to summary statistics
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/ADGWAS_Jansen_2019_hg38_liftover/jansen_sumstat_hg38_qc.chr*`
 - CU
 
 ## Path to SuSiE RSS Fine-mapping Objects
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Jansen/`
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
 - Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)

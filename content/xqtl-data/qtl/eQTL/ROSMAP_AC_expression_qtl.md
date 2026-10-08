@@ -43,7 +43,6 @@ Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analy
 
 ### Results
 
-- Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan`
 
 ### Association scan using TensorQTL and summary statistics standardization
 

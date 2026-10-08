@@ -264,7 +264,6 @@ ls -lh *.txt
 -rw-r--r-- 1 xc2610 root 7.0G Nov 29 14:05 h3k9ac_bed_recipe_h3k9ac_whole.k9_cov.xqtl_protocol_data.filtered.related.filtered.extracted.pca.projected.resid.PEER.merged.9.norminal.cis_long_table.txt
 -rw-r--r-- 1 xc2610 root  32M Nov 29 14:05 h3k9ac_bed_recipe_h3k9ac_whole.k9_cov.xqtl_protocol_data.filtered.related.filtered.extracted.pca.projected.resid.PEER.merged.emprical.cis_sumstats.txt
 ```
-- FTP: `/ftp_fgc_xqtl/projects/histone-methylation/CU/h3k9_sumstats/`
 ### Path(s) to fine-mapping with SuSiE model 
 
 **output of univariate_fine_mapping.ipynb**

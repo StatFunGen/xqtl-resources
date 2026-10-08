@@ -74,7 +74,6 @@ df <- readRDS("matrix-eqtl.rds")$cis$eqtl
 
 #### Using `TenorQTL` pipeline (by Hao)
 
-- Wang Lab: `/ftp_fgc_xqtl/projects/single-cell-rna-seq/pseudo_bulk/eight_celltypes_sumstat`
 
 
 

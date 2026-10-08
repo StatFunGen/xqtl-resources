@@ -16,13 +16,11 @@ Oluwatosin Olayinka
 
 
 ## Path(s) to summary statistics
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/ADGWAS_Kunkle_2019_hg38_liftover/kunkle_sumstat_hg38_qc.chr*`
 - CU
     - original data (in GRCh37)
     - liftover data (in GRCh38): 
 
 ## Path to SuSiE RSS Fine-mapping Objects
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Kunkle/`
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
 - Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)

@@ -31,7 +31,6 @@ Imputation QC protocol.pdf
 
 - Data Location on FTP:
 
-`ftp_fgc_xqtl/projects/SNParrayGeno/knightadrc-washu/`
 
 ### Genotype processed via xQTL pipeline:
 

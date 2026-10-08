@@ -191,7 +191,6 @@ $ ls -lh *.{bim,bed,fam}
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/phenotype_preprocessing/`
 
 psichomics:
 
@@ -232,7 +231,6 @@ $ ls -lh *.{txt,bed}
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/covariate_preprocessing/leafcutter.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.gz`
    
 
 psichomics:
@@ -249,7 +247,6 @@ $ ls -lh *.gz
 
 leafCutter:
 
-- FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/association_scan`
    
 psichomics:
 

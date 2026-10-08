@@ -17,8 +17,6 @@ Oluwatosin Olayinka
 
 ## Path(s) to summary statistics
 - NIAGADS FTP
-    - meta-analysis results: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_meta/wightman_meta_sumstat_hg38_qc.chr*`
-    - only 23andMe: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_23andme/wightman_sumstat_hg38_qc.chr*`
  
 - CU
     - original data (in GRCh37)
@@ -26,7 +24,6 @@ Oluwatosin Olayinka
     - liftover data (in hg38)
         
 ## Path to SuSiE RSS Fine-mapping Objects
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Wightman/`
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
 - Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)

@@ -200,7 +200,6 @@ $ ls -lh *.{bim,bed,fam}
 
 ### Path(s) to QTL results
 
-- FTP server, `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan`
 
 empirical_files:
 

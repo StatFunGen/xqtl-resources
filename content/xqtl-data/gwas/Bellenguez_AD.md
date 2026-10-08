@@ -16,13 +16,11 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
 
 ## Path(s) to summary statistics
 
-- NIAGADS FTP: `/ftp_fgc_xqtl/projects/ADGWAS_Bellenguez_2022/ADGWAS2022.chr*.sumstat.tsv`
 - CU
     - a related meta-analysis of GR@ACE, IGAP and UKB, publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
 
 
 ## Path to SuSiE RSS Fine-mapping Objects
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Bellenguez/`
 
 ## Download source
 

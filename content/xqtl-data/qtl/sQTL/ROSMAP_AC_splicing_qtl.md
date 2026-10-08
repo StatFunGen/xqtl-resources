@@ -59,7 +59,6 @@ In this analysis we performed two methods: leafcutter2 and psichomics.
 
 #### leafcutter2
 
-- Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/association_scan/`
 
 #### psichomics
 

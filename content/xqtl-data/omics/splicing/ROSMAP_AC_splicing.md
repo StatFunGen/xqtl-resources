@@ -39,7 +39,6 @@ Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analy
 
 ### Results
 
-- Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan`
 
 ## sQTL analysis performed by Gao Wang's Lab and Xiaoling Zhang's lab
 
@@ -59,7 +58,6 @@ In this analysis we performed two methods: leafcutter and psichomics.
 
 #### leafcutter
 
-- Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/association_scan/`
 
 #### psichomics
 
