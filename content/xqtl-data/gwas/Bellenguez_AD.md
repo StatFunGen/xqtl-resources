@@ -145,3 +145,17 @@ Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865
 AD risk genes prioritized by xQTL + GVC: [syn70095142](https://www.synapse.org/Synapse:syn70095142)
 
 AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synapse.org/Synapse:syn70095143)
+
+## Bellenguez 2026 update (noproxy, main, nobiobank)
+
+Three 2026 analysis variants of the Bellenguez AD GWAS are staged on Synapse alongside the 2022 release. Each variant has a top-loci table (`AD_Bellenguez_<variant>_2026.gwas.top_loci.bed.gz`) and per-region SuSiE RSS fine-mapping objects (`AD_Bellenguez_<variant>_2026.*.gwas_finemap.rds`).
+
+| Variant | Description |
+| ------- | ----------- |
+| `noproxy` | Clinically diagnosed AD cases only; proxy-ADD cases excluded |
+| `main` | Primary 2026 analysis |
+| `nobiobank` | Primary analysis with biobank cohorts excluded |
+
+The unified AD loci xQTL summary (`unified_AD_loci_xQTL_summary_20261002.xlsx`) integrates the 2026 loci with xQTL colocalization results.
+
+Note: the variant descriptions above are inferred from the file names and need confirmation by the analysts (cohort composition, sample sizes, genome build, source of the 2026 summary statistics).
