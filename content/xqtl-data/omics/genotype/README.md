@@ -11,5 +11,3 @@ Whole genome sequencing (WGS) and genotype array data across cohorts, used as th
 | [Knight ADRC genotype](Knight_ADRC_genotype) | Knight ADRC | WGS / genotype array |
 | [MiGA genotype](MiGA_genotype) | MiGA | WGS / genotype array |
 | [STARNET genotype](STARNET_genotype) | STARNET | WGS / genotype array |
-| [EFIGA genotype](EFIGA_genotype) | EFIGA | WGS / genotype array |
-| [WHICAP genotype](WHICAP_genotype) | WHICAP | WGS / genotype array |

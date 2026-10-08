@@ -11,16 +11,16 @@ The [Alzheimer's Disease Sequencing Project Functional Genomics Consortium (FunG
 FunGen-xQTL maps molecular quantitative trait loci (QTL) across multiple molecular phenotypes and integrates them with GWAS of neurodegenerative disease, with AD as the model disease. All datasets are hosted on Synapse, in four folders: [variant and gene summaries](https://www.synapse.org/Synapse:syn69865684) (syn69865684), [xQTL models](https://www.synapse.org/Synapse:syn69670588) (syn69670588), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) (syn69670632), and [reference files](https://www.synapse.org/Synapse:syn69670634) (syn69670634).
 
 * **[xQTL analysis and xQTL-GWAS integration results](xqtl_resource_description)** and the **[file format description](xqtl_resource_format)**.
-* **[Study cohorts](xqtl-data/study_info/)** describe the participating cohorts ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, EFIGA, WHICAP, and MetaBrain.
+* **[Study cohorts](xqtl-data/study_info/)** describe the participating cohorts ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, and MetaBrain.
 * **[GWAS summary statistics](xqtl-data/gwas/)** cover the major AD GWAS (Bellenguez 2022, Kunkle 2019, Wightman 2021, Jansen 2019). The 2026 update adds the Bellenguez main, no-biobank and no-proxy analyses. Integrated AD fine-mapping and colocalization results are listed on the same page.
 * **[Molecular phenotypes](xqtl-data/omics/)** include the following.
   - Gene expression from bulk RNA-seq (ROSMAP DLPFC, PCC, AC, microglia and monocyte; MSBB; Knight ADRC; MetaBrain; MiGA; STARNET).
   - Alternative splicing from bulk RNA-seq and from single-nucleus data (ISSAC method).
-  - Proteomics and glycoproteomics of brain and CSF.
+  - Proteomics and glycoproteomics of brain.
   - DNA methylation.
   - Histone modification (H3K9ac ChIP-seq).
   - Chromatin accessibility (snATAC-seq).
-  - Metabolomics of brain, CSF and plasma.
+  - Metabolomics of brain.
   - Single-nucleus RNA-seq (ROSMAP DLPFC, in the CUIMC, MIT and mega cohorts).
   - Whole-genome sequencing genotypes and covariates.
 * **[xQTL data](xqtl-data/qtl/)** are molecular QTL associations organized by modality, namely [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL) and [metQTL](xqtl-data/qtl/metQTL). They also include ROSMAP transcriptomic pattern QTL (tpQTL) and trans-xQTL.

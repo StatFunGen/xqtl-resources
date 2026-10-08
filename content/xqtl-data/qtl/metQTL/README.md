@@ -1,6 +1,6 @@
 # Metabolome QTL (metQTL) Resources
 
-Metabolome quantitative trait loci (metQTL) identify genetic variants that influence metabolite levels measured by mass spectrometry-based metabolomics. Metabolomics provides a direct readout of cellular biochemical activity and can reveal disease-relevant metabolic pathways linked to genetic variation. This resource provides metQTL summary statistics, fine-mapping results, and colocalization analyses across brain tissue, cerebrospinal fluid (CSF), and plasma from AD-relevant cohorts.
+Metabolome quantitative trait loci (metQTL) identify genetic variants that influence metabolite levels measured by mass spectrometry-based metabolomics. Metabolomics provides a direct readout of cellular biochemical activity and can reveal disease-relevant metabolic pathways linked to genetic variation. This resource provides metQTL summary statistics, fine-mapping results, and colocalization analyses across brain tissue from AD-relevant cohorts.
 
 ## Overview
 
@@ -14,19 +14,6 @@ metQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [Knight ADRC brain](Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | — |
-
-### Cerebrospinal Fluid (CSF)
-
-| Dataset | Cohort | Synapse |
-|---------|--------|---------|
-| [Knight ADRC CSF](Knight_ADRC_CSF_metabolomics_qtl) | Knight ADRC CSF (WashU) | — |
-
-### Plasma
-
-| Dataset | Cohort | Synapse |
-|---------|--------|---------|
-| [EFIGA plasma](EFIGA_plasma_metabolomics_qtl) | EFIGA cohort plasma metabolomics | — |
-| [WHICAP plasma (pilot)](WHICAP_plasma_metabolomics_qtl) | Washington Heights–Inwood Columbia Aging Project pilot | — |
 
 ## Analyses Performed
 

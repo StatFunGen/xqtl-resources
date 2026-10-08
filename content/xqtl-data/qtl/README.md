@@ -6,25 +6,19 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 
 * [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
 * [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
-* [Protein QTLs (pQTL)](pQTL) — ROSMAP DLPFC, MSBB, Knight ADRC (brain/CSF), EFIGA CSF
 * [Glycosylation QTLs (gpQTL)](gpQTL) — ROSMAP DLPFC
 * [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
 * [Histone acetylation QTLs (haQTL)](haQTL) — ROSMAP DLPFC
 * [Chromatin accessibility QTLs (caQTL)](caQTL) — ROSMAP snuc
-* [Metabolome QTLs (metQTL)](metQTL) — ROSMAP DLPFC, Knight ADRC (brain/CSF), EFIGA plasma, WHICAP plasma
 
 ## All Datasets
 
-* [EFIGA CSF proteomics QTL](pQTL/EFIGA_CSF_proteomics_qtl)
-* [EFIGA plasma metabolomics QTL](metQTL/EFIGA_plasma_metabolomics_qtl)
 * [FunGen-xQTL protocol data](FunGen_xQTL_protocol_data)
 * [Knight ADRC brain gene expression QTL](eQTL/Knight_ADRC_brain_expression_qtl)
 * [Knight ADRC brain metabolomics QTL](metQTL/Knight_ADRC_brain_metabolomics_qtl)
 * [Knight ADRC brain methylation QTL](mQTL/Knight_ADRC_brain_methylation_qtl)
 * [Knight ADRC brain proteomics QTL](pQTL/Knight_ADRC_brain_proteomics_qtl)
 * [Knight ADRC brain splicing QTL](sQTL/Knight_ADRC_brain_splicing_qtl)
-* [Knight ADRC CSF metabolomics QTL](metQTL/Knight_ADRC_CSF_metabolomics_qtl)
-* [Knight ADRC CSF proteomics QTL](pQTL/Knight_ADRC_CSF_proteomics_qtl)
 * [MetaBrain multi-brain region gene expression QTL](eQTL/MetaBrain_brain_expression_qtl)
 * [MiGA multi-brain region gene expression QTL](eQTL/MiGA_brain_expression_qtl)
 * [MSBB brain alternative splicing QTL](sQTL/MSBB_brain_splicing_qtl)
@@ -48,4 +42,3 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl)
 * [ROSMAP snuc splicing QTL (ISSAC)](sQTL/ROSMAP_snuc_splicing_qtl)
 * [STARNET macrophage gene expression QTL](eQTL/STARNET_macrophage_qtl)
-* [WHICAP (pilot) plasma metabolomics QTL](metQTL/WHICAP_plasma_metabolomics_qtl)

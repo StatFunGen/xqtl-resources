@@ -9,16 +9,16 @@ The **[Alzheimer's Disease Sequencing Project Functional Genomics Consortium (Fu
 The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. All datasets are hosted on Synapse: [variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
 
 * **[xQTL Analysis and xQTL-GWAS Integration Results](xqtl_resource_description)** along with **[File Format Description](xqtl_resource_format)**
-* **[Study Cohorts](xqtl-data/study_info/)** - Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, EFIGA, WHICAP, and MetaBrain
+* **[Study Cohorts](xqtl-data/study_info/)** - Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, and MetaBrain
 * **[GWAS Summary Statistics](xqtl-data/gwas/)** - Alzheimer's disease GWAS data from major studies (Bellenguez 2022, Kunkle 2019, Wightman 2021, Jansen 2019; the 2026 update adds the Bellenguez main, no-biobank and no-proxy analyses) and integrated AD fine-mapping and colocalization analyses
 * **[Molecular Phenotypes](xqtl-data/omics/)** - Multi-omic data including:
   - Gene expression (bulk RNA-seq: ROSMAP DLPFC/PCC/AC/microglia/monocyte, MSBB, Knight ADRC, MetaBrain, MiGA, STARNET)
   - Alternative splicing (bulk RNA-seq and single-nucleus with ISSAC method)
-  - Proteomics including glycoproteomics (brain and CSF)
+  - Proteomics including glycoproteomics (brain)
   - DNA methylation
   - Histone modification (H3K9ac ChIP-seq)
   - Chromatin accessibility (snATAC-seq)
-  - Metabolomics (brain, CSF, and plasma)
+  - Metabolomics (brain)
   - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC, MIT, and mega cohorts)
   - Genotype (WGS) and covariates
 * **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metQTL](xqtl-data/qtl/metQTL), plus ROSMAP transcriptomic pattern QTLs (tpQTL) and trans-xQTLs
