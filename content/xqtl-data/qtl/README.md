@@ -4,8 +4,8 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 
 ## Browse by Modality
 
-* [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, MAGENTA, STARNET
-* [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC, MAGENTA
+* [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
+* [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
 * [Protein QTLs (pQTL)](pQTL) — ROSMAP DLPFC, MSBB, Knight ADRC (brain/CSF), EFIGA CSF
 * [Glycosylation QTLs (gpQTL)](gpQTL) — ROSMAP DLPFC
 * [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
@@ -25,10 +25,6 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [Knight ADRC brain splicing QTL](sQTL/Knight_ADRC_brain_splicing_qtl)
 * [Knight ADRC CSF metabolomics QTL](metQTL/Knight_ADRC_CSF_metabolomics_qtl)
 * [Knight ADRC CSF proteomics QTL](pQTL/Knight_ADRC_CSF_proteomics_qtl)
-* [MAGENTA African American blood alternative splicing QTL](sQTL/MAGENTA_AA_blood_splicing_qtl)
-* [MAGENTA African American Blood Gene Expression QTL](eQTL/MAGENTA_AA_blood_expression_qtl)
-* [MAGENTA Non-Hispanic White Blood Gene Expression QTL](eQTL/MAGENTA_NHW_blood_expression_qtl)
-* [MAGENTA Non-Hispanic White blood alternative splicing QTL](sQTL/MAGENTA_NHW_blood_splicing_qtl)
 * [MetaBrain multi-brain region gene expression QTL](eQTL/MetaBrain_brain_expression_qtl)
 * [MiGA multi-brain region gene expression QTL](eQTL/MiGA_brain_expression_qtl)
 * [MSBB brain alternative splicing QTL](sQTL/MSBB_brain_splicing_qtl)

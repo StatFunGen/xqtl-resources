@@ -32,8 +32,6 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 | Dataset | Cohort / Tissue | Synapse |
 |---------|-----------------|---------|
-| [MAGENTA African American](MAGENTA_AA_blood_expression_qtl) | MAGENTA cohort, African American whole blood | — |
-| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_expression_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
 | [STARNET macrophage](STARNET_macrophage_qtl) | STARNET macrophage gene expression | — |
 
 ## Analyses Performed

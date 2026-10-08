@@ -69,20 +69,12 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Xuanhe.**
 
 ## M
-* [MAGENTA African American blood alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/sQTL/MAGENTA_AA_blood_splicing_qtl.md).
 	* Lead analysts: **Makaela Mews.**
-* [MAGENTA African American blood gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MAGENTA_AA_blood_expression.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
-* [MAGENTA African American Blood Gene Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MAGENTA_AA_blood_expression_qtl.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst; mxm1368@case.edu);  Dr.**
-* [MAGENTA Non-Hispanic White blood alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/splicing/MAGENTA_NHW_blood_splicing.md).
 	* Lead analysts: **Makaela Mews.**
-* [MAGENTA Non-Hispanic White blood gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MAGENTA_NHW_blood_expression.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
-* [MAGENTA Non-Hispanic White Blood Gene Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MAGENTA_NHW_blood_expression_qtl.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst; mxm1368@case.edu);  Dr.**
-* [MAGENTA study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MAGENTA.md).
-	* Lead analysts: **Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.**
 * [MiGA genotype data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/MiGA_genotype.md). Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropathology Brain Bank and Research CoRE at Mount Sinai Hospital.
 	* Lead analysts: **Travyse Edwards.**
 * [MiGA multi-brain region gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MiGA_brain_expression.md). A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
