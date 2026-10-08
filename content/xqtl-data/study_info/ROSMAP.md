@@ -1,6 +1,16 @@
+---
+type: study
+cohort: ROSMAP
+context: brain
+status: 
+synapse_ids: []
+lead_analysts: [Xuanhe Chen]
+last_verified: 
+---
+
 # ROSMAP study info
 
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) study: ROS is a longitudinal clinical-pathologic cohort study of aging and Alzheimer's disease (AD) run from Rush University that enrolled individuals from religious communities for longitudinal clinical analysis and brain donation. Participants were enrolled from more than 40 groups of religious orders (nuns, priests, brothers) across the United States. MAP is a longitudinal, epidemiologic clinical-pathologic cohort study of common chronic conditions of aging with an emphasis on decline in cognitive and motor function and risk of Alzheimer’s disease that began in 1997 and is run from Rush University.
+The Religious Orders Study (ROS) and the Rush Memory and Aging Project (MAP) are two longitudinal clinical-pathologic cohort studies of aging and Alzheimer's disease (AD), both run from Rush University. ROS enrolled participants from more than 40 religious orders (nuns, priests and brothers) across the United States for clinical follow-up and brain donation. MAP began in 1997 and follows common chronic conditions of aging, with an emphasis on decline in cognitive and motor function and on AD risk.
 
 - PI : Dr. Philip L. De Jager; Dr. David A. Bennett
 - Institution : Columbia University Irving Medical Center; Rush University
@@ -15,11 +25,11 @@ Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) study: R
 - Logo : NR
 - Additional study information : NR
 
-## Contact 
+## Contact
 
 Xuanhe Chen (xuanhechenxhc@163.com)
 
-For questions related to infomation on this page please contact the person above
+For questions about this page, contact the person above.
 
 ## Other information
 
@@ -27,11 +37,11 @@ CU cluster: `/mnt/mfs/ctcn/datasets/rosmap/phenotypes/2022Feb08/dataset_707_basi
 
 FTP: `/ftp_fgc_xqtl/ref-data/ROSMAP_covariates/dataset_707_basic_02-08-2022.clean.txt`, `RADC_codebook_data_set_707_02-08-2022/RADC_codebook_data_set_707_02-08-2022`
 
-Above is a raw ROSMAP metadata contains comprehensive covariate information and the codebook explaining each column. Other than Age at death, Sex and PMI often use in our xQTL analysis, there are also interesting covariates for investigation such as education level, emotional neglect and Financial need etc.
+These files are the raw ROSMAP metadata. They hold covariate information and a codebook that explains each column. Age at death, sex and PMI are the covariates most often used in xQTL analysis. Others worth investigating include education level, emotional neglect and financial need.
 
 ## QTL Analyses
 
-ROSMAP datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+The FunGen-xQTL flagship paper used ROSMAP datasets in these xQTL analyses.
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
@@ -52,4 +62,4 @@ ROSMAP datasets were used in the following xQTL analyses in the FunGen-xQTL flag
 | DLPFC glycoproteomics | gpQTL | [ROSMAP_DLPFC_glycoproteomics_qtl](../qtl/gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md) |
 | Brain metabolomics | metQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md) |
 
-Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
+The flagship paper also used these datasets for fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

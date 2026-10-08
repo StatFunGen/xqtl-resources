@@ -1,6 +1,15 @@
+---
+type: study
+cohort: Knight-ADRC
+status: 
+synapse_ids: []
+lead_analysts: [Xuanhe]
+last_verified: 
+---
+
 # Knight-ADRC study info
 
-The Memory and Aging Project at the Charles F. And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC at Washington University in St. Louis) collects collects plasma, CSF, fibroblast, neuroimaging  clinical and cognition data longitudinally and autopsied brain samples. This clinical information combined with deep molecular phenotyping (i.e. genetic, proteomics, transcriptomics and others) will lead to the identification of novel genetic modifiers, protective variants, molecular biomarkers and the novel targets. Participants were recruited by the Knight-ADRC at Washington University in St. Louis (MO). Knight-ADRC participants have to be at least 65 years old and have no memory problems or mild dementia at the time of enrollment.
+The Knight Alzheimer's Disease Research Center (Knight-ADRC) at Washington University in St. Louis collects plasma, CSF, fibroblast, neuroimaging, clinical and cognitive data over time, along with autopsied brain samples. Combined with deep molecular phenotyping (genetic, proteomic, transcriptomic and others), these data help identify genetic modifiers, protective variants, molecular biomarkers and new targets. Participants were recruited by the Knight-ADRC. At enrollment they are at least 65 years old and have no memory problems or mild dementia.
 
 - PI : Dr. Carlos Cruchaga
 - Institution : Washington University in St. Louis
@@ -15,13 +24,13 @@ The Memory and Aging Project at the Charles F. And Joanne Knight Alzheimer's Dis
 - Logo : NR
 - Additional study information : NR
 
-## Contact 
+## Contact
 
 Xuanhe
 
 ## QTL Analyses
 
-Knight ADRC datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+The FunGen-xQTL flagship paper used Knight ADRC datasets in these xQTL analyses.
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
@@ -30,4 +39,4 @@ Knight ADRC datasets were used in the following xQTL analyses in the FunGen-xQTL
 | Brain methylation | mQTL | [Knight_ADRC_brain_methylation_qtl](../qtl/mQTL/Knight_ADRC_brain_methylation_qtl.md) |
 | Brain proteomics | pQTL | [Knight_ADRC_brain_proteomics_qtl](../qtl/pQTL/Knight_ADRC_brain_proteomics_qtl.md) |
 
-Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
+The flagship paper also used these datasets for fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
