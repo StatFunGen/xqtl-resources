@@ -15,8 +15,8 @@ Travyse Edwards
 ## Study Overview
 
 - Grant Number: TBD
-- Publication: TBD
-- Acknowledgement: TBD
+- Publication: PMID: 27540175
+- Acknowledgement: We thank the STARNET study team with P.I. Prof. Johan LM Björkegren at the Department of Genetics and Genomic Sciences, Icahn Institute for Genomics and Multiscale Biology, Icahn School of Medicine at Mount Sinai, NY, USA and the Karolinska Institutet, Sweden and Dr. Arno Ruusalepp, Chief Surgeon at the Department of Cardiac Surgery, Tartu University Hospital, Estonia. The STARNET study was funded by the University of Tartu, the Estonian and Swedish Research Councils, Karolinska Institutet - AstraZeneca Joint Research Program in Translational Science, Clinical Gene Networks AB (an SME of the EU-funded integrated project CVgenes@target), the Leducq transatlantic networks, CAD Genomics and Sphingonet, Torsten and Ragnar Söderberg Foundation, Knut and Alice Wallenberg Foundation, the American Heart Association, the National Institutes of Health and the Veterans Affairs. The DNA genotyping and RNA sequencing were performed by the Genomics Core Facility at the Icahn Institute and Department of Genetics and Genomic Sciences and the Science for Life Laboratory, the National Genomics Infrastructure (NGI) in Uppsala and Stockholm supported by Swedish Research Council (VR-RF1), Knut and Alice Wallenberg Foundation and UPPMAX.
 - Study Name: STARNET Macrophage RNA-Seq Quantification
 - Study Description: TBD
 - Disease: Alzheimer's Disease
