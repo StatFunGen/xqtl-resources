@@ -1,6 +1,14 @@
+---
+type: gwas
+status:
+synapse_ids: [syn69670625, syn69670630, syn69865816, syn69865824, syn70095142, syn70095143]
+lead_analysts: [Oluwatosin Olayinka, Hao Sun, Rui Dong]
+last_verified:
+---
+
 # Alzheimer's Disease GWAS Summary Data (Bellenguez)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics. This study uses UK Biobank (UKBB) proxy AD samples
+SNP-level association summary statistics for Alzheimer's disease (AD) from [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) in *Nature Genetics*. The study includes proxy AD samples from the UK Biobank (UKBB).
 
 ## Contact
 
@@ -14,10 +22,10 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
     - cohort-specific results are all stored under `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/` (original data is already in hg38)
         - EADB-core (EADB-TOPMed): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/EADB_core_cohort/EADB_core.tsv.gz` (original data is already in hg38)
         - EADI: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/EADI_cohort/EADI.tsv.gz` (original data is already in hg38)
-        - GR@ACE: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/GRACE_cohort/AD_4Pcs_TopMedGRACE_Rsq0.3_20200109.tar.gz` The summary statistics is in hg38 (imputation with Topmed Rsq>0.3) adjusted by 4PCs.
+        - GR@ACE: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/GRACE_cohort/AD_4Pcs_TopMedGRACE_Rsq0.3_20200109.tar.gz` The summary statistics are in hg38 (imputation with Topmed Rsq>0.3) adjusted by 4PCs.
         - FinnGen (used in Bellenguez paper): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240200_FinnGen/R6/finngen_R6_G6_AD_WIDE.gz` (original data is already in hg38)
         - FinnGen (most recent version until 20240222): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240200_FinnGen/R10/`. All in hg38.
-    - another related meta-analysis result of GR@ACE, IGAP and UKB. This one is publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
+    - a related meta-analysis of GR@ACE, IGAP and UKB, publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
         - original: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/meta-analysis` (GRCh37) 
         - liftover to hg38: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/meta-analysis/Sumstats_SPIGAPUK2_20190625.hg38.txt`
 
@@ -28,9 +36,9 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
 
 ## Download source
 
-This data is derived from summary statistics from the [Bellenguez et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90027001-GCST90028000/GCST90027158/) Nature Genetics paper.
+The data are derived from the summary statistics of [Bellenguez et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90027001-GCST90028000/GCST90027158/).
 
-The cohort-specific data is requested from Rui Dong and got approved in early 2024. The data is uploaded to the cluster in March 2024.
+Rui Dong approved the request for the cohort-specific data in early 2024, and the data were uploaded to the cluster in March 2024.
 
 ## File Schema
 
@@ -58,8 +66,8 @@ The cohort-specific data is requested from Rui Dong and got approved in early 20
 - Stage II: 25,392 AD cases + 276,086 controls
 
 cohorts:
-- EADB: The European Alzheimer & Dementia Biobank (15 European countries). Also refered as `EADB-TOPMed` and `EADB-core`. 21,101,680 variants in sum.stats.
-- EADI: European Association of Development Research and Training Institutes. 12,540,914 variants in sum.stats.
+- EADB: The European Alzheimer & Dementia Biobank (15 European countries). Also called `EADB-TOPMed` and `EADB-core`. 21,101,680 variants in sum.stats.
+- EADI: European Alzheimer's Disease Initiative. 12,540,914 variants in sum.stats.
 - UKBB: UK Biobank. We have the genotype and imputed variants ourselves.
 - GR@ACE: the Genome Research at Fundació ACE. 61,744,410 variants in sum.stats.
 - GERAD/PERADES

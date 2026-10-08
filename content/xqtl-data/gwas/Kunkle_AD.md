@@ -1,6 +1,14 @@
+---
+type: gwas
+status:
+synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn69865824, syn70095142, syn70095143]
+lead_analysts: [Oluwatosin Olayinka]
+last_verified:
+---
+
 # Alzheimer's Disease GWAS Summary Data (Kunkle)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics. Position values were converted from hg19 to hg38 using liftOver.
+SNP-level association summary statistics for Alzheimer's disease (AD) from [Kunkle et al. 2019](https://doi.org/10.1038/s41588-019-0358-2) in *Nature Genetics*. Positions were converted from hg19 to hg38 with liftOver.
 
 ## Contact
 
@@ -39,7 +47,7 @@ AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synaps
 
  
 ## Download source
-This data is derived from summary statistics from the [Kunkle et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST007001-GCST008000/GCST007511/Kunkle_etal_Stage1_results.txt) Nature Genetics paper.
+The data are derived from the summary statistics of [Kunkle et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST007001-GCST008000/GCST007511/Kunkle_etal_Stage1_results.txt).
 
 ## File Schema
 - `chromosome`: chromosome ID
@@ -66,7 +74,7 @@ This data is derived from summary statistics from the [Kunkle et al.](http://ftp
  - ADGC: Alzheimer Disease Genetics Consortium 
  - CHARGE: Cohorts for Heart and Aging Research in Genomic Epidemiology Consortium
  - EADI: The European Alzheimer's Disease Initiative
- - GERAD/PERADES: Genetic and Environmental Risk in AD/Defining Genetic, Polygenic and Environmental Risk for Alzheimer's Disease Consortium"
+ - GERAD/PERADES: Genetic and Environmental Risk in AD/Defining Genetic, Polygenic and Environmental Risk for Alzheimer's Disease Consortium
 
 *Supplementary Table 1. Description of the consortium data sets used for Stage 1 discovery, Stage 2 and Stage 3.*
 **Discovery**
