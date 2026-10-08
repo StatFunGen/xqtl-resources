@@ -1,5 +1,17 @@
+---
+type: study
+cohort: MAGENTA
+context: whole blood
+sample_size: 465
+status: 
+synapse_ids: []
+lead_analysts: []
+last_verified: 
+---
+
 # MAGENTA study info
-Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer’s (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P. Hussman Institute for Human Genomics (HIHG) at the University of Miami Miller School of Medicine (Miami, FL), North Carolina A&T State University (Greensboro, NC), and Case Western Reserve University (Cleveland, OH).  Participants were ascertained as part of the ADSP Follow-up Study and included both cases (>65 years of age of onset) and controls (>65 years of age at age of exam).  All participants were adjudicated by a clinical panel with expertise in AD related disorders and classified as AD according to standard criteria developed by the National Institute of Aging and the Alzheimer’s Association. 
+
+The Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) project includes 465 participants. African American (AA) participants number 231 (113 with AD and 118 cognitively intact controls) and non-Hispanic White (NHW) participants number 234 (116 with AD and 118 controls). The John P. Hussman Institute for Human Genomics (HIHG) at the University of Miami Miller School of Medicine, North Carolina A&T State University (Greensboro, NC) and Case Western Reserve University (Cleveland, OH) ascertained participants as part of the ADSP Follow-up Study. Cases had an age of onset above 65 years and controls were above 65 years at the age of exam. A clinical panel with expertise in AD-related disorders adjudicated all participants and classified AD cases by the standard criteria of the National Institute on Aging and the Alzheimer's Association.
 
 - PI : Dr. William S. Bush; Dr. Margaret A. Pericak-Vance; Dr. Jonathan L. Haines, Dr. Goldie Byrd, Dr. Anthony J. Griswold
 - Institution : Case Western Reserve University; Wake Forest University, University of Miami

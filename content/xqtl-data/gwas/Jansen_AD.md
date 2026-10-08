@@ -1,13 +1,21 @@
+---
+type: gwas
+status:
+synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn69865824, syn70095142, syn70095143]
+lead_analysts: [Oluwatosin Olayinka]
+last_verified:
+---
+
 # Alzheimer's Disease GWAS Summary Data (Jansen)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics. This study uses proxy AD individuals from UK Biobank.
+SNP-level association summary statistics for Alzheimer's disease (AD) from [Jansen et al. 2019](https://doi.org/10.1038/s41588-018-0311-9) in *Nature Genetics*. The study uses proxy AD individuals from the UK Biobank.
 
 ## Contact
 Oluwatosin Olayinka
 
 ## Download source
 
-This data is derived from summary statistics from the [Jansen et al.](https://ctg.cncr.nl/documents/p1651/AD_sumstats_Jansenetal_2019sept.txt.gz) Nature Genetics paper. 
+The data are derived from the summary statistics of [Jansen et al.](https://ctg.cncr.nl/documents/p1651/AD_sumstats_Jansenetal_2019sept.txt.gz).
 
 ## Path(s) to summary statistics
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/ADGWAS_Jansen_2019_hg38_liftover/jansen_sumstat_hg38_qc.chr*`
@@ -58,7 +66,10 @@ AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synaps
 
 - 455,258 individuals of European ancestry = 71,880 (proxy) cases + 383,378 (proxy) controls
 - Phase 1: 79,145 individuals (Nsum; Neff=72,500) = 24,087 clinically diagnosed LOAD cases + paired with 55,058 controls.
-- Phase 2: 376,113 individuals of European ancestry from UKB with parental AD status = 47,793 proxy cases + 328,320 proxy controls"	"79145 from phase 1:
+- Phase 2: 376,113 individuals of European ancestry from UKB with parental AD status = 47,793 proxy cases + 328,320 proxy controls.
+
+The 79,145 individuals in phase 1 come from three sources:
+
   1. Alzheimer’s disease working group of the Psychiatric Genomics Consortium (PGC-ALZ) -- 17477
   2. the International Genomics of Alzheimer’s Project (IGAP) -- 54162
   3. the Alzheimer’s Disease Sequencing Project (ADSP) -- 7506 individuals = 4343 cases + 3163 controls

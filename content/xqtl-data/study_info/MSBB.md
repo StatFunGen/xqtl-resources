@@ -1,6 +1,16 @@
+---
+type: study
+cohort: MSBB
+context: brain
+status: 
+synapse_ids: []
+lead_analysts: [Xuanhe]
+last_verified: 
+---
+
 # The Mount Sinai Brain Bank (MSBB) study info
 
-This cohort study generated large-scale matched multi-Omics data in AD and control brains for exploring novel molecular underpinnings of AD.
+The MSBB cohort generated large-scale, matched multi-omics data in AD and control brains to study the molecular basis of AD.
 
 - PI : Prof. Bin Zhang
 - Institution : Icahn School of Medicine at Mount Sinai
@@ -15,14 +25,13 @@ This cohort study generated large-scale matched multi-Omics data in AD and contr
 - Logo : NR
 - Additional study information : NR
 
-
-## Contact 
+## Contact
 
 Xuanhe
 
 ## QTL Analyses
 
-MSBB datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+The FunGen-xQTL flagship paper used MSBB datasets in these xQTL analyses.
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
@@ -31,4 +40,4 @@ MSBB datasets were used in the following xQTL analyses in the FunGen-xQTL flagsh
 | Brain methylation | mQTL | [MSBB_brain_methylation_qtl](../qtl/mQTL/MSBB_brain_methylation_qtl.md) |
 | Brain proteomics | pQTL | [MSBB_proteomics_qtl](../qtl/pQTL/MSBB_proteomics_qtl.md) |
 
-Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
+The flagship paper also used these datasets for fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).

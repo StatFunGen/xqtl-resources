@@ -1,6 +1,14 @@
+---
+type: gwas
+status:
+synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn69865824, syn70095142, syn70095143]
+lead_analysts: [Oluwatosin Olayinka]
+last_verified:
+---
+
 # Alzheimer's Disease GWAS Summary Data (Wightman)
 
-The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics. This file contains the meta-analyzed summary statistics of three cohorts: all individuals, all individuals excluding 23andMe, all individuals excluding 23andMe and UKBB.
+SNP-level association summary statistics for Alzheimer's disease (AD) from [Wightman et al. 2021](https://doi.org/10.1038/s41588-021-00921-z) in *Nature Genetics*. This page covers three meta-analyzed sets of summary statistics: all individuals, all individuals excluding 23andMe, and all individuals excluding 23andMe and UKBB.
 
 ## Contact
 
@@ -9,8 +17,8 @@ Oluwatosin Olayinka
 
 ## Path(s) to summary statistics
 - NIAGADS FTP
-    - meta results `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_meta/wightman_meta_sumstat_hg38_qc.chr*`
-    - only 23andMe`/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_23andme/wightman_sumstat_hg38_qc.chr*`
+    - meta-analysis results: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_meta/wightman_meta_sumstat_hg38_qc.chr*`
+    - only 23andMe: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_23andme/wightman_sumstat_hg38_qc.chr*`
  
 - CU
     - original data (in GRCh37)
@@ -49,7 +57,7 @@ AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synaps
 
  
 ## Download source
-Download source not publicly available
+The download source is not public.
 
 ## File Schema
 - `chromosome`: chromosome ID
@@ -69,7 +77,7 @@ Download source not publicly available
 - 1,126,563 individuals = 90,338 (46,613 proxy) cases + 1,036,225 (318,246 proxy) controls
  - 77,779 cases + 554,893 controls from Jansen et al.
  - 12,559 cases + 481,332 controls not from Jansen et al: Finngen, GRACE, HUNT, BioVU, 23andme, Gothenburg H70 Birth Cohort Studies and Clinical AD from Sweden (Gothenburg), ANMerge.
-- Population: US & Europe, UK, Norway, Sweden, Iceland, Finland, Spain, Norway, US, EUR
+- Population: US and Europe (UK, Norway, Sweden, Iceland, Finland, Spain)
 
 *Supplementary Table 1: A list of the datasets included in the meta-analysis. The UKB data was generated with a continous phenotype so the case-control values are estimates where the number of individuals with phenotype values <1 are controls and >=1 are cases.*
 

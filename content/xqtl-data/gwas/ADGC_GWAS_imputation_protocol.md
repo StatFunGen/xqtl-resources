@@ -1,15 +1,23 @@
+---
+type: gwas
+status:
+synapse_ids: []
+lead_analysts: [Xuanhe Chen]
+last_verified:
+---
+
 # ADGC GWAS imputation protocol
 
-Adapted from [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/) to generate imputed genotype data for xQTL analysis in some cohorts.
+This protocol is adapted from the [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/). It generates imputed genotype data for xQTL analysis in some cohorts.
 
 ## Contact
 
 Xuanhe Chen
 
 ## Imputation by [TOPMed imputation server](https://imputation.biodatacatalyst.nhlbi.nih.gov/#!)
-Note that results from TOPMed imputation server are all against **HG38.**
+The TOPMed imputation server returns results on **hg38**.
 
-1. Register an account (link)[https://imputation.biodatacatalyst.nhlbi.nih.gov/index.html#!pages/register]
+1. [Register an account](https://imputation.biodatacatalyst.nhlbi.nih.gov/index.html#!pages/register)
 2. [Log in](https://imputation.biodatacatalyst.nhlbi.nih.gov/index.html#!pages/login)
 3. Click "Run" and "Genotype Imputation (Minimac4)"
 4. Fill out the form
