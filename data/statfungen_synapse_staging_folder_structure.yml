@@ -510,8 +510,6 @@ xQTL_GWAS_models: #syn69670588
               - Metabrain.*.cis_results_db.export.rds.md5
               - Metabrain.*.cis_results_db.export_sumstats.rds
               - Metabrain.*.cis_results_db.export_sumstats.rds.md5
-              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
-              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn75134491
             batch{1..6}: #syn754273{33..38}
               - Metabrain.*.univariate_susie_rss.rds
