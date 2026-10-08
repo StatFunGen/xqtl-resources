@@ -37,7 +37,6 @@ In this notebook, we applied more quality control steps:
 - This normalization make data have approximate normal distribution and more comparable with ROSMAP proteomics data.
 
 Quantitative proteomics:
-- Wang Lab: `/mnt/vast/hpc/csg/zq2209/data_production/proteomics/knight/WashU_BrainProt_442samples_matrix.csv`
 
 The phenotype raw data contains 1296 genes(rows) from 442 samples(columns). The data were processed after sampling, quantification, and quality control with NAs.
 
@@ -45,17 +44,14 @@ The phenotype raw data contains 1296 genes(rows) from 442 samples(columns). The 
 
 Annotation:
 
-- Wang Lab: `/mnt/vast/hpc/csg/ftp_lisanwanglab_sync/ftp_fgc_xqtl/projects/proteomics/knightadrc-washu/WashU_Brain_Somascan1.3k_FEATUREinfo.csv`
 
 It contains gene and protein information of each sample. 
 
 Other reference files created via [Reference_data_notebook](https://github.com/cumc/xqtl-pipeline/blob/main/code/data_preprocessing/reference_data.ipynb): 
 
-- Wang Lab: `/mnt/vast/hpc/csg/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz`, `/mnt/vast/hpc/csg/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta`
 
 Age at death, sex and pmi covariates will be extract from ROSMAP raw data: 
 
-- Wang Lab: `/mnt/vast/hpc/csg/ftp_lisanwanglab_sync/ftp_fgc_xqtl/projects/proteomics/knightadrc-washu/WashU_MAP_somascan1.3k_Brain_covariates.csv`
 
 ## Links to omics data analysis notebooks
 

@@ -18,21 +18,11 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
 
 - NIAGADS FTP: `/ftp_fgc_xqtl/projects/ADGWAS_Bellenguez_2022/ADGWAS2022.chr*.sumstat.tsv`
 - CU
-    - meta-analysis results: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/GCST90027158_buildGRCh38.tsv.gz` (original data is already in hg38)
-    - cohort-specific results are all stored under `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/` (original data is already in hg38)
-        - EADB-core (EADB-TOPMed): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/EADB_core_cohort/EADB_core.tsv.gz` (original data is already in hg38)
-        - EADI: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/EADI_cohort/EADI.tsv.gz` (original data is already in hg38)
-        - GR@ACE: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/GRACE_cohort/AD_4Pcs_TopMedGRACE_Rsq0.3_20200109.tar.gz` The summary statistics are in hg38 (imputation with Topmed Rsq>0.3) adjusted by 4PCs.
-        - FinnGen (used in Bellenguez paper): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240200_FinnGen/R6/finngen_R6_G6_AD_WIDE.gz` (original data is already in hg38)
-        - FinnGen (most recent version until 20240222): `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240200_FinnGen/R10/`. All in hg38.
     - a related meta-analysis of GR@ACE, IGAP and UKB, publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
-        - original: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/meta-analysis` (GRCh37) 
-        - liftover to hg38: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20240300_Bellenguez/GRACE/meta-analysis/Sumstats_SPIGAPUK2_20190625.hg38.txt`
 
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Bellenguez/`
-- CU: `/mnt/vast/hpc/csg/xqtl_workflow_testing/susie_rss/output/ADGWAS_finemapping_extracted/Bellenguez/ADGWAS_sumstat`
 
 ## Download source
 

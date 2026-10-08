@@ -20,7 +20,7 @@ Imputation QC protocol.pdf
 - Data Location on CU cluster:
 
 ```
-/mnt/vast/hpc/csg/ftp_lisanwanglab_sync/ftp_fgc_xqtl/projects/SNParrayGeno/knightadrc-washu$ ls -lh
+<path> ls -lh
 -rw-r--r-- 1 xc2610 root 184K Nov 29 13:35 'Imputation QC protocol.pdf'
 -rw-r--r-- 1 xc2610 root 1.2G Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.bed
 -rw-r--r-- 1 xc2610 root 372M Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.bim
@@ -36,5 +36,3 @@ Imputation QC protocol.pdf
 ### Genotype processed via xQTL pipeline:
 
 For details how the phenotype data is processed please check [genotype_preprocessing](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Wang_Columbia/knight/pqtl/genotype_preprocessing.ipynb)
-
-- Data Location on CU cluster: `/mnt/mfs/hgrcgrid/homes/zq2209/proteomics/knight/MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.plink_files_list.txt`

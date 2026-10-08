@@ -117,11 +117,9 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 **output of genotype_qc.ipynb**
 
-- BU cluster, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
-- Wang Lab, `/mnt/mfs/hgrcgrid/homes/zq2209/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
 
 ```
-$ cd /mnt/vast/hpc/csg/molecular_phenotype_calling/genotype_arch/
+$ cd <path>
 $ ls -lh *.{bim,bed,fam}
 -rw-r--r-- 1 hs3163 hs3163 220M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bed
 -rw-r--r-- 1 hs3163 hs3163  33M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bim
@@ -198,14 +196,11 @@ $ ls -lh *.{bim,bed,fam}
 
 (FIXME: not sure where it is on BU cluster)
 
-### Path(s) to covariate data matrix
 
-- Covariates used in this analysis on BU cluster: `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/reference_data/ROSMAP_xqtl_covariates_sex_death_pmi_study.tsv`
 
 ### Path(s) to QTL results
 
 - FTP server, `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan`
-- Wang Lab, `/mnt/vast/hpc/csg/ftp_lisanwanglab_sync/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan/`
 
 empirical_files:
 
@@ -267,11 +262,8 @@ ls -lh *.txt
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/DLPFC/`
 
-### Path(s) to trans-QTL results
 
-- Wang Lab, `/mnt/vast/hpc/csg/ftp_lisanwanglab_sync/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/output_new/association/trans/`
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

@@ -28,20 +28,19 @@ TransQTL association: Need to be performed.
 
 ### Path(s) to genotype matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt`
 
 ```
 $ head ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt
 #id     dir
-1       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
-2       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.2.bed
-3       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.3.bed
-4       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.4.bed
-5       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.5.bed
-6       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.6.bed
-7       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.7.bed
-8       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.8.bed
-9       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.9.bed
+1       <path>
+2       <path>
+3       <path>
+4       <path>
+5       <path>
+6       <path>
+7       <path>
+8       <path>
+9       <path>
 
 $ ls -lh *.{bim,bed,fam} | head
 -rw-r--r-- 1 fgrennjr casa  91M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
@@ -58,29 +57,27 @@ $ ls -lh *.{bim,bed,fam} | head
 
 ### Path(s) to omics-data matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom.recipe`
 
 ```
-$ls -lh /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/rnaseqc_call/normalize/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.gz
--rw-r--r-- 1 fgrennjr casa 45M Mar 16 19:25 /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/rnaseqc_call/normalize/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.gz
+$ls -lh <path>
+-rw-r--r-- 1 fgrennjr casa 45M Mar 16 19:25 <path>
 ```
 
 ### Path(s) to covariate data matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/reference_data/ROSMAP_xqtl_covariates_sex_death_pmi_study.tsv`
 
 ```
 $ head PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom.recipe
 #id     #dir
-16      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr16.bed.gz
-4       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr4.bed.gz
-9       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr9.bed.gz
-3       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr3.bed.gz
-6       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr6.bed.gz
-21      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr21.bed.gz
-12      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr12.bed.gz
-17      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr17.bed.gz
-18      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_rnaseqc/PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr18.bed.gz
+16      <path>
+4       <path>
+9       <path>
+3       <path>
+6       <path>
+21      <path>
+12      <path>
+17      <path>
+18      <path>
 
 $ ls -lh *bed.gz | head
 -rw-r--r-- 1 fgrennjr casa 4.3M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr1.bed.gz
@@ -97,7 +94,6 @@ $ ls -lh *bed.gz | head
 
 ### Path(s) to QTL results
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/TensorQTL/eQTL`
 
 ```
 $ ls -lh | head
@@ -117,7 +113,6 @@ total 35G
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/PCC/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

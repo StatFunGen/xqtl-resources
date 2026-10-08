@@ -20,7 +20,7 @@ The samples that we use are 49 samples of [ROSMAP dataset](https://www.synapse.o
 
 
 ```bash
-cd /mnt/vast/hpc/csg/xqtl_workflow_testing/finalizing/ROSMAP_data/bam
+cd <path>
 ```
 
 

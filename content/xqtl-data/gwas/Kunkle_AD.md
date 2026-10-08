@@ -19,11 +19,7 @@ Oluwatosin Olayinka
 - NIAGADS FTP, `/ftp_fgc_xqtl/projects/ADGWAS_Kunkle_2019_hg38_liftover/kunkle_sumstat_hg38_qc.chr*`
 - CU
     - original data (in GRCh37)
-        - stage 1: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20231011_Kunkle/'Kunkle_etal_Stage1_results.txt?file=1'`
-        - stage 2: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20231011_Kunkle/'Kunkle_etal_Stage2_results.txt?file=1'`
     - liftover data (in GRCh38): 
-        - stage 1: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20231011_Kunkle/Kunkle_etal_Stage1_results.txt_file_1_hg38.txt`
-        - stage 2: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20231011_Kunkle/Kunkle_etal_Stage2_results.txt_file_1_hg38.txt`     
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Kunkle/`

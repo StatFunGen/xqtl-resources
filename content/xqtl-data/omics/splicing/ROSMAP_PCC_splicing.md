@@ -17,7 +17,6 @@ Frank Grenn
 
 Path(s) on HPC:
 
-- PCC RNASeq data from Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_PCC_AC`:
 ```
 $ ls -lh rnaseqc_call_PCC/*.bam | head
 -rw-r--r-- 1 skandoi casa 4.0G Dec 11 18:27 1000-PCC.bam.Aligned.sortedByCoord.out.md.bam
@@ -36,17 +35,14 @@ $ ls -lh rnaseqc_call_PCC/*.bam | head
 
 Path(s) on HPC:
 
-- Leafcutter ratio output`/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/leafcutter_output/batch_all/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz`:
 1. Columns are sample names and rows are introns. Contains each type of intron usage ratio under each sample (#particular intron in a sample / #total introns classified in the same cluster in a sample).
 2. 535 columns (including index) and 389332 rows (including header)
 
-- Leafcutter counts output`/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/leafcutter_output/batch_all/batch_all_bam_no_ext_no_outlier_intron_usage_perind_numers.counts.gz`:
 1. Columns are sample names and rows are introns. Contains each type of intron usage count under each sample (#particular intron in a sample).
 2. 535 columns (including index) and 389332 rows (including header)
 
 ### Other key data files
 
-- PCC splicing data from Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/`:
 ```
 $ ls -lh leafcutter_output
 total 1.4G

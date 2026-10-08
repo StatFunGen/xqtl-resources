@@ -33,7 +33,7 @@ For questions about this page, contact the person above.
 
 ## Other information
 
-CU cluster: `/mnt/mfs/ctcn/datasets/rosmap/phenotypes/2022Feb08/dataset_707_basic_02-08-2022.clean.txt (050a105c617770b1e3a9c789ef3c3f98)`, `/mnt/mfs/ctcn/datasets/rosmap/phenotypes/2022Feb08/RADC_codebook_data_set_707_02-08-2022.pdf (baf4d16c799807b0c45548ccff0cf219)`
+CU cluster
 
 FTP: `/ftp_fgc_xqtl/ref-data/ROSMAP_covariates/dataset_707_basic_02-08-2022.clean.txt`, `RADC_codebook_data_set_707_02-08-2022/RADC_codebook_data_set_707_02-08-2022`
 

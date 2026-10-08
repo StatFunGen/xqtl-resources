@@ -31,21 +31,21 @@ TransQTL association: Finished.
 2. The original `gz` vcf is `gzipped` but not `bgzipped`, thus cannot `tabix -p`
 3. The vcf is not imputed.
 - Dosage file. The number of ALT allele were counted per donor.
-`/mnt/mfs/ctcn/team/masashi/snuc-eqtl/genotype/get-dosage.ALL.dosage`
+
 - SNP position file in GRCh38
-`/mnt/mfs/ctcn/team/masashi/snuc-eqtl/genotype/get-dosage.ALL.snppos`
+
 - VCF file used to generate above files. This is a subset of ROSMAP WGS VCF.
-`/mnt/mfs/ctcn/team/masashi/snuc-eqtl/genotype/get-dosage.ALL.vcf.gz`
+
 - The original VCF files of ROS/MAP WGS is here (N = 1,196; GRCh37):
-`/mnt/mfs/ctcn/datasets/rosmap/wgs/ampad/variants/snvCombined/`
+
 - A summary of quality control is here:
-`/mnt/mfs/ctcn/datasets/rosmap/wgs/ampad/qualityControl/sampleSheetQc.csv`
+
 - Liftover of the above VCFs from GRCh37 to GRCh38.
-`/mnt/mfs/hgrcgrid/shared/MenonLab/snRNAseq/rosmap_mastervcf/GRCh38_liftedover_sorted_all.vcf.gz`
+
 - Sorted positions of SNPs, added rsID in dbSNP154, and renamed chromosomes (e.g. 1 to chr1).
-`/mnt/mfs/ctcn/resources/snRNAseq/rosmap_mastervcf/GRCh38_liftedover_re-sorted_dbSNP154_chr-renamed_all.bcf`
+
 - 424 donors extracted for snRNAseq and applied filtering of MAF, HWE, etc.
-`/mnt/mfs/ctcn/team/masashi/snuc-eqtl/genotype/get-dosage.ALL.vcf.gz`
+
 
 ### Path(s) to omics-data matrix
 
@@ -57,7 +57,6 @@ Here, I use astrocytes as an example. But all other cell types have the same fol
 
 Covariates of eQTL analysis are sex, age, PMI, study, total genes detected, top 3 genotype PCs, and up to 30 expression PCs. 
 
-- De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes/Ast/covariates-20211118.tsv`.
 
 #### Using `TenorQTL` pipeline (by Hao)
 
@@ -65,11 +64,9 @@ Covariates of eQTL analysis are sex, age, PMI, study, total genes detected, top 
 
 #### Using `MatrixQTL` pipeline (by Masashi)
 
-- De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl`
 
 Take astrocytes as an example,
 
-- De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes/Ast/matrix-eqtl/covariates-20211118/matrix-eqtl.rds`. 
 
 ```r
 df <- readRDS("matrix-eqtl.rds")$cis$eqtl
@@ -79,7 +76,6 @@ df <- readRDS("matrix-eqtl.rds")$cis$eqtl
 
 - Wang Lab: `/ftp_fgc_xqtl/projects/single-cell-rna-seq/pseudo_bulk/eight_celltypes_sumstat`
 
-- Wang Lab(CU Server):  `/mnt/vast/hpc/csg/wanggroup/fungen-xqtl-analysis/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eqtl`
 
 
 ### Association scan using TensorQTL and summary statistics standardization
@@ -94,9 +90,6 @@ df <- readRDS("matrix-eqtl.rds")$cis$eqtl
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/snuc_DeJager/`
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/snuc_Kellis/`
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/snuc_mega/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

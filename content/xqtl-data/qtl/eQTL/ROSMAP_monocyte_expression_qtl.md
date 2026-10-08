@@ -13,7 +13,6 @@ Travyse Edwards
 The ROSMAP monocyte data on MSSM were downloaded from [syn22024496](https://www.synapse.org/#!Synapse:syn22024496) on July 11th, 2022. (path on MSSM to be added)
 
 - Path on MSSM cluster `/sc/arion/projects/load/data-ext/ROSMAP/raw/rnaseq_monocytes_syn23650893/Gene_Expression-RNA-seq-monocyte`
-- Path on S3 Bucket `s3://statfungen/ftp_fgc_xqtl/eQTL/ROSMAP/monocyte/analysis_ready/phenotype_preprocessing/monocyte_sample_fastq.final.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.gz`
 
 ### Preview Monocyte Gene Expression Data
 
@@ -59,7 +58,6 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/monocyte/`
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

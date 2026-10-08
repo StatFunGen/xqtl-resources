@@ -22,18 +22,8 @@ Oluwatosin Olayinka
  
 - CU
     - original data (in GRCh37)
-        - all individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.all/PGCALZ2full.txt`
-        - all individuals excluding 23andMe: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2sumstatsExcluding23andMe.txt`
-        - all individuals excluding 23andMe and UKBB: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2ExcludingUKBand23andME_METALInverseVariance_MetaAnalysis.txt`
         - only 23andMe individuals
-            - `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/alzheimers_matched.dat.gz`
-            - `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/v8.2_european_bundle-001.tar` (decompressed into `all_snp_info.txt`, `gt_snp_stat.txt`, `im_snp_stat.txt`
-            - after formatting: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/alzheimers_matched.dat_no_NA.formatted.tsv`
     - liftover data (in hg38)
-        - all individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.all/PGCALZ2full.hg38.txt`
-        - all individuals excluding 23andMe: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2sumstatsExcluding23andMe.hg38.txt`
-        - all individuals excluding 23andMe and UKBB: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2ExcludingUKBand23andME_METALInverseVariance_MetaAnalysis.hg38.txt`
-        - only 23andMe individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/all_snp_info.hg38.txt`
         
 ## Path to SuSiE RSS Fine-mapping Objects
 - Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Wightman/`

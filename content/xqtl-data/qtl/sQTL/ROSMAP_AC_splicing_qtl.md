@@ -52,9 +52,6 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 Brain multi-region RNA-seq data using LeafCutter2 was proccessed with the xQTL-pipeline, for analysis detial please check records here: [sQTL_LeafCutter2](https://github.com/gaow/leafcutter2-paper/tree/main/analysis/ROSMAP)
 
-- Genotype used in this analysis on AWS: `s3://statfungen/ftp_fgc_xqtl/ROSMAP/genotype/analysis_ready/geno_by_chrom/`
-- Phenotype used in this analysis on AWS: `s3://statfungen/ftp_fgc_xqtl/sQTL/ROSMAP/AC/leafcutter2/analysis_ready/phenotype_preprocessing/`
-- Covariates used in this analysis on AWS: `s3://statfungen/ftp_fgc_xqtl/sQTL/ROSMAP/AC/leafcutter2/analysis_ready/covariate_preprocessing/ROSMAP_AC_perind.counts.noise_by_intron.QCed_minc1_mins10.gz_raw_data.qqnorm.imputed.bed.formated.rosmap_cov.ROSMAP_NIA_WGS.leftnorm.bcftools_qc.plink_qc.plink_qc.prune.pca.Marchenko_PC.gz`
 
 ### Results
 
@@ -63,7 +60,6 @@ In this analysis we performed two methods: leafcutter2 and psichomics.
 #### leafcutter2
 
 - Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/sQTL/association_scan/`
-- Original files: `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/sQTL/AC/leafcutter2/`
 
 #### psichomics
 

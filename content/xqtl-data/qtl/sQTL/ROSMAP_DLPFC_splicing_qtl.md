@@ -109,11 +109,9 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of genotype_qc.ipynb**
 
-- BU cluster, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
-- Wang Lab, `/mnt/mfs/hgrcgrid/homes/zq2209/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
 
 ```
-$ cd /mnt/vast/hpc/csg/molecular_phenotype_calling/genotype_arch/
+$ cd <path>
 $ ls -lh *.{bim,bed,fam}
 -rw-r--r-- 1 hs3163 hs3163 220M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bed
 -rw-r--r-- 1 hs3163 hs3163  33M Sep 29 15:09 ROSMAP_NIA_WGS.leftnorm.filtered.filtered.10.bim
@@ -197,7 +195,6 @@ leafCutter:
 
 psichomics:
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/pheno`
 
 ```
 $ ls -lh *.{txt,bed}
@@ -240,7 +237,6 @@ leafCutter:
 
 psichomics:
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/cov`
 
 ```
 $ ls -lh *.gz
@@ -257,7 +253,6 @@ leafCutter:
    
 psichomics:
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/output`
 
 ```
 $ls -lh *.txt
@@ -310,7 +305,6 @@ $ls -lh *.txt
 
 psichomics (grouped by each gene - event_type pair):
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/psichomics_sQTL/event_sep/output`
 
 ```
 $ ls -lh *.txt
@@ -365,7 +359,6 @@ $ ls -lh *.txt
 
 **output of fine_mapping.ipynb**
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/sQTL_finemapping/ROSMAP_psichomics`
 
 The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
 
@@ -373,7 +366,6 @@ The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/sQTL/DLPFC/leafcutter2/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

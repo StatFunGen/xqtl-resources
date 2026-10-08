@@ -28,20 +28,19 @@ TransQTL association: Need to be performed.
 
 ### Path(s) to genotype matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt`
 
 ```
 $ head ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt
 #id     dir
-1       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
-2       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.2.bed
-3       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.3.bed
-4       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.4.bed
-5       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.5.bed
-6       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.6.bed
-7       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.7.bed
-8       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.8.bed
-9       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/genotype/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.9.bed
+1       <path>
+2       <path>
+3       <path>
+4       <path>
+5       <path>
+6       <path>
+7       <path>
+8       <path>
+9       <path>
 
 $ ls -lh *.{bim,bed,fam} | head
 -rw-r--r-- 1 fgrennjr casa  91M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
@@ -59,7 +58,6 @@ $ ls -lh *.{bim,bed,fam} | head
 
 ### Path(s) to omics-data matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom.recipe`
 
 ```
 $ ls -lh batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.txt
@@ -68,19 +66,18 @@ $ ls -lh batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.
 
 ### Path(s) to covariate data matrix
 
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_PCC/reference_data/ROSMAP_xqtl_covariates_sex_death_pmi_study.tsv`
 ```
 $ head batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom.recipe
 #id     #dir
-5       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr5.bed.gz
-18      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr18.bed.gz
-7       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr7.bed.gz
-10      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr10.bed.gz
-8       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr8.bed.gz
-Y       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chrY.bed.gz
-11      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr11.bed.gz
-13      /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr13.bed.gz
-9       /restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/PDP_leafcutter/batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr9.bed.gz
+5       <path>
+18      <path>
+7       <path>
+10      <path>
+8       <path>
+Y       <path>
+11      <path>
+13      <path>
+9       <path>
 
 $ ls -lh *bed.gz | head
 -rw-r--r-- 1 fgrennjr casa 125M Mar  8 16:08 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr1.bed.gz
@@ -97,7 +94,6 @@ $ ls -lh *bed.gz | head
 
 ### Path(s) to QTL results
 
-- Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/TensorQTL/sQTL`
 ```
 $ ls -lh | head
 total 27G
@@ -139,7 +135,6 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/sQTL/PCC/leafcutter2/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

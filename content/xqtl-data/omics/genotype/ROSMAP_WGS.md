@@ -17,18 +17,18 @@ Information of the preprocessing: https://github.com/cumc/fungen-xqtl-analysis/b
 - Data Location on CU cluster:
 
 The original VCF files of joint-call ROS/MAP WGS is here (N =  1162/4669 of them are ROS/MAP; GRCh38):
-`/mnt/vast/hpc/bvardarajan_lab/data/Family_WGS/vcfs/vcf_b38_with_rosmap_2022/joint_vcf`
+
 
 The intermediate VCF files for QCing the vcf can be found here:
-`/mnt/mfs/ctcn/team/lu/project_h3k9ac/QC/output`
+
 
 After processing through our pipeline, the processed plink file is here (N =  1160, MAC = 0, HWE = 1E-8, sample/variants missingness filter = 0.1 ; GRCh38)
 
-`/mnt/vast/hpc/csg/FunGen_xQTL/ROSMAP/Genotype/ROSMAP_NIA_WGS.leftnorm.bcftools_qc.plink_qc.bed`
 
-The LD matrixes calculated based on **old version of this genotype** (`/mnt/vast/hpc/csg/FunGen_xQTL/ROSMAP/genotype/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.bed`) are here:
 
-`/mnt/vast/hpc/csg/molecular_phenotype_calling/LD/output/1300_hg38_EUR_LD_blocks_LD`
+The LD matrixes calculated based on **old version of this genotype** () are here
+
+
 
 
 - Data Location on MSSM cluster:

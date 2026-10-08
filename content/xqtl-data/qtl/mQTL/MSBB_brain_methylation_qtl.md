@@ -29,7 +29,6 @@ details please see https://github.com/cumc/xqtl-analysis/tree/main/analysis/TCW_
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/MSBB/mQTL/`
 
 ### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
 
