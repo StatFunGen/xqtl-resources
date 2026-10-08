@@ -1,10 +1,18 @@
-# STARNET 
+---
+type: study
+cohort: STARNET
+context: macrophage
+status: 
+synapse_ids: []
+lead_analysts: [Travyse Edwards]
+last_verified: 
+---
 
-STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery. 
+# STARNET study info
 
-Further information about the STARNET patients:
+STARNET is a study of RNA expression in disease-relevant tissues from living patients with cardiovascular disease (CVD). Patients were eligible if they were scheduled for coronary artery bypass graft (CABG) surgery.
 
-***Northern European Caucasian :*** 31% FEMALE, 32% have diabetes, 75% have hypertension, 67% have hyperlipidemia, 33% had myocardial infarction before age 60.
+Northern European Caucasian patients were 31% female. Of these patients, 32% had diabetes, 75% hypertension and 67% hyperlipidemia, and 33% had a myocardial infarction before age 60.
 
 - PI : Dr. Johan Björkegren
 - Institution : Icahn School of Medicine at Mount Sinai
@@ -25,10 +33,10 @@ Travyse Edwards
 
 ## QTL Analyses
 
-STARNET datasets were used in the following xQTL analyses in the FunGen-xQTL flagship paper:
+The FunGen-xQTL flagship paper used STARNET datasets in this xQTL analysis.
 
 | Dataset | Modality | QTL File |
 |---------|----------|----------|
 | Macrophage RNA-seq | eQTL | [STARNET_macrophage_qtl](../qtl/eQTL/STARNET_macrophage_qtl.md) |
 
-Flagship paper analyses include fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)), and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
+The flagship paper also used these datasets for fine-mapping ([syn69670592](https://www.synapse.org/Synapse:syn69670592)), TWAS models ([syn69670600](https://www.synapse.org/Synapse:syn69670600)) and colocalization ([syn69670597](https://www.synapse.org/Synapse:syn69670597), [syn69865816](https://www.synapse.org/Synapse:syn69865816)).
