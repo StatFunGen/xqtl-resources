@@ -510,6 +510,8 @@ xQTL_GWAS_models: #syn69670588
               - Metabrain.*.cis_results_db.export.rds.md5
               - Metabrain.*.cis_results_db.export_sumstats.rds
               - Metabrain.*.cis_results_db.export_sumstats.rds.md5
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds
+              - FunGen_xQTL.*.cis_results_db.export_sumstats.rds.md5
           fine_mapping: #syn75134491
             batch{1..6}: #syn754273{33..38}
               - Metabrain.*.univariate_susie_rss.rds
@@ -735,6 +737,7 @@ xQTL_GWAS_models: #syn69670588
     AD_TWAS_association: #syn74908416
       batch1: #syn75427328
         - KNIGHT_eQTL_pQTL.*.twas.tsv.gz
+        - MSBB_eQTL.*.twas.tsv.gz
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
       ROSMAP: #syn74986543
@@ -832,6 +835,9 @@ xQTL_data: #syn69670632
       Peri: #syn70094889
         - Peri.2_sub_sQTL.txt.gz
 
+Metadata: #syn69735779
+  - FileAnnotationTemplate.xlsx
+
 reference_files: #syn69670634
   ADSP_R4_LD: #syn69670651
     EUR: #syn69670652
@@ -840,10 +846,10 @@ reference_files: #syn69670634
          - chr*.xz.bim
          - xz_files_with_meta_data_in_bim_format
        ld_sketch: #syn75082260
-         - ADSP_R4.EUR.chr{1..22}.pgen
-         - ADSP_R4.EUR.chr{1..22}.pvar.zst
-         - ADSP_R4.EUR.chr{1..22}.psam
-         - ADSP_R4.EUR.chr{1..22}.afreq
+         - ADSP_R4_EUR.chr{1..22}.pgen
+         - ADSP_R4_EUR.chr{1..22}.pvar.zst
+         - ADSP_R4_EUR.chr{1..22}.psam
+         - ADSP_R4_EUR.chr{1..22}.afreq
   sLDSC_reference_data: #syn75157484
     hm3_snplist: #syn75157488
         - hm3_snp_list.txt
