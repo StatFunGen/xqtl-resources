@@ -269,9 +269,6 @@ ls -lh *.txt
 **output of univariate_fine_mapping.ipynb**
 
 
-```
--rw-r--r-- 1 hs3163 hs3163 3.5M Apr 21 16:19 <path>
-```
 
 ### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
 

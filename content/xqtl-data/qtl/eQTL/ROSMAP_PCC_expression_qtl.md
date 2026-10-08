@@ -29,68 +29,14 @@ TransQTL association: Need to be performed.
 ### Path(s) to genotype matrix
 
 
-```
-$ head ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt
-#id     dir
-1       <path>
-2       <path>
-3       <path>
-4       <path>
-5       <path>
-6       <path>
-7       <path>
-8       <path>
-9       <path>
-
-$ ls -lh *.{bim,bed,fam} | head
--rw-r--r-- 1 fgrennjr casa  91M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
--rw-r--r-- 1 fgrennjr casa  33M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.fam
--rw-r--r-- 1 fgrennjr casa  59M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.bed
--rw-r--r-- 1 fgrennjr casa  23M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.fam
--rw-r--r-- 1 fgrennjr casa  57M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.bed
--rw-r--r-- 1 fgrennjr casa  22M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.fam
--rw-r--r-- 1 fgrennjr casa  56M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.12.bed
-```
 
 ### Path(s) to omics-data matrix
 
 
-```
-$ls -lh <path>
--rw-r--r-- 1 fgrennjr casa 45M Mar 16 19:25 <path>
-```
 
 ### Path(s) to covariate data matrix
 
 
-```
-$ head PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom.recipe
-#id     #dir
-16      <path>
-4       <path>
-9       <path>
-3       <path>
-6       <path>
-21      <path>
-12      <path>
-17      <path>
-18      <path>
-
-$ ls -lh *bed.gz | head
--rw-r--r-- 1 fgrennjr casa 4.3M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr1.bed.gz
--rw-r--r-- 1 fgrennjr casa 1.8M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr10.bed.gz
--rw-r--r-- 1 fgrennjr casa 2.4M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr11.bed.gz
--rw-r--r-- 1 fgrennjr casa 2.4M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr12.bed.gz
--rw-r--r-- 1 fgrennjr casa 963K Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr13.bed.gz
--rw-r--r-- 1 fgrennjr casa 1.5M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr14.bed.gz
--rw-r--r-- 1 fgrennjr casa 1.7M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr15.bed.gz
--rw-r--r-- 1 fgrennjr casa 2.2M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr16.bed.gz
--rw-r--r-- 1 fgrennjr casa 2.7M Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr17.bed.gz
--rw-r--r-- 1 fgrennjr casa 814K Mar 16 19:33 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.chr18.bed.gz
-```
 
 ### Path(s) to QTL results
 

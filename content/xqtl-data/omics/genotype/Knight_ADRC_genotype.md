@@ -19,15 +19,6 @@ Imputation QC protocol.pdf
 
 - Data Location on CU cluster:
 
-```
-<path> ls -lh
--rw-r--r-- 1 xc2610 root 184K Nov 29 13:35 'Imputation QC protocol.pdf'
--rw-r--r-- 1 xc2610 root 1.2G Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.bed
--rw-r--r-- 1 xc2610 root 372M Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.bim
--rw-r--r-- 1 xc2610 root  14K Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.fam
--rw-r--r-- 1 xc2610 root 1.1K Nov 29 13:36  MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.log
--rw-r--r-- 1 xc2610 root  959 Nov 29 13:36  README.txt
-```
 
 - Data Location on FTP:
 

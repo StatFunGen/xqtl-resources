@@ -46,10 +46,6 @@ This data contains already normalized log2cpm with 425 samples as columns and 14
 
 The number of samples in each of the tissues is as followed (only the eight tissues with > 400 samples are used in the eQTL analysis in Gao Wang's Lab).
 
-```
-cd <path>
-for i in `ls <path>`; do echo $i;  head -1 ../../phenotype_data_all/$i.log2cpm.tsv | wc -l ; done
-```
 
 | Tissue      | # samples |
 | -----------| ----------- |

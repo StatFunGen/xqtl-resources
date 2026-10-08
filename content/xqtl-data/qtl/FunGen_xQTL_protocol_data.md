@@ -19,9 +19,6 @@ The input data and some of the intermediate output data can be download from [th
 The samples that we use are 49 samples of [ROSMAP dataset](https://www.synapse.org/#!Synapse:syn4164376). The data used in this protocol paper after we processed and de-identified can be found at [here]()
 
 
-```bash
-cd <path>
-```
 
 
 ```bash

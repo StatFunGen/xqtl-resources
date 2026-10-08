@@ -3,7 +3,7 @@ type: study
 cohort: STARNET
 context: macrophage
 status: 
-synapse_ids: []
+synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816]
 lead_analysts: [Travyse Edwards]
 last_verified: 
 ---

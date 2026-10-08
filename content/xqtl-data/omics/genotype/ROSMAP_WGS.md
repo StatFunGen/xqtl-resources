@@ -26,7 +26,6 @@ After processing through our pipeline, the processed plink file is here (N =  11
 
 
 
-The LD matrixes calculated based on **old version of this genotype** () are here
 
 
 

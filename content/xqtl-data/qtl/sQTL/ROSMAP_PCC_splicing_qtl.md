@@ -29,31 +29,6 @@ TransQTL association: Need to be performed.
 ### Path(s) to genotype matrix
 
 
-```
-$ head ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.plink_files_list.txt
-#id     dir
-1       <path>
-2       <path>
-3       <path>
-4       <path>
-5       <path>
-6       <path>
-7       <path>
-8       <path>
-9       <path>
-
-$ ls -lh *.{bim,bed,fam} | head
--rw-r--r-- 1 fgrennjr casa  91M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bed
--rw-r--r-- 1 fgrennjr casa  33M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.1.fam
--rw-r--r-- 1 fgrennjr casa  59M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.bed
--rw-r--r-- 1 fgrennjr casa  23M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.10.fam
--rw-r--r-- 1 fgrennjr casa  57M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.bed
--rw-r--r-- 1 fgrennjr casa  22M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.bim
--rw-r--r-- 1 fgrennjr casa 8.7K Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.11.fam
--rw-r--r-- 1 fgrennjr casa  56M Mar 17 14:03 ROSMAP_NIA_WGS.leftnorm.filtered.unrelated.filtered.12.bed
-```
 
 
 ### Path(s) to omics-data matrix
@@ -66,31 +41,6 @@ $ ls -lh batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.
 
 ### Path(s) to covariate data matrix
 
-```
-$ head batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom.recipe
-#id     #dir
-5       <path>
-18      <path>
-7       <path>
-10      <path>
-8       <path>
-Y       <path>
-11      <path>
-13      <path>
-9       <path>
-
-$ ls -lh *bed.gz | head
--rw-r--r-- 1 fgrennjr casa 125M Mar  8 16:08 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr1.bed.gz
--rw-r--r-- 1 fgrennjr casa  56M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr10.bed.gz
--rw-r--r-- 1 fgrennjr casa  67M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr11.bed.gz
--rw-r--r-- 1 fgrennjr casa  69M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr12.bed.gz
--rw-r--r-- 1 fgrennjr casa  26M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr13.bed.gz
--rw-r--r-- 1 fgrennjr casa  43M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr14.bed.gz
--rw-r--r-- 1 fgrennjr casa  50M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr15.bed.gz
--rw-r--r-- 1 fgrennjr casa  58M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr16.bed.gz
--rw-r--r-- 1 fgrennjr casa  74M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr17.bed.gz
--rw-r--r-- 1 fgrennjr casa  22M Mar  8 16:07 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.chr18.bed.gz
-```
 
 ### Path(s) to QTL results
 
