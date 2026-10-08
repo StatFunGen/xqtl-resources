@@ -676,8 +676,7 @@ xQTL_GWAS_models: #syn69670588
           batch{1..6}: #syn7346268{1..6}
             - MSBB_eQTL.*.univariate_twas_weights.rds
         MSBB_pQTL: #syn70090848
-          batch1: #syn71548947
-            - MSBB_pQTL.*.univariate_twas_weights.rds
+          - MSBB_pQTL.*.univariate_twas_weights.rds
         MSBB_sQTL: #syn70090851
           batch{1..2}: #syn7154894{8..9}
             - MSBB_sQTL.*.univariate_twas_weights.rds
