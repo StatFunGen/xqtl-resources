@@ -25,7 +25,9 @@ The four top-level FunGen-xQTL folders on Synapse are [variant and gene summarie
 
 ## NIAGADS
 
-AD GWAS summary statistics and ADSP genomics are distributed by NIAGADS. Summary statistics marked Open can be downloaded from the dataset's public URL. Harmonized xQTL summary statistics and fine-mapping results are open access on NIAGADS DSS as [NG00184.v1](https://dss.niagads.org/datasets/ng00184/) (GRCh38). No application is needed. Individual-level data stay controlled and are requested through DSS under their own accessions.
+NIAGADS distributes ADSP genomic data and some AD GWAS summary statistics through its Data Sharing Service (DSS). Summary statistics marked Open can be downloaded from the dataset's public URL. Harmonized xQTL summary statistics and fine-mapping results are open access on NIAGADS DSS as [NG00184.v1](https://dss.niagads.org/datasets/ng00184/) (GRCh38) and need no application.
+
+Individual-level data, such as ADSP genotypes, are controlled access and are requested through DSS under their own accessions. The request is submitted by a principal investigator at the level of assistant professor or above, together with the institution's Signing Official, and both need an eRA Commons ID. Since June 2026, every DSS user verifies their identity through Login.gov or ID.me before signing in. The NIAGADS ADRD Data Access Committee reviews each request. The [NIAGADS application instructions](https://niagads.scrollhelp.site/support/application-instructions) list the required documents.
 
 {{% callout %}}
 **NG00184 downloads are packaged archives, one per QTL type and result type, named** `ADSP_FunGen_xQTL.v1.<QTL type>.<result type>.tar`
