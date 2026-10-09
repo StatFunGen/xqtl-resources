@@ -4,26 +4,15 @@
 # acquisition: in_hand | reviewing | requested | to_identify
 # methods: same statuses as a page header (done, running, not_run, awaiting, decide)
 
-- name: ROSMAP snRNA-seq gene expression (expanded)
-  cohort: ROSMAP
-  context: Brain, cell types
-  omics: snRNA_seq
-  modality: snuc-eQTL
-  access: controlled
-  acquisition: reviewing
-  synapse: syn57373409
-  note: Review and add to the atlas
-  methods: {cis-QTL: awaiting, SuSiE: awaiting, ColocBoost: awaiting, TWAS: awaiting, cTWAS: awaiting, MR: awaiting, LF2: decide, scEEMS: awaiting}
-
 - name: MSSM PsychAD snRNA-seq (Towfique lab)
   cohort: MSSM PsychAD
   context: Prefrontal cortex, cell types
   omics: snRNA_seq
   modality: snuc-eQTL
   access: controlled
-  acquisition: requested
+  acquisition: in_hand
   synapse: syn52160016
-  note: Access being arranged
+  note: On the AD Knowledge Portal; 1,494 donors, including 152 ROSMAP and 1,042 MSSM
   methods: {cis-QTL: awaiting, SuSiE: awaiting, ColocBoost: awaiting, TWAS: awaiting, cTWAS: awaiting, MR: awaiting, LF2: decide, scEEMS: awaiting}
 
 - name: Other new or expanded datasets

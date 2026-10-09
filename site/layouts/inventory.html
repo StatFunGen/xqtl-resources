@@ -6,7 +6,7 @@
 {{- range where (partialCached "ds/rows.html" . "rows") "kind" "omics" -}}
   {{- if ne .family "" -}}
   {{- $rows = $rows | append (dict "name" .title "href" .href "cohort" .cohort "context" .context "label" .label "color" .color "mark" "ring" "n" .n "access" .access
-      "acq" (cond (eq .status "released") "in_hand" (cond (eq .status "") "" "reviewing")) "phase" "v1" "src" .loc "note" "") -}}
+      "acq" (cond (in (slice "released" "staged") .status) "in_hand" (cond (eq .status "") "" "reviewing")) "phase" "v1" "src" .loc "note" "") -}}
   {{- end -}}
 {{- end -}}
 {{- range hugo.Data.next_phase -}}
