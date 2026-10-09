@@ -1,7 +1,7 @@
 ---
 type: gwas
 short_title: ADGC imputation protocol
-status:
+status: staged
 access:
 release:
 synapse_ids: []

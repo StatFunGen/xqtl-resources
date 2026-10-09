@@ -4,13 +4,16 @@ modality: eQTL
 short_title: ROSMAP snuc-eQTL
 cohort: ROSMAP
 context: "DLPFC, 7 cell types"
-sample_size:
+sample_size: 424
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Hao Sun, Masashi Fujita]
 last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
 ---
 
 # ROSMAP snRNA-seq pseudo-bulk gene expression QTL

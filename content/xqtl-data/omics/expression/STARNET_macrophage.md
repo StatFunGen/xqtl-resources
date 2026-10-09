@@ -5,10 +5,11 @@ short_title: STARNET macrophage
 cohort: STARNET
 context: macrophage
 access: controlled
-status:
+status: staged
 synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: [Travyse Edwards]
 last_verified:
+sample_size: 479
 ---
 
 # STARNET macrophage gene expression QTL
@@ -34,7 +35,6 @@ Travyse Edwards
 - Study Description: TBD
 - Disease: Alzheimer's Disease
 - Data Citation:
-  - Local Path: `/sc/arion/projects/load/data-int/STARNET/raw`
 - Additional Study Information: This data is not okay to use outside of the xQTL group.
 
 Information to fix:
@@ -54,7 +54,6 @@ Macrophage RNA-Seq:
 
 RNA was purified from whole blood with the RNeasy Mini kit (Qiagen, Hilden, Germany). For tissue biopsies, RNA was isolated as described (36, 37). DNA was isolated from whole blood with the QIAmp DNA Blood Midi kit (Qiagen). DNA and RNA qualities were assessed with the Agilent 2100 Bioanalyzer system (Agilent Technologies, Palo Alto, CA). Samples RIN scores of >7 were accepted for RNA-seq.Sequencing libraries were prepared with the Illumina TruSeq stranded mRNA kit, the Ribo-Zero method, and Illumina TruSeq nonstranded mRNA kit with poly(A)+ selection. Samples were sequenced using the Human OmniExpressExome-8v1 bead chip via the Illumina Infinium Assay.
 
-- STARNET macrophage dataset on MSSM cluster:  `/sc/arion/projects/load/data-int/STARNET/raw`
   
 ### Molecular Phenotype Matrices
 
@@ -66,14 +65,14 @@ The STARNET FASTQ files (paired-end, 50 - 100 bp) were processed using the ADGC 
 
 Sample level RNA-seq quality control
 
-- `/sc/arion/projects/load/users/edwart10/projects/xQTL-STARNET-Analysis-05-24-2022/Molecular_Phenotypes/Sample-Level-RNA-Seq-QC/output/STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.geneCount.gct.gz`
+- `STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.geneCount.gct.gz`
   - Contains 24669 genes (rows) from 479 samples (columns). The column names are the STARNET sample ids, the row names are the ensemble ids, and the values are the TPM counts. 
-- `/sc/arion/projects/load/users/edwart10/projects/xQTL-STARNET-Analysis-05-24-2022/Molecular_Phenotypes/Sample-Level-RNA-Seq-QC/output/STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
+- `STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
   - Contains 24669 genes (rows) from 479 samples (columns). The column names are the STARNET sample ids and the row names are the ensemble ids, and the values are the TPM counts.
 
 Bulk RNA-seq Counts Normalization
 
-- `/sc/arion/projects/load/users/edwart10/projects/xQTL-STARNET-Analysis-05-24-2022/Molecular_Phenotypes/Bulk-RNA-Seq-Counts-Normalization/output/STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.gz`
+- `STARNET_ribo0_fastq.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.gz`
   - Contains 20751 genes (rows) from 479 samples (columns). The column names are the STARNET sample ids. The rows are organized by increasing chromosome number, start position, end position, and ensemble id.
 
 

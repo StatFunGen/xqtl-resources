@@ -4,7 +4,7 @@ modality: genotype
 short_title: MiGA genotype
 cohort: MiGA
 access: controlled
-status:
+status: staged
 synapse_ids: []
 lead_analysts: [Travyse Edwards]
 last_verified:
@@ -28,14 +28,8 @@ Further method information can be found:
 - [MiGA NIAGADS entry](https://dss.niagads.org/datasets/ng00105/)
 - [Biorxiv Paper](https://www.biorxiv.org/content/10.1101/2020.10.27.356113v1.full)
 
-I began analysis on the post-imputation/QC VCF file provided by the Towfique lab. The path to this file on the Minerva cluster at ISMMS is below:
-`/sc/arion/projects/load/data-int/MiGA/raw/raj_microglia_anno.MAF.vcf.gz`
+I began analysis on the post-imputation/QC VCF file provided by the Towfique lab.
 
-File size:
-```
-$ ls -lh
--rw-r----- 1 edwart10 LOAD 322M Jul 29  2022 /sc/arion/projects/load/data-int/MiGA/raw/raj_microglia_anno.MAF.vcf.gz
-```
 
 ### Other Key Files
 

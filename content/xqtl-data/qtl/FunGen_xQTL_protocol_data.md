@@ -3,7 +3,7 @@ type: qtl
 short_title: Protocol toy data
 cohort: ROSMAP
 sample_size:
-status:
+status: staged
 synapse_ids: [syn36416601, syn4164376, syn21088596]
 lead_analysts: []
 last_verified:

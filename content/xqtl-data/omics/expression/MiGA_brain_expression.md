@@ -6,7 +6,7 @@ cohort: MiGA
 context: "microglia, 4 regions"
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: [Travyse Edwards]
@@ -41,26 +41,19 @@ Travyse Edwards
 We have gene expression data for four brain regions: medial frontal gyrus (GFM), superior temporal gyrus (GTS), thalamus (THA), and subventricular zone (SVZ). I have included information about the TPM matrices below for each brain region. The columns are sample names and the rows are gene ids. 
 
 - GFM
-  - Path: `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/GFM/sample-gfm.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
+  - File: `sample-gfm.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
   - Columns: 75, Rows: 45814
 - GTS
-  - Path: `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/GTS/sample-gts.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
+  - File: `sample-gts.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
   - Columns: 63, Rows: 45472
 - THA
-  - Path: `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/THA/sample-tha.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
+  - File: `sample-tha.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
   - Columns: 61, Rows: 45461
 - SVZ
-  - Path: `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/SVZ/sample-svz.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
+  - File: `sample-svz.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz`
   - Columns: 53, Rows: 42086
 
 File Sizes:
-```
-$ ls -lh
--rw-r--r-- 1 edwart10 LOAD  11M Sep 28 12:16 sample-gfm.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz
--rw-r--r-- 1 edwart10 LOAD  8.8M Sep 28 13:17 sample-gts.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz
--rw-r--r-- 1 edwart10 LOAD  8.6M Sep 28 13:17 sample-tha.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz
--rw-r--r-- 1 edwart10 LOAD 6.8M Sep 28 13:18 sample-svz.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz
-```
 
 ### Other Key Files
 

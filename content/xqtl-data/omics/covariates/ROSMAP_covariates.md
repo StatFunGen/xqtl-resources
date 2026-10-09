@@ -4,7 +4,7 @@ modality: covariates
 short_title: ROSMAP covariates
 cohort: ROSMAP
 access: controlled
-status:
+status: staged
 synapse_ids: []
 lead_analysts: []
 last_verified:

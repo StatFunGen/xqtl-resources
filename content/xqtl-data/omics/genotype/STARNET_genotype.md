@@ -5,7 +5,7 @@ short_title: STARNET genotype
 cohort: STARNET
 context: blood
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: []
 lead_analysts: [Travyse Edwards]
@@ -35,17 +35,8 @@ Post-Imputation Quality Control
 - MAF cutoff between common and rare of 0.005
 - Rsquared for use with common variants of 0.3
 
-I began analysis on the post-imputation genotype data. The path to this file on the Minerva cluster at ISMMS is below:
-`/sc/arion/projects/load/data-int/STARNET/raw`
+I began analysis on the post-imputation genotype data.
 
-File size:
-```
-$ ls -lh
-total 450M
--rwxr-x---+ 1 edwart10 LOAD  40M May 24  2022 plink.bim
--rwxr-x---+ 1 edwart10 LOAD  25K May 24  2022 plink.fam
--rwxr-x---+ 1 edwart10 LOAD 410M May 24  2022 plink.bed
-```
 
 ### Other Key Files
 

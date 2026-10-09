@@ -5,10 +5,11 @@ short_title: ROSMAP DLPFC
 cohort: ROSMAP
 context: DLPFC
 access: controlled
-status:
+status: staged
 synapse_ids: [syn3388564, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: [Xuanhe Chen, Shrishtee Kandoi]
 last_verified:
+sample_size: 1141
 ---
 
 # ROSMAP DLPFC alternative splicing

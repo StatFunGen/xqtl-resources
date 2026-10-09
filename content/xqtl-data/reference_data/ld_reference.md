@@ -2,9 +2,9 @@
 type: reference
 short_title: LD reference panel
 cohort: ADSP
-sample_size:
+sample_size: 16905
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn53171227, syn69670651, syn69670652]
 lead_analysts: [Oluwatosin Olayinka]

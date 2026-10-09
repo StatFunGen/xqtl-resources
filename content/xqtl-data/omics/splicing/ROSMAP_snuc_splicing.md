@@ -5,10 +5,11 @@ short_title: ROSMAP ISSAC
 cohort: ROSMAP
 context: "DLPFC, cell types"
 access: controlled
-status:
+status: staged
 synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: []
 last_verified:
+sample_size: 530
 ---
 
 # ROSMAP snRNA-seq Splicing (ISSAC)

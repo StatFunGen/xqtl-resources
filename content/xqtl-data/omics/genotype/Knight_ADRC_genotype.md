@@ -5,7 +5,7 @@ short_title: Knight ADRC genotype
 cohort: Knight-ADRC
 context: blood
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: []
 lead_analysts: [Zining Qi]

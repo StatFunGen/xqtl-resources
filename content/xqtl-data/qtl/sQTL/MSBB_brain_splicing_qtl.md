@@ -6,11 +6,14 @@ cohort: MSBB
 context: 4 brain regions
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Minghui Wang]
 last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
 ---
 
 # MSBB brain alternative splicing QTL

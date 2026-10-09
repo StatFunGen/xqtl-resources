@@ -5,7 +5,7 @@ short_title: Knight ADRC brain
 cohort: Knight-ADRC
 context: parietal cortex
 access: controlled
-status:
+status: staged
 synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
 lead_analysts: [Alexandre Pelletier]
 last_verified:

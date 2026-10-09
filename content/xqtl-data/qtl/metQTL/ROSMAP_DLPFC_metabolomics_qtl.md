@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: DLPFC
 sample_size:
 access: controlled
-status:
+status: staged
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:

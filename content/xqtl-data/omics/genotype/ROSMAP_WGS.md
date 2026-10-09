@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: "blood, brain"
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: []
 lead_analysts: [Hao Sun, Xuanhe Chen]

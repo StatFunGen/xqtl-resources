@@ -4,11 +4,15 @@ modality: glycoQTL
 short_title: ROSMAP DLPFC
 cohort: ROSMAP
 context: DLPFC
-status:
-access:
+status: staged
+access: controlled
 synapse_ids: [syn69865744, syn70094703, syn76495192, syn77828034, syn76489398, syn76490205, syn75180848]
 lead_analysts: []
 last_verified:
+methods:
+  SuSiE: done
+  ColocBoost: done
+  TWAS: done
 ---
 
 # ROSMAP DLPFC glycoproteomics QTL

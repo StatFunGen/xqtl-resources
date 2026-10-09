@@ -4,9 +4,9 @@ modality: haQTL
 short_title: ROSMAP DLPFC H3K9ac
 cohort: ROSMAP
 context: DLPFC
-sample_size:
+sample_size: 596
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Xuanhe Chen]

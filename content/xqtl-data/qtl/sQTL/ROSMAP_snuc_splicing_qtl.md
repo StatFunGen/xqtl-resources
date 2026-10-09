@@ -4,9 +4,9 @@ modality: sQTL
 short_title: ROSMAP single-nucleus
 cohort: ROSMAP
 context: "DLPFC, 7 cell types"
-sample_size:
+sample_size: 530
 access: controlled
-status:
+status: staged
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:

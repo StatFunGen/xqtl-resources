@@ -6,7 +6,7 @@ cohort: Knight-ADRC
 context: parietal cortex
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Alexandre Pelletier]

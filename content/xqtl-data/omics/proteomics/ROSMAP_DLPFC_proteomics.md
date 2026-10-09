@@ -4,9 +4,9 @@ modality: proteomics
 short_title: ROSMAP DLPFC
 cohort: ROSMAP
 context: DLPFC
-sample_size:
+sample_size: 596
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn17015098, syn21449447, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: [Zining Qi]

@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: DLPFC
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
 lead_analysts: []

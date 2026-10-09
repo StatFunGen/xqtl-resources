@@ -4,8 +4,8 @@ modality: glycoproteomics
 short_title: ROSMAP DLPFC
 cohort: ROSMAP
 context: DLPFC
-access:
-status:
+access: controlled
+status: staged
 synapse_ids: [syn17015098, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
 lead_analysts: [FunGen-xQTL Analysis Working Group]
 last_verified:

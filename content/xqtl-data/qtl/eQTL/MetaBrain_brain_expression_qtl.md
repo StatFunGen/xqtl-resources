@@ -5,11 +5,13 @@ short_title: MetaBrain
 cohort: MetaBrain
 context: multi-region
 access:
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:
+methods:
+  SuSiE: done
 ---
 
 # MetaBrain Brain Gene Expression QTL

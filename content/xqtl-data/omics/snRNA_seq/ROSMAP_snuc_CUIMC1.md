@@ -5,10 +5,11 @@ short_title: ROSMAP CUIMC1
 cohort: ROSMAP
 context: DLPFC
 access: controlled
-status:
+status: staged
 synapse_ids: [syn31512863, syn69670592, syn69670597, syn69670630, syn69865816]
 lead_analysts: [Anjing Liu]
 last_verified:
+sample_size: 424
 ---
 
 # ROSMAP CUIMC1 snRNA-seq expression

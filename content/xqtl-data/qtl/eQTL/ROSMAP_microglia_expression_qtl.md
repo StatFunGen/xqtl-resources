@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: microglia
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn2580853, syn11468526, syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Travyse Edwards]

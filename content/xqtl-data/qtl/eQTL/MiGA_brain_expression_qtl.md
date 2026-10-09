@@ -6,11 +6,14 @@ cohort: MiGA
 context: microglia
 sample_size: 255
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Travyse Edwards]
 last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
 ---
 
 # MiGA multi-brain region gene expression
@@ -39,12 +42,12 @@ Travyse Edwards
 
 Gene expression is available for four brain regions: medial frontal gyrus (GFM), superior temporal gyrus (GTS), thalamus (THA), and subventricular zone (SVZ). Each region has a TPM matrix with gene IDs in rows and sample names in columns. Low-expression genes and outlier samples were removed.
 
-| Region | Samples (columns) | Genes (rows) | File size | Path |
-|---|---|---|---|---|
-| GFM | 75 | 45,814 | 11 MB | `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/GFM/sample-gfm.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz` |
-| GTS | 63 | 45,472 | 8.8 MB | `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/GTS/sample-gts.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz` |
-| THA | 61 | 45,461 | 8.6 MB | `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/THA/sample-tha.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz` |
-| SVZ | 53 | 42,086 | 6.8 MB | `/sc/arion/projects/load/users/edwart10/projects/09-07-2022-MiGA-Analysis/output/rnaseq/SVZ/sample-svz.trimmed.clean.rnaseqc.low_expression_filtered.outlier_removed.tpm.gct.gz` |
+| Region | Samples (columns) | Genes (rows) | File size |
+|---|---|---|---|
+| GFM | 75 | 45,814 | 11 MB |
+| GTS | 63 | 45,472 | 8.8 MB |
+| THA | 61 | 45,461 | 8.6 MB |
+| SVZ | 53 | 42,086 | 6.8 MB |
 
 ### Other key files
 

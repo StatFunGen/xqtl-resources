@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: "DLPFC, cell types"
 sample_size:
 access: controlled
-status:
+status: staged
 synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
 lead_analysts: []
 last_verified:

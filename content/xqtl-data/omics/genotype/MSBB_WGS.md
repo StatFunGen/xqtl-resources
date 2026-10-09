@@ -6,7 +6,7 @@ cohort: MSBB
 context: blood
 sample_size:
 access: controlled
-status:
+status: staged
 release:
 synapse_ids: []
 lead_analysts: [Minghui Wang, Julia TCW]
