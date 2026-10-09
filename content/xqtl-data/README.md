@@ -19,15 +19,10 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Oluwatosin Olayinka.**
 
 ## E
-* [EFIGA CSF proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/proteomics/EFIGA_CSF_proteomics.md).
 	* Lead analysts: **Zining Qi.**
-* [EFIGA CSF proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/pQTL/EFIGA_CSF_proteomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
-* [EFIGA genotype](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/WHICAP_genotype.md).
 	* Lead analysts: **Zining Qi.**
-* [EFIGA plasma metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/EFIGA_plasma_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [EFIGA plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/EFIGA_plasma_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
 
 ## F
@@ -55,13 +50,9 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Xuanhe Chen.**
 * [Knight ADRC brain splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/sQTL/Knight_ADRC_brain_splicing_qtl.md).
 	* Lead analysts: **Xuanhe Chen.**
-* [Knight ADRC CSF metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/Knight_ADRC_CSF_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [Knight ADRC CSF metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/Knight_ADRC_CSF_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
-* [Knight ADRC CSF proteomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/proteomics/Knight_ADRC_CSF_proteomics.md).
 	* Lead analysts: **Zining Qi.**
-* [Knight ADRC CSF proteomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/pQTL/Knight_ADRC_CSF_proteomics_qtl.md).
 	* Lead analysts: **Zining Qi.**
 * [Knight ADRC genotype data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/Knight_ADRC_genotype.md).
 	* Lead analysts: **Zining Qi.**
@@ -69,20 +60,12 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Xuanhe.**
 
 ## M
-* [MAGENTA African American blood alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/sQTL/MAGENTA_AA_blood_splicing_qtl.md).
 	* Lead analysts: **Makaela Mews.**
-* [MAGENTA African American blood gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MAGENTA_AA_blood_expression.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
-* [MAGENTA African American Blood Gene Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MAGENTA_AA_blood_expression_qtl.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst; mxm1368@case.edu);  Dr.**
-* [MAGENTA Non-Hispanic White blood alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/splicing/MAGENTA_NHW_blood_splicing.md).
 	* Lead analysts: **Makaela Mews.**
-* [MAGENTA Non-Hispanic White blood gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MAGENTA_NHW_blood_expression.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
-* [MAGENTA Non-Hispanic White Blood Gene Expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MAGENTA_NHW_blood_expression_qtl.md). Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.
 	* Lead analysts: **Makaela Mews (analyst; mxm1368@case.edu);  Dr.**
-* [MAGENTA study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MAGENTA.md).
-	* Lead analysts: **Multi-Ancestry Genomics, Epigenomics, and Transcriptomics of Alzheimer's (MAGENTA) Project: Participants include 465 individuals (AA – 113 with AD, 118 cognitively intact controls; NHW – 116 with AD, 118 controls) ascertained by the John P.**
 * [MiGA genotype data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/MiGA_genotype.md). Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropathology Brain Bank and Research CoRE at Mount Sinai Hospital.
 	* Lead analysts: **Travyse Edwards.**
 * [MiGA multi-brain region gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MiGA_brain_expression.md). A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
@@ -189,7 +172,5 @@ All datasets are available on Synapse. Key folders: [variant & gene summary resu
 	* Lead analysts: **Xuanhe.**
 
 ## W
-* [WHICAP (pilot) plasma metabolomics](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/metabolomics/WHICAP_plasma_metabolomics.md).
 	* Lead analysts: **Zining Qi.**
-* [WHICAP (pilot) plasma metabolomics QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/metQTL/WHICAP_plasma_metabolomics_qtl.md).
 	* Lead analysts: **Zining Qi.**

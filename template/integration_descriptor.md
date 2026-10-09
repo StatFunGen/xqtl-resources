@@ -23,22 +23,16 @@ For example,
 
 ## Dataset Details
 
-### Path(s) to integration results
+### Access to integration results
+
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 Here please document the results 
 
-- Path(s) to the results on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP/ROSMAP_MASH/`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
 
-A summary of the data including size. We suggest using `ls -lh` command to show them. For example:
-
-```
-$ ls -lh *.{bim,bed,fam}
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP_MASH.strong.rds
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 ROSMAP_MASH.flash_model.rds
-```
+Report the number of files and total size only.
 
 ## Links to integration analysis notebooks
 

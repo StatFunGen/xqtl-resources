@@ -1,48 +1,40 @@
-# GIANT Adult Height GWAS Summary Data and Estimated LD
+---
+type: gwas
+status:
+synapse_ids: []
+lead_analysts: []
+last_verified:
+---
 
-The single-SNP summary statistics and estimated LD matrices for adult human height (Wood et al, 2014).
+# <Trait> GWAS Summary Data (<First author>)
+
+One to two sentences: trait, study, publication (DOI and journal), ancestry, and genome build.
 
 ## Contact
 
-Xiang Zhu
+Name(s) of the data owner or lead analyst.
 
-## Download source
+## Access
 
-The processed data are derived from the following datasets.
+- Public source: link to the original public release (e.g., GWAS Catalog accession), if any.
+- Synapse: synapse IDs of the processed summary statistics and fine-mapping objects (see `synapse_ids` above).
+- Access conditions: public, controlled (name the data access committee), or lab-internal.
 
-- GWAS summary statitics: `https://www.broadinstitute.org/collaboration/giant/index.php`
-- 1000 Genomes EUR haplotypes (phase 1): `http://csg.sph.umich.edu//abecasis/MaCH/download/1000G.2012-03-14.html`
-- HapMap CEU genetic maps (rel#24): `https://mathgen.stats.ox.ac.uk/wtccc-software/recombination_rates/genetic_map_b36_CEU.tgz`
+Do not list cluster, HPC, or local file-system paths. Point to Synapse IDs or public URLs only.
 
 ## File Schema
 
-The GWAS summary data file `height2014_analyzed_autosome_chr_*.txt` has the following columns.
+- `column_name`: description (one line per column)
 
-- `MarkerName`: The dbSNP Name 
-- `Allele1`: The 1st Allele (hg19 + strand)
-- `Allele2`: The 2nd Allele (hg19 + strand) 
-- `Freq.Allele1.HapMapCEU`: The Allele Frequency of `Allele1` in the HapMap CEU Population 
-- `b`: Estimated Single-SNP Effect Size
-- `SE`: Standard Error
-- `p`: Single-SNP P-value 
-- `N`: Sample Size
-- `pos`: Physical Position (hg19)
-- `chr`: Chromosome ID
+## Cohorts and sample size
 
-The folder `estimated_ld` contains the estimated LD (i.e. **correlation**) matrices, using the shrinkage estimator from Wen and Stephens (2010).
+Total cases and controls, and one line per contributing cohort. Report aggregate counts only; do not include participant-level or small-cell (n < 10) data.
 
-- `R.chr*.mat`: the hard threshold for small off-diagonal entries is 1e-8.
-- `R.chr*.3.mat`: the hard threshold for small off-diagonal entries is 1e-3.
+## Analysis notebooks
 
-## Path(s) to summary statistics
+1. GWAS summary statistics processing: link to the public notebook
+2. Fine-mapping (SuSiE RSS): link to the public notebook
 
-- Stephens Lab PPS: `/mnt/gluster/data/internal_supp/giant_height_2014`
+## Integration with xQTL
 
-## Path(s) to fine-mapping with SuSiE RSS model
-
-## Links to GWAS data analysis notebooks
-
-Please list the links to analysis notebooks in the order you executed our pipeline:
-
-1. GWAS summary statistics processing: https://github.com/cumc/fungen-xqtl-analysis/...
-2. Fine-mapping: ...
+Synapse IDs of the colocalization, TWAS, and unified-loci summaries that use this GWAS.

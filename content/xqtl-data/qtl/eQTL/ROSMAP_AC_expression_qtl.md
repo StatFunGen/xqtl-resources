@@ -39,13 +39,10 @@ TransQTL association: Need to be performed.
 Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analysis detial please check records here: [eQTL](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC/eQTL) [eQTL_susie_result_analysis
 ](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Wang_Columbia/eqtl)
 
-- Genotype used in this analysis on BU cluster: `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/genotype_partition/ROSMAP_NIA_WGS.leftnorm.filtered.filtered.plink_files_list.txt`
 
-- Covariates used in this analysis on BU cluster: `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/reference_data/ROSMAP_xqtl_covariates_sex_death_pmi_study.tsv`
 
 ### Results
 
-- Output summary statistics are uploaded to the FTP server: `/ftp_fgc_xqtl/projects/rna-seq/BU/ROSMAP_DLPFC/eQTL/association_scan`
 
 ### Association scan using TensorQTL and summary statistics standardization
 
@@ -57,7 +54,6 @@ Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analy
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/eQTL/AC/`
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

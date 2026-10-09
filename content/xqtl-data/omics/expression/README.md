@@ -26,6 +26,4 @@ Bulk and single-cell/nucleus RNA sequencing expression datasets used for eQTL ma
 
 | Dataset | Cohort | N samples |
 |---------|--------|-----------|
-| [MAGENTA African American](MAGENTA_AA_blood_expression) | Whole blood, African American | — |
-| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_expression) | Whole blood, Non-Hispanic White | — |
 | [STARNET macrophage](STARNET_macrophage) | Macrophage gene expression | — |

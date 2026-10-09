@@ -43,7 +43,6 @@ And Quality Control includes:
 ### Molecular phenotype matrices
 
 Quantitative proteomics:
-- Wang Lab: `/mnt/mfs/ctcn/datasets/rosmap/tmt/dlpfcTissue/round_1_2_harmonized/combine_r1andr2_protein.reg_cov_cog.uniq.proj.csv`
 
 The phenotype raw data contains 8425 genes from 596 samples. The data were processed after sampling, quantification, and normalization with NAs, each column as a sample and each row as a gene. The raw data was processed by using ADSP FGC xQTL pipeline. There are about 7712 genes and 416 samples for final QTL analysis. 
 
@@ -73,17 +72,14 @@ Phenotype data were processed via the following workflow: [phenotype_preprocessi
 
 Annotation:
 
-- Wang Lab: `/mnt/mfs/ctcn/datasets/rosmap/wgs/ampad/qualityControl/sampleSheetAfterQc.csv`
 
 It contains sample ID information for project ID of each sample. 
 
 Other reference files created via [Reference_data_notebook](https://github.com/cumc/xqtl-pipeline/blob/main/code/data_preprocessing/reference_data.ipynb): 
 
-- Wang Lab: `/mnt/vast/hpc/csg/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz`, `/mnt/vast/hpc/csg/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta`
 
 Age at death, sex and pmi covariates will be extract from ROSMAP raw data: 
 
-- Wang Lab: `/mnt/mfs/ctcn/datasets/rosmap/phenotypes/2022Feb08/dataset_707_basic_02-08-2022.clean.txt`
 
 
 

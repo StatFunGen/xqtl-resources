@@ -84,7 +84,6 @@ phenotype preprocessing can be run in parallel but covariate preprocessing need 
 
 ### Path(s) to genotype matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/molecular_phenotype_calling/WashU_genotype/genotype_qc`
 
 ```
 -rw-r--r-- 1 zq2209 zq2209  48M Feb 14 17:36 MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.filtered.10.bed
@@ -163,7 +162,6 @@ phenotype preprocessing can be run in parallel but covariate preprocessing need 
 
 ### Path(s) to omics-data matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/zq2209/data_production/proteomics/knight/pheno`
 
 ```
 $ ls -lh *.{txt,gz}
@@ -195,7 +193,6 @@ $ ls -lh *.{txt,gz}
 
 ### Path(s) to covariate data matrix
 
-- Wang Lab, `/mnt/vast/hpc/csg/zq2209/data_production/proteomics/knight/cov`
 
 ```
 $ ls -lh *.gz
@@ -204,7 +201,6 @@ $ ls -lh *.gz
 
 ### Path(s) to QTL results
 
-- Wang lab: `/mnt/vast/hpc/csg/molecular_phenotype_calling/pQTL_cis/WashU`
 ```
 ls -lh *.txt
 -rw-r--r-- 1 zq2209 zq2209 8.9K May 19 14:33 pheno_recipe_WashU_pheno.WashU_cov.MAP_Brain-xQTL_Gwas_geno_0.1_maf_0.0005.filtered.pQTL.related.filtered.extracted.pca.projected.resid.Marchenko_pc.10.emprical.cis_sumstats.txt
@@ -259,7 +255,6 @@ ls -lh *.txt
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/KNIGHT/pQTL/Brain/`
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 

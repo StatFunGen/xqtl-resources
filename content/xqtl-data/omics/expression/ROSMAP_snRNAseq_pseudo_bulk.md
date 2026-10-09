@@ -43,14 +43,9 @@ RNA:NextSeq500 , DNA:Illumina HiSeq X sequencer
 
 This data contains already normalized log2cpm with 425 samples as columns and 14426 gene ids as rows.
 
-- Wang Lab: `/mnt/mfs/statgen/snuc_pseudo_bulk/data/phenotype_data_all/ALL.log2cpm.tsv` (115M)
 
 The number of samples in each of the tissues is as followed (only the eight tissues with > 400 samples are used in the eQTL analysis in Gao Wang's Lab).
 
-```
-cd /mnt/mfs/statgen/snuc_pseudo_bulk/data/phenotype_data_all
-for i in `ls /mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes/`; do echo $i;  head -1 ../../phenotype_data_all/$i.log2cpm.tsv | wc -l ; done
-```
 
 | Tissue      | # samples |
 | -----------| ----------- |
@@ -70,18 +65,16 @@ for i in `ls /mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes/`; do echo
 
 Cell type-specific expression data:
 
-- De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes`
 
 Here, I use astrocytes as an example. But all other cell types have the same folder structure.
 
-- Gene expression matrix of astrocyte, De Jager Lab：`/mnt/mfs/ctcn/team/masashi/snuc-eqtl/v20211109.celltypes/Ast/Ast.log2cpm.tsv`
 
 ### Other key data files
 
 Annotations used by De Jager Lab analysis
 
-- Transcription start sites (TSS) of genes in GRCh38, De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl/transcriptome/get-tss-pos.tsv`
-- GTF file used to generate the TSS file, De Jager Lab: `/mnt/mfs/ctcn/team/masashi/snuc-eqtl/transcriptome/genes.gtf`
+- Transcription start sites (TSS) of genes in GRCh38, De Jager Lab
+- GTF file used to generate the TSS file, De Jager Lab
 ## QTL Analysis
 QTL analysis for this dataset is documented in [../../qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md](../../qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md).
 

@@ -37,36 +37,24 @@ URL to original data, if applicable:
 
 - https://dss.niagads.org/datasets/...
 
-Path(s) on HPC:
+Access:
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 
-A summary of the files including size. If there are many files involved you can use `ls -lh` command to show them. For example:
 
-```
-$ ls -lh *.bam
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 Whole_Blood_10.bam
--rw-rw-r-- 1 gw gw  4.8M Apr  5  2017 Whole_Blood_11.bam
--rw-rw-r-- 1 gw gw  3.9M Apr  5  2017 Whole_Blood_12.bam
--rw-rw-r-- 1 gw gw  402K Apr  5  2017 Whole_Blood_13.bam
--rw-rw-r-- 1 gw gw  1.7M Apr  5  2017 Whole_Blood_14.bam
-
-```
+Report the number of files and total size only.
 
 ### Molecular phenotype matrices
 
-Path(s) on HPC:
+Access:
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
+
 
 A description of these matrices:
 
@@ -75,26 +63,15 @@ A description of these matrices:
 
 ### Other key data files (if applicable)
 
-Path(s) on HPC:
+Access:
 
-- Path(s) to the data on your local cluster where you analyzed the data. For example:
-- Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_DLPFC/`
-- NIAGADS FTP, `/ftp_fgc_xqtl/projects/...`
-- This section may contain multiple locations in which case you can use bullet points to separate them. 
-- If the lead analysts are from different institutes please include all the paths. 
+- Synapse: synapse ID(s) of the data.
+- Public source: URL of the original release, if any.
+- Do not list cluster, HPC, or local file-system paths.
 
 
-A summary of the files including size. If there are many files involved you can use `ls -lh` command to show them. For example:
 
-```
-$ ls -lh *.bam
--rw-rw-r-- 1 gw gw  2.7M Apr  5  2017 Whole_Blood_10.bam
--rw-rw-r-- 1 gw gw  4.8M Apr  5  2017 Whole_Blood_11.bam
--rw-rw-r-- 1 gw gw  3.9M Apr  5  2017 Whole_Blood_12.bam
--rw-rw-r-- 1 gw gw  402K Apr  5  2017 Whole_Blood_13.bam
--rw-rw-r-- 1 gw gw  1.7M Apr  5  2017 Whole_Blood_14.bam
-
-```
+Report the number of files and total size only.
 
 Although it is not necessary to include all the intermediate files in various stages of phenotype quantification and QC, it is important to include summary of all the "key" data files. Currently we have not decided what are the required list of intermediate files because it differs between different omics data. For the time being we rely on the analysts' discretion to provide the information.  
 

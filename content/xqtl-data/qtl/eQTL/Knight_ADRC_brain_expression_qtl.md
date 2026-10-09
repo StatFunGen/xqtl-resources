@@ -33,7 +33,6 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of TensorQTL.ipynb**
 
-- `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/KNIGHT/eQTL/Brain/`
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

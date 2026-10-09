@@ -28,7 +28,6 @@ This page documents the glycoproteomics QTL (gpQTL) analysis of dorsolateral pre
 
 ## Where to find the results
 
-- **Cis-QTL association testing (TensorQTL output).** `s3://statfungen/ftp_fgc_xqtl/analysis_result/cis_association/ROSMAP/pQTL/gpQTL/`
 - **Cis top loci.** [glycoQTL folder, syn69865744](https://www.synapse.org/Synapse:syn69865744)
 - **Trans top loci.** [glycoQTL folder, syn70094703](https://www.synapse.org/Synapse:syn70094703)
 - **Fine-mapping models.** [ROSMAP_glycoQTL, syn76495192](https://www.synapse.org/Synapse:syn76495192)

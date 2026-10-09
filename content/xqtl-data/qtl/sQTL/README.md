@@ -28,8 +28,6 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 | Dataset | Cohort / Tissue | Synapse |
 |---------|-----------------|---------|
-| [MAGENTA African American](MAGENTA_AA_blood_splicing_qtl) | MAGENTA cohort, African American whole blood | — |
-| [MAGENTA Non-Hispanic White](MAGENTA_NHW_blood_splicing_qtl) | MAGENTA cohort, Non-Hispanic White whole blood | — |
 
 ## Analyses Performed
 

@@ -18,7 +18,7 @@ synapse_ids: [syn69670592] # public Synapse IDs only. May be empty for staged or
 lead_analysts: [Travyse Edwards]
 last_verified: 2026-10-07  # required for released pages. May be blank during the migration
 replaced_by:               # required for deprecated pages. Path of the replacing page
-internal:                  # optional. Not shown on the site. Staging IDs and internal paths go here
+internal:                  # optional. Not shown on the site. Staging IDs go here. Never file-system paths: the field is still visible in the repository
   staging_ids: []
 ---
 ```

@@ -16,13 +16,6 @@ pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 | [MSBB](MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
 | [Knight ADRC brain](Knight_ADRC_brain_proteomics_qtl) | Knight ADRC brain (WashU) | — |
 
-### Cerebrospinal Fluid (CSF)
-
-| Dataset | Cohort | Synapse |
-|---------|--------|---------|
-| [Knight ADRC CSF](Knight_ADRC_CSF_proteomics_qtl) | Knight ADRC CSF proteomics (WashU) | — |
-| [EFIGA CSF](EFIGA_CSF_proteomics_qtl) | EFIGA cohort CSF proteomics | — |
-
 ## Analyses Performed
 
 ### Single-Context Fine-Mapping

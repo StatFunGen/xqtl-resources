@@ -17,7 +17,6 @@ Frank Grenn
 
 Path(s) on HPC:
 
-- PCC RNASeq data from Zhang Lab, `/restricted/projectnb/casa/skandoi/ROSMAP_PCC_AC`:
 ```
 $ ls -lh rnaseqc_call_PCC/*.bam | head
 -rw-r--r-- 1 skandoi casa 4.0G Dec 11 18:27 1000-PCC.bam.Aligned.sortedByCoord.out.md.bam
@@ -36,17 +35,15 @@ $ ls -lh rnaseqc_call_PCC/*.bam | head
 
 Path(s) on HPC:
 
-- TPM (before QC or normalization filters) `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/rnaseqc_call/PCC_samples_list.rnaseqc.gene_tpm.subset.gct.gz`:
 1. Columns are sample names and rows are genes.
 2. 560 columns (including index) and 60669 rows (including header)
 
-- Counts (before QC or normalization fitlers):`/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/rnaseqc_call/PCC_samples_list.rnaseqc.gene_readsCount.subset.gct.gz`:
 1. Columns are sample names and rows are genes.
 2. 560 columns (including index) and 60669 rows (including header)
 
 ### Other key data files
 
-- Gene expression matrices after QC and normalization filters from Zhang Lab, `/restricted/projectnb/casa/frank/xqtl_project/ROSMAP_PCC/rnaseqc_call/normalize`:
+- Gene expression matrices after QC and normalization filters from Zhang Lab
 ```
 $ ls -lh
 total 45M

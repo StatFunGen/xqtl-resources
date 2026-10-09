@@ -17,26 +17,13 @@ Oluwatosin Olayinka
 
 ## Path(s) to summary statistics
 - NIAGADS FTP
-    - meta-analysis results: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_meta/wightman_meta_sumstat_hg38_qc.chr*`
-    - only 23andMe: `/ftp_fgc_xqtl/projects/ADGWAS_Wightman_2021_hg38_liftover_23andme/wightman_sumstat_hg38_qc.chr*`
  
 - CU
     - original data (in GRCh37)
-        - all individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.all/PGCALZ2full.txt`
-        - all individuals excluding 23andMe: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2sumstatsExcluding23andMe.txt`
-        - all individuals excluding 23andMe and UKBB: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2ExcludingUKBand23andME_METALInverseVariance_MetaAnalysis.txt`
         - only 23andMe individuals
-            - `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/alzheimers_matched.dat.gz`
-            - `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/v8.2_european_bundle-001.tar` (decompressed into `all_snp_info.txt`, `gt_snp_stat.txt`, `im_snp_stat.txt`
-            - after formatting: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/alzheimers_matched.dat_no_NA.formatted.tsv`
     - liftover data (in hg38)
-        - all individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.all/PGCALZ2full.hg38.txt`
-        - all individuals excluding 23andMe: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2sumstatsExcluding23andMe.hg38.txt`
-        - all individuals excluding 23andMe and UKBB: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/sum.stat.excluding.23andme/PGCALZ2ExcludingUKBand23andME_METALInverseVariance_MetaAnalysis.hg38.txt`
-        - only 23andMe individuals: `/mnt/vast/hpc/csg/data_public/GWAS_sumstats/20230530_Wightman/23andme/all_snp_info.hg38.txt`
         
 ## Path to SuSiE RSS Fine-mapping Objects
-- Li-San Wang FTP: `/ftp_fgc_xqtl/projects/GWAS_Finemapping_Results/Wightman/`
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
 - Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)
