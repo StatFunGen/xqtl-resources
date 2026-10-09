@@ -57,7 +57,7 @@ The FunGen-xQTL flagship paper used ROSMAP datasets in these xQTL analyses.
 | snRNA-seq splicing (ISSAC-seq) | sQTL | [ROSMAP_snuc_splicing_qtl](../qtl/sQTL/ROSMAP_snuc_splicing_qtl.md) |
 | DLPFC methylation | mQTL | [ROSMAP_DLPFC_methylation_qtl](../qtl/mQTL/ROSMAP_DLPFC_methylation_qtl.md) |
 | DLPFC H3K9ac ChIP-seq | haQTL | [ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl](../qtl/haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md) |
-| snATAC-seq (CUIMC + MIT) | caQTL | [ROSMAP_snuc_caQTL_qtl](../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md) |
+| snATAC-seq (MIT; CUIMC2 multiome) | caQTL | [ROSMAP_snuc_caQTL_qtl](../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md) |
 | DLPFC proteomics | pQTL | [ROSMAP_DLPFC_proteomics_qtl](../qtl/pQTL/ROSMAP_DLPFC_proteomics_qtl.md) |
 | DLPFC glycoproteomics | glycoQTL | [ROSMAP_DLPFC_glycoproteomics_qtl](../qtl/glycoQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md) |
 | Brain metabolomics | metQTL | [ROSMAP_DLPFC_metabolomics_qtl](../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md) |
