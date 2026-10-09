@@ -17,4 +17,6 @@ The files here override the hugo-book theme. `scripts/hugo_generator.py` copies 
 
 Page metadata lives in each page's header; see `template/metadata_header.md`.
 
+The analysis coverage grid reads a `methods:` map in each page's metadata header. The inventory reads each page's release status; datasets that do not have a page yet are listed in `data/next_phase.yaml`.
+
 To preview locally: install Hugo extended (0.158 or newer) and PyYAML, clone hugo-book into `website/themes/hugo-book`, then run `python scripts/hugo_generator.py --no-theme-download --no-readme --serve`.
