@@ -26,15 +26,12 @@ TransQTL association: Need to be performed.
 
 ## Dataset Details
 
-### Path(s) to genotype matrix
 
 
 
-### Path(s) to omics-data matrix
 
 
 
-### Path(s) to covariate data matrix
 
 
 
