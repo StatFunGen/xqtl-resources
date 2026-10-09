@@ -48,7 +48,7 @@ Glycopeptide abundance matrices normalized from TMT-based mass spectrometry data
 
 ## QTL Analysis
 
-QTL analysis for this dataset is documented in [../../qtl/gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md](../../qtl/gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md).
+QTL analysis for this dataset is documented in [../../qtl/glycoQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md](../../qtl/glycoQTL/ROSMAP_DLPFC_glycoproteomics_qtl.md).
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)

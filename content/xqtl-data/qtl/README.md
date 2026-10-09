@@ -6,7 +6,7 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 
 * [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
 * [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
-* [Glycosylation QTLs (gpQTL)](gpQTL) — ROSMAP DLPFC
+* [Glycosylation QTLs (glycoQTL)](glycoQTL) — ROSMAP DLPFC
 * [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
 * [Histone acetylation QTLs (haQTL)](haQTL) — ROSMAP DLPFC
 * [Chromatin accessibility QTLs (caQTL)](caQTL) — ROSMAP snuc
@@ -29,7 +29,7 @@ All QTL datasets are hosted on Synapse under [xQTL_data](https://www.synapse.org
 * [ROSMAP AC gene expression QTL](eQTL/ROSMAP_AC_expression_qtl)
 * [ROSMAP DLPFC alternative splicing QTL](sQTL/ROSMAP_DLPFC_splicing_qtl)
 * [ROSMAP DLPFC gene expression QTL](eQTL/ROSMAP_DLPFC_expression_qtl)
-* [ROSMAP DLPFC glycoproteomics QTL](gpQTL/ROSMAP_DLPFC_glycoproteomics_qtl)
+* [ROSMAP DLPFC glycoproteomics QTL](glycoQTL/ROSMAP_DLPFC_glycoproteomics_qtl)
 * [ROSMAP DLPFC H3K9ac QTL](haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl)
 * [ROSMAP DLPFC metabolomics QTL](metQTL/ROSMAP_DLPFC_metabolomics_qtl)
 * [ROSMAP DLPFC methylation QTL](mQTL/ROSMAP_DLPFC_methylation_qtl)

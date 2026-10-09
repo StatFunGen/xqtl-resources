@@ -1,6 +1,6 @@
 # Glycoproteomics Data
 
-Glycopeptide-level mass spectrometry measurements of protein glycosylation from brain tissue, used for gpQTL mapping. → See [gpQTL results](../../qtl/gpQTL)
+Glycopeptide-level mass spectrometry measurements of protein glycosylation from brain tissue, used for glycoQTL mapping. → See [glycoQTL results](../../qtl/glycoQTL)
 
 ## Brain Tissue
 

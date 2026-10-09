@@ -23,7 +23,7 @@ FunGen-xQTL maps molecular quantitative trait loci (QTL) across multiple molecul
   - Metabolomics of brain.
   - Single-nucleus RNA-seq (ROSMAP DLPFC, in the CUIMC, MIT and mega cohorts).
   - Whole-genome sequencing genotypes and covariates.
-* **[xQTL data](xqtl-data/qtl/)** are molecular QTL associations organized by modality, namely [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [gpQTL](xqtl-data/qtl/gpQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL) and [metQTL](xqtl-data/qtl/metQTL). They also include ROSMAP transcriptomic pattern QTL (tpQTL) and trans-xQTL.
+* **[xQTL data](xqtl-data/qtl/)** are molecular QTL associations organized by modality, namely [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [glycoQTL](xqtl-data/qtl/glycoQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL) and [metQTL](xqtl-data/qtl/metQTL). They also include ROSMAP transcriptomic pattern QTL (tpQTL) and trans-xQTL.
 * **[FGMB Atlas](fgmb_weights_database)** provides multi-context regulome-wide association study (RWAS) prediction models, with Synapse accessions for the models, gene-level association results and causal fine-mapping outputs.
 * **AD loci integration summary** gives the 195-locus AD GWAS and xQTL summary from the October 2026 release on Synapse ([syn69865823](https://www.synapse.org/Synapse:syn69865823)). The same data can be browsed in the interactive [xQTL-AD-loci-explorer](https://wanggroup.org/xQTL-AD-loci-explorer/).
 * **[Reference data](xqtl-data/reference_data/)** include ADSP-based LD reference panels (16,905 European ancestry samples), an LD sketch panel, and other analytical resources.

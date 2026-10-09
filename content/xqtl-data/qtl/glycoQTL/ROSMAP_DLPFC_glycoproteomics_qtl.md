@@ -1,6 +1,6 @@
 ---
 type: qtl
-modality: gpQTL
+modality: glycoQTL
 short_title: ROSMAP DLPFC
 cohort: ROSMAP
 context: DLPFC
@@ -13,7 +13,7 @@ last_verified:
 
 # ROSMAP DLPFC glycoproteomics QTL
 
-This page documents the glycoproteomics QTL (gpQTL) analysis of dorsolateral prefrontal cortex (DLPFC) tissue from the Religious Orders Study (ROS) and the Rush Memory and Aging Project (MAP). The [ROSMAP study page](../../study_info/ROSMAP.md) gives an overview of the cohort.
+This page documents the glycoproteomics QTL (glycoQTL) analysis of dorsolateral prefrontal cortex (DLPFC) tissue from the Religious Orders Study (ROS) and the Rush Memory and Aging Project (MAP). The [ROSMAP study page](../../study_info/ROSMAP.md) gives an overview of the cohort.
 
 ## Study overview
 
@@ -36,4 +36,4 @@ This page documents the glycoproteomics QTL (gpQTL) analysis of dorsolateral pre
 - **TWAS weight models.** [ROSMAP_glycoQTL, syn77828034](https://www.synapse.org/Synapse:syn77828034)
 - **Multi-context colocalization models (ColocBoost).** [ROSMAP_glycoQTL, syn76489398](https://www.synapse.org/Synapse:syn76489398)
 - **AD GWAS and xQTL colocalization models.** [ROSMAP_glycoQTL, syn76490205](https://www.synapse.org/Synapse:syn76490205)
-- **sLDSC LD scores.** [gpQTL, syn75180848](https://www.synapse.org/Synapse:syn75180848)
+- **sLDSC LD scores.** [glycoQTL, syn75180848](https://www.synapse.org/Synapse:syn75180848)

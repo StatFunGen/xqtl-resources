@@ -698,7 +698,7 @@ python scripts/hugo_generator.py --build --minify
         for d in Path(self.website_content_dir).rglob('*'):
             if not d.is_dir():
                 continue
-            if re.fullmatch(r'(?i)(ca|gp|ha|met|e|m|p|s)qtl', d.name):
+            if re.fullmatch(r'(?i)(ca|glyco|gp|ha|met|e|m|p|s)qtl', d.name):
                 title = d.name[:-3].lower() + 'QTL'
             elif d.name in OMICS_TITLES:
                 title = OMICS_TITLES[d.name]

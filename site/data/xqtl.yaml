@@ -22,7 +22,7 @@ modalities:
   - {id: haQTL, family: Histone, what: Histone acetylation, hue: 70, omics: [histone_ChIPSeq]}
   - {id: metQTL, family: Metabolomics, what: Metabolites, hue: 110, omics: [metabolomics]}
   - {id: pQTL, family: Proteomics, what: Protein abundance, hue: 155, omics: [proteomics]}
-  - {id: gpQTL, family: Glycoproteomics, what: Glycopeptides, hue: 200, omics: [glycoproteomics]}
+  - {id: glycoQTL, family: Glycoproteomics, what: Glycopeptides, hue: 200, omics: [glycoproteomics]}
 
 # Omics folders, in menu order, with the label shown on the site
 omics:
