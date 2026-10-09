@@ -1,3 +1,15 @@
+---
+type: omics
+modality: expression
+short_title: MetaBrain
+cohort: MetaBrain
+context: multi-region
+status: staged
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: []
+last_verified:
+---
+
 # MetaBrain Brain Expression
 
 ## Summary

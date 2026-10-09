@@ -26,7 +26,7 @@ home = [ "HTML", "RSS"]
 
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme = 'light'
+  BookTheme = 'auto'
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
@@ -49,7 +49,7 @@ home = [ "HTML", "RSS"]
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/cumc/xqtl-data'
+  BookRepo = 'https://github.com/StatFunGen/xqtl-resources'
 
   # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
   # type.
@@ -87,7 +87,18 @@ home = [ "HTML", "RSS"]
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker = true
+  # Off: the site layouts in site/ do not register it, and a stale cache hides catalog updates
+  BookServiceWorker = false
+
+  # Used by the site layouts in site/ (header links, home page numbers, edit links)
+  repoURL = 'https://github.com/StatFunGen/xqtl-resources'
+  repoBranch = 'main'
+  protocolURL = 'https://statfungen.github.io/xqtl-protocol'
+  atlasURL = 'https://xqtl.niagads.org/'
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 2
 
 [markup.goldmark.renderer]
   unsafe = true

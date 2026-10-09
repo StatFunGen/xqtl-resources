@@ -1,0 +1,17 @@
+{{- /* Breadcrumb from the section tree, skipping the home page. Uses short labels. */ -}}
+{{- $crumbs := slice -}}
+{{- range .Ancestors.Reverse -}}
+  {{- if not .IsHome -}}
+    {{- $label := .LinkTitle -}}
+    {{- if eq .Path "/xqtl-data" }}{{ $label = "Data catalog" }}{{ end -}}
+    {{- $i := partial "ds/info.html" . -}}
+    {{- if and .IsSection $i.label }}{{ $label = $i.label }}{{ end -}}
+    {{- if and .IsSection (eq $i.folder "") }}{{ $label = index (dict "qtl" "QTL results" "omics" "Omics data" "gwas" "AD GWAS" "reference" "Reference data" "study" "Study cohorts") $i.kind | default $label }}{{ end -}}
+    {{- $crumbs = $crumbs | append (dict "href" .RelPermalink "label" $label) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $crumbs -}}
+<nav class="crumbs" aria-label="Breadcrumb">
+  {{- range $n, $c := . }}{{ if $n }}<span aria-hidden="true">/</span>{{ end }}<a href="{{ $c.href }}">{{ $c.label }}</a>{{ end -}}
+</nav>
+{{- end -}}

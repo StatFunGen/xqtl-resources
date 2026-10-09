@@ -1,0 +1,21 @@
+{{- /* All catalog rows (QTL results, omics data, GWAS, reference), as dicts ready for JSON. Cached per build. */ -}}
+{{- $rows := slice -}}
+{{- $root := site.GetPage "/xqtl-data" -}}
+{{- with $root -}}
+{{- range .RegularPagesRecursive -}}
+  {{- $i := partial "ds/info.html" . -}}
+  {{- if in (slice "qtl" "omics" "gwas" "reference") $i.kind -}}
+    {{- $loc := $i.synapse -}}
+    {{- if and (not $loc) (eq $i.kind "gwas") }}{{ $loc = "Public URL" }}{{ end -}}
+    {{- $rows = $rows | append (dict
+        "title" .Title "href" .RelPermalink "short" $i.short
+        "kind" $i.kind "kindLabel" $i.kindLabel "label" $i.label "family" ($i.family | default (cond (eq $i.kind "gwas") "GWAS" (cond (eq $i.kind "reference") "Reference" ""))) "color" $i.color "mark" $i.mark
+        "cohort" $i.cohort "context" $i.context "n" $i.n
+        "status" $i.status "access" $i.access "analysts" $i.analysts
+        "loc" $loc "ng" $i.ng00184 "lead" (.Params.lead | default "" | plainify | htmlUnescape | truncate 220)
+        "methods" $i.methods
+      ) -}}
+  {{- end -}}
+{{- end -}}
+{{- end -}}
+{{- return sort $rows "title" -}}

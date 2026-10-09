@@ -1,3 +1,18 @@
+---
+type: omics
+modality: histone_ChIPSeq
+short_title: ROSMAP DLPFC H3K9ac
+cohort: ROSMAP
+context: DLPFC
+sample_size: 669
+access: controlled
+status: staged
+release:
+synapse_ids: [syn4896408, syn17016212, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Xuanhe Chen, Hao Sun, Hans Klein]
+last_verified:
+---
+
 # ROSMAP DLPFC H3K9ac 
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac data-set. 

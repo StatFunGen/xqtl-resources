@@ -1,5 +1,20 @@
+---
+type: omics
+modality: snRNA_seq
+short_title: ROSMAP Mega
+cohort: ROSMAP
+context: DLPFC
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Anjing Liu]
+last_verified:
+---
+
 # ROSMAP Mega snRNA-seq expression
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC and MIT.
+Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC1 and MIT.
 
 Please refer to [this document](../../study_info/ROSMAP) for an overview of the ROSMAP project.
 
@@ -19,11 +34,11 @@ Acknowledgement : Study data were generated from postmortem brain tissue provide
 
 Study name : ROSMAP Mega snRNA-seq expression
 
-Study Description : Mega-analysis combining single-nucleus RNA-seq data from the CUIMC (De Jager lab) and MIT (Kellis lab) ROSMAP datasets. The merged dataset integrates nuclei from DLPFC/PFC postmortem brain tissue across a total of approximately 848 ROSMAP donors (with overlapping donors harmonized). This larger combined resource increases statistical power for cell-type-specific cis-eQTL discovery. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
+Study Description : Mega-analysis combining single-nucleus RNA-seq data from the CUIMC1 and MIT ROSMAP datasets. The merged dataset integrates nuclei from DLPFC/PFC postmortem brain tissue across a total of approximately 848 ROSMAP donors (with overlapping donors harmonized). This larger combined resource increases statistical power for cell-type-specific cis-eQTL discovery. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
 
 Disease : Alzheimer's Disease
 
-Data Citation : Omics data: https://www.synapse.org/Synapse:syn31512863 (CUIMC), https://www.synapse.org/Synapse:syn52293417 (MIT)
+Data Citation : Omics data: https://www.synapse.org/Synapse:syn31512863 (CUIMC1), https://www.synapse.org/Synapse:syn52293417 (MIT)
 
 Genetics data: https://dss.niagads.org/datasets/ng00067/
 
@@ -35,7 +50,7 @@ PIs : Phil De Jager (Columbia University) and Manolis Kellis (Massachusetts Inst
 
 ### Raw data
 
-Nuclei were isolated from DLPFC/PFC postmortem brain tissue of ROSMAP participants from two complementary datasets: the CUIMC dataset (424 donors, De Jager lab; Synapse [syn31512863](https://www.synapse.org/Synapse:syn31512863)) and the MIT dataset (427 donors, Kellis lab; Synapse [syn52293417](https://www.synapse.org/Synapse:syn52293417)). Overlapping donors between the two datasets were identified and handled appropriately during harmonization. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform in both studies. Raw reads were aligned to the GRCh38 reference genome following the respective lab preprocessing workflows.
+Nuclei were isolated from DLPFC/PFC postmortem brain tissue of ROSMAP participants from two complementary datasets: the CUIMC1 dataset (424 donors; Synapse [syn31512863](https://www.synapse.org/Synapse:syn31512863)) and the MIT dataset (427 donors; Synapse [syn52293417](https://www.synapse.org/Synapse:syn52293417)). Overlapping donors between the two datasets were identified and handled appropriately during harmonization. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform in both studies. Raw reads were aligned to the GRCh38 reference genome following the respective lab preprocessing workflows.
 
 ### Molecular phenotype matrices
 
@@ -43,7 +58,7 @@ Pseudo-bulk count matrices were independently generated for each dataset by aggr
 
 ### Phenotype preprocessing
 
-Pseudo-bulk expression matrices from both datasets were normalized and filtered following standard pipelines prior to merging. Batch effects between the CUIMC and MIT datasets were accounted for during covariate modeling. Covariates for eQTL analysis include sex, age at death, postmortem interval (PMI), study (ROS or MAP), dataset (CUIMC or MIT), total genes detected, top genotype principal components, and expression principal components.
+Pseudo-bulk expression matrices from both datasets were normalized and filtered following standard pipelines prior to merging. Batch effects between the CUIMC1 and MIT datasets were accounted for during covariate modeling. Covariates for eQTL analysis include sex, age at death, postmortem interval (PMI), study (ROS or MAP), dataset (CUIMC1 or MIT), total genes detected, top genotype principal components, and expression principal components.
 
 ## Analysis Status
 

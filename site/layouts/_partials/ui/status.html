@@ -1,0 +1,4 @@
+{{- /* Release status badge. Input: status key. Always shows a text label. */ -}}
+{{- with index hugo.Data.xqtl.status . -}}
+<span class="badge badge--{{ $ }}">{{ .label }}</span>
+{{- end -}}

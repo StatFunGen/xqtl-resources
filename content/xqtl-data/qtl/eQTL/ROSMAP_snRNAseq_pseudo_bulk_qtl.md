@@ -1,3 +1,21 @@
+---
+type: qtl
+modality: eQTL
+short_title: ROSMAP snuc-eQTL
+cohort: ROSMAP
+context: "DLPFC, 7 cell types"
+sample_size: 424
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Hao Sun, Masashi Fujita]
+last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
+---
+
 # ROSMAP snRNA-seq pseudo-bulk gene expression QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC). 
@@ -79,8 +97,8 @@ df <- readRDS("matrix-eqtl.rds")$cis$eqtl
 ### Association scan using TensorQTL and summary statistics standardization
 
 - [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
-- [ROSMAP_DeJager_snuc_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_snuc_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
-- [ROSMAP_Kellis_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_Kellis_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
+- [ROSMAP CUIMC1 snuc eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_snuc_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
+- [ROSMAP MIT snuc eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_Kellis_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
 - [ROSMAP_mega_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_mega_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
 
 
@@ -108,12 +126,12 @@ AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Syn
 AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
 
 ## Links to QTL analysis notebooks 
-pseudo_bulk_eQTL_DeJager:
+CUIMC1:
 [Preprocess_bundle](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_DeJager/Preprocess_bundle.ipynb) provides commands to preprocess genotype, phenotype and covariate data all at once.
 [Phenotype_preprocessing](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_DeJager/ALL/phenotype_preprocessing.ipynb) shows the commands used for the phenotype data processing and preparation steps for all cell types. Cell-specific phenotype preprocessing are listed [here in different folders](https://github.com/cumc/xqtl-analysis/tree/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_DeJager).
 
 
-pseudo_bulk_eQTL_Kellis:
+MIT:
 [Preprocess_bundle](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_Kellis/Preprocess_bundle.ipynb) provides commands to preprocess genotype, phenotype and covariate data all at once.
 [Genotype_pca](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_Kellis/genotype_pca.ipynb) provides steps for PCA analysis for genotype data.
 [Phenotype_preprocessing](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/ROSMAP/pseudo_bulk_eQTL_Kellis/phenotype_preprocessing.ipynb) shows the commands used for the phenotype data processing and preparation steps.

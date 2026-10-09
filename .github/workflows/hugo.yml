@@ -29,12 +29,15 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Install PyYAML
+        run: pip install pyyaml
+
       - name: Download Hugo Book theme
+        # Pinned: the layouts in site/ override hugo-book and were built against this commit
         run: |
           mkdir -p website/themes
-          cd website/themes
-          git clone https://github.com/alex-shpak/hugo-book.git
-          cd ../..
+          git clone https://github.com/alex-shpak/hugo-book.git website/themes/hugo-book
+          git -C website/themes/hugo-book checkout 4074906
 
       - name: Generate xQTL Data Catalog
         run: |

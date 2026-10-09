@@ -1,6 +1,9 @@
 ---
 type: gwas
-status:
+short_title: Jansen 2019
+status: staged
+access:
+release:
 synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn69865824, syn70095142, syn70095143]
 lead_analysts: [Oluwatosin Olayinka]
 last_verified:

@@ -54,8 +54,8 @@ The following table catalogs all fine-mapped QTL and AD GWAS integration results
 | eQTL | ROSMAP | Oli_mega | single_context_finemapping | analysis_result/single_context/ROSMAP_eQTL/export/summary/context_specific/Oli_mega_eQTL.exported.toploci.bed.gz |
 | eQTL | ROSMAP | PCC | single_context_finemapping | analysis_result/single_context/ROSMAP_eQTL/export/summary/context_specific/PCC_DeJager_eQTL.exported.toploci.bed.gz |
 | pQTL | ROSMAP | DLPFC_Bennett | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/DLPFC_Bennett_pQTL.exported.toploci.bed.gz |
-| gpQTL | ROSMAP | DLPFC_Klein_adjusted | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz |
-| gpQTL | ROSMAP | DLPFC_Klein_unadjusted | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz |
+| glycoQTL | ROSMAP | DLPFC_Klein_adjusted | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/DLPFC_Klein_gpQTL_adjusted.exported.toploci.bed.gz |
+| glycoQTL | ROSMAP | DLPFC_Klein_unadjusted | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/DLPFC_Klein_gpQTL_unadjusted.exported.toploci.bed.gz |
 | eQTL | ROSMAP | monocyte | single_context_finemapping | analysis_result/single_context/ROSMAP_pQTL/export/summary/context_specific/monocyte_ROSMAP_eQTL.exported.toploci.bed.gz |
 | sQTL | ROSMAP | AC | single_context_finemapping | analysis_result/single_context/ROSMAP_sQTL/LeafCutter2/export/summary/context_specific/ROSMAP_AC_sQTL.exported.toploci.bed.gz |
 | sQTL | ROSMAP | DLPFC | single_context_finemapping | analysis_result/single_context/ROSMAP_sQTL/LeafCutter2/export/summary/context_specific/ROSMAP_DLPFC_sQTL.exported.toploci.bed.gz |
@@ -116,8 +116,8 @@ The following table catalogs all fine-mapped QTL and AD GWAS integration results
 | eQTL | ROSMAP | mega_Oli | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_mega_eQTL_Oli.exported.toploci.bed.gz |
 | metabolome | ROSMAP | - | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_metabolome.exported.toploci.bed.gz |
 | eQTL | STARNET | Mac | trans_finemapping | analysis_result/trans/export/summary/context_specific/STARNET_eQTL.exported.toploci.bed.gz |
-| gpQTL | ROSMAP | DLPFC_Klein_adjusted | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_adjusted_gpQTL.exported.toploci.bed.gz |
-| gpQTL | ROSMAP | DLPFC_Klein_unadjusted | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_gpQTL.exported.toploci.bed.gz |
+| glycoQTL | ROSMAP | DLPFC_Klein_adjusted | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_adjusted_gpQTL.exported.toploci.bed.gz |
+| glycoQTL | ROSMAP | DLPFC_Klein_unadjusted | trans_finemapping | analysis_result/trans/export/summary/context_specific/ROSMAP_gpQTL.exported.toploci.bed.gz |
 | GWAS | AD_Bellenguez_2022 | - | AD_GWAS_finemapping | analysis_result/AD_GWAS_finemapping/export/context_specific/AD_Bellenguez_2022.exported.toploci.bed.gz |
 | GWAS | AD_Jansen_2021 | - | AD_GWAS_finemapping | analysis_result/AD_GWAS_finemapping/export/context_specific/AD_Jansen_2021.exported.toploci.bed.gz |
 | GWAS | AD_Wightman_Full_2021 | - | AD_GWAS_finemapping | analysis_result/AD_GWAS_finemapping/export/context_specific/AD_Wightman_Full_2021.exported.toploci.bed.gz |

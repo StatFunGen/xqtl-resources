@@ -1,5 +1,6 @@
 ---
 type: study
+short_title: Knight-ADRC
 cohort: Knight-ADRC
 status: 
 synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816]

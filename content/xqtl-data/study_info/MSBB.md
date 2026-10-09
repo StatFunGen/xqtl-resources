@@ -1,5 +1,6 @@
 ---
 type: study
+short_title: MSBB
 cohort: MSBB
 context: brain
 status: 

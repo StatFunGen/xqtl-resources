@@ -1,3 +1,21 @@
+---
+type: qtl
+modality: pQTL
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+sample_size: 416
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Zining Qi]
+last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
+---
+
 # ROSMAP DLPFC protein expression QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC protein expression. 

@@ -1,6 +1,20 @@
+---
+type: qtl
+modality: caQTL
+short_title: ROSMAP single-nucleus
+cohort: ROSMAP
+context: "DLPFC, cell types"
+sample_size:
+access: controlled
+status: staged
+synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
+lead_analysts: [FunGen-xQTL Analysis Team]
+last_verified:
+---
+
 # ROSMAP Single-Nucleus Chromatin Accessibility QTL (caQTL)
 
-Single-nucleus ATAC-seq chromatin accessibility QTL analysis from ROSMAP donors, covering MIT snATAC-seq and CUIMC & MIT harmonized Multiome ATAC data.
+Single-nucleus ATAC-seq chromatin accessibility QTL analysis from ROSMAP donors, covering MIT snATAC-seq and CUIMC2 multiome ATAC data.
 
 Please refer to [this document](../../study_info/ROSMAP.md) for an overview of the ROSMAP project.
 
@@ -11,7 +25,7 @@ FunGen-xQTL Analysis Team
 ## Study Overview
 
 - Study name: ROSMAP snATAC-seq caQTL
-- Study Description: Chromatin accessibility quantitative trait loci (caQTL) using pseudo-bulk ATAC-seq profiles per cell type. Two datasets are included: (1) MIT snATAC-seq (Mic, Ast, Oli, OPC, Exc, Inh) and (2) CUIMC & MIT harmonized Multiome ATAC (Mic, Ast, Oli, OPC, Exc, Inh). A response caQTL (r-caQTL) analysis was also performed to identify variants affecting chromatin remodeling in context of co-measured gene expression.
+- Study Description: Chromatin accessibility quantitative trait loci (caQTL) using pseudo-bulk ATAC-seq profiles per cell type. Two datasets are included: (1) MIT snATAC-seq (Mic, Ast, Oli, OPC, Exc, Inh) and (2) CUIMC2 multiome ATAC (Mic, Ast, Oli, OPC, Exc, Inh). A response caQTL (r-caQTL) analysis was also performed to identify variants affecting chromatin remodeling in context of co-measured gene expression.
 - Cell types: Microglia (Mic), Astrocytes (Ast), Oligodendrocytes (Oli), OPCs (OPC), Excitatory neurons (Exc), Inhibitory neurons (Inh)
 - Assay: 10x Genomics snATAC-seq and Multiome ATAC
 

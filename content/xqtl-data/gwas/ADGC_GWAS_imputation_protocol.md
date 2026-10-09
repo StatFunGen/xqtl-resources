@@ -1,6 +1,9 @@
 ---
 type: gwas
-status:
+short_title: ADGC imputation protocol
+status: staged
+access:
+release:
 synapse_ids: []
 lead_analysts: [Xuanhe Chen]
 last_verified:

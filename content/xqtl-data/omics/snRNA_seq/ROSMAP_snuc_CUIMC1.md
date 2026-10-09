@@ -1,4 +1,18 @@
-# ROSMAP CUIMC snRNA-seq expression
+---
+type: omics
+modality: snRNA_seq
+short_title: ROSMAP CUIMC1
+cohort: ROSMAP
+context: DLPFC
+access: controlled
+status: staged
+synapse_ids: [syn31512863, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Anjing Liu]
+last_verified:
+sample_size: 424
+---
+
+# ROSMAP CUIMC1 snRNA-seq expression
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq expression data from Columbia University Irving Medical Center (CUIMC).
 
 Please refer to [this document](../../study_info/ROSMAP) for an overview of the ROSMAP project.
@@ -19,7 +33,7 @@ Acknowledgement : Study data were generated from postmortem brain tissue provide
 
 Study name : ROSMAP CUIMC snRNA-seq expression
 
-Study Description : Single-nucleus RNA-seq expression data from 424 ROSMAP donors generated at Columbia University Irving Medical Center (CUIMC) by the De Jager lab. Nuclei were isolated from dorsolateral prefrontal cortex (DLPFC) postmortem brain tissue and profiled using droplet-based 10x Genomics snRNA-seq. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
+Study Description : Single-nucleus RNA-seq expression data from 424 ROSMAP donors generated at Columbia University Irving Medical Center (CUIMC1 dataset). Nuclei were isolated from dorsolateral prefrontal cortex (DLPFC) postmortem brain tissue and profiled using droplet-based 10x Genomics snRNA-seq. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
 
 Disease : Alzheimer's Disease
 

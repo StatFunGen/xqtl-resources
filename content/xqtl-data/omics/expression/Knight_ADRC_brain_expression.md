@@ -1,3 +1,16 @@
+---
+type: omics
+modality: expression
+short_title: Knight ADRC brain
+cohort: Knight-ADRC
+context: parietal cortex
+access: controlled
+status: staged
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Chunming Liu]
+last_verified:
+---
+
 # Knight ADRC brain gene expression
 
 ## Contact

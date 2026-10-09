@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: sQTL
+short_title: Knight ADRC brain
+cohort: Knight-ADRC
+context: parietal cortex
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Xuanhe Chen]
+last_verified:
+---
+
 # Knight ADRC brain splicing QTL
 
 ## Contact

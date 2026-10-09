@@ -1,0 +1,4 @@
+{{- /* Access label: a shape plus text (filled square controlled, circle open, half circle requested). Input: access key. */ -}}
+{{- with index hugo.Data.xqtl.access . -}}
+<span class="acc acc--{{ $ }}"><span class="acc__mark" aria-hidden="true"></span>{{ .label }}</span>
+{{- end -}}

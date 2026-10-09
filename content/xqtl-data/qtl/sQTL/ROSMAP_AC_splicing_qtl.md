@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: sQTL
+short_title: ROSMAP AC
+cohort: ROSMAP
+context: AC
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Ru Feng]
+last_verified:
+---
+
 # ROSMAP AC alternative splicing QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) AC alternative splicing. 

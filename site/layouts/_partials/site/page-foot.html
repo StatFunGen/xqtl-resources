@@ -1,0 +1,4 @@
+<footer class="page__foot">
+  <span>{{ with .GitInfo }}Last updated {{ .AuthorDate.Format "January 2006" }}{{ else }}{{ with .Lastmod }}{{ if gt .Year 1 }}Last updated {{ .Format "January 2006" }}{{ end }}{{ end }}{{ end }}</span>
+  {{ with .Params.source_path }}<a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/{{ . }}">Edit this page on GitHub</a>{{ end }}
+</footer>

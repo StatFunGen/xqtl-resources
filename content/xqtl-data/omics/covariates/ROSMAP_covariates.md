@@ -1,3 +1,15 @@
+---
+type: omics
+modality: covariates
+short_title: ROSMAP covariates
+cohort: ROSMAP
+access: controlled
+status: staged
+synapse_ids: []
+lead_analysts: []
+last_verified:
+---
+
 # ROSMAP Covariates data
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) covariates data

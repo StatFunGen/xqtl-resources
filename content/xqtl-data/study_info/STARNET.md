@@ -1,5 +1,6 @@
 ---
 type: study
+short_title: STARNET
 cohort: STARNET
 context: macrophage
 status: 

@@ -1,0 +1,21 @@
+{{- /* Right-hand "On this page". Dataset pages add the generated sections around the Markdown headings. */ -}}
+{{- $p := .page -}}
+{{- $items := slice -}}
+{{- if .dataset }}{{ $items = $items | append (dict "href" "#summary" "label" "Summary") (dict "href" "#access" "label" "Access") }}{{ end -}}
+{{- range findRESubmatch `<a href="(#[^"]+)">(.*?)</a>` $p.TableOfContents -}}
+  {{- $items = $items | append (dict "href" (index . 1) "label" (index . 2 | plainify | htmlUnescape)) -}}
+{{- end -}}
+{{- if .dataset -}}
+  {{- with .info.methods }}{{ $items = $items | append (dict "href" "#analyses" "label" "Analyses") }}{{ end -}}
+  {{- $items = $items | append (dict "href" "#related" "label" "Related datasets") -}}
+{{- end -}}
+{{- if gt (len $items) 1 -}}
+<nav class="pagetoc" aria-label="On this page">
+  <div class="pagetoc__title">On this page</div>
+  <ul>
+    {{- range $n, $it := $items }}
+    <li><a href="{{ $it.href }}"{{ if eq $n 0 }} class="is-current"{{ end }}>{{ $it.label }}</a></li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end -}}

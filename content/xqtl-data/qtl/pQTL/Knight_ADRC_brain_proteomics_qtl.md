@@ -1,3 +1,21 @@
+---
+type: qtl
+modality: pQTL
+short_title: Knight ADRC brain
+cohort: Knight-ADRC
+context: parietal cortex
+sample_size: 412
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Zining Qi]
+last_verified:
+methods:
+  SuSiE: done
+  TWAS: done
+---
+
 # Knight ADRC brain proteomics QTL
 Charles F. And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC)
 

@@ -1,0 +1,105 @@
+# Shared vocabulary for the site layouts in site/layouts.
+# Labels, colours and descriptions live here so that menus, the catalog, the dataset
+# summary card and the home page always agree. Page-level facts live in each page's
+# metadata header (see template/metadata_header.md).
+
+# Headline numbers on the home page, as reported in the flagship paper. The modality
+# count is computed from the modalities list below.
+home:
+  datasets: "77"
+  participants: "2,328"
+  participants_note: >-
+    Counts are participants. One participant can contribute several tissues,
+    cell types and assays.
+  updated: "October 2026"
+
+# QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
+# `omics` the matching folders under content/xqtl-data/omics. Colour: oklch(0.6 0.13 hue).
+modalities:
+  - {id: eQTL, family: Expression, what: Gene expression, hue: 250, omics: [expression, snRNA_seq]}
+  - {id: sQTL, family: Splicing, what: Alternative splicing, hue: 300, omics: [splicing]}
+  - {id: mQTL, family: Methylation, what: DNA methylation, hue: 350, omics: [methylation]}
+  - {id: caQTL, family: Chromatin, what: Chromatin accessibility, hue: 30, omics: [snATAC]}
+  - {id: haQTL, family: Histone acetylation, what: Histone acetylation, hue: 70, omics: [histone_ChIPSeq]}
+  - {id: metQTL, family: Metabolomics, what: Metabolite abundance, hue: 110, omics: [metabolomics]}
+  - {id: pQTL, family: Proteomics, what: Protein abundance, hue: 155, omics: [proteomics]}
+  - {id: glycoQTL, family: Glycoproteomics, what: Glycoprotein abundance, hue: 200, omics: [glycoproteomics]}
+
+# Omics folders, in menu order, with the label shown on the site
+omics:
+  - {folder: expression, label: Expression, family: Expression}
+  - {folder: splicing, label: Splicing, family: Splicing}
+  - {folder: methylation, label: Methylation, family: Methylation}
+  - {folder: proteomics, label: Proteomics, family: Proteomics}
+  - {folder: glycoproteomics, label: Glycoproteomics, family: Glycoproteomics}
+  - {folder: metabolomics, label: Metabolomics, family: Metabolomics}
+  - {folder: histone_ChIPSeq, label: Histone ChIP-seq, family: Histone acetylation}
+  - {folder: snRNA_seq, label: snRNA-seq, family: Expression}
+  - {folder: snATAC, label: snATAC-seq, family: Chromatin}
+  - {folder: genotype, label: Genotype / WGS, family: Genotype}
+  - {folder: covariates, label: Covariates, family: ""}
+
+# Study cohorts, in menu order. `page` is the study page under content/xqtl-data/study_info
+cohorts:
+  - {name: ROSMAP, desc: Religious Orders Study and Rush Memory and Aging Project, page: ROSMAP}
+  - {name: MSBB, desc: Mount Sinai Brain Bank, page: MSBB}
+  - {name: Knight-ADRC, desc: Knight Alzheimer Disease Research Center, page: KnightADRC}
+  - {name: MiGA, desc: Microglia Genomic Atlas, page: MiGA}
+  - {name: STARNET, desc: "Cardiovascular tissues, macrophages", page: STARNET}
+  - {name: MetaBrain, desc: External bulk brain eQTL replication resource, url: "https://www.metabrain.nl/"}
+
+# AD GWAS entries on the home page, by page file name under content/xqtl-data/gwas
+gwas:
+  - {page: Bellenguez_AD, name: Bellenguez et al. 2022, desc: "2022 summary statistics and 2026 main, no-biobank and no-proxy analyses"}
+  - {page: Wightman_AD, name: Wightman et al. 2021, desc: Summary statistics}
+  - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: Summary statistics}
+  - {page: Jansen_AD, name: Jansen et al. 2019, desc: Summary statistics}
+  - {page: ADGC_GWAS_imputation_protocol, name: ADGC imputation protocol, desc: Adapted from the ADGC GWAS QC protocol}
+
+# Release status badges
+status:
+  released: {label: Released, desc: "Files are on Synapse or a public URL and can be requested or downloaded now."}
+  staged: {label: Staged, desc: "Files are uploaded but not yet shared. The page documents what will be released."}
+  planned: {label: Planned, desc: "Analysis in progress. No files yet."}
+  deprecated: {label: Deprecated, desc: "Replaced by a newer page, which this page links to."}
+
+# Access labels
+access:
+  open: {label: Open, desc: "Download without an application from a public URL, an open Synapse folder or NIAGADS DSS."}
+  controlled: {label: Controlled, desc: "Needs a Synapse account and data access requested on the AD Knowledge Portal."}
+  requested: {label: Requested, desc: "Shared on request from the data owner before general release."}
+  pending: {label: Pending, desc: "Access terms are still being set."}
+
+# NIAGADS DSS NG00184 holds open xQTL summary statistics and fine-mapping for these
+# modalities and cohorts. Released pages that match get an "+ NG00184 open" note.
+ng00184:
+  id: NG00184.v1
+  url: "https://dss.niagads.org/datasets/ng00184/"
+  modalities: [eQTL, snuc-eQTL, sQTL, pQTL, mQTL, haQTL]
+  cohorts: [ROSMAP, MSBB, Knight-ADRC, MiGA]
+
+# Home page: where the data are hosted
+repos:
+  - {host: Synapse, name: Variant and gene summaries, id: syn69865684, url: "https://www.synapse.org/Synapse:syn69865684"}
+  - {host: Synapse, name: xQTL models, id: syn69670588, url: "https://www.synapse.org/Synapse:syn69670588"}
+  - {host: Synapse, name: Raw QTL data, id: syn69670632, url: "https://www.synapse.org/Synapse:syn69670632"}
+  - {host: Synapse, name: Reference files, id: syn69670634, url: "https://www.synapse.org/Synapse:syn69670634"}
+  - {host: NIAGADS DSS · open, name: xQTL summary statistics and fine-mapping, id: NG00184.v1, url: "https://dss.niagads.org/datasets/ng00184/"}
+  - {host: NIAGADS, name: xQTL Atlas · query and genome browser, id: xqtl.niagads.org, url: "https://xqtl.niagads.org/"}
+
+# xQTL protocol methods for the analysis coverage grid, in column order. A page lists the
+# methods that apply to it in a `methods:` map in its metadata header.
+methods: [cis-QTL, SuSiE, fSuSiE, ColocBoost, TWAS, cTWAS, MR, LF2, scEEMS]
+method_status:
+  done: {label: Done, glyph: ""}
+  running: {label: Running, glyph: ""}
+  not_run: {label: Not yet run, glyph: ""}
+  awaiting: {label: Awaiting data, glyph: "·"}
+  decide: {label: Scope to decide, glyph: "?"}
+
+# Inventory acquisition stages
+acquisition:
+  in_hand: {label: In hand, desc: "On Synapse or DSS, usable now"}
+  reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
+  requested: {label: Requested, desc: "Outreach under way"}
+  to_identify: {label: To identify, desc: "Candidates not yet found"}

@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: sQTL
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+sample_size: 839
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Shrishtee Kandoi, Xuanhe Chen]
+last_verified:
+---
+
 # ROSMAP DLPFC alternative splicing QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing. 

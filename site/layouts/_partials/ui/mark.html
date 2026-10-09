@@ -1,0 +1,6 @@
+{{- /* Modality square. Input: the dict from ds/info, or (dict "color" .. "mark" ..). Filled for QTL results, outlined for omics data. */ -}}
+{{- if .color -}}
+<span class="sq sq--{{ .mark }}" style="--c:{{ .color | safeCSS }}" aria-hidden="true"></span>
+{{- else -}}
+<span class="sq sq--{{ .mark | default "muted" }}" aria-hidden="true"></span>
+{{- end -}}

@@ -1,0 +1,2 @@
+{{- /* Numbered steps: wrap a Markdown ordered list. Overrides hugo-book's steps shortcode. */ -}}
+{{ replace (.Page.RenderString .Inner) "<ol>" `<ol class="steps">` | safeHTML }}

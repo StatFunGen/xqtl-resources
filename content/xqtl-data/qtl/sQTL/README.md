@@ -41,7 +41,7 @@ Fine-mapping using **SuSiE-RSS** is applied per splicing phenotype (intron clust
 ### ISSAC — Single-Nucleus sQTL Method
 
 For ROSMAP snuc data, **ISSAC** implements:
-- **Metacell aggregation**: 23,143 metacells for 7 major cell types and 87,936 metacells for 67 retained subcell types, from 3,177,748 nuclei (530 unique donors from 722 specimens: CUIMC N=424, MIT N=298, 192 shared donors)
+- **Metacell aggregation**: 23,143 metacells for 7 major cell types and 87,936 metacells for 67 retained subcell types, from 3,177,748 nuclei (530 unique donors from 722 specimens: CUIMC1 N=424, MIT N=298, 192 shared donors)
 - **Splice site usage quantification** with junctools (UMI-level collapsed)
 - **Binomial GLMM** sQTL mapping with PCG/REML for random effects
 - **Context-dependent sQTL** analyses: AD-biased (FDR < 0.01), sex-biased (FDR < 0.05), and cell-state-dependent

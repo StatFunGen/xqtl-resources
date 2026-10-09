@@ -1,3 +1,17 @@
+---
+type: omics
+modality: genotype
+short_title: Knight ADRC genotype
+cohort: Knight-ADRC
+context: blood
+access: controlled
+status: staged
+release:
+synapse_ids: []
+lead_analysts: [Zining Qi]
+last_verified:
+---
+
 # Knight ADRC genotype data
 
 ## Contact

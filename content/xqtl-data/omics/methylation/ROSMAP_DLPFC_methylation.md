@@ -1,3 +1,18 @@
+---
+type: omics
+modality: methylation
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: [syn3157275, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Alexandre Pelletier, Jiajun Tao]
+last_verified:
+---
+
 # ROSMAP DLPFC methylation 
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC methylation data-set. 

@@ -1,3 +1,16 @@
+---
+type: omics
+modality: expression
+short_title: ROSMAP monocyte
+cohort: ROSMAP
+context: monocyte
+access: controlled
+status: staged
+synapse_ids: [syn22024496, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # ROSMAP RNA-seq monocyte gene expression
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) monocyte data-set. 
@@ -12,7 +25,6 @@ Travyse Edwards
 
 The ROSMAP monocyte data on MSSM were downloaded from [syn22024496](https://www.synapse.org/#!Synapse:syn22024496) on July 11th, 2022. (path on MSSM to be added)
 
-- Path on MSSM cluster `/sc/arion/projects/load/data-ext/ROSMAP/raw/rnaseq_monocytes_syn23650893/Gene_Expression-RNA-seq-monocyte`
 
 ### Preview Monocyte Gene Expression Data
 

@@ -1,5 +1,6 @@
 ---
 type: study
+short_title: MiGA
 cohort: MiGA
 context: microglia
 sample_size: 255

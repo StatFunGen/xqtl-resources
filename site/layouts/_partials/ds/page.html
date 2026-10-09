@@ -1,0 +1,171 @@
+{{- /* Dataset page template (design 3a): summary card from the metadata header, then the
+  page's own Markdown unchanged, then generated Analyses and Related datasets. */ -}}
+{{- $p := .page -}}
+{{- $i := .info -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $howto := site.GetPage "/how_to_get_data" -}}
+
+{{- /* Source data / results counterpart: same cohort and context, matching modality family */ -}}
+{{- $counter := slice -}}
+{{- if in (slice "qtl" "omics") $i.kind -}}
+  {{- range where site.RegularPages "Params.dataset.cohort" $i.cohort -}}
+    {{- $o := partial "ds/info.html" . -}}
+    {{- /* single-nucleus data pair only with single-nucleus results, bulk with bulk */ -}}
+    {{- $snI := or (in (slice "snuc-eQTL" "snRNA-seq") $i.label) (findRE `(?i)snRNA|single-nucleus|snuc` $p.Title) -}}
+    {{- $snO := or (in (slice "snuc-eQTL" "snRNA-seq") $o.label) (findRE `(?i)snRNA|single-nucleus|snuc` .Title) -}}
+    {{- if and (ne . $p) (ne $o.kind $i.kind) (in (slice "qtl" "omics") $o.kind) (eq $o.family $i.family) (eq $o.context $i.context) (eq (not $snI) (not $snO)) -}}
+      {{- $counter = $counter | append (dict "page" . "info" $o) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $study := "" -}}
+{{- range $x.cohorts }}{{ if and .page (eq .name $i.cohort) }}{{ $study = site.GetPage (printf "/xqtl-data/study_info/%s" .page) }}{{ end }}{{ end -}}
+{{- $cohortDesc := "" -}}
+{{- range $x.cohorts }}{{ if eq .name $i.cohort }}{{ $cohortDesc = .desc }}{{ end }}{{ end -}}
+
+<article class="page page--dataset">
+  <header class="page__head">
+    {{ partial "site/breadcrumb.html" $p }}
+    <h1 class="page__title">{{ $p.Title }}</h1>
+    {{ with $p.Params.lead }}<div class="page__lead">{{ $p.RenderString . }}</div>{{ end }}
+  </header>
+
+  <section class="card summary" id="summary" aria-label="Summary">
+    <dl class="summary__grid">
+      {{- if $i.cohort }}
+      <div class="summary__cell"><dt>Cohort</dt><dd>{{ with $study }}<a href="{{ .RelPermalink }}">{{ $i.cohort }}</a>{{ else }}{{ $i.cohort }}{{ end }}</dd>{{ with $cohortDesc }}<dd class="summary__sub">{{ . }}</dd>{{ end }}</div>
+      {{- end }}
+      {{- if and $i.label (ne $i.kind "study") }}
+      <div class="summary__cell"><dt>{{ cond (eq $i.kind "omics") "Data type" "Modality" }}</dt><dd>{{ partial "ui/mark.html" $i }}{{ $i.label }}</dd><dd class="summary__sub">{{ $i.kindLabel }}</dd></div>
+      {{- end }}
+      {{- with $i.context }}
+      <div class="summary__cell"><dt>Tissue or cell type</dt><dd>{{ . }}</dd></div>
+      {{- end }}
+      {{- if or $i.n (in (slice "qtl" "omics") $i.kind) }}
+      <div class="summary__cell"><dt>Sample size</dt><dd class="num">{{ with $i.n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</dd><dd class="summary__sub">samples</dd></div>
+      {{- end }}
+      {{- if ne $i.kind "study" }}
+      <div class="summary__cell"><dt>Status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}—{{ end }}</dd>
+        <dd class="summary__sub">{{ with $i.release }}{{ . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ if $i.release }} · {{ end }}not yet verified{{ end }}{{ with $i.verified }}{{ if $i.release }} · {{ end }}verified {{ . }}{{ end }}</dd></div>
+      {{- end }}
+      {{- with $i.access }}
+      <div class="summary__cell"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}</dd><dd class="summary__sub">{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}</dd></div>
+      {{- end }}
+      {{- with $i.analysts }}
+      <div class="summary__cell"><dt>Lead analysts</dt><dd>{{ delimit . ", " }}</dd><dd class="summary__sub">Contact by name</dd></div>
+      {{- end }}
+      {{- with $counter }}
+      <div class="summary__cell"><dt>{{ cond (eq $i.kind "qtl") "Source data" "QTL results" }}</dt>
+        {{- range . }}<dd><a href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}{{ .page.LinkTitle }} {{ .info.label }}</a></dd>{{ end -}}
+      </div>
+      {{- end }}
+    </dl>
+    {{- if or $i.synapse (eq $i.kind "qtl") }}
+    <div class="summary__bar">
+      {{- with $i.synapse }}
+      <span class="label">Synapse</span>
+      <code class="summary__id" id="primary-syn">{{ . }}</code>
+      <button type="button" class="btn btn--sm" data-copy="{{ . }}">Copy ID</button>
+      {{- end }}
+      <span class="spacer"></span>
+      {{ with $howto }}<a class="link" href="{{ .RelPermalink }}">How to request access</a>{{ end }}
+      {{- if eq $i.kind "qtl" }}
+      <a class="btn" href="{{ site.Params.atlasURL }}" rel="noopener">Query in xQTL Atlas ↗</a>
+      {{- end }}
+      {{- with $i.synapse }}
+      <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open in Synapse ↗</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </section>
+
+  <section class="ds-section" id="access">
+    <h2>Access</h2>
+    <p class="muted">
+      {{- if eq $i.access "open" }}Open access. Download from the links below without an application.
+      {{- else if eq $i.access "requested" }}Shared on request from the data owner before general release.
+      {{- else if eq $i.access "controlled" }}Controlled access. Request data access{{ with $i.cohort }} for {{ . }}{{ end }} on the AD Knowledge Portal; you need a Synapse account.
+      {{- else }}Access terms for this page are not set yet.{{ end }}
+      {{ with $howto }}See <a href="{{ .RelPermalink }}">How to get the data</a>.{{ end }}
+    </p>
+    {{- if or $i.synapseIDs $i.ng00184 }}
+    <div class="table-card">
+      <table class="dtable">
+        <thead><tr><th>Where</th><th>ID</th><th>Access</th><th>What you get</th></tr></thead>
+        <tbody>
+          {{- with $i.synapse }}
+          <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
+            <td>{{ if eq $i.kind "qtl" }}{{ if eq . "syn69670632" }}Raw QTL data folder, with the per-dataset results described below{{ else }}Results described below{{ end }}{{ else }}Files described below{{ end }}</td></tr>
+          {{- end }}
+          {{- if $i.ng00184 }}
+          <tr><td class="strong">NIAGADS DSS</td><td><a class="mono" href="{{ $x.ng00184.url }}" rel="noopener">{{ $x.ng00184.id }}</a></td><td>{{ partial "ui/access.html" "open" }}</td>
+            <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.label }}.*.tar</code></td></tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    {{- end }}
+    {{- if gt (len $i.synapseIDs) 1 }}
+    <p class="ids"><span class="label">Other Synapse IDs on this page</span>
+      {{- range after 1 $i.synapseIDs }} <a class="chip chip--mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a>{{ end }}</p>
+    {{- end }}
+    {{- with $i.synapse }}
+    {{ $code := printf "pip install synapseclient\nsynapse login\nsynapse get -r %s" . }}
+    {{ $p.RenderString (printf "```shell\n%s\n```" $code) }}
+    {{- end }}
+  </section>
+
+  <div class="prose">
+    {{ $p.Content }}
+  </div>
+
+  {{- with $i.methods }}
+  <section class="ds-section" id="analyses">
+    <h2>Analyses</h2>
+    <ul class="method-chips">
+      {{- range $m := $x.methods }}
+        {{- with index $i.methods $m }}
+        {{- $st := index $x.method_status . }}
+        <li class="method-chip"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span class="mono">{{ $m }}</span><span class="muted">{{ with $st }}{{ .label }}{{ end }}</span></li>
+        {{- end }}
+      {{- end }}
+    </ul>
+    <p class="note">Read from the <code>methods:</code> map in this page's metadata header{{ with site.GetPage "/coverage" }}, the same data as the <a href="{{ .RelPermalink }}">analysis coverage grid</a>{{ end }}.</p>
+  </section>
+  {{- end }}
+
+  {{- /* Related: counterpart, same cohort and context in other modalities, same modality in other contexts, cohort study page */ -}}
+  {{- $rel := slice -}}
+  {{- range $counter }}{{ $rel = $rel | append (dict "rel" (cond (eq $i.kind "qtl") "source" "results") "page" .page "info" .info) }}{{ end -}}
+  {{- if in (slice "qtl" "omics") $i.kind -}}
+    {{- range where site.RegularPages "Params.dataset.cohort" $i.cohort -}}
+      {{- $o := partial "ds/info.html" . -}}
+      {{- if and (ne . $p) (eq $o.kind $i.kind) -}}
+        {{- if and $i.context (eq $o.context $i.context) (ne $o.label $i.label) }}{{ $rel = $rel | append (dict "rel" "same tissue" "page" . "info" $o) }}
+        {{- else if and (eq $o.label $i.label) (ne $o.context $i.context) }}{{ $rel = $rel | append (dict "rel" "other context" "page" . "info" $o) }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if eq $i.label "eQTL" -}}
+      {{- with site.GetPage "/xqtl-data/qtl/eQTL/MetaBrain_brain_expression_qtl" }}{{ if ne . $p }}{{ $rel = $rel | append (dict "rel" "replication" "page" . "info" (partial "ds/info.html" .)) }}{{ end }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if eq $i.kind "study" -}}
+    {{- range (where site.RegularPages "Params.dataset.cohort" $i.cohort).ByTitle -}}
+      {{- $o := partial "ds/info.html" . -}}
+      {{- if in (slice "qtl" "omics") $o.kind }}{{ $rel = $rel | append (dict "rel" (cond (eq $o.kind "qtl") "QTL" "omics") "page" . "info" $o) }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $study }}{{ if ne . $p }}{{ $rel = $rel | append (dict "rel" "cohort" "page" . "info" (dict "mark" "none")) }}{{ end }}{{ end -}}
+  {{- if $rel }}
+  <section class="ds-section" id="related">
+    <h2>Related datasets</h2>
+    <ul class="related">
+      {{- range first (cond (eq $i.kind "study") 60 12) $rel }}
+      <li><a class="chip" href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}<span class="mono muted">{{ .rel }}</span>{{ .page.LinkTitle }}{{ with .info.label }} {{ . }}{{ end }}</a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  {{ partial "site/page-foot.html" $p }}
+</article>

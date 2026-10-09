@@ -1,0 +1,107 @@
+{{ define "main" }}
+{{- /* Home page (designs 1a and 1b). Counts are computed from the pages at build time.
+  The Markdown in content/README.md is shown in full under "About FunGen-AD". */ -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $rows := partialCached "ds/rows.html" . "rows" -}}
+{{- $qtl := where $rows "kind" "qtl" -}}
+{{- $catalog := site.GetPage "/xqtl-data" -}}
+{{- $howto := site.GetPage "/how_to_get_data" -}}
+<div class="home">
+  <section class="hero">
+    <div class="eyebrow">ADSP Functional Genomics Consortium · FunGen-AD</div>
+    <h1 class="hero__title">Find and access the FunGen-xQTL datasets</h1>
+    <p class="hero__lead">FunGen-xQTL fine-maps molecular QTL across eight molecular modalities, from chromatin and RNA to protein and metabolites, in brain and immune cells, and reuses the resulting credible sets and posterior effect estimates to interpret AD GWAS loci. This catalog describes each dataset and where to get it. To look up associations by variant, gene or region, use the xQTL Atlas on NIAGADS.</p>
+    <div class="hero__actions">
+      {{ with $catalog }}<a class="btn btn--primary btn--lg" href="{{ .RelPermalink }}">Browse the catalog</a>{{ end }}
+      {{ with $howto }}<a class="btn btn--lg" href="{{ .RelPermalink }}">How to get the data</a>{{ end }}
+      <a class="link link--strong" href="{{ site.Params.atlasURL }}" rel="noopener">Query the xQTL Atlas ↗</a>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Headline numbers">
+    <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
+    <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
+    <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
+  </section>
+  <p class="stats__note">{{ $x.home.participants_note }}</p>
+
+  <section class="home__block">
+    <h2>Browse by</h2>
+    <div class="browse">
+      <div class="card browse__card">
+        <div class="label">Study cohort</div>
+        <ul class="browse__list">
+        {{- range $x.cohorts }}
+          {{- $href := .url -}}
+          {{- with .page }}{{ with site.GetPage (printf "/xqtl-data/study_info/%s" .) }}{{ $href = .RelPermalink }}{{ end }}{{ end }}
+          <li><a href="{{ $href }}"><span class="strong">{{ .name }}</span><span class="muted">{{ .desc }}</span></a></li>
+        {{- end }}
+        </ul>
+      </div>
+      <div class="card browse__card">
+        <div class="label">QTL modality</div>
+        <ul class="modgrid">
+        {{- range $x.modalities }}
+          <li><a href="{{ with site.GetPage (printf "/xqtl-data/qtl/%s" .id) }}{{ .RelPermalink }}{{ end }}">
+            <span class="modgrid__id">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }}</span>
+            <span class="muted">{{ .what }}</span></a></li>
+        {{- end }}
+        </ul>
+      </div>
+      <div class="card browse__card">
+        <div class="label">AD GWAS summary statistics</div>
+        <ul class="browse__list">
+        {{- range $x.gwas }}
+          {{- $g := . -}}
+          {{- with site.GetPage (printf "/xqtl-data/gwas/%s" .page) }}
+          <li><a href="{{ .RelPermalink }}"><span class="strong">{{ $g.name }}</span><span class="muted">{{ $g.desc }}</span></a></li>
+          {{- end }}
+        {{- end }}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="home__block home__coverage">
+    <div class="home__blockhead"><h2>Coverage by cohort and modality</h2><span class="muted">Number of QTL datasets. Select a cell to open the filtered catalog.</span></div>
+    <div class="card matrix matrix--static">
+      <div class="matrix__scroll">
+      <table class="matrix__table">
+        <thead><tr><th></th>{{ range $x.modalities }}<th>{{ .id }}</th>{{ end }}</tr></thead>
+        <tbody>
+        {{- range $c := $x.cohorts }}
+          {{- $cr := where $qtl "cohort" $c.name }}
+          <tr><th scope="row">{{ $c.name }}</th>
+          {{- range $m := $x.modalities }}
+            {{- $n := len (where $cr "family" $m.family) }}
+            <td>{{ if $n }}<a class="matrix__cell" style="--c:oklch(0.6 0.13 {{ $m.hue }})" href="{{ with $catalog }}{{ .RelPermalink }}{{ end }}?kind=qtl&amp;cohort={{ $c.name }}&amp;family={{ $m.family }}" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} datasets">{{ $n }}</a>{{ else }}<span class="matrix__empty" aria-hidden="true"></span>{{ end }}</td>
+          {{- end }}
+          </tr>
+        {{- end }}
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="home__block">
+    <h2>Where the data are hosted</h2>
+    <ul class="repos">
+    {{- range $x.repos }}
+      <li><a class="card repo" href="{{ .url }}" rel="noopener"><span class="label">{{ .host }}</span><span class="strong">{{ .name }}</span><span class="mono accent">{{ .id }}</span></a></li>
+    {{- end }}
+    </ul>
+  </section>
+
+  {{- with .Content }}
+  <section class="home__block home__about">
+    <div class="prose">{{ . }}</div>
+  </section>
+  {{- end }}
+
+  <footer class="home__foot">
+    <span>Maintained by the FunGen-AD Analysis Working Group. Reflects data generated through {{ $x.home.updated }}.</span>
+    <span class="home__footlinks"><a href="{{ site.Params.protocolURL }}">xQTL protocol</a><a href="https://github.com/StatFunGen/pecotmr">pecotmr</a><a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/content/README.md">Edit on GitHub</a></span>
+  </footer>
+</div>
+{{ end }}

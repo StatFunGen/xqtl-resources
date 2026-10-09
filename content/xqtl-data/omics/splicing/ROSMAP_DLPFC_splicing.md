@@ -1,3 +1,17 @@
+---
+type: omics
+modality: splicing
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+access: controlled
+status: staged
+synapse_ids: [syn3388564, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Xuanhe Chen, Shrishtee Kandoi]
+last_verified:
+sample_size: 1141
+---
+
 # ROSMAP DLPFC alternative splicing
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing. 

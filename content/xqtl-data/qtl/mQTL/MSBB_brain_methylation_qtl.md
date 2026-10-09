@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: mQTL
+short_title: MSBB brain
+cohort: MSBB
+context: brain
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Alexandre Pelletier]
+last_verified:
+---
+
 # MSBB brain methylation QTL
 ## Contact
 

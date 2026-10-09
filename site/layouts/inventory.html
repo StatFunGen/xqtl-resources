@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{- /* Dataset inventory (design 9a): the omics data behind the atlas plus datasets being
+  curated for the next phase (data/next_phase.yaml). */ -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $rows := slice -}}
+{{- range where (partialCached "ds/rows.html" . "rows") "kind" "omics" -}}
+  {{- if ne .family "" -}}
+  {{- $rows = $rows | append (dict "name" .title "href" .href "cohort" .cohort "context" .context "label" .label "color" .color "mark" "ring" "n" .n "access" .access
+      "acq" (cond (eq .status "released") "in_hand" (cond (eq .status "") "" "reviewing")) "phase" "v1" "src" .loc "note" "") -}}
+  {{- end -}}
+{{- end -}}
+{{- range hugo.Data.next_phase -}}
+  {{- $label := "" }}{{ $color := "" -}}
+  {{- $o := .omics -}}
+  {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end }}{{ end }}{{ end -}}
+  {{- $rows = $rows | append (dict "name" .name "href" "" "cohort" (.cohort | default "—") "context" (.context | default "—") "label" ($label | default "—") "color" $color "mark" "ring" "n" "" "access" (.access | default "")
+      "acq" .acquisition "phase" "next" "src" (.synapse | default "—") "note" (.note | default "")) -}}
+{{- end -}}
+<article class="wide" data-inventory>
+  <header class="wide__head">
+    {{ partial "site/breadcrumb.html" . }}
+    <div class="wide__titlebar">
+      <div><h1 class="page__title">{{ .Title }}</h1></div>
+      <div class="tabs" role="group" aria-label="Phase">
+        <button type="button" data-phase="all" aria-pressed="true">All · {{ len $rows }}</button>
+        <button type="button" data-phase="v1" aria-pressed="false">Atlas v1 · {{ len (where $rows "phase" "v1") }}</button>
+        <button type="button" data-phase="next" aria-pressed="false">Next phase · {{ len (where $rows "phase" "next") }}</button>
+      </div>
+    </div>
+    {{ with .Params.lead }}<div class="wide__intro">{{ $.RenderString . }}</div>{{ end }}
+    <div class="stages">
+      {{- range $k := slice "in_hand" "reviewing" "requested" "to_identify" }}
+      {{- $s := index $x.acquisition $k }}
+      <div class="stage"><span class="stage__n" data-stage-count="{{ $k }}">{{ len (where $rows "acq" $k) }}</span>
+        <span class="stage__t"><span class="aq aq--{{ $k }}">{{ $s.label }}</span>{{ $s.desc }}</span></div>
+      {{- end }}
+    </div>
+  </header>
+  <div class="wide__body">
+    <table class="dtable dtable--wide">
+      <thead><tr><th>Dataset</th><th>Cohort</th><th>Context</th><th>Modality</th><th class="r">N</th><th>Access</th><th>Acquisition</th><th>Phase</th><th>Source</th></tr></thead>
+      <tbody>
+      {{- range $rows }}
+        <tr data-row data-phase="{{ .phase }}" data-acq="{{ .acq }}"{{ if eq .phase "next" }} class="is-next"{{ end }}>
+          <td>{{ if .href }}<a class="strong" href="{{ .href }}">{{ .name }}</a>{{ else }}<span class="strong">{{ .name }}</span>{{ end }}{{ with .note }}<span class="sub">{{ . }}</span>{{ end }}</td>
+          <td class="muted">{{ .cohort }}</td>
+          <td class="muted">{{ .context }}</td>
+          <td class="nowrap">{{ partial "ui/mark.html" . }}{{ .label }}</td>
+          <td class="r mono muted">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+          <td>{{ with .access }}{{ partial "ui/access.html" . }}{{ else }}—{{ end }}</td>
+          <td>{{ with .acq }}<span class="aq aq--{{ . }}">{{ (index $x.acquisition .).label }}</span>{{ else }}<span class="subtle">Not set</span>{{ end }}</td>
+          <td class="phase">{{ if eq .phase "v1" }}Atlas v1{{ else }}Next phase{{ end }}</td>
+          <td>{{ if hasPrefix .src "syn" }}<a class="mono accent" href="https://www.synapse.org/Synapse:{{ .src }}" rel="noopener">{{ .src }}</a>{{ else }}<span class="mono accent">{{ .src }}</span>{{ end }}</td>
+        </tr>
+      {{- end }}
+      </tbody>
+    </table>
+  </div>
+  <div class="wide__foot flex">
+    <a class="propose" href="{{ site.Params.repoURL }}/issues/new?template=propose-dataset.yml">+ Propose a dataset</a>
+    <span>Opens a GitHub issue that asks for cohort, tissue or cell type, modality, sample size, access and Synapse ID. A curator turns it into a page.</span>
+  </div>
+  {{ with .Content }}<div class="wide__foot"><div class="prose">{{ . }}</div></div>{{ end }}
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+(function () {
+  var root = document.querySelector('[data-inventory]'); if (!root) return;
+  var rows = root.querySelectorAll('[data-row]');
+  root.querySelectorAll('[data-phase]').forEach(function (b) {
+    if (b.tagName !== 'BUTTON') return;
+    b.addEventListener('click', function () {
+      var ph = b.dataset.phase, counts = {};
+      root.querySelectorAll('button[data-phase]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      rows.forEach(function (r) {
+        var on = ph === 'all' || r.dataset.phase === ph; r.hidden = !on;
+        if (on) counts[r.dataset.acq] = (counts[r.dataset.acq] || 0) + 1;
+      });
+      root.querySelectorAll('[data-stage-count]').forEach(function (s) { s.textContent = counts[s.dataset.stageCount] || 0; });
+    });
+  });
+})();
+</script>
+{{ end }}

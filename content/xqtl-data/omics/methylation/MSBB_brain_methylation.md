@@ -1,3 +1,16 @@
+---
+type: omics
+modality: methylation
+short_title: MSBB brain
+cohort: MSBB
+context: brain
+access: controlled
+status: staged
+synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Alexandre Pelletier]
+last_verified:
+---
+
 # MSBB brain methylation
 
 ## Contact

@@ -1,0 +1,6 @@
+{{- /* Release status badges with their meaning, from data/xqtl.yaml */ -}}
+<div class="statusdefs">
+  {{- range slice "released" "staged" "planned" }}
+  <div><span>{{ partial "ui/status.html" . }}</span><span>{{ (index hugo.Data.xqtl.status .).desc }}</span></div>
+  {{- end }}
+</div>

@@ -1,3 +1,18 @@
+---
+type: omics
+modality: genotype
+short_title: ROSMAP WGS
+cohort: ROSMAP
+context: "blood, brain"
+sample_size:
+access: controlled
+status: staged
+release:
+synapse_ids: []
+lead_analysts: [Hao Sun, Xuanhe Chen]
+last_verified:
+---
+
 # ROSMAP WGS data
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) whole-genome sequence data

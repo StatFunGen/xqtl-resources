@@ -1,3 +1,15 @@
+---
+type: omics
+modality: genotype
+short_title: MiGA genotype
+cohort: MiGA
+access: controlled
+status: staged
+synapse_ids: []
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # MiGA genotype data
 
 Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropathology Brain Bank and Research CoRE at Mount Sinai Hospital. The permission to collect human brain material was obtained from the Ethical Committee of the VU University Medical Center, Amsterdam, The Netherlands, and the Mount Sinai Institutional Review Board. For the Netherlands Brain bank, informed consent for autopsy, the use of brain tissue and accompanied clinical information for research purposes was obtained per donor ante-mortem.
@@ -16,14 +28,8 @@ Further method information can be found:
 - [MiGA NIAGADS entry](https://dss.niagads.org/datasets/ng00105/)
 - [Biorxiv Paper](https://www.biorxiv.org/content/10.1101/2020.10.27.356113v1.full)
 
-I began analysis on the post-imputation/QC VCF file provided by the Towfique lab. The path to this file on the Minerva cluster at ISMMS is below:
-`/sc/arion/projects/load/data-int/MiGA/raw/raj_microglia_anno.MAF.vcf.gz`
+I began analysis on the post-imputation/QC VCF file provided by the Towfique lab.
 
-File size:
-```
-$ ls -lh
--rw-r----- 1 edwart10 LOAD 322M Jul 29  2022 /sc/arion/projects/load/data-int/MiGA/raw/raj_microglia_anno.MAF.vcf.gz
-```
 
 ### Other Key Files
 
