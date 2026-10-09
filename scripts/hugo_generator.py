@@ -24,6 +24,9 @@ DEFAULT_BASE_URL = 'https://statfungen.github.io/xqtl-resources/'
 DEFAULT_GITHUB_URL = 'https://github.com/StatFunGen/xqtl-resources/tree/main/'
 HUGO_BOOK_THEME_URL = 'https://github.com/alex-shpak/hugo-book/archive/refs/heads/master.zip'
 
+OMICS_TITLES = {'histone_ChIPSeq': 'Histone ChIP-seq', 'snATAC': 'snATAC-seq', 'snRNA_seq': 'snRNA-seq'}
+
+
 class HugoSiteGenerator:
     """Hugo site generator with content transformation"""
     
@@ -580,6 +583,25 @@ python scripts/hugo_generator.py --build --minify
         finally:
             os.chdir(original_dir)
     
+    def fix_qtl_section_titles(self):
+        """Show QTL and omics modality folders with their proper names in the side menu"""
+        for d in Path(self.website_content_dir).rglob('*'):
+            if not d.is_dir():
+                continue
+            if re.fullmatch(r'(?i)(ca|gp|ha|met|e|m|p|s)qtl', d.name):
+                title = d.name[:-3].lower() + 'QTL'
+            elif d.name in OMICS_TITLES:
+                title = OMICS_TITLES[d.name]
+            else:
+                continue
+            idx = d / '_index.md'
+            if idx.exists():
+                txt = idx.read_text()
+                txt = re.sub(r'^title:.*$', 'title: "%s"' % title, txt, count=1, flags=re.M)
+                idx.write_text(txt)
+            else:
+                idx.write_text('---\ntitle: "%s"\nbookCollapseSection: true\n---\n' % title)
+
     def run_full_pipeline(self, download_theme=True, generate_readme=True, 
                          build=False, serve=False, minify=False):
         """Run the complete processing pipeline"""
@@ -604,6 +626,7 @@ python scripts/hugo_generator.py --build --minify
         # Step 3: Content
         self.log("\nStep 3: Processing content files...", 'info')
         file_count = self.copy_content_files()
+        self.fix_qtl_section_titles()
         if file_count == 0:
             self.log("Warning: No content files were processed", 'warning')
             success = False

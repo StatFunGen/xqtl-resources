@@ -26,7 +26,6 @@ TransQTL association: Need to be performed.
 
 ## Dataset Details
 
-### Path(s) to genotype matrix
 
 
 
@@ -39,7 +38,6 @@ $ ls -lh batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.
 -rw-r--r-- 1 fgrennjr casa 3.1G Mar  6 14:06 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.txt
 ```
 
-### Path(s) to covariate data matrix
 
 
 ### Path(s) to QTL results

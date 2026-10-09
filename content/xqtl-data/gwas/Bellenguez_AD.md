@@ -20,7 +20,6 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
     - a related meta-analysis of GR@ACE, IGAP and UKB, publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
 
 
-## Path to SuSiE RSS Fine-mapping Objects
 
 ## Download source
 

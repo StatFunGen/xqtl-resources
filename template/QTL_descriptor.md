@@ -152,8 +152,16 @@ Report the number of files and total size only.
 
 ### Access to QTL results
 
+- Synapse: synapse ID(s) of the data.
+
 ### Access to fine-mapping with SuSiE model
+
+- Synapse: synapse ID(s) of the data.
 
 ### Access to fine-mapping with SuSiE RSS model
 
+- Synapse: synapse ID(s) of the data.
+
 ### Access to colocalization with SuSiE-coloc
+
+- Synapse: synapse ID(s) of the data.

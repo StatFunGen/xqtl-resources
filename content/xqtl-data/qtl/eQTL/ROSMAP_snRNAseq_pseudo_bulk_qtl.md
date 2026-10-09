@@ -47,7 +47,6 @@ TransQTL association: Finished.
 - 424 donors extracted for snRNAseq and applied filtering of MAF, HWE, etc.
 
 
-### Path(s) to omics-data matrix
 
 ### Path(s) to covariate data matrix
 
