@@ -19,7 +19,7 @@
   </section>
 
   <section class="stats" aria-label="Headline numbers">
-    <div class="stat"><span class="stat__n">{{ len $rows }}</span><span class="stat__l">datasets documented</span></div>
+    <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
     <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
     <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
   </section>

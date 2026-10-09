@@ -3,13 +3,14 @@
 # summary card and the home page always agree. Page-level facts live in each page's
 # metadata header (see template/metadata_header.md).
 
-# Headline numbers on the home page. Dataset and modality counts are computed from the
-# pages at build time; participants cannot be, so it is set here.
+# Headline numbers on the home page, as reported in the flagship paper. The modality
+# count is computed from the modalities list below.
 home:
+  datasets: "77"
   participants: "2,328"
   participants_note: >-
     Counts are participants. One participant can contribute several tissues,
-    cell types and assays. The flagship paper analyzes 77 molecular datasets.
+    cell types and assays.
   updated: "October 2026"
 
 # QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
@@ -65,7 +66,7 @@ status:
 # Access labels
 access:
   open: {label: Open, desc: "Download without an application from a public URL, an open Synapse folder or NIAGADS DSS."}
-  controlled: {label: Controlled, desc: "Needs a Synapse account and an approved data use certificate for the cohort."}
+  controlled: {label: Controlled, desc: "Needs a Synapse account and data access requested on the AD Knowledge Portal."}
   requested: {label: Requested, desc: "Shared on request from the data owner before general release."}
   pending: {label: Pending, desc: "Access terms are still being set."}
 

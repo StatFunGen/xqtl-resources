@@ -11,7 +11,7 @@ Omics data, QTL results, xQTL models and reference files are on Synapse. Most co
 {{% steps %}}
 1. **Create a Synapse account.** Register at [synapse.org](https://www.synapse.org/) and verify your profile.
 2. **Become a certified user.** Pass the short Synapse certification quiz on data governance.
-3. **Request access.** For controlled data, submit the data use certificate for the cohort through the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/).
+3. **Request access.** For controlled data, request data access on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/).
 4. **Download.** Use the web interface, the Synapse command-line client, or the Python or R client with the Synapse ID from the dataset page.
 {{% /steps %}}
 
