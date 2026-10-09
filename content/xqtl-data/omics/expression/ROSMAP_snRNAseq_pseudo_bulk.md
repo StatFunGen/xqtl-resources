@@ -1,3 +1,16 @@
+---
+type: omics
+modality: expression
+short_title: ROSMAP pseudo-bulk
+cohort: ROSMAP
+context: "DLPFC, cell types"
+access: controlled
+status:
+synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Hao Sun, Masashi Fujita]
+last_verified:
+---
+
 # ROSMAP snRNA-seq pseudo-bulk gene expression 
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC). 

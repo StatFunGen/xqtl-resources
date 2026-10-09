@@ -1,0 +1,9 @@
+{{- /* (dict "cur" page "page" page "label" .. "hint" .. "mark" dict "sub" bool "href" ..) */ -}}
+  {{- $href := .href -}}
+  {{- with .page }}{{ $href = .RelPermalink }}{{ end -}}
+  {{- $on := and .page (eq .page.RelPermalink .cur.RelPermalink) -}}
+  <li><a class="nav-item{{ if $on }} is-active{{ end }}{{ if .open }} is-open{{ end }}{{ if .sub }} nav-item--sub{{ end }}" href="{{ $href }}"{{ if $on }} aria-current="page"{{ end }}{{ if .external }} rel="noopener"{{ end }}>
+    {{- if .mark }}{{ partial "ui/mark.html" .mark }}{{ else if not .sub }}<span class="sq sq--none" aria-hidden="true"></span>{{ end -}}
+    <span class="nav-item__label">{{ .label }}</span>
+    {{- with .hint }}<span class="nav-item__hint">{{ . }}</span>{{ end -}}
+  </a></li>

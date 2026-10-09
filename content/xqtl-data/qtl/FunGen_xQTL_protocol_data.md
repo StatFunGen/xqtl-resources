@@ -1,3 +1,14 @@
+---
+type: qtl
+short_title: Protocol toy data
+cohort: ROSMAP
+sample_size:
+status:
+synapse_ids: [syn36416601, syn4164376, syn21088596]
+lead_analysts: []
+last_verified:
+---
+
 # FunGen-xQTL protocol data
 
 A toy data-set consisting of 49 de-identified samples from ROSMAP project, used to illustrates the computational protocols we developed for the detection and analysis of molecular QTLs (xQTLs). 

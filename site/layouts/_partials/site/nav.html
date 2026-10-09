@@ -1,0 +1,93 @@
+{{- /* Left menu: fixed groups with consistent labels (eQTL, sQTL, caQTL ...). The current
+  modality or omics type expands to list its datasets. */ -}}
+{{- $cur := . -}}
+{{- $x := hugo.Data.xqtl -}}
+
+<nav class="nav">
+  <div class="nav-group">
+    <div class="nav-group__title">Overview</div>
+    <ul>
+      {{ partial "site/nav-link.html" (dict "cur" $cur "page" site.Home "label" "Home") }}
+      {{ with site.GetPage "/xqtl-data" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Data catalog") }}{{ end }}
+      {{ with site.GetPage "/how_to_get_data" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "How to get the data") }}{{ end }}
+      {{ with site.GetPage "/inventory" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Dataset inventory") }}{{ end }}
+      {{ with site.GetPage "/coverage" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Analysis coverage") }}{{ end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">Study cohorts</div>
+    <ul>
+      {{- range $x.cohorts }}
+        {{- if .page }}
+          {{- with site.GetPage (printf "/xqtl-data/study_info/%s" .page) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" .LinkTitle) }}{{ end }}
+        {{- else }}
+          {{ partial "site/nav-link.html" (dict "cur" $cur "href" .url "label" .name "hint" "external" "external" true) }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">AD GWAS</div>
+    <ul>
+      {{- with site.GetPage "/xqtl-data/gwas/AD_GWAS" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" .LinkTitle) }}{{ end }}
+      {{- range $x.gwas }}
+        {{- with site.GetPage (printf "/xqtl-data/gwas/%s" .page) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" .LinkTitle) }}{{ end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">QTL results</div>
+    <ul>
+      {{- range $x.modalities }}
+        {{- $id := .id -}}
+        {{- $mark := dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill" -}}
+        {{- with site.GetPage (printf "/xqtl-data/qtl/%s" .id) }}
+          {{- $open := or (eq . $cur) (.IsAncestor $cur) -}}
+          {{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $id "hint" (len .RegularPages) "mark" $mark "open" $open) }}
+          {{- if $open }}
+            {{- range .RegularPages.ByTitle }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" .LinkTitle "sub" true) }}{{ end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">Omics data</div>
+    <ul>
+      {{- range $x.omics }}
+        {{- $fam := .family -}}
+        {{- $label := .label -}}
+        {{- $color := "" -}}
+        {{- range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+        {{- if eq $fam "Genotype" }}{{ $color = "#8d959f" }}{{ end -}}
+        {{- with site.GetPage (printf "/xqtl-data/omics/%s" .folder) }}
+          {{- $open := or (eq . $cur) (.IsAncestor $cur) -}}
+          {{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label "mark" (dict "color" $color "mark" (cond (ne $color "") "ring" "none")) "open" $open) }}
+          {{- if $open }}
+            {{- range .RegularPages.ByTitle }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" .LinkTitle "sub" true) }}{{ end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">Reference</div>
+    <ul>
+      {{- range slice
+        (slice "/xqtl-data/reference_data" "Reference data")
+        (slice "/xqtl_resource_description" "Resource description")
+        (slice "/xqtl_resource_format" "File formats")
+        (slice "/fgmb_weights_database" "FGMB atlas")
+        (slice "/xqtl-data/qtl/FunGen_xQTL_protocol_data" "Protocol toy data")
+        (slice "/fungen-ad-members" "Consortium members") }}
+        {{- $label := index . 1 -}}
+        {{- with site.GetPage (index . 0) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label) }}{{ end }}
+      {{- end }}
+    </ul>
+  </div>
+</nav>

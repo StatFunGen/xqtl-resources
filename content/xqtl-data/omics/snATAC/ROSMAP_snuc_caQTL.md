@@ -1,3 +1,17 @@
+---
+type: omics
+modality: snATAC
+short_title: ROSMAP snATAC-seq
+cohort: ROSMAP
+context: "DLPFC, cell types"
+sample_size:
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: []
+last_verified:
+---
+
 # ROSMAP snATAC-seq Chromatin Accessibility
 
 ## Summary

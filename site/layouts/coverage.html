@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{- /* Analysis coverage (design 9b): dataset x xQTL protocol method, from the `methods:` map
+  in each page header plus data/next_phase.yaml. */ -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $grid := slice -}}
+{{- range where (partialCached "ds/rows.html" . "rows") "kind" "qtl" -}}
+  {{- if .methods }}{{ $grid = $grid | append (dict "name" .short "href" .href "tag" .label "color" .color "methods" .methods "next" false) }}{{ end -}}
+{{- end -}}
+{{- range hugo.Data.next_phase -}}
+  {{- if .methods -}}
+  {{- $grid = $grid | append (dict "name" .name "href" "" "tag" (printf "%s · next phase" .modality) "color" "oklch(0.6 0.13 250)" "methods" .methods "next" true) -}}
+  {{- end -}}
+{{- end -}}
+{{- $ready := 0 -}}
+{{- range $grid }}{{ range $m, $s := .methods }}{{ if eq $s "not_run" }}{{ $ready = add $ready 1 }}{{ end }}{{ end }}{{ end -}}
+<article class="wide">
+  <header class="wide__head">
+    {{ partial "site/breadcrumb.html" . }}
+    <div class="wide__titlebar">
+      <div><span class="eyebrow">xQTL protocol</span><h1 class="page__title">{{ .Title }}</h1></div>
+      <div class="legend">
+        {{- range $k := slice "done" "running" "not_run" "awaiting" "decide" }}{{ $s := index $x.method_status $k }}<span><span class="mcell mcell--{{ $k }}" aria-hidden="true">{{ $s.glyph }}</span>{{ $s.label }}</span>{{ end }}
+      </div>
+      <button type="button" class="btn btn--toggle" data-ready aria-pressed="false">Not yet run · {{ $ready }}</button>
+    </div>
+    {{ with .Params.lead }}<div class="wide__intro">{{ $.RenderString . }}</div>{{ end }}
+  </header>
+  <div class="wide__body">
+    <table class="cov" data-cov>
+      <thead><tr><th scope="col"><span class="sr-only">Dataset</span></th>{{ range $x.methods }}<th scope="col">{{ . }}</th>{{ end }}<th scope="col" class="r">DONE</th></tr></thead>
+      <tbody>
+      {{- range $grid }}
+        {{- $r := . -}}
+        {{- $done := 0 }}{{ $app := 0 -}}
+        {{- range $m, $s := .methods }}{{ $app = add $app 1 }}{{ if eq $s "done" }}{{ $done = add $done 1 }}{{ end }}{{ end }}
+        <tr{{ if .next }} class="is-next"{{ end }}>
+          <th scope="row">{{ if .href }}<a href="{{ .href }}">{{ partial "ui/mark.html" (dict "color" .color "mark" "fill") }}{{ .name }}</a>{{ else }}{{ partial "ui/mark.html" (dict "color" .color "mark" "ring") }}{{ .name }}{{ end }}<span class="tag">{{ .tag }}</span></th>
+          {{- range $m := $x.methods }}
+          {{- $s := index $r.methods $m }}
+          <td>{{ with $s }}{{ $d := index $x.method_status . }}<span class="mcell mcell--{{ . }}" title="{{ $r.name }} {{ $r.tag }} · {{ $m }}: {{ with $d }}{{ .label }}{{ end }}">{{ with $d }}{{ .glyph }}{{ end }}<span class="sr-only">{{ with $d }}{{ .label }}{{ end }}</span></span>{{ else }}<span class="subtle" title="Not applicable">–</span>{{ end }}</td>
+          {{- end }}
+          <td class="r">{{ $done }}/{{ $app }}</td>
+        </tr>
+      {{- end }}
+      </tbody>
+    </table>
+  </div>
+  <div class="wide__foot"><p class="note">Statuses come from a <code>methods:</code> map in each page's metadata header; datasets without a page yet are listed in <code>site/data/next_phase.yaml</code>. "Not yet run" marks a method that applies to data already in hand, a quick way to see what can be run next.</p></div>
+  {{ with .Content }}<div class="wide__foot"><div class="prose">{{ . }}</div></div>{{ end }}
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+(function () {
+  var b = document.querySelector('[data-ready]'), t = document.querySelector('[data-cov]');
+  if (!b || !t) return;
+  b.addEventListener('click', function () {
+    var on = b.getAttribute('aria-pressed') !== 'true';
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    t.classList.toggle('ready-only', on);
+  });
+})();
+</script>
+{{ end }}

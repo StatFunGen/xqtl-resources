@@ -1,3 +1,15 @@
+---
+type: omics
+modality: genotype
+short_title: MiGA genotype
+cohort: MiGA
+access: controlled
+status:
+synapse_ids: []
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # MiGA genotype data
 
 Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropathology Brain Bank and Research CoRE at Mount Sinai Hospital. The permission to collect human brain material was obtained from the Ethical Committee of the VU University Medical Center, Amsterdam, The Netherlands, and the Mount Sinai Institutional Review Board. For the Netherlands Brain bank, informed consent for autopsy, the use of brain tissue and accompanied clinical information for research purposes was obtained per donor ante-mortem.

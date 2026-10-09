@@ -1,3 +1,17 @@
+---
+type: qtl
+modality: caQTL
+short_title: ROSMAP single-nucleus
+cohort: ROSMAP
+context: "DLPFC, cell types"
+sample_size:
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
+lead_analysts: [FunGen-xQTL Analysis Team]
+last_verified:
+---
+
 # ROSMAP Single-Nucleus Chromatin Accessibility QTL (caQTL)
 
 Single-nucleus ATAC-seq chromatin accessibility QTL analysis from ROSMAP donors, covering MIT snATAC-seq and CUIMC & MIT harmonized Multiome ATAC data.

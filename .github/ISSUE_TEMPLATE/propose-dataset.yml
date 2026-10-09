@@ -1,0 +1,53 @@
+name: Propose a dataset
+description: Suggest a new or expanded dataset for the FunGen-xQTL catalog. A curator turns it into a page.
+title: "Dataset proposal: "
+labels: [dataset-proposal]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Give public identifiers only: a Synapse ID or a public URL. Do not paste cluster, HPC or FTP paths, emails, or participant-level details.
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+      placeholder: e.g. MSSM PsychAD snRNA-seq
+    validations:
+      required: true
+  - type: input
+    id: cohort
+    attributes:
+      label: Cohort
+      placeholder: e.g. ROSMAP, MSBB, Knight-ADRC, MiGA
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Context (organ, tissue or cell type)
+      placeholder: e.g. DLPFC, microglia, 7 cell types
+  - type: input
+    id: modality
+    attributes:
+      label: Modality
+      placeholder: e.g. snRNA-seq, methylation, proteomics
+    validations:
+      required: true
+  - type: input
+    id: n
+    attributes:
+      label: Sample size (aggregate)
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      options: [open, controlled, requested, not known yet]
+  - type: input
+    id: synapse
+    attributes:
+      label: Synapse ID or public URL
+      placeholder: syn...
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs in the atlas

@@ -1,3 +1,16 @@
+---
+type: omics
+modality: splicing
+short_title: MSBB brain
+cohort: MSBB
+context: 4 brain regions
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Minghui Wang]
+last_verified:
+---
+
 # MSBB brain alternative splicing
 
 ## Contact

@@ -1,3 +1,16 @@
+---
+type: omics
+modality: snRNA_seq
+short_title: ROSMAP CUIMC
+cohort: ROSMAP
+context: DLPFC
+access: controlled
+status:
+synapse_ids: [syn31512863, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Anjing Liu]
+last_verified:
+---
+
 # ROSMAP CUIMC snRNA-seq expression
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) single-nucleus RNA-seq expression data from Columbia University Irving Medical Center (CUIMC).
 

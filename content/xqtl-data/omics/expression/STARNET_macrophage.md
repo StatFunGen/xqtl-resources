@@ -1,3 +1,16 @@
+---
+type: omics
+modality: expression
+short_title: STARNET macrophage
+cohort: STARNET
+context: macrophage
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # STARNET macrophage gene expression QTL
 
 STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery.

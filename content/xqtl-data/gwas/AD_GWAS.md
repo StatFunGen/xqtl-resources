@@ -1,5 +1,6 @@
 ---
 type: gwas
+short_title: AD GWAS overview
 status:
 synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69696846, syn69865824]
 lead_analysts: []

@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- $i := partial "ds/info.html" . -}}
+<article class="page">
+  <header class="page__head">
+    {{ partial "site/breadcrumb.html" . }}
+    <h1 class="page__title">{{ if and $i.label (in (slice "qtl" "omics") $i.kind) }}{{ $i.label }}{{ if eq $i.kind "omics" }} data{{ end }}{{ else }}{{ .Title }}{{ end }}</h1>
+    {{ with .Params.lead }}<div class="page__lead">{{ $.RenderString . }}</div>{{ end }}
+  </header>
+
+  {{- /* Datasets in this section and below, in the catalog row style */ -}}
+  {{- $pages := slice -}}
+  {{- range .RegularPagesRecursive.ByTitle }}{{ $o := partial "ds/info.html" . }}{{ if ne $o.kind "other" }}{{ $pages = $pages | append (dict "page" . "info" $o) }}{{ end }}{{ end -}}
+  {{- with $pages }}
+  <div class="table-card">
+    <table class="dtable dtable--list">
+      <thead><tr><th>Dataset</th><th>Cohort</th><th>Type</th><th>Tissue / cell</th><th class="r">N</th><th>Status</th><th>Access</th></tr></thead>
+      <tbody>
+      {{- range . }}
+        <tr>
+          <td><a class="strong" href="{{ .page.RelPermalink }}">{{ .page.Title }}</a></td>
+          <td>{{ .info.cohort }}</td>
+          <td class="mono nowrap">{{ partial "ui/mark.html" .info }}{{ .info.label }}</td>
+          <td>{{ .info.context }}</td>
+          <td class="r mono">{{ with .info.n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+          <td>{{ with .info.status }}{{ partial "ui/status.html" . }}{{ end }}</td>
+          <td>{{ with .info.access }}{{ partial "ui/access.html" . }}{{ end }}</td>
+        </tr>
+      {{- end }}
+      </tbody>
+    </table>
+  </div>
+  {{- end }}
+
+  {{- /* A hand-written section page keeps its Markdown. Generated link lists are replaced by the table above. */ -}}
+  {{- if and .Content (not .Params.generated_list) }}
+  <div class="prose">{{ .Content }}</div>
+  {{- end }}
+  {{ partial "site/page-foot.html" . }}
+</article>
+{{ end }}
+
+{{ define "toc" }}{{ partial "site/toc.html" (dict "page" . "dataset" false) }}{{ end }}

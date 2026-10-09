@@ -1,3 +1,17 @@
+---
+type: qtl
+modality: metQTL
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+sample_size:
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
+lead_analysts: [FunGen-xQTL Analysis Team]
+last_verified:
+---
+
 # ROSMAP DLPFC Brain Metabolomics QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) brain tissue metabolomics QTL analysis.

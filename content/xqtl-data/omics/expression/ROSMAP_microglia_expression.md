@@ -1,3 +1,16 @@
+---
+type: omics
+modality: expression
+short_title: ROSMAP microglia
+cohort: ROSMAP
+context: microglia
+access: controlled
+status:
+synapse_ids: [syn2580853, syn11468526, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # ROSMAP RNA-seq microglia gene expression
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) microglia data-set. 

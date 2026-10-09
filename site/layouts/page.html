@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{- $i := partial "ds/info.html" . -}}
+{{- if in (slice "qtl" "omics" "gwas" "reference" "study") $i.kind -}}
+  {{ partial "ds/page.html" (dict "page" . "info" $i) }}
+{{- else -}}
+  {{ partial "site/doc.html" . }}
+{{- end -}}
+{{ end }}
+
+{{ define "toc" }}
+{{- $i := partial "ds/info.html" . -}}
+{{ partial "site/toc.html" (dict "page" . "dataset" (in (slice "qtl" "omics" "gwas" "reference" "study") $i.kind) "info" $i) }}
+{{ end }}

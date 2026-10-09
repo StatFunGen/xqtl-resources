@@ -1,3 +1,17 @@
+---
+type: omics
+modality: genotype
+short_title: STARNET genotype
+cohort: STARNET
+context: blood
+access: controlled
+status:
+release:
+synapse_ids: []
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # STARNET genotype data
 
 STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery. 

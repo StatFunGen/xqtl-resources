@@ -1,0 +1,10 @@
+{{- /* Code block with a language label and a Copy button (design 3a). */ -}}
+{{- $lang := .Type | default "text" -}}
+<div class="codeblock">
+  <div class="codeblock__bar"><span>{{ $lang }}</span><button type="button" class="codeblock__copy" data-copy-code>Copy</button></div>
+  {{- if transform.CanHighlight $lang }}
+  {{ transform.Highlight .Inner $lang (dict "noClasses" false) }}
+  {{- else }}
+  <pre><code>{{ .Inner }}</code></pre>
+  {{- end }}
+</div>

@@ -1,3 +1,17 @@
+---
+type: qtl
+modality: sQTL
+short_title: ROSMAP single-nucleus
+cohort: ROSMAP
+context: "DLPFC, 7 cell types"
+sample_size:
+access: controlled
+status:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [FunGen-xQTL Analysis Team]
+last_verified:
+---
+
 # ROSMAP Single-Nucleus Alternative Splicing QTL (snSplicing)
 
 Single-nucleus alternative splicing QTL analysis from CUIMC & MIT harmonized snRNA-seq / Multiome data across seven major cell types.

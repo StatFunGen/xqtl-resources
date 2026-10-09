@@ -1,0 +1,7 @@
+<button type="button" class="fopt" data-facet="{{ .facet }}" data-value="{{ .value }}" aria-pressed="false">
+  <span class="fopt__box" aria-hidden="true"></span>
+  {{- if .mark }}{{ partial "ui/mark.html" .mark }}{{ end -}}
+  {{- if .acc }}<span class="acc acc--{{ .acc }}"><span class="acc__mark" aria-hidden="true"></span></span>{{ end -}}
+  <span class="fopt__label">{{ .label }}</span>
+  <span class="fopt__count" data-count-for></span>
+</button>

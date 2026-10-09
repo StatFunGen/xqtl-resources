@@ -1,3 +1,16 @@
+---
+type: reference
+short_title: LD reference panel
+cohort: ADSP
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn53171227, syn69670651, syn69670652]
+lead_analysts: [Oluwatosin Olayinka]
+last_verified:
+---
+
 # Non-Hispanic White Linkage Disequilibrium Reference Panel
 LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD). Correlation matrices were calculated between SNPs within 1361 LD blocks which were obtained from [this Github page](https://github.com/jmacdon/LDblocks_GRCh38/) (generated from 1000 Genomes EUR samples).
 

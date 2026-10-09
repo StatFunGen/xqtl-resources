@@ -37,7 +37,11 @@ ids_by_page = {}
 for p in pages:
     t = open(p, encoding="utf-8").read()
     lines = t.split("\n")
-    title = lines[0].lstrip("# ").strip() if lines and lines[0].startswith("#") else ""
+    # the title is the first heading after the optional YAML metadata header
+    body = lines
+    if t.startswith("---\n") and "\n---" in t[4:]:
+        body = t[t.find("\n---", 4) + 4:].lstrip("\n").split("\n")
+    title = body[0].lstrip("# ").strip() if body and body[0].startswith("#") else ""
     if not title: flag(p, "no_title")
     titles.setdefault(title, []).append(p)
     has_header = t.startswith("---\n")

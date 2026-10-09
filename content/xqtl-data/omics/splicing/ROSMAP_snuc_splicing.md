@@ -1,3 +1,16 @@
+---
+type: omics
+modality: splicing
+short_title: ROSMAP ISSAC
+cohort: ROSMAP
+context: "DLPFC, cell types"
+access: controlled
+status:
+synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: []
+last_verified:
+---
+
 # ROSMAP snRNA-seq Splicing (ISSAC)
 
 Single-nucleus RNA-seq splicing QTL analysis using the ISSAC (Integrative Single-cell Splicing Analysis with Context) method, applied to harmonized CUIMC and MIT single-nucleus data from ROSMAP DLPFC.

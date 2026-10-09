@@ -1,0 +1,7 @@
+{{- /* Cards explaining each access label, from data/xqtl.yaml */ -}}
+<div class="defs">
+  {{- range slice "open" "controlled" "requested" }}
+  {{- $a := index hugo.Data.xqtl.access . }}
+  <div class="card def">{{ partial "ui/access.html" . }}<p>{{ $a.desc }}</p></div>
+  {{- end }}
+</div>

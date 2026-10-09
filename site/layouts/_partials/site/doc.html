@@ -1,0 +1,12 @@
+{{- /* A plain content page: breadcrumb, serif title, lead, then the Markdown body unchanged. */ -}}
+<article class="page">
+  <header class="page__head">
+    {{ partial "site/breadcrumb.html" . }}
+    <h1 class="page__title">{{ .Title }}</h1>
+    {{ with .Params.lead }}<div class="page__lead">{{ $.RenderString . }}</div>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ partial "site/page-foot.html" . }}
+</article>

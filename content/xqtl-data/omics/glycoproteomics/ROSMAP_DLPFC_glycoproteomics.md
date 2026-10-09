@@ -1,3 +1,16 @@
+---
+type: omics
+modality: glycoproteomics
+short_title: ROSMAP DLPFC
+cohort: ROSMAP
+context: DLPFC
+access:
+status:
+synapse_ids: [syn17015098, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [FunGen-xQTL Analysis Working Group]
+last_verified:
+---
+
 # ROSMAP DLPFC Glycoproteomics
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC glycoproteomics (N-glycosylation proteomics).

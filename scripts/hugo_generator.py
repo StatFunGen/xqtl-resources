@@ -14,8 +14,13 @@ import shutil
 import urllib.request
 import zipfile
 import tempfile
+import json
 from pathlib import Path
 from collections import defaultdict
+try:
+    import yaml
+except ImportError:
+    yaml = None
 
 # Configuration defaults
 DEFAULT_CONTENT_DIR = 'content'
@@ -23,6 +28,12 @@ DEFAULT_WEBSITE_DIR = 'website'
 DEFAULT_BASE_URL = 'https://statfungen.github.io/xqtl-resources/'
 DEFAULT_GITHUB_URL = 'https://github.com/StatFunGen/xqtl-resources/tree/main/'
 HUGO_BOOK_THEME_URL = 'https://github.com/alex-shpak/hugo-book/archive/refs/heads/master.zip'
+# Site layouts, styles and data that override hugo-book (copied into the website directory)
+DEFAULT_SITE_DIR = 'site'
+# Header keys that are Hugo page settings rather than dataset metadata
+HUGO_KEYS = {'layout', 'weight', 'description', 'linkTitle', 'bookHidden', 'bookToc'}
+# Pages that use a dedicated layout, by source path relative to the content directory
+PAGE_LAYOUTS = {'xqtl-data/README.md': 'catalog'}
 
 OMICS_TITLES = {'histone_ChIPSeq': 'Histone ChIP-seq', 'snATAC': 'snATAC-seq', 'snRNA_seq': 'snRNA-seq'}
 
@@ -107,6 +118,23 @@ class HugoSiteGenerator:
             if os.path.exists(tmp_path):
                 os.remove(tmp_path)
 
+    def copy_site_overlay(self, site_dir=DEFAULT_SITE_DIR):
+        """Copy the site layouts, styles, scripts and data that override hugo-book"""
+        if not os.path.isdir(site_dir):
+            self.log(f"No {site_dir}/ directory, using hugo-book defaults", 'warning')
+            return False
+        for name in os.listdir(site_dir):
+            src = os.path.join(site_dir, name)
+            dest = os.path.join(self.website_dir, name)
+            if os.path.isdir(src):
+                if os.path.exists(dest):
+                    shutil.rmtree(dest)
+                shutil.copytree(src, dest)
+            else:
+                shutil.copy2(src, dest)
+        self.log(f"Copied site layouts and styles from {site_dir}/", 'success')
+        return True
+
     def create_hugo_config(self):
         """Copy Hugo configuration file from source repository"""
         source_config = 'hugo.toml'
@@ -140,7 +168,8 @@ class HugoSiteGenerator:
             return f'```{code}```' if is_block else f'`{code}`'
         
         content = re.sub(r'```(.*?)```', lambda m: escape_braces(m, True), content, flags=re.DOTALL)
-        content = re.sub(r'`([^`]+)`', lambda m: escape_braces(m, False), content)
+        # Inline code never spans lines; matching across lines would pair backticks from different spans
+        content = re.sub(r'`([^`\n]+)`', lambda m: escape_braces(m, False), content)
         
         # Remove Pandoc-style attributes
         content = re.sub(r'\{\.[\w\s-]+\}', '', content)
@@ -177,7 +206,63 @@ class HugoSiteGenerator:
                 return content[end + 4:].lstrip('\n')
         return content
 
-    def add_frontmatter(self, content, title, filepath, depth_level=1):
+    def parse_source_header(self, content, filepath):
+        """Return the source metadata header as a dict, without the internal field"""
+        if not content.startswith('---\n') or content.find('\n---', 4) < 0:
+            return {}
+        if yaml is None:
+            self.log(f"PyYAML not installed, metadata header ignored: {filepath}", 'warning')
+            return {}
+        try:
+            meta = yaml.safe_load(content[4:content.find('\n---', 4)]) or {}
+        except yaml.YAMLError as e:
+            self.log(f"Invalid metadata header in {filepath}: {e}", 'warning')
+            return {}
+        if not isinstance(meta, dict):
+            return {}
+        meta.pop('internal', None)
+        return meta
+
+    def split_title_and_lead(self, content):
+        """Remove the first-level heading (the layout prints the title) and the opening
+        paragraphs before the first section heading (the layout prints them as the lead).
+        Returns (lead, body). Nothing is dropped: the lead is shown above the body."""
+        lines = content.split('\n')
+        i = 0
+        while i < len(lines) and not lines[i].strip():
+            i += 1
+        if i < len(lines) and re.match(r'^#\s+', lines[i]):
+            lines = lines[i + 1:]
+        else:
+            return '', content
+        # Lead: up to two plain paragraphs. Stop at headings, lists, tables, code, HTML and rules
+        block_start = re.compile(r'^\s*(#|\||[-*+]\s|\d+\.\s|```|<|>|---|\*\*\*|\{\{)')
+        lead, para, n_para, j = [], [], 0, 0
+        while j < len(lines):
+            line = lines[j]
+            if not line.strip():
+                if para:
+                    lead.append('\n'.join(para))
+                    para, n_para = [], n_para + 1
+                    if n_para == 2:
+                        break
+                j += 1
+                continue
+            if block_start.match(line):
+                break
+            para.append(line)
+            j += 1
+        if para:
+            # a paragraph that runs straight into a list or heading stays in the body
+            j -= len(para)
+        return '\n\n'.join(lead), '\n'.join(lines[j:]).lstrip('\n')
+
+    def is_generated_list(self, content):
+        """True for section READMEs written by toc.py --subfolder-readme (a title and links only)"""
+        lines = [l for l in content.split('\n') if l.strip()]
+        return bool(lines) and all(re.match(r'^(#\s|\*\s+\[[^\]]+\]\([^)]+\)\s*$)', l) for l in lines)
+
+    def add_frontmatter(self, content, title, filepath, depth_level=1, meta=None, extra=None):
         """Add Hugo frontmatter to markdown content
         
         Hugo Book theme automatically generates navigation based on:
@@ -206,10 +291,23 @@ class HugoSiteGenerator:
 title: "{safe_title}"
 weight: {weight}
 bookToc: true
-{book_collapse}{book_hidden}---
-
-"""
-        return frontmatter + content
+{book_collapse}{book_hidden}"""
+        # Page settings from the source header, then dataset metadata under one key
+        # so that fields such as `type` do not collide with Hugo's own front matter
+        fields = {}
+        meta = dict(meta or {})
+        for key in list(meta):
+            if key in HUGO_KEYS:
+                fields[key] = meta.pop(key)
+        if meta.get('short_title'):
+            fields.setdefault('linkTitle', meta['short_title'])
+        if meta:
+            fields['dataset'] = meta
+        fields.update(extra or {})
+        for key, value in fields.items():
+            # JSON is valid YAML, and it keeps dates and lists unambiguous
+            frontmatter += f"{key}: {json.dumps(value, default=str, ensure_ascii=False)}\n"
+        return frontmatter + "---\n\n" + content
     
     def process_markdown_file(self, source_file, dest_file, depth_level=1):
         """Process a single markdown file with all transformations"""
@@ -218,16 +316,28 @@ bookToc: true
             with open(source_file, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
             
-            # Strip the optional source metadata header (--- ... ---) so that it is not
-            # rendered and does not collide with the Hugo front matter added below
+            # Read the optional source metadata header (--- ... ---), then strip it so that it
+            # is not rendered. Its public fields are passed to the layouts as front matter.
+            meta = self.parse_source_header(content, source_file)
             content = self.strip_source_header(content)
 
             # Extract title and sanitize content
             title = self.extract_title_from_content(content, source_file)
             content = self.sanitize_markdown_content(content)
-            
+
+            rel_path = os.path.relpath(source_file, self.source_content_dir).replace(os.sep, '/')
+            extra = {'source_path': f"{self.source_content_dir}/{rel_path}"}
+            if rel_path in PAGE_LAYOUTS:
+                extra['layout'] = PAGE_LAYOUTS[rel_path]
+            if self.is_generated_list(content):
+                extra['generated_list'] = True
+            else:
+                lead, content = self.split_title_and_lead(content)
+                if lead:
+                    extra['lead'] = lead
+
             # Add frontmatter
-            content = self.add_frontmatter(content, title, source_file, depth_level)
+            content = self.add_frontmatter(content, title, source_file, depth_level, meta, extra)
             
             # Ensure destination directory exists
             os.makedirs(os.path.dirname(dest_file), exist_ok=True)
@@ -622,7 +732,8 @@ python scripts/hugo_generator.py --build --minify
                 self.log("Theme download failed but continuing...", 'warning')
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
-        
+        self.copy_site_overlay()
+
         # Step 3: Content
         self.log("\nStep 3: Processing content files...", 'info')
         file_count = self.copy_content_files()

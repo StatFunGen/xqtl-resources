@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default "en" }}" data-theme-pref="auto">
+<head>
+  {{ partial "site/head.html" . }}
+</head>
+<body class="kind-{{ .Kind }}{{ with .Layout }} layout-{{ . }}{{ end }}{{ if in (slice "catalog" "inventory" "coverage") .Layout }} is-wide{{ end }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "site/header.html" . }}
+  <div class="shell">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+    <aside class="sidenav" id="sidenav" aria-label="Site menu">
+      {{ partial "site/nav.html" . }}
+    </aside>
+    <label for="nav-toggle" class="nav-scrim" aria-hidden="true"></label>
+    <main id="main" class="main" tabindex="-1">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "toc" . }}{{ end }}
+  </div>
+  {{ $js := resources.Get "xqtl/site.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

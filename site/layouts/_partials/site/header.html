@@ -1,0 +1,25 @@
+{{- $howto := site.GetPage "/how_to_get_data" -}}
+<header class="topbar">
+  <label for="nav-toggle" class="icon-btn topbar__menu" aria-label="Open menu" role="button" tabindex="0">
+    <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+  </label>
+  <a class="brand" href="{{ "/" | relURL }}">
+    {{ partial "ui/logo.html" . }}
+    <span class="brand__name">FunGen-xQTL <span class="brand__sub">Resources</span></span>
+  </a>
+  <div class="search" role="search">
+    <span class="search__icon" aria-hidden="true"></span>
+    <input id="book-search-input" type="search" enterkeyhint="search" maxlength="64"
+      placeholder="Search datasets, cohorts, tissues, Synapse IDs" aria-label="Search the site" autocomplete="off">
+    <kbd class="search__key" aria-hidden="true">/</kbd>
+    <ul id="book-search-results" class="search__results" aria-live="polite"></ul>
+  </div>
+  <nav class="topbar__links" aria-label="Site links">
+    {{ with $howto }}<a href="{{ .RelPermalink }}">How to get the data</a>{{ end }}
+    <a href="{{ site.Params.protocolURL }}">xQTL protocol</a>
+    <a href="{{ site.Params.repoURL }}">GitHub</a>
+  </nav>
+  <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Colour theme: automatic" title="Colour theme">
+    <span class="theme-toggle__icon" aria-hidden="true"></span>
+  </button>
+</header>

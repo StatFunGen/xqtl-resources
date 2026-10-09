@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: eQTL
+short_title: ROSMAP snuc-eQTL
+cohort: ROSMAP
+context: "DLPFC, 7 cell types"
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Hao Sun, Masashi Fujita]
+last_verified:
+---
+
 # ROSMAP snRNA-seq pseudo-bulk gene expression QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC). 

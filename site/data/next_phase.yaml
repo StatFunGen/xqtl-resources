@@ -1,0 +1,31 @@
+# Datasets being curated for the next phase of the atlas that do not have a page yet.
+# They appear in the inventory and the analysis coverage grid. When a dataset gets its
+# own page under content/xqtl-data, remove it here.
+# acquisition: in_hand | reviewing | requested | to_identify
+# methods: same statuses as a page header (done, running, not_run, awaiting, decide)
+
+- name: ROSMAP snRNA-seq gene expression (expanded)
+  cohort: ROSMAP
+  context: Brain, cell types
+  omics: snRNA_seq
+  modality: snuc-eQTL
+  access: controlled
+  acquisition: reviewing
+  synapse: syn57373409
+  note: Review and add to the atlas
+  methods: {cis-QTL: awaiting, SuSiE: awaiting, ColocBoost: awaiting, TWAS: awaiting, cTWAS: awaiting, MR: awaiting, LF2: decide, scEEMS: awaiting}
+
+- name: MSSM PsychAD snRNA-seq (Towfique lab)
+  cohort: MSSM PsychAD
+  context: Prefrontal cortex, cell types
+  omics: snRNA_seq
+  modality: snuc-eQTL
+  access: controlled
+  acquisition: requested
+  synapse: syn52160016
+  note: Access being arranged
+  methods: {cis-QTL: awaiting, SuSiE: awaiting, ColocBoost: awaiting, TWAS: awaiting, cTWAS: awaiting, MR: awaiting, LF2: decide, scEEMS: awaiting}
+
+- name: Other new or expanded datasets
+  acquisition: to_identify
+  note: Add candidates with + Propose a dataset

@@ -1,3 +1,18 @@
+---
+type: omics
+modality: proteomics
+short_title: Knight ADRC brain
+cohort: Knight-ADRC
+context: parietal cortex
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Zining Qi]
+last_verified:
+---
+
 # Knight ADRC brain proteomics
 Charles F And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC)
 

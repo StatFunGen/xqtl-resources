@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: haQTL
+short_title: ROSMAP DLPFC H3K9ac
+cohort: ROSMAP
+context: DLPFC
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Xuanhe Chen]
+last_verified:
+---
+
 # ROSMAP DLPFC H3K9ac QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac QTL analysis using the FGC xQTL pipeline. 

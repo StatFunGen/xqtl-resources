@@ -1,3 +1,18 @@
+---
+type: omics
+modality: snRNA_seq
+short_title: ROSMAP Mega
+cohort: ROSMAP
+context: DLPFC
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670630, syn69865816]
+lead_analysts: [Anjing Liu]
+last_verified:
+---
+
 # ROSMAP Mega snRNA-seq expression
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) mega-analysis combining single-nucleus RNA-seq data from CUIMC and MIT.
 

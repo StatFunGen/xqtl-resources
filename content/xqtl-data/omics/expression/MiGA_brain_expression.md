@@ -1,3 +1,18 @@
+---
+type: omics
+modality: expression
+short_title: MiGA microglia
+cohort: MiGA
+context: "microglia, 4 regions"
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # MiGA multi-brain region gene expression
 
 A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.

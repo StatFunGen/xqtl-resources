@@ -1,3 +1,18 @@
+---
+type: qtl
+modality: eQTL
+short_title: ROSMAP monocyte
+cohort: ROSMAP
+context: monocyte
+sample_size:
+access: controlled
+status:
+release:
+synapse_ids: [syn22024496, syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+lead_analysts: [Travyse Edwards]
+last_verified:
+---
+
 # ROSMAP RNA-seq monocyte QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) monocyte data-set. 

@@ -1,0 +1,66 @@
+{{- /*
+  Everything the layouts need to know about one page, computed in one place.
+  Input: a page. Returns a dict:
+    kind      qtl | omics | gwas | reference | study | other
+    kindLabel "QTL results", "Omics data", ...
+    folder    modality or omics folder name, when there is one
+    label     eQTL, snuc-eQTL, Expression, snRNA-seq, GWAS, ...
+    family    Expression, Splicing, ... (colour family)
+    color     CSS colour of the modality square, or ""
+    mark      fill (QTL results) | ring (omics data) | muted (other)
+    cohort, context, n, status, access, analysts, synapse (first ID), synapseIDs
+    ng00184   true when the open NIAGADS DSS archive covers this page
+    short     short label for menus
+*/ -}}
+{{- $p := . -}}
+{{- $d := $p.Params.dataset | default dict -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $parts := slice -}}
+{{- with $p.File }}{{ $parts = split (strings.TrimSuffix "/" .Dir) "/" }}{{ end -}}
+{{- /* Section pages: the folder of the _index.md is the section itself */ -}}
+{{- $kind := "other" -}}
+{{- $folder := "" -}}
+{{- if and (ge (len $parts) 2) (eq (index $parts 0) "xqtl-data") -}}
+  {{- $top := index $parts 1 -}}
+  {{- $kind = index (dict "qtl" "qtl" "omics" "omics" "gwas" "gwas" "reference_data" "reference" "study_info" "study") $top | default "other" -}}
+  {{- if ge (len $parts) 3 }}{{ $folder = index $parts 2 }}{{ end -}}
+{{- end -}}
+{{- with $d.type }}{{ $kind = . }}{{ end -}}
+{{- $kindLabel := index (dict "qtl" "QTL results" "omics" "Omics data" "gwas" "GWAS" "reference" "Reference" "study" "Study cohort" "other" "Page") $kind -}}
+
+{{- $label := "" -}}{{- $family := "" -}}{{- $color := "" -}}{{- $mark := "muted" -}}
+{{- if eq $kind "qtl" -}}
+  {{- range $x.modalities }}{{ if eq .id $folder }}{{ $label = .id }}{{ $family = .family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- if and (eq $label "eQTL") (findRE `(?i)snRNA-seq|single-nucleus` $p.Title) }}{{ $label = "snuc-eQTL" }}{{ end -}}
+  {{- if $label }}{{ $mark = "fill" }}{{ else }}{{ $label = "Protocol" }}{{ end -}}
+{{- else if eq $kind "omics" -}}
+  {{- range $x.omics }}{{ if eq .folder $folder }}{{ $label = .label }}{{ $family = .family }}{{ end }}{{ end -}}
+  {{- range $x.modalities }}{{ if eq .family $family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- if eq $family "Genotype" }}{{ $color = "#8d959f" }}{{ end -}}
+  {{- if $color }}{{ $mark = "ring" }}{{ end -}}
+{{- else if eq $kind "gwas" -}}
+  {{- $label = cond (findRE `(?i)protocol` $p.Title) "Protocol" "GWAS" -}}
+{{- else if eq $kind "reference" -}}
+  {{- $label = "LD panel" -}}
+{{- else if eq $kind "study" -}}
+  {{- $label = "Study" -}}
+{{- end -}}
+
+{{- $ids := $d.synapse_ids | default slice -}}
+{{- $syn := "" }}{{ with $ids }}{{ $syn = index . 0 }}{{ end -}}
+{{- $cohort := $d.cohort | default "" -}}
+{{- if and (not $cohort) (in (slice "gwas") $kind) }}{{ $cohort = "AD GWAS" }}{{ end -}}
+{{- $analysts := $d.lead_analysts | default slice -}}
+{{- $ng := false -}}
+{{- if and (eq $kind "qtl") (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort) }}{{ $ng = true }}{{ end -}}
+
+{{- return dict
+  "kind" $kind "kindLabel" $kindLabel "folder" $folder
+  "label" $label "family" $family "color" $color "mark" $mark
+  "cohort" $cohort "context" ($d.context | default "") "n" ($d.sample_size | default "")
+  "status" ($d.status | default "") "access" ($d.access | default "")
+  "analysts" $analysts "synapse" $syn "synapseIDs" $ids "ng00184" $ng
+  "release" ($d.release | default "") "verified" ($d.last_verified | default "")
+  "methods" ($d.methods | default dict)
+  "short" ($p.LinkTitle | default $p.Title)
+-}}

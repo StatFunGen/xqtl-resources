@@ -1,0 +1,126 @@
+{{ define "main" }}
+{{- /* Data catalog (designs 2a + 2c, 2d on phones). Every row is rendered here so the page
+  works without JavaScript; assets/xqtl/catalog.js filters the rows in place. */ -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $rows := partialCached "ds/rows.html" . "rows" -}}
+{{- $qtl := where $rows "kind" "qtl" -}}
+<article class="catalog" data-catalog>
+  <header class="catalog__head">
+    {{ partial "site/breadcrumb.html" . }}
+    <div class="catalog__titlebar">
+      <h1 class="page__title">Data catalog</h1>
+      <span class="muted" data-count aria-live="polite">{{ len $rows }} datasets</span>
+    </div>
+    <label class="field field--lg">
+      <span class="search__icon" aria-hidden="true"></span>
+      <input type="search" data-q placeholder="Search by name, tissue, analyst or Synapse ID" aria-label="Search the catalog" autocomplete="off">
+    </label>
+    <div class="catalog__mobilebar">
+      <button type="button" class="btn btn--outline" data-filters-open aria-controls="facets" aria-expanded="false">Filters · <span data-filter-count>0</span></button>
+      <button type="button" class="btn btn--ghost" data-clear hidden>Clear filters</button>
+    </div>
+    <div class="chips chips--scroll" aria-label="Modality">
+      {{- range $x.modalities }}
+      <button type="button" class="fchip" data-facet="family" data-value="{{ .family }}" aria-pressed="false">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }}</button>
+      {{- end }}
+    </div>
+  </header>
+
+  <section class="card matrix" aria-labelledby="matrix-title">
+    <div class="matrix__head">
+      <h2 id="matrix-title">QTL results by cohort and modality</h2>
+      <span class="muted">Each cell counts QTL datasets. Select a cell, a row or a column to filter.</span>
+    </div>
+    <div class="matrix__scroll">
+    <table class="matrix__table">
+      <thead><tr><th></th>
+        {{- range $x.modalities }}
+        <th><button type="button" class="matrix__col" data-matrix-col="{{ .family }}" style="--c:oklch(0.6 0.13 {{ .hue }})"><span class="matrix__bar" aria-hidden="true"></span>{{ .id }}</button></th>
+        {{- end }}
+      </tr></thead>
+      <tbody>
+      {{- range $c := $x.cohorts }}
+        {{- $cr := where $qtl "cohort" $c.name -}}
+        <tr data-matrix-row="{{ $c.name }}">
+          <th scope="row"><button type="button" class="matrix__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button></th>
+          {{- range $m := $x.modalities }}
+          {{- $n := len (where $cr "family" $m.family) }}
+          <td>{{ if $n }}<button type="button" class="matrix__cell" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} datasets" aria-pressed="false">{{ $n }}</button>{{ else }}<span class="matrix__empty" aria-hidden="true"></span>{{ end }}</td>
+          {{- end }}
+        </tr>
+      {{- end }}
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <div class="catalog__body">
+    <aside class="facets" id="facets" aria-label="Filters">
+      <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
+      {{- $facet := dict
+        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "GWAS") (slice "reference" "Reference")) -}}
+      <div class="facet"><div class="facet__title">Result type</div>
+        {{- range index $facet "kind" }}{{ partial "site/facet-opt.html" (dict "facet" "kind" "value" (index . 0) "label" (index . 1)) }}{{ end }}
+      </div>
+      <div class="facet"><div class="facet__title">Cohort</div>
+        {{- range $x.cohorts }}{{ partial "site/facet-opt.html" (dict "facet" "cohort" "value" .name "label" .name) }}{{ end }}
+        {{- range slice "AD GWAS" "ADSP" }}{{ partial "site/facet-opt.html" (dict "facet" "cohort" "value" . "label" .) }}{{ end }}
+      </div>
+      <div class="facet"><div class="facet__title">Modality</div>
+        {{- range $x.modalities }}{{ partial "site/facet-opt.html" (dict "facet" "family" "value" .family "label" (printf "%s · %s" .id .family) "mark" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill")) }}{{ end }}
+        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Genotype" "label" "Genotype / WGS" "mark" (dict "color" "#8d959f" "mark" "fill")) }}
+        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "GWAS" "label" "GWAS") }}
+        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Reference" "label" "Reference") }}
+      </div>
+      <div class="facet"><div class="facet__title">Tissue or cell type</div>
+        {{- $tissues := slice -}}
+        {{- range $rows }}{{ with .context }}{{ $t := index (split . ",") 0 | strings.TrimSpace }}{{ if not (in $tissues $t) }}{{ $tissues = $tissues | append $t }}{{ end }}{{ end }}{{ end -}}
+        {{- range sort $tissues }}{{ partial "site/facet-opt.html" (dict "facet" "tissue" "value" . "label" (strings.FirstUpper .)) }}{{ end }}
+      </div>
+      <div class="facet"><div class="facet__title">Status</div>
+        {{- range $k, $v := $x.status }}{{ if ne $k "deprecated" }}{{ partial "site/facet-opt.html" (dict "facet" "status" "value" $k "label" $v.label) }}{{ end }}{{ end }}
+      </div>
+      <div class="facet"><div class="facet__title">Access</div>
+        {{- range slice "open" "controlled" "requested" }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $x.access .).label "acc" .) }}{{ end }}
+      </div>
+    </aside>
+
+    <div class="catalog__results">
+      <table class="dtable dtable--catalog">
+        <caption class="sr-only">Datasets in the FunGen-xQTL catalog</caption>
+        <thead><tr><th scope="col">Dataset ↑</th><th scope="col">Cohort</th><th scope="col">Type</th><th scope="col">Tissue / cell</th><th scope="col" class="r">N</th><th scope="col">Status</th><th scope="col">Access</th><th scope="col">Location</th></tr></thead>
+        <tbody>
+        {{- range $rows }}
+          {{- $tissue := "" }}{{ with .context }}{{ $tissue = index (split . ",") 0 | strings.TrimSpace }}{{ end }}
+          <tr data-row data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-status="{{ .status }}" data-access="{{ .access }}"
+              data-search="{{ lower (delimit (slice .title .context (delimit .analysts " ") .loc .label .cohort .kindLabel) " ") }}">
+            <td class="c-name"><a href="{{ .href }}">{{ .title }}</a></td>
+            <td class="c-cohort">{{ .cohort }}</td>
+            <td class="c-type mono">{{ partial "ui/mark.html" . }}{{ .label }}</td>
+            <td class="c-tissue">{{ .context }}</td>
+            <td class="c-n r mono">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+            <td class="c-status">{{ with .status }}{{ partial "ui/status.html" . }}{{ end }}</td>
+            <td class="c-access">{{ with .access }}{{ partial "ui/access.html" . }}{{ end }}</td>
+            <td class="c-loc"><span class="mono accent">{{ .loc | default "—" }}</span>{{ if .ng }}<span class="mono subtle">+ NG00184 open</span>{{ end }}</td>
+          </tr>
+        {{- end }}
+        </tbody>
+      </table>
+      <p class="empty" data-empty hidden>No datasets match these filters. <button type="button" class="link" data-clear>Clear filters</button></p>
+      <p class="note">Study cohorts are described on their own pages. The access label describes the Synapse copy; "+ NG00184 open" marks results that are also open on NIAGADS DSS.</p>
+    </div>
+  </div>
+
+  {{- with .Content }}
+  <details class="az">
+    <summary>A–Z list with descriptions and lead analysts</summary>
+    <div class="prose">{{ . }}</div>
+  </details>
+  {{- end }}
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+{{ $js := resources.Get "xqtl/catalog.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

@@ -1,5 +1,6 @@
 ---
 type: study
+short_title: ROSMAP
 cohort: ROSMAP
 context: brain
 status: 
