@@ -6,4 +6,4 @@ Single-nucleus chromatin accessibility (snATAC-seq) data from brain tissue measu
 
 | Dataset | Cohort | Cell Types |
 |---------|--------|------------|
-| [ROSMAP snuc caQTL](ROSMAP_snuc_caQTL) | ROSMAP multi-region snATAC-seq | Multiple brain cell types |
+| [ROSMAP snuc caQTL](ROSMAP_snuc_caQTL) | ROSMAP DLPFC CUIMC2 multiome ATAC | Multiple brain cell types |

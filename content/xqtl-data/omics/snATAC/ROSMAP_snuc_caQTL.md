@@ -16,13 +16,13 @@ last_verified:
 
 ## Summary
 
-Single-nucleus ATAC-seq (snATAC-seq) data from ROSMAP, profiling chromatin accessibility in individual nuclei from DLPFC brain tissue. Includes data from MIT cohort (single-site) and CUIMC2 Multiome ATAC data.
+Single-nucleus ATAC-seq (snATAC-seq) data from ROSMAP, profiling chromatin accessibility in individual nuclei from DLPFC brain tissue. The data are the ATAC modality of the CUIMC2 multiome dataset.
 
 ## Dataset Information
 
-- **Cohort**: ROSMAP (MIT single-site; CUIMC2 multiome)
+- **Cohort**: ROSMAP (CUIMC2 multiome)
 - **Brain region**: Dorsolateral prefrontal cortex (DLPFC)
-- **Data type**: Single-nucleus ATAC-seq (snATAC-seq)
+- **Data type**: Single-nucleus ATAC-seq (multiome ATAC)
 - **Cell types**: Multiple brain cell types (neurons, oligodendrocytes, astrocytes, microglia, etc.)
 - **Platform**: 10x Genomics Multiome (ATAC+GEX)
 
