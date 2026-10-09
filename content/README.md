@@ -19,7 +19,7 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
   - Histone modification (H3K9ac ChIP-seq)
   - Chromatin accessibility (snATAC-seq)
   - Metabolomics (brain)
-  - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC, MIT, and mega cohorts)
+  - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC1, MIT, and mega cohorts)
   - Genotype (WGS) and covariates
 * **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [glycoQTL](xqtl-data/qtl/glycoQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metQTL](xqtl-data/qtl/metQTL), plus ROSMAP transcriptomic pattern QTLs (tpQTL) and trans-xQTLs
 * **[FGMB Atlas](fgmb_weights_database)** - Multi-context regulome-wide association study (RWAS) prediction model resources, including Synapse accessions for models, gene-level association results, causal fine-mapping outputs.

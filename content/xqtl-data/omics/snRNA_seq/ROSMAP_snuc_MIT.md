@@ -32,7 +32,7 @@ Acknowledgement : The results published here are in whole or in part based on da
 
 Study name : ROSMAP MIT snRNA-seq expression
 
-Study Description : Single-nucleus RNA-seq expression data from 427 ROSMAP donors generated at Massachusetts Institute of Technology (MIT) by the Kellis lab. Nuclei were isolated from prefrontal cortex (PFC) postmortem brain tissue and profiled using 10x Genomics snRNA-seq to generate a comprehensive single-cell atlas of the aged human prefrontal cortex spanning more than 2.3 million nuclei. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
+Study Description : Single-nucleus RNA-seq expression data from 427 ROSMAP donors generated at Massachusetts Institute of Technology (MIT dataset). Nuclei were isolated from prefrontal cortex (PFC) postmortem brain tissue and profiled using 10x Genomics snRNA-seq to generate a comprehensive single-cell atlas of the aged human prefrontal cortex spanning more than 2.3 million nuclei. Cell types covered: Astrocytes (Ast), Excitatory neurons (Exc), Inhibitory neurons (Inh), Microglia (Mic), Oligodendrocytes (Oli), and Oligodendrocyte progenitor cells (OPC). Pseudo-bulk expression matrices were generated per cell type for use in cis-eQTL analysis.
 
 Disease : Alzheimer's Disease
 

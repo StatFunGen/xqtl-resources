@@ -31,7 +31,7 @@ Hao Sun and Masashi Fujita
 - Study name : ROSMAP snRNA-seq pseudo-bulk gene expression
 - Study Description :
 - Disease : Alzheimer’s Disease
-- Data Citation : Omics data: [syn31512863](https://www.synapse.org/Synapse:syn31512863) (CUIMC), [syn52293417](https://www.synapse.org/Synapse:syn52293417) (MIT); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
+- Data Citation : Omics data: [syn31512863](https://www.synapse.org/Synapse:syn31512863) (CUIMC1), [syn52293417](https://www.synapse.org/Synapse:syn52293417) (MIT); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
 - Additional study information : 
 
 ## Dataset Description
@@ -84,10 +84,10 @@ Here, I use astrocytes as an example. But all other cell types have the same fol
 
 ### Other key data files
 
-Annotations used by De Jager Lab analysis
+Annotations used by the CUIMC1 analysis
 
-- Transcription start sites (TSS) of genes in GRCh38, De Jager Lab
-- GTF file used to generate the TSS file, De Jager Lab
+- Transcription start sites (TSS) of genes in GRCh38, CUIMC1 analysis
+- GTF file used to generate the TSS file, CUIMC1 analysis
 ## QTL Analysis
 QTL analysis for this dataset is documented in [../../qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md](../../qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md).
 

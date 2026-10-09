@@ -17,7 +17,7 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 | [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | — |
 | [ROSMAP microglia](ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | — |
 | [ROSMAP monocyte](ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | — |
-| [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC + MIT) | — |
+| [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC1 + MIT) | — |
 
 ### Brain Tissue — Other Cohorts
 
