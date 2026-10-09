@@ -43,6 +43,8 @@ Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analy
 
 ### Results
 
+Output files: see the Synapse IDs listed on this page.
+
 
 ### Association scan using TensorQTL and summary statistics standardization
 
