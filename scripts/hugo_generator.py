@@ -24,6 +24,9 @@ DEFAULT_BASE_URL = 'https://statfungen.github.io/xqtl-resources/'
 DEFAULT_GITHUB_URL = 'https://github.com/StatFunGen/xqtl-resources/tree/main/'
 HUGO_BOOK_THEME_URL = 'https://github.com/alex-shpak/hugo-book/archive/refs/heads/master.zip'
 
+OMICS_TITLES = {'histone_ChIPSeq': 'Histone ChIP-seq', 'snATAC': 'snATAC-seq', 'snRNA_seq': 'snRNA-seq'}
+
+
 class HugoSiteGenerator:
     """Hugo site generator with content transformation"""
     
@@ -581,11 +584,16 @@ python scripts/hugo_generator.py --build --minify
             os.chdir(original_dir)
     
     def fix_qtl_section_titles(self):
-        """Show QTL modality folders as eQTL, sQTL, caQTL ... in the side menu"""
+        """Show QTL and omics modality folders with their proper names in the side menu"""
         for d in Path(self.website_content_dir).rglob('*'):
-            if not d.is_dir() or not re.fullmatch(r'(?i)(ca|gp|ha|met|e|m|p|s)qtl', d.name):
+            if not d.is_dir():
                 continue
-            title = d.name[:-3].lower() + 'QTL'
+            if re.fullmatch(r'(?i)(ca|gp|ha|met|e|m|p|s)qtl', d.name):
+                title = d.name[:-3].lower() + 'QTL'
+            elif d.name in OMICS_TITLES:
+                title = OMICS_TITLES[d.name]
+            else:
+                continue
             idx = d / '_index.md'
             if idx.exists():
                 txt = idx.read_text()
