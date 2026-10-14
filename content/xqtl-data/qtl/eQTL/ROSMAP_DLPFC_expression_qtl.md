@@ -134,9 +134,6 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 
 
-### Path(s) to omics-data matrix
-
-(FIXME: not sure where it is on BU cluster)
 
 
 
