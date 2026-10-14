@@ -257,9 +257,43 @@ Between xQTL and AD, pairwise.
 
 Consolidated single context xQTL loci
 
-- `FunGen_xQTL_single_context_top_loci_integrated.rds` : FIXME
+#### `FunGen_xQTL_single_context_top_loci_integrated.rds`
 
-- `FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds` : FIXME
+All single-context SuSiE fine-mapping results in one R data frame: 13,393,657 rows, one per variant and molecular trait. It covers 51 contexts (eQTL, productive and unproductive sQTL, pQTL and glycoQTL), 634,382 molecular traits, 18,638 genes and 5,147,485 variants. Results from fSuSiE (mQTL, haQTL, caQTL) are not in this file.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `#chr`, `start`, `end` | integer | Variant position (`start` is 0-based, `end` is 1-based) |
+| `a1`, `a2` | character | Alleles |
+| `variant_ID` | character | Variant as `chr:pos:a2:a1` |
+| `gene_ID` | character | Ensembl gene ID |
+| `event_ID` | character | Molecular trait, prefixed with its context |
+| `cs_coverage_0.95`, `cs_coverage_0.7`, `cs_coverage_0.5` | integer | Credible set the variant belongs to at 95%, 70% and 50% coverage; 0 means it is in none |
+| `PIP` | double | Posterior inclusion probability |
+| `conditional_effect` | double | Effect estimate conditional on the other effects in the model |
+| `resource` | character | Context (dataset) the result comes from, for example `Knight_eQTL_brain` |
+| `pip_sum` | double | Sum of PIP over all variants listed for the molecular trait |
+| `event_ID_n_detectable` | integer | Number of detectable 95% credible sets for the molecular trait (all variant pairs with absolute LD correlation ≥ 0.8) |
+| `event_ID_n_mappable` | integer | Number of mappable credible sets for the molecular trait (detectable sets with three or fewer variants) |
+| `event_ID_detectable_variant_count` | integer | Number of variants considered for the molecular trait's detectable sets |
+
+#### `FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds`
+
+AD GWAS fine-mapped variants with the xQTL evidence found for them, in one R data frame: 47,722 rows, one per variant, AD GWAS, gene and type of xQTL analysis. It covers 1,517 variants in 56 regions, 143 genes, 97 xQTL contexts and eight AD GWAS. Despite the file name, the rows come from all analysis types, not only fSuSiE.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `variant_ID`, `variant_id` | character | Variant as `chr:pos:a2:a1` (with and without the `chr` prefix) |
+| `#chr`, `start`, `end`, `a1`, `a2` | | Variant position and alleles |
+| `gene_ID` | character | Ensembl gene ID of the xQTL target |
+| `event_ID` | character | xQTL molecular traits that share the variant, separated by `;` |
+| `contexts` | character | xQTL contexts of those traits, separated by `,` |
+| `study` | character | AD GWAS, for example `AD_Bellenguez_2022` |
+| `region` | character | Fine-mapping region of the AD GWAS |
+| `gwas_cs` | character | AD GWAS credible set the variant belongs to (`study:region:set`) |
+| `cs_coverage_0.95_min_corr`, `cs_coverage_0.7_min_corr`, `cs_coverage_0.5_min_corr` | double | AD GWAS credible set at 95%, 70% and 50% coverage with the purity filter; -1 means the variant is in none |
+| `pip`, `z` | double | AD GWAS posterior inclusion probability and z-score of the variant (missing for 7% of rows) |
+| `resource` | character | Type of xQTL analysis: `single_context`, `multi_context`, `multi_gene`, `ColocBoost`, `builk_fsusie_coloc` (bulk fSuSiE colocalization) or `snatac_fsusie_coloc` |
 
 ### Usage Guidelines
 
