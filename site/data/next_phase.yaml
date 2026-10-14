@@ -4,7 +4,7 @@
 # acquisition: in_hand | reviewing | requested | to_identify
 # methods: same statuses as a page header (done, running, not_run, awaiting, decide)
 
-- name: MSSM PsychAD snRNA-seq (Towfique lab)
+- name: MSSM PsychAD snRNA-seq
   cohort: MSSM PsychAD
   context: Prefrontal cortex, cell types
   omics: snRNA_seq
