@@ -259,7 +259,7 @@ Consolidated single context xQTL loci
 
 - `FunGen_xQTL_single_context_top_loci_integrated.rds` : FIXME
 
-- `FunGen_xQTL_AD_loci_xQTL_context_method_summary.fsusie.rds` : FIXME
+- `FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds` : FIXME
 
 ### Usage Guidelines
 
