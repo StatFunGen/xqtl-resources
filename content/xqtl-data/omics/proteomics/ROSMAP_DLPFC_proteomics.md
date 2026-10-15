@@ -52,7 +52,7 @@ According to the article, this data was normalized with following steps:
 
 And Quality Control includes:
 - Parameters dutring protein quantification: Percolator was used to filter peptide spectral matches and peptides to an FDR <1%. Following spectral assignment, peptides were assembled into proteins and were further filtered based on the combined probabilities of their constituent peptides to a final FDR of 1%.
-- Outlier removal and ambiguous status case exclusion (FIXME: confirm the details of this step)
+- Outlier removal and case classification: network outlier samples were identified with Oldham's SampleNetworks v1.06 R script, using a 3-SD cutoff on Z-transformed sample connectivity, and removed after batch correction. Cases were classified as control, AsymAD or AD from CERAD score, Braak stage and dementia at last evaluation; 340 ROSMAP DLPFC cases remained for the network analysis in [Johnson et al., *Nature Medicine* 26, 769–780 (2020)](https://www.nature.com/articles/s41591-020-0815-6).
 - Proteins with ≥50% missing values are removed before regression.
 
 ### Molecular phenotype matrices

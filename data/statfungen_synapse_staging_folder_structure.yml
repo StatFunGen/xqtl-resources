@@ -49,8 +49,8 @@ variant_gene_summary: #syn69865684
           - MSBB_BM36_pQTL.cis.top_loci.bed.gz
           - DLPFC_Bennett_pQTL.cis.top_loci.bed.gz
         glycoQTL: #syn69865744
-          - DLPFC_Klein_gpQTL_adjusted.cis.top_loci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.cis.top_loci.bed.gz
+          - DLPFC_Klein_glycoQTL_adjusted.cis.top_loci.bed.gz
+          - DLPFC_Klein_glycoQTL_unadjusted.cis.top_loci.bed.gz
         sQTL: #syn69865747
           - ROSMAP_AC_sQTL.cis.top_loci.bed.gz
           - ROSMAP_AC_sQTL.cis.top_loci.nofilter.bed.gz
@@ -188,14 +188,14 @@ variant_gene_summary: #syn69865684
           - ROSMAP_CUIMC1_pQTL.trans.top_loci.bed.gz
           - ROSMAP_pQTL.trans.top_loci.bed.gz
         glycoQTL: #syn70094703
-          - DLPFC_Klein_gpQTL_adjusted.trans.top_loci.bed.gz
-          - DLPFC_Klein_gpQTL_unadjusted.trans.top_loci.bed.gz
-          - trans_gpQTL_adj.trans.no_HF.top_loci.bed.gz
-          - trans_gpQTL_unadj.trans.no_HF.top_loci.bed.gz 
-          - ROSMAP_gpQTL.trans.top_loci.bed.gz
-          - ROSMAP_adjusted_gpQTL.trans.tag_variants.top_loci.bed.gz
-          - ROSMAP_gpQTL.trans.tag_variants.top_loci.bed.gz
-          - ROSMAP_adjusted_gpQTL.trans.top_loci.bed.gz
+          - DLPFC_Klein_glycoQTL_adjusted.trans.top_loci.bed.gz
+          - DLPFC_Klein_glycoQTL_unadjusted.trans.top_loci.bed.gz
+          - trans_glycoQTL_adj.trans.no_HF.top_loci.bed.gz
+          - trans_glycoQTL_unadj.trans.no_HF.top_loci.bed.gz 
+          - ROSMAP_glycoQTL.trans.top_loci.bed.gz
+          - ROSMAP_adjusted_glycoQTL.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_glycoQTL.trans.tag_variants.top_loci.bed.gz
+          - ROSMAP_adjusted_glycoQTL.trans.top_loci.bed.gz
         metabolome: #syn69865793
           - ROSMAP_metabolome.trans.top_loci.bed.gz
         consolidated: #syn74916771
@@ -647,7 +647,7 @@ xQTL_GWAS_models: #syn69670588
       ROSMAP_glycoQTL: #syn76489398
         glycoQTL_eQTL: #syn76489401
           unadjusted: #syn76489409
-            - eQTL_gpQTL.*.cb_xqtl.rds
+            - eQTL_glycoQTL.*.cb_xqtl.rds
         glycoQTL_pQTL: #syn76489404
           adjusted: #syn76489412
             - adj_glyco*.cb_xqtl.rds
@@ -1246,17 +1246,17 @@ reference_files: #syn69670634
                   - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.ldscore.parquet
                   - KNIGHT_mQTL_Brain_single_1.{1..22}.l2.ldscore.parquet.log
                   - KNIGHT_mQTL_Brain_single_1.{1..22}.annot.gz
-              gpQTL: #syn75180848
+              glycoQTL: #syn75180848
                 ROSMAP_DLPFC_Klein_unadjusted: #syn75185768
-                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.M
-                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_gpQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.annot.gz
+                  - ROSMAP_glycoQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_glycoQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_glycoQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_glycoQTL_DLPFC_Klein_unadjusted_single_1.{1..22}.annot.gz
                 ROSMAP_DLPFC_Klein_adjusted: #syn75185863
-                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.M
-                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet
-                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet.log
-                  - ROSMAP_gpQTL_DLPFC_Klein_adjusted_single_1.{1..22}.annot.gz
+                  - ROSMAP_glycoQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.M
+                  - ROSMAP_glycoQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet
+                  - ROSMAP_glycoQTL_DLPFC_Klein_adjusted_single_1.{1..22}.l2.ldscore.parquet.log
+                  - ROSMAP_glycoQTL_DLPFC_Klein_adjusted_single_1.{1..22}.annot.gz
               haQTL: #syn75180857
                 ROSMAP_DLPFC: #syn75185960
                   - ROSMAP_haQTL_DLPFC_single_1.{1..22}.l2.M
