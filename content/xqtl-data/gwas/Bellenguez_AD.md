@@ -17,10 +17,9 @@ SNP-level association summary statistics for Alzheimer's disease (AD) from [Bell
 
 Oluwatosin Olayinka, Hao Sun and Rui Dong
 
-## Path(s) to summary statistics
+## Source files
 
-- CU
-    - a related meta-analysis of GR@ACE, IGAP and UKB, publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
+The summary statistics are held on the Columbia University (CU) cluster. A related meta-analysis of GR@ACE, IGAP and UKB is publicly available in [de Rojas 2021, Nature Communications](https://www.nature.com/articles/s41467-021-22491-8).
 
 
 
@@ -28,7 +27,7 @@ Oluwatosin Olayinka, Hao Sun and Rui Dong
 
 The data are derived from the summary statistics of [Bellenguez et al.](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90027001-GCST90028000/GCST90027158/).
 
-Rui Dong approved the request for the cohort-specific data in early 2024, and the data were uploaded to the cluster in March 2024.
+The cohort-specific data were obtained on request in early 2024 and uploaded to the Columbia University cluster in March 2024.
 
 ## File Schema
 

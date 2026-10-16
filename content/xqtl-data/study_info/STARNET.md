@@ -24,9 +24,6 @@ Northern European Caucasian patients were 31% female. Of these patients, 32% had
 - Study name : Stockholm-Tartu Atherosclerosis Reverse Network Engineering Task (STARNET)
 - Study Description : STARNET is a genetics of RNA expression study of multiple disease-relevant tissues obtained from living patients with cardiovascular disease.
 - Disease : Coronary Artery Disease
-- Website&Logo : NR
-- Logo : NR
-- Additional Study information : NR
 
 ## Contact
 
