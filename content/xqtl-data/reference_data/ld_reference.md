@@ -2,7 +2,7 @@
 type: reference
 short_title: LD reference panel
 cohort: ADSP
-sample_size: 16905
+sample_size: 16571
 access: controlled
 status: staged
 release:
@@ -45,7 +45,7 @@ The generated files can be found on [Synapse](https://www.synapse.org/#!Synapse:
 
 The FunGen-xQTL flagship paper used a large LD reference panel derived from the Alzheimer's Disease Sequencing Project (ADSP) whole genome sequencing data for fine-mapping analyses.
 
-- **Samples**: 16,905 individuals of European ancestry
+- **Samples**: 16,571 individuals of European ancestry
 - **Variant call**: WGS, high-quality SNPs and indels
 - **Use**: LD reference for SuSiE-RSS fine-mapping of xQTL and AD GWAS loci
 

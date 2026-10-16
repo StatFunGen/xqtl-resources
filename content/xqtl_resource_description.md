@@ -101,7 +101,7 @@ We provide [R-based linear model residuals](xqtl-data/qtl/) and tensorQTL output
 
 ### Population-Specific LD References
 
-We provide [ADSP-based LD reference data for European ancestry](xqtl-data/reference_data/ld_reference) populations, formatted in plink bim format with xz compression ([syn69670651](https://www.synapse.org/Synapse:syn69670651), [syn69670652](https://www.synapse.org/Synapse:syn69670652)). These panels derive from the Alzheimer's Disease Sequencing Project whole genome sequencing data (16,905 European ancestry samples), providing improved coverage of low-frequency variants. With larger sample sizes than 1000 Genomes reference panels, they demonstrate superior performance for fine-mapping in GWAS meta-analysis for AD and beyond. Pre-computed in-sample LD matrices for 1,361 LD blocks are in [syn75082259](https://www.synapse.org/Synapse:syn75082259). We also provide an [LD sketch panel](https://www.synapse.org/Synapse:syn75082260) (plink2 format, [syn75082260](https://www.synapse.org/Synapse:syn75082260)): the ADSP genotypes are multiplied by a random matrix, so LD between variants is preserved while rows no longer correspond to individual participants.
+We provide [ADSP-based LD reference data for European ancestry](xqtl-data/reference_data/ld_reference) populations, formatted in plink bim format with xz compression ([syn69670651](https://www.synapse.org/Synapse:syn69670651), [syn69670652](https://www.synapse.org/Synapse:syn69670652)). These panels derive from the Alzheimer's Disease Sequencing Project whole genome sequencing data (16,571 European ancestry samples), providing improved coverage of low-frequency variants. With larger sample sizes than 1000 Genomes reference panels, they demonstrate superior performance for fine-mapping in GWAS meta-analysis for AD and beyond. Pre-computed in-sample LD matrices for 1,361 LD blocks are in [syn75082259](https://www.synapse.org/Synapse:syn75082259). We also provide an [LD sketch panel](https://www.synapse.org/Synapse:syn75082260) (plink2 format, [syn75082260](https://www.synapse.org/Synapse:syn75082260)): the ADSP genotypes are multiplied by a random matrix, so LD between variants is preserved while rows no longer correspond to individual participants.
 
 ### Functional Annotation Resources
 
@@ -146,7 +146,7 @@ All FunGen-xQTL flagship paper datasets are hosted on [Synapse](https://www.syna
 | TWAS / MR exported results | Exported TWAS and Mendelian randomization summaries (bed) | [syn69865821](https://www.synapse.org/Synapse:syn69865821) |
 | AD TWAS association | Per-context AD TWAS association results | [syn74908416](https://www.synapse.org/Synapse:syn74908416) |
 | **AD × xQTL integration summary** | 195-locus AD loci × xQTL workbook, variant-level and overlap tables, AD gene lists | [syn69865823](https://www.synapse.org/Synapse:syn69865823) |
-| ADSP LD reference (genotypes) | 16,905 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
+| ADSP LD reference (genotypes) | 16,571 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP LD reference (LD matrices) | Pre-computed in-sample LD matrices for fine-mapping | [syn75082259](https://www.synapse.org/Synapse:syn75082259) |
 | ADSP LD sketch | Privacy-preserving LD sketch panel (plink2) | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
 | sLDSC reference data | Stratified LDSC baseline-LD v2.2 reference files | [syn75157484](https://www.synapse.org/Synapse:syn75157484) |
