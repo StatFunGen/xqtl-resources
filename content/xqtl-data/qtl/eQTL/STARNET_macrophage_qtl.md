@@ -12,6 +12,7 @@ lead_analysts: [Travyse Edwards]
 last_verified:
 sample_size: 471
 methods:
+  cis-QTL: done
   SuSiE: done
   TWAS: done
 ---

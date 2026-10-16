@@ -157,4 +157,4 @@ Three 2026 analysis variants of the Bellenguez AD GWAS are staged on Synapse alo
 
 The unified AD loci xQTL summary (`unified_AD_loci_xQTL_summary_20261002.xlsx`) integrates the 2026 loci with xQTL colocalization results.
 
-Note: the variant descriptions above are inferred from the file names and need confirmation by the analysts (cohort composition, sample sizes, genome build, source of the 2026 summary statistics).
+The 2026 analyses were run by Haochen and Yining. The variant descriptions above are based on the file names; contact them for cohort composition, sample sizes and the genome build.

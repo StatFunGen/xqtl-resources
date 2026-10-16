@@ -10,6 +10,8 @@ status: staged
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:
+methods:
+  cis-QTL: done
 ---
 
 # ROSMAP Single-Nucleus Chromatin Accessibility QTL (caQTL)

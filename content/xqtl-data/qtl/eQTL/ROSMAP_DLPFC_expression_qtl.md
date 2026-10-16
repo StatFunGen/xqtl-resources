@@ -11,6 +11,8 @@ release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Shrishtee Kandoi, Frank Grenn]
 last_verified:
+methods:
+  cis-QTL: done
 ---
 
 # ROSMAP DLPFC gene expression QTL

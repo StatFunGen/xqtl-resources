@@ -11,6 +11,8 @@ release:
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Xuanhe Chen]
 last_verified:
+methods:
+  cis-QTL: done
 ---
 
 # ROSMAP DLPFC H3K9ac QTL
