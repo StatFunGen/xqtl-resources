@@ -77,9 +77,10 @@
   <section class="ds-section" id="access">
     <h2>Access</h2>
     <p class="muted">
-      {{- if eq $i.access "open" }}Open access. Download from the links below without an application.
-      {{- else if eq $i.access "requested" }}Shared on request from the data owner before general release.
-      {{- else if eq $i.access "controlled" }}Controlled access. Request data access{{ with $i.cohort }} for {{ . }}{{ end }} on the AD Knowledge Portal; you need a Synapse account.
+      {{- $acc := $i.access }}{{ if and (not $acc) $i.synapse }}{{ $acc = "controlled" }}{{ end }}
+      {{- if eq $acc "open" }}Open access. Download from the links below without an application.
+      {{- else if eq $acc "requested" }}Shared on request from the data owner before general release.
+      {{- else if eq $acc "controlled" }}Controlled access. Request data access{{ with $i.cohort }}{{ if ne . "AD GWAS" }} for {{ . }}{{ end }}{{ end }} on the AD Knowledge Portal; you need a Synapse account.
       {{- else }}Access terms for this page are not set yet.{{ end }}
       {{ with $howto }}See <a href="{{ .RelPermalink }}">How to get the data</a>.{{ end }}
     </p>

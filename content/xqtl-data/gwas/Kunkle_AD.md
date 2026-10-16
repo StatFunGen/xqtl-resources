@@ -18,10 +18,9 @@ SNP-level association summary statistics for Alzheimer's disease (AD) from [Kunk
 Oluwatosin Olayinka
 
 
-## Path(s) to summary statistics
-- CU
-    - original data (in GRCh37)
-    - liftover data (in GRCh38): 
+## Source files
+
+The original summary statistics (GRCh37) and a liftover to GRCh38 are held on the Columbia University (CU) cluster.
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)

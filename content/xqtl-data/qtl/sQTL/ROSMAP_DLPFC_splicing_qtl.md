@@ -80,7 +80,7 @@ Final covariates: Sex, Age at death, PMI, PCs(13), PEER factors(60)
 
 - cis window for the up and downstream radius to analyze around the region of interest, in units of bp: 1000000
 - Minor allele count cutoff: 5
-- Minor allele frequency cutoff: 5/(2.0*592) = 0.00422297
+- Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
 
 ## Links to QTL analysis notebooks for LeafCutter2

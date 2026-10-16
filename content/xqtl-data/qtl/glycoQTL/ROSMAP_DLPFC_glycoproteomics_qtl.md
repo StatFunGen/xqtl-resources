@@ -10,6 +10,7 @@ synapse_ids: [syn69865744, syn70094703, syn76495192, syn77828034, syn76489398, s
 lead_analysts: []
 last_verified:
 methods:
+  cis-QTL: done
   SuSiE: done
   ColocBoost: done
   TWAS: done

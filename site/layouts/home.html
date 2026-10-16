@@ -62,7 +62,7 @@
       </ul>
     </div>
     <div class="browse__col">
-      <h2 class="h3">AD GWAS summary statistics</h2>
+      <h2 class="h3">AD GWAS studies</h2>
       <ul class="blist">
       {{- range $x.gwas }}
         {{- $g := . -}}
@@ -71,6 +71,9 @@
         {{- end }}
       {{- end }}
       </ul>
+      {{- with site.GetPage "/xqtl-data/gwas/AD_GWAS" }}
+      <p class="note">The study uses eight AD GWAS datasets from the four studies above. The <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all eight.</p>
+      {{- end }}
     </div>
   </section>
   <p class="note browse__note">Counts are catalog pages. Cohort counts include QTL results and the omics data behind them; modality counts are QTL result pages.</p>

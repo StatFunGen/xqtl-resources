@@ -20,8 +20,9 @@ Oluwatosin Olayinka
 
 The data are derived from the summary statistics of [Jansen et al.](https://ctg.cncr.nl/documents/p1651/AD_sumstats_Jansenetal_2019sept.txt.gz).
 
-## Path(s) to summary statistics
-- CU
+## Source files
+
+The summary statistics are held on the Columbia University (CU) cluster.
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)

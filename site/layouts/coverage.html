@@ -25,7 +25,7 @@
     </div>
     {{ with .Params.lead }}<div class="wide__intro">{{ $.RenderString . }}</div>{{ end }}
   </header>
-  <div class="wide__body">
+  <div class="wide__body" role="region" aria-label="Analysis coverage grid, scrolls sideways" tabindex="0">
     <table class="cov" data-cov>
       <thead><tr><th scope="col"><span class="sr-only">Dataset</span></th>{{ range $x.methods }}<th scope="col">{{ . }}</th>{{ end }}<th scope="col" class="r">Done</th></tr></thead>
       <tbody>
@@ -37,7 +37,7 @@
           <th scope="row">{{ if .href }}<a href="{{ .href }}">{{ partial "ui/mark.html" (dict "color" .color "mark" "fill") }}{{ .name }}</a>{{ else }}{{ partial "ui/mark.html" (dict "color" .color "mark" "ring") }}{{ .name }}{{ end }}<span class="tag">{{ .tag }}</span></th>
           {{- range $m := $x.methods }}
           {{- $s := index $r.methods $m }}
-          <td>{{ with $s }}{{ $d := index $x.method_status . }}<span class="mcell mcell--{{ . }}" title="{{ $r.name }} {{ $r.tag }} · {{ $m }}: {{ with $d }}{{ .label }}{{ end }}">{{ with $d }}{{ .glyph }}{{ end }}<span class="sr-only">{{ with $d }}{{ .label }}{{ end }}</span></span>{{ else }}<span class="subtle" title="Not applicable">–</span>{{ end }}</td>
+          <td>{{ with $s }}{{ $d := index $x.method_status . }}<span class="mcell mcell--{{ . }}" title="{{ $r.name }} {{ $r.tag }} · {{ $m }}: {{ with $d }}{{ .label }}{{ end }}">{{ with $d }}{{ .glyph }}{{ end }}<span class="sr-only">{{ with $d }}{{ .label }}{{ end }}</span></span>{{ else }}<span class="subtle" title="No status recorded">–<span class="sr-only">No status recorded</span></span>{{ end }}</td>
           {{- end }}
           <td class="r">{{ $done }}/{{ $app }}</td>
         </tr>
@@ -45,7 +45,7 @@
       </tbody>
     </table>
   </div>
-  <div class="wide__foot"><p class="note">"Not yet run" marks a method that applies to data already in hand.</p></div>
+  <div class="wide__foot"><p class="note">Rows are the QTL datasets whose page records analysis status, plus datasets curated for the next phase. "Not yet run" marks a method that applies to data already in hand. cis-QTL is marked done where the dataset's cis top-loci file from single-context fine-mapping is on Synapse. A dash (–) means no status is recorded for that method, not that it does not apply.</p></div>
   {{ with .Content }}<div class="wide__foot"><div class="prose">{{ . }}</div></div>{{ end }}
 </article>
 {{ end }}

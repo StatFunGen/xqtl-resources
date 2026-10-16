@@ -22,9 +22,7 @@ The Religious Orders Study (ROS) and the Rush Memory and Aging Project (MAP) are
 - Study name : Religious Orders Study and Rush Memory and Aging Project (ROSMAP)
 
 - Disease : Alzheimer's disease
-- Website&Logo : ROSMAP metadata page, https://www.synapse.org/#!Synapse:syn3157322
-- Logo : NR
-- Additional study information : NR
+- Website : ROSMAP metadata page, https://www.synapse.org/#!Synapse:syn3157322
 
 ## Contact
 

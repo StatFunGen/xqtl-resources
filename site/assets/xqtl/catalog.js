@@ -45,6 +45,14 @@
       return a.dataset.title < b.dataset.title ? -1 : 1;
     });
     rows.forEach(function (r) { tbody.appendChild(r); });
+    var sel = root.querySelector('[data-sort-select]');
+    if (sel) {
+      var v = state.sort + ':' + state.dir;
+      if (!Array.prototype.some.call(sel.options, function (o) { return o.value === v; })) {
+        var o = document.createElement('option'); o.value = v; o.textContent = v; o.hidden = true; sel.appendChild(o);
+      }
+      sel.value = v;
+    }
     sortBtns.forEach(function (b) {
       var th = b.closest('th');
       th.setAttribute('aria-sort', b.dataset.sort === state.sort ? (state.dir === 'desc' ? 'descending' : 'ascending') : 'none');
@@ -56,6 +64,11 @@
       else { state.sort = b.dataset.sort; state.dir = b.dataset.sort === 'n' ? 'desc' : 'asc'; }
       applySort(); writeURL();
     });
+  });
+
+  var sortSel = root.querySelector('[data-sort-select]');
+  if (sortSel) sortSel.addEventListener('change', function () {
+    var sp = sortSel.value.split(':'); state.sort = sp[0]; state.dir = sp[1]; applySort(); writeURL();
   });
 
   function matches(row, except) {

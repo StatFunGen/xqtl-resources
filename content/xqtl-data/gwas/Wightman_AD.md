@@ -18,14 +18,10 @@ SNP-level association summary statistics for Alzheimer's disease (AD) from [Wigh
 Oluwatosin Olayinka
 
 
-## Path(s) to summary statistics
-- NIAGADS FTP
- 
-- CU
-    - original data (in GRCh37)
-        - only 23andMe individuals
-    - liftover data (in hg38)
-        
+## Source files
+
+The summary statistics are available from the NIAGADS FTP site. The original data (GRCh37, 23andMe individuals only) and a liftover to hg38 are held on the Columbia University (CU) cluster.
+
 ## Path to SuSiE RSS Fine-mapping Objects
 - AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)

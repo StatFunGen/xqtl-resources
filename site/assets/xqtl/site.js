@@ -53,6 +53,12 @@
 
   // "On this page": mark the section in view
   var toc = document.querySelector('.pagetoc');
+  // Drop entries whose section is not on this page (for example "Related datasets" when there are none)
+  if (toc) {
+    Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]')).forEach(function (a) {
+      if (!document.getElementById(decodeURIComponent(a.hash.slice(1)))) { var li = a.closest('li'); if (li) li.remove(); }
+    });
+  }
   if (toc && 'IntersectionObserver' in window) {
     var links = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
     var targets = links.map(function (a) { return document.getElementById(decodeURIComponent(a.hash.slice(1))); });

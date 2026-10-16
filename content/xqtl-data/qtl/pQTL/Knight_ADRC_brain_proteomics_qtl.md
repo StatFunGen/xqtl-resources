@@ -12,6 +12,7 @@ synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, s
 lead_analysts: [Zining Qi]
 last_verified:
 methods:
+  cis-QTL: done
   SuSiE: done
   TWAS: done
 ---
@@ -72,7 +73,7 @@ Final covariates: Sex, Age at death, PMI, PCs(12), hidden factors(18)
 
 - cis/trans window for the up and downstream radius to analyze around the region of interest, in units of bp: 1000000
 - Minor allele count cutoff: 5
-- Minor allele frequency cutoff: 5/(2.0*592) = 0.00422297
+- Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
 ## Links to QTL analysis notebooks
 

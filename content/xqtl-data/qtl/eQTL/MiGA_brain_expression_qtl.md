@@ -12,6 +12,7 @@ synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, s
 lead_analysts: [Travyse Edwards]
 last_verified:
 methods:
+  cis-QTL: done
   SuSiE: done
   TWAS: done
 ---

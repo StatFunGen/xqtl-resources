@@ -11,7 +11,7 @@ last_verified:
 
 The FunGen-xQTL flagship study uses summary statistics from large Alzheimer's disease (AD) GWAS as the trait input for fine-mapping, TWAS and colocalization.
 
-> All summary statistics were harmonized to **GRCh38** before downstream analysis. The APOE region (chr19:44.4 to 46.5 Mb) was analyzed separately because of its complex LD structure. The LD reference panel was built from **16,905 ADSP whole-genome sequenced samples of European ancestry**.
+> All summary statistics were harmonized to **GRCh38** before downstream analysis. The APOE region (chr19:44.4 to 46.5 Mb) was analyzed separately because of its complex LD structure. The LD reference panel was built from **16,571 ADSP whole-genome sequenced samples of European ancestry**.
 
 ## Datasets
 
@@ -36,7 +36,7 @@ Summary statistics passed a QC procedure built around [SLALOM](https://www.medrx
 
 | Panel | N samples | Population | Build | Synapse ID |
 |---|---|---|---|---|
-| ADSP WGS | 16,905 | European ancestry | GRCh38 | [syn69670651](https://www.synapse.org/Synapse:syn69670651), subfolder `EUR/` ([syn69670652](https://www.synapse.org/Synapse:syn69670652)) |
+| ADSP WGS | 16,571 | European ancestry | GRCh38 | [syn69670651](https://www.synapse.org/Synapse:syn69670651), subfolder `EUR/` ([syn69670652](https://www.synapse.org/Synapse:syn69670652)) |
 
 ## Data access
 
