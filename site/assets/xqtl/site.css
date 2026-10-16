@@ -102,14 +102,10 @@ code, kbd, pre { font-family: var(--mono); }
 .brand__name { font: 700 17px/1 var(--sans); letter-spacing: -.01em; white-space: nowrap; }
 .brand__sub { font-weight: 500; color: var(--ink2); }
 .logo-mark { flex: none; display: block; }
-.logo-mark .fx-pert { fill: #0B4F63; }
-.logo-mark .fx-resp { fill: #212120; }
-:root[data-theme="dark"] .logo-mark .fx-pert { fill: #5EC2DD; }
-:root[data-theme="dark"] .logo-mark .fx-resp { fill: #fff; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo-mark .fx-pert { fill: #5EC2DD; }
-  :root:not([data-theme="light"]) .logo-mark .fx-resp { fill: #fff; }
-}
+.logo-mark .lm-line { fill: var(--teal); opacity: .5; }
+.logo-mark .lm-ink { fill: var(--mk-ink); }
+.logo-mark .lm-mute { fill: var(--mk-mute); }
+.logo-mark .lm-lead { fill: var(--teal); }
 
 .search {
   position: relative; flex: 1; max-width: 460px; height: 36px;
