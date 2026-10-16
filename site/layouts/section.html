@@ -19,7 +19,7 @@
         <tr>
           <td><a class="strong" href="{{ .page.RelPermalink }}">{{ .page.Title }}</a></td>
           <td>{{ .info.cohort }}</td>
-          <td class="mono nowrap">{{ partial "ui/mark.html" .info }}{{ .info.label }}</td>
+          <td class="nowrap">{{ partial "ui/mark.html" .info }}{{ .info.label }}</td>
           <td>{{ .info.context }}</td>
           <td class="r mono">{{ with .info.n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
           <td>{{ with .info.status }}{{ partial "ui/status.html" . }}{{ end }}</td>

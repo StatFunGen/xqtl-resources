@@ -1,5 +1,5 @@
-// Site behaviour shared by every page: theme toggle, copy buttons, "On this page"
-// highlighting and collapsible sections on phones. Everything degrades to plain links.
+// Site behaviour shared by every page: theme toggle, copy buttons and "On this page"
+// highlighting. Everything degrades to plain links.
 (function () {
   var doc = document.documentElement;
 
@@ -68,26 +68,7 @@
     targets.forEach(function (t) { if (t) io.observe(t); });
   }
 
-  // Phones: the Markdown sections of a dataset page fold under their headings (design 3b)
-  var prose = document.querySelector('.page--dataset .prose');
-  if (prose && window.matchMedia('(max-width: 720px)').matches) {
-    var hs = Array.prototype.slice.call(prose.children).filter(function (n) { return n.tagName === 'H2'; });
-    hs.forEach(function (h) {
-      var det = document.createElement('details');
-      det.className = 'fold';
-      var sum = document.createElement('summary');
-      sum.innerHTML = h.innerHTML;
-      sum.id = h.id;
-      det.appendChild(sum);
-      var n = h.nextSibling;
-      while (n && n.tagName !== 'H2') { var nx = n.nextSibling; det.appendChild(n); n = nx; }
-      h.replaceWith(det);
-    });
-    if (location.hash) {
-      var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-      var d = t && t.closest('details'); if (d) d.open = true;
-    }
-  }
+  // Dataset pages keep every section open on phones as well, so caveats are never hidden.
 
   // The previous theme registered a service worker; remove it so pages are never stale
   if ('serviceWorker' in navigator) {

@@ -7,29 +7,19 @@
 <article class="catalog" data-catalog>
   <header class="catalog__head">
     {{ partial "site/breadcrumb.html" . }}
-    <div class="catalog__titlebar">
-      <h1 class="page__title">Data catalog</h1>
-      <span class="muted" data-count aria-live="polite">{{ len $rows }} datasets</span>
-    </div>
-    <label class="field field--lg">
+    <h1 class="page__title">Data catalog</h1>
+    <p class="catalog__lead">Every dataset page in the catalog: QTL results, the omics data behind them, AD GWAS and reference data. Search and filters work together, and the web address keeps them, so a filtered view can be bookmarked or shared.</p>
+    <div class="field field--lg">
       <span class="search__icon" aria-hidden="true"></span>
-      <input type="search" data-q placeholder="Search by name, tissue, analyst or Synapse ID" aria-label="Search the catalog" autocomplete="off">
-    </label>
-    <div class="catalog__mobilebar">
-      <button type="button" class="btn btn--outline" data-filters-open aria-controls="facets" aria-expanded="false">Filters · <span data-filter-count>0</span></button>
-      <button type="button" class="btn btn--ghost" data-clear hidden>Clear filters</button>
-    </div>
-    <div class="chips chips--scroll" aria-label="Modality">
-      {{- range $x.modalities }}
-      <button type="button" class="fchip" data-facet="family" data-value="{{ .family }}" aria-pressed="false">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }}</button>
-      {{- end }}
+      <label class="sr-only" for="catalog-q">Filter datasets</label>
+      <input id="catalog-q" type="search" data-q placeholder="Filter by name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
     </div>
   </header>
 
   <section class="card matrix" aria-labelledby="matrix-title">
     <div class="matrix__head">
       <h2 id="matrix-title">QTL results by cohort and modality</h2>
-      <span class="muted">Each cell counts QTL datasets. Select a cell, a row or a column to filter.</span>
+      <span class="muted">Number of QTL result pages. Select a cell, a cohort or a modality to filter the table.</span>
     </div>
     <div class="matrix__scroll">
     <table class="matrix__table">
@@ -86,17 +76,31 @@
     </aside>
 
     <div class="catalog__results">
+      <div class="rtool" role="group" aria-label="Results">
+        <span class="rtool__count" data-count aria-live="polite">{{ len $rows }} datasets</span>
+        <button type="button" class="btn btn--sm rtool__filters" data-filters-open aria-controls="facets" aria-expanded="false">Filters<span class="rtool__nf" data-filter-count></span></button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear hidden>Reset all</button>
+      </div>
       <table class="dtable dtable--catalog">
         <caption class="sr-only">Datasets in the FunGen-xQTL catalog</caption>
-        <thead><tr><th scope="col">Dataset ↑</th><th scope="col">Cohort</th><th scope="col">Type</th><th scope="col">Tissue / cell</th><th scope="col" class="r">N</th><th scope="col">Status</th><th scope="col">Access</th><th scope="col">Location</th></tr></thead>
+        <thead><tr>
+          <th scope="col" aria-sort="ascending"><button type="button" class="sort" data-sort="title">Dataset</button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="sort" data-sort="cohort">Cohort</button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="sort" data-sort="type">Type</button></th>
+          <th scope="col">Tissue / cell</th>
+          <th scope="col" class="r" aria-sort="none"><button type="button" class="sort" data-sort="n" title="Sample size, where the dataset page records one">N</button></th>
+          <th scope="col">Status</th>
+          <th scope="col">Access</th>
+          <th scope="col">Location</th>
+        </tr></thead>
         <tbody>
         {{- range $rows }}
           {{- $tissue := "" }}{{ with .context }}{{ $tissue = index (split . ",") 0 | strings.TrimSpace }}{{ end }}
-          <tr data-row data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-status="{{ .status }}" data-access="{{ .access }}"
+          <tr data-row data-title="{{ lower .title }}" data-type="{{ lower .label }}" data-n="{{ .n }}" data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-status="{{ .status }}" data-access="{{ .access }}"
               data-search="{{ lower (delimit (slice .title .context (delimit .analysts " ") .loc .label .cohort .kindLabel) " ") }}">
             <td class="c-name"><a href="{{ .href }}">{{ .title }}</a></td>
             <td class="c-cohort">{{ .cohort }}</td>
-            <td class="c-type mono">{{ partial "ui/mark.html" . }}{{ .label }}</td>
+            <td class="c-type">{{ partial "ui/mark.html" . }}{{ .label }}</td>
             <td class="c-tissue">{{ .context }}</td>
             <td class="c-n r mono">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
             <td class="c-status">{{ with .status }}{{ partial "ui/status.html" . }}{{ end }}</td>
@@ -106,14 +110,14 @@
         {{- end }}
         </tbody>
       </table>
-      <p class="empty" data-empty hidden>No datasets match these filters. <button type="button" class="link" data-clear>Clear filters</button></p>
-      <p class="note">Study cohorts are described on their own pages. The access label describes the Synapse copy; "+ NG00184 open" marks results that are also open on NIAGADS DSS.</p>
+      <p class="empty" data-empty hidden>No datasets match this search and these filters. Use Reset all above the table to see every dataset.</p>
+      <p class="note">N is the sample size recorded on the dataset page; — means the page does not record one. The access label describes the Synapse copy; "+ NG00184 open" marks results that are also open on NIAGADS DSS. Study cohorts are described on their own pages.</p>
     </div>
   </div>
 
   {{- with .Content }}
   <details class="az">
-    <summary>A–Z list with descriptions and lead analysts</summary>
+    <summary>Full list with descriptions and lead analysts</summary>
     <div class="prose">{{ . }}</div>
   </details>
   {{- end }}

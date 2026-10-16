@@ -14,7 +14,9 @@
   var emptyEl = root.querySelector('[data-empty]');
   var filterCountEl = root.querySelector('[data-filter-count]');
   var clearBtns = root.querySelectorAll('[data-clear]');
-  var state = { q: '' };
+  var tbody = root.querySelector('.dtable--catalog tbody');
+  var sortBtns = Array.prototype.slice.call(root.querySelectorAll('[data-sort]'));
+  var state = { q: '', sort: 'title', dir: 'asc' };
   KEYS.forEach(function (k) { state[k] = null; });
 
   // Read the initial state from the URL
@@ -22,6 +24,39 @@
   KEYS.forEach(function (k) { if (params.get(k)) state[k] = params.get(k); });
   state.q = params.get('q') || '';
   qInput.value = state.q;
+  if (params.get('sort')) {
+    var sp = params.get('sort').split(':');
+    if (sortBtns.some(function (b) { return b.dataset.sort === sp[0]; })) { state.sort = sp[0]; state.dir = sp[1] === 'desc' ? 'desc' : 'asc'; }
+  }
+
+  // Sorting: by title (default), cohort, type or sample size. Rows without a sample size go last.
+  function sortKey(r) {
+    if (state.sort === 'n') { var v = parseFloat(String(r.dataset.n || '').replace(/,/g, '')); return isNaN(v) ? null : v; }
+    return r.dataset[state.sort] || '';
+  }
+  function applySort() {
+    var dir = state.dir === 'desc' ? -1 : 1;
+    rows.sort(function (a, b) {
+      var x = sortKey(a), y = sortKey(b);
+      if (x === null && y === null) return a.dataset.title < b.dataset.title ? -1 : 1;
+      if (x === null) return 1;
+      if (y === null) return -1;
+      if (x < y) return -dir; if (x > y) return dir;
+      return a.dataset.title < b.dataset.title ? -1 : 1;
+    });
+    rows.forEach(function (r) { tbody.appendChild(r); });
+    sortBtns.forEach(function (b) {
+      var th = b.closest('th');
+      th.setAttribute('aria-sort', b.dataset.sort === state.sort ? (state.dir === 'desc' ? 'descending' : 'ascending') : 'none');
+    });
+  }
+  sortBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (state.sort === b.dataset.sort) state.dir = state.dir === 'asc' ? 'desc' : 'asc';
+      else { state.sort = b.dataset.sort; state.dir = b.dataset.sort === 'n' ? 'desc' : 'asc'; }
+      applySort(); writeURL();
+    });
+  });
 
   function matches(row, except) {
     for (var i = 0; i < KEYS.length; i++) {
@@ -40,6 +75,7 @@
     var p = new URLSearchParams();
     if (state.q) p.set('q', state.q);
     KEYS.forEach(function (k) { if (state[k]) p.set(k, state[k]); });
+    if (state.sort !== 'title' || state.dir !== 'asc') p.set('sort', state.sort + ':' + state.dir);
     var s = p.toString();
     history.replaceState(null, '', location.pathname + (s ? '?' + s : '') + location.hash);
   }
@@ -76,10 +112,10 @@
       b.classList.toggle('is-selected', state.family === b.dataset.matrixCol);
     });
     var nF = KEYS.filter(function (k) { return state[k]; }).length;
-    countEl.textContent = shown + ' of ' + rows.length + ' shown';
+    countEl.textContent = (nF || state.q.trim()) ? shown + ' of ' + rows.length + ' datasets' : rows.length + ' datasets';
     emptyEl.hidden = shown > 0;
-    if (filterCountEl) filterCountEl.textContent = nF;
-    clearBtns.forEach(function (b) { if (b.closest('.catalog__mobilebar')) b.hidden = !(nF || state.q); });
+    if (filterCountEl) filterCountEl.textContent = nF ? ' · ' + nF : '';
+    clearBtns.forEach(function (b) { b.hidden = !(nF || state.q.trim()); });
     writeURL();
   }
 
@@ -143,5 +179,6 @@
   closeBtn.addEventListener('click', function () { sheet(false); });
   facets.addEventListener('keydown', function (e) { if (e.key === 'Escape') sheet(false); });
 
+  applySort();
   render();
 })();

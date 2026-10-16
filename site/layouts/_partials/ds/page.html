@@ -30,50 +30,45 @@
     {{ with $p.Params.lead }}<div class="page__lead">{{ $p.RenderString . }}</div>{{ end }}
   </header>
 
-  <section class="card summary" id="summary" aria-label="Summary">
-    <dl class="summary__grid">
+  <section class="summary" id="summary" aria-label="Summary">
+    <dl class="meta">
       {{- if $i.cohort }}
-      <div class="summary__cell"><dt>Cohort</dt><dd>{{ with $study }}<a href="{{ .RelPermalink }}">{{ $i.cohort }}</a>{{ else }}{{ $i.cohort }}{{ end }}</dd>{{ with $cohortDesc }}<dd class="summary__sub">{{ . }}</dd>{{ end }}</div>
+      <div class="meta__row"><dt>Cohort</dt><dd>{{ with $study }}<a href="{{ .RelPermalink }}">{{ $i.cohort }}</a>{{ else }}{{ $i.cohort }}{{ end }}{{ with $cohortDesc }}<span class="meta__sub">{{ . }}</span>{{ end }}</dd></div>
       {{- end }}
       {{- if and $i.label (ne $i.kind "study") }}
-      <div class="summary__cell"><dt>{{ cond (eq $i.kind "omics") "Data type" "Modality" }}</dt><dd>{{ partial "ui/mark.html" $i }}{{ $i.label }}</dd><dd class="summary__sub">{{ $i.kindLabel }}</dd></div>
+      <div class="meta__row"><dt>{{ cond (eq $i.kind "omics") "Data type" "Modality" }}</dt><dd><span>{{ partial "ui/mark.html" $i }}{{ $i.label }}</span><span class="meta__sub">{{ $i.kindLabel }}</span></dd></div>
       {{- end }}
       {{- with $i.context }}
-      <div class="summary__cell"><dt>Tissue or cell type</dt><dd>{{ . }}</dd></div>
+      <div class="meta__row"><dt>Tissue or cell type</dt><dd>{{ . }}</dd></div>
       {{- end }}
       {{- if or $i.n (in (slice "qtl" "omics") $i.kind) }}
-      <div class="summary__cell"><dt>Sample size</dt><dd class="num">{{ with $i.n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</dd><dd class="summary__sub">samples</dd></div>
+      <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}</dd></div>
       {{- end }}
       {{- if ne $i.kind "study" }}
-      <div class="summary__cell"><dt>Status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}—{{ end }}</dd>
-        <dd class="summary__sub">{{ with $i.release }}{{ . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ if $i.release }} · {{ end }}not yet verified{{ end }}{{ with $i.verified }}{{ if $i.release }} · {{ end }}verified {{ . }}{{ end }}</dd></div>
+      <div class="meta__row"><dt>Release status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}<span class="subtle">Not set</span>{{ end }}
+        {{- $sub := slice }}{{ with $i.release }}{{ $sub = $sub | append . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ $sub = $sub | append "not yet verified" }}{{ end }}{{ with $i.verified }}{{ $sub = $sub | append (printf "verified %s" .) }}{{ end }}
+        {{- with $sub }}<span class="meta__sub">{{ delimit . " · " }}</span>{{ end }}</dd></div>
       {{- end }}
       {{- with $i.access }}
-      <div class="summary__cell"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}</dd><dd class="summary__sub">{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}</dd></div>
+      <div class="meta__row"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}<span class="meta__sub">{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}</span></dd></div>
       {{- end }}
       {{- with $i.analysts }}
-      <div class="summary__cell"><dt>Lead analysts</dt><dd>{{ delimit . ", " }}</dd><dd class="summary__sub">Contact by name</dd></div>
+      <div class="meta__row"><dt>Lead analysts</dt><dd>{{ delimit . ", " }}<span class="meta__sub">Contact by name</span></dd></div>
       {{- end }}
       {{- with $counter }}
-      <div class="summary__cell"><dt>{{ cond (eq $i.kind "qtl") "Source data" "QTL results" }}</dt>
-        {{- range . }}<dd><a href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}{{ .page.LinkTitle }} {{ .info.label }}</a></dd>{{ end -}}
-      </div>
+      <div class="meta__row"><dt>{{ cond (eq $i.kind "qtl") "Source data" "QTL results" }}</dt><dd class="meta__links">
+        {{- range . }}<a href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}{{ .page.LinkTitle }} {{ .info.label }}</a>{{ end -}}
+      </dd></div>
       {{- end }}
     </dl>
     {{- if or $i.synapse (eq $i.kind "qtl") }}
-    <div class="summary__bar">
+    <div class="actions">
       {{- with $i.synapse }}
-      <span class="label">Synapse</span>
-      <code class="summary__id" id="primary-syn">{{ . }}</code>
-      <button type="button" class="btn btn--sm" data-copy="{{ . }}">Copy ID</button>
+      <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open {{ . }} in Synapse ↗</a>
+      <button type="button" class="btn" data-copy="{{ . }}" aria-label="Copy Synapse ID {{ . }}">Copy ID</button>
       {{- end }}
-      <span class="spacer"></span>
-      {{ with $howto }}<a class="link" href="{{ .RelPermalink }}">How to request access</a>{{ end }}
       {{- if eq $i.kind "qtl" }}
-      <a class="btn" href="{{ site.Params.atlasURL }}" rel="noopener">Query in xQTL Atlas ↗</a>
-      {{- end }}
-      {{- with $i.synapse }}
-      <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open in Synapse ↗</a>
+      <a class="btn" href="{{ site.Params.atlasURL }}" rel="noopener">Query associations in the xQTL Atlas ↗</a>
       {{- end }}
     </div>
     {{- end }}
@@ -126,7 +121,7 @@
       {{- range $m := $x.methods }}
         {{- with index $i.methods $m }}
         {{- $st := index $x.method_status . }}
-        <li class="method-chip"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span class="mono">{{ $m }}</span><span class="muted">{{ with $st }}{{ .label }}{{ end }}</span></li>
+        <li class="method-chip"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span>{{ $m }}</span><span class="muted">{{ with $st }}{{ .label }}{{ end }}</span></li>
         {{- end }}
       {{- end }}
     </ul>
@@ -161,7 +156,7 @@
     <h2>Related datasets</h2>
     <ul class="related">
       {{- range first (cond (eq $i.kind "study") 60 12) $rel }}
-      <li><a class="chip" href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}<span class="mono muted">{{ .rel }}</span>{{ .page.LinkTitle }}{{ with .info.label }} {{ . }}{{ end }}</a></li>
+      <li><a class="chip" href="{{ .page.RelPermalink }}">{{ partial "ui/mark.html" .info }}<span class="muted">{{ .rel }}</span>{{ .page.LinkTitle }}{{ with .info.label }} {{ . }}{{ end }}</a></li>
       {{- end }}
     </ul>
   </section>
