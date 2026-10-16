@@ -49,8 +49,7 @@ TransQTL association: Finished.
 
 ### QC and Normalization Details for Phenotype Data
 
-Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analysis detial please check records here: [eQTL](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC/eQTL) [eQTL_susie_result_analysis
-](need to replace)
+Brain multi-region RNA-seq data was processed with the xQTL-pipeline, for analysis details please check records here: [eQTL](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC/eQTL)
 
 ### Genotype parameters
 
@@ -122,11 +121,6 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 ## Dataset Details
 
-- Number of cases : 
-- Number of controls :
-- Annotation information : 
-- Genotype level imputation : 
-- Imputation Panel : 
 
 ### Path(s) to genotype matrix 
 
