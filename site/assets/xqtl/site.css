@@ -397,6 +397,8 @@ code, kbd, pre { font-family: var(--mono); }
 .rtool { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--ln); min-height: 54px; }
 .rtool__count { font: 600 15px var(--sans); color: var(--navy); margin-right: auto; }
 .rtool__filters { display: none; }
+.rtool__sort { display: none; align-items: center; gap: 6px; font-size: 14px; color: var(--ink2); }
+.rtool__sort select { height: 40px; font: inherit; color: var(--ink); border: 1px solid var(--ln2, var(--ln)); border-radius: var(--r1, 6px); background: var(--sf); padding: 0 8px; }
 .dtable--catalog { border: 0; border-radius: 0; background: transparent; margin: 0; }
 .dtable--catalog th { padding: 8px 10px; background: var(--bg); }
 .dtable--catalog th:first-child, .dtable--catalog td:first-child { padding-left: 16px; }
@@ -565,6 +567,8 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
   .catalog__body { grid-template-columns: minmax(0, 1fr); margin: 0; border-width: 1px 0 0; border-radius: 0; }
   .rtool { position: sticky; top: var(--topbar); z-index: 10; background: var(--sf); padding: 8px 16px; }
   .rtool__filters { display: inline-flex; height: 40px; }
+  .rtool { flex-wrap: wrap; }
+  .rtool__sort { display: inline-flex; }
   .rtool .btn--ghost { height: 40px; }
   .facets { position: fixed; z-index: 45; inset: auto 0 0 0; max-height: 82vh; overflow-y: auto; background: var(--sf); border: 0; border-top: 1px solid var(--ln); border-radius: 10px 10px 0 0; transform: translateY(105%); visibility: hidden; transition: transform .2s ease; padding: 0 16px 24px; }
   .facets.is-open { transform: none; visibility: visible; box-shadow: 0 -8px 40px rgb(0 0 0 / .25); }
@@ -584,7 +588,10 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
   .dtable--catalog .c-tissue:empty { display: none; }
   .dtable--catalog .c-status { order: 5; }
   .dtable--catalog .c-access { order: 6; }
-  .dtable--catalog .c-n, .dtable--catalog .c-loc { display: none; }
+  .dtable--catalog .c-n { order: 7; font-size: 13px; }
+  .dtable--catalog .c-n::before { content: "N "; font-family: var(--sans); }
+  .dtable--catalog .c-loc { order: 8; flex: 1 0 100%; font-size: 13px; }
+  .dtable--catalog .c-loc span { display: inline; white-space: normal; margin-right: 8px; }
   .az { margin: 16px; }
   .meta__row { grid-template-columns: 116px minmax(0, 1fr); }
   .actions .btn { flex: 1 1 auto; height: 44px; }

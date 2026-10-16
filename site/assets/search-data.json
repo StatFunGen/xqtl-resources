@@ -1,0 +1,19 @@
+[
+{{- /* Same as hugo-book's index, but a dataset page shows its full title, which names the data type, and the modality when
+  the title does not, so results for the same cohort (for example several ROSMAP DLPFC datasets) can be told apart. */ -}}
+{{- $pages := where .Site.Pages "Kind" "in" (slice "page" "section") -}}
+{{- $pages = where $pages "Params.bookSearchExclude" "!=" true -}}
+{{- $pages = where $pages "Content" "!=" "" -}}
+
+{{- range $index, $page := $pages -}}
+{{- $t := partial "docs/title" $page -}}
+{{- with $page.Params.dataset }}{{ $t = $page.Title }}{{ with .modality }}{{ if not (strings.Contains (lower $t) (lower .)) }}{{ $t = printf "%s (%s)" $t . }}{{ end }}{{ end }}{{ end -}}
+{{- if gt $index 0}},{{end}} {
+  "id": {{ $index | jsonify }},
+  "href": {{ $page.RelPermalink | jsonify }},
+  "title": {{ $t | jsonify }},
+  "section": {{ (partial "docs/title" $page.Parent) | default $.Site.Title | jsonify }},
+  "content": {{ $page.Plain | htmlUnescape | jsonify }}
+}
+{{- end -}}
+]

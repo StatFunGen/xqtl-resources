@@ -14,17 +14,18 @@
   {{- $o := .omics -}}
   {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end }}{{ end }}{{ end -}}
   {{- $rows = $rows | append (dict "name" .name "href" "" "cohort" (.cohort | default "—") "context" (.context | default "—") "label" ($label | default "—") "color" $color "mark" "ring" "n" "" "access" (.access | default "")
-      "acq" .acquisition "phase" "next" "src" (.synapse | default "—") "note" (.note | default "")) -}}
+      "acq" .acquisition "phase" "next" "src" (.synapse | default "—") "note" (.note | default "") "ph" (not .cohort)) -}}
 {{- end -}}
+{{- $real := slice }}{{ range $rows }}{{ if not .ph }}{{ $real = $real | append . }}{{ end }}{{ end -}}
 <article class="wide" data-inventory>
   <header class="wide__head">
     {{ partial "site/breadcrumb.html" . }}
     <div class="wide__titlebar">
       <div><h1 class="page__title">{{ .Title }}</h1></div>
       <div class="tabs" role="group" aria-label="Phase">
-        <button type="button" data-phase="all" aria-pressed="true">All · {{ len $rows }}</button>
+        <button type="button" data-phase="all" aria-pressed="true">All · {{ len $real }}</button>
         <button type="button" data-phase="v1" aria-pressed="false">Atlas v1 · {{ len (where $rows "phase" "v1") }}</button>
-        <button type="button" data-phase="next" aria-pressed="false">Next phase · {{ len (where $rows "phase" "next") }}</button>
+        <button type="button" data-phase="next" aria-pressed="false">Next phase · {{ len (where $real "phase" "next") }}</button>
       </div>
     </div>
     {{ with .Params.lead }}<div class="wide__intro">{{ $.RenderString . }}</div>{{ end }}
@@ -36,7 +37,7 @@
       {{- end }}
     </div>
   </header>
-  <div class="wide__body">
+  <div class="wide__body" role="region" aria-label="Dataset inventory table, scrolls sideways" tabindex="0">
     <table class="dtable dtable--wide">
       <thead><tr><th>Dataset</th><th>Cohort</th><th>Context</th><th>Modality</th><th class="r">N</th><th>Access</th><th>Acquisition</th><th>Phase</th><th>Source</th></tr></thead>
       <tbody>
