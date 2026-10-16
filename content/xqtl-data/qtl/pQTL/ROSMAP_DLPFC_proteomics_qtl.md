@@ -99,7 +99,7 @@ Final covariates: Sex, Age at death, PMI, PCs(12), hidden factors(41)
 - [Extened TADB windows](https://github.com/cumc/fungen-xqtl-analysis/blob/main/resource/extended_cis_before_winsorize.tsv) for cis analysis.
 - Trans window for the up and downstream radius to analyze around the region of interest, in units of bp: 1000000
 - Minor allele count cutoff: 5
-- Minor allele frequency cutoff: 5/(2.0*416) = 0.00422297
+- Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
 
 ## Dataset Description
