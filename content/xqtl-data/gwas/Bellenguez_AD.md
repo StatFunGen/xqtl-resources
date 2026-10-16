@@ -147,14 +147,14 @@ AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synaps
 
 ## Bellenguez 2026 update (noproxy, main, nobiobank)
 
-Three 2026 analysis variants of the Bellenguez AD GWAS are staged on Synapse alongside the 2022 release. Each variant has a top-loci table (`AD_Bellenguez_<variant>_2026.gwas.top_loci.bed.gz`) and per-region SuSiE RSS fine-mapping objects (`AD_Bellenguez_<variant>_2026.*.gwas_finemap.rds`).
+The 2026 files are fine-mapped from the summary statistics of the consensus meta-analysis of Alzheimer's disease and related dementias (ADRD) by the EADB, PGC-ALZ and IGAP consortia: Bellenguez et al. 2026, *Nature Genetics* 58:1214–1225 ([doi:10.1038/s41588-026-02583-1](https://doi.org/10.1038/s41588-026-02583-1); preprint [medRxiv 2025.10.20.25338060](https://www.medrxiv.org/content/10.1101/2025.10.20.25338060)). The study reported 91 ADRD risk loci, 16 of them new. The fine-mapping for this release was run by Haochen and Yining.
 
-| Variant | Description |
+Each analysis has a top-loci table (`AD_Bellenguez_<variant>_2026.gwas.top_loci.bed.gz`) and per-region SuSiE RSS fine-mapping objects (`AD_Bellenguez_<variant>_2026.*.gwas_finemap.rds`), staged on Synapse alongside the 2022 release.
+
+| Variant | Analysis in Bellenguez et al. 2026 |
 | ------- | ----------- |
-| `noproxy` | Clinically diagnosed AD cases only; proxy-ADD cases excluded |
-| `main` | Primary 2026 analysis |
-| `nobiobank` | Primary analysis with biobank cohorts excluded |
+| `main` | Primary meta-analysis of European-ancestry samples from IGAP, EADB, PGC-ALZ, UK Biobank and FinnGen: 72,721 AD cases, 55,960 proxy ADRD cases, 614,267 controls and 235,566 proxy controls from 52 studies |
+| `noproxy` | The same meta-analysis without proxy ADRD cases and controls (people whose parent or sibling had dementia) |
+| `nobiobank` | The same meta-analysis without the large biobank samples, so mainly clinically diagnosed AD cases |
 
-The unified AD loci xQTL summary (`unified_AD_loci_xQTL_summary_20261002.xlsx`) integrates the 2026 loci with xQTL colocalization results.
-
-The 2026 analyses were run by Haochen and Yining. The variant descriptions above are based on the file names; contact them for cohort composition, sample sizes and the genome build.
+The paper does not list case and control numbers for the `noproxy` and `nobiobank` analyses in its main text; they are in its supplementary tables. The unified AD loci xQTL summary (`unified_AD_loci_xQTL_summary_20261002.xlsx`) integrates the 2026 loci with xQTL colocalization results.
