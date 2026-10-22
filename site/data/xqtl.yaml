@@ -58,14 +58,14 @@ gwas:
 
 # Release status badges
 status:
-  released: {label: Released, desc: "Files are on Synapse or a public URL and can be requested or downloaded now."}
+  released: {label: Released, desc: "Files are on the AD Knowledge Portal or a public URL and can be requested or downloaded now."}
   staged: {label: Staged, desc: "Files are uploaded but not yet shared. The page documents what will be released."}
   planned: {label: Planned, desc: "Analysis in progress. No files yet."}
   deprecated: {label: Deprecated, desc: "Replaced by a newer page, which this page links to."}
 
 # Access labels
 access:
-  open: {label: Open, desc: "Download without an application from a public URL, an open Synapse folder or NIAGADS DSS."}
+  open: {label: Open, desc: "Download without an application from a public URL, an open AD Knowledge Portal folder or NIAGADS DSS."}
   controlled: {label: Controlled, desc: "Needs a Synapse account and data access requested on the AD Knowledge Portal."}
   requested: {label: Requested, desc: "Shared on request from the data owner before general release."}
   pending: {label: Pending, desc: "Access terms are still being set."}
@@ -99,7 +99,7 @@ method_status:
 
 # Inventory acquisition stages
 acquisition:
-  in_hand: {label: In hand, desc: "Obtained and on Synapse or DSS. Release status is shown on each dataset page."}
+  in_hand: {label: In hand, desc: "Obtained and on the AD Knowledge Portal or DSS. Release status is shown on each dataset page."}
   reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
   requested: {label: Requested, desc: "Outreach under way"}
   to_identify: {label: To identify, desc: "Candidates not yet found"}
