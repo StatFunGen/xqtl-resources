@@ -44,7 +44,7 @@ Glycoproteomics data profiling N-glycosylation of proteins from dorsolateral pre
 
 ### Molecular Phenotype Matrices
 
-Glycopeptide abundance matrices normalized from TMT-based mass spectrometry data. Available through Synapse at [syn17015098](https://www.synapse.org/Synapse:syn17015098).
+Glycopeptide abundance matrices normalized from TMT-based mass spectrometry data. Available through the AD Knowledge Portal at [syn17015098](https://www.synapse.org/Synapse:syn17015098).
 
 ## QTL Analysis
 

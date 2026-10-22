@@ -4,13 +4,13 @@
 
 FunGen-xQTL Multi-Brain (FGMB) Atlas is a multi-context regulome-wide association study (RWAS) resource for studying genetic regulation in aging-brain-related disease traits. It provides molecular expression prediction models across brain regions, cell types, cohorts, and molecular modalities, capturing both shared and context-specific regulatory effects.  
 
-The released prediction model database and analysis outputs are available through Synapse. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
+The released prediction model database and analysis outputs are available through the AD Knowledge Portal. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
 
 
 ## Available Resources
 
 ### FGMB Atlas
-The **`FGMB Atlas`** [resource site](https://morgantelab.github.io/FGMB-atlas-paper/) organizes the atlas overview, modeling strategy, workflow examples, figure notebooks, and resource table for the Synapse accessions listed below.
+The **`FGMB Atlas`** [resource site](https://morgantelab.github.io/FGMB-atlas-paper/) organizes the atlas overview, modeling strategy, workflow examples, figure notebooks, and resource table for the AD Knowledge Portal accessions listed below.
 
 - **[FGMB Atlas Overview](https://morgantelab.github.io/FGMB-atlas-paper/overview/index.html)** - Overview of the FGMB Atlas resource, study design, and major analysis components.
 - **[FGMB Atlas Modeling Strategy](https://morgantelab.github.io/FGMB-atlas-paper/modeling_strategy/index.html)** - Modeling design and strategy for the FGMB Atlas RWAS prediction resources.
@@ -34,10 +34,10 @@ TWAS/RWAS-style weights is also available:
 
 ## Data Access
 
-All released FGMB Atlas RWAS model resources are available through
-Synapse:
+All released FGMB Atlas RWAS model resources are available through the
+AD Knowledge Portal:
 
-| Resource | Synapse accession | Notes |
+| Resource | AD Knowledge Portal accession | Notes |
 | --- | --- | --- |
 | RWAS prediction models | [`syn69670600`](https://www.synapse.org/Synapse:syn69670600) | FGMB Atlas prediction model resource for RWAS analyses. |
 | Alzheimer disease RWAS association results | [`syn74908416`](https://www.synapse.org/Synapse:syn74908416) | Association results from applying the FGMB Atlas RWAS models to Alzheimer disease. |

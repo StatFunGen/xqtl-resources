@@ -1,12 +1,12 @@
 # How to get the data
 
-The data are hosted on Synapse and NIAGADS. Each dataset page gives a Synapse ID or public URL, and its access label states what is needed before download.
+The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gives a Synapse ID or public URL, and its access label states what is needed before download.
 
 {{< access-defs >}}
 
-## Synapse and the AD Knowledge Portal
+## AD Knowledge Portal
 
-Omics data, QTL results, xQTL models and reference files are on Synapse. Most cohort data are controlled.
+Omics data, QTL results, xQTL models and reference files are on the AD Knowledge Portal. Most cohort data are controlled.
 
 {{% steps %}}
 1. **Create a Synapse account.** Register at [synapse.org](https://www.synapse.org/) and verify your profile.
@@ -21,7 +21,7 @@ syn = synapseclient.login()
 entity = syn.get("syn69670632", downloadLocation=".")
 ```
 
-The four top-level FunGen-xQTL folders on Synapse are [variant and gene summaries (syn69865684)](https://www.synapse.org/Synapse:syn69865684), [xQTL models (syn69670588)](https://www.synapse.org/Synapse:syn69670588), [raw QTL data (syn69670632)](https://www.synapse.org/Synapse:syn69670632) and [reference files (syn69670634)](https://www.synapse.org/Synapse:syn69670634).
+The four top-level FunGen-xQTL folders on the AD Knowledge Portal are [variant and gene summaries (syn69865684)](https://www.synapse.org/Synapse:syn69865684), [xQTL models (syn69670588)](https://www.synapse.org/Synapse:syn69670588), [raw QTL data (syn69670632)](https://www.synapse.org/Synapse:syn69670632) and [reference files (syn69670634)](https://www.synapse.org/Synapse:syn69670634).
 
 ## NIAGADS
 

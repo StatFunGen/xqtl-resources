@@ -67,7 +67,7 @@ None are listed yet.
 
 The QTL analysis of this dataset is documented in [MiGA brain expression QTL](../../qtl/eQTL/MiGA_brain_expression_qtl.md).
 
-The flagship paper analyses on Synapse are listed below.
+The flagship paper analyses on the AD Knowledge Portal are listed below.
 
 - Fine-mapping (SuSiE-RSS), [syn69670592](https://www.synapse.org/Synapse:syn69670592)
 - TWAS weight models, [syn69670600](https://www.synapse.org/Synapse:syn69670600)

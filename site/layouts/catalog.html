@@ -44,6 +44,94 @@
     </div>
   </section>
 
+  {{- /* Analysis progress: for each xQTL protocol method, how many QTL result pages record it as done.
+    Same source as the coverage grid (the `methods:` map in each page header). */ -}}
+  {{- $qds := slice }}{{ range $qtl }}{{ if ne .short "Protocol toy data" }}{{ $qds = $qds | append . }}{{ end }}{{ end -}}
+  {{- $total := len $qds -}}
+  <section class="card progress" aria-labelledby="progress-title">
+    <div class="matrix__head">
+      <h2 id="progress-title">Analysis progress by method</h2>
+      <span class="muted">QTL result pages that record each method as done, out of {{ $total }}. Hover a row for the datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
+    </div>
+    <ul class="progress__list">
+      {{- range $m := $x.methods }}
+      {{- $names := slice -}}
+      {{- range $qds }}{{ if eq (index .methods $m) "done" }}{{ $names = $names | append (printf "%s %s" .short .label) }}{{ end }}{{ end -}}
+      {{- $n := len $names -}}
+      {{- $pct := 0.0 }}{{ if $total }}{{ $pct = div (mul $n 100.0) $total }}{{ end }}
+      <li class="progress__row" title="{{ $m }}: {{ $n }} of {{ $total }}{{ with $names }}&#10;{{ delimit . "&#10;" }}{{ end }}">
+        <span class="progress__label">{{ $m }}</span>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" $pct }}%"></span></span>
+        <span class="progress__val">{{ if $n }}<strong>{{ $n }}</strong> of {{ $total }}{{ else }}<span class="muted">not recorded</span>{{ end }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  {{- /* Contexts per dataset: tissues or cell types covered, read from the context field
+    ("4 brain regions", "DLPFC, 7 cell types"; a single named tissue counts as one). */ -}}
+  {{- $multi := slice }}{{ $single := 0 -}}
+  {{- range $qds -}}
+    {{- $k := 1 }}{{ with findRESubmatch `(\d+) (?:brain regions|regions|cell types)` .context 1 }}{{ $k = int (index (index . 0) 1) }}{{ end -}}
+    {{- if gt $k 1 }}{{ $multi = $multi | append (dict "short" .short "label" .label "href" .href "color" .color "k" $k "context" .context) }}{{ else }}{{ $single = add $single 1 }}{{ end -}}
+  {{- end -}}
+  {{- $multi = sort $multi "k" "desc" -}}
+  {{- $max := 1 }}{{ range $multi }}{{ if gt .k $max }}{{ $max = .k }}{{ end }}{{ end -}}
+  <section class="card progress contexts" aria-labelledby="contexts-title">
+    <div class="matrix__head">
+      <h2 id="contexts-title">Tissues and cell types per dataset</h2>
+      <span class="muted">QTL datasets that cover more than one brain region or cell type. The other {{ $single }} cover one each.</span>
+    </div>
+    <ul class="progress__list">
+      {{- range $multi }}
+      <li class="progress__row contexts__row" title="{{ .short }} {{ .label }}: {{ .context }}">
+        <a class="progress__label" href="{{ .href }}">{{ .short }}{{ if not (strings.Contains .short .label) }} <span class="contexts__mod">{{ .label }}</span>{{ end }}</a>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .k 100.0) $max) }}%;background:{{ .color | safeCSS }}"></span></span>
+        <span class="progress__val"><strong>{{ .k }}</strong> {{ if findRE `cell types` .context }}cell types{{ else }}regions{{ end }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  {{- /* QTL datasets by cohort, as a donut. The three largest cohorts get their own slice and the
+    rest are grouped as "Other". Slices are drawn with a conic gradient, with a thin gap between them. */ -}}
+  {{- $groups := slice -}}
+  {{- range uniq (apply $qds "index" "." "cohort") -}}
+    {{- $groups = $groups | append (dict "name" . "n" (len (where $qds "cohort" .))) -}}
+  {{- end -}}
+  {{- $groups = sort $groups "n" "desc" -}}
+  {{- if gt (len $groups) 4 -}}
+    {{- $rest := after 3 $groups }}{{ $on := 0 }}{{ $onames := slice -}}
+    {{- range $rest }}{{ $on = add $on .n }}{{ $onames = $onames | append .name }}{{ end -}}
+    {{- $groups = (first 3 $groups) | append (dict "name" "Other" "n" $on "detail" (delimit $onames ", ")) -}}
+  {{- end -}}
+  {{- $stops := slice }}{{ $at := 0.0 -}}
+  {{- range $i, $g := $groups -}}
+    {{- $end := add $at (div (mul $g.n 360.0) $total) -}}
+    {{- $stops = $stops | append (printf "var(--pie%d) %.2fdeg %.2fdeg, var(--sf) %.2fdeg %.2fdeg" (add $i 1) $at (sub $end 1.5) (sub $end 1.5) $end) -}}
+    {{- $at = $end -}}
+  {{- end -}}
+  <section class="card progress cohorts" aria-labelledby="cohorts-title">
+    <div class="matrix__head">
+      <h2 id="cohorts-title">QTL datasets by cohort</h2>
+      <span class="muted">Share of the {{ $total }} QTL datasets that come from each cohort.</span>
+    </div>
+    <div class="cohorts__body">
+      <div class="cohorts__pie" role="img" aria-label="{{ range $i, $g := $groups }}{{ if $i }}, {{ end }}{{ $g.name }} {{ $g.n }}{{ end }}" style="background:conic-gradient({{ delimit $stops ", " | safeCSS }})">
+        <span class="cohorts__total"><strong>{{ $total }}</strong> datasets</span>
+      </div>
+      <ul class="cohorts__legend">
+        {{- range $i, $g := $groups }}
+        <li title="{{ $g.name }}: {{ $g.n }} of {{ $total }}{{ with $g.detail }} ({{ . }}){{ end }}">
+          <span class="cohorts__key" style="background:var(--pie{{ add $i 1 }})" aria-hidden="true"></span>
+          <span class="cohorts__name">{{ $g.name }}{{ with $g.detail }} <span class="muted">{{ . }}</span>{{ end }}</span>
+          <span class="progress__val"><strong>{{ $g.n }}</strong> <span class="muted">{{ printf "%.0f" (div (mul $g.n 100.0) $total) }}%</span></span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
@@ -114,7 +202,7 @@
         </tbody>
       </table>
       <p class="empty" data-empty hidden>No datasets match this search and these filters. Use Reset all above the table to see every dataset.</p>
-      <p class="note">N is the sample size recorded on the dataset page; — means the page does not record one. The access label describes the Synapse copy; "+ NG00184 open" marks results that are also open on NIAGADS DSS. Study cohorts are described on their own pages.</p>
+      <p class="note">N is the sample size recorded on the dataset page; — means the page does not record one. The access label describes the AD Knowledge Portal copy; "+ NG00184 open" marks results that are also open on NIAGADS DSS. Study cohorts are described on their own pages.</p>
     </div>
   </div>
 

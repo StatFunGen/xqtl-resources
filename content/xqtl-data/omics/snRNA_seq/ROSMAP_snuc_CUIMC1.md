@@ -49,7 +49,7 @@ PI : Phil De Jager (Columbia University)
 
 ### Raw data
 
-Nuclei were isolated from DLPFC postmortem brain tissue of 424 ROSMAP participants. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform. Raw sequencing reads were aligned to the GRCh38 reference genome. The primary data release is available on Synapse at [syn31512863](https://www.synapse.org/Synapse:syn31512863).
+Nuclei were isolated from DLPFC postmortem brain tissue of 424 ROSMAP participants. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform. Raw sequencing reads were aligned to the GRCh38 reference genome. The primary data release is available on the AD Knowledge Portal at [syn31512863](https://www.synapse.org/Synapse:syn31512863).
 
 ### Molecular phenotype matrices
 

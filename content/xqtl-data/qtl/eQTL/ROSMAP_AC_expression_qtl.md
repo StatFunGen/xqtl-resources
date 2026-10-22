@@ -13,6 +13,7 @@ lead_analysts: [Frank Grenn]
 last_verified:
 methods:
   cis-QTL: done
+  cTWAS: done
 ---
 
 # ROSMAP AC gene expression QTL
@@ -67,7 +68,7 @@ Output files: see the Synapse IDs listed on this page.
 
 
 - [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
-- [ROSMAP_DeJager_bulk_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_bulk_eQTL/command_generator.ipynb)provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].
+- [ROSMAP_CUIMC1_bulk_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_bulk_eQTL/command_generator.ipynb)provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].
 
 ### Path(s) to cis-QTL association testing
 

@@ -3,11 +3,11 @@ type: omics
 modality: splicing
 short_title: ROSMAP ISSAC
 cohort: ROSMAP
-context: "DLPFC, cell types"
+context: "DLPFC, 7 cell types"
 access: controlled
 status: staged
 synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
-lead_analysts: []
+lead_analysts: [Yuntian Zhang]
 last_verified:
 sample_size: 530
 ---

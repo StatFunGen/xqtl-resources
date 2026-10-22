@@ -10,7 +10,7 @@ metQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen
 
 ### Brain Tissue
 
-| Dataset | Cohort / Brain Region | Synapse |
+| Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [Knight ADRC brain](Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | — |

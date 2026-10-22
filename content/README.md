@@ -6,7 +6,7 @@ The **[Alzheimer's Disease Sequencing Project Functional Genomics Consortium (Fu
 ## Available Resources
 
 ### FunGen-xQTL
-The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. All datasets are hosted on Synapse: [variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
+The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. All datasets are hosted on the AD Knowledge Portal: [variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
 
 * **[xQTL Analysis and xQTL-GWAS Integration Results](xqtl_resource_description)** along with **[File Format Description](xqtl_resource_format)**
 * **[Study Cohorts](xqtl-data/study_info/)** - Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, and MetaBrain
@@ -22,8 +22,8 @@ The FunGen-xQTL project provides comprehensive molecular quantitative trait loci
   - Single-nucleus RNA-seq (ROSMAP DLPFC: CUIMC1, MIT, and mega cohorts)
   - Genotype (WGS) and covariates
 * **[xQTL Data](xqtl-data/qtl/)** - Molecular QTL associations organized by modality: [eQTL](xqtl-data/qtl/eQTL), [sQTL](xqtl-data/qtl/sQTL), [pQTL](xqtl-data/qtl/pQTL), [glycoQTL](xqtl-data/qtl/glycoQTL), [mQTL](xqtl-data/qtl/mQTL), [haQTL](xqtl-data/qtl/haQTL), [caQTL](xqtl-data/qtl/caQTL), [metQTL](xqtl-data/qtl/metQTL), plus ROSMAP transcriptomic pattern QTLs (tpQTL) and trans-xQTLs
-* **[FGMB Atlas](fgmb_weights_database)** - Multi-context regulome-wide association study (RWAS) prediction model resources, including Synapse accessions for models, gene-level association results, causal fine-mapping outputs.
-* **AD Loci Integration Summary** - The 195-locus AD GWAS × xQTL summary (October 2026 release) on Synapse ([syn69865823](https://www.synapse.org/Synapse:syn69865823)), also browsable in the interactive [xQTL-AD-loci-explorer](https://xqtl.niagads.org/AD-loci-explorer/)
+* **[FGMB Atlas](fgmb_weights_database)** - Multi-context regulome-wide association study (RWAS) prediction model resources, including AD Knowledge Portal accessions for models, gene-level association results, causal fine-mapping outputs.
+* **AD Loci Integration Summary** - The 195-locus AD GWAS × xQTL summary (October 2026 release) on the AD Knowledge Portal ([syn69865823](https://www.synapse.org/Synapse:syn69865823)), also browsable in the interactive [xQTL-AD-loci-explorer](https://xqtl.niagads.org/AD-loci-explorer/)
 * **[Reference Data](xqtl-data/reference_data/)** - ADSP-based LD reference panels (16,571 European ancestry samples), including an LD sketch panel, and other analytical resources
 
 Software resources implementing the xQTL analysis are also available:
@@ -32,11 +32,11 @@ Software resources implementing the xQTL analysis are also available:
 * **[xQTL Companion Statistical Methods Implementation](https://github.com/StatFunGen/pecotmr)** - Fine-mapping, enrichment, colocalization, TWAS, and Mendelian randomization tools
 
 ## Data Access
-The Synapse folders below are controlled access (you need a Synapse account and approved data access on the AD Knowledge Portal):
-- [Synapse — variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684))
-- [Synapse — xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588))
-- [Synapse — raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632))
-- [Synapse — reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634))
+The AD Knowledge Portal folders below are controlled access (you need a Synapse account and approved data access on the AD Knowledge Portal):
+- [AD Knowledge Portal — variant & gene summaries](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684))
+- [AD Knowledge Portal — xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588))
+- [AD Knowledge Portal — raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632))
+- [AD Knowledge Portal — reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634))
 - [NIAGADS](https://www.niagads.org/) (genomics data). The harmonized xQTL summary statistics in NG00184.v1 on NIAGADS DSS are open access.
 
 ---

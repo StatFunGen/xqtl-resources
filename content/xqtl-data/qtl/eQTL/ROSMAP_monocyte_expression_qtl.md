@@ -13,6 +13,7 @@ lead_analysts: [Travyse Edwards]
 last_verified:
 methods:
   cis-QTL: done
+  cTWAS: done
 ---
 
 # ROSMAP RNA-seq monocyte QTL
@@ -41,7 +42,7 @@ The biospecimen file identifies the individuals that have SNP array data, Whole 
 Among the 613 samples in the bed.gz file, 
 1. 56 of the samples are duplicates, there are 557 unique samples in total
 2. 237 of the samples are properly mapped to the samples.  320 samples remaining.
-3. 154 out of the 320 samples are in the synapse metadata, but only 3 has wgs, whose genotype ID cannot be found
+3. 154 out of the 320 samples are in the AD Knowledge Portal metadata, but only 3 has wgs, whose genotype ID cannot be found
 4. 166 out of the 320 is not in any of metadata, nor in any covariates data.
 Please see this notebook for details.
 
@@ -67,7 +68,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 
 - [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
-- [ROSMAP_DeJager_monocyte_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_monocyte_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
+- [ROSMAP_CUIMC1_monocyte_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_monocyte_eQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
 
 
 ### Path(s) to cis-QTL association testing

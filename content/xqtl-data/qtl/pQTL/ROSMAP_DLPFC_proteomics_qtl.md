@@ -15,6 +15,7 @@ methods:
   cis-QTL: done
   SuSiE: done
   TWAS: done
+  cTWAS: done
 ---
 
 # ROSMAP DLPFC protein expression QTL

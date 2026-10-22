@@ -10,7 +10,7 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Brain Tissue — ROSMAP Cohort
 
-| Dataset | Brain Region / Cell Type | Method | Synapse |
+| Dataset | Brain Region / Cell Type | Method | AD Knowledge Portal |
 |---------|--------------------------|--------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_splicing_qtl) | Dorsolateral prefrontal cortex (bulk) | LeafCutter + tensorQTL | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [ROSMAP PCC](ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
@@ -19,14 +19,14 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Brain Tissue — Other Cohorts
 
-| Dataset | Cohort / Brain Region | Synapse |
+| Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [MSBB](MSBB_brain_splicing_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
 | [Knight ADRC](Knight_ADRC_brain_splicing_qtl) | Knight ADRC brain (WashU) | — |
 
 ### Blood / Peripheral Tissue
 
-| Dataset | Cohort / Tissue | Synapse |
+| Dataset | Cohort / Tissue | AD Knowledge Portal |
 |---------|-----------------|---------|
 
 ## Analyses Performed

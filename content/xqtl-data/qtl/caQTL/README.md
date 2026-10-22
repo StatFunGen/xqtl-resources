@@ -10,7 +10,7 @@ caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from br
 
 ### Brain Tissue — Single-Nucleus
 
-| Dataset | Cohort / Brain Region | Cell Types | Synapse |
+| Dataset | Cohort / Brain Region | Cell Types | AD Knowledge Portal |
 |---------|-----------------------|------------|---------|
 | [ROSMAP snuc](ROSMAP_snuc_caQTL_qtl) | ROSMAP MIT snATAC-seq | Multiple brain cell types | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 
