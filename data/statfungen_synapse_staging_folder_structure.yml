@@ -736,6 +736,20 @@ xQTL_GWAS_models: #syn69670588
       batch1: #syn75427328
         - KNIGHT_eQTL_pQTL.*.twas.tsv.gz
         - MSBB_eQTL.*.twas.tsv.gz
+        - MSBB_pQTL.*.twas.tsv.gz
+        - ROSMAP_mega.*.twas.tsv.gz
+        - ROSMAP_sQTL.*.twas.tsv.gz
+        - ROSMAP_Bennett_Klein_glycoQTL_Bellenguez.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_EADB_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_EADI_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_GRACE_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Jansen_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Kunkle_Stage1_2019.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_Excluding23andMe_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_ExcludingUKBand23andME_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_Full_2021.*.twas.tsv.gz
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
       ROSMAP: #syn74986543
