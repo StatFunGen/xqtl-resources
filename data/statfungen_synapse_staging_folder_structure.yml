@@ -247,6 +247,7 @@ variant_gene_summary: #syn69865684
       - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.colocalization.txt.gz
       - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt.gz
       - ROSMAP_tpQTL_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
+      - AD_xQTL_ROSMAP_ISSAC_colocboost_sorted.bed.gz
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -596,8 +597,8 @@ xQTL_GWAS_models: #syn69670588
           fine_mapping: #syn75362741
             batch{1..2}: #syn7542734{5..6}
               - ROSMAP_sQTL.*.univariate_bvsr.rds
-        ROSMAP_tpQTL:
-          K3:
+        ROSMAP_tpQTL: #syn77650756
+          K3: #syn77650757
             export: #syn77651082
               - ROSMAP_tpQTL.*.cis_results_db.rds
               - ROSMAP_tpQTL.*.cis_results_db.rds.md5
@@ -606,15 +607,15 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_tpQTL.*.pip_sum
             fine_mapping: #syn77650758
               - ROSMAP_tpQTL.*.univariate_bvsr.rds
-          K5:
-            export:
+          K5: #syn77652322
+            export: #syn77652404
               batch{1..7}: #syn77652405, syn77691401, syn77720405, syn77741816, syn77773371, syn77751610, syn77750815
                 - ROSMAP_tpQTL.*.cis_results_db.export.rds
                 - ROSMAP_tpQTL.*.cis_results_db.export.rds.md5
                 - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds
                 - ROSMAP_tpQTL.*.cis_results_db.export_sumstats.rds.md5
                 - ROSMAP_tpQTL.*.pip_sum
-            fine_mapping:
+            fine_mapping: #syn77652323
               batch{1..2}: #syn77652324, syn77684573
                 - ROSMAP_tpQTL.*.univariate_bvsr.rds
         STARNET_eQTL: #syn70090832
@@ -653,8 +654,8 @@ xQTL_GWAS_models: #syn69670588
             - adj_glyco*.cb_xqtl.rds
           unadjusted: #syn76489413
             - unadj_glyco*.cb_xqtl.rds        
-      ROSMAP_tpQTL:
-        K5:
+      ROSMAP_tpQTL: #syn77652326
+        K5: #syn77652327
           batch{1..2}: #syn77652328, syn77684979
             - ROSMAP_tpQTL.*.cb_xqtl.rds
     TWAS_models: #syn69670600
@@ -735,6 +736,20 @@ xQTL_GWAS_models: #syn69670588
       batch1: #syn75427328
         - KNIGHT_eQTL_pQTL.*.twas.tsv.gz
         - MSBB_eQTL.*.twas.tsv.gz
+        - MSBB_pQTL.*.twas.tsv.gz
+        - ROSMAP_mega.*.twas.tsv.gz
+        - ROSMAP_sQTL.*.twas.tsv.gz
+        - ROSMAP_Bennett_Klein_glycoQTL_Bellenguez.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_EADB_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_EADI_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Bellenguez_GRACE_2022.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Jansen_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Kunkle_Stage1_2019.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_Excluding23andMe_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_ExcludingUKBand23andME_2021.*.twas.tsv.gz
+        - ROSMAP_eQTL_pQTL_AD_Wightman_Full_2021.*.twas.tsv.gz
   AD_xQTL_integration: #syn69670622
     AD_xQTL_colocalization_models: #syn69670630
       ROSMAP: #syn74986543
@@ -770,17 +785,27 @@ xQTL_GWAS_models: #syn69670588
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
         - unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
-      ROSMAP_tpQTL:
-        K5:
+      ROSMAP_tpQTL: #syn77716947
+        K5: #syn77716948
           batch{1..2}: #syn77716949, syn77732271
             - ROSMAP_tpQTL.*.cb_xqtl_AD_Bellenguez.rds
     cTWAS_results: #syn74908389
       AD_cTWAS_input: #syn75047699
         - RDS_files
       multi_group_cTWAS: #syn74908390
-        - TSV_files
+        - ROSMAP_eQTL_pQTL.*.ctwas_multi_group_AD_Bellenguez_2022.tsv.gz
       single_group_cTWAS: #syn74908397
-        - TSV_files
+        - ROSMAP_eQTL_pQTL.*.AC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.DLPFC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.PCC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Ast_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Exc_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Inh_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Mic_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Oli_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.OPC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.monocyte_ROSMAP_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.DLPFC_Bennett_pQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
 
 xQTL_data: #syn69670632
   xQTL_LR: #syn69670638
