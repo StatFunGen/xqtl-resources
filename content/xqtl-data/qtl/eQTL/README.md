@@ -10,7 +10,7 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Brain Tissue — ROSMAP Cohort
 
-| Dataset | Brain Region / Cell Type | Synapse |
+| Dataset | Brain Region / Cell Type | AD Knowledge Portal |
 |---------|--------------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl) | Dorsolateral prefrontal cortex (bulk RNA-seq) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [ROSMAP PCC](ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | — |
@@ -21,7 +21,7 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Brain Tissue — Other Cohorts
 
-| Dataset | Cohort / Brain Region | Synapse |
+| Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [MSBB](MSBB_brain_expression_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
 | [MiGA](MiGA_brain_expression_qtl) | Microglia in Genomics and Aging (multi-brain region) | — |
@@ -30,7 +30,7 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Blood / Peripheral Tissue
 
-| Dataset | Cohort / Tissue | Synapse |
+| Dataset | Cohort / Tissue | AD Knowledge Portal |
 |---------|-----------------|---------|
 | [STARNET macrophage](STARNET_macrophage_qtl) | STARNET macrophage gene expression | — |
 
@@ -72,7 +72,7 @@ The **scEEMs** model predicts cell-type-specific eQTL effects using a CatBoost b
 
 ## Data Access
 
-All fine-mapping models and TWAS weights are hosted on [Synapse](https://www.synapse.org/). Access requires a Synapse account and acceptance of the appropriate data use agreement.
+All fine-mapping models and TWAS weights are hosted on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/). Access requires a Synapse account and acceptance of the appropriate data use agreement.
 
 | Resource | Synapse ID |
 |----------|------------|

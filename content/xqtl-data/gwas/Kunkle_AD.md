@@ -23,7 +23,7 @@ Oluwatosin Olayinka
 The original summary statistics (GRCh37) and a liftover to GRCh38 are held on the Columbia University (CU) cluster.
 
 ## Path to SuSiE RSS Fine-mapping Objects
-- AD GWAS fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
+- AD GWAS fine-mapping models (AD Knowledge Portal): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 - Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
 - Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)
 

@@ -49,7 +49,7 @@ PI : Manolis Kellis (Massachusetts Institute of Technology)
 
 ### Raw data
 
-Nuclei were isolated from prefrontal cortex postmortem brain tissue of 427 ROSMAP participants spanning the full spectrum of AD pathology (Braak stages 0–VI). Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform. Raw sequencing reads were aligned to the GRCh38 reference genome following the MIT preprocessing workflow described in Mathys et al. (2023). The primary data release is available on Synapse at [syn52293417](https://www.synapse.org/Synapse:syn52293417).
+Nuclei were isolated from prefrontal cortex postmortem brain tissue of 427 ROSMAP participants spanning the full spectrum of AD pathology (Braak stages 0–VI). Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform. Raw sequencing reads were aligned to the GRCh38 reference genome following the MIT preprocessing workflow described in Mathys et al. (2023). The primary data release is available on the AD Knowledge Portal at [syn52293417](https://www.synapse.org/Synapse:syn52293417).
 
 ### Molecular phenotype matrices
 

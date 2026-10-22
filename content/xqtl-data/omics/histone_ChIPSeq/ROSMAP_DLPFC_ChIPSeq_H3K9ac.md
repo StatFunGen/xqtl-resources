@@ -53,7 +53,7 @@ For the ChIP assay, samples were incubated overnight at 4°C with 2.5 μl of the
 
 Data Processing:
 
-**Revised from description from previous Synapse release, changed some parameters found from current script**
+**Revised from description from previous AD Knowledge Portal release, changed some parameters found from current script**
 The raw data, procured from HiSeq, underwent a quality control process using FastQC and was subsequently aligned to the GRCh38 reference genome utilizing Bowtie2. Following alignment, the resultant BAM files were converted to BED format via bamToBed for further analysis. In the individual sample analysis, a comprehensive set of 92,401 peak regions was discerned using MACS2 with tailored parameters. The analysis engaged the broad peak option, specifically assigning a "broad-cutoff" of 0.1 and implementing a q-value cutoff of 0.05.
 After the identification of peaks, a subsequent quality control phase was undertaken to further ensure the reliability and accuracy of the results. Samples not satisfying the ensuing thresholds were omitted: (i) a minimum of 15x10^6 unique reads, (ii) a non-redundant fraction of 0.3 or higher, (iii) a cross-correlation of 0.03 or above, (iv) a fraction of reads in peaks of 0.05 or higher, and (v) at least 6000 peaks. It's noteworthy that pooled genomic DNA served as the negative control library for peak calling, substantiating the precision and specificity of peak region identification.
 To define and quantify H3K9ac domains, we parsed BED files for genomic region data and identified H3K9ac marked domains. Quantification for each sample was conducted by counting reads extended towards the 3'-end, ensuring the precision of our methodology.

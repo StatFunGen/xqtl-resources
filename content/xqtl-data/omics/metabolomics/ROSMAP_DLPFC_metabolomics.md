@@ -31,7 +31,7 @@ Brain metabolomics data from the Religious Orders Study and Memory and Aging Pro
 
 ### Metabolite abundance matrices
 
-Metabolite abundance data available through Synapse.
+Metabolite abundance data available through the AD Knowledge Portal.
 
 ## QTL Analysis
 QTL analysis for this dataset is documented in [../../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md](../../qtl/metQTL/ROSMAP_DLPFC_metabolomics_qtl.md).

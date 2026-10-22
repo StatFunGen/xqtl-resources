@@ -29,7 +29,7 @@ Single-nucleus ATAC-seq (snATAC-seq) data from ROSMAP, profiling chromatin acces
 
 ### Chromatin accessibility matrices
 
-Peak-by-cell count matrices and pseudobulk accessibility profiles available through Synapse.
+Peak-by-cell count matrices and pseudobulk accessibility profiles available through the AD Knowledge Portal.
 
 ## QTL Analysis
 QTL analysis for this dataset is documented in [../../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md](../../qtl/caQTL/ROSMAP_snuc_caQTL_qtl.md).

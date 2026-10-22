@@ -10,7 +10,7 @@ pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ### Brain Tissue
 
-| Dataset | Cohort / Brain Region | Synapse |
+| Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_proteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [MSBB](MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |

@@ -10,7 +10,7 @@ glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from
 
 ### Brain Tissue
 
-| Dataset | Cohort / Brain Region | Synapse |
+| Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_glycoproteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 

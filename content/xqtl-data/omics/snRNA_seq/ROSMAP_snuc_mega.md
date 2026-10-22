@@ -50,7 +50,7 @@ PIs : Phil De Jager (Columbia University) and Manolis Kellis (Massachusetts Inst
 
 ### Raw data
 
-Nuclei were isolated from DLPFC/PFC postmortem brain tissue of ROSMAP participants from two complementary datasets: the CUIMC1 dataset (424 donors; Synapse [syn31512863](https://www.synapse.org/Synapse:syn31512863)) and the MIT dataset (427 donors; Synapse [syn52293417](https://www.synapse.org/Synapse:syn52293417)). Overlapping donors between the two datasets were identified and handled appropriately during harmonization. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform in both studies. Raw reads were aligned to the GRCh38 reference genome following the respective lab preprocessing workflows.
+Nuclei were isolated from DLPFC/PFC postmortem brain tissue of ROSMAP participants from two complementary datasets: the CUIMC1 dataset (424 donors; AD Knowledge Portal [syn31512863](https://www.synapse.org/Synapse:syn31512863)) and the MIT dataset (427 donors; AD Knowledge Portal [syn52293417](https://www.synapse.org/Synapse:syn52293417)). Overlapping donors between the two datasets were identified and handled appropriately during harmonization. Single-nucleus RNA-seq was performed using the 10x Genomics Chromium platform in both studies. Raw reads were aligned to the GRCh38 reference genome following the respective lab preprocessing workflows.
 
 ### Molecular phenotype matrices
 

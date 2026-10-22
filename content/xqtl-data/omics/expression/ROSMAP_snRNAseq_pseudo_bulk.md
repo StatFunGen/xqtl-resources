@@ -38,7 +38,7 @@ Hao Sun and Masashi Fujita
 
 ### Raw data
 
-The CUIMC1 data ([syn31512863](https://www.synapse.org/Synapse:syn31512863)) are described in Fujita et al., *Nature Genetics* 56, 605–614 (2024), [doi:10.1038/s41588-024-01685-y](https://doi.org/10.1038/s41588-024-01685-y). Of 479 DLPFC specimens selected, 424 participants passed quality control and had whole-genome sequencing. Each library pooled 5,000 nuclei from each of eight participants and was profiled with 10x Genomics Chromium Single Cell 3′ v3 kits. Nuclei were assigned back to participants with demuxlet, or freemuxlet when fewer than eight participants in a pool had genotypes. The dataset has 1,509,626 nuclei from the 424 participants. Cell type annotations and eQTL summary statistics are on Synapse ([syn52335732](https://www.synapse.org/Synapse:syn52335732)).
+The CUIMC1 data ([syn31512863](https://www.synapse.org/Synapse:syn31512863)) are described in Fujita et al., *Nature Genetics* 56, 605–614 (2024), [doi:10.1038/s41588-024-01685-y](https://doi.org/10.1038/s41588-024-01685-y). Of 479 DLPFC specimens selected, 424 participants passed quality control and had whole-genome sequencing. Each library pooled 5,000 nuclei from each of eight participants and was profiled with 10x Genomics Chromium Single Cell 3′ v3 kits. Nuclei were assigned back to participants with demuxlet, or freemuxlet when fewer than eight participants in a pool had genotypes. The dataset has 1,509,626 nuclei from the 424 participants. Cell type annotations and eQTL summary statistics are on the AD Knowledge Portal ([syn52335732](https://www.synapse.org/Synapse:syn52335732)).
 
 **Biosample:**
 

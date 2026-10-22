@@ -135,7 +135,7 @@ AD GWAS–xQTL colocalization results (ColocBoost): [syn69865816](https://www.sy
 
 AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
 
-AD fine-mapping models (Synapse): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
+AD fine-mapping models (AD Knowledge Portal): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
 
 Top unified loci summary: [syn69865824](https://www.synapse.org/Synapse:syn69865824)
 
@@ -149,7 +149,7 @@ AD risk genes prioritized by xQTL + TWAS + GVC: [syn70095143](https://www.synaps
 
 The 2026 files are fine-mapped from the summary statistics of the consensus meta-analysis of Alzheimer's disease and related dementias (ADRD) by the EADB, PGC-ALZ and IGAP consortia: Bellenguez et al. 2026, *Nature Genetics* 58:1214–1225 ([doi:10.1038/s41588-026-02583-1](https://doi.org/10.1038/s41588-026-02583-1); preprint [medRxiv 2025.10.20.25338060](https://www.medrxiv.org/content/10.1101/2025.10.20.25338060)). The study reported 91 ADRD risk loci, 16 of them new. The fine-mapping for this release was run by Haochen and Yining.
 
-Each analysis has a top-loci table (`AD_Bellenguez_<variant>_2026.gwas.top_loci.bed.gz`) and per-region SuSiE RSS fine-mapping objects (`AD_Bellenguez_<variant>_2026.*.gwas_finemap.rds`), staged on Synapse alongside the 2022 release.
+Each analysis has a top-loci table (`AD_Bellenguez_<variant>_2026.gwas.top_loci.bed.gz`) and per-region SuSiE RSS fine-mapping objects (`AD_Bellenguez_<variant>_2026.*.gwas_finemap.rds`), staged on the AD Knowledge Portal alongside the 2022 release.
 
 | Variant | Analysis in Bellenguez et al. 2026 |
 | ------- | ----------- |

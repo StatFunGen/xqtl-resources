@@ -42,7 +42,7 @@ The biospecimen file identifies the individuals that have SNP array data, Whole 
 Among the 613 samples in the bed.gz file, 
 1. 56 of the samples are duplicates, there are 557 unique samples in total
 2. 237 of the samples are properly mapped to the samples.  320 samples remaining.
-3. 154 out of the 320 samples are in the synapse metadata, but only 3 has wgs, whose genotype ID cannot be found
+3. 154 out of the 320 samples are in the AD Knowledge Portal metadata, but only 3 has wgs, whose genotype ID cannot be found
 4. 166 out of the 320 is not in any of metadata, nor in any covariates data.
 Please see this notebook for details.
 
