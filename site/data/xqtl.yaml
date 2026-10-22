@@ -99,7 +99,7 @@ method_status:
 
 # Inventory acquisition stages
 acquisition:
-  in_hand: {label: In hand, desc: "On Synapse or DSS, usable now"}
+  in_hand: {label: In hand, desc: "Obtained and on Synapse or DSS. Release status is shown on each dataset page."}
   reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
   requested: {label: Requested, desc: "Outreach under way"}
   to_identify: {label: To identify, desc: "Candidates not yet found"}

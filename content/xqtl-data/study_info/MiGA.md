@@ -26,9 +26,6 @@ The Microglia Genomic Atlas (MiGA) uses brain tissue from the Netherlands Brain 
 - Dataset_name : MiGA
 - Dataset_Description : A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
 - Disease : neurodegenerative, neurological, and neuropsychiatric disorders
-- Website&Logo : nan
-- Logo : nan
-- Additional Study information : nan
 
 ## Contact
 

@@ -11,6 +11,8 @@ release:
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Alexandre Pelletier]
 last_verified:
+methods:
+  cis-QTL: done
 ---
 
 # MSBB brain methylation QTL

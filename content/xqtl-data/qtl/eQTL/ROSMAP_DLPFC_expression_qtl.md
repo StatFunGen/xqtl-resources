@@ -11,6 +11,8 @@ release:
 synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Shrishtee Kandoi, Frank Grenn]
 last_verified:
+methods:
+  cis-QTL: done
 ---
 
 # ROSMAP DLPFC gene expression QTL
@@ -49,8 +51,7 @@ TransQTL association: Finished.
 
 ### QC and Normalization Details for Phenotype Data
 
-Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analysis detial please check records here: [eQTL](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC/eQTL) [eQTL_susie_result_analysis
-](need to replace)
+Brain multi-region RNA-seq data was processed with the xQTL-pipeline, for analysis details please check records here: [eQTL](https://github.com/cumc/brain-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC/eQTL)
 
 ### Genotype parameters
 
@@ -85,7 +86,7 @@ Final covariates: Sex, Age at death, PMI, PCs(13), PEER factors(60)
 
 - cis window for the up and downstream radius to analyze around the region of interest, in units of bp: 1000000
 - Minor allele count cutoff: 5
-- Minor allele frequency cutoff: 5/(2.0*592) = 0.00422297
+- Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
 
 ## Links to QTL analysis notebooks
@@ -122,11 +123,6 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 ## Dataset Details
 
-- Number of cases : 
-- Number of controls :
-- Annotation information : 
-- Genotype level imputation : 
-- Imputation Panel : 
 
 ### Path(s) to genotype matrix 
 

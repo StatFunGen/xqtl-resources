@@ -21,9 +21,7 @@ The Knight Alzheimer's Disease Research Center (Knight-ADRC) at Washington Unive
 - Study name : Charles F. And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC)
 - Study Description : The search for novel risk factors and genetic modifiers for Alzheimer disease relies on the access to accurate and deeply phenotyped datasets. The Memory and Aging Project at the Charles F. And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC at Washington University in St. Louis) collects collects plasma, CSF, fibroblast, neuroimaging  clinical and cognition data longitudinally and autopsied brain samples. This clinical information combined with deep molecular phenotyping (i.e. genetic, proteomics, transcriptomics and others) will lead to the identification of novel genetic modifiers, protective variants, molecular biomarkers and the novel targets. Participants were recruited by the Knight-ADRC at Washington University in St. Louis.
 - Disease : Alzheimer's disease
-- Website&Logo : https://www.niagads.org/knight-adrc-collection
-- Logo : NR
-- Additional study information : NR
+- Website : https://www.niagads.org/knight-adrc-collection
 
 ## Contact
 

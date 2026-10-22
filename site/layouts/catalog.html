@@ -78,6 +78,9 @@
     <div class="catalog__results">
       <div class="rtool" role="group" aria-label="Results">
         <span class="rtool__count" data-count aria-live="polite">{{ len $rows }} datasets</span>
+        <label class="rtool__sort">Sort <select data-sort-select>
+          <option value="title:asc">Dataset A–Z</option><option value="cohort:asc">Cohort A–Z</option><option value="type:asc">Type A–Z</option><option value="n:desc">N, largest first</option><option value="n:asc">N, smallest first</option>
+        </select></label>
         <button type="button" class="btn btn--sm rtool__filters" data-filters-open aria-controls="facets" aria-expanded="false">Filters<span class="rtool__nf" data-filter-count></span></button>
         <button type="button" class="btn btn--sm btn--ghost" data-clear hidden>Reset all</button>
       </div>

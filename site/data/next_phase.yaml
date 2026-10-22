@@ -12,7 +12,7 @@
   access: controlled
   acquisition: in_hand
   synapse: syn52160016
-  note: On the AD Knowledge Portal; 1,494 donors, including 152 ROSMAP and 1,042 MSSM
+  note: On the AD Knowledge Portal; 1,494 donors from three brain banks (1,042 MSBB, 300 HBCC, 152 ROSMAP)
   methods: {cis-QTL: awaiting, SuSiE: awaiting, ColocBoost: awaiting, TWAS: awaiting, cTWAS: awaiting, MR: awaiting, LF2: decide, scEEMS: awaiting}
 
 - name: Other new or expanded datasets
