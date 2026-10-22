@@ -103,3 +103,11 @@ acquisition:
   reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
   requested: {label: Requested, desc: "Outreach under way"}
   to_identify: {label: To identify, desc: "Candidates not yet found"}
+
+# Lead analyst contact emails, shown as email links on dataset pages.
+# `name` must match the name in a page's lead_analysts list. Names without an email here show as plain text.
+analysts:
+  - {name: Xuanhe Chen, email: xuanhechenxhc@163.com}
+  - {name: Zining Qi, email: zq2209@cumc.columbia.edu}
+  - {name: Travyse Edwards, email: travyse.edwards@icahn.mssm.edu}
+  - {name: Minghui Wang, email: minghui.wang@mssm.edu}
