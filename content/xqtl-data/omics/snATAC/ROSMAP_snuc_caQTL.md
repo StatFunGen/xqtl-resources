@@ -3,7 +3,7 @@ type: omics
 modality: snATAC
 short_title: ROSMAP snATAC-seq
 cohort: ROSMAP
-context: "DLPFC, cell types"
+context: "DLPFC, 6 cell types"
 sample_size:
 access: controlled
 status: staged
