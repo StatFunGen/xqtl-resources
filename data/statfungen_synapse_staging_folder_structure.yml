@@ -778,9 +778,19 @@ xQTL_GWAS_models: #syn69670588
       AD_cTWAS_input: #syn75047699
         - RDS_files
       multi_group_cTWAS: #syn74908390
-        - TSV_files
+        - ROSMAP_eQTL_pQTL.*.ctwas_multi_group_AD_Bellenguez_2022.tsv.gz
       single_group_cTWAS: #syn74908397
-        - TSV_files
+        - ROSMAP_eQTL_pQTL.*.AC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.DLPFC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.PCC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Ast_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Exc_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Inh_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Mic_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.Oli_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.OPC_CUIMC1_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.monocyte_ROSMAP_eQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
+        - ROSMAP_eQTL_pQTL.*.DLPFC_Bennett_pQTL.ctwas_single_group_AD_Bellenguez_2022.tsv.gz
 
 xQTL_data: #syn69670632
   xQTL_LR: #syn69670638
