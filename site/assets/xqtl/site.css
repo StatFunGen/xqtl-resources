@@ -622,3 +622,17 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Catalog: analysis progress by method (one hue from a zero baseline, value as text) */
+.catalog > .progress { margin: 16px 32px 0; padding: 4px 16px 12px; max-width: 760px; }
+.progress__list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
+.progress__row { display: grid; grid-template-columns: 7.5em 1fr 5.5em; align-items: center; gap: 12px; padding: 3px 4px; font-size: 13px; border-radius: var(--r); cursor: default; }
+.progress__row:hover { background: var(--sk); }
+.progress__label { color: var(--ink); font-weight: 600; }
+.progress__track { height: 10px; background: var(--empty); border-radius: 0 4px 4px 0; }
+.progress__bar { display: block; height: 100%; background: var(--ac); border-radius: 0 4px 4px 0; }
+.progress__val { color: var(--ink2); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.progress__val strong { color: var(--ink); }
+.progress__val .muted { font-size: 12px; }
+@media (max-width: 900px) { .catalog > .progress { margin: 12px 16px 0; } .progress__row { grid-template-columns: 6.2em 1fr 6.4em; gap: 8px; } }
+@media print { .catalog > .progress { display: none; } }

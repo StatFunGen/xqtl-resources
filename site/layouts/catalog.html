@@ -44,6 +44,30 @@
     </div>
   </section>
 
+  {{- /* Analysis progress: for each xQTL protocol method, how many QTL result pages record it as done.
+    Same source as the coverage grid (the `methods:` map in each page header). */ -}}
+  {{- $qds := slice }}{{ range $qtl }}{{ if ne .short "Protocol toy data" }}{{ $qds = $qds | append . }}{{ end }}{{ end -}}
+  {{- $total := len $qds -}}
+  <section class="card progress" aria-labelledby="progress-title">
+    <div class="matrix__head">
+      <h2 id="progress-title">Analysis progress by method</h2>
+      <span class="muted">QTL result pages that record each method as done, out of {{ $total }}. Hover a row for the datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
+    </div>
+    <ul class="progress__list">
+      {{- range $m := $x.methods }}
+      {{- $names := slice -}}
+      {{- range $qds }}{{ if eq (index .methods $m) "done" }}{{ $names = $names | append (printf "%s %s" .short .label) }}{{ end }}{{ end -}}
+      {{- $n := len $names -}}
+      {{- $pct := 0.0 }}{{ if $total }}{{ $pct = div (mul $n 100.0) $total }}{{ end }}
+      <li class="progress__row" title="{{ $m }}: {{ $n }} of {{ $total }}{{ with $names }}&#10;{{ delimit . "&#10;" }}{{ end }}">
+        <span class="progress__label">{{ $m }}</span>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" $pct }}%"></span></span>
+        <span class="progress__val">{{ if $n }}<strong>{{ $n }}</strong> of {{ $total }}{{ else }}<span class="muted">not recorded</span>{{ end }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
