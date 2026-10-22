@@ -13,6 +13,7 @@ lead_analysts: [Frank Grenn]
 last_verified:
 methods:
   cis-QTL: done
+  cTWAS: done
 ---
 
 # ROSMAP PCC Expression QTL

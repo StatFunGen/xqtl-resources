@@ -85,7 +85,7 @@ We provide complete statistical models as RDS files for researchers to conduct c
 
 ### Alzheimer's Disease Analysis Models
 
-AD-specific models include [AD fine-mapping results](https://www.synapse.org/Synapse:syn69670625) with Bayes factors, posterior probabilities and credible sets ([syn69670625](https://www.synapse.org/Synapse:syn69670625)), and [AD colocalization results](https://www.synapse.org/Synapse:syn69865814) providing statistical evidence of shared genetic architecture per locus ([syn69865814](https://www.synapse.org/Synapse:syn69865814)). [AD-xQTL colocalization models](https://www.synapse.org/Synapse:syn69865816) offer comprehensive colocalization statistics between AD risk and molecular traits ([syn69865816](https://www.synapse.org/Synapse:syn69865816), [syn69670630](https://www.synapse.org/Synapse:syn69670630)). We also provide [cTWAS inputs and results](https://www.synapse.org/Synapse:syn74908389) (single-group and multi-group cTWAS) for causal transcriptome-wide association studies in AD ([syn74908389](https://www.synapse.org/Synapse:syn74908389)).
+AD-specific models include [AD fine-mapping results](https://www.synapse.org/Synapse:syn69670625) with Bayes factors, posterior probabilities and credible sets ([syn69670625](https://www.synapse.org/Synapse:syn69670625)), and [AD colocalization results](https://www.synapse.org/Synapse:syn69865814) providing statistical evidence of shared genetic architecture per locus ([syn69865814](https://www.synapse.org/Synapse:syn69865814)). [AD-xQTL colocalization models](https://www.synapse.org/Synapse:syn69865816) offer comprehensive colocalization statistics between AD risk and molecular traits ([syn69865816](https://www.synapse.org/Synapse:syn69865816), [syn69670630](https://www.synapse.org/Synapse:syn69670630)). We also provide [cTWAS results](https://www.synapse.org/Synapse:syn74908389) (single-group and multi-group cTWAS) for causal transcriptome-wide association studies in AD ([syn74908389](https://www.synapse.org/Synapse:syn74908389)).
 
 ## Raw QTL Summary Statistics
 
@@ -141,7 +141,7 @@ All FunGen-xQTL flagship paper datasets are hosted on [Synapse](https://www.syna
 | AD GWAS fine-mapping top loci | Per-study AD GWAS top loci (incl. 2026 Bellenguez updates) | [syn69865805](https://www.synapse.org/Synapse:syn69865805) |
 | AD–xQTL colocalization results | AD GWAS × xQTL colocalization summary statistics | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |
 | AD–xQTL colocalization models | AD GWAS × xQTL colocalization model objects | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |
-| cTWAS inputs and results | Causal TWAS inputs, single-group and multi-group results for AD | [syn74908389](https://www.synapse.org/Synapse:syn74908389) |
+| cTWAS results | Causal TWAS single-group and multi-group results for AD | [syn74908389](https://www.synapse.org/Synapse:syn74908389) |
 | cTWAS exported results | Exported cTWAS summary (bed) | [syn69865822](https://www.synapse.org/Synapse:syn69865822) |
 | TWAS / MR exported results | Exported TWAS and Mendelian randomization summaries (bed) | [syn69865821](https://www.synapse.org/Synapse:syn69865821) |
 | AD TWAS association | Per-context AD TWAS association results | [syn74908416](https://www.synapse.org/Synapse:syn74908416) |

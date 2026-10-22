@@ -13,6 +13,7 @@ lead_analysts: [Travyse Edwards]
 last_verified:
 methods:
   cis-QTL: done
+  cTWAS: done
 ---
 
 # ROSMAP RNA-seq monocyte QTL

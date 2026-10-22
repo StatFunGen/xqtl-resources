@@ -13,6 +13,7 @@ lead_analysts: [Shrishtee Kandoi, Frank Grenn]
 last_verified:
 methods:
   cis-QTL: done
+  cTWAS: done
 ---
 
 # ROSMAP DLPFC gene expression QTL
