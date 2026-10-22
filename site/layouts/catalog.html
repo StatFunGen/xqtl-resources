@@ -93,6 +93,45 @@
     </ul>
   </section>
 
+  {{- /* QTL datasets by cohort, as a donut. The three largest cohorts get their own slice and the
+    rest are grouped as "Other". Slices are drawn with a conic gradient, with a thin gap between them. */ -}}
+  {{- $groups := slice -}}
+  {{- range uniq (apply $qds "index" "." "cohort") -}}
+    {{- $groups = $groups | append (dict "name" . "n" (len (where $qds "cohort" .))) -}}
+  {{- end -}}
+  {{- $groups = sort $groups "n" "desc" -}}
+  {{- if gt (len $groups) 4 -}}
+    {{- $rest := after 3 $groups }}{{ $on := 0 }}{{ $onames := slice -}}
+    {{- range $rest }}{{ $on = add $on .n }}{{ $onames = $onames | append .name }}{{ end -}}
+    {{- $groups = (first 3 $groups) | append (dict "name" "Other" "n" $on "detail" (delimit $onames ", ")) -}}
+  {{- end -}}
+  {{- $stops := slice }}{{ $at := 0.0 -}}
+  {{- range $i, $g := $groups -}}
+    {{- $end := add $at (div (mul $g.n 360.0) $total) -}}
+    {{- $stops = $stops | append (printf "var(--pie%d) %.2fdeg %.2fdeg, var(--sf) %.2fdeg %.2fdeg" (add $i 1) $at (sub $end 1.5) (sub $end 1.5) $end) -}}
+    {{- $at = $end -}}
+  {{- end -}}
+  <section class="card progress cohorts" aria-labelledby="cohorts-title">
+    <div class="matrix__head">
+      <h2 id="cohorts-title">QTL datasets by cohort</h2>
+      <span class="muted">Share of the {{ $total }} QTL datasets that come from each cohort.</span>
+    </div>
+    <div class="cohorts__body">
+      <div class="cohorts__pie" role="img" aria-label="{{ range $i, $g := $groups }}{{ if $i }}, {{ end }}{{ $g.name }} {{ $g.n }}{{ end }}" style="background:conic-gradient({{ delimit $stops ", " | safeCSS }})">
+        <span class="cohorts__total"><strong>{{ $total }}</strong> datasets</span>
+      </div>
+      <ul class="cohorts__legend">
+        {{- range $i, $g := $groups }}
+        <li title="{{ $g.name }}: {{ $g.n }} of {{ $total }}{{ with $g.detail }} ({{ . }}){{ end }}">
+          <span class="cohorts__key" style="background:var(--pie{{ add $i 1 }})" aria-hidden="true"></span>
+          <span class="cohorts__name">{{ $g.name }}{{ with $g.detail }} <span class="muted">{{ . }}</span>{{ end }}</span>
+          <span class="progress__val"><strong>{{ $g.n }}</strong> <span class="muted">{{ printf "%.0f" (div (mul $g.n 100.0) $total) }}%</span></span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
