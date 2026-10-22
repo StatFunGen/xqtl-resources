@@ -3,7 +3,7 @@ type: qtl
 modality: eQTL
 short_title: MetaBrain
 cohort: MetaBrain
-context: multi-region
+context: 5 brain regions
 access:
 status: staged
 release:

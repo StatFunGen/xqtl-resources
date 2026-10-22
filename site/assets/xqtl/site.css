@@ -635,4 +635,9 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 .progress__val strong { color: var(--ink); }
 .progress__val .muted { font-size: 12px; }
 @media (max-width: 900px) { .catalog > .progress { margin: 12px 16px 0; } .progress__row { grid-template-columns: 6.2em 1fr 6.4em; gap: 8px; } }
+.contexts .progress__row { grid-template-columns: 15em 1fr 7em; }
+.contexts .progress__label { text-decoration: none; }
+.contexts .progress__label:hover { text-decoration: underline; }
+.contexts__mod { color: var(--ink2); font-weight: 400; }
+@media (max-width: 900px) { .contexts .progress__row { grid-template-columns: 10.5em 1fr 6.2em; } }
 @media print { .catalog > .progress { display: none; } }

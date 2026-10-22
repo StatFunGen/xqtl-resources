@@ -68,6 +68,31 @@
     </ul>
   </section>
 
+  {{- /* Contexts per dataset: tissues or cell types covered, read from the context field
+    ("4 brain regions", "DLPFC, 7 cell types"; a single named tissue counts as one). */ -}}
+  {{- $multi := slice }}{{ $single := 0 -}}
+  {{- range $qds -}}
+    {{- $k := 1 }}{{ with findRESubmatch `(\d+) (?:brain regions|regions|cell types)` .context 1 }}{{ $k = int (index (index . 0) 1) }}{{ end -}}
+    {{- if gt $k 1 }}{{ $multi = $multi | append (dict "short" .short "label" .label "href" .href "color" .color "k" $k "context" .context) }}{{ else }}{{ $single = add $single 1 }}{{ end -}}
+  {{- end -}}
+  {{- $multi = sort $multi "k" "desc" -}}
+  {{- $max := 1 }}{{ range $multi }}{{ if gt .k $max }}{{ $max = .k }}{{ end }}{{ end -}}
+  <section class="card progress contexts" aria-labelledby="contexts-title">
+    <div class="matrix__head">
+      <h2 id="contexts-title">Tissues and cell types per dataset</h2>
+      <span class="muted">QTL datasets that cover more than one brain region or cell type. The other {{ $single }} cover one each.</span>
+    </div>
+    <ul class="progress__list">
+      {{- range $multi }}
+      <li class="progress__row contexts__row" title="{{ .short }} {{ .label }}: {{ .context }}">
+        <a class="progress__label" href="{{ .href }}">{{ .short }}{{ if not (strings.Contains .short .label) }} <span class="contexts__mod">{{ .label }}</span>{{ end }}</a>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .k 100.0) $max) }}%;background:{{ .color | safeCSS }}"></span></span>
+        <span class="progress__val"><strong>{{ .k }}</strong> {{ if findRE `cell types` .context }}cell types{{ else }}regions{{ end }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>

@@ -3,7 +3,7 @@ type: qtl
 modality: caQTL
 short_title: ROSMAP single-nucleus
 cohort: ROSMAP
-context: "DLPFC, cell types"
+context: "DLPFC, 6 cell types"
 sample_size:
 access: controlled
 status: staged
