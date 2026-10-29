@@ -80,7 +80,7 @@ variant_gene_summary: #syn69865684
           - FunGen_xQTL_single_context_top_loci_integrated.rds
           - FunGen_xQTL_AD_loci_context_method_summary.fsusie.rds
       multi_context_finemapping: #syn69865754
-        - mash_model: #syn71722950
+        mash_model: #syn71722950
           - mash_34_contexts_ed_bovy_1e3.EZ.mash_model.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.posterior.rds
           - mash_34_contexts_ed_bovy_1e3.EZ.V_simple.rds
@@ -93,7 +93,7 @@ variant_gene_summary: #syn69865684
           - mash_34_contexts_ed_bovy_1e3.pca.rds
         - MSBB.cis.multi_context.top_loci.bed.gz #syn69865755
         - ROSMAP.cis.multi_context.top_loci.bed.gz #syn69865756
-        - consolidated: #syn70094695
+        consolidated: #syn70094695
           - FunGen_xQTL_multi_context_top_loci_integrated.rds
       multi_gene_finemapping: #syn69865757
         eQTL: #syn69865758
@@ -248,6 +248,7 @@ variant_gene_summary: #syn69865684
       - ROSMAP_tpQTL_K5_AD_Bellenguez_2022.ADgenes_colocalization.txt.gz
       - ROSMAP_tpQTL_K3_AD_Bellenguez_2022.colocboost_sorted.bed.gz
       - AD_xQTL_ROSMAP_ISSAC_colocboost_sorted.bed.gz
+      - AD_UofCsQTL_colocboost_export_release.bed
     AD_gene_level: #syn69865820
       TWAS_MR: #syn69865821
         - FunGen_twas.exported.bed.gz 
@@ -255,11 +256,10 @@ variant_gene_summary: #syn69865684
       cTWAS: #syn69865822
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary: #syn69865823
-    - unified_AD_loci_xQTL_summary_20261002.xlsx
+    - unified_AD_loci_xQTL_summary_20261029.xlsx
     - AD_loci_unified_cs95orColocs.csv
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
-    - AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz
     - AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv
     - AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv
 
@@ -781,9 +781,9 @@ xQTL_GWAS_models: #syn69670588
         - MiGA.*.cb_xqtl_AD_Wightman_ExcludingUKBand23andME_2021.rds
         - MiGA.*.cb_xqtl_AD_Wightman_Full_2021.rds
       ROSMAP_glycoQTL: #syn76490205
-        - adjusted: #syn76490248
+        adjusted: #syn76490248
           - adj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
-        - unadjusted: #syn76490281
+        unadjusted: #syn76490281
           - unadj_glyco_AD.*.cb_xqtl_AD_Bellenguez.rds
       ROSMAP_tpQTL: #syn77716947
         K5: #syn77716948
@@ -1378,16 +1378,16 @@ manuscript: #syn69832123
     - Figure_6_AD_loci_table_visualization.rds
     - Figure_5g_cV2F.rds
     - Figure_5e_GSEA.rds
-    - Metabolome: #syn76495536
+    Metabolome: #syn76495536
       - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.rds
       - FunGen_xQTL_metabolites.coloc70.merged.Apr2025.flatten.tsv
-    - EOO: #syn70094903
+    EOO: #syn70094903
       - EOO_reshape_combined_result_withSNP_pip01_95cs_annotation_variant_level.rds
       - Figure_EOO.rds
-    - sLDSC: #syn70094904
+    sLDSC: #syn70094904
       - Figure_sLDSC_GWAS_specific.rds
       - Figure_sLDSC_meta_analysis.rds
-    - PPI: #syn71538047
+    PPI: #syn71538047
       - Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.region_list
       - Non_proxy_AD_gene_xQTL.txt
       - Figure_5f_PPI.rds
