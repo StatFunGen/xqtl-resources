@@ -222,16 +222,12 @@ variant_gene_summary: #syn69865684
   AD_loci_summary: #syn69865804
     AD_finemapping: #syn69865805
       - AD_Bellenguez_2022.gwas.top_loci.bed.gz           
-      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
       - AD_Bellenguez_EADB_2022.gwas.top_loci.bed.gz
       - AD_Jansen_2021.gwas.top_loci.bed.gz
       - AD_Bellenguez_EADI_2022.gwas.top_loci.bed.gz
       - AD_Kunkle_Stage1_2019.gwas.top_loci.bed.gz
-      - AD_Bellenguez_GRACE_2022.gwas.top_loci.bed.gz
       - AD_Wightman_Excluding23andMe_2021.gwas.top_loci.bed.gz
-      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
       - AD_Wightman_ExcludingUKBand23andME_2021.gwas.top_loci.bed.gz
-      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
       - AD_Wightman_Full_2021.gwas.top_loci.bed.gz
     AD_colocalization: #syn69865814
       - AD_meta_colocboost_filtered.bed.gz
