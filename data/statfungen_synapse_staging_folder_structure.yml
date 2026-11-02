@@ -685,10 +685,10 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_mega_eQTL.*.univariate_twas_weights.rds
           MIT: #syn74908478
             batch{1..2}: #syn754273{29..30}
-            - ROSMAP_MIT_eQTL.*.univariate_susie_twas_weights.rds
+              - ROSMAP_MIT_eQTL.*.univariate_susie_twas_weights.rds
           CUIMC1: #syn74908574
             batch{1..2}: #syn722806{09..10}
-            - ROSMAP_CUIMC1.*.univariate_twas_weights.rds
+              - ROSMAP_CUIMC1.*.univariate_twas_weights.rds
         ROSMAP_pQTL: #syn70090857
           batch{1..2}: #syn7154895{5..6}
             - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
@@ -706,7 +706,7 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
-          - STARNET_eQTL.*.univariate_twas_weights.rds
+            - STARNET_eQTL.*.univariate_twas_weights.rds
       multi_context: #syn74907900
         ROSMAP_All: #syn74909252
           batch{1..2}: #syn7542733{1..2}
@@ -869,7 +869,7 @@ reference_files: #syn69670634
          - xz_files_with_meta_data_in_bim_format
        ld_sketch: #syn75082260
          - ADSP_R4_EUR.chr{1..22}.pgen
-         - ADSP_R4_EUR.chr{1..22}.pvar.zst
+         - ADSP_R4_EUR.chr{1..22}.pvar
          - ADSP_R4_EUR.chr{1..22}.psam
          - ADSP_R4_EUR.chr{1..22}.afreq
   sLDSC_reference_data: #syn75157484
