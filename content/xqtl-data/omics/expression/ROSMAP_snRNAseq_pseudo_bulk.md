@@ -32,7 +32,6 @@ Hao Sun and Masashi Fujita
 - Study Description :
 - Disease : Alzheimer’s Disease
 - Data Citation : Omics data: [syn31512863](https://www.synapse.org/Synapse:syn31512863) (CUIMC1), [syn52293417](https://www.synapse.org/Synapse:syn52293417) (MIT); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
-- Additional study information : 
 
 ## Dataset Description
 

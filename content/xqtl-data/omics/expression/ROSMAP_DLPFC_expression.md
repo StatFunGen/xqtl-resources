@@ -36,7 +36,6 @@ Xuanhe Chen (xuanhechenxhc@163.com)
 - Study Description : Samples were extracted using Qiagen’s miRNeasy mini kit (cat. no. 217004) and the RNase free DNase Set (cat. no. 79254), and quantified by Nanodrop and quality was evaluated by Agilent Bioanalyzer.
 - Disease : Alzheimer’s Disease
 - Data Citation : Omics data: [syn3388564](https://www.synapse.org/Synapse:syn3388564); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
-- Additional study information : 
 
 ## Dataset Details
 

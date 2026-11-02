@@ -11,7 +11,7 @@ home:
   participants_note: >-
     Counts are participants. One participant can contribute several tissues,
     cell types and assays.
-  updated: "October 2026"
+  updated: "November 2026"
 
 # QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
 # `omics` the matching folders under content/xqtl-data/omics. Colour: oklch(0.6 0.13 hue).

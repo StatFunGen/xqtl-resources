@@ -38,7 +38,6 @@ Xuanhe Chen; Shrishtee Kandoi
 - Study Description : From STAR alignment output of ROSMAP DLPFC RNAseq Bulk Brain data (sample size 1141), we used leafCutter package to find intron usage ratio data for intron clusters and psichomics package to find percent spliced in (PSI) values for different alternative splicing events. All phenotype processing was done using the ADSP FGC xQTL pipeline and the output format is prepared for sQTL analysis.
 - Disease : Alzheimer’s Disease
 - Data Citation : Omics data: [syn3388564](https://www.synapse.org/Synapse:syn3388564); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
-- Additional study information : 
 
 ## Dataset Details
 

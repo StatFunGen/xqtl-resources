@@ -40,4 +40,4 @@ The AD Knowledge Portal folders below are controlled access (you need a Synapse 
 - [NIAGADS](https://www.niagads.org/) (genomics data). The harmonized xQTL summary statistics in NG00184.v1 on NIAGADS DSS are open access.
 
 ---
-*This resource is actively maintained by the FunGen-AD Analysis Working Group and reflects data generated through October 2026*
+*This resource is actively maintained by the FunGen-AD Analysis Working Group and reflects data generated through November 2026*
