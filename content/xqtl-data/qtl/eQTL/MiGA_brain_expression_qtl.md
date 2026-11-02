@@ -8,7 +8,7 @@ sample_size: 255
 access: controlled
 status: staged
 release:
-synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Travyse Edwards]
 last_verified:
 methods:
@@ -71,7 +71,7 @@ The flagship paper analyses on the AD Knowledge Portal are listed below.
 
 - Fine-mapping (SuSiE-RSS), [syn69670592](https://www.synapse.org/Synapse:syn69670592)
 - TWAS weight models, [syn69670600](https://www.synapse.org/Synapse:syn69670600)
-- Quantile TWAS (qTWAS) models, [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Quantile TWAS (qTWAS) models, not available yet
 - Multi-context colocalization (ColocBoost), [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS and xQTL colocalization results, [syn69865816](https://www.synapse.org/Synapse:syn69865816)
 - AD GWAS and xQTL colocalization models, [syn69670630](https://www.synapse.org/Synapse:syn69670630)

@@ -8,7 +8,7 @@ sample_size:
 access: controlled
 status: staged
 release:
-synapse_ids: [syn69670592, syn69670600, syn69670611, syn69670597, syn69865816, syn69670630]
+synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]
 lead_analysts: [Minghui Wang]
 last_verified:
 methods:
@@ -59,7 +59,7 @@ Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping
 
 Pre-trained TWAS weight models for this context: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
 
-Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+Quantile TWAS (qTWAS) models: not available yet
 
 ### Path(s) to colocalization with SuSiE-coloc / ColocBoost
 

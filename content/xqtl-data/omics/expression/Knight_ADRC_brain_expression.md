@@ -6,7 +6,7 @@ cohort: Knight-ADRC
 context: parietal cortex
 access: controlled
 status: staged
-synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+synapse_ids: [syn69670592, syn69670597, syn69670600, syn69670630, syn69865816]
 lead_analysts: [Chunming Liu]
 last_verified:
 ---
@@ -33,7 +33,7 @@ QTL analysis for this dataset is documented in [../../qtl/eQTL/Knight_ADRC_brain
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
 - TWAS weight models: [syn70090844](https://www.synapse.org/Synapse:syn70090844) (this dataset's folder; all models are in [syn69670600](https://www.synapse.org/Synapse:syn69670600))
-- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- Quantile TWAS (qTWAS) models: not available yet
 - Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
 - AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)
