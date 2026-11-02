@@ -34,7 +34,7 @@ QTL analysis for this dataset is documented in [../../qtl/eQTL/MetaBrain_brain_e
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
-- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- TWAS weight models: not currently available on Synapse for this dataset
 - Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
 - Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)

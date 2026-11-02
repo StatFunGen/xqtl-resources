@@ -83,3 +83,4 @@ All TWAS weight models are in [syn69670600](https://www.synapse.org/Synapse:syn6
 |---|---|---|
 | ROSMAP_All | [syn74909252](https://www.synapse.org/Synapse:syn74909252) | `ROSMAP_All.*.multicontext_twas_weights.rds` |
 | MSBB_eQTL | [syn74907964](https://www.synapse.org/Synapse:syn74907964) | `MSBB_eQTL.*.multicontext_twas_weights.rds` |
+| ROSMAP_CUIMC1 | [syn74907905](https://www.synapse.org/Synapse:syn74907905) | see folder |
