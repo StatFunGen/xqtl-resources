@@ -2,7 +2,7 @@
 type: gwas
 short_title: AD GWAS overview
 status: staged
-synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69696846, syn69865824]
+synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69696846]
 lead_analysts: []
 last_verified:
 ---
@@ -30,7 +30,7 @@ The study used eight datasets from four AD meta-analyses: Bellenguez, Wightman, 
 
 ## Quality control
 
-Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. After QC, **195 AD-associated loci** were retained for fine-mapping.
+Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. The October 29 release of the AD × xQTL integration summary contains 226 AD loci.
 
 ## LD reference panel
 
@@ -47,7 +47,6 @@ Summary statistics passed a QC procedure built around [SLALOM](https://www.medrx
 | LDSC munged GWAS | Pre-munged AD GWAS summary statistics | [syn69670656](https://www.synapse.org/Synapse:syn69670656) |
 | AD GWAS fine-mapping models | Fine-mapping outputs per GWAS dataset | [syn69670625](https://www.synapse.org/Synapse:syn69670625) |
 | AD fine-mapping results | Fine-mapped loci and credible sets | [syn69696846](https://www.synapse.org/Synapse:syn69696846) |
-| Top loci unified summary | `AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz` | [syn69865824](https://www.synapse.org/Synapse:syn69865824) |
 
 All resources are in the FunGen-xQTL staging folder, [syn68872650](https://www.synapse.org/Synapse:syn68872650).
 

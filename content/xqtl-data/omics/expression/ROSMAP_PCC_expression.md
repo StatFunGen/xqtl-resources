@@ -88,7 +88,7 @@ QTL analysis for this dataset is documented in [../../qtl/eQTL/ROSMAP_PCC_expres
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
-- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
+- TWAS weight models: [syn72280606](https://www.synapse.org/Synapse:syn72280606) (this dataset's folder; all models are in [syn69670600](https://www.synapse.org/Synapse:syn69670600))
 - Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
 - Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)

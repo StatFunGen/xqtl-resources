@@ -49,7 +49,7 @@ Our gene-level analyses include [transcriptome-wide association studies (TWAS) a
 #### **Integrated AD Summary Tables**
 
 For immediate use by researchers, we provide comprehensive summary tables in the [AD × xQTL integration summary folder](https://www.synapse.org/Synapse:syn69865823) ([syn69865823](https://www.synapse.org/Synapse:syn69865823)). The current release (October 2026) covers 195 AD loci:
-- **AD loci annotated by xQTL summary workbook** (`unified_AD_loci_xQTL_summary_20261002.xlsx`) - variant-level integration of AD GWAS loci with all xQTL evidence
+- **AD loci annotated by xQTL summary workbook** (`unified_AD_loci_xQTL_summary_20261029.xlsx`) - variant-level integration of AD GWAS loci with all xQTL evidence
 - **Unified AD loci** (`AD_loci_unified_cs95orColocs.csv`) and the **variant-level table** (`AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv`)
 - **xQTL overlap table** (`xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz`) - every xQTL method and context overlapping each AD locus
 - [AD genes with FunGen and xQTL annotations](https://www.synapse.org/Synapse:syn70095142) - AD risk gene prioritization through fine-mapping and colocalization (March 2025)
@@ -145,7 +145,7 @@ All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](
 | cTWAS exported results | Exported cTWAS summary (bed) | [syn69865822](https://www.synapse.org/Synapse:syn69865822) |
 | TWAS / MR exported results | Exported TWAS and Mendelian randomization summaries (bed) | [syn69865821](https://www.synapse.org/Synapse:syn69865821) |
 | AD TWAS association | Per-context AD TWAS association results | [syn74908416](https://www.synapse.org/Synapse:syn74908416) |
-| **AD × xQTL integration summary** | 195-locus AD loci × xQTL workbook, variant-level and overlap tables, AD gene lists | [syn69865823](https://www.synapse.org/Synapse:syn69865823) |
+| **AD × xQTL integration summary** | 226-locus AD loci × xQTL workbook, variant-level and overlap tables, AD gene lists | [syn69865823](https://www.synapse.org/Synapse:syn69865823) |
 | ADSP LD reference (genotypes) | 16,571 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP LD reference (LD matrices) | Pre-computed in-sample LD matrices for fine-mapping | [syn75082259](https://www.synapse.org/Synapse:syn75082259) |
 | ADSP LD sketch | Privacy-preserving LD sketch panel (plink2) | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
