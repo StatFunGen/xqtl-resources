@@ -280,16 +280,34 @@ xQTL_SCEEM_scores: #syn77875113
     models: #syn77875160
       Ast_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
       Exc_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
       Inh_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
       Mic_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
       OPC_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
       Oli_mega_eQTL:
         - feature_cols.pkl
+        - weighted_full_chr{1..22}.joblib
+        - unweighted_full_chr{1..22}.joblib
+        - weighted_restricted_chr{1..22}.joblib
     train: #syn77875312
       Ast_mega_eQTL:
         - annotated_data_Ast_mega_eQTL_chr{1..22}.parquet/part.*.parquet
@@ -457,6 +475,8 @@ xQTL_SCEEM_scores: #syn77875113
     - targets_human.txt
     chrombpnet_models: #syn77875115
       - ATAC_*_fold_*.chrombpnet_nobias.h5
+      - H3K27ac_*_fold_*.final.torch
+      - H3K4me3_*_fold_*.final.torch
 
 xQTL_GWAS_models: #syn69670588
   xQTL_models: #syn69670589
