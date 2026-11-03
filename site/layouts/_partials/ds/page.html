@@ -46,7 +46,7 @@
       {{- end }}
       {{- if ne $i.kind "study" }}
       <div class="meta__row"><dt>Release status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}<span class="subtle">Not set</span>{{ end }}
-        {{- $sub := slice }}{{ with $i.release }}{{ $sub = $sub | append . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ $sub = $sub | append "not yet verified" }}{{ end }}{{ with $i.verified }}{{ $sub = $sub | append (printf "verified %s" .) }}{{ end }}
+        {{- $sub := slice }}{{ with $i.release }}{{ $sub = $sub | append . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ $sub = $sub | append "verification pending" }}{{ end }}{{ with $i.verified }}{{ $sub = $sub | append (printf "verified %s" .) }}{{ end }}
         {{- with $sub }}<span class="meta__sub">{{ delimit . " · " }}</span>{{ end }}</dd></div>
       {{- end }}
       {{- with $i.access }}

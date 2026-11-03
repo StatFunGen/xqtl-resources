@@ -35,7 +35,7 @@ Genome-wide trans-glycoQTL analyses identify distant genetic influences on glyco
 
 Pre-trained glycoQTL-based TWAS models:
 - **TWAS weight models** ([syn69670600](https://www.synapse.org/Synapse:syn69670600)): ROSMAP DLPFC
-- **qTWAS models** ([syn69670611](https://www.synapse.org/Synapse:syn69670611)): quantile regression glycoQTL models
+- **qTWAS models** (not available yet): quantile regression glycoQTL models
 - **cTWAS inputs** ([syn70095142](https://www.synapse.org/Synapse:syn70095142)): causal TWAS formatted inputs
 
 ### Colocalization
@@ -48,7 +48,7 @@ AD GWAS–glycoQTL colocalization analyses identify glycosylation-level mechanis
 |----------|------------|
 | Fine-mapping models (glycoQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models (glycoQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
-| qTWAS models (glycoQTL) | [syn69670611](https://www.synapse.org/Synapse:syn69670611) |
+| qTWAS models (glycoQTL) | not available yet |
 | cTWAS input files | [syn70095142](https://www.synapse.org/Synapse:syn70095142) |
 | AD–glycoQTL colocalization results | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |
 | AD–glycoQTL colocalization models | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |

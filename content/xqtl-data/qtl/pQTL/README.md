@@ -37,7 +37,7 @@ Genome-wide trans-pQTL analyses identify distant protein regulatory relationship
 
 Pre-trained pQTL-based TWAS models for protein-level AD association analyses:
 - **TWAS weight models** ([syn69670600](https://www.synapse.org/Synapse:syn69670600)): ROSMAP DLPFC, MSBB, Knight ADRC brain
-- **qTWAS models** ([syn69670611](https://www.synapse.org/Synapse:syn69670611)): quantile regression pQTL models
+- **qTWAS models** (not available yet): quantile regression pQTL models
 - **cTWAS inputs** ([syn70095142](https://www.synapse.org/Synapse:syn70095142)): formatted for causal TWAS
 
 ### Colocalization
@@ -50,7 +50,7 @@ Pre-trained pQTL-based TWAS models for protein-level AD association analyses:
 |----------|------------|
 | Fine-mapping models (pQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models (pQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
-| qTWAS models (pQTL) | [syn69670611](https://www.synapse.org/Synapse:syn69670611) |
+| qTWAS models (pQTL) | not available yet |
 | cTWAS input files | [syn70095142](https://www.synapse.org/Synapse:syn70095142) |
 | Colocalization models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
 | AD–pQTL colocalization results | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |

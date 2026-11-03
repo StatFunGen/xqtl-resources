@@ -29,9 +29,10 @@
       <span class="search__icon" aria-hidden="true"></span>
       <label class="sr-only" for="home-q">Search datasets</label>
       <input id="home-q" type="search" name="q" placeholder="Name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
-      <button type="submit" class="btn btn--primary">Search catalog</button>
+      <button type="submit" class="btn btn--primary">Search datasets</button>
     </form>
     <p class="note">Opens the <a href="{{ $cat }}">data catalog</a>, where results can be narrowed by cohort, modality, tissue, status and access.</p>
+    <p class="note">Looking for fitted models? See the <a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a>, one folder per dataset. The AD loci results are summarized in the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> (226 loci).</p>
   </section>
 
   <section class="browse" aria-label="Browse the catalog">
@@ -72,7 +73,7 @@
       {{- end }}
       </ul>
       {{- with site.GetPage "/xqtl-data/gwas/AD_GWAS" }}
-      <p class="note">The study uses eight AD GWAS datasets from the four studies above. The <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all eight.</p>
+      <p class="note">The study uses eleven AD GWAS datasets from the four studies above. The <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all eleven.</p>
       {{- end }}
     </div>
   </section>

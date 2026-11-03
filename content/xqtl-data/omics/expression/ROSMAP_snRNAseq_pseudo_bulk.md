@@ -6,7 +6,7 @@ cohort: ROSMAP
 context: "DLPFC, 7 cell types"
 access: controlled
 status: staged
-synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670611, syn69670630, syn69865816]
+synapse_ids: [syn31512863, syn52293417, syn69670592, syn69670597, syn69670600, syn69670630, syn69865816]
 lead_analysts: [Hao Sun, Masashi Fujita]
 last_verified:
 ---
@@ -32,7 +32,6 @@ Hao Sun and Masashi Fujita
 - Study Description :
 - Disease : Alzheimer’s Disease
 - Data Citation : Omics data: [syn31512863](https://www.synapse.org/Synapse:syn31512863) (CUIMC1), [syn52293417](https://www.synapse.org/Synapse:syn52293417) (MIT); Genetics data: [ng00067](https://dss.niagads.org/datasets/ng00067/)
-- Additional study information : 
 
 ## Dataset Description
 
@@ -93,8 +92,8 @@ QTL analysis for this dataset is documented in [../../qtl/eQTL/ROSMAP_snRNAseq_p
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
-- TWAS weight models: [syn69670600](https://www.synapse.org/Synapse:syn69670600)
-- Quantile TWAS (qTWAS) models: [syn69670611](https://www.synapse.org/Synapse:syn69670611)
+- TWAS weight models: [syn72280606](https://www.synapse.org/Synapse:syn72280606) (this dataset's folder; all models are in [syn69670600](https://www.synapse.org/Synapse:syn69670600))
+- Quantile TWAS (qTWAS) models: not available yet
 - Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)
 - AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Synapse:syn69670630)

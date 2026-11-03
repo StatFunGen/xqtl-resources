@@ -54,7 +54,7 @@ For ROSMAP multi-region bulk sQTL, **mvSuSiE** (multivariate SuSiE with MASH pri
 
 Pre-trained sQTL-based TWAS models for splicing-level AD association analyses:
 - **TWAS weight models** ([syn69670600](https://www.synapse.org/Synapse:syn69670600)): ROSMAP DLPFC, PCC, AC; MSBB; Knight ADRC
-- **qTWAS models** ([syn69670611](https://www.synapse.org/Synapse:syn69670611)): quantile regression sQTL models
+- **qTWAS models** (not available yet): quantile regression sQTL models
 
 ### Colocalization
 
@@ -66,7 +66,7 @@ Pre-trained sQTL-based TWAS models for splicing-level AD association analyses:
 |----------|------------|
 | Fine-mapping models (sQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models (sQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
-| qTWAS models (sQTL) | [syn69670611](https://www.synapse.org/Synapse:syn69670611) |
+| qTWAS models (sQTL) | not available yet |
 | Colocalization models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
 | AD–sQTL colocalization results | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |
 | AD–sQTL colocalization models | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |

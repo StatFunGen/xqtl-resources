@@ -222,17 +222,19 @@ variant_gene_summary: #syn69865684
   AD_loci_summary: #syn69865804
     AD_finemapping: #syn69865805
       - AD_Bellenguez_2022.gwas.top_loci.bed.gz           
-      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
       - AD_Bellenguez_EADB_2022.gwas.top_loci.bed.gz
       - AD_Jansen_2021.gwas.top_loci.bed.gz
       - AD_Bellenguez_EADI_2022.gwas.top_loci.bed.gz
       - AD_Kunkle_Stage1_2019.gwas.top_loci.bed.gz
-      - AD_Bellenguez_GRACE_2022.gwas.top_loci.bed.gz
       - AD_Wightman_Excluding23andMe_2021.gwas.top_loci.bed.gz
-      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
       - AD_Wightman_ExcludingUKBand23andME_2021.gwas.top_loci.bed.gz
-      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
       - AD_Wightman_Full_2021.gwas.top_loci.bed.gz
+      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
+      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
     AD_colocalization: #syn69865814
       - AD_meta_colocboost_filtered.bed.gz
     AD_xQTL_colocalization: #syn69865816
@@ -256,7 +258,7 @@ variant_gene_summary: #syn69865684
       cTWAS: #syn69865822
         - FunGen_ctwas.exported.bed.gz
   AD_xQTL_integration_summary: #syn69865823
-    - unified_AD_loci_xQTL_summary_20261029.xlsx
+    - unified_AD_loci_xQTL_summary_20261102.xlsx
     - AD_loci_unified_cs95orColocs.csv
     - AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv
     - xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz
@@ -685,10 +687,10 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_mega_eQTL.*.univariate_twas_weights.rds
           MIT: #syn74908478
             batch{1..2}: #syn754273{29..30}
-            - ROSMAP_MIT_eQTL.*.univariate_susie_twas_weights.rds
+              - ROSMAP_MIT_eQTL.*.univariate_susie_twas_weights.rds
           CUIMC1: #syn74908574
             batch{1..2}: #syn722806{09..10}
-            - ROSMAP_CUIMC1.*.univariate_twas_weights.rds
+              - ROSMAP_CUIMC1.*.univariate_twas_weights.rds
         ROSMAP_pQTL: #syn70090857
           batch{1..2}: #syn7154895{5..6}
             - ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds
@@ -706,7 +708,7 @@ xQTL_GWAS_models: #syn69670588
               - ROSMAP_tpQTL.*.univariate_twas_weights.rds
         STARNET_eQTL: #syn70090859
           batch{1..2}: #syn7154895{8..9}
-          - STARNET_eQTL.*.univariate_twas_weights.rds
+            - STARNET_eQTL.*.univariate_twas_weights.rds
       multi_context: #syn74907900
         ROSMAP_All: #syn74909252
           batch{1..2}: #syn7542733{1..2}
@@ -869,7 +871,7 @@ reference_files: #syn69670634
          - xz_files_with_meta_data_in_bim_format
        ld_sketch: #syn75082260
          - ADSP_R4_EUR.chr{1..22}.pgen
-         - ADSP_R4_EUR.chr{1..22}.pvar.zst
+         - ADSP_R4_EUR.chr{1..22}.pvar
          - ADSP_R4_EUR.chr{1..22}.psam
          - ADSP_R4_EUR.chr{1..22}.afreq
   sLDSC_reference_data: #syn75157484

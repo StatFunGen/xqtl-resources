@@ -59,7 +59,7 @@ Genome-wide trans-eQTL analyses identify distant regulatory relationships (>5 Mb
 
 Pre-trained transcriptome-wide association study (TWAS) models are available for integrating eQTL weights with AD GWAS summary statistics:
 - **TWAS weight models** ([syn69670600](https://www.synapse.org/Synapse:syn69670600)): ROSMAP DLPFC, PCC, AC; MSBB; Knight ADRC
-- **qTWAS models** ([syn69670611](https://www.synapse.org/Synapse:syn69670611)): quantile regression models capturing non-linear eQTL effects
+- **qTWAS models** (not available yet): quantile regression models capturing non-linear eQTL effects
 - **cTWAS inputs** ([syn70095142](https://www.synapse.org/Synapse:syn70095142)): formatted for causal TWAS accounting for LD structure
 
 ### Colocalization
@@ -78,7 +78,7 @@ All fine-mapping models and TWAS weights are hosted on the [AD Knowledge Portal]
 |----------|------------|
 | Fine-mapping models (eQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
-| qTWAS models | [syn69670611](https://www.synapse.org/Synapse:syn69670611) |
+| qTWAS models | not available yet |
 | cTWAS input files | [syn70095142](https://www.synapse.org/Synapse:syn70095142) |
 | Colocalization models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
 | AD–eQTL colocalization results | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |

@@ -7,6 +7,10 @@ FunGen-xQTL Multi-Brain (FGMB) Atlas is a multi-context regulome-wide associatio
 The released prediction model database and analysis outputs are available through the AD Knowledge Portal. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
 
 
+## Find the weights for your dataset
+
+Use the [TWAS weights by dataset](#twas-weights-by-dataset) table below for one folder per dataset, or open a dataset page and follow its TWAS weights link.
+
 ## Available Resources
 
 ### FGMB Atlas
@@ -39,7 +43,7 @@ AD Knowledge Portal:
 
 | Resource | AD Knowledge Portal accession | Notes |
 | --- | --- | --- |
-| RWAS prediction models | [`syn69670600`](https://www.synapse.org/Synapse:syn69670600) | FGMB Atlas prediction model resource for RWAS analyses. |
+| TWAS weight models | [`syn69670600`](https://www.synapse.org/Synapse:syn69670600) | FGMB Atlas prediction model resource for RWAS analyses. |
 | Alzheimer disease RWAS association results | [`syn74908416`](https://www.synapse.org/Synapse:syn74908416) | Association results from applying the FGMB Atlas RWAS models to Alzheimer disease. |
 | Single-context and multi-context joint variant-gene fine-mapping results | [`syn74908389`](https://www.synapse.org/Synapse:syn74908389) | Fine-mapping outputs for single-context and multi-context analyses. |
 | LD reference panel for RWAS association testing and fine-mapping | [`syn75082260`](https://www.synapse.org/Synapse:syn75082260) | LD reference panel built from whole-genome sequencing data from European-ancestry participants in ADSP Release 4. |
@@ -54,3 +58,33 @@ If you use FGMB Atlas resource or derived results, please cite the FGMB Atlas ma
 
 
 For workflow-specific methods, please cite the relevant [`FunGen-xQTL protocol`](https://github.com/StatFunGen/xqtl-protocol) documentation and [`pecotmr`](https://github.com/StatFunGen/pecotmr) software documentation.
+
+## TWAS weights by dataset
+
+All TWAS weight models are in [syn69670600](https://www.synapse.org/Synapse:syn69670600). Each dataset has its own folder below, split into batches of at most 10,000 files (batch1, batch2, and so on).
+
+### Single-context models
+
+| Dataset | Folder | File pattern |
+|---|---|---|
+| KNIGHT_eQTL | [syn70090844](https://www.synapse.org/Synapse:syn70090844) | `KNIGHT_eQTL.*.univariate_twas_weights.rds` |
+| KNIGHT_pQTL | [syn70090845](https://www.synapse.org/Synapse:syn70090845) | `KNIGHT_pQTL.*.univariate_twas_weights.rds` |
+| MiGA_eQTL | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_bvsr.rds` |
+| MSBB_eQTL | [syn70094766](https://www.synapse.org/Synapse:syn70094766) | `MSBB_eQTL.*.univariate_twas_weights.rds` |
+| MSBB_pQTL | [syn70090848](https://www.synapse.org/Synapse:syn70090848) | `MSBB_pQTL.*.univariate_twas_weights.rds` |
+| MSBB_sQTL | [syn70090851](https://www.synapse.org/Synapse:syn70090851) | `MSBB_sQTL.*.univariate_twas_weights.rds` |
+| ROSMAP_eQTL (mega, MIT, CUIMC1) | [syn72280606](https://www.synapse.org/Synapse:syn72280606) | `ROSMAP_mega_eQTL.*, ROSMAP_MIT_eQTL.*, ROSMAP_CUIMC1.*` |
+| ROSMAP_pQTL | [syn70090857](https://www.synapse.org/Synapse:syn70090857) | `ROSMAP_Bennett_Klein_pQTL.*.univariate_twas_weights.rds` |
+| ROSMAP_glycoQTL | [syn77828034](https://www.synapse.org/Synapse:syn77828034) | `ROSMAP_Bennett_Klein_glycoQTL_twas.*.univariate_twas_weights.rds` |
+| ROSMAP_sQTL | [syn70094771](https://www.synapse.org/Synapse:syn70094771) | `ROSMAP_sQTL.*.univariate_twas_weights.rds` |
+| ROSMAP_tpQTL, K3 | [syn77827203](https://www.synapse.org/Synapse:syn77827203) | `ROSMAP_tpQTL.*.univariate_twas_weights.rds` |
+| ROSMAP_tpQTL, K5 | [syn77827406](https://www.synapse.org/Synapse:syn77827406) | `ROSMAP_tpQTL.*.univariate_twas_weights.rds` |
+| STARNET_eQTL | [syn70090859](https://www.synapse.org/Synapse:syn70090859) | `STARNET_eQTL.*.univariate_twas_weights.rds` |
+
+### Multi-context models
+
+| Dataset | Folder | File pattern |
+|---|---|---|
+| ROSMAP_All | [syn74909252](https://www.synapse.org/Synapse:syn74909252) | `ROSMAP_All.*.multicontext_twas_weights.rds` |
+| MSBB_eQTL | [syn74907964](https://www.synapse.org/Synapse:syn74907964) | `MSBB_eQTL.*.multicontext_twas_weights.rds` |
+| ROSMAP_CUIMC1 | not available yet | - |
