@@ -15,7 +15,7 @@ The FunGen-xQTL flagship study uses summary statistics from large Alzheimer's di
 
 ## Datasets
 
-The study used eleven datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically confirmed late-onset AD, proxy-based AD cases, and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the eight.
+The study used eleven datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically confirmed late-onset AD, proxy-based AD cases, and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the eleven.
 
 | Dataset | Study | Population | N cases | N controls | Phenotype definition |
 |---|---|---|---|---|---|
@@ -35,7 +35,7 @@ Fine-mapping models also cover `AD_Bellenguez_GRACE_2022`, the GRACE cohort of t
 
 ## Quality control
 
-Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. The October 29 release of the AD × xQTL integration summary contains 226 AD loci.
+Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. The November 2 release of the AD × xQTL integration summary contains 226 AD loci.
 
 ## LD reference panel
 
