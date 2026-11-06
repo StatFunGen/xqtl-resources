@@ -43,7 +43,7 @@ AD Knowledge Portal:
 
 | Resource | AD Knowledge Portal accession | Notes |
 | --- | --- | --- |
-| TWAS weight models | [`syn69670600`](https://www.synapse.org/Synapse:syn69670600) | FGMB Atlas prediction model resource for RWAS analyses. |
+| TWAS weight models | [`syn69670600`](https://www.synapse.org/Synapse:syn69670600) | FGMB Atlas prediction model resource for TWAS analyses. |
 | Alzheimer disease RWAS association results | [`syn74908416`](https://www.synapse.org/Synapse:syn74908416) | Association results from applying the FGMB Atlas RWAS models to Alzheimer disease. |
 | Single-context and multi-context joint variant-gene fine-mapping results | [`syn74908389`](https://www.synapse.org/Synapse:syn74908389) | Fine-mapping outputs for single-context and multi-context analyses. |
 | LD reference panel for RWAS association testing and fine-mapping | [`syn75082260`](https://www.synapse.org/Synapse:syn75082260) | LD reference panel built from whole-genome sequencing data from European-ancestry participants in ADSP Release 4. |
