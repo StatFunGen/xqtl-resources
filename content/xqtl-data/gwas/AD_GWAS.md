@@ -22,9 +22,9 @@ The study used eleven datasets from four AD meta-analyses: Bellenguez, Wightman,
 | `AD_Bellenguez_2022` | [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) *Nat Genet* | European | 111,326 | 677,663 | Clinically confirmed late-onset AD. Primary GWAS, used throughout |
 | `AD_Bellenguez_EADB_2022` | Bellenguez et al. 2022, EADB subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_EADI_2022` | Bellenguez et al. 2022, EADI subset | European | n/a | n/a | n/a |
-| `AD_Bellenguez_main_2026` | Bellenguez et al. 2026, updated meta-analysis, main analysis | European | n/a | n/a | n/a |
-| `AD_Bellenguez_noproxy_2026` | Bellenguez et al. 2026, updated meta-analysis, without proxy cases | European | n/a | n/a | n/a |
-| `AD_Bellenguez_nobiobank_2026` | Bellenguez et al. 2026, updated meta-analysis, without biobank cohorts | European | n/a | n/a | n/a |
+| `AD_Bellenguez_main_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, main analysis | European | n/a | n/a | n/a |
+| `AD_Bellenguez_noproxy_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, without proxy cases | European | n/a | n/a | n/a |
+| `AD_Bellenguez_nobiobank_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, without biobank cohorts | European | n/a | n/a | n/a |
 | `AD_Wightman_Full_2021` | [Wightman et al. 2021](https://doi.org/10.1038/s41588-021-00921-z) *Nat Genet* | European | 90,338 | 1,036,225 | AD and proxy-AD (UK Biobank) |
 | `AD_Wightman_Excluding23andMe_2021` | Wightman et al. 2021, without 23andMe | European | n/a | n/a | AD and proxy-AD (UK Biobank) |
 | `AD_Wightman_ExcludingUKBand23andME_2021` | Wightman et al. 2021, without UK Biobank and 23andMe | European | n/a | n/a | n/a |
