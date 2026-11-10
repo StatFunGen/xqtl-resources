@@ -1,0 +1,10 @@
+{{ define "main" }}
+<article class="page">
+  <header class="page__head">
+    <h1 class="page__title">Page not found</h1>
+  </header>
+  <div class="prose">
+    <p>This page may have moved. Start from the <a href="{{ site.Home.RelPermalink }}">home page</a> or browse the <a href="{{ (site.GetPage "/xqtl-data").RelPermalink }}">data catalog</a>.</p>
+  </div>
+</article>
+{{ end }}
