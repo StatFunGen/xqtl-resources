@@ -71,7 +71,7 @@ The H3K9acDomains.csv contains peak info summarized as follows: chr, start, end,
 
 ### Peak calling
 
-Peaks were generated via the following workflow: [hak9ac_calling](https://github.com/cumc/xqtl-pipeline/tree/main/code/misc/h3k9ac_calling)
+Peaks were generated via the following workflow: [hak9ac_calling](https://github.com/StatFunGen/xqtl-protocol/tree/main/code/script/molecular_phenotypes/h3k9ac_calling)
 
 ### Exploratory analysis
 

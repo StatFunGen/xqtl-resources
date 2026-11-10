@@ -4,7 +4,7 @@ Expression quantitative trait loci (eQTL) identify genetic variants that influen
 
 ## Overview
 
-eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html) across diverse human brain regions and cell types. All datasets underwent harmonized genotype QC, expression normalization, and covariate adjustment. Fine-mapping was performed using SuSiE-RSS to generate posterior inclusion probabilities (PIPs), credible sets (CS), and effect sizes. TWAS weight models and quantile TWAS (qTWAS) models are provided for key datasets.
+eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/) across diverse human brain regions and cell types. All datasets underwent harmonized genotype QC, expression normalization, and covariate adjustment. Fine-mapping was performed using SuSiE-RSS to generate posterior inclusion probabilities (PIPs), credible sets (CS), and effect sizes. TWAS weight models and quantile TWAS (qTWAS) models are provided for key datasets.
 
 ## Available Datasets
 

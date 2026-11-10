@@ -1,6 +1,6 @@
 # Gene Expression Data
 
-Bulk and single-cell/nucleus RNA sequencing expression datasets used for eQTL mapping across AD cohorts. All datasets were processed with the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html) including alignment, quantification, normalization, and covariate adjustment. → See [eQTL results](../../qtl/eQTL)
+Bulk and single-cell/nucleus RNA sequencing expression datasets used for eQTL mapping across AD cohorts. All datasets were processed with the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/) including alignment, quantification, normalization, and covariate adjustment. → See [eQTL results](../../qtl/eQTL)
 
 ## Brain Tissue, ROSMAP
 

@@ -45,8 +45,8 @@ The Genotype data are downloaded using:
 
 
 ```bash
-wget https://www.ebi.ac.uk/arrayexpress/files/E-GEUV-1/GEUVADIS.chr21.PH1PH2_465.IMPFRQFILT_BIALLELIC_PH.annotv2.genotypes.vcf.gz \
-     https://www.ebi.ac.uk/arrayexpress/files/E-GEUV-1/GEUVADIS.chr22.PH1PH2_465.IMPFRQFILT_BIALLELIC_PH.annotv2.genotypes.vcf.gz
+wget https://ftp.ebi.ac.uk/biostudies/fire/E-GEUV-/001/E-GEUV-1/Files/E-GEUV-1/genotypes/GEUVADIS.chr21.PH1PH2_465.IMPFRQFILT_BIALLELIC_PH.annotv2.genotypes.vcf.gz \
+     https://ftp.ebi.ac.uk/biostudies/fire/E-GEUV-/001/E-GEUV-1/Files/E-GEUV-1/genotypes/GEUVADIS.chr22.PH1PH2_465.IMPFRQFILT_BIALLELIC_PH.annotv2.genotypes.vcf.gz
 ```
 
 

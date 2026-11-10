@@ -4,7 +4,7 @@
 
 This repository provides Quantitative Trait Loci (QTL) analysis and GWAS integration results from the FunGen-xQTL project, across diverse aging human brain regions and cell types. The analyses span multiple cohorts including ROSMAP, Knight ADRC, Mount Sinai Brain Bank, MiGA, MetaBrain, and STARNET.
 
-For comprehensive metadata of all analyses with harmonized context definitions, see our [analysis meta-data table](https://github.com/StatFunGen/xqtl-resources/blob/main/data/all_analysis_summary_tables_metadata.csv).
+For comprehensive metadata of all analyses with harmonized context definitions, see our [analysis metadata tables](https://github.com/StatFunGen/xqtl-resources/tree/main/data/atlas_metadata).
 
 ## Fine-mapping and integrative results for xQTL and AD GWAS
 
@@ -433,4 +433,4 @@ The following table provides paths to marginal QTL association results, includin
 | pQTL | MSBB | - | QR | analysis_result/marginal_significant_qtl/cis_association/MSBB/pQTL/QR/ |
 | pQTL | ROSMAP | DLPFC | QR | analysis_result/marginal_significant_qtl/cis_association/ROSMAP/pQTL/DLPFC/QR/ |
 
-For detailed methodology and implementation, refer to our [analysis protocol documentation](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb).
+For detailed methodology and implementation, refer to our [analysis protocol documentation](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb).

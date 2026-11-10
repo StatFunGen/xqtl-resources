@@ -117,7 +117,7 @@ During this process, we strategically expanded the cis window to capture signals
 
 ### SuSiE univariate fine-mapping
 
-- [univariate_fine_mapping.ipynb](https://github.com/cumc/xqtl-pipeline/blob/main/code/fine_mapping/univariate_fine_mapping.ipynb) contains the workflow of haQTL univariate fine-mapping.
+- [univariate_fine_mapping.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/mnm_analysis/mnm_methods/mnm_regression.ipynb) contains the workflow of haQTL univariate fine-mapping.
 
 ## Dataset Details
 

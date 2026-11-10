@@ -4,7 +4,7 @@ Metabolome quantitative trait loci (metQTL) identify genetic variants that influ
 
 ## Overview
 
-metQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Metabolite abundances from untargeted or targeted mass spectrometry underwent log-transformation, batch correction, and covariate adjustment before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS yielding posterior inclusion probabilities (PIPs) and credible sets.
+metQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Metabolite abundances from untargeted or targeted mass spectrometry underwent log-transformation, batch correction, and covariate adjustment before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS yielding posterior inclusion probabilities (PIPs) and credible sets.
 
 ## Available Datasets
 

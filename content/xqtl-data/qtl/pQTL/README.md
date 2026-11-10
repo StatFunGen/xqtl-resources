@@ -4,7 +4,7 @@ Protein quantitative trait loci (pQTL) identify genetic variants that influence 
 
 ## Overview
 
-pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Protein abundance measurements from tandem mass tag (TMT) mass spectrometry underwent normalization, batch correction, and covariate adjustment prior to tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS yielding posterior inclusion probabilities (PIPs) and credible sets.
+pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Protein abundance measurements from tandem mass tag (TMT) mass spectrometry underwent normalization, batch correction, and covariate adjustment prior to tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS yielding posterior inclusion probabilities (PIPs) and credible sets.
 
 ## Available Datasets
 

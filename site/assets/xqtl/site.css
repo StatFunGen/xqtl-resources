@@ -659,3 +659,23 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 
 /* Comfortable tap size for links in table headers and the top bar */
 .cov th a, .dtable td a, .dtable th a, .topbar__links a, .brand { display: inline-block; padding-block: 4px; }
+
+/* Links to private lab repositories */
+.lab-only { display: inline-block; margin-left: 4px; padding: 0 6px; border: 1px solid var(--ln2); border-radius: 999px; font: 500 12px/18px var(--sans); color: var(--ink2); white-space: nowrap; vertical-align: 1px; }
+
+/* Analysis coverage on phones: the dataset column stays in view while the methods scroll */
+.cov-hint { display: none; }
+@media (max-width: 760px) {
+  .wide__body { margin: 0 16px; }
+  .cov-hint { display: block; margin: 0 16px 8px; font-size: 13px; color: var(--ink2); }
+  .cov { min-width: 0; width: max-content; }
+  .cov thead th { width: 56px; padding: 10px 2px 6px; font-size: 12px; line-height: 1.2; }
+  .cov thead th.r { width: 48px; padding-right: 8px; }
+  .cov thead th:first-child, .cov tbody th { position: sticky; left: 0; z-index: 1; }
+  .cov thead th:first-child { background: var(--bg); }
+  .cov tbody th { background: var(--sf); white-space: normal; width: 132px; min-width: 132px; max-width: 132px; padding: 6px 8px; font-size: 13px; line-height: 1.25; box-shadow: 1px 0 0 var(--ln); }
+  .cov tr.is-next th { background: var(--next); }
+  .cov tbody th a { display: inline; }
+  .cov tbody th .tag { display: block; margin-left: 0; font-size: 12px; }
+  .cov .mcell { width: 20px; height: 20px; }
+}

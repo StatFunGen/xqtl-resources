@@ -4,7 +4,7 @@ Glycoproteomics quantitative trait loci (glycoQTL) identify genetic variants tha
 
 ## Overview
 
-glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Glycopeptide abundances were normalized and regressed on covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. This represents one of the first large-scale brain glycoQTL resources integrated with AD genetics.
+glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Glycopeptide abundances were normalized and regressed on covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. This represents one of the first large-scale brain glycoQTL resources integrated with AD genetics.
 
 ## Available Datasets
 

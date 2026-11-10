@@ -4,7 +4,7 @@ Splicing quantitative trait loci (sQTL) identify genetic variants that influence
 
 ## Overview
 
-sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
+sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
 
 ## Available Datasets
 
