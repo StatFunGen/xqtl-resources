@@ -2,7 +2,7 @@
 type: gwas
 short_title: AD GWAS overview
 status: staged
-synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69696846]
+synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69865805]
 lead_analysts: []
 last_verified:
 ---
@@ -51,7 +51,7 @@ Summary statistics passed a QC procedure built around [SLALOM](https://www.medrx
 | LDSC reference data | LD scores, munged GWAS, sLDSC annotations | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | LDSC munged GWAS | Pre-munged AD GWAS summary statistics | [syn69670656](https://www.synapse.org/Synapse:syn69670656) |
 | AD GWAS fine-mapping models | Fine-mapping outputs per GWAS dataset | [syn69670625](https://www.synapse.org/Synapse:syn69670625) |
-| AD fine-mapping results | Fine-mapped loci and credible sets | [syn69696846](https://www.synapse.org/Synapse:syn69696846) |
+| AD fine-mapping results | Fine-mapped loci and credible sets | [syn69865805](https://www.synapse.org/Synapse:syn69865805) |
 
 All resources are in the FunGen-xQTL staging folder, [syn68872650](https://www.synapse.org/Synapse:syn68872650).
 

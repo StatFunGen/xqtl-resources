@@ -80,10 +80,11 @@ ng00184:
 
 # Home page: where the data are hosted
 repos:
-  - {host: Synapse, name: Variant and gene summaries, id: syn69865684, url: "https://www.synapse.org/Synapse:syn69865684"}
-  - {host: Synapse, name: xQTL models, id: syn69670588, url: "https://www.synapse.org/Synapse:syn69670588"}
-  - {host: Synapse, name: Raw QTL data, id: syn69670632, url: "https://www.synapse.org/Synapse:syn69670632"}
-  - {host: Synapse, name: Reference files, id: syn69670634, url: "https://www.synapse.org/Synapse:syn69670634"}
+  - {host: AD Knowledge Portal, name: Variant and gene summaries, id: syn69865684, url: "https://www.synapse.org/Synapse:syn69865684"}
+  - {host: AD Knowledge Portal, name: xQTL and AD GWAS models, id: syn69670588, url: "https://www.synapse.org/Synapse:syn69670588"}
+  - {host: AD Knowledge Portal, name: Raw QTL data, id: syn69670632, url: "https://www.synapse.org/Synapse:syn69670632"}
+  - {host: AD Knowledge Portal, name: Reference files, id: syn69670634, url: "https://www.synapse.org/Synapse:syn69670634"}
+  - {host: AD Knowledge Portal, name: scEEMS scores, id: syn77875113, url: "https://www.synapse.org/Synapse:syn77875113"}
   - {host: NIAGADS DSS · open, name: xQTL summary statistics and fine-mapping, id: NG00184.v1, url: "https://dss.niagads.org/datasets/ng00184/"}
   - {host: NIAGADS, name: xQTL Atlas · query and genome browser, id: xqtl.niagads.org, url: "https://xqtl.niagads.org/"}
 

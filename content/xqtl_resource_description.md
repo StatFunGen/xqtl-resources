@@ -61,7 +61,7 @@ The same release can be browsed interactively in the [xQTL-AD-loci-explorer](htt
 
 ### Single-Cell Expression Prediction
 
-We provide [SCEEM (Single-Cell Expression Expectation Maximization) scores](xqtl-data/qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl) for predicting cell-type-specific eQTL effects in single-nucleus RNA-seq data, with trained models and predictions for six major brain cell types ([syn69670587](https://www.synapse.org/Synapse:syn69670587)). 
+We provide [scEEMS (single-cell Enhanced Expression Modifier Scores)](sceems_scores), machine learning predictions of causal eQTLs in six brain cell types, with the trained models, the feature inputs and SuSiE credible sets under scEEMS and comparison priors ([syn77875113](https://www.synapse.org/Synapse:syn77875113)).
 
 ### Variant-to-Function Prediction
 
@@ -126,12 +126,20 @@ All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](
 | **xQTL GWAS models** | All statistical models: fine-mapping, TWAS, colocalization, AD integration | [syn69670588](https://www.synapse.org/Synapse:syn69670588) |
 | **Raw xQTL data** | Raw QTL summary statistics (linear regression, quantile regression, interaction) | [syn69670632](https://www.synapse.org/Synapse:syn69670632) |
 | **Reference files** | ADSP LD reference, LDSC scores, functional enrichment annotations | [syn69670634](https://www.synapse.org/Synapse:syn69670634) |
+| xQTL loci summary | xQTL fine-mapping and colocalization summaries | [syn69865685](https://www.synapse.org/Synapse:syn69865685) |
+| xQTL fine-mapping summaries | Single-context xQTL fine-mapping summaries | [syn69865686](https://www.synapse.org/Synapse:syn69865686) |
+| AD loci summary | AD GWAS fine-mapping, colocalization, gene-level and AD–xQTL colocalization summaries | [syn69865804](https://www.synapse.org/Synapse:syn69865804) |
+| AD gene-level summaries | Gene-level AD summaries | [syn69865820](https://www.synapse.org/Synapse:syn69865820) |
+| xQTL models | Fine-mapping, colocalization and TWAS models for the xQTL datasets | [syn69670589](https://www.synapse.org/Synapse:syn69670589) |
+| AD GWAS models | AD GWAS fine-mapping, colocalization and TWAS association results | [syn69670621](https://www.synapse.org/Synapse:syn69670621) |
+| AD–xQTL integration models | AD–xQTL colocalization models and cTWAS results | [syn69670622](https://www.synapse.org/Synapse:syn69670622) |
+| Linear regression summary statistics | R linear model residual and tensorQTL summary statistics | [syn69670638](https://www.synapse.org/Synapse:syn69670638) |
 | Fine-mapping models | SuSiE-RSS / fSuSiE model objects (.rds) for all xQTL datasets | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | Multi-context fine-mapping | Multi-context fine-mapping summaries (ROSMAP, MSBB) | [syn69865754](https://www.synapse.org/Synapse:syn69865754) |
 | Multi-gene fine-mapping | Multi-gene fine-mapping summaries (eQTL, pQTL) | [syn69865757](https://www.synapse.org/Synapse:syn69865757) |
 | Trans fine-mapping | Trans-xQTL fine-mapping summaries | [syn69865773](https://www.synapse.org/Synapse:syn69865773) |
 | xQTL colocalization summaries | Multi-context, trans and pairwise colocalization summaries | [syn69865795](https://www.synapse.org/Synapse:syn69865795) |
-| scEEMS scores | Single-cell eQTL effect models and predictions | [syn69670587](https://www.synapse.org/Synapse:syn69670587) |
+| **scEEMS scores** | scEEMS predictions, models, features and fine-mapping for six brain cell types ([page](sceems_scores)) | [syn77875113](https://www.synapse.org/Synapse:syn77875113) |
 | Single-nucleus sQTL (ISSAC GLMM) | Cell-type and subtype sQTL summary statistics | [syn69670647](https://www.synapse.org/Synapse:syn69670647) |
 | Colocalization models | ColocBoost multi-context + SuSiE-coloc pairwise models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
 | TWAS weight models | Pre-trained TWAS weight models (eQTL, sQTL, pQTL, glycoQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
@@ -149,6 +157,7 @@ All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](
 | ADSP LD reference (genotypes) | 16,571 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP LD reference (LD matrices) | Pre-computed in-sample LD matrices for fine-mapping | [syn75082259](https://www.synapse.org/Synapse:syn75082259) |
 | ADSP LD sketch | Privacy-preserving LD sketch panel (plink2) | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
+| LDSC reference data | LD scores, sLDSC annotations and munged GWAS, computed from the ADSP LD reference | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | sLDSC reference data | Stratified LDSC baseline-LD v2.2 reference files | [syn75157484](https://www.synapse.org/Synapse:syn75157484) |
 
 ## Citation and Usage
