@@ -528,8 +528,8 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
   .topbar__links { display: none; }
   .nav-item--phone { display: flex; }
   .theme-toggle { margin-right: 4px; }
-  /* Search collapses to an icon; tapping it shows the field under the header */
-  .search { position: static; flex: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; justify-content: center; }
+  /* Search collapses to an icon; tapping it shows the field under the header. The hidden input covers only the icon. */
+  .search { position: relative; flex: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; justify-content: center; }
   .search__icon { width: 14px; height: 14px; border-width: 2px; border-color: var(--ink); pointer-events: none; }
   .search__icon::after { background: var(--ink); width: 6px; height: 2px; }
   .search input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
