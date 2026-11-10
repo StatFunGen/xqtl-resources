@@ -108,7 +108,6 @@ acquisition:
 # Lead analyst contact emails, shown as email links on dataset pages.
 # `name` must match the name in a page's lead_analysts list. Names without an email here show as plain text.
 analysts:
-  - {name: Xuanhe Chen, email: xuanhechenxhc@163.com}
   - {name: Zining Qi, email: zq2209@cumc.columbia.edu}
   - {name: Travyse Edwards, email: travyse.edwards@icahn.mssm.edu}
   - {name: Minghui Wang, email: minghui.wang@mssm.edu}
@@ -121,7 +120,6 @@ analysts:
   - {name: Anjing Liu, email: al4225@cumc.columbia.edu}
   - {name: Hao Sun, email: hao.sun@icahn.mssm.edu}
   - {name: Chunming Liu, email: chunmil@g.clemson.edu}
-  - {name: Rui Dong, email: rui.dong.dr@gmail.com}
   - {name: Shrishtee Kandoi, email: skandoi@bu.edu}
   - {name: Jiajun Tao, email: jt3386@cumc.columbia.edu}
   - {name: Masashi Fujita, email: mssfjt@gmail.com}
