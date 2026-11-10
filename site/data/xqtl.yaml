@@ -50,10 +50,10 @@ cohorts:
 
 # AD GWAS entries on the home page, by page file name under content/xqtl-data/gwas
 gwas:
-  - {page: Bellenguez_AD, name: Bellenguez et al. 2022, desc: "2022 summary statistics and 2026 main, no-biobank and no-proxy analyses"}
-  - {page: Wightman_AD, name: Wightman et al. 2021, desc: Summary statistics}
-  - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: Summary statistics}
-  - {page: Jansen_AD, name: Jansen et al. 2019, desc: Summary statistics}
+  - {page: Bellenguez_AD, name: Bellenguez et al. 2022, desc: "6 datasets: 2022 full, EADB and EADI, and 2026 main, no-biobank and no-proxy"}
+  - {page: Wightman_AD, name: Wightman et al. 2021, desc: "3 datasets: full, without 23andMe, and without UK Biobank and 23andMe"}
+  - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: "1 dataset: stage 1"}
+  - {page: Jansen_AD, name: Jansen et al. 2019, desc: "1 dataset"}
   - {page: ADGC_GWAS_imputation_protocol, name: ADGC imputation protocol, desc: Adapted from the ADGC GWAS QC protocol}
 
 # Release status badges
