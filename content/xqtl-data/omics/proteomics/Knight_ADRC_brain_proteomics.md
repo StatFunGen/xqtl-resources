@@ -14,7 +14,7 @@ last_verified:
 ---
 
 # Knight ADRC brain proteomics
-Charles F And Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC)
+Charles F. and Joanne Knight Alzheimer's Disease Research Center (Knight-ADRC)
 
 ## Contact
 Zining Qi

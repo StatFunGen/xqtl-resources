@@ -13,7 +13,7 @@ lead_analysts: []
 last_verified:
 ---
 
-# ROSMAP DLPFC Metabolomics
+# ROSMAP DLPFC metabolomics
 
 ## Summary
 

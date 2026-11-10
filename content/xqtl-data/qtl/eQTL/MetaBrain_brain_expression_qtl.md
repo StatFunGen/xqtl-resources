@@ -15,7 +15,7 @@ methods:
   SuSiE: done
 ---
 
-# MetaBrain Brain Gene Expression QTL
+# MetaBrain brain gene expression QTL
 
 MetaBrain multi-region bulk RNA-seq gene expression data used for validation of eQTL signals in the FunGen-xQTL flagship study.
 

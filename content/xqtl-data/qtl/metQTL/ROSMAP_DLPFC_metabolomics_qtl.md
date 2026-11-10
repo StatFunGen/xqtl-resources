@@ -12,7 +12,7 @@ lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:
 ---
 
-# ROSMAP DLPFC Brain Metabolomics QTL
+# ROSMAP DLPFC metabolomics QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) brain tissue metabolomics QTL analysis.
 

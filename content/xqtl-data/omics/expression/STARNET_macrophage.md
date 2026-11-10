@@ -12,7 +12,7 @@ last_verified:
 sample_size: 479
 ---
 
-# STARNET macrophage gene expression QTL
+# STARNET macrophage gene expression
 
 STARNET is an RNA expression study of various disease-relevant tissues obtained from living patients with cardiovascular disease (CVD). The inclusion criterion for patients was eligibility for coronary artery by-pass graft (CABG) surgery.
 

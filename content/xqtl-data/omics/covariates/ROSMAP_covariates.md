@@ -10,7 +10,7 @@ lead_analysts: []
 last_verified:
 ---
 
-# ROSMAP Covariates data
+# ROSMAP covariates data
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) covariates data
 

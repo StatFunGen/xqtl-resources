@@ -13,7 +13,7 @@ last_verified:
 
 # ROSMAP PCC gene expression 
 
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing. 
+Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC gene expression. 
 
 ## Contact 
 

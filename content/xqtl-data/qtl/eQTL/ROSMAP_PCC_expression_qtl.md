@@ -16,9 +16,9 @@ methods:
   cTWAS: done
 ---
 
-# ROSMAP PCC Expression QTL
+# ROSMAP PCC gene expression QTL
 
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing. 
+Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC gene expression. 
 
 Please refer to [this document](../../study_info/ROSMAP.md) for an overview of the ROSMAP project.
 
