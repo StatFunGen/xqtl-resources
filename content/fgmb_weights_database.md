@@ -32,7 +32,7 @@ The **`FGMB Atlas`** [resource site](https://morgantelab.github.io/FGMB-atlas-pa
 TWAS/RWAS-style weights is also available:
 
 - **[Univariate fine-mapping and TWAS with SuSiE](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/univariate_fine_mapping_twas_vignette.html)**: Protocol workflow for univariate fine-mapping and TWAS weight generation.
-- **[Multi-gene joint fine-mapping](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)**: Protocol workflow for multi-gene joint fine-mapping and TWAS weights.
+- **[Multivariate fine-mapping for multiple genes](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)**: Protocol workflow for multivariate, multi-gene fine-mapping and TWAS weights.
 - **[TWAS, cTWAS and MR](https://statfungen.github.io/xqtl-protocol/code/pecotmr_integration/twas_ctwas.html)**: Protocol workflow for TWAS analysis and cTWAS fine-mapping.
 
 
