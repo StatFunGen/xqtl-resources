@@ -692,3 +692,7 @@ summary.progress__row:focus-visible { outline: 2px solid var(--ac); outline-offs
 
 /* Results scrolled into view sit below the sticky top bar */
 .catalog__results { scroll-margin-top: calc(var(--topbar) + 8px); }
+
+/* Open menu: the top bar, with its close button, stays above the drawer and its scrim */
+.nav-open .topbar { z-index: 45; }
+.nav-open .nav-toggle:checked ~ .sidenav { top: var(--topbar); }
