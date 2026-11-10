@@ -706,3 +706,7 @@ summary.progress__row:focus-visible { outline: 2px solid var(--ac); outline-offs
 .task__d { font-size: 13px; line-height: 1.4; color: var(--ink2); }
 @media (max-width: 1100px) { .tasks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .tasks { grid-template-columns: minmax(0, 1fr); } }
+
+/* Open menu: the top bar, with its close button, stays above the drawer and its scrim */
+.nav-open .topbar { z-index: 45; }
+.nav-open .nav-toggle:checked ~ .sidenav { top: var(--topbar); }
