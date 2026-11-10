@@ -23,7 +23,7 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 Xuanhe Chen; Hao Sun; Hans Klein
 
-- Contact Email : xuanhechenxhc@163.com; hs3163@cumc.columbia.edu; hk2948@cumc.columbia.edu
+- Contact Email : hs3163@cumc.columbia.edu; hk2948@cumc.columbia.edu
 - Contact Affiliation : Columbia University
 - Contact Role : Xuanhe Chen performed QTL analysis using H3K9ac peaks; Hao Sun performed univariate fine-mapping, Hans Klein performed peak calling
 
@@ -46,7 +46,7 @@ In our haQTL anlaysis, we executed an association study centered on the histone 
 ### Raw data （should be added together, but in different sections）
 Human brain H3K9ac ChIP-seq: 
 
-Millipore's anti-H3K9ac antibody (catalog # 06–942, lot: 31636) was selected based on its robust validation for ChIP-seq applications, with validation data accessible at `http://www.emdmillipore.com/US/en/product/Anti-acetyl-Histone-H3-Lys9-Antibody,MM_NF-06-942`. Gray matter samples (50 mg) were meticulously dissected on ice from biopsied samples obtained from the dorsolateral prefrontal cortex (DLPFC) of participants within the ROS/MAP cohorts. The dissected tissue was then finely minced and cross-linked using 1% formaldehyde at room temperature for 15 minutes, with subsequent quenching of the cross-linking reaction achieved through the addition of 0.125 M glycine. Following cross-linking, the tissue samples were subjected to homogenization using a tissue lyser equipped with a 5 mm stainless steel bead. Subsequently, nuclei were lysed in cell lysis buffer, and chromatin was sheared through sonication.
+Millipore's anti-H3K9ac antibody (catalog # 06–942, lot: 31636) was selected based on its validation for ChIP-seq applications, with validation data accessible at `http://www.emdmillipore.com/US/en/product/Anti-acetyl-Histone-H3-Lys9-Antibody,MM_NF-06-942`. Gray matter samples (50 mg) were dissected on ice from biopsied samples obtained from the dorsolateral prefrontal cortex (DLPFC) of participants within the ROS/MAP cohorts. The dissected tissue was then finely minced and cross-linked using 1% formaldehyde at room temperature for 15 minutes, with subsequent quenching of the cross-linking reaction achieved through the addition of 0.125 M glycine. Following cross-linking, the tissue samples were subjected to homogenization using a tissue lyser equipped with a 5 mm stainless steel bead. Subsequently, nuclei were lysed in cell lysis buffer, and chromatin was sheared through sonication.
 For the ChIP assay, samples were incubated overnight at 4°C with 2.5 μl of the anti-H3K9ac antibody, and the final reaction volume was adjusted to 3 ml using ChIP Dilution Buffer. Chromatin fragments bound to the antibody were subsequently purified utilizing protein A Sepharose beads. Following this, we constructed the sequencing library using the extracted DNA, following the manufacturer’s protocol(**catalog?**), which involved essential steps such as end repair, adapter ligation, and gel-based size selection. Single-end reads with a length of 36 bp per read were generated from pooled library on Illumina Hiseq. 
 
 ### Molecular phenotype matrices （should be added together, but in different sections）

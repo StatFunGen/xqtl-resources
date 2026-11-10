@@ -4,7 +4,7 @@ Methylation quantitative trait loci (mQTL) identify genetic variants that influe
 
 ## Overview
 
-mQTL mapping was performed on EPIC or 450K array methylation data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Beta-values were M-value transformed, batch corrected, and adjusted for cell-type proportions and principal components before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS (or fSuSiE for multi-context). Pairwise colocalization with AD GWAS fine-mapping uses a novel epigenetic fine-mapping approach developed for this resource.
+mQTL mapping was performed on EPIC or 450K array methylation data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Beta-values were M-value transformed, batch corrected, and adjusted for cell-type proportions and principal components before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS (or fSuSiE for multi-context). Pairwise colocalization with AD GWAS fine-mapping uses an epigenetic fine-mapping approach developed for this resource.
 
 ## Available Datasets
 

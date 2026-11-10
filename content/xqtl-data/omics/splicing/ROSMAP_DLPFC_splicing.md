@@ -22,7 +22,6 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 Xuanhe Chen; Shrishtee Kandoi
 
-- Contact Email : xuanhechenxhc@163.com;
 - Contact Affiliation : Columbia University; Boston University
 - Contact Role : Xuanhe Chen performed sQTL analysis via psichomics package, and SuSiE uni-variate fine-mapping analysis using psichomics sQTL data, Shrishtee Kandoi performed sQTL analysis via leafCutter package.
 

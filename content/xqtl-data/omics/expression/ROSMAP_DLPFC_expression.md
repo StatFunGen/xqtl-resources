@@ -23,7 +23,7 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-Xuanhe Chen (xuanhechenxhc@163.com)
+Xuanhe Chen
 
 ## Study Overview
 

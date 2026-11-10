@@ -122,7 +122,6 @@ analysts:
   - {name: Chunming Liu, email: chunmil@g.clemson.edu}
   - {name: Shrishtee Kandoi, email: skandoi@bu.edu}
   - {name: Jiajun Tao, email: jt3386@cumc.columbia.edu}
-  - {name: Masashi Fujita, email: mssfjt@gmail.com}
 
 # GitHub repositories that are private to the lab. Links to them get a "lab access only" label,
 # since readers outside the lab see "not found". Match is on the start of the link, case-insensitive.

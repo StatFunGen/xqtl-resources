@@ -21,7 +21,7 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-Shrishtee Kandoi and Xuanhe Chen (xuanhechenxhc@163.com)
+Shrishtee Kandoi and Xuanhe Chen
 
 ## Study Overview
  
