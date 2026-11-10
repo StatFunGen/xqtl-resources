@@ -37,8 +37,6 @@ Shrishtee Kandoi; Frank Grenn
 
 Samples' phenotype information (sex, age, race etc.) can be found in ROSMAP metadata, see "Other information" section in [this document](../../study_info/ROSMAP.md)
 
-## Analysis Details
-
 ## Analysis Status
 
 TransQTL association: Finished.
@@ -89,7 +87,6 @@ Final covariates: Sex, Age at death, PMI, PCs(13), PEER factors(60)
 - Minor allele count cutoff: 5
 - Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
-
 ## Links to QTL analysis notebooks
 
 See notebooks in: 
@@ -124,81 +121,19 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 ## Dataset Details
 
-
 ### Path(s) to genotype matrix 
 
 **output of genotype_qc.ipynb**
 
-
-
-
-
-
 ### Path(s) to QTL results
-
 
 empirical_files:
 
-```
-$ls -lh *.txt
--rw-r--r-- 1 xc2610 xc2610 235K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 312K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 324K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 124K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 186K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 214K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 287K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 349K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 104K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 378K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 573K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 151K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  62K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 150K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 392K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 330K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 218K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 282K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 304K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 279K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 220K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 230K Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 7.6M Mar  2 00:02 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.emprical.cis_sumstats.txt
-```
-
 norminal_qced_files:
 
-```
-ls -lh *.txt
--rw-r--r-- 1 xc2610 xc2610 1.8G Jan 23 12:05 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.1G Jan 23 12:08 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.4G Jan 23 12:13 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 936M Jan 23 12:15 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.4G Jan 23 12:17 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.4G Jan 23 12:19 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.1G Jan 23 12:23 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.6G Jan 23 12:27 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 735M Jan 23 12:30 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 3.2G Jan 23 12:35 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 3.8G Jan 23 11:28 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.2G Jan 23 12:37 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 485M Jan 23 12:38 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.3G Jan 23 12:40 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.6G Jan 23 11:36 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.2G Jan 23 11:41 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.6G Jan 23 11:44 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.9G Jan 23 11:48 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.7G Jan 23 11:52 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.0G Jan 23 11:56 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.6G Jan 23 11:58 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.7G Jan 23 12:01 dlpfc_batch_all.rnaseqc.low_expression_filtered.outlier_removed.tmm.expression.bed.processed_phenotype.per_chrom_dlpfc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.norminal.cis_long_table.txt
-```
 ### Path(s) to cis-QTL association testing
 
 **output of TensorQTL.ipynb**
-
-
-
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 

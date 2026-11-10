@@ -44,32 +44,6 @@ TransQTL association: Need to be performed.
 
 ## Dataset Details
 
-
-
-
-
-
-
-
-
-
-### Path(s) to QTL results
-
-
-```
-$ ls -lh | head
-total 35G
--rw-r--r-- 1 fgrennjr casa  529M Mar 17 16:02 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet
--rw-r--r-- 1 fgrennjr casa   285 Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stderr
--rw-r--r-- 1 fgrennjr casa  173K Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stdout
--rw-r--r-- 1 fgrennjr casa  555K Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 fgrennjr casa  2.6G Mar 17 16:04 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 fgrennjr casa  253M Mar 17 16:00 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet
--rw-r--r-- 1 fgrennjr casa   285 Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stderr
--rw-r--r-- 1 fgrennjr casa   72K Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stdout
--rw-r--r-- 1 fgrennjr casa  234K Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
-```
-
 ### Path(s) to cis-QTL association testing
 
 **output of TensorQTL.ipynb**
