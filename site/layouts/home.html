@@ -16,13 +16,6 @@
     <p class="home__lead">FunGen-xQTL maps genetic variants associated with molecular traits (molecular QTL, or xQTL) across eight modalities, from chromatin and RNA to protein and metabolites, in brain and immune cells, and uses them to help interpret Alzheimer’s disease (AD) GWAS loci. This catalog describes each dataset and where to get it. To look up associations by variant, gene or region, use the <a href="{{ site.Params.atlasURL }}" rel="noopener">NIAGADS xQTL Atlas</a>.</p>
   </header>
 
-  <section class="stats" aria-label="Headline numbers">
-    <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
-    <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
-    <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
-  </section>
-  <p class="note stats__note">{{ $x.home.participants_note }} These counts are the ones reported for the FunGen-xQTL study. The catalog has {{ len $rows }} pages, which also cover AD GWAS and reference data.</p>
-
   <section class="home__search" aria-labelledby="find-title">
     <h2 id="find-title" class="h2">Find a dataset</h2>
     <form class="field field--lg" action="{{ $cat }}" method="get" role="search">
@@ -34,6 +27,19 @@
     <p class="note">Opens the <a href="{{ $cat }}">data catalog</a>, where results can be narrowed by cohort, modality, tissue, status and access.</p>
     <p class="note">Looking for fitted models? See the <a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a>, one folder per dataset. The AD loci results are summarized in the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> (226 loci).</p>
   </section>
+  <nav class="tasks" aria-label="Common tasks">
+    <a class="task" href="{{ $cat }}"><span class="task__t">Browse the catalog</span><span class="task__d">Every dataset, filtered by cohort, modality, tissue and access</span></a>
+    <a class="task" href="{{ with site.GetPage "/coverage" }}{{ .RelPermalink }}{{ end }}"><span class="task__t">Check analysis coverage</span><span class="task__d">Which methods have results for each QTL dataset</span></a>
+    <a class="task" href="{{ with site.GetPage "/how_to_get_data" }}{{ .RelPermalink }}{{ end }}"><span class="task__t">Get access to the data</span><span class="task__d">Synapse, NIAGADS and controlled-access steps</span></a>
+    <a class="task" href="{{ site.Params.atlasURL }}" rel="noopener"><span class="task__t">Look up a variant or gene ↗</span><span class="task__d">Associations in the NIAGADS xQTL Atlas</span></a>
+  </nav>
+  <section class="stats" aria-label="Headline numbers">
+    <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
+    <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
+    <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
+  </section>
+  <p class="note stats__note">{{ $x.home.participants_note }} These counts are the ones reported for the FunGen-xQTL study. The catalog has {{ len $rows }} pages, which also cover AD GWAS and reference data.</p>
+
 
   <section class="browse" aria-label="Browse the catalog">
     <div class="browse__col">

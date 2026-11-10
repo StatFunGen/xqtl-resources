@@ -13,8 +13,10 @@
       {{ with site.GetPage "/inventory" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Dataset inventory") }}{{ end }}
       {{ with site.GetPage "/coverage" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Analysis coverage") }}{{ end }}
       {{- /* The header links are hidden on phones; these keep them reachable there */}}
-      <li><a class="nav-item nav-item--phone" href="{{ site.Params.atlasURL }}" rel="noopener"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">NIAGADS xQTL Atlas</span><span class="nav-item__hint">external</span></a></li>
-      <li><a class="nav-item nav-item--phone" href="{{ site.Params.protocolURL }}"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">xQTL protocol</span><span class="nav-item__hint">external</span></a></li>
+      <li><a class="nav-item nav-item--phone" href="{{ site.Params.protocolURL }}/"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">Protocol</span><span class="nav-item__hint">other site</span></a></li>
+      <li><a class="nav-item nav-item--phone" href="{{ site.Params.explorerURL }}"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">Explorer</span><span class="nav-item__hint">other site</span></a></li>
+      <li><a class="nav-item nav-item--phone" href="{{ site.Params.atlasURL }}" rel="noopener"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">xQTL Atlas</span><span class="nav-item__hint">NIAGADS</span></a></li>
+      <li><a class="nav-item nav-item--phone" href="{{ site.Params.repoURL }}"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">Source code</span><span class="nav-item__hint">GitHub</span></a></li>
     </ul>
   </div>
 

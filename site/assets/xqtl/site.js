@@ -12,7 +12,7 @@
   function apply(mode) {
     if (mode === 'auto') doc.removeAttribute('data-theme'); else doc.setAttribute('data-theme', mode);
     doc.setAttribute('data-theme-pref', mode);
-    if (btn) btn.setAttribute('aria-label', 'Colour theme: ' + (mode === 'auto' ? 'automatic' : mode));
+    if (btn) btn.setAttribute('aria-label', 'Color theme: ' + (mode === 'auto' ? 'automatic' : mode));
   }
   apply(current());
   if (btn) btn.addEventListener('click', function () {
