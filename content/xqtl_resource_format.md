@@ -195,7 +195,7 @@ Each exported file follows a standardized BED format with compressed storage (`.
 
 | Column Name           | Type      | Description                                                                                                                                          |
 |-----------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `TADB_start`          | integer   | Start coordinate of extended TADB window for cis-fine mapping ([TADB BED reference](https://github.com/cumc/xqtl-analysis/blob/main/resource/TADB_enhanced_cis.coding.bed)) |
+| `TADB_start`          | integer   | Start coordinate of extended TADB window for cis-fine-mapping ([TADB BED reference](https://github.com/cumc/xqtl-analysis/blob/main/resource/TADB_enhanced_cis.coding.bed)) |
 | `TADB_end`            | integer   | End coordinate of extended TADB window                                                                                                              |
 | `is_imputable`        | logical   | Gene-context pair has predictive models with CV R² > 0.01 and p < 0.05 in at least one method                                                       |
 | `rsq_cv`              | double    | Cross-validated R² for expression prediction performance                                                                                            |

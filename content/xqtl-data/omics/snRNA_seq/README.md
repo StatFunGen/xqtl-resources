@@ -6,6 +6,6 @@ Raw single-nucleus RNA-seq (snRNA-seq) datasets from ROSMAP brain tissue, proces
 
 | Dataset | Site | Donors | Nuclei |
 |---------|------|--------|--------|
-| [ROSMAP snuc CUIMC1](ROSMAP_snuc_CUIMC1) | Columbia University (CUIMC) | 424 | — |
-| [ROSMAP snuc MIT](ROSMAP_snuc_MIT) | MIT | 298 | — |
+| [ROSMAP snuc CUIMC1](ROSMAP_snuc_CUIMC1) | Columbia University (CUIMC) | 424 | – |
+| [ROSMAP snuc MIT](ROSMAP_snuc_MIT) | MIT | 298 | – |
 | [ROSMAP snuc Mega](ROSMAP_snuc_mega) | Combined CUIMC1 + MIT | 530 (192 shared) | 3,177,748 |

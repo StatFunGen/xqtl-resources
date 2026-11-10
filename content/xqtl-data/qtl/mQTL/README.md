@@ -13,19 +13,19 @@ mQTL mapping was performed on EPIC or 450K array methylation data from brain tis
 | Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_methylation_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [MSBB](MSBB_brain_methylation_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC](Knight_ADRC_brain_methylation_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_brain_methylation_qtl) | Mount Sinai Brain Bank, 4 brain regions | – |
+| [Knight ADRC](Knight_ADRC_brain_methylation_qtl) | Knight ADRC brain (WashU) | – |
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per CpG site, providing:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets
 - Effect sizes on methylation M-values
 
-### Multi-Context Fine-Mapping
+### Multi-Context Fine-mapping
 
 For ROSMAP and MSBB multi-region mQTL, **fSuSiE** integrates methylation signals across brain regions. Multi-context fine-mapping results are at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 

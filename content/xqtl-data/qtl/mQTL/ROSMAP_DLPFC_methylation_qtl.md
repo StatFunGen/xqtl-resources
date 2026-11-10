@@ -53,7 +53,7 @@ details please see https://github.com/cumc/xqtl-analysis/tree/main/analysis/TCW_
 
 ### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
 
-Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to colocalization
 

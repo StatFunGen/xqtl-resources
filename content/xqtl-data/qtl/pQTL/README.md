@@ -13,23 +13,23 @@ pQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 | Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_proteomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [MSBB](MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC brain](Knight_ADRC_brain_proteomics_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_proteomics_qtl) | Mount Sinai Brain Bank, 4 brain regions | – |
+| [Knight ADRC brain](Knight_ADRC_brain_proteomics_qtl) | Knight ADRC brain (WashU) | – |
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per protein, providing:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets
 - Standardized effect sizes
 
-### Multi-Gene Fine-Mapping
+### Multi-Gene Fine-mapping
 
 Multi-gene fine-mapping for pQTLs jointly models co-regulated proteins in a genomic window, resolving signals shared across proteins. Results available at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
-### Trans-pQTL Fine-Mapping
+### Trans-pQTL Fine-mapping
 
 Genome-wide trans-pQTL analyses identify distant protein regulatory relationships. Trans-pQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_proteomics_qtl).
 

@@ -1,4 +1,4 @@
-# scEEMS: single-cell Enhanced Expression Modifier Scores
+# scEEMS (single-cell Enhanced Expression Modifier Scores)
 
 ## What scEEMS is
 

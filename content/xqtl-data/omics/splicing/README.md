@@ -2,7 +2,7 @@
 
 Bulk and single-nucleus RNA splicing datasets used for sQTL mapping. Bulk data uses LeafCutter intron excision quantification; single-nucleus data uses the ISSAC method with junctools splice site usage. → See [sQTL results](../../qtl/sQTL)
 
-## Brain Tissue — ROSMAP
+## Brain Tissue, ROSMAP
 
 | Dataset | Region / Type |
 |---------|---------------|
@@ -11,7 +11,7 @@ Bulk and single-nucleus RNA splicing datasets used for sQTL mapping. Bulk data u
 | [ROSMAP AC](ROSMAP_AC_splicing) | Anterior cingulate cortex (bulk) |
 | [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing) | Single-nucleus, 7 major + 95 subcell types |
 
-## Brain Tissue — Other Cohorts
+## Brain Tissue, Other Cohorts
 
 | Dataset | Cohort |
 |---------|--------|

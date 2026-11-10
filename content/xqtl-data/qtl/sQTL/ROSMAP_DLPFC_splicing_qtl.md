@@ -107,9 +107,9 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 - [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
 - [ROSMAP_sQTL_LeafCutter2_commands](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_sQTL_LeafCutter2/command_generator.ipynb) provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].
 
-### SuSiE univariate fine mapping
+### SuSiE univariate fine-mapping
 
-- [fine_mapping.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Zhang_BU/ROSMAP_DLPFC/sQTL/fine_mapping.ipynb) contains the workflow of sQTL univariate fine mapping using filterd psichomics data.
+- [fine_mapping.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Zhang_BU/ROSMAP_DLPFC/sQTL/fine_mapping.ipynb) contains the workflow of sQTL univariate fine-mapping using filtered psichomics data.
 
 
 ## Dataset Details
@@ -299,7 +299,7 @@ $ ls -lh *.txt
 **output of fine_mapping.ipynb**
 
 
-The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
+The results are separated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
 
 ### Path(s) to cis-QTL association testing
 
@@ -308,7 +308,7 @@ The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to TWAS models
 

@@ -8,7 +8,7 @@ caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from br
 
 ## Available Datasets
 
-### Brain Tissue — Single-Nucleus
+### Brain Tissue, Single-Nucleus
 
 | Dataset | Cohort / Brain Region | Cell Types | AD Knowledge Portal |
 |---------|-----------------------|------------|---------|
@@ -16,7 +16,7 @@ caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from br
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per ATAC-seq peak and cell type, providing:
 - Posterior inclusion probabilities (PIPs)

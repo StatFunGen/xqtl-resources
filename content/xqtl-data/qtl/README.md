@@ -4,12 +4,12 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 
 ## Browse by Modality
 
-* [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
-* [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
-* [Glycosylation QTLs (glycoQTL)](glycoQTL) — ROSMAP DLPFC
-* [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
-* [Histone acetylation QTLs (haQTL)](haQTL) — ROSMAP DLPFC
-* [Chromatin accessibility QTLs (caQTL)](caQTL) — ROSMAP snuc
+* [Expression QTLs (eQTL)](eQTL): ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
+* [Splicing QTLs (sQTL)](sQTL): ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
+* [Glycosylation QTLs (glycoQTL)](glycoQTL): ROSMAP DLPFC
+* [Methylation QTLs (mQTL)](mQTL): ROSMAP DLPFC, MSBB, Knight ADRC
+* [Histone acetylation QTLs (haQTL)](haQTL): ROSMAP DLPFC
+* [Chromatin accessibility QTLs (caQTL)](caQTL): ROSMAP snuc
 
 ## All Datasets
 

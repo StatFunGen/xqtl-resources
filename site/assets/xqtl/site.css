@@ -656,3 +656,6 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 .cohorts__name .muted { font-weight: 400; font-size: 12px; }
 @media (max-width: 560px) { .cohorts__body { flex-direction: column; align-items: stretch; gap: 12px; } .cohorts__pie { align-self: center; } }
 @media print { .catalog > .progress { display: none; } }
+
+/* Comfortable tap size for links in table headers and the top bar */
+.cov th a, .dtable td a, .dtable th a, .topbar__links a, .brand { display: inline-block; padding-block: 4px; }

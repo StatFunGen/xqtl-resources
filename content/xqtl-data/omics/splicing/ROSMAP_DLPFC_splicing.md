@@ -67,7 +67,7 @@ The raw data were aligned using the STAR-WASP pipeline. The alignment results wa
 
 The phenotype matrices are processed bed format files, with chr, start, end, ID and sample IDs as column names, each row represents one intron cluster and the values are intron usage ratio (for details please check [leafCutter publication](https://www.nature.com/articles/s41588-017-0004-9) ). The ID of leafcutter phenotype will be like [chromosome]:[intron_start]:[intron_end]:clu_[cluster No.]_[strandness]:[gene mapped for this intron cluster], for example: chr14:19062466:19064583:clu_26162_+:ENSG00000225210
 
-For psichomics, the recipe of chromosome seperated phenotype matrices can be found at CU cluster:.
+For psichomics, the recipe of chromosome separated phenotype matrices can be found at CU cluster:.
 
 The phenotype matrices are processed bed format files, with chr, start, end, ID and sample IDs as column names, each row represents one alternative splicing event and the values are percent spliced in value (for details please check [psichomics publication](https://www.biorxiv.org/content/10.1101/261180v2.full) ). The ID of psichomics phenotype will be like [Alternative splicing event type]_[chromosome]_[strandness]_[splicing locations depend on event type]_[gene mapped for this splicing event], for example: SE_10_+_135559_179994_180128_209889_ENSG00000015171
 

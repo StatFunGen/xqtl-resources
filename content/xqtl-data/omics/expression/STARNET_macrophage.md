@@ -59,7 +59,7 @@ RNA was purified from whole blood with the RNeasy Mini kit (Qiagen, Hilden, Germ
 
 Data Processing:
 
-The STARNET FASTQ files (paired-end, 50 - 100 bp) were processed using the ADGC FGC xQTL pipeline. In brief, the FASTQ files had their adaptors removed using fastp. These trimmed FASTQ files were aligned with the GRCh38 human reference genome using STAR with default parameters. Picard was then used to identify duplicate reads. RNA-SeQC was used to carry out post-alignment QC and RNA quantification, again using default parameters. RSEM was used to generate the expression matrix from the STAR output. 
+The STARNET FASTQ files (paired-end, 50 - 100 bp) were processed using the ADGC FGC xQTL pipeline. In brief, the FASTQ files had their adapters removed using fastp. These trimmed FASTQ files were aligned with the GRCh38 human reference genome using STAR with default parameters. Picard was then used to identify duplicate reads. RNA-SeQC was used to carry out post-alignment QC and RNA quantification, again using default parameters. RSEM was used to generate the expression matrix from the STAR output. 
 
 - Processing files no longer on Minerva. Regenerate?
 

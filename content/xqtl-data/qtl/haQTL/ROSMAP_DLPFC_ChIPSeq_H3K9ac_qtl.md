@@ -95,7 +95,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 ### Association data preprocessing
 #### Genotype data preprocessing
-We conducted Whole Genome Sequencing (WGS) on 1160 DLPFC samples as part of the ROSMAP study. Post-sequencing, these samples were aligned to the GRCh38 reference genome, and the resulting genetic variants were meticulously cataloged, subsequently being saved in VCF (Variant Call Format) files. To ensure the integrity of our findings, we embarked on a rigorous quality control regimen. This involved the utilization of the GRCh38 reference genome complemented by the GENCODE 34 annotation. Notably, our quality control approach was further augmented by integrating the ERCC spike-in annotations, ensuring comprehensive and accurate genomic data analysis. Specific parameters were meticulously applied: a read depth (--DP) of 1, an indel depth (--DP-indel) of 1, and a Genotype Quality (GQ) threshold exceeding 20. Furthermore, each site was mandated to have at least one sample surpassing the allele balance threshold, specifically set at >= 0.15 for Single Nucleotide Polymorphisms (SNPs) and >= 0.20 for insertion-deletion mutations (indels). This structured approach aimed to ensure a systematic and logical progression in our genomic analysis, reinforcing the academic rigor of our research. After the initial QC, the VCF files were merged using PLINK for downstream analysis. Subsequently, we applied further filters to exclude variants with more than 10% missing data and set a Hardy-Weinberg Equilibrium (HWE) cutoff of 1E-8. The generated genotype files will be subjected to subsequent Principal Component analysis (PCA) as part of the covariates, as well as utilized for QTL mapping. 
+We conducted Whole Genome Sequencing (WGS) on 1160 DLPFC samples as part of the ROSMAP study. Post-sequencing, these samples were aligned to the GRCh38 reference genome, and the resulting genetic variants were meticulously cataloged, subsequently being saved in VCF (Variant Call Format) files. To ensure the integrity of our findings, we embarked on a rigorous quality control regimen. This involved the utilization of the GRCh38 reference genome complemented by the GENCODE 34 annotation. Our quality control also used the ERCC spike-in annotations. Specific parameters were meticulously applied: a read depth (--DP) of 1, an indel depth (--DP-indel) of 1, and a Genotype Quality (GQ) threshold exceeding 20. Furthermore, each site was mandated to have at least one sample surpassing the allele balance threshold, specifically set at >= 0.15 for Single Nucleotide Polymorphisms (SNPs) and >= 0.20 for insertion-deletion mutations (indels). This structured approach aimed to ensure a systematic and logical progression in our genomic analysis, reinforcing the academic rigor of our research. After the initial QC, the VCF files were merged using PLINK for downstream analysis. Subsequently, we applied further filters to exclude variants with more than 10% missing data and set a Hardy-Weinberg Equilibrium (HWE) cutoff of 1E-8. The generated genotype files will be subjected to subsequent Principal Component analysis (PCA) as part of the covariates, as well as utilized for QTL mapping. 
 
 #### Principal component analysis for haQTL mapping (this would be the new pipeline)
 For the generation of a covariate file for QTL mapping, we initiated the process with Principal Component analysis (PCA) applied to both genome and phenotype data, incorporating several pivotal steps. In the quality control stage, we utilized the KING to segregate samples into related and unrelated categories. PCA was then performed on the unrelated samples using the flashpcaR library, followed by outlier detection to identify pertinent genotype PCs. We retained those with a cumulative explained variance (PVE_cum) of 0.8 or higher and combined them with relevant metadata sexm, gender and post-mortem interval (pmi).
@@ -118,9 +118,9 @@ During this process, we strategically expanded the cis window to capture signals
 
 
 
-### SuSiE univariate fine mapping
+### SuSiE univariate fine-mapping
 
-- [univariate_fine_mapping.ipynb](https://github.com/cumc/xqtl-pipeline/blob/main/code/fine_mapping/univariate_fine_mapping.ipynb) contains the workflow of haQTL univariate fine mapping.
+- [univariate_fine_mapping.ipynb](https://github.com/cumc/xqtl-pipeline/blob/main/code/fine_mapping/univariate_fine_mapping.ipynb) contains the workflow of haQTL univariate fine-mapping.
 
 ## Dataset Details
 
@@ -289,7 +289,7 @@ ls -lh *.txt
 
 ### Path(s) to fine-mapping with fSuSiE / SuSiE RSS model
 
-Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (fSuSiE/SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to colocalization
 

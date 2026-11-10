@@ -13,18 +13,18 @@ metQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen
 | Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl) | ROSMAP dorsolateral prefrontal cortex | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [Knight ADRC brain](Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | — |
+| [Knight ADRC brain](Knight_ADRC_brain_metabolomics_qtl) | Knight ADRC brain (WashU) | – |
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per metabolite, providing:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets
 - Effect sizes on metabolite abundance
 
-### Trans-metQTL Fine-Mapping
+### Trans-metQTL Fine-mapping
 
 Genome-wide trans-metQTL analyses identify distant genetic influences on metabolite levels. Trans-metQTL results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_metabolomics_qtl).
 

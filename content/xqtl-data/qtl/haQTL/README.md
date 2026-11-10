@@ -16,7 +16,7 @@ haQTL mapping was performed on H3K9ac ChIP-seq data from brain tissue using the 
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per H3K9ac peak, providing:
 - Posterior inclusion probabilities (PIPs)
