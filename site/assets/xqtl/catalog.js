@@ -194,4 +194,12 @@
 
   applySort();
   render();
+
+  // Arriving with a search or filter (for example from the home-page search): on phones the
+  // dashboards come first, so bring the results into view
+  var hasQuery = state.q || KEYS.some(function (k) { return state[k]; });
+  var results = root.querySelector('.catalog__results');
+  if (hasQuery && results && window.matchMedia('(max-width: 900px)').matches) {
+    results.scrollIntoView({ block: 'start' });
+  }
 })();

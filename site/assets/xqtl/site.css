@@ -142,7 +142,11 @@ code, kbd, pre { font-family: var(--mono); }
 :root[data-theme-pref="dark"] .theme-toggle__icon { background: currentColor; }
 .topbar__menu { display: none; border: 0; width: 44px; height: 44px; }
 .burger { display: flex; flex-direction: column; gap: 4px; }
-.burger span { width: 18px; height: 2px; background: var(--ink); display: block; }
+.burger span { width: 18px; height: 2px; background: var(--ink); display: block; transition: transform .15s, opacity .15s; }
+/* Open menu: the button turns into a close (X) mark */
+.nav-open .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-open .burger span:nth-child(2) { opacity: 0; }
+.nav-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ---------- Shell ---------- */
 .shell { display: grid; grid-template-columns: 248px minmax(0, 1fr) auto; align-items: start; min-height: calc(100vh - var(--topbar)); }
@@ -628,6 +632,11 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 .progress__list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
 .progress__row { display: grid; grid-template-columns: 7.5em 1fr 5.5em; align-items: center; gap: 12px; padding: 3px 4px; font-size: 13px; border-radius: var(--r); cursor: default; }
 .progress__row:hover { background: var(--sk); }
+summary.progress__row { cursor: pointer; list-style: none; }
+summary.progress__row::-webkit-details-marker { display: none; }
+summary.progress__row:focus-visible { outline: 2px solid var(--ac); outline-offset: 1px; }
+.progress__item[open] > summary.progress__row { background: var(--sk); }
+.progress__names { margin: 2px 4px 8px; font-size: 12.5px; line-height: 1.5; color: var(--ink2); }
 .progress__label { color: var(--ink); font-weight: 600; }
 .progress__track { height: 10px; background: var(--empty); border-radius: 0 4px 4px 0; }
 .progress__bar { display: block; height: 100%; background: var(--ac); border-radius: 0 4px 4px 0; }
@@ -680,3 +689,6 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
   .cov tbody th .tag { display: block; margin-left: 0; font-size: 12px; }
   .cov .mcell { width: 20px; height: 20px; }
 }
+
+/* Results scrolled into view sit below the sticky top bar */
+.catalog__results { scroll-margin-top: calc(var(--topbar) + 8px); }
