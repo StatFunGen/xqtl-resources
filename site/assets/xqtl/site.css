@@ -779,3 +779,14 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .qchip--key { font-weight: 500; }
 .qchip:focus-visible, .qmods__cohort:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
 @media (max-width: 640px) { .qmods__row { grid-template-columns: 1fr; } .catalog > .matrix.qmods { display: block; margin: 12px 16px 0; } }
+
+/* Cohort rows: a bar on one shared scale (length = result pages, segments = traits) above the trait chips */
+.qmods__row { grid-template-columns: 200px 1fr; align-items: start; }
+.qmods__body { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding-top: 6px; }
+.qmods__bar { display: flex; gap: 2px; height: 10px; min-width: 14px; }
+.qmods__seg { background: var(--c); border-radius: 2px; }
+.qmods__seg:first-child { border-radius: 4px 2px 2px 4px; }
+.qmods__seg:last-child { border-radius: 2px 4px 4px 2px; }
+.qmods__seg:only-child { border-radius: 4px; }
+.qmods__row.is-selected .qmods__bar, .qmods__row:hover .qmods__bar { filter: saturate(1.15); }
+@media (max-width: 640px) { .qmods__row { grid-template-columns: 1fr; gap: 6px; } .qmods__body { padding-top: 0; } }

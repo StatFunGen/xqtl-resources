@@ -19,7 +19,7 @@
   <section class="card matrix qmods" aria-labelledby="matrix-title">
     <div class="matrix__head">
       <h2 id="matrix-title">QTL results by cohort</h2>
-      <span class="muted">Each chip is a molecular trait with QTL results in that cohort; the number is how many result pages. Select a chip, a cohort or a trait to filter the table below.</span>
+      <span class="muted">Bar length is the number of QTL result pages for the cohort, split by molecular trait. Select a chip, a cohort or a trait to filter the table below.</span>
     </div>
     <div class="qmods__key" role="group" aria-label="Filter by molecular trait">
       {{- range $m := $x.modalities }}
@@ -27,11 +27,17 @@
       <button type="button" class="qchip qchip--key" data-matrix-col="{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" title="{{ $m.what }}"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}<span class="qchip__n">{{ $nm }}</span></button>
       {{- end }}
     </div>
+    {{- $cmax := 1 }}{{ range $x.cohorts }}{{ $k := len (where $qtl "cohort" .name) }}{{ if gt $k $cmax }}{{ $cmax = $k }}{{ end }}{{ end }}
     <ul class="qmods__rows">
       {{- range $c := $x.cohorts }}
       {{- $cr := where $qtl "cohort" $c.name -}}
+      {{- $nt := 0 }}{{ range $x.modalities }}{{ if where $cr "family" .family }}{{ $nt = add $nt 1 }}{{ end }}{{ end -}}
       <li class="qmods__row" data-matrix-row="{{ $c.name }}">
-        <button type="button" class="qmods__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="qmods__total">{{ len $cr }} result {{ if eq (len $cr) 1 }}page{{ else }}pages{{ end }}</span></button>
+        <button type="button" class="qmods__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="qmods__total">{{ len $cr }} result {{ if eq (len $cr) 1 }}page{{ else }}pages{{ end }} · {{ $nt }} {{ if eq $nt 1 }}trait{{ else }}traits{{ end }}</span></button>
+        <span class="qmods__body">
+        <span class="qmods__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $cr) 100.0) $cmax) }}%">
+          {{- range $m := $x.modalities }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<span class="qmods__seg" style="flex:{{ $n }};--c:oklch(0.6 0.13 {{ $m.hue }})" title="{{ $m.id }}: {{ $n }}"></span>{{ end }}{{ end -}}
+        </span>
         <span class="qmods__chips">
           {{- range $m := $x.modalities }}
           {{- $n := len (where $cr "family" $m.family) }}
@@ -39,6 +45,7 @@
           <button type="button" class="qchip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}{{ if gt $n 1 }}<span class="qchip__n">{{ $n }}</span>{{ end }}</button>
           {{- end }}
           {{- end }}
+        </span>
         </span>
       </li>
       {{- end }}
