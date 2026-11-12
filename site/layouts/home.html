@@ -16,7 +16,7 @@
     <div class="hero__text">
       <p class="hero__org">ADSP Functional Genomics Consortium (FunGen-AD)</p>
       <h1 class="hero__title">FunGen<span class="brand__x">-xQTL</span></h1>
-      <p class="hero__lead">FunGen-xQTL maps molecular QTL (xQTL) across eight modalities, from chromatin and RNA to proteins and metabolites, in brain and immune cells, and integrates them with Alzheimer’s disease (AD) GWAS to interpret AD risk loci. This catalog lists each dataset, the analyses run on it and where to get it.</p>
+      <p class="hero__lead">FunGen-xQTL maps molecular QTL (xQTL) in eight modalities across brain and immune cells and integrates them with Alzheimer’s disease (AD) GWAS. This catalog lists each dataset and where to get it.</p>
       <div class="hero__btns">
         <a class="pill pill--solid" href="{{ $cat }}">Browse the data catalog</a>
         <a class="pill" href="{{ site.Params.atlasURL }}" rel="noopener">Look up a gene or variant ↗</a>
@@ -34,7 +34,7 @@
     <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
     <div class="stat"><span class="stat__n">{{ $x.home.loci }}</span><span class="stat__l">AD loci summarized</span></div>
   </section>
-  <p class="note stats__note">{{ $x.home.participants_note }} The catalog has {{ len $rows }} pages, which also cover AD GWAS and reference data. The AD loci are summarized in the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a>.</p>
+  <p class="note stats__note">{{ $x.home.participants_note }} The {{ len $rows }} catalog pages also cover AD GWAS and reference data; the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> lists the loci.</p>
 
   <form class="find" action="{{ $cat }}" method="get" role="search">
     <span class="search__icon" aria-hidden="true"></span>
