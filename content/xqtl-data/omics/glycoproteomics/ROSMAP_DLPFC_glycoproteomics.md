@@ -11,7 +11,7 @@ lead_analysts: [FunGen-xQTL Analysis Working Group]
 last_verified:
 ---
 
-# ROSMAP DLPFC Glycoproteomics
+# ROSMAP DLPFC glycoproteomics
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC glycoproteomics (N-glycosylation proteomics).
 

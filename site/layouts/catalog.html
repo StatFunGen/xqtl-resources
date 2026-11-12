@@ -51,7 +51,7 @@
   <section class="card progress" aria-labelledby="progress-title">
     <div class="matrix__head">
       <h2 id="progress-title">Analysis progress by method</h2>
-      <span class="muted">QTL result pages that record each method as done, out of {{ $total }}. Hover a row for the datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
+      <span class="muted">QTL result pages that record each method as done, out of {{ $total }}. Select a row to list its datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
     </div>
     <ul class="progress__list">
       {{- range $m := $x.methods }}
@@ -59,10 +59,16 @@
       {{- range $qds }}{{ if eq (index .methods $m) "done" }}{{ $names = $names | append (printf "%s %s" .short .label) }}{{ end }}{{ end -}}
       {{- $n := len $names -}}
       {{- $pct := 0.0 }}{{ if $total }}{{ $pct = div (mul $n 100.0) $total }}{{ end }}
-      <li class="progress__row" title="{{ $m }}: {{ $n }} of {{ $total }}{{ with $names }}&#10;{{ delimit . "&#10;" }}{{ end }}">
-        <span class="progress__label">{{ $m }}</span>
-        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" $pct }}%"></span></span>
-        <span class="progress__val">{{ if $n }}<strong>{{ $n }}</strong> of {{ $total }}{{ else }}<span class="muted">not recorded</span>{{ end }}</span>
+      {{- $row := printf `<span class="progress__label">%s</span><span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:%.1f%%"></span></span><span class="progress__val">%s</span>` $m $pct (cond (gt $n 0) (printf "<strong>%d</strong> of %d" $n $total) `<span class="muted">not recorded</span>`) }}
+      <li>
+        {{- if $names }}
+        <details class="progress__item">
+          <summary class="progress__row" title="{{ $m }}: {{ $n }} of {{ $total }}">{{ $row | safeHTML }}</summary>
+          <p class="progress__names">{{ delimit $names ", " }}</p>
+        </details>
+        {{- else }}
+        <div class="progress__row">{{ $row | safeHTML }}</div>
+        {{- end }}
       </li>
       {{- end }}
     </ul>

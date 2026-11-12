@@ -4,54 +4,54 @@ Expression quantitative trait loci (eQTL) identify genetic variants that influen
 
 ## Overview
 
-eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html) across diverse human brain regions and cell types. All datasets underwent harmonized genotype QC, expression normalization, and covariate adjustment. Fine-mapping was performed using SuSiE-RSS to generate posterior inclusion probabilities (PIPs), credible sets (CS), and effect sizes. TWAS weight models and quantile TWAS (qTWAS) models are provided for key datasets.
+eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/) across diverse human brain regions and cell types. All datasets underwent harmonized genotype QC, expression normalization, and covariate adjustment. Fine-mapping was performed using SuSiE-RSS to generate posterior inclusion probabilities (PIPs), credible sets (CS), and effect sizes. TWAS weight models and quantile TWAS (qTWAS) models are provided for key datasets.
 
 ## Available Datasets
 
-### Brain Tissue — ROSMAP Cohort
+### Brain Tissue, ROSMAP Cohort
 
 | Dataset | Brain Region / Cell Type | AD Knowledge Portal |
 |---------|--------------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl) | Dorsolateral prefrontal cortex (bulk RNA-seq) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [ROSMAP PCC](ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | — |
-| [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | — |
-| [ROSMAP microglia](ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | — |
-| [ROSMAP monocyte](ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | — |
-| [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC1 + MIT) | — |
+| [ROSMAP PCC](ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | – |
+| [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | – |
+| [ROSMAP microglia](ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | – |
+| [ROSMAP monocyte](ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | – |
+| [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC1 + MIT) | – |
 
-### Brain Tissue — Other Cohorts
+### Brain Tissue, Other Cohorts
 
 | Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
-| [MSBB](MSBB_brain_expression_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [MiGA](MiGA_brain_expression_qtl) | Microglia in Genomics and Aging (multi-brain region) | — |
-| [MetaBrain](MetaBrain_brain_expression_qtl) | MetaBrain consortium (multi-brain region) | — |
-| [Knight ADRC](Knight_ADRC_brain_expression_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_brain_expression_qtl) | Mount Sinai Brain Bank, 4 brain regions | – |
+| [MiGA](MiGA_brain_expression_qtl) | Microglia in Genomics and Aging (multi-brain region) | – |
+| [MetaBrain](MetaBrain_brain_expression_qtl) | MetaBrain consortium (multi-brain region) | – |
+| [Knight ADRC](Knight_ADRC_brain_expression_qtl) | Knight ADRC brain (WashU) | – |
 
 ### Blood / Peripheral Tissue
 
 | Dataset | Cohort / Tissue | AD Knowledge Portal |
 |---------|-----------------|---------|
-| [STARNET macrophage](STARNET_macrophage_qtl) | STARNET macrophage gene expression | — |
+| [STARNET macrophage](STARNET_macrophage_qtl) | STARNET macrophage gene expression | – |
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** is performed per dataset and per molecular phenotype, yielding:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets (CS)
 - Standardized effect sizes (beta) and standard errors
 
-### Multi-Context Fine-Mapping
+### Multi-Context Fine-mapping
 
 For ROSMAP (DLPFC, PCC, AC) and MSBB cohorts, **mvSuSiE** (multivariate SuSiE with MASH prior) integrates signals across multiple brain regions jointly to improve power and resolution. Multi-context results are deposited in [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
-### Multi-Gene Fine-Mapping
+### Multi-Gene Fine-mapping
 
 Separate multi-gene fine-mapping analyses for eQTLs jointly model nearby genes to resolve signals with shared genetic variants. Results available at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
-### Trans-eQTL Fine-Mapping
+### Trans-eQTL Fine-mapping
 
 Genome-wide trans-eQTL analyses identify distant regulatory relationships (>5 Mb or inter-chromosomal). Trans-eQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl).
 

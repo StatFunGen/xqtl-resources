@@ -4,11 +4,11 @@ Chromatin accessibility quantitative trait loci (caQTL) identify genetic variant
 
 ## Overview
 
-caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from brain tissue using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Peak-level chromatin accessibility was quantified per cell type, normalized, and adjusted for covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS or fSuSiE. Pairwise colocalization with AD GWAS uses a [novel epigenetic fine-mapping approach](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) to identify chromatin-level regulatory mechanisms of AD risk variants at cell-type resolution.
+caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from brain tissue using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Peak-level chromatin accessibility was quantified per cell type, normalized, and adjusted for covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS or fSuSiE. Pairwise colocalization with AD GWAS uses an [epigenetic fine-mapping approach](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) to identify chromatin-level regulatory mechanisms of AD risk variants at cell-type resolution.
 
 ## Available Datasets
 
-### Brain Tissue — Single-Nucleus
+### Brain Tissue, Single-Nucleus
 
 | Dataset | Cohort / Brain Region | Cell Types | AD Knowledge Portal |
 |---------|-----------------------|------------|---------|
@@ -16,7 +16,7 @@ caQTL mapping was performed on single-nucleus ATAC-seq (snATAC-seq) data from br
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per ATAC-seq peak and cell type, providing:
 - Posterior inclusion probabilities (PIPs)

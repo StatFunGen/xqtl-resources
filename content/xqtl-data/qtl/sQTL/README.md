@@ -4,25 +4,25 @@ Splicing quantitative trait loci (sQTL) identify genetic variants that influence
 
 ## Overview
 
-sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
+sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). For bulk tissue, splice junction quantification uses LeafCutter-style intron excision ratios followed by tensorQTL mapping. For single-nucleus data, the **ISSAC** method quantifies splice site usage via UMI-collapsed junction counts using **junctools**, followed by binomial GLMM sQTL mapping with metacell aggregation. Fine-mapping was performed using SuSiE-RSS yielding PIPs and credible sets.
 
 ## Available Datasets
 
-### Brain Tissue — ROSMAP Cohort
+### Brain Tissue, ROSMAP Cohort
 
 | Dataset | Brain Region / Cell Type | Method | AD Knowledge Portal |
 |---------|--------------------------|--------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_splicing_qtl) | Dorsolateral prefrontal cortex (bulk) | LeafCutter + tensorQTL | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| [ROSMAP PCC](ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
-| [ROSMAP AC](ROSMAP_AC_splicing_qtl) | Anterior cingulate cortex (bulk) | LeafCutter + tensorQTL | — |
-| [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing_qtl) | Single-nucleus (7 major + 95 subcell types) | ISSAC binomial GLMM | — |
+| [ROSMAP PCC](ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | – |
+| [ROSMAP AC](ROSMAP_AC_splicing_qtl) | Anterior cingulate cortex (bulk) | LeafCutter + tensorQTL | – |
+| [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing_qtl) | Single-nucleus (7 major + 95 subcell types) | ISSAC binomial GLMM | – |
 
-### Brain Tissue — Other Cohorts
+### Brain Tissue, Other Cohorts
 
 | Dataset | Cohort / Brain Region | AD Knowledge Portal |
 |---------|-----------------------|---------|
-| [MSBB](MSBB_brain_splicing_qtl) | Mount Sinai Brain Bank, 4 brain regions | — |
-| [Knight ADRC](Knight_ADRC_brain_splicing_qtl) | Knight ADRC brain (WashU) | — |
+| [MSBB](MSBB_brain_splicing_qtl) | Mount Sinai Brain Bank, 4 brain regions | – |
+| [Knight ADRC](Knight_ADRC_brain_splicing_qtl) | Knight ADRC brain (WashU) | – |
 
 ### Blood / Peripheral Tissue
 
@@ -31,14 +31,14 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** is applied per splicing phenotype (intron cluster or splice site), providing:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets
 - Effect sizes on splice junction usage
 
-### ISSAC — Single-Nucleus sQTL Method
+### ISSAC, Single-Nucleus sQTL Method
 
 For ROSMAP snuc data, **ISSAC** implements:
 - **Metacell aggregation**: 23,143 metacells for 7 major cell types and 87,936 metacells for 67 retained subcell types, from 3,177,748 nuclei (530 unique donors from 722 specimens: CUIMC1 N=424, MIT N=298, 192 shared donors)
@@ -46,7 +46,7 @@ For ROSMAP snuc data, **ISSAC** implements:
 - **Binomial GLMM** sQTL mapping with PCG/REML for random effects
 - **Context-dependent sQTL** analyses: AD-biased (FDR < 0.01), sex-biased (FDR < 0.05), and cell-state-dependent
 
-### Multi-Context Fine-Mapping
+### Multi-Context Fine-mapping
 
 For ROSMAP multi-region bulk sQTL, **mvSuSiE** (multivariate SuSiE with MASH prior) integrates splicing signals across DLPFC, PCC, and AC jointly. Multi-context fine-mapping results are at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 

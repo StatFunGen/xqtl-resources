@@ -39,7 +39,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
   
 ### Association scan using TensorQTL and summary statistics standardization
 
-- [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
+- [TensorQTL.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
 - [MSBB_pQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/MSBB_pQTL/command_generator.ipynb) provides information about the input files for TensorQTL cis association in the base_params variable in [generate_command_1].
 
 
@@ -50,7 +50,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to TWAS models
 

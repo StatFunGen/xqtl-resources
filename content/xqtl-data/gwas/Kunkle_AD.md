@@ -4,7 +4,7 @@ short_title: Kunkle 2019
 status: staged
 access:
 release:
-synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn70095142, syn70095143]
+synapse_ids: [syn69670625, syn69670626, syn69670630, syn69865805, syn69865816, syn70095142, syn70095143]
 lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
@@ -24,7 +24,7 @@ The original summary statistics (GRCh37) and a liftover to GRCh38 are held on th
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - AD GWAS fine-mapping models (AD Knowledge Portal): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
-- Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
+- Additional fine-mapping objects: [syn69865805](https://www.synapse.org/Synapse:syn69865805)
 
 ## AD GWAS–xQTL Integration
 

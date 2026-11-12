@@ -37,6 +37,6 @@ Imputation QC protocol.pdf
 - Data Location on FTP:
 
 
-### Genotype processed via xQTL pipeline:
+### Genotype processed with the xQTL pipeline
 
 For details how the phenotype data is processed please check [genotype_preprocessing](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Wang_Columbia/knight/pqtl/genotype_preprocessing.ipynb)

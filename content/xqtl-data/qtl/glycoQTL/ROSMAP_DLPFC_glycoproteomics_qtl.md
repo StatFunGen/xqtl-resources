@@ -30,7 +30,7 @@ This page documents the glycoproteomics QTL (glycoQTL) analysis of dorsolateral 
 
 ### Association scan with TensorQTL and summary statistics standardization
 
-- [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) generates the TensorQTL cis association results for all QTL types.
+- [TensorQTL.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb) generates the TensorQTL cis association results for all QTL types.
 - [ROSMAP_gpQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_gpQTL/command_generator.ipynb) lists the input files for the adjusted and unadjusted glycoproteomics cis association, in the `base_params` variable of `generate_command_1`.
 
 ## Where to find the results

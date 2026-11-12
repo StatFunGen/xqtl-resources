@@ -43,11 +43,22 @@
   // Close the phone menu with Escape
   var navToggle = document.getElementById('nav-toggle');
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navToggle && navToggle.checked) navToggle.checked = false;
+    if (e.key === 'Escape' && navToggle && navToggle.checked) { navToggle.checked = false; syncMenu(); }
   });
-  document.querySelectorAll('.topbar__menu').forEach(function (l) {
+  var menuBtns = document.querySelectorAll('.topbar__menu');
+  // Tell assistive technology whether the menu is open, and offer the same button to close it
+  function syncMenu() {
+    var open = !!(navToggle && navToggle.checked);
+    menuBtns.forEach(function (l) {
+      l.setAttribute('aria-expanded', open ? 'true' : 'false');
+      l.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    document.documentElement.classList.toggle('nav-open', open);
+  }
+  if (navToggle) navToggle.addEventListener('change', syncMenu);
+  menuBtns.forEach(function (l) {
     l.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.checked = !navToggle.checked; }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.checked = !navToggle.checked; syncMenu(); }
     });
   });
 

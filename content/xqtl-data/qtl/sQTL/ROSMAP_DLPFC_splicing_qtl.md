@@ -21,7 +21,7 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-Shrishtee Kandoi and Xuanhe Chen (xuanhechenxhc@163.com)
+Shrishtee Kandoi and Xuanhe Chen
 
 ## Study Overview
  
@@ -82,7 +82,6 @@ Final covariates: Sex, Age at death, PMI, PCs(13), PEER factors(60)
 - Minor allele count cutoff: 5
 - Minor allele frequency cutoff: 5/(2N), where N is the number of samples in the analysis. The pipeline computes N from the covariate file, so the cutoff differs between datasets.
 
-
 ## Links to QTL analysis notebooks for LeafCutter2
 
 See notebooks in: 
@@ -104,13 +103,12 @@ The notebooks in this folder contain the commands and data wrangling codes for a
   
 ### Association scan using TensorQTL and summary statistics standardization
 
-- [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
+- [TensorQTL.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
 - [ROSMAP_sQTL_LeafCutter2_commands](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_sQTL_LeafCutter2/command_generator.ipynb) provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].
 
-### SuSiE univariate fine mapping
+### SuSiE univariate fine-mapping
 
-- [fine_mapping.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Zhang_BU/ROSMAP_DLPFC/sQTL/fine_mapping.ipynb) contains the workflow of sQTL univariate fine mapping using filterd psichomics data.
-
+- [fine_mapping.ipynb](https://github.com/cumc/fungen-xqtl-analysis/blob/main/analysis/Zhang_BU/ROSMAP_DLPFC/sQTL/fine_mapping.ipynb) contains the workflow of sQTL univariate fine-mapping using filtered psichomics data.
 
 ## Dataset Details
 
@@ -124,48 +122,13 @@ The notebooks in this folder contain the commands and data wrangling codes for a
 
 **output of genotype_qc.ipynb**
 
-
-
-
 ### Path(s) to omics-data matrix 
 
 **output of phenotype_preprocessing_sqtl.ipynb**
 
 leafCutter:
 
-
 psichomics:
-
-
-```
-$ ls -lh *.{txt,bed}
--rw-r--r-- 1 xc2610 xc2610 2.7K Apr  3 14:41 ROSMAP_psichomics_bed_recipe.txt
--rw-r--r-- 1 xc2610 xc2610  65M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr10.bed
--rw-r--r-- 1 xc2610 xc2610 113M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr11.bed
--rw-r--r-- 1 xc2610 xc2610 102M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr12.bed
--rw-r--r-- 1 xc2610 xc2610  28M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr13.bed
--rw-r--r-- 1 xc2610 xc2610  69M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr14.bed
--rw-r--r-- 1 xc2610 xc2610  58M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr15.bed
--rw-r--r-- 1 xc2610 xc2610  88M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr16.bed
--rw-r--r-- 1 xc2610 xc2610 125M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr17.bed
--rw-r--r-- 1 xc2610 xc2610  26M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr18.bed
--rw-r--r-- 1 xc2610 xc2610 117M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr19.bed
--rw-r--r-- 1 xc2610 xc2610 166M Apr  5 14:34 ROSMAP.psichomics.qqnorm.revised.formated_chr1.bed
--rw-r--r-- 1 xc2610 xc2610  52M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr20.bed
--rw-r--r-- 1 xc2610 xc2610  18M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr21.bed
--rw-r--r-- 1 xc2610 xc2610  50M Apr 14 17:01 ROSMAP.psichomics.qqnorm.revised.formated_chr22.bed
--rw-r--r-- 1 xc2610 xc2610 122M Apr  5 16:55 ROSMAP.psichomics.qqnorm.revised.formated_chr2.bed
--rw-r--r-- 1 xc2610 xc2610 108M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr3.bed
--rw-r--r-- 1 xc2610 xc2610  60M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr4.bed
--rw-r--r-- 1 xc2610 xc2610  75M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr5.bed
--rw-r--r-- 1 xc2610 xc2610  80M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr6.bed
--rw-r--r-- 1 xc2610 xc2610  84M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr7.bed
--rw-r--r-- 1 xc2610 xc2610  62M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr8.bed
--rw-r--r-- 1 xc2610 xc2610  66M Apr 14 17:00 ROSMAP.psichomics.qqnorm.revised.formated_chr9.bed
--rw-r--r-- 1 xc2610 xc2610 426K Feb 13 01:15 ROSMAP.psichomics.qqnorm.revised.formated_chrMT.bed
--rw-r--r-- 1 xc2610 xc2610  47M Feb 13 01:15 ROSMAP.psichomics.qqnorm.revised.formated_chrX.bed
--rw-r--r-- 1 xc2610 xc2610 529K Feb 13 01:15 ROSMAP.psichomics.qqnorm.revised.formated_chrY.bed
-```
 
 ### Path(s) to covariate data matrix 
 
@@ -177,12 +140,6 @@ leafCutter:
 
 psichomics:
 
-
-```
-$ ls -lh *.gz
--rw-r--r-- 1 xc2610 xc2610 546K Feb  9 13:06 psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.gz
-```
-
 ### Path(s) to QTL results 
 
 **output of association_scan_sQTL.ipynb**
@@ -192,114 +149,13 @@ leafCutter:
    
 psichomics:
 
-
-```
-$ls -lh *.txt
--rw-r--r-- 1 xc2610 xc2610 928K Feb 13 02:34 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 7.4G Feb 13 01:45 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.6M Feb 13 03:08 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  12G Feb 13 01:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.5M Feb 13 03:26 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  11G Feb 13 01:53 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 389K Feb 13 02:57 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 3.2G Feb 13 02:36 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 973K Feb 13 03:35 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 7.9G Feb 13 02:44 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 813K Feb 13 03:24 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 5.7G Feb 13 02:46 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.2M Feb 13 03:53 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 9.8G Feb 13 02:50 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.8M Feb 13 04:39 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  14G Feb 13 03:01 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 353K Feb 13 03:18 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.8G Feb 13 03:01 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.6M Feb 13 05:01 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  16G Feb 13 03:25 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 2.3M Feb 13 04:16 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  17G Feb 13 02:03 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 729K Feb 13 03:36 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 5.7G Feb 13 03:00 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 254K Feb 13 03:25 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.1G Feb 13 03:12 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 712K Feb 13 03:58 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 5.9G Feb 13 03:19 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.7M Feb 13 03:16 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  13G Feb 13 01:53 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.5M Feb 13 03:11 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  11G Feb 13 01:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 839K Feb 13 02:30 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 6.7G Feb 13 01:44 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.1M Feb 13 02:37 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 7.9G Feb 13 01:45 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.1M Feb 13 03:02 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610  12G Feb 13 01:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 1.2M Feb 13 02:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 9.5G Feb 13 01:49 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 871K Feb 13 02:31 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 6.8G Feb 13 01:45 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 939K Feb 13 02:39 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 7.5G Feb 13 01:46 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610  27M Feb 13 05:02 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.emprical.cis_sumstats.txt
-```
-
 psichomics (grouped by each gene - event_type pair):
-
-
-```
-$ ls -lh *.txt
--rw-r--r-- 1 xc2610 xc2610 229K Apr  3 15:30 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.8G Apr  3 14:49 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 414K Apr  3 15:53 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.9G Apr  3 14:52 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.11.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 373K Apr  3 16:12 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.7G Apr  3 15:10 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.12.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610  99K Apr  3 15:46 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 785M Apr  3 15:29 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.13.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 249K Apr  3 16:16 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.0G Apr  3 15:33 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.14.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 213K Apr  3 16:18 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.5G Apr  3 15:47 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.15.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 332K Apr  3 16:30 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.6G Apr  3 15:38 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.16.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 453K Apr  3 17:19 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 3.4G Apr  3 16:01 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.17.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610  91K Apr  3 16:04 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 699M Apr  3 15:49 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.18.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 471K Apr  3 17:18 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 4.3G Apr  3 15:55 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.19.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 617K Apr  3 16:33 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 4.3G Apr  3 14:55 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 182K Apr  3 16:05 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.4G Apr  3 15:34 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.20.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610  73K Apr  3 16:06 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 577M Apr  3 15:55 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.21.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 194K Apr  3 16:30 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.6G Apr  3 15:58 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.22.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 434K Apr  3 16:01 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 3.1G Apr  3 14:52 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.2.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 394K Apr  3 15:53 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.7G Apr  3 14:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.3.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 220K Apr  3 15:25 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.7G Apr  3 14:48 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.4.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 286K Apr  3 15:42 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.1G Apr  3 14:50 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.5.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 319K Apr  3 15:52 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 3.4G Apr  3 14:51 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.6.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 331K Apr  3 15:43 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 2.6G Apr  3 14:50 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.7.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 234K Apr  3 15:26 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.8G Apr  3 14:48 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.8.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 243K Apr  3 15:29 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.emprical.cis_sumstats.txt
--rw-r--r-- 1 xc2610 xc2610 1.9G Apr  3 14:49 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.9.norminal.cis_long_table.txt
--rw-r--r-- 1 xc2610 xc2610 7.4M Apr  3 17:21 ROSMAP_psichomics_bed_recipe_psichomics.dlpfc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.emprical.cis_sumstats.txt
-```
 
 ### Path(s) to fine-mapping with SuSiE model 
 
 **output of fine_mapping.ipynb**
 
-
-The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
+The results are separated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_SE sub directories according to their event type. Due to the massive amount of files for splicing data they are not listed here.
 
 ### Path(s) to cis-QTL association testing
 
@@ -308,7 +164,7 @@ The results are seperated in psi_A3SS, psi_A5SS, psi_AFE, psi_ALE, psi_MXE, psi_
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to TWAS models
 

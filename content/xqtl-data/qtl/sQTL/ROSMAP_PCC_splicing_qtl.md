@@ -39,39 +39,6 @@ Frank Grenn
 
 TransQTL association: Need to be performed.
 
-## Dataset Details
-
-
-
-
-
-### Path(s) to omics-data matrix
-
-
-```
-$ ls -lh batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.txt
--rw-r--r-- 1 fgrennjr casa 3.1G Mar  6 14:06 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.txt
-```
-
-
-
-### Path(s) to QTL results
-
-```
-$ ls -lh | head
-total 27G
--rw-r--r-- 1 fgrennjr casa 374M Mar 24 11:42 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet
--rw-r--r-- 1 fgrennjr casa  285 Mar 24 22:12 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stderr
--rw-r--r-- 1 fgrennjr casa 138K Mar 24 22:12 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stdout
--rw-r--r-- 1 fgrennjr casa 433K Mar 24 22:12 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 fgrennjr casa 2.2G Mar 24 11:44 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 fgrennjr casa 180M Mar 24 11:28 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet
--rw-r--r-- 1 fgrennjr casa  285 Mar 24 16:48 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stderr
--rw-r--r-- 1 fgrennjr casa  58K Mar 24 16:48 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stdout
--rw-r--r-- 1 fgrennjr casa 187K Mar 24 16:48 batch_all_bam_no_ext_no_outlier_intron_usage_perind.counts.gz_raw_data.qqnorm.formated.bed.per_chrom_leafcutter.pcc_batch_all.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
-```
-
-
 ## Links to QTL analysis notebooks for LeafCutter2
 
 See notebooks in: 
@@ -93,7 +60,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
   
 ### Association scan using TensorQTL and summary statistics standardization
 
-- [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
+- [TensorQTL.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
 - [ROSMAP_sQTL_LeafCutter2_commands](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_sQTL_LeafCutter2/command_generator.ipynb) provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].
 
 **output of TensorQTL.ipynb**
@@ -101,7 +68,7 @@ The notebooks in this folder contain the commands and data wrangling codes for a
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to TWAS models
 

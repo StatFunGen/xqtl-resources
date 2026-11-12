@@ -92,6 +92,7 @@ code, kbd, pre { font-family: var(--mono); }
 .h2row .link { font-size: 14px; }
 
 /* ---------- Header ---------- */
+/* While the phone menu is open, the top bar is raised above the drawer and its scrim (see "Open menu" at the end of this file) */
 .topbar {
   position: sticky; top: 0; z-index: 30; height: var(--topbar);
   display: flex; align-items: center; gap: 20px; padding: 0 20px;
@@ -142,7 +143,11 @@ code, kbd, pre { font-family: var(--mono); }
 :root[data-theme-pref="dark"] .theme-toggle__icon { background: currentColor; }
 .topbar__menu { display: none; border: 0; width: 44px; height: 44px; }
 .burger { display: flex; flex-direction: column; gap: 4px; }
-.burger span { width: 18px; height: 2px; background: var(--ink); display: block; }
+.burger span { width: 18px; height: 2px; background: var(--ink); display: block; transition: transform .15s, opacity .15s; }
+/* Open menu: the button turns into a close (X) mark */
+.nav-open .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-open .burger span:nth-child(2) { opacity: 0; }
+.nav-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ---------- Shell ---------- */
 .shell { display: grid; grid-template-columns: 248px minmax(0, 1fr) auto; align-items: start; min-height: calc(100vh - var(--topbar)); }
@@ -524,8 +529,8 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
   .topbar__links { display: none; }
   .nav-item--phone { display: flex; }
   .theme-toggle { margin-right: 4px; }
-  /* Search collapses to an icon; tapping it shows the field under the header */
-  .search { position: static; flex: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; justify-content: center; }
+  /* Search collapses to an icon; tapping it shows the field under the header. The hidden input covers only the icon. */
+  .search { position: relative; flex: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; justify-content: center; }
   .search__icon { width: 14px; height: 14px; border-width: 2px; border-color: var(--ink); pointer-events: none; }
   .search__icon::after { background: var(--ink); width: 6px; height: 2px; }
   .search input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
@@ -628,6 +633,11 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 .progress__list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
 .progress__row { display: grid; grid-template-columns: 7.5em 1fr 5.5em; align-items: center; gap: 12px; padding: 3px 4px; font-size: 13px; border-radius: var(--r); cursor: default; }
 .progress__row:hover { background: var(--sk); }
+summary.progress__row { cursor: pointer; list-style: none; }
+summary.progress__row::-webkit-details-marker { display: none; }
+summary.progress__row:focus-visible { outline: 2px solid var(--ac); outline-offset: 1px; }
+.progress__item[open] > summary.progress__row { background: var(--sk); }
+.progress__names { margin: 2px 4px 8px; font-size: 12.5px; line-height: 1.5; color: var(--ink2); }
 .progress__label { color: var(--ink); font-weight: 600; }
 .progress__track { height: 10px; background: var(--empty); border-radius: 0 4px 4px 0; }
 .progress__bar { display: block; height: 100%; background: var(--ac); border-radius: 0 4px 4px 0; }
@@ -656,3 +666,38 @@ th[aria-sort="descending"] .sort::after { border-top-color: var(--navy); }
 .cohorts__name .muted { font-weight: 400; font-size: 12px; }
 @media (max-width: 560px) { .cohorts__body { flex-direction: column; align-items: stretch; gap: 12px; } .cohorts__pie { align-self: center; } }
 @media print { .catalog > .progress { display: none; } }
+
+/* Comfortable tap size for links in table headers and the top bar */
+.cov th a, .dtable td a, .dtable th a, .topbar__links a { display: inline-block; padding-block: 4px; }
+.brand { padding-block: 4px; }
+
+/* Links to private lab repositories */
+.lab-only { display: inline-block; margin-left: 4px; padding: 0 6px; border: 1px solid var(--ln2); border-radius: 999px; font: 500 12px/18px var(--sans); color: var(--ink2); white-space: nowrap; vertical-align: 1px; }
+
+/* Analysis coverage on phones: the dataset column stays in view while the methods scroll */
+.cov-hint { display: none; }
+@media (max-width: 760px) {
+  .wide__body { margin: 0 16px; }
+  .cov-hint { display: block; margin: 0 16px 8px; font-size: 13px; color: var(--ink2); }
+  .cov { min-width: 0; width: max-content; }
+  .cov thead th { width: 56px; padding: 10px 2px 6px; font-size: 12px; line-height: 1.2; }
+  .cov thead th.r { width: 48px; padding-right: 8px; }
+  .cov thead th:first-child, .cov tbody th { position: sticky; left: 0; z-index: 1; }
+  .cov thead th:first-child { background: var(--bg); }
+  .cov tbody th { background: var(--sf); white-space: normal; width: 132px; min-width: 132px; max-width: 132px; padding: 6px 8px; font-size: 13px; line-height: 1.25; box-shadow: 1px 0 0 var(--ln); }
+  .cov tr.is-next th { background: var(--next); }
+  .cov tbody th a { display: inline; }
+  .cov tbody th .tag { display: block; margin-left: 0; font-size: 12px; }
+  .cov .mcell { width: 20px; height: 20px; }
+}
+
+/* Results scrolled into view sit below the sticky top bar */
+.catalog__results { scroll-margin-top: calc(var(--topbar) + 8px); }
+
+/* Open menu: the top bar, with its close button, stays above the drawer (z-index 40) and its scrim (35),
+   so one tap on the close button closes the menu. The :has() rules follow the menu checkbox directly,
+   so this also works before or without the page script; .nav-open covers browsers without :has(). */
+.nav-open .topbar { z-index: 45; }
+.nav-open .nav-toggle:checked ~ .sidenav { top: var(--topbar); }
+html:has(#nav-toggle:checked) .topbar { z-index: 45; }
+html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar); }

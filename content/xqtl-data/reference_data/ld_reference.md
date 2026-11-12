@@ -39,7 +39,7 @@ colnames(ld) = var_names
 The generated files can be found on [Synapse](https://www.synapse.org/#!Synapse:syn53171227).
 
 ## Analysis Notebook Link
-1. Generating LD Reference Panel: https://github.com/cumc/xqtl-pipeline/blob/main/code/reference_data/ld_reference_generation.ipynb
+1. Generating LD Reference Panel: https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/graveyard/ld_reference_generation.ipynb
 
 ## ADSP Whole Genome Sequencing LD Reference Panel
 

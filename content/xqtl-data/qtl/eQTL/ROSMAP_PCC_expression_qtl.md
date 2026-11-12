@@ -16,9 +16,9 @@ methods:
   cTWAS: done
 ---
 
-# ROSMAP PCC Expression QTL
+# ROSMAP PCC gene expression QTL
 
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC alternative splicing. 
+Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) PCC gene expression. 
 
 Please refer to [this document](../../study_info/ROSMAP.md) for an overview of the ROSMAP project.
 
@@ -44,32 +44,6 @@ TransQTL association: Need to be performed.
 
 ## Dataset Details
 
-
-
-
-
-
-
-
-
-
-### Path(s) to QTL results
-
-
-```
-$ ls -lh | head
-total 35G
--rw-r--r-- 1 fgrennjr casa  529M Mar 17 16:02 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet
--rw-r--r-- 1 fgrennjr casa   285 Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stderr
--rw-r--r-- 1 fgrennjr casa  173K Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.cis_qtl_pairs.1.parquet.stdout
--rw-r--r-- 1 fgrennjr casa  555K Mar 17 17:06 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.emprical.cis_sumstats.txt
--rw-r--r-- 1 fgrennjr casa  2.6G Mar 17 16:04 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.1.norminal.cis_long_table.txt
--rw-r--r-- 1 fgrennjr casa  253M Mar 17 16:00 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet
--rw-r--r-- 1 fgrennjr casa   285 Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stderr
--rw-r--r-- 1 fgrennjr casa   72K Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.cis_qtl_pairs.10.parquet.stdout
--rw-r--r-- 1 fgrennjr casa  234K Mar 17 16:31 PCC_samples_list.rnaseqc.gene_tpm.low_expression_filtered.outlier_removed.tmm.expression.bed.per_chrom_pcc_batch_all.rnaseqc.ROSMAP_covariates.ROSMAP_NIA_WGS.pca.PEER.txt.10.emprical.cis_sumstats.txt
-```
-
 ### Path(s) to cis-QTL association testing
 
 **output of TensorQTL.ipynb**
@@ -77,7 +51,7 @@ total 35G
   
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to TWAS models
 
@@ -98,5 +72,5 @@ AD GWAS–xQTL colocalization models: [syn69670630](https://www.synapse.org/Syna
 Analysis notebook generation in progress and will be uploaded to [https://github.com/cumc/fungen-xqtl-analysis/tree/main/analysis/Zhang_BU/PCC_AC](https://github.com/cumc/fungen-xqtl-analysis/tree/main/analysis/Zhang_BU/PCC_AC). Steps will be similar to what is found in [https://github.com/cumc/fungen-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC](https://github.com/cumc/fungen-xqtl-analysis/tree/main/analysis/Zhang_BU/ROSMAP_DLPFC).
 
 Wang lab: 
-- [TensorQTL.ipynb](https://github.com/cumc/xqtl-protocol/blob/main/code/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
+- [TensorQTL.ipynb](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/association_scan/TensorQTL/TensorQTL.ipynb) provides the pipeline to generate TensorQTL cis association results for all QTLs. 
 - [ROSMAP_CUIMC1_bulk_eQTL](https://github.com/cumc/xqtl-analysis/blob/main/analysis/Wang_Columbia/cis_association/ROSMAP_DeJager_bulk_eQTL/command_generator.ipynb)provides information about the input files for AC/DLPFC/PCC TensorQTL cis association in the base_params variable in [generate_command_1].

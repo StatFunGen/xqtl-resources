@@ -50,10 +50,10 @@ cohorts:
 
 # AD GWAS entries on the home page, by page file name under content/xqtl-data/gwas
 gwas:
-  - {page: Bellenguez_AD, name: Bellenguez et al. 2022, desc: "2022 summary statistics and 2026 main, no-biobank and no-proxy analyses"}
-  - {page: Wightman_AD, name: Wightman et al. 2021, desc: Summary statistics}
-  - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: Summary statistics}
-  - {page: Jansen_AD, name: Jansen et al. 2019, desc: Summary statistics}
+  - {page: Bellenguez_AD, name: Bellenguez et al. 2022, desc: "7 datasets: 2022 full, EADB, EADI and GRACE, and 2026 main, no-biobank and no-proxy"}
+  - {page: Wightman_AD, name: Wightman et al. 2021, desc: "3 datasets: full, without 23andMe, and without UK Biobank and 23andMe"}
+  - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: "1 dataset: stage 1"}
+  - {page: Jansen_AD, name: Jansen et al. 2019, desc: "1 dataset"}
   - {page: ADGC_GWAS_imputation_protocol, name: ADGC imputation protocol, desc: Adapted from the ADGC GWAS QC protocol}
 
 # Release status badges
@@ -80,10 +80,11 @@ ng00184:
 
 # Home page: where the data are hosted
 repos:
-  - {host: Synapse, name: Variant and gene summaries, id: syn69865684, url: "https://www.synapse.org/Synapse:syn69865684"}
-  - {host: Synapse, name: xQTL models, id: syn69670588, url: "https://www.synapse.org/Synapse:syn69670588"}
-  - {host: Synapse, name: Raw QTL data, id: syn69670632, url: "https://www.synapse.org/Synapse:syn69670632"}
-  - {host: Synapse, name: Reference files, id: syn69670634, url: "https://www.synapse.org/Synapse:syn69670634"}
+  - {host: AD Knowledge Portal, name: Variant and gene summaries, id: syn69865684, url: "https://www.synapse.org/Synapse:syn69865684"}
+  - {host: AD Knowledge Portal, name: xQTL and AD GWAS models, id: syn69670588, url: "https://www.synapse.org/Synapse:syn69670588"}
+  - {host: AD Knowledge Portal, name: Raw QTL data, id: syn69670632, url: "https://www.synapse.org/Synapse:syn69670632"}
+  - {host: AD Knowledge Portal, name: Reference files, id: syn69670634, url: "https://www.synapse.org/Synapse:syn69670634"}
+  - {host: AD Knowledge Portal, name: scEEMS scores, id: syn77875113, url: "https://www.synapse.org/Synapse:syn77875113"}
   - {host: NIAGADS DSS · open, name: xQTL summary statistics and fine-mapping, id: NG00184.v1, url: "https://dss.niagads.org/datasets/ng00184/"}
   - {host: NIAGADS, name: xQTL Atlas · query and genome browser, id: xqtl.niagads.org, url: "https://xqtl.niagads.org/"}
 
@@ -107,7 +108,6 @@ acquisition:
 # Lead analyst contact emails, shown as email links on dataset pages.
 # `name` must match the name in a page's lead_analysts list. Names without an email here show as plain text.
 analysts:
-  - {name: Xuanhe Chen, email: xuanhechenxhc@163.com}
   - {name: Zining Qi, email: zq2209@cumc.columbia.edu}
   - {name: Travyse Edwards, email: travyse.edwards@icahn.mssm.edu}
   - {name: Minghui Wang, email: minghui.wang@mssm.edu}
@@ -120,7 +120,20 @@ analysts:
   - {name: Anjing Liu, email: al4225@cumc.columbia.edu}
   - {name: Hao Sun, email: hao.sun@icahn.mssm.edu}
   - {name: Chunming Liu, email: chunmil@g.clemson.edu}
-  - {name: Rui Dong, email: rui.dong.dr@gmail.com}
   - {name: Shrishtee Kandoi, email: skandoi@bu.edu}
   - {name: Jiajun Tao, email: jt3386@cumc.columbia.edu}
-  - {name: Masashi Fujita, email: mssfjt@gmail.com}
+
+# GitHub repositories that are private to the lab. Links to them get a "lab access only" label,
+# since readers outside the lab see "not found". Match is on the start of the link, case-insensitive.
+private_repos:
+  - github.com/cumc/xqtl-analysis
+  - github.com/cumc/fungen-xqtl-analysis
+  - github.com/cumc/xqtl-data
+  - github.com/cumc/brain-xqtl-analysis
+  - github.com/StatFunGen/xqtl-alzheimer-genes
+  - github.com/StatFunGen/xqtl-paper
+  - github.com/rl3328/xqtl-analysis
+  - github.com/Travyse/brain-xqtl-analysis
+  - github.com/floutt/brain-xqtl-analysis
+  - github.com/gaow/leafcutter2-paper
+  - github.com/statgenetics/UKBB_GWAS_dev

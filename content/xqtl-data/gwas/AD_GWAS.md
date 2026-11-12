@@ -2,7 +2,7 @@
 type: gwas
 short_title: AD GWAS overview
 status: staged
-synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69696846]
+synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69865805]
 lead_analysts: []
 last_verified:
 ---
@@ -15,13 +15,14 @@ The FunGen-xQTL flagship study uses summary statistics from large Alzheimer's di
 
 ## Datasets
 
-The study used eleven datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically confirmed late-onset AD, proxy-based AD cases, and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the eight.
+The study used twelve datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically confirmed late-onset AD, proxy-based AD cases, and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the twelve.
 
 | Dataset | Study | Population | N cases | N controls | Phenotype definition |
 |---|---|---|---|---|---|
 | `AD_Bellenguez_2022` | [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) *Nat Genet* | European | 111,326 | 677,663 | Clinically confirmed late-onset AD. Primary GWAS, used throughout |
 | `AD_Bellenguez_EADB_2022` | Bellenguez et al. 2022, EADB subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_EADI_2022` | Bellenguez et al. 2022, EADI subset | European | n/a | n/a | n/a |
+| `AD_Bellenguez_GRACE_2022` | Bellenguez et al. 2022, GRACE cohort | European | n/a | n/a | n/a |
 | `AD_Bellenguez_main_2026` | Bellenguez et al. 2026, updated meta-analysis, main analysis | European | n/a | n/a | n/a |
 | `AD_Bellenguez_noproxy_2026` | Bellenguez et al. 2026, updated meta-analysis, without proxy cases | European | n/a | n/a | n/a |
 | `AD_Bellenguez_nobiobank_2026` | Bellenguez et al. 2026, updated meta-analysis, without biobank cohorts | European | n/a | n/a | n/a |
@@ -31,7 +32,7 @@ The study used eleven datasets from four AD meta-analyses: Bellenguez, Wightman,
 | `AD_Kunkle_Stage1_2019` | [Kunkle et al. 2019](https://doi.org/10.1038/s41588-019-0358-2) *Nat Genet* | European | 21,982 | 41,944 | Clinically confirmed late-onset AD (ADGC/IGAP) |
 | `AD_Jansen_2021` | [Jansen et al. 2019](https://doi.org/10.1038/s41588-018-0311-9) *Nat Genet* | European | n/a | n/a | AD and proxy-AD (UK Biobank), meta-analysis with IGAP |
 
-Fine-mapping models also cover `AD_Bellenguez_GRACE_2022`, the GRACE cohort of the Bellenguez 2022 meta-analysis.
+`AD_Bellenguez_GRACE_2022` has fine-mapping models only; the fine-mapping top-loci folder has the other eleven datasets.
 
 ## Quality control
 
@@ -51,7 +52,7 @@ Summary statistics passed a QC procedure built around [SLALOM](https://www.medrx
 | LDSC reference data | LD scores, munged GWAS, sLDSC annotations | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | LDSC munged GWAS | Pre-munged AD GWAS summary statistics | [syn69670656](https://www.synapse.org/Synapse:syn69670656) |
 | AD GWAS fine-mapping models | Fine-mapping outputs per GWAS dataset | [syn69670625](https://www.synapse.org/Synapse:syn69670625) |
-| AD fine-mapping results | Fine-mapped loci and credible sets | [syn69696846](https://www.synapse.org/Synapse:syn69696846) |
+| AD fine-mapping results | Fine-mapped loci and credible sets | [syn69865805](https://www.synapse.org/Synapse:syn69865805) |
 
 All resources are in the FunGen-xQTL staging folder, [syn68872650](https://www.synapse.org/Synapse:syn68872650).
 

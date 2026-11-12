@@ -25,6 +25,7 @@
     </div>
     {{ with .Params.lead }}<div class="wide__intro">{{ $.RenderString . }}</div>{{ end }}
   </header>
+  <p class="cov-hint">Swipe the grid sideways to see every method.</p>
   <div class="wide__body" role="region" aria-label="Analysis coverage grid, scrolls sideways" tabindex="0">
     <table class="cov" data-cov>
       <thead><tr><th scope="col"><span class="sr-only">Dataset</span></th>{{ range $x.methods }}<th scope="col">{{ . }}</th>{{ end }}<th scope="col" class="r">Done</th></tr></thead>

@@ -1,4 +1,4 @@
-# FGMB Atlas: Multi-context RWAS Prediction Models
+# FGMB Atlas of multi-context RWAS prediction models
 
 ## About FGMB Atlas
 
@@ -16,24 +16,24 @@ Use the [TWAS weights by dataset](#twas-weights-by-dataset) table below for one 
 ### FGMB Atlas
 The **`FGMB Atlas`** [resource site](https://morgantelab.github.io/FGMB-atlas-paper/) organizes the atlas overview, modeling strategy, workflow examples, figure notebooks, and resource table for the AD Knowledge Portal accessions listed below.
 
-- **[FGMB Atlas Overview](https://morgantelab.github.io/FGMB-atlas-paper/overview/index.html)** - Overview of the FGMB Atlas resource, study design, and major analysis components.
-- **[FGMB Atlas Modeling Strategy](https://morgantelab.github.io/FGMB-atlas-paper/modeling_strategy/index.html)** - Modeling design and strategy for the FGMB Atlas RWAS prediction resources.
-- **[FGMB Atlas Workflow Examples](https://morgantelab.github.io/FGMB-atlas-paper/workflow_example/index.html)** - Example workflows for building expression predictors, running RWAS association analyses, and multi-group causal TWAS fine-mapping.
+- **[FGMB Atlas Overview](https://morgantelab.github.io/FGMB-atlas-paper/overview/index.html)**: Overview of the FGMB Atlas resource, study design, and major analysis components.
+- **[FGMB Atlas Modeling Strategy](https://morgantelab.github.io/FGMB-atlas-paper/modeling_strategy/index.html)**: Modeling design and strategy for the FGMB Atlas RWAS prediction resources.
+- **[FGMB Atlas Workflow Examples](https://morgantelab.github.io/FGMB-atlas-paper/workflow_example/index.html)**: Example workflows for building expression predictors, running RWAS association analyses, and multi-group causal TWAS fine-mapping.
 
 
 ### pecotmr
 **`pecotmr`** [software](https://github.com/StatFunGen/pecotmr) vignettes for implementation details for weight construction and TWAS Z-score inference:
 
-- **[Learning TWAS Weights from Individual-Level Data and Summary Statistics](https://statfungen.github.io/pecotmr/articles/twas-weights.html)** - Build per-variant prediction weights from individual-level genotype and molecular phenotype data, QTL summary statistics, or multi-context molecular data.
-- **[Inferring TWAS Z-Scores from GWAS Summary Statistics](https://statfungen.github.io/pecotmr/articles/twas-zscore.html)** - Apply learned weights to GWAS summary statistics to compute per-gene TWAS/RWAS Z-scores, including harmonization, LD sketch use, and optional missing-variant imputation.
+- **[Learning TWAS Weights from Individual-Level Data and Summary Statistics](https://statfungen.github.io/pecotmr/articles/twas-weights.html)**: Build per-variant prediction weights from individual-level genotype and molecular phenotype data, QTL summary statistics, or multi-context molecular data.
+- **[Inferring TWAS Z-Scores from GWAS Summary Statistics](https://statfungen.github.io/pecotmr/articles/twas-zscore.html)**: Apply learned weights to GWAS summary statistics to compute per-gene TWAS/RWAS Z-scores, including harmonization, LD sketch use, and optional missing-variant imputation.
 
 ### xQTL Analysis Protocol
 **`xQTL Analysis Protocol`** analysis [pipeline protocol](https://github.com/StatFunGen/xqtl-protocol) documentation for model training, association-testing, and fine-mapping
 TWAS/RWAS-style weights is also available:
 
-- **[Univariate Fine-Mapping and TWAS with SuSiE](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/univariate_fine_mapping_twas_vignette.html)** - Protocol workflow for univariate fine-mapping and TWAS weight generation.
-- **[Multivariate Fine-Mapping for multiple genes](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)** - Protocol workflow for multivariate, multi-gene fine-mapping and TWAS weights.
-- **[TWAS, cTWAS and MR](https://statfungen.github.io/xqtl-protocol/code/pecotmr_integration/twas_ctwas.html)** - Protocol workflow for TWAS analysis and cTWAS fine-mapping.
+- **[Univariate fine-mapping and TWAS with SuSiE](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/univariate_fine_mapping_twas_vignette.html)**: Protocol workflow for univariate fine-mapping and TWAS weight generation.
+- **[Multivariate fine-mapping for multiple genes](https://statfungen.github.io/xqtl-protocol/code/mnm_analysis/multivariate_multigene_fine_mapping_vignette.html)**: Protocol workflow for multivariate, multi-gene fine-mapping and TWAS weights.
+- **[TWAS, cTWAS and MR](https://statfungen.github.io/xqtl-protocol/code/pecotmr_integration/twas_ctwas.html)**: Protocol workflow for TWAS analysis and cTWAS fine-mapping.
 
 
 ## Data Access

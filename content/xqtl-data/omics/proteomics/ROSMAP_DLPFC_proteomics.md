@@ -90,7 +90,7 @@ Annotation:
 
 It contains sample ID information for project ID of each sample. 
 
-Other reference files created via [Reference_data_notebook](https://github.com/cumc/xqtl-pipeline/blob/main/code/data_preprocessing/reference_data.ipynb): 
+Other reference files created via [Reference_data_notebook](https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/reference_data/reference_data_preparation.ipynb): 
 
 
 Age at death, sex and pmi covariates will be extract from ROSMAP raw data: 
