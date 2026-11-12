@@ -933,3 +933,13 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .dsfiles__list > li > .fold__id { align-self: flex-start; }
 @media (max-width: 640px) { .summary__label { width: 100%; } .summary__more { margin-left: 0; } .page--dataset .summary { padding: 4px 14px 14px; } }
 .dsfiles__joint { align-self: flex-start; font-size: 12.5px; color: var(--stf); background: var(--stb); border-radius: 4px; padding: 1px 7px; }
+
+/* Consortium and lab logos */
+.partners { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 14px 0 2px; }
+.partners__logo { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 14px; background: #fff; border: 1px solid var(--ln); border-radius: var(--r2); }
+.partners__logo img { display: block; width: auto; }
+.partners__t { font-size: 13px; color: var(--ink2); }
+.sitefoot__partners { max-width: 1040px; margin: 0 auto; padding: 22px 32px 0; box-sizing: border-box; }
+.sitefoot__partners .partners__logo { border-color: transparent; }
+.sitefoot__partners .partners__t { color: var(--band-ink2); }
+@media (max-width: 900px) { .sitefoot__partners { padding: 18px 16px 0; } }
