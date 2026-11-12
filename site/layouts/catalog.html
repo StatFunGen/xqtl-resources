@@ -16,33 +16,35 @@
     </div>
   </header>
 
-  <section class="card matrix" aria-labelledby="matrix-title">
+  <section class="card matrix qmods" aria-labelledby="matrix-title">
     <div class="matrix__head">
-      <h2 id="matrix-title">QTL results by cohort and modality</h2>
-      <span class="muted">Number of QTL result pages. Select a cell, a cohort or a modality to filter the table.</span>
+      <h2 id="matrix-title">QTL results by cohort</h2>
+      <span class="muted">Each chip is a molecular trait with QTL results in that cohort; the number is how many result pages. Select a chip, a cohort or a trait to filter the table below.</span>
     </div>
-    <div class="matrix__scroll">
-    <table class="matrix__table">
-      <thead><tr><th></th>
-        {{- range $x.modalities }}
-        <th><button type="button" class="matrix__col" data-matrix-col="{{ .family }}" style="--c:oklch(0.6 0.13 {{ .hue }})"><span class="matrix__bar" aria-hidden="true"></span>{{ .id }}</button></th>
-        {{- end }}
-      </tr></thead>
-      <tbody>
+    <div class="qmods__key" role="group" aria-label="Filter by molecular trait">
+      {{- range $m := $x.modalities }}
+      {{- $nm := len (where $qtl "family" $m.family) }}
+      <button type="button" class="qchip qchip--key" data-matrix-col="{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" title="{{ $m.what }}"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}<span class="qchip__n">{{ $nm }}</span></button>
+      {{- end }}
+    </div>
+    <ul class="qmods__rows">
       {{- range $c := $x.cohorts }}
-        {{- $cr := where $qtl "cohort" $c.name -}}
-        <tr data-matrix-row="{{ $c.name }}">
-          <th scope="row"><button type="button" class="matrix__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button></th>
+      {{- $cr := where $qtl "cohort" $c.name -}}
+      <li class="qmods__row" data-matrix-row="{{ $c.name }}">
+        <button type="button" class="qmods__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="qmods__total">{{ len $cr }} result {{ if eq (len $cr) 1 }}page{{ else }}pages{{ end }}</span></button>
+        <span class="qmods__chips">
           {{- range $m := $x.modalities }}
           {{- $n := len (where $cr "family" $m.family) }}
-          <td>{{ if $n }}<button type="button" class="matrix__cell" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} datasets" aria-pressed="false">{{ $n }}</button>{{ else }}<span class="matrix__empty" aria-hidden="true"></span>{{ end }}</td>
+          {{- if $n }}
+          <button type="button" class="qchip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}{{ if gt $n 1 }}<span class="qchip__n">{{ $n }}</span>{{ end }}</button>
           {{- end }}
-        </tr>
+          {{- end }}
+        </span>
+      </li>
       {{- end }}
-      </tbody>
-    </table>
-    </div>
+    </ul>
   </section>
+  <div class="glance">
 
   {{- /* Analysis progress: for each xQTL protocol method, how many QTL result pages record it as done.
     Same source as the coverage grid (the `methods:` map in each page header). */ -}}
@@ -92,51 +94,36 @@
       {{- range $multi }}
       <li class="progress__row contexts__row" title="{{ .short }} {{ .label }}: {{ .context }}">
         <a class="progress__label" href="{{ .href }}">{{ .short }}{{ if not (strings.Contains .short .label) }} <span class="contexts__mod">{{ .label }}</span>{{ end }}</a>
-        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .k 100.0) $max) }}%;background:{{ .color | safeCSS }}"></span></span>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .k 100.0) $max) }}%"></span></span>
         <span class="progress__val"><strong>{{ .k }}</strong> {{ if findRE `cell types` .context }}cell types{{ else }}regions{{ end }}</span>
       </li>
       {{- end }}
     </ul>
   </section>
 
-  {{- /* QTL datasets by cohort, as a donut. The three largest cohorts get their own slice and the
-    rest are grouped as "Other". Slices are drawn with a conic gradient, with a thin gap between them. */ -}}
+  {{- /* QTL datasets by cohort, as ranked bars on one scale (every cohort, largest first). */ -}}
   {{- $groups := slice -}}
   {{- range uniq (apply $qds "index" "." "cohort") -}}
     {{- $groups = $groups | append (dict "name" . "n" (len (where $qds "cohort" .))) -}}
   {{- end -}}
   {{- $groups = sort $groups "n" "desc" -}}
-  {{- if gt (len $groups) 4 -}}
-    {{- $rest := after 3 $groups }}{{ $on := 0 }}{{ $onames := slice -}}
-    {{- range $rest }}{{ $on = add $on .n }}{{ $onames = $onames | append .name }}{{ end -}}
-    {{- $groups = (first 3 $groups) | append (dict "name" "Other" "n" $on "detail" (delimit $onames ", ")) -}}
-  {{- end -}}
-  {{- $stops := slice }}{{ $at := 0.0 -}}
-  {{- range $i, $g := $groups -}}
-    {{- $end := add $at (div (mul $g.n 360.0) $total) -}}
-    {{- $stops = $stops | append (printf "var(--pie%d) %.2fdeg %.2fdeg, var(--sf) %.2fdeg %.2fdeg" (add $i 1) $at (sub $end 1.5) (sub $end 1.5) $end) -}}
-    {{- $at = $end -}}
-  {{- end -}}
+  {{- $gmax := 1 }}{{ range $groups }}{{ if gt .n $gmax }}{{ $gmax = .n }}{{ end }}{{ end -}}
   <section class="card progress cohorts" aria-labelledby="cohorts-title">
     <div class="matrix__head">
       <h2 id="cohorts-title">QTL datasets by cohort</h2>
-      <span class="muted">Share of the {{ $total }} QTL datasets that come from each cohort.</span>
+      <span class="muted">How many of the {{ $total }} QTL datasets come from each cohort.</span>
     </div>
-    <div class="cohorts__body">
-      <div class="cohorts__pie" role="img" aria-label="{{ range $i, $g := $groups }}{{ if $i }}, {{ end }}{{ $g.name }} {{ $g.n }}{{ end }}" style="background:conic-gradient({{ delimit $stops ", " | safeCSS }})">
-        <span class="cohorts__total"><strong>{{ $total }}</strong> datasets</span>
-      </div>
-      <ul class="cohorts__legend">
-        {{- range $i, $g := $groups }}
-        <li title="{{ $g.name }}: {{ $g.n }} of {{ $total }}{{ with $g.detail }} ({{ . }}){{ end }}">
-          <span class="cohorts__key" style="background:var(--pie{{ add $i 1 }})" aria-hidden="true"></span>
-          <span class="cohorts__name">{{ $g.name }}{{ with $g.detail }} <span class="muted">{{ . }}</span>{{ end }}</span>
-          <span class="progress__val"><strong>{{ $g.n }}</strong> <span class="muted">{{ printf "%.0f" (div (mul $g.n 100.0) $total) }}%</span></span>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
+    <ul class="progress__list">
+      {{- range $groups }}
+      <li class="progress__row" title="{{ .name }}: {{ .n }} of {{ $total }}">
+        <span class="progress__label">{{ .name }}</span>
+        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .n 100.0) $gmax) }}%"></span></span>
+        <span class="progress__val"><strong>{{ .n }}</strong> <span class="muted">{{ printf "%.0f" (div (mul .n 100.0) $total) }}%</span></span>
+      </li>
+      {{- end }}
+    </ul>
   </section>
+  </div>
 
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">

@@ -8,7 +8,7 @@ sample_size: 255
 access: controlled
 status: staged
 release:
-synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]
+synapse_ids: [syn70095505, syn70095506, syn75134502, syn70094765, syn74987560, syn74986600, syn69865816]
 lead_analysts: [Travyse Edwards]
 last_verified:
 methods:
@@ -69,9 +69,14 @@ The QTL analysis of this dataset is documented in [MiGA brain expression QTL](..
 
 The flagship paper analyses on the AD Knowledge Portal are listed below.
 
-- Fine-mapping (SuSiE-RSS), [syn69670592](https://www.synapse.org/Synapse:syn69670592)
-- TWAS weight models, [syn69670600](https://www.synapse.org/Synapse:syn69670600)
-- Quantile TWAS (qTWAS) models, not available yet
-- Multi-context colocalization (ColocBoost), [syn69670597](https://www.synapse.org/Synapse:syn69670597)
-- AD GWAS and xQTL colocalization results, [syn69865816](https://www.synapse.org/Synapse:syn69865816)
-- AD GWAS and xQTL colocalization models, [syn69670630](https://www.synapse.org/Synapse:syn69670630)
+| Result | MiGA folder | Contents | All datasets |
+|---|---|---|---|
+| Fine-mapping export | [syn70095506](https://www.synapse.org/Synapse:syn70095506) | cis-QTL results and summary statistics exported for each gene | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| Fine-mapping models (SuSiE) | [syn75134502](https://www.synapse.org/Synapse:syn75134502) | `MiGA_eQTL.*.univariate_bvsr.rds` | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
+| TWAS weight models | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_bvsr.rds` | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
+| Quantile TWAS (qTWAS) models | not available yet | | |
+| Multi-context colocalization models (ColocBoost) | [syn74987560](https://www.synapse.org/Synapse:syn74987560) | `MiGA.*.cb_xqtl.rds` | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
+| AD GWAS and xQTL colocalization models | [syn74986600](https://www.synapse.org/Synapse:syn74986600) | `MiGA.*.cb_xqtl_AD_*.rds` | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |
+| AD GWAS and xQTL colocalization results | | | [syn69865816](https://www.synapse.org/Synapse:syn69865816) |
+
+The MiGA fine-mapping export and fine-mapping models sit together under [syn70095505](https://www.synapse.org/Synapse:syn70095505).

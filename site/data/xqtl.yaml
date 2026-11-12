@@ -92,7 +92,7 @@ repos:
 # methods that apply to it in a `methods:` map in its metadata header.
 methods: [cis-QTL, SuSiE, fSuSiE, ColocBoost, TWAS, cTWAS, MR, LF2, scEEMS]
 method_status:
-  done: {label: Done, glyph: ""}
+  done: {label: Done, glyph: "✓"}
   running: {label: Running, glyph: ""}
   not_run: {label: Not yet run, glyph: ""}
   awaiting: {label: Awaiting data, glyph: "·"}
