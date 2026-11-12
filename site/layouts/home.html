@@ -1,6 +1,7 @@
 {{ define "main" }}
-{{- /* Home page. Compact header, headline numbers, a dataset search that opens the catalog,
-  browse lists by cohort, modality and AD GWAS, and the data access summary. Counts in the
+{{- /* Home page. Hero with the logo and two main actions, an optional announcement bar (data/xqtl.yaml home.announce),
+  headline numbers, a dataset search that opens the catalog, "Start here" cards, browse chips by cohort, modality and
+  AD GWAS, the data access summary, and a dark footer. Counts in the
   browse lists are computed from the dataset pages at build time. The Markdown in
   content/README.md is shown in full under "About FunGen-AD". */ -}}
 {{- $x := hugo.Data.xqtl -}}
@@ -10,80 +11,82 @@
 {{- $howto := site.GetPage "/how_to_get_data" -}}
 {{- $cat := "" }}{{ with $catalog }}{{ $cat = .RelPermalink }}{{ end -}}
 <div class="home">
-  <header class="home__head">
-    <p class="home__org">ADSP Functional Genomics Consortium (FunGen-AD)</p>
-    <h1 class="page__title">FunGen-xQTL resource catalog</h1>
-    <p class="home__lead">FunGen-xQTL maps genetic variants associated with molecular traits (molecular QTL, or xQTL) across eight modalities, from chromatin and RNA to protein and metabolites, in brain and immune cells, and uses them to help interpret Alzheimer’s disease (AD) GWAS loci. This catalog describes each dataset and where to get it.<span class="home__lead-more"> To look up associations by variant, gene or region, use the <a href="{{ site.Params.atlasURL }}" rel="noopener">NIAGADS xQTL Atlas</a>.</span></p>
+  <header class="hero">
+    {{ partial "ui/logo.html" (dict "w" 168) }}
+    <div class="hero__text">
+      <p class="hero__org">ADSP Functional Genomics Consortium (FunGen-AD)</p>
+      <h1 class="hero__title">FunGen<span class="brand__x">-xQTL</span></h1>
+      <p class="hero__lead">Molecular QTL (xQTL) across eight modalities, from chromatin and RNA to protein and metabolites, in brain and immune cells, used to interpret Alzheimer’s disease (AD) GWAS loci. This catalog describes each dataset and where to get it.</p>
+      <div class="hero__btns">
+        <a class="pill pill--solid" href="{{ $cat }}">Browse the data catalog</a>
+        <a class="pill" href="{{ site.Params.atlasURL }}" rel="noopener">Look up a gene or variant ↗</a>
+      </div>
+    </div>
   </header>
+  {{- with $x.home.announce }}{{ with .text }}
+  <p class="announce">{{ with $x.home.announce.url }}<a href="{{ . }}" rel="noopener">{{ $x.home.announce.text }}</a>{{ else }}<span>{{ $x.home.announce.text }}</span>{{ end }}{{ with $x.home.announce.tag }} <span class="announce__tag">{{ . }}</span>{{ end }}</p>
+  {{- end }}{{ end }}
 
-  <section class="home__search" aria-labelledby="find-title">
-    <h2 id="find-title" class="h2">Find a dataset</h2>
-    <form class="field field--lg" action="{{ $cat }}" method="get" role="search">
-      <span class="search__icon" aria-hidden="true"></span>
-      <label class="sr-only" for="home-q">Search datasets</label>
-      <input id="home-q" type="search" name="q" placeholder="Name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
-      <button type="submit" class="btn btn--primary">Search datasets</button>
-    </form>
-    <p class="note">Opens the <a href="{{ $cat }}">data catalog</a>, where results can be narrowed by cohort, modality, tissue, status and access.</p>
-    <p class="note">Looking for fitted models? See the <a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a>, one folder per dataset. The AD loci results are summarized in the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> (226 loci).</p>
-  </section>
-  <nav class="tasks" aria-label="Common tasks">
-    <a class="task" href="{{ $cat }}"><span class="task__t">Browse the catalog</span><span class="task__d">Every dataset, filtered by cohort, modality, tissue and access</span></a>
-    <a class="task" href="{{ with site.GetPage "/coverage" }}{{ .RelPermalink }}{{ end }}"><span class="task__t">Check analysis coverage</span><span class="task__d">Which methods have results for each QTL dataset</span></a>
-    <a class="task" href="{{ with site.GetPage "/how_to_get_data" }}{{ .RelPermalink }}{{ end }}"><span class="task__t">Get access to the data</span><span class="task__d">Synapse, NIAGADS and controlled-access steps</span></a>
-    <a class="task" href="{{ site.Params.atlasURL }}" rel="noopener"><span class="task__t">Look up a variant or gene ↗</span><span class="task__d">Associations in the NIAGADS xQTL Atlas</span></a>
-  </nav>
+  <div class="home__body">
   <section class="stats" aria-label="Headline numbers">
     <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
     <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
     <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
+    <div class="stat"><span class="stat__n">{{ $x.home.loci }}</span><span class="stat__l">AD loci summarized</span></div>
   </section>
-  <p class="note stats__note">{{ $x.home.participants_note }} These counts are the ones reported for the FunGen-xQTL study. The catalog has {{ len $rows }} pages, which also cover AD GWAS and reference data.</p>
+  <p class="note stats__note">{{ $x.home.participants_note }} The catalog has {{ len $rows }} pages, which also cover AD GWAS and reference data. The AD loci are summarized in the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a>.</p>
 
+  <form class="find" action="{{ $cat }}" method="get" role="search">
+    <span class="search__icon" aria-hidden="true"></span>
+    <label class="sr-only" for="home-q">Search datasets</label>
+    <input id="home-q" type="search" name="q" placeholder="Find a dataset: name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
+    <button type="submit" class="btn btn--primary">Search</button>
+  </form>
+
+  <section aria-labelledby="start-title">
+    <h2 id="start-title" class="h2">Start here</h2>
+    <nav class="cards" aria-label="Start here">
+      <a class="card" href="{{ $cat }}"><span class="card__t">Data catalog <span aria-hidden="true">→</span></span><span class="card__d">Every dataset, filtered by cohort, modality, tissue and access.</span></a>
+      <a class="card" href="{{ with site.GetPage "/coverage" }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Analysis coverage <span aria-hidden="true">→</span></span><span class="card__d">Which methods have results for each QTL dataset.</span></a>
+      <a class="card" href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}"><span class="card__t">TWAS weights <span aria-hidden="true">→</span></span><span class="card__d">Fitted models, one folder per dataset.</span></a>
+      <a class="card" href="{{ site.Params.protocolURL }}/"><span class="card__t">Protocol <span aria-hidden="true">→</span></span><span class="card__d">The analysis pipelines, and a builder that writes the commands for you.</span></a>
+      <a class="card" href="{{ site.Params.explorerURL }}"><span class="card__t">AD Loci Explorer <span aria-hidden="true">→</span></span><span class="card__d">{{ $x.home.loci }} AD loci with the xQTL evidence behind each gene.</span></a>
+      <a class="card" href="{{ with $howto }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Get the data <span aria-hidden="true">→</span></span><span class="card__d">Synapse, NIAGADS and controlled-access steps.</span></a>
+    </nav>
+  </section>
 
   <section class="browse" aria-label="Browse the catalog">
-    <div class="browse__col">
+    <div>
       <h2 class="h3">By cohort</h2>
-      <ul class="blist">
+      <ul class="chips">
       {{- range $x.cohorts }}
         {{- $n := len (where $rows "cohort" .name) }}
-        <li>
-          {{- if $n }}<a href="{{ $cat }}?cohort={{ .name }}">{{ .name }}</a>{{ else }}<span>{{ .name }}</span>{{ end }}
-          <span class="blist__n">{{ if $n }}{{ $n }}{{ end }}</span>
-          <span class="blist__d">{{ .desc }}{{ with .page }}{{ with site.GetPage (printf "/xqtl-data/study_info/%s" .) }} · <a href="{{ .RelPermalink }}">cohort page</a>{{ end }}{{ end }}{{ if not .page }} · <a href="{{ .url }}" rel="noopener">external site ↗</a>{{ end }}</span>
-        </li>
+        <li>{{ if $n }}<a class="chip" href="{{ $cat }}?cohort={{ .name }}" title="{{ .desc }}">{{ .name }} <span class="chip__n">{{ $n }}</span></a>{{ else }}<a class="chip" href="{{ .url }}" rel="noopener" title="{{ .desc }}">{{ .name }} ↗</a>{{ end }}</li>
       {{- end }}
       </ul>
     </div>
-    <div class="browse__col">
+    <div>
       <h2 class="h3">By QTL modality</h2>
-      <ul class="blist">
+      <ul class="chips">
       {{- range $x.modalities }}
         {{- $n := len (where $qtl "family" .family) }}
-        <li>
-          <a href="{{ $cat }}?kind=qtl&amp;family={{ .family }}">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }}</a>
-          <span class="blist__n">{{ $n }}</span>
-          <span class="blist__d">{{ .what }}{{ with site.GetPage (printf "/xqtl-data/qtl/%s" .id) }} · <a href="{{ .RelPermalink }}">overview</a>{{ end }}</span>
-        </li>
+        <li><a class="chip" href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }} <span class="chip__n">{{ $n }}</span></a></li>
       {{- end }}
       </ul>
     </div>
-    <div class="browse__col">
+    <div>
       <h2 class="h3">AD GWAS studies</h2>
-      <ul class="blist">
+      <ul class="chips">
       {{- range $x.gwas }}
         {{- $g := . -}}
         {{- with site.GetPage (printf "/xqtl-data/gwas/%s" .page) }}
-        <li><a href="{{ .RelPermalink }}">{{ $g.name }}</a><span class="blist__d">{{ $g.desc }}</span></li>
+        <li><a class="chip" href="{{ .RelPermalink }}" title="{{ $g.desc }}">{{ $g.name }}</a></li>
         {{- end }}
       {{- end }}
       </ul>
-      {{- with site.GetPage "/xqtl-data/gwas/AD_GWAS" }}
-      <p class="note">The study uses twelve AD GWAS datasets from the four studies above. The <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all twelve.</p>
-      {{- end }}
     </div>
   </section>
-  <p class="note browse__note">Counts are catalog pages. Cohort counts include QTL results and the omics data behind them; modality counts are QTL result pages.</p>
+  <p class="note browse__note">Counts are catalog pages. Cohort counts include QTL results and the omics data behind them; modality counts are QTL result pages.{{ with site.GetPage "/xqtl-data/gwas/AD_GWAS" }} The study uses twelve AD GWAS datasets from the four studies; the <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all twelve.{{ end }}</p>
 
   <section class="home__access" aria-labelledby="access-title">
     <div class="h2row">
@@ -109,9 +112,14 @@
   </section>
   {{- end }}
 
-  <footer class="page__foot">
-    <span>Maintained by the FunGen-AD Analysis Working Group. Reflects data generated through {{ $x.home.updated }}.</span>
-    <a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/content/README.md">Edit this page on GitHub</a>
+  </div>
+  <footer class="sitefoot">
+    <div class="sitefoot__in">
+      <div class="sitefoot__brand">{{ partial "ui/logo.html" (dict "w" 30) }}<span>FunGen<span class="brand__x">-xQTL</span></span></div>
+      <div><h2>Data</h2><a href="{{ $cat }}">Catalog</a><a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a><a href="{{ with $howto }}{{ .RelPermalink }}{{ end }}">Get the data</a></div>
+      <div><h2>Tools</h2><a href="{{ site.Params.protocolURL }}/">Protocol</a><a href="{{ site.Params.explorerURL }}">AD Loci Explorer</a><a href="{{ site.Params.atlasURL }}" rel="noopener">NIAGADS xQTL Atlas ↗</a></div>
+      <div><h2>About</h2><a href="https://fgc.niagads.org/" rel="noopener">FunGen-AD ↗</a><a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/content/README.md">Edit this page on GitHub</a><span>Maintained by the FunGen-AD Analysis Working Group. Data through {{ $x.home.updated }}.</span></div>
+    </div>
   </footer>
 </div>
 {{ end }}

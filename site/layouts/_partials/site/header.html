@@ -3,8 +3,8 @@
     <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
   </label>
   <a class="brand" href="{{ site.Home.RelPermalink }}">
-    {{ partial "ui/logo.html" . }}
-    <span class="brand__name">FunGen-xQTL <span class="brand__sub">Resources</span></span>
+    {{ partial "ui/logo.html" (dict "w" 30) }}
+    <span class="brand__name">FunGen<span class="brand__x">-xQTL</span> <span class="brand__sub">Resources</span></span>
   </a>
   <div class="search" role="search">
     <span class="search__icon" aria-hidden="true"></span>

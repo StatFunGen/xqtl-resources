@@ -790,3 +790,79 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .qmods__seg:only-child { border-radius: 4px; }
 .qmods__row.is-selected .qmods__bar, .qmods__row:hover .qmods__bar { filter: saturate(1.15); }
 @media (max-width: 640px) { .qmods__row { grid-template-columns: 1fr; gap: 6px; } .qmods__body { padding-top: 0; } }
+
+/* ---------- Home (landing) ----------
+   Full-width page: hero, announcement bar, then a centered column. The band colors are fixed
+   (navy in light, a deeper navy in dark) because --navy turns light in dark mode. */
+:root { --band: #19354a; --band-ink: #ffffff; --band-ink2: #c9d6e1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --band: #141c24; --band-ink: #eef3f7; --band-ink2: #a9b5bf; } }
+:root[data-theme="dark"] { --band: #141c24; --band-ink: #eef3f7; --band-ink2: #a9b5bf; }
+.brand__x { color: var(--teal); }
+.kind-home .home { padding: 0; gap: 0; max-width: none; }
+.hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 40px; align-items: center; max-width: 1040px; width: 100%; margin: 0 auto; padding: 56px 32px 44px; box-sizing: border-box; }
+.hero .logo-mark { width: 168px; height: auto; }
+.hero__text { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.hero__org { margin: 0; font: 600 14px var(--sans); color: var(--teal); }
+.hero__title { margin: 0; font: 700 clamp(40px, 6vw, 60px)/1.02 var(--sans); letter-spacing: -.02em; color: var(--navy); }
+.hero__lead { margin: 4px 0 8px; font-size: 18px; line-height: 1.55; color: var(--ink2); max-width: 640px; text-wrap: pretty; }
+.hero__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill { display: inline-flex; align-items: center; min-height: 42px; padding: 0 20px; border-radius: 999px; border: 1.5px solid var(--navy); color: var(--navy); font: 600 15px var(--sans); text-decoration: none; }
+.pill:hover { text-decoration: none; background: var(--sk); }
+.pill--solid { background: var(--pr); border-color: var(--pr); color: var(--on-pr); }
+.pill--solid:hover { background: var(--pr); filter: brightness(1.12); }
+.pill:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+.announce { margin: 0; background: var(--band); color: var(--band-ink); text-align: center; padding: 13px 16px; font: 600 15.5px/1.4 var(--sans); }
+.announce a { color: var(--band-ink); text-decoration: underline; text-underline-offset: 3px; }
+.announce__tag { display: inline-block; margin-left: 10px; padding: 2px 10px; border-radius: 999px; background: rgb(255 255 255 / .14); font-size: 13px; font-weight: 500; }
+.home__body { display: flex; flex-direction: column; gap: 22px; max-width: 1040px; width: 100%; margin: 0 auto; padding: 36px 32px 56px; box-sizing: border-box; }
+.home__body > section:not(.stats):not(.browse) { display: flex; flex-direction: column; gap: 12px; }
+.home__body .h2 { margin-top: 14px; }
+.kind-home .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kind-home .stat__n { font-size: 30px; font-weight: 700; }
+.kind-home .stats__note { margin-top: -12px; }
+.find { display: flex; align-items: center; gap: 8px; height: 50px; padding: 4px 4px 4px 14px; border: 1.5px solid var(--ln2); border-radius: var(--r2); background: var(--sf); }
+.find:focus-within { border-color: var(--ac); box-shadow: 0 0 0 3px var(--acs); }
+.find input { flex: 1; min-width: 0; height: 100%; border: 0; background: transparent; font: 16px var(--sans); color: var(--ink); outline: none; }
+.find .btn { height: 40px; padding: 0 20px; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card { display: flex; flex-direction: column; gap: 5px; padding: 16px 18px; border: 1px solid var(--ln); border-radius: var(--r2); background: var(--sf); color: var(--ink); text-decoration: none; box-shadow: 0 1px 2px rgb(25 53 74 / .05); }
+.card:hover { border-color: var(--ac); text-decoration: none; }
+.card:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+.card__t { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; color: var(--navy); }
+.card__t span { color: var(--teal); }
+.card__d { font-size: 14px; line-height: 1.45; color: var(--ink2); }
+.kind-home .browse { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 36px; margin-top: 14px; }
+.kind-home .browse > div { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.kind-home .browse__note { margin-top: -6px; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 13px; border: 1px solid var(--ln); border-radius: 999px; background: var(--sf); color: var(--ink); font-size: 14px; font-weight: 500; text-decoration: none; }
+.chip:hover { border-color: var(--ac); text-decoration: none; }
+.chip:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+.chip__n { font: 500 12.5px var(--mono); color: var(--ink2); }
+.kind-home .home__access, .kind-home .home__about { margin-top: 18px; }
+.sitefoot { background: var(--band); color: var(--band-ink2); }
+.sitefoot__in { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.4fr; gap: 28px; max-width: 1040px; margin: 0 auto; padding: 36px 32px 44px; box-sizing: border-box; font-size: 14px; }
+.sitefoot__in > div { display: flex; flex-direction: column; gap: 6px; }
+.sitefoot h2 { margin: 0 0 4px; font: 600 12.5px var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--band-ink); }
+.sitefoot a { color: var(--band-ink); }
+.sitefoot__brand { flex-direction: row !important; align-items: center; align-self: start; gap: 10px !important; font: 700 17px var(--sans); color: var(--band-ink); }
+.sitefoot__brand .brand__x { color: #8fd3cc; }
+.sitefoot .logo-mark { --mk-ink: #eef3f7; --mk-mute: #6f8494; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 18px; padding: 32px 16px 28px; }
+  .hero .logo-mark { width: 112px; }
+  .hero__lead { font-size: 16px; }
+  .hero__btns { justify-content: center; }
+  .home__body { padding: 24px 16px 40px; }
+  .kind-home .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kind-home .stat:nth-child(3) { border-left: 0; }
+  .kind-home .stat:nth-child(n+3) { border-top: 1px solid var(--ln); }
+  .cards, .kind-home .browse { grid-template-columns: minmax(0, 1fr); }
+  .find { height: auto; flex-wrap: wrap; padding: 6px; }
+  .find .search__icon { margin-left: 6px; }
+  .find input { flex: 1 1 calc(100% - 40px); height: 36px; }
+  .find .btn { flex: 1 1 100%; height: 42px; }
+  .sitefoot__in { grid-template-columns: 1fr 1fr; padding: 28px 16px 36px; }
+  .sitefoot__brand { grid-column: 1 / -1; }
+}
+@media print { .announce, .sitefoot, .hero__btns, .find { display: none !important; } }

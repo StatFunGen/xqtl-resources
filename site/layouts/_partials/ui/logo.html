@@ -1,5 +1,7 @@
-{{- /* Logo 8a: a Manhattan plot with one lead variant above the significance line. viewBox matches the 60 x 44 design grid. */ -}}
-<svg class="logo-mark" viewBox="0 0 60 44" width="30" height="22" aria-hidden="true" focusable="false">
+{{- /* Logo 8a: a Manhattan plot with one lead variant above the significance line. viewBox matches the 60 x 44 design grid.
+  Pass (dict "w" N) to set the width; the height follows the 60 x 44 grid. */ -}}
+{{- $w := .w | default 30 -}}
+<svg class="logo-mark" viewBox="0 0 60 44" width="{{ $w }}" height="{{ div (mul $w 44) 60 }}" aria-hidden="true" focusable="false">
   <rect x="0" y="9.5" width="60" height="1" class="lm-line"/>
   {{- $hs := slice 3 5 2 6 4 3 7 5 4 8 6 12 20 31 18 9 5 4 6 3 -}}
   {{- range $i, $h := $hs -}}

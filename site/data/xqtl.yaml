@@ -12,6 +12,12 @@ home:
     Counts are participants. One participant can contribute several tissues,
     cell types and assays.
   updated: "November 2026"
+  loci: "226"
+  # Announcement bar on the home page. Leave text empty to hide it; url is optional.
+  announce:
+    text: "Phase 1 data release coming soon on the AD Knowledge Portal"
+    tag: "Coming soon"
+    url: ""
 
 # QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
 # `omics` the matching folders under content/xqtl-data/omics. Colour: oklch(0.6 0.13 hue).
