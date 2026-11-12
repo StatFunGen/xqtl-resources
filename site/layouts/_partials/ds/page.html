@@ -144,6 +144,7 @@
             {{- $crumb := after 1 (split $h.at "/") }}
             <li>
               {{- with $crumb }}<span class="dsfiles__crumb" title="{{ $h.at }}">{{ delimit (last 3 .) " › " }}{{ if and $h.f $h.id }} · <a class="fold__id" href="https://www.synapse.org/Synapse:{{ index $h.id 0 }}" rel="noopener">{{ index $h.id 0 }}</a>{{ end }}</span>{{ end }}
+              {{- with $h.j }}<span class="dsfiles__joint">Joint analysis of {{ delimit . " + " }}; also listed on the other data type's pages</span>{{ end }}
               {{- with .d }}{{ partial "ds/folder.html" (dict "n" . "d" 1) }}{{ end }}
               {{- with .f }}
               <div class="dsfiles__files">
@@ -156,8 +157,11 @@
         </details>
         {{- end }}
       {{- end }}
-      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue, taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All Synapse folders</a> lists everything.{{ end }}</p>
+      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue (bulk and single-nucleus data kept apart), taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All Synapse folders</a> lists everything.{{ end }}</p>
     </div>
+    {{- end }}
+    {{- if and (eq $i.kind "omics") $counter }}
+    <p class="note">QTL results computed from this data, and their files on Synapse, are listed on {{ range $n, $c := $counter }}{{ if $n }}, {{ end }}<a href="{{ $c.page.RelPermalink }}">{{ $c.page.LinkTitle }} {{ $c.info.label }}</a>{{ end }}.</p>
     {{- end }}
   </section>
 

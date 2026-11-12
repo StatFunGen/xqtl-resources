@@ -143,8 +143,9 @@ class HugoSiteGenerator:
         r = subprocess.run([sys.executable, script, '--repo', repo, '--out', out], capture_output=True, text=True)
         if r.returncode == 0:
             self.log(f"Synapse folder index: {r.stdout.strip()}", 'success')
-        else:
-            self.log(f"Synapse folder index failed: {r.stderr.strip()[:300]}", 'warning')
+            return True
+        self.log(f"Synapse folder index failed: {r.stderr.strip()[:500]}", 'error')
+        return False
 
     def create_hugo_config(self):
         """Copy Hugo configuration file from source repository"""
@@ -744,7 +745,8 @@ python scripts/hugo_generator.py --build --minify
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
         self.copy_site_overlay()
-        self.build_staging_index()
+        if not self.build_staging_index():
+            success = False
 
         # Step 3: Content
         self.log("\nStep 3: Processing content files...", 'info')

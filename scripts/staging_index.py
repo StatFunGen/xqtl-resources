@@ -12,21 +12,54 @@ every staged folder with its Synapse ID(s), its listed files, and the catalog pa
 
 hugo_generator.py runs this on every build, so the page always matches the YAML.
 """
-import re, os, glob, json, argparse
+import re, os, sys, glob, json, argparse
 
 SYN = re.compile(r"\bsyn\d{5,}\b")
 
 def expand(s):
-    """'syn726677{15..21}' -> [syn72667715 .. syn72667721]; also plain comma lists."""
+    """Expand the Synapse IDs written in a comment.
+    Handles plain lists ('syn1, syn2'), ranges ('syn726677{15..21}') and mixed braces
+    ('syn754273{57,59..66,58}' -> syn75427357, syn75427359 .. syn75427366, syn75427358)."""
     out = []
-    for part in [p.strip() for p in s.split(",") if p.strip()]:
-        m = re.match(r"(syn\d*)\{(\d+)\.\.(\d+)\}$", part)
-        if m:
-            pre, a, b = m.group(1), m.group(2), m.group(3)
-            out += [f"{pre}{str(i).zfill(len(a))}" for i in range(int(a), int(b) + 1)]
-        elif re.match(r"syn\d{5,}$", part):
-            out.append(part)
+    for m in re.finditer(r"(syn\d*)(\{[^}]*\})?", s):
+        pre, br = m.group(1), m.group(2)
+        if not br:
+            if re.fullmatch(r"syn\d{5,}", pre): out.append(pre)
+            continue
+        for item in br[1:-1].split(","):
+            item = item.strip()
+            r = re.fullmatch(r"(\d+)\.\.(\d+)", item)
+            if r:
+                a, b = r.group(1), r.group(2)
+                out += [f"{pre}{str(i).zfill(len(a))}" for i in range(int(a), int(b) + 1)]
+            elif item.isdigit():
+                out.append(pre + item)
     return out
+
+def independent_ids(path):
+    """Second, separate count of the IDs in the YAML: every syn token in a comment, with each
+    brace item spelled out by string handling only (no shared code with expand)."""
+    ids = set()
+    for line in open(path, encoding="utf-8"):
+        if "#" not in line: continue
+        c = line.split("#", 1)[1]
+        while "{" in c:
+            i = c.index("{"); j = c.index("}", i)
+            k = i
+            while k > 0 and (c[k - 1].isdigit() or c[k - 3:k] == "syn"):
+                k -= 1 if c[k - 1].isdigit() else 3
+            stem = c[k:i]
+            items = []
+            for it in c[i + 1:j].split(","):
+                it = it.strip()
+                if ".." in it:
+                    a, b = it.split("..")
+                    items += [stem + str(n).zfill(len(a)) for n in range(int(a), int(b) + 1)]
+                else:
+                    items.append(stem + it)
+            c = c[:k] + " " + " ".join(items) + " " + c[j + 1:]
+        ids |= {w.strip(" ,") for w in c.split() if w.strip(" ,").startswith("syn") and w.strip(" ,")[3:].isdigit() and len(w.strip(" ,")) > 8}
+    return ids
 
 def parse(path):
     root = {"name": "", "ids": [], "files": [], "children": [], "depth": -1}
@@ -126,17 +159,40 @@ def page_spec(repo, rel):
             if k.lower() in rel.lower(): spec["gwas"] = k
     return spec
 
+REGION = ["DLPFC", "AC", "PCC", "monocyte", "microglia"]
+ROSMAP_ONLY = {"CUIMC1", "MIT", "mega", "DLPFC", "AC", "PCC", "monocyte"}
+
 def match(spec, name, anc_qtl):
+    """True when a staged folder or file name belongs to the page's dataset.
+    Rules: same cohort (a name without a cohort but with ROSMAP-only context tokens such as
+    CUIMC1, MIT or DLPFC counts as ROSMAP), same data type (from the name or a parent folder),
+    and for ROSMAP the same kind of data (single-nucleus names only on the single-nucleus page,
+    bulk region names only on that region's page)."""
     if spec["kind"] == "gwas":
         return bool(spec["gwas"]) and spec["gwas"] in name
     cos = COHORT.get(spec["cohort"], [])
-    if not cos or not any(name.startswith(c) or ("_" + c) in name for c in cos): return False
+    tk = tokens(name)
+    named = any(name.startswith(c) or ("_" + c) in name for cohort in COHORT.values() for c in cohort)
+    mine = any(name.startswith(c) or ("_" + c) in name for c in cos)
+    implied = spec["cohort"] == "ROSMAP" and not named and bool(tk & ROSMAP_ONLY) and bool(anc_qtl)
+    if not cos or not (mine or implied): return False
     if spec["kind"] == "study": return True
-    q = qtl_of(name) or anc_qtl
+    # single-group outputs name their one input after the gene wildcard, e.g.
+    # ROSMAP_eQTL_pQTL.*.DLPFC_Bennett_pQTL.ctwas_single_group_...: judge by that input
+    if ".*." in name and qtl_of(name.split(".*.", 1)[1]):
+        tail = name.split(".*.", 1)[1]
+        tk = tokens(tail)
+        q = qtl_of(tail)
+    else:
+        q = qtl_of(name) or anc_qtl
     if q and spec["qtl"] not in q: return False
     if spec["cohort"] == "ROSMAP":
-        nctx = {c for c in CTX if c in tokens(name)}
-        if nctx and not (nctx & spec["ctx"]): return False
+        name_sn = bool(tk & set(SNUC))
+        page_sn = bool(spec["ctx"] & set(SNUC))
+        regions = tk & set(REGION)
+        if name_sn and not page_sn: return False
+        if page_sn and regions and not name_sn: return False
+        if regions and not (regions <= spec["ctx"]): return False
     return True
 
 def by_page(tree, repo):
@@ -147,17 +203,24 @@ def by_page(tree, repo):
     for rel in pages:
         if os.path.basename(rel) == "README.md": continue
         spec = page_spec(repo, rel)
-        if spec["kind"] not in ("qtl", "omics", "gwas", "study"): continue
+        # omics pages describe the source data; QTL results derived from it are listed on the QTL page
+        if spec["kind"] not in ("qtl", "gwas", "study"): continue
         hits = []
         def walk(node, path, anc_qtl):  # anc_qtl: data types named by a parent folder
             for c in node["children"]:
                 q = qtl_of(c["name"]) or anc_qtl
                 if match(spec, c["name"], anc_qtl):
-                    hits.append({"at": "/".join(path), "d": strip(c)})
+                    hit = {"at": "/".join(path), "d": strip(c)}
+                    j = sorted(qtl_of(c["name"]) or q)
+                    if len(j) > 1: hit["j"] = j
+                    hits.append(hit)
                     continue
                 files = [f for f in c["files"] if match(spec, f[0], q)]
                 if files:
-                    hits.append({"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": files})
+                    hit = {"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": files}
+                    j = sorted({t for f in files for t in qtl_of(f[0]) if not (".*." in f[0] and qtl_of(f[0].split(".*.", 1)[1]))} | (q if len(q) > 1 else set()))
+                    if len(j) > 1: hit["j"] = j
+                    hits.append(hit)
                 walk(c, path + [c["name"]], q)
         walk(tree, [], set())
         if hits: out[rel[:-3]] = hits
@@ -183,7 +246,7 @@ if __name__ == "__main__":
     ids = [i for r in rows for i in r[1].split(",") if i]
     def fids(n): return n.get("fileids", []) + [i for c in n["children"] for i in fids(c)]
     ids += fids(tree)
-    raw = {i for line in open(y) if "#" in line for i in expand(line.split("#", 1)[1])}
+    raw = independent_ids(y)
     if a.out:
         os.makedirs(os.path.dirname(a.out), exist_ok=True)
         json.dump({"folders": nf, "files": nfiles, "ids": len(set(ids)),
@@ -196,5 +259,10 @@ if __name__ == "__main__":
     print(f"{nf} folders, {nfiles} file entries, {len(set(ids))} Synapse IDs; "
           f"{sum(r[2]=='cited' for r in rows)} cited by a page, {sum(r[2]=='parent' for r in rows)} under a cited parent, "
           f"{sum(r[2]=='none' for r in rows)} not under any cited folder")
-    unparsed = sorted(i for i in raw if i not in set(ids))
-    if unparsed: print("IDs in the YAML the parser did not attach to a folder:", " ".join(unparsed))
+    unparsed = sorted(raw - set(ids))
+    extra = sorted(set(ids) - raw)
+    if unparsed or extra:
+        print("ID check FAILED. In the YAML but not on the page:", " ".join(unparsed) or "none",
+              "| on the page but not in the YAML:", " ".join(extra) or "none", file=sys.stderr)
+        sys.exit(1)
+    print(f"ID check passed: all {len(raw)} Synapse IDs in the YAML are on the page")

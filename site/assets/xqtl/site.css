@@ -931,3 +931,4 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .dsfiles__files code { font-size: 12.5px; background: none; padding: 0; word-break: break-all; color: var(--ink); }
 .dsfiles__list > li > .fold__id { align-self: flex-start; }
 @media (max-width: 640px) { .summary__label { width: 100%; } .summary__more { margin-left: 0; } .page--dataset .summary { padding: 4px 14px 14px; } }
+.dsfiles__joint { align-self: flex-start; font-size: 12.5px; color: var(--stf); background: var(--stb); border-radius: 4px; padding: 1px 7px; }
