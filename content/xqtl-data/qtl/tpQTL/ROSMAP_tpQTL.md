@@ -5,6 +5,7 @@ short_title: ROSMAP DLPFC, PCC, AC
 cohort: ROSMAP
 context: DLPFC, PCC, AC
 sample_size:
+sample_note: 91 to 537 by region
 access: controlled
 status: staged
 release:
@@ -34,4 +35,4 @@ Genotype-matched participants per region, from the FunGen-xQTL sample table.
 
 ## Analyses
 
-The Synapse folders hold two Torino runs, K3 and K5, each with fine-mapping, cis export and TWAS weights; ColocBoost models are for K5. Colocalization with AD GWAS (Bellenguez 2022) is in the AD GWAS and xQTL colocalization folder listed above. The AD Loci Explorer counts tpQTL colocalization as xQTL support for AD loci.
+The Synapse folders hold two Torino runs, K3 and K5. Both have fine-mapping, cis export and TWAS weights; the ColocBoost model folder has K5 only. Colocalization with AD GWAS (Bellenguez 2022) is in the AD GWAS and xQTL colocalization folder listed above for both runs: K5 as colocalization tables and K3 as a ColocBoost output. The AD Loci Explorer counts tpQTL colocalization as xQTL support for AD loci.

@@ -59,8 +59,8 @@
       {{- with $i.context }}
       <div class="meta__row"><dt>Tissue or cell type</dt><dd>{{ . }}</dd></div>
       {{- end }}
-      {{- if or $i.n (in (slice "qtl" "omics") $i.kind) }}
-      <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}</dd></div>
+      {{- if or $i.n $i.nnote (in (slice "qtl" "omics") $i.kind) }}
+      <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}{{ with $i.nnote }}{{ . }}, see Samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}{{ end }}</dd></div>
       {{- end }}
       {{- if ne $i.kind "study" }}
       <div class="meta__row"><dt>Release status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}<span class="subtle">Not set</span>{{ end }}
