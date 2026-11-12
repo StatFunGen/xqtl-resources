@@ -12,7 +12,7 @@
 {{- $cat := "" }}{{ with $catalog }}{{ $cat = .RelPermalink }}{{ end -}}
 <div class="home">
   <header class="hero">
-    {{ partial "ui/logo.html" (dict "w" 168) }}
+    {{ partial "ui/logo.html" (dict "size" 150 "id" "fxhero") }}
     <div class="hero__text">
       <p class="hero__org">ADSP Functional Genomics Consortium (FunGen-AD)</p>
       <h1 class="hero__title">FunGen<span class="brand__x">-xQTL</span></h1>
@@ -115,7 +115,7 @@
   </div>
   <footer class="sitefoot">
     <div class="sitefoot__in">
-      <div class="sitefoot__brand">{{ partial "ui/logo.html" (dict "w" 30) }}<span>FunGen<span class="brand__x">-xQTL</span></span></div>
+      <div class="sitefoot__brand">{{ partial "ui/logo.html" (dict "size" 28 "id" "fxf") }}<span>FunGen<span class="brand__x">-xQTL</span></span></div>
       <div><h2>Data</h2><a href="{{ $cat }}">Catalog</a><a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a><a href="{{ with $howto }}{{ .RelPermalink }}{{ end }}">Get the data</a></div>
       <div><h2>Tools</h2><a href="{{ site.Params.protocolURL }}/">Protocol</a><a href="{{ site.Params.explorerURL }}">AD Loci Explorer</a><a href="{{ site.Params.atlasURL }}" rel="noopener">NIAGADS xQTL Atlas ↗</a></div>
       <div><h2>About</h2><a href="https://fgc.niagads.org/" rel="noopener">FunGen-AD ↗</a><a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/content/README.md">Edit this page on GitHub</a><span>Maintained by the FunGen-AD Analysis Working Group. Data through {{ $x.home.updated }}.</span></div>
