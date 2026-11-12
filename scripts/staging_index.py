@@ -83,6 +83,86 @@ def strip(node):
     if node["children"]: d["c"] = [strip(c) for c in node["children"]]
     return d
 
+COHORT = {"ROSMAP": ["ROSMAP"], "MSBB": ["MSBB", "BM_"], "Knight-ADRC": ["KNIGHT", "Knight"],
+          "MiGA": ["MiGA"], "STARNET": ["STARNET"], "MetaBrain": ["MetaBrain", "Metabrain"]}
+OMICS2QTL = {"expression": "eQTL", "splicing": "sQTL", "methylation": "mQTL", "proteomics": "pQTL",
+             "glycoproteomics": "glycoQTL", "metabolomics": "metQTL", "histone_ChIPSeq": "haQTL",
+             "snATAC": "caQTL", "snRNA_seq": "eQTL"}
+QTLS = ["glycoQTL", "metQTL", "haQTL", "caQTL", "tpQTL", "eQTL", "sQTL", "pQTL", "mQTL"]
+SNUC = ["snuc", "Ast", "Exc", "Inh", "Mic", "OPC", "Oli", "MIT", "CUIMC1", "mega"]
+CTX = ["DLPFC", "AC", "PCC", "monocyte", "microglia"] + SNUC
+GWAS = {"Bellenguez": "Bellenguez", "Jansen": "Jansen", "Kunkle": "Kunkle", "Wightman": "Wightman"}
+
+def tokens(name):
+    return set(re.split(r"[_.\-]", name))
+
+ALIAS = {"metabolome": "metQTL", "metabolomics": "metQTL", "glyco": "glycoQTL", "tpQTL": "tpQTL"}
+
+def qtl_of(name):
+    """Data types named in a folder or file name (several for joint names such as ROSMAP_eQTL_pQTL)."""
+    found = {q for q in QTLS if re.search(r"(^|[_.\-])" + q + r"($|[_.\-])", name)}
+    found |= {v for k, v in ALIAS.items() if re.search(r"(^|[_.\-])" + k, name)}
+    return found
+
+def front(path):
+    t = open(path, encoding="utf-8").read()
+    if not t.startswith("---"): return {}
+    head = t[3:t.find("\n---", 3)]
+    return {k.strip(): v.strip().strip('"') for k, _, v in (l.partition(":") for l in head.split("\n")) if k.strip()}
+
+def page_spec(repo, rel):
+    f = front(os.path.join(repo, "content", rel))
+    kind = f.get("type", "")
+    spec = {"kind": kind, "cohort": f.get("cohort", ""), "qtl": None, "ctx": set(), "gwas": None}
+    if kind in ("qtl", "omics"):
+        m = f.get("modality", "")
+        spec["qtl"] = m if m in QTLS else OMICS2QTL.get(rel.split("/")[2] if kind == "omics" else "", None) or OMICS2QTL.get(m)
+        base = os.path.basename(rel)
+        ctx = f.get("context", "") + " " + base
+        spec["ctx"] = {c for c in CTX if re.search(r"(^|[^A-Za-z])" + c + r"($|[^A-Za-z])", ctx)}
+        if re.search(r"snRNA|snuc|pseudo_bulk|cell types", ctx): spec["ctx"] |= set(SNUC)
+    if kind == "gwas":
+        for k in GWAS:
+            if k.lower() in rel.lower(): spec["gwas"] = k
+    return spec
+
+def match(spec, name, anc_qtl):
+    if spec["kind"] == "gwas":
+        return bool(spec["gwas"]) and spec["gwas"] in name
+    cos = COHORT.get(spec["cohort"], [])
+    if not cos or not any(name.startswith(c) or ("_" + c) in name for c in cos): return False
+    if spec["kind"] == "study": return True
+    q = qtl_of(name) or anc_qtl
+    if q and spec["qtl"] not in q: return False
+    if spec["cohort"] == "ROSMAP":
+        nctx = {c for c in CTX if c in tokens(name)}
+        if nctx and not (nctx & spec["ctx"]): return False
+    return True
+
+def by_page(tree, repo):
+    """For each dataset page: the staged folders and files whose names carry that dataset's cohort,
+    data type and context (outermost match only), grouped under their parent folder path."""
+    out = {}
+    pages = [os.path.relpath(p, os.path.join(repo, "content")) for p in glob.glob(os.path.join(repo, "content", "xqtl-data", "**", "*.md"), recursive=True)]
+    for rel in pages:
+        if os.path.basename(rel) == "README.md": continue
+        spec = page_spec(repo, rel)
+        if spec["kind"] not in ("qtl", "omics", "gwas", "study"): continue
+        hits = []
+        def walk(node, path, anc_qtl):  # anc_qtl: data types named by a parent folder
+            for c in node["children"]:
+                q = qtl_of(c["name"]) or anc_qtl
+                if match(spec, c["name"], anc_qtl):
+                    hits.append({"at": "/".join(path), "d": strip(c)})
+                    continue
+                files = [f for f in c["files"] if match(spec, f[0], q)]
+                if files:
+                    hits.append({"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": files})
+                walk(c, path + [c["name"]], q)
+        walk(tree, [], set())
+        if hits: out[rel[:-3]] = hits
+    return out
+
 def count(node):
     n = 1 if node["name"] else 0; f = len(node["files"])
     for c in node["children"]:
@@ -108,7 +188,8 @@ if __name__ == "__main__":
         os.makedirs(os.path.dirname(a.out), exist_ok=True)
         json.dump({"folders": nf, "files": nfiles, "ids": len(set(ids)),
                    "cited": sum(r[2] == "cited" for r in rows),
-                   "tree": [strip(c) for c in tree["children"]]}, open(a.out, "w"), separators=(",", ":"))
+                   "tree": [strip(c) for c in tree["children"]],
+                   "bypage": by_page(tree, a.repo)}, open(a.out, "w"), separators=(",", ":"))
     if a.report:
         for r in rows:
             if r[2] != "cited": print("\t".join(r))

@@ -24,8 +24,14 @@
 {{- range $x.cohorts }}{{ if eq .name $i.cohort }}{{ $cohortDesc = .desc }}{{ end }}{{ end -}}
 
 <article class="page page--dataset">
-  <header class="page__head">
+  <header class="page__head dshead">
     {{ partial "site/breadcrumb.html" $p }}
+    {{- $kl := $i.kindLabel | default (index (dict "study" "Study cohort" "gwas" "AD GWAS" "reference" "Reference data") $i.kind) -}}
+    {{- $eb := slice }}{{ range slice $kl (cond (ne $i.kind "study") $i.cohort "") $i.context }}{{ if and . (not (in $eb .)) (ne . $i.label) }}{{ $eb = $eb | append . }}{{ end }}{{ end }}
+    <p class="dshead__eyebrow">
+      {{- if and $i.label (ne $i.kind "study") }}<span class="dshead__tag">{{ partial "ui/mark.html" $i }}{{ $i.label }}</span>{{ end -}}
+      {{- range $eb }}<span>{{ . }}</span>{{ end -}}
+    </p>
     <h1 class="page__title">{{ $p.Title }}</h1>
     {{ with $p.Params.lead }}<div class="page__lead">{{ $p.RenderString . }}</div>{{ end }}
   </header>
@@ -64,6 +70,20 @@
       </dd></div>
       {{- end }}
     </dl>
+    {{- with $i.methods }}
+    <div class="summary__methods" id="analyses">
+      <span class="summary__label">Analyses</span>
+      <ul class="method-chips">
+        {{- range $m := $x.methods }}
+          {{- with index $i.methods $m }}
+          {{- $st := index $x.method_status . }}
+          <li class="method-chip" title="{{ with $st }}{{ .label }}{{ end }}"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span>{{ $m }}</span><span class="sr-only">{{ with $st }}{{ .label }}{{ end }}</span></li>
+          {{- end }}
+        {{- end }}
+      </ul>
+      {{ with site.GetPage "/coverage" }}<a class="summary__more" href="{{ .RelPermalink }}">All datasets</a>{{ end }}
+    </div>
+    {{- end }}
     {{- if or $i.synapse (eq $i.kind "qtl") }}
     <div class="actions">
       {{- with $i.synapse }}
@@ -78,7 +98,7 @@
   </section>
 
   <section class="ds-section" id="access">
-    <h2>Access</h2>
+    <h2>Data and access</h2>
     <p class="muted">
       {{- $acc := $i.access }}{{ if and (not $acc) $i.synapse }}{{ $acc = "controlled" }}{{ end }}
       {{- if eq $acc "open" }}Open access. Download from the links below without an application.
@@ -104,13 +124,40 @@
       </table>
     </div>
     {{- end }}
-    {{- if gt (len $i.synapseIDs) 1 }}
-    <p class="ids"><span class="label">Other Synapse IDs on this page</span>
-      {{- range after 1 $i.synapseIDs }} <a class="chip chip--mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a>{{ end }}</p>
-    {{- end }}
     {{- with $i.synapse }}
     {{ $code := printf "pip install synapseclient\nsynapse login\nsynapse get -r %s" . }}
     {{ $p.RenderString (printf "```shell\n%s\n```" $code) }}
+    {{- end }}
+    {{- $key := strings.TrimSuffix ".md" (replace $p.File.Path "\\" "/") -}}
+    {{- with index (hugo.Data.staging.bypage | default dict) $key }}
+    {{- $hits := . -}}
+    {{- $areas := dict "variant_gene_summary" "Variant and gene summaries" "xQTL_GWAS_models" "xQTL and AD GWAS models" "xQTL_data" "Raw QTL data" "reference_files" "Reference files" "xQTL_SCEEM_scores" "scEEMS scores" "Metadata" "Metadata" "manuscript" "Manuscript" -}}
+    <div class="dsfiles">
+      <h3 class="dsfiles__title">Files on Synapse for this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
+      {{- range $area := slice "variant_gene_summary" "xQTL_GWAS_models" "xQTL_data" "xQTL_SCEEM_scores" "reference_files" "Metadata" "manuscript" }}
+        {{- $in := slice }}{{ range $hits }}{{ if eq (index (split .at "/") 0) $area }}{{ $in = $in | append . }}{{ end }}{{ end -}}
+        {{- with $in }}
+        <details class="dsfiles__area"{{ if ne $area "reference_files" }} open{{ end }}>
+          <summary><span class="dsfiles__name">{{ index $areas $area }}</span><span class="muted">{{ len . }}</span></summary>
+          <ul class="dsfiles__list">
+          {{- range $h := . }}
+            {{- $crumb := after 1 (split $h.at "/") }}
+            <li>
+              {{- with $crumb }}<span class="dsfiles__crumb" title="{{ $h.at }}">{{ delimit (last 3 .) " › " }}{{ if and $h.f $h.id }} · <a class="fold__id" href="https://www.synapse.org/Synapse:{{ index $h.id 0 }}" rel="noopener">{{ index $h.id 0 }}</a>{{ end }}</span>{{ end }}
+              {{- with .d }}{{ partial "ds/folder.html" (dict "n" . "d" 1) }}{{ end }}
+              {{- with .f }}
+              <div class="dsfiles__files">
+                <ul>{{ range . }}<li><code>{{ index . 0 }}</code></li>{{ end }}</ul>
+              </div>
+              {{- end }}
+            </li>
+          {{- end }}
+          </ul>
+        </details>
+        {{- end }}
+      {{- end }}
+      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue, taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All Synapse folders</a> lists everything.{{ end }}</p>
+    </div>
     {{- end }}
   </section>
 
@@ -118,20 +165,6 @@
     {{ $p.Content }}
   </div>
 
-  {{- with $i.methods }}
-  <section class="ds-section" id="analyses">
-    <h2>Analyses</h2>
-    <ul class="method-chips">
-      {{- range $m := $x.methods }}
-        {{- with index $i.methods $m }}
-        {{- $st := index $x.method_status . }}
-        <li class="method-chip"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span>{{ $m }}</span><span class="muted">{{ with $st }}{{ .label }}{{ end }}</span></li>
-        {{- end }}
-      {{- end }}
-    </ul>
-    <p class="note">Read from the <code>methods:</code> map in this page's metadata header{{ with site.GetPage "/coverage" }}, the same data as the <a href="{{ .RelPermalink }}">analysis coverage grid</a>{{ end }}.</p>
-  </section>
-  {{- end }}
 
   {{- /* Related: counterpart, same cohort and context in other modalities, same modality in other contexts, cohort study page */ -}}
   {{- $rel := slice -}}

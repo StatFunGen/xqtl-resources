@@ -900,3 +900,34 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 @media (max-width: 900px) { .folders__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fold__body { padding-left: 10px; margin-left: 6px; } }
 .folders > p code, .folders .page__lead code, .folders .prose code { word-break: break-all; }
 .folders { gap: 14px; } .folders__head { display: flex; flex-direction: column; gap: 10px; } .folders > .prose p { margin: 0; color: var(--ink2); }
+
+/* ---------- Dataset pages ---------- */
+.dshead { gap: 8px; }
+.dshead__eyebrow { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; font: 600 13.5px var(--sans); color: var(--ink2); }
+.dshead__eyebrow > span + span::before { content: "·"; margin: 0 8px; color: var(--ln2); }
+.dshead__tag { display: inline-flex; align-items: center; color: var(--navy); }
+.page--dataset .summary { border: 1px solid var(--ln); border-radius: var(--r2); background: var(--sf); padding: 4px 20px 18px; box-shadow: 0 1px 2px rgb(25 53 74 / .05); }
+.page--dataset .summary .meta { border-top: 0; }
+.page--dataset .summary .meta__row:nth-last-child(-n+2) { border-bottom: 0; }
+.summary__methods { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding-top: 12px; border-top: 1px solid var(--ln); }
+.summary__label { font: 500 14px var(--sans); color: var(--ink2); width: 128px; }
+.summary__more { font-size: 13.5px; margin-left: auto; }
+.page--dataset .method-chip { height: 28px; font-size: 13.5px; }
+.dsfiles { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.dsfiles__title { margin: 6px 0 2px; font: 600 16px var(--sans); color: var(--navy); }
+.dsfiles__title .muted { font-weight: 400; font-size: 14px; margin-left: 6px; }
+.dsfiles__area { border: 1px solid var(--ln); border-radius: var(--r2); background: var(--sf); }
+.dsfiles__area > summary { display: flex; align-items: center; gap: 10px; padding: 10px 14px; cursor: pointer; list-style: none; font-weight: 600; color: var(--navy); }
+.dsfiles__area > summary::-webkit-details-marker { display: none; }
+.dsfiles__area > summary::before { content: ""; width: 7px; height: 7px; border-right: 2px solid var(--ink2); border-bottom: 2px solid var(--ink2); transform: rotate(-45deg); transition: transform .15s; }
+.dsfiles__area[open] > summary::before { transform: rotate(45deg); }
+.dsfiles__area > summary .muted { font: 500 12.5px var(--mono); }
+.dsfiles__list { list-style: none; margin: 0; padding: 0 14px 10px; display: flex; flex-direction: column; }
+.dsfiles__list > li { padding: 8px 0; border-top: 1px solid var(--ln); display: flex; flex-direction: column; gap: 2px; }
+.dsfiles__crumb { font-size: 12.5px; color: var(--ink2); }
+.dsfiles__list .fold > .fold__row { padding: 2px 0; }
+.dsfiles__list .fold > .fold__row .fold__pages { display: none; }
+.dsfiles__files ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.dsfiles__files code { font-size: 12.5px; background: none; padding: 0; word-break: break-all; color: var(--ink); }
+.dsfiles__list > li > .fold__id { align-self: flex-start; }
+@media (max-width: 640px) { .summary__label { width: 100%; } .summary__more { margin-left: 0; } .page--dataset .summary { padding: 4px 14px 14px; } }
