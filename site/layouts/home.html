@@ -30,7 +30,7 @@
   <div class="home__body">
   <section class="stats" aria-label="Headline numbers">
     <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
-    <div class="stat"><span class="stat__n">{{ len $x.modalities }}</span><span class="stat__l">QTL modalities</span></div>
+    <div class="stat"><span class="stat__n">{{ $x.home.modalities | default (len $x.modalities) }}</span><span class="stat__l">molecular modalities</span></div>
     <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
     <div class="stat"><span class="stat__n">{{ $x.home.loci }}</span><span class="stat__l">AD loci summarized</span></div>
   </section>

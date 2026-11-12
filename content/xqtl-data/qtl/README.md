@@ -38,6 +38,7 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 * [ROSMAP PCC Expression QTL](eQTL/ROSMAP_PCC_expression_qtl)
 * [ROSMAP RNA-seq microglia gene expression QTL](eQTL/ROSMAP_microglia_expression_qtl)
 * [ROSMAP RNA-seq monocyte QTL](eQTL/ROSMAP_monocyte_expression_qtl)
+* [ROSMAP transcriptomic pattern QTL (DLPFC, PCC, AC)](tpQTL/ROSMAP_tpQTL)
 * [ROSMAP snuc chromatin accessibility QTL (caQTL)](caQTL/ROSMAP_snuc_caQTL_qtl)
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl)
 * [ROSMAP snuc splicing QTL (ISSAC)](sQTL/ROSMAP_snuc_splicing_qtl)
