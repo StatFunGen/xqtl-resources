@@ -92,6 +92,7 @@ code, kbd, pre { font-family: var(--mono); }
 .h2row .link { font-size: 14px; }
 
 /* ---------- Header ---------- */
+/* While the phone menu is open, the top bar is raised above the drawer and its scrim (see "Open menu" at the end of this file) */
 .topbar {
   position: sticky; top: 0; z-index: 30; height: var(--topbar);
   display: flex; align-items: center; gap: 20px; padding: 0 20px;
@@ -707,6 +708,10 @@ summary.progress__row:focus-visible { outline: 2px solid var(--ac); outline-offs
 @media (max-width: 1100px) { .tasks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .tasks { grid-template-columns: minmax(0, 1fr); } }
 
-/* Open menu: the top bar, with its close button, stays above the drawer and its scrim */
+/* Open menu: the top bar, with its close button, stays above the drawer (z-index 40) and its scrim (35),
+   so one tap on the close button closes the menu. The :has() rules follow the menu checkbox directly,
+   so this also works before or without the page script; .nav-open covers browsers without :has(). */
 .nav-open .topbar { z-index: 45; }
 .nav-open .nav-toggle:checked ~ .sidenav { top: var(--topbar); }
+html:has(#nav-toggle:checked) .topbar { z-index: 45; }
+html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar); }
