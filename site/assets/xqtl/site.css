@@ -8,7 +8,7 @@
 /* ---------- Tokens ---------- */
 :root {
   --navy: #19354a;
-  --teal: #1f716d;
+  --teal: #3d6289;
   --bg: #ffffff;
   --tint: #f6f8fa;
   --sf: #ffffff;
@@ -21,7 +21,7 @@
   --pr: var(--navy);
   --on-pr: #ffffff;
   --ac: var(--teal);
-  --acs: #e6f2f1;
+  --acs: #e8eef5;
   --okb: #e3f1e8;
   --okf: #1f6b3d;
   --stb: #fbf0d9;
@@ -42,17 +42,17 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --navy: #c8d9e6; --teal: #5cc4bc; --bg: #1c2630; --tint: #1c2630; --sf: #24313c; --sk: #2c3a46;
+    --navy: #c8d9e6; --teal: #8fb0d0; --bg: #1c2630; --tint: #1c2630; --sf: #24313c; --sk: #2c3a46;
     --ink: #e4e9ee; --ink2: #a9b5bf; --ink3: #9aa7b2; --ln: #3a4a57; --ln2: #4a5a67;
-    --on-pr: #1c2630; --acs: #20403d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
+    --on-pr: #1c2630; --acs: #273a4d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
     --code: #1f2a34; --empty: #33424e; --dim: #435360; --next: #1d1f1a; --mk-ink: #dfe7ee; --mk-mute: #4a5661;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --navy: #c8d9e6; --teal: #5cc4bc; --bg: #1c2630; --tint: #1c2630; --sf: #24313c; --sk: #2c3a46;
+  --navy: #c8d9e6; --teal: #8fb0d0; --bg: #1c2630; --tint: #1c2630; --sf: #24313c; --sk: #2c3a46;
   --ink: #e4e9ee; --ink2: #a9b5bf; --ink3: #9aa7b2; --ln: #3a4a57; --ln2: #4a5a67;
-  --on-pr: #1c2630; --acs: #20403d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
+  --on-pr: #1c2630; --acs: #273a4d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
   --code: #1f2a34; --empty: #33424e; --dim: #435360; --next: #1d1f1a; --mk-ink: #dfe7ee; --mk-mute: #4a5661;
   color-scheme: dark;
 }
@@ -724,12 +724,12 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 /* ---------- Shared FunGen-xQTL design system (Nov 2026): catalog charts ---------- */
 /* Matrix as a heatmap: one teal hue, darker = more result pages; modality identity stays in the column bar */
 .matrix__cell { color: var(--ink); }
-.matrix__cell--l1 { background: #dcefec; color: #202b35; }
-.matrix__cell--l2 { background: #a8d8d1; color: #202b35; }
-.matrix__cell--l3 { background: #4fa69e; color: #202b35; }
-.matrix__cell--l4 { background: #1f716d; color: #ffffff; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .matrix__cell--l1 { background: #2b4d4a; color: #e4e9ee; } :root:not([data-theme="light"]) .matrix__cell--l2 { background: #25605b; color: #e4e9ee; } :root:not([data-theme="light"]) .matrix__cell--l3 { background: #3a8f88; color: #11161b; } :root:not([data-theme="light"]) .matrix__cell--l4 { background: #5cc4bc; color: #11161b; } }
-:root[data-theme="dark"] .matrix__cell--l1 { background: #2b4d4a; color: #e4e9ee; } :root[data-theme="dark"] .matrix__cell--l2 { background: #25605b; color: #e4e9ee; } :root[data-theme="dark"] .matrix__cell--l3 { background: #3a8f88; color: #11161b; } :root[data-theme="dark"] .matrix__cell--l4 { background: #5cc4bc; color: #11161b; }
+.matrix__cell--l1 { background: #dde7f1; color: #202b35; }
+.matrix__cell--l2 { background: #b5cbe0; color: #202b35; }
+.matrix__cell--l3 { background: #6f93b8; color: #202b35; }
+.matrix__cell--l4 { background: #3d6289; color: #ffffff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .matrix__cell--l1 { background: #26384a; color: #e4e9ee; } :root:not([data-theme="light"]) .matrix__cell--l2 { background: #2f4a63; color: #e4e9ee; } :root:not([data-theme="light"]) .matrix__cell--l3 { background: #5f84a8; color: #11161b; } :root:not([data-theme="light"]) .matrix__cell--l4 { background: #8fb0d0; color: #11161b; } }
+:root[data-theme="dark"] .matrix__cell--l1 { background: #26384a; color: #e4e9ee; } :root[data-theme="dark"] .matrix__cell--l2 { background: #2f4a63; color: #e4e9ee; } :root[data-theme="dark"] .matrix__cell--l3 { background: #5f84a8; color: #11161b; } :root[data-theme="dark"] .matrix__cell--l4 { background: #8fb0d0; color: #11161b; }
 .matrix__cell.is-dim { background: var(--empty); color: var(--ink2); }
 .matrix__key { display: flex; align-items: center; gap: 6px; margin: 8px 0 6px; font-size: 12.5px; }
 .matrix__key .muted { margin-right: 4px; }
