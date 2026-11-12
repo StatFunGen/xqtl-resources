@@ -23,6 +23,18 @@
 {{- $cohortDesc := "" -}}
 {{- range $x.cohorts }}{{ if eq .name $i.cohort }}{{ $cohortDesc = .desc }}{{ end }}{{ end -}}
 
+{{- $key := strings.TrimSuffix ".md" (replace $p.File.Path "\\" "/") -}}
+{{- $hits := index (hugo.Data.staging.bypage | default dict) $key | default slice -}}
+{{- /* This dataset's own Synapse folders (not the shared parent): folder matches under the model and raw-data areas */ -}}
+{{- $own := slice -}}
+{{- $what := dict "finemapping_models" "Fine-mapping: cis-QTL export and SuSiE models" "colocalization_models" "Multi-context colocalization (ColocBoost)" "TWAS_models" "TWAS weights" "AD_xQTL_colocalization_models" "AD GWAS and xQTL colocalization" "AD_finemapping" "AD GWAS fine-mapping" -}}
+{{- range $hits }}{{ if and .d (in (slice "xQTL_GWAS_models" "xQTL_data") (index (split .at "/") 0)) }}
+  {{- $lab := "" }}
+  {{- range $seg := split .at "/" }}{{ with index $what $seg }}{{ $lab = . }}{{ end }}{{ end -}}
+  {{- if in .at "multi_context" }}{{ $lab = printf "%s, multi-context" $lab }}{{ end -}}
+  {{- $own = $own | append (dict "id" (index .d.id 0) "name" .d.n "what" ($lab | default (index (last 1 (split .at "/")) 0))) -}}
+{{ end }}{{ end -}}
+{{- $sid := $i.synapse -}}{{ with $own }}{{ $sid = (index . 0).id }}{{ end -}}
 <article class="page page--dataset">
   <header class="page__head dshead">
     {{ partial "site/breadcrumb.html" $p }}
@@ -84,9 +96,9 @@
       {{ with site.GetPage "/coverage" }}<a class="summary__more" href="{{ .RelPermalink }}">All datasets</a>{{ end }}
     </div>
     {{- end }}
-    {{- if or $i.synapse (eq $i.kind "qtl") }}
+    {{- if or $sid (eq $i.kind "qtl") }}
     <div class="actions">
-      {{- with $i.synapse }}
+      {{- with $sid }}
       <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open {{ . }} in Synapse ↗</a>
       <button type="button" class="btn" data-copy="{{ . }}" aria-label="Copy Synapse ID {{ . }}">Copy ID</button>
       {{- end }}
@@ -112,10 +124,14 @@
       <table class="dtable">
         <thead><tr><th>Where</th><th>ID</th><th>Access</th><th>What you get</th></tr></thead>
         <tbody>
-          {{- with $i.synapse }}
+          {{- range $own }}
+          <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
+            <td>{{ .what }} <span class="muted">· {{ .name }}</span></td></tr>
+          {{- end }}
+          {{- with $i.synapse }}{{ if not $own }}
           <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
             <td>{{ if eq $i.kind "qtl" }}{{ if eq . "syn69670632" }}Raw QTL data folder, with the per-dataset results described below{{ else }}Results described below{{ end }}{{ else }}Files described below{{ end }}</td></tr>
-          {{- end }}
+          {{- end }}{{ end }}
           {{- if $i.ng00184 }}
           <tr><td class="strong">NIAGADS DSS</td><td><a class="mono" href="{{ $x.ng00184.url }}" rel="noopener">{{ $x.ng00184.id }}</a></td><td>{{ partial "ui/access.html" "open" }}</td>
             <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.label }}.*.tar</code></td></tr>
@@ -124,13 +140,11 @@
       </table>
     </div>
     {{- end }}
-    {{- with $i.synapse }}
+    {{- with $sid }}
     {{ $code := printf "pip install synapseclient\nsynapse login\nsynapse get -r %s" . }}
     {{ $p.RenderString (printf "```shell\n%s\n```" $code) }}
     {{- end }}
-    {{- $key := strings.TrimSuffix ".md" (replace $p.File.Path "\\" "/") -}}
-    {{- with index (hugo.Data.staging.bypage | default dict) $key }}
-    {{- $hits := . -}}
+    {{- with $hits }}
     {{- $areas := dict "variant_gene_summary" "Variant and gene summaries" "xQTL_GWAS_models" "xQTL and AD GWAS models" "xQTL_data" "Raw QTL data" "reference_files" "Reference files" "xQTL_SCEEM_scores" "scEEMS scores" "Metadata" "Metadata" "manuscript" "Manuscript" -}}
     <div class="dsfiles">
       <h3 class="dsfiles__title">Files on Synapse for this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
