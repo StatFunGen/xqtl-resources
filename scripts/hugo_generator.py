@@ -135,6 +135,17 @@ class HugoSiteGenerator:
         self.log(f"Copied site layouts and styles from {site_dir}/", 'success')
         return True
 
+    def build_staging_index(self):
+        """Write data/staging.json (every staged Synapse folder and the pages that cite it) for the All Synapse folders page"""
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'staging_index.py')
+        repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        out = os.path.join(self.website_dir, 'data', 'staging.json')
+        r = subprocess.run([sys.executable, script, '--repo', repo, '--out', out], capture_output=True, text=True)
+        if r.returncode == 0:
+            self.log(f"Synapse folder index: {r.stdout.strip()}", 'success')
+        else:
+            self.log(f"Synapse folder index failed: {r.stderr.strip()[:300]}", 'warning')
+
     def create_hugo_config(self):
         """Copy Hugo configuration file from source repository"""
         source_config = 'hugo.toml'
@@ -733,6 +744,7 @@ python scripts/hugo_generator.py --build --minify
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
         self.copy_site_overlay()
+        self.build_staging_index()
 
         # Step 3: Content
         self.log("\nStep 3: Processing content files...", 'info')
