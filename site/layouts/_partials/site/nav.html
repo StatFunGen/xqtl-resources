@@ -91,6 +91,7 @@
         (slice "/xqtl_resource_format" "File formats")
         (slice "/fgmb_weights_database" "FGMB atlas")
         (slice "/sceems_scores" "scEEMS scores")
+        (slice "/companion_papers" "Companion papers")
         (slice "/xqtl-data/qtl/FunGen_xQTL_protocol_data" "Protocol toy data") }}
         {{- $label := index . 1 -}}
         {{- with site.GetPage (index . 0) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label) }}{{ end }}

@@ -4,7 +4,8 @@ modality: caQTL
 short_title: ROSMAP single-nucleus
 cohort: ROSMAP
 context: "DLPFC, 6 cell types"
-sample_size:
+sample_size: 92
+sample_note: 92 donors profiled; up to 84 per cell type after QC
 access: controlled
 status: staged
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
@@ -30,6 +31,8 @@ FunGen-xQTL Analysis Team
 - Study Description: Chromatin accessibility quantitative trait loci (caQTL) using pseudo-bulk ATAC-seq profiles per cell type. Data are from the MIT snATAC-seq dataset (Mic, Ast, Oli, OPC, Exc, Inh). A response caQTL (r-caQTL) analysis was also performed to identify variants affecting chromatin remodeling in context of co-measured gene expression.
 - Cell types: Microglia (Mic), Astrocytes (Ast), Oligodendrocytes (Oli), OPCs (OPC), Excitatory neurons (Exc), Inhibitory neurons (Inh)
 - Assay: single-nucleus ATAC-seq (snATAC-seq)
+- Samples: 92 donors were profiled. The mfSuSiE paper kept donors with more than 50 nuclei in a cell type, up to 84 per cell type, and used a fixed set of 363,746 500-bp peaks.
+- Multi-cell-type fine-mapping: mfSuSiE fine-maps all six cell types jointly over the accessibility profile of each region. The paper applies it to 168 regions (AD GWAS loci from FunGen-xQTL colocalization plus 12 multi-cell-type caQTL regions); see [Companion papers](../../../companion_papers).
 
 ## Analysis Details
 

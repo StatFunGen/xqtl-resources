@@ -14,7 +14,7 @@ sample_size: 530
 
 # ROSMAP snRNA-seq Splicing (ISSAC)
 
-Single-nucleus RNA-seq splicing QTL analysis using the ISSAC (Integrative Single-cell Splicing Analysis with Context) method, applied to harmonized CUIMC1 and MIT single-nucleus data from ROSMAP DLPFC.
+Single-nucleus RNA-seq splicing QTL analysis using the ISSAC (Integrative single-cell splicing analysis and QTL caller) method, applied to harmonized CUIMC1 and MIT single-nucleus data from ROSMAP DLPFC.
 
 Please refer to [this document](../../study_info/ROSMAP.md) for an overview of the ROSMAP project.
 

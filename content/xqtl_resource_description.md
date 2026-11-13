@@ -156,7 +156,7 @@ All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](
 | **AD × xQTL integration summary** | 226-locus AD loci × xQTL workbook, variant-level and overlap tables, AD gene lists | [syn69865823](https://www.synapse.org/Synapse:syn69865823) |
 | ADSP LD reference (genotypes) | 16,571 European ancestry WGS samples, plink format | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP LD reference (LD matrices) | Pre-computed in-sample LD matrices for fine-mapping | [syn75082259](https://www.synapse.org/Synapse:syn75082259) |
-| ADSP LD sketch | Privacy-preserving LD sketch panel (plink2) | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
+| ADSP LD sketch | Privacy-preserving LD sketch panel (plink2), built from ADSP Release 4 European-ancestry whole genomes with B = 10,000 random projections | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
 | LDSC reference data | LD scores, sLDSC annotations and munged GWAS, computed from the ADSP LD reference | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | sLDSC reference data | Stratified LDSC baseline-LD v2.2 reference files | [syn75157484](https://www.synapse.org/Synapse:syn75157484) |
 

@@ -4,6 +4,8 @@
 
 FunGen-xQTL Multi-Brain (FGMB) Atlas is a multi-context regulome-wide association study (RWAS) resource for studying genetic regulation in aging-brain-related disease traits. It provides molecular expression prediction models across brain regions, cell types, cohorts, and molecular modalities, capturing both shared and context-specific regulatory effects.  
 
+The FGMB manuscript describes cis-genetic prediction models for 17,375 protein-coding genes across 36 molecular datasets, 18 contexts and 3 regulatory modalities, more than 293,000 gene-level or splice-event models in all.
+
 The released prediction model database and analysis outputs are available through the AD Knowledge Portal. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
 
 

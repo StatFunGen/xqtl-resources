@@ -13,7 +13,7 @@ last_verified:
 
 # ROSMAP DLPFC glycoproteomics
 
-Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC glycoproteomics (N-glycosylation proteomics).
+Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC glycoproteomics (N-glycosylation and glycation).
 
 Please refer to [this document](../../study_info/ROSMAP.md) for an overview of the ROSMAP project.
 
@@ -36,7 +36,7 @@ FunGen-xQTL Analysis Working Group
 
 ### Overview
 
-Glycoproteomics data profiling N-glycosylation of proteins from dorsolateral prefrontal cortex (DLPFC) tissue of ROSMAP participants. Protein glycosylation is quantified alongside standard protein abundance to characterize post-translational modifications relevant to Alzheimer's disease pathology.
+Glycoproteomics data profiling N-glycosylation and glycation of proteins from dorsolateral prefrontal cortex (DLPFC) tissue of ROSMAP participants. Protein glycosylation is quantified alongside standard protein abundance to characterize post-translational modifications relevant to Alzheimer's disease pathology.
 
 - **Brain region**: Dorsolateral prefrontal cortex (DLPFC)
 - **Data type**: Glycoproteomics (N-glycosylation mass spectrometry)
