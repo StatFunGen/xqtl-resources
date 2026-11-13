@@ -19,7 +19,7 @@
   {{- /* Summary charts (compact layout). Coverage matrix and download routes are always shown; sample size,
     recorded methods and multi-context datasets sit under "More charts". On narrow screens the whole block
     collapses to one row above the dataset list (catalog.js), so the order stays search, charts, list. */ -}}
-  {{- $qds := slice }}{{ range $qtl }}{{ if ne .short "Protocol toy data" }}{{ $qds = $qds | append . }}{{ end }}{{ end -}}
+  {{- $qds := $qtl -}}
   {{- $total := len $qds -}}
   {{- $mods := slice }}{{ range $x.modalities }}{{ if where $qds "family" .family }}{{ $mods = $mods | append . }}{{ end }}{{ end -}}
   <details class="catalog__charts" open data-charts>
@@ -68,6 +68,7 @@
     </div>
     <details class="cbar__table">
     <summary>Show as a table</summary>
+    <p class="cmx__note muted">Select a count to list those datasets.</p>
     <div class="cmx__wrap">
     <table class="cmx__table">
       <caption class="sr-only">QTL dataset pages by cohort and modality</caption>
@@ -80,7 +81,7 @@
       {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
         <tr>
           <th scope="row">{{ $c.name }}</th>
-          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}<td>{{ if $n }}{{ $n }}{{ else }}<span class="cmx__none" aria-label="none">—</span>{{ end }}</td>{{- end }}
+          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}<td>{{ if $n }}<button type="button" class="cmx__btn" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" aria-pressed="false" aria-label="List {{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}">{{ $n }}</button>{{ else }}<span class="cmx__none" aria-label="none">—</span>{{ end }}</td>{{- end }}
           <td class="cmx__all">{{ len $cr }}</td>
         </tr>
       {{- end }}{{ end }}
@@ -134,7 +135,7 @@
   <section class="card progress sizes" aria-labelledby="sizes-title">
     <div class="matrix__head">
       <h2 id="sizes-title">Sample size per QTL dataset</h2>
-      <span class="muted"><strong>Only {{ $withN }} of the {{ $total }} QTL datasets record a sample size</strong>; the others are not drawn. Log scale; dot colour is the modality.</span>
+      <span class="muted"><strong>Only {{ $withN }} of the {{ $total }} QTL datasets record a sample size</strong>; the others are not drawn. N is the sample size recorded on each dataset page; a note marks datasets where fewer samples were analyzed. Log scale; dot colour is the modality.</span>
     </div>
     <div class="sizes__plot">
       <div class="sizes__axis" aria-hidden="true">
@@ -148,11 +149,17 @@
         <li class="sizes__row">
           <a class="sizes__label" href="{{ .href }}">{{ $nm }}</a>
           <span class="sizes__track"><span class="sizes__dot" style="left:{{ printf "%.2f" $pos }}%;--c:{{ .color | safeCSS }}" aria-hidden="true"></span></span>
-          <span class="sizes__n">{{ lang.FormatNumberCustom 0 .n }}</span>
+          <span class="sizes__n">{{ lang.FormatNumberCustom 0 .n }}{{ if .nnote }}<sup aria-hidden="true">*</sup><span class="sr-only"> ({{ .nnote }})</span>{{ end }}</span>
         </li>
       {{- end }}
       </ul>
     </div>
+    {{- $noted := where $sized "nnote" "!=" "" }}
+    {{- with $noted }}
+    <ul class="sizes__notes" aria-hidden="true">
+      {{- range . }}<li>* {{ .short }}{{ if not (strings.Contains .short .label) }} {{ .label }}{{ end }}: {{ .nnote }}.</li>{{ end }}
+    </ul>
+    {{- end }}
   </section>
 
   {{- /* Recorded methods: for each xQTL protocol method, how many QTL dataset pages list it as done. */ -}}
@@ -213,7 +220,7 @@
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
       {{- $facet := dict
-        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "AD GWAS") (slice "reference" "Reference panels")) -}}
+        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "AD GWAS") (slice "reference" "Reference panels") (slice "example" "Protocol example data")) -}}
       <div class="facet"><div class="facet__title">Data type</div>
         <p class="facet__help">QTL results link genetic variants to a molecular trait. Omics data are the measurements behind them.</p>
         {{- range index $facet "kind" }}{{ partial "site/facet-opt.html" (dict "facet" "kind" "value" (index . 0) "label" (index . 1)) }}{{ end }}

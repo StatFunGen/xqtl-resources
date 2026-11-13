@@ -184,14 +184,15 @@
   root.querySelectorAll('[data-matrix-row-btn]').forEach(function (b) {
     b.addEventListener('click', function () {
       var c = b.dataset.matrixRowBtn, on = state.cohort === c && !state.family;
-      state.cohort = on ? null : c; state.family = null;
+      // The charts count QTL datasets, so a chart selection lists the same QTL datasets
+      state.cohort = on ? null : c; state.family = null; state.kind = on ? null : 'qtl';
       render(); toResults();
     });
   });
   root.querySelectorAll('[data-matrix-col]').forEach(function (b) {
     b.addEventListener('click', function () {
       var f = b.dataset.matrixCol, on = state.family === f && !state.cohort;
-      state.family = on ? null : f; state.cohort = null;
+      state.family = on ? null : f; state.cohort = null; state.kind = on ? null : 'qtl';
       render(); toResults();
     });
   });
@@ -224,22 +225,37 @@
     });
   }
 
-  // Chart tooltip for marks that carry data-tip (hover and keyboard focus)
-  var tip = null;
+  // Chart tooltip for marks that carry data-tip. It is tied to its mark with aria-describedby,
+  // stays open while the pointer is on the mark or on the tooltip, and Escape closes it.
+  var tip = null, tipFor = null, tipTimer = null;
   function showTip(el) {
-    if (!tip) { tip = document.createElement('div'); tip.className = 'viz-tip'; tip.setAttribute('role', 'tooltip'); document.body.appendChild(tip); }
+    clearTimeout(tipTimer);
+    if (!tip) {
+      tip = document.createElement('div'); tip.className = 'viz-tip'; tip.id = 'viz-tip'; tip.setAttribute('role', 'tooltip');
+      tip.addEventListener('mouseenter', function () { clearTimeout(tipTimer); });
+      tip.addEventListener('mouseleave', function () { hideTipSoon(); });
+      document.body.appendChild(tip);
+    }
+    if (tipFor && tipFor !== el) tipFor.removeAttribute('aria-describedby');
+    tipFor = el; el.setAttribute('aria-describedby', 'viz-tip');
     tip.textContent = el.getAttribute('data-tip'); tip.hidden = false;
     var r = el.getBoundingClientRect(), w = tip.offsetWidth;
     tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px';
-    tip.style.top = (r.top - tip.offsetHeight - 8 < 8 ? r.bottom + 8 : r.top - tip.offsetHeight - 8) + 'px';
+    tip.style.top = (r.top - tip.offsetHeight - 6 < 8 ? r.bottom + 6 : r.top - tip.offsetHeight - 6) + 'px';
   }
-  function hideTip() { if (tip) tip.hidden = true; }
+  function hideTip() {
+    clearTimeout(tipTimer);
+    if (tip) tip.hidden = true;
+    if (tipFor) { tipFor.removeAttribute('aria-describedby'); tipFor = null; }
+  }
+  function hideTipSoon() { clearTimeout(tipTimer); tipTimer = setTimeout(hideTip, 200); }
   root.querySelectorAll('[data-tip]').forEach(function (el) {
     el.addEventListener('mouseenter', function () { showTip(el); });
     el.addEventListener('focus', function () { showTip(el); });
-    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('mouseleave', hideTipSoon);
     el.addEventListener('blur', hideTip);
   });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && tip && !tip.hidden) hideTip(); });
   window.addEventListener('scroll', hideTip, { passive: true });
 
   applySort();

@@ -932,7 +932,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 @media (max-width: 640px) { .gettable thead { display: none; } .gettable tr { display: block; border-bottom: 1px solid var(--ln); padding: 8px 0; } .gettable th[scope=row], .gettable td { display: block; width: auto; border: 0; padding: 4px 12px; } .gettable td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); } .gettable tr { padding: 4px 0 10px; } }
 
 /* Chart tooltip (catalog.js): shown on hover or keyboard focus of any [data-tip] mark */
-.viz-tip { position: fixed; z-index: 60; pointer-events: none; padding: 5px 8px; border-radius: var(--r); background: var(--ink); color: var(--sf); font: 500 12.5px/1.35 var(--sans); white-space: nowrap; box-shadow: 0 4px 14px rgb(0 0 0 / .18); }
+.viz-tip { position: fixed; z-index: 60; padding: 5px 8px; border-radius: var(--r); background: var(--ink); color: var(--sf); font: 500 12.5px/1.35 var(--sans); white-space: nowrap; box-shadow: 0 4px 14px rgb(0 0 0 / .18); }
 @media print { .viz-tip { display: none; } }
 /* Narrowest phones: the brand keeps "FunGen-xQTL" and drops the "Resources" suffix visually (screen readers still read it), so it never runs under the search and theme buttons */
 .brand__name { overflow: hidden; text-overflow: ellipsis; }
@@ -1092,3 +1092,29 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 @media (min-width: 901px) {
   .facets { position: sticky; top: calc(var(--topbar) + 8px); align-self: start; max-height: calc(100vh - var(--topbar) - 16px); overflow-y: auto; overscroll-behavior: contain; }
 }
+/* Sample size: notes for datasets whose analysed N differs; on phones each dataset is a label and N above a full-width track */
+.sizes__n sup { margin-left: 1px; font-size: 11px; color: var(--ink2); }
+.sizes__notes { list-style: none; margin: 8px 0 0; padding: 0; font-size: 12.5px; color: var(--ink2); }
+@media (max-width: 640px) {
+  .sizes__plot { --lab: 0px; --nw: 0px; }
+  .sizes__axis { margin: 0 6px; }
+  .sizes__grid { display: none; }
+  .sizes__row { grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 18px; padding: 6px 0 2px; }
+  .sizes__label { grid-column: 1; grid-row: 1; }
+  .sizes__n { grid-column: 2; grid-row: 1; }
+  .sizes__track { grid-column: 1 / -1; grid-row: 2; height: 18px; margin: 0 6px; background: linear-gradient(var(--ln), var(--ln)) 0 50% / 100% 1px no-repeat; }
+}
+/* Essential chart marks get an edge darker than their fill, so light hues (mQTL, caQTL, haQTL) keep 3:1 against the card */
+.vbar__seg, .vbar__mod i, .cmx__dot, .sizes__dot { --edge: color-mix(in srgb, var(--c) 70%, #000); }
+.vbar__seg { box-shadow: inset 0 0 0 1px var(--edge); }
+.vbar__seg[aria-pressed="true"] { box-shadow: inset 0 0 0 1px var(--edge), 0 0 0 2px var(--sf), 0 0 0 4px var(--navy); }
+.vbar__mod i, .cmx__dot { box-shadow: inset 0 0 0 1px var(--edge); }
+.sizes__dot { box-shadow: 0 0 0 1.5px var(--edge); }
+/* Table view of the stacked bars: each count is a full-size filter button (44 px), the touch-friendly route to every bar part */
+.cmx__btn { min-width: 44px; min-height: 44px; padding: 0 6px; border: 1px solid var(--ln2); border-radius: 6px; background: var(--sf); color: var(--ink); font: 600 14px var(--mono); cursor: pointer; }
+.cmx__btn:hover { border-color: var(--ac); background: var(--acs); }
+.cmx__btn[aria-pressed="true"] { border-color: var(--navy); box-shadow: 0 0 0 2px var(--navy); }
+.cmx__btn.is-dim { opacity: .45; }
+.cmx__btn:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+.cmx__table td { padding: 3px 2px; }
+.cmx__table { table-layout: auto; min-width: 580px; }
