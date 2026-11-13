@@ -12,7 +12,7 @@
 {{- range hugo.Data.next_phase -}}
   {{- $label := "" }}{{ $color := "" -}}
   {{- $o := .omics -}}
-  {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end }}{{ end }}{{ end -}}
+  {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end }}{{ end }}{{ end -}}
   {{- $rows = $rows | append (dict "name" .name "href" "" "cohort" (.cohort | default "—") "context" (.context | default "—") "label" ($label | default "—") "color" $color "mark" "ring" "n" "" "access" (.access | default "")
       "acq" .acquisition "phase" "next" "src" (.synapse | default "—") "note" (.note | default "") "ph" (not .cohort)) -}}
 {{- end -}}

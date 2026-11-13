@@ -8,7 +8,7 @@
 {{- end -}}
 {{- range hugo.Data.next_phase -}}
   {{- if .methods -}}
-  {{- $grid = $grid | append (dict "name" .name "href" "" "tag" (printf "%s · next phase" .modality) "color" "oklch(0.6 0.13 250)" "methods" .methods "next" true) -}}
+  {{- $grid = $grid | append (dict "name" .name "href" "" "tag" (printf "%s · next phase" .modality) "color" "var(--m-eQTL)" "methods" .methods "next" true) -}}
   {{- end -}}
 {{- end -}}
 {{- $ready := 0 -}}

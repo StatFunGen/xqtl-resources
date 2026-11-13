@@ -70,7 +70,7 @@
       <ul class="chips">
       {{- range $x.modalities }}
         {{- $n := len (where $qtl "family" .family) }}
-        <li><a class="chip" href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/mark.html" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill") }}{{ .id }} <span class="chip__n">{{ $n }}</span></a></li>
+        <li><a class="chip" href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/mark.html" (dict "color" (printf "var(--m-%s)" .id) "mark" "fill") }}{{ .id }} <span class="chip__n">{{ $n }}</span></a></li>
       {{- end }}
       </ul>
     </div>

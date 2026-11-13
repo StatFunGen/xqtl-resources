@@ -30,12 +30,12 @@
 
 {{- $label := "" -}}{{- $family := "" -}}{{- $color := "" -}}{{- $mark := "muted" -}}
 {{- if eq $kind "qtl" -}}
-  {{- range $x.modalities }}{{ if eq .id $folder }}{{ $label = .id }}{{ $family = .family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- range $x.modalities }}{{ if eq .id $folder }}{{ $label = .id }}{{ $family = .family }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end -}}
   {{- if and (eq $label "eQTL") (findRE `(?i)snRNA-seq|single-nucleus` $p.Title) }}{{ $label = "snuc-eQTL" }}{{ end -}}
   {{- if $label }}{{ $mark = "fill" }}{{ else }}{{ $label = "Protocol" }}{{ end -}}
 {{- else if eq $kind "omics" -}}
   {{- range $x.omics }}{{ if eq .folder $folder }}{{ $label = .label }}{{ $family = .family }}{{ end }}{{ end -}}
-  {{- range $x.modalities }}{{ if eq .family $family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- range $x.modalities }}{{ if eq .family $family }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end -}}
   {{- if eq $family "Genotype" }}{{ $color = "#8d959f" }}{{ end -}}
   {{- if $color }}{{ $mark = "ring" }}{{ end -}}
 {{- else if eq $kind "gwas" -}}

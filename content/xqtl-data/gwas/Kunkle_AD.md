@@ -9,7 +9,7 @@ lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
 
-# Alzheimer's Disease GWAS Summary Data (Kunkle)
+# Alzheimer's disease GWAS: Kunkle et al. 2019
 
 SNP-level association summary statistics for Alzheimer's disease (AD) from [Kunkle et al. 2019](https://doi.org/10.1038/s41588-019-0358-2) in *Nature Genetics*. Positions were converted from hg19 to hg38 with liftOver.
 

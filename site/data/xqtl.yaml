@@ -23,17 +23,17 @@ home:
     url: ""
 
 # QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
-# `omics` the matching folders under content/xqtl-data/omics. Colour: oklch(0.6 0.13 hue).
+# `omics` the matching folders under content/xqtl-data/omics. Colour: the --m-<id> token in assets/xqtl/site.css.
 modalities:
-  - {id: eQTL, family: Expression, what: Gene expression, hue: 250, omics: [expression, snRNA_seq]}
-  - {id: sQTL, family: Splicing, what: Alternative splicing, hue: 300, omics: [splicing]}
-  - {id: tpQTL, family: Transcriptomic pattern, what: Transcriptomic pattern usage (Torino), hue: 325, omics: []}
-  - {id: mQTL, family: Methylation, what: DNA methylation, hue: 350, omics: [methylation]}
-  - {id: caQTL, family: Chromatin, what: Chromatin accessibility, hue: 30, omics: [snATAC]}
-  - {id: haQTL, family: Histone acetylation, what: Histone acetylation, hue: 70, omics: [histone_ChIPSeq]}
-  - {id: metQTL, family: Metabolomics, what: Metabolite abundance, hue: 110, omics: [metabolomics]}
-  - {id: pQTL, family: Proteomics, what: Protein abundance, hue: 155, omics: [proteomics]}
-  - {id: glycoQTL, family: Glycoproteomics, what: Glycoprotein abundance, hue: 200, omics: [glycoproteomics]}
+  - {id: eQTL, family: Expression, what: Gene expression, omics: [expression, snRNA_seq]}
+  - {id: sQTL, family: Splicing, what: Alternative splicing, omics: [splicing]}
+  - {id: tpQTL, family: Transcriptomic pattern, what: Transcriptomic pattern usage (Torino), omics: []}
+  - {id: mQTL, family: Methylation, what: DNA methylation, omics: [methylation]}
+  - {id: caQTL, family: Chromatin, what: Chromatin accessibility, omics: [snATAC]}
+  - {id: haQTL, family: Histone acetylation, what: Histone acetylation, omics: [histone_ChIPSeq]}
+  - {id: metQTL, family: Metabolomics, what: Metabolite abundance, omics: [metabolomics]}
+  - {id: pQTL, family: Proteomics, what: Protein abundance, omics: [proteomics]}
+  - {id: glycoQTL, family: Glycoproteomics, what: Glycoprotein abundance, omics: [glycoproteomics]}
 
 # Omics folders, in menu order, with the label shown on the site
 omics:
@@ -109,7 +109,7 @@ method_status:
 
 # Inventory acquisition stages
 acquisition:
-  in_hand: {label: In hand, desc: "Obtained and on the AD Knowledge Portal or DSS. Release status is shown on each dataset page."}
+  in_hand: {label: In hand, desc: "Obtained and on the AD Knowledge Portal or DSS. Each dataset page links to its files."}
   reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
   requested: {label: Requested, desc: "Outreach under way"}
   to_identify: {label: To identify, desc: "Candidates not yet found"}

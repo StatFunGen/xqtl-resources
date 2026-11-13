@@ -7,13 +7,13 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 | [A](#a) | [E](#e) | [F](#f) | [G](#g) | [K](#k) | [M](#m) | [N](#n) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
 
 ## A
-* [Alzheimer's Disease GWAS Summary Data (Bellenguez)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics.
+* [Alzheimer's disease GWAS: Bellenguez et al. 2022](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka, Hao Sun and Rui Dong.**
-* [Alzheimer's Disease GWAS Summary Data (Jansen)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Jansen_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics.
+* [Alzheimer's disease GWAS: Jansen et al. 2019](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Jansen_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
-* [Alzheimer's Disease GWAS Summary Data (Kunkle)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Kunkle_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics.
+* [Alzheimer's disease GWAS: Kunkle et al. 2019](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Kunkle_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
-* [Alzheimer's Disease GWAS Summary Data (Wightman)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics.
+* [Alzheimer's disease GWAS: Wightman et al. 2021](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
 
 ## E

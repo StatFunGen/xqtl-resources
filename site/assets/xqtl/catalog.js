@@ -6,7 +6,7 @@
   var root = document.querySelector('[data-catalog]');
   if (!root) return;
 
-  var KEYS = ['kind', 'cohort', 'family', 'tissue', 'status', 'access'];
+  var KEYS = ['kind', 'cohort', 'family', 'tissue', 'access'];
   var rows = Array.prototype.slice.call(root.querySelectorAll('[data-row]'));
   var opts = Array.prototype.slice.call(root.querySelectorAll('[data-facet]'));
   var qInput = root.querySelector('[data-q]');
@@ -74,7 +74,9 @@
   function matches(row, except) {
     for (var i = 0; i < KEYS.length; i++) {
       var k = KEYS[i];
-      if (k !== except && state[k] && row.dataset[k] !== state[k]) return false;
+      if (k === except || !state[k]) continue;
+      // access lists every way to get the data (an open NIAGADS copy adds "open" to a controlled row)
+      if (k === 'access' ? (row.dataset.access || '').split(' ').indexOf(state[k]) < 0 : row.dataset[k] !== state[k]) return false;
     }
     var q = state.q.trim().toLowerCase();
     if (q) {
@@ -104,7 +106,7 @@
     opts.forEach(function (o) {
       var k = o.dataset.facet, v = o.dataset.value, on = state[k] === v;
       var n = 0;
-      rows.forEach(function (r) { if (r.dataset[k] === v && matches(r, k)) n++; });
+      rows.forEach(function (r) { var has = k === 'access' ? (r.dataset.access || '').split(' ').indexOf(v) >= 0 : r.dataset[k] === v; if (has && matches(r, k)) n++; });
       o.setAttribute('aria-pressed', on ? 'true' : 'false');
       var c = o.querySelector('[data-count-for]');
       if (c) c.textContent = n;
@@ -206,6 +208,24 @@
   openBtn.addEventListener('click', function () { sheet(true); });
   closeBtn.addEventListener('click', function () { sheet(false); });
   facets.addEventListener('keydown', function (e) { if (e.key === 'Escape') sheet(false); });
+
+  // Chart tooltip for marks that carry data-tip (hover and keyboard focus)
+  var tip = null;
+  function showTip(el) {
+    if (!tip) { tip = document.createElement('div'); tip.className = 'viz-tip'; tip.setAttribute('role', 'tooltip'); document.body.appendChild(tip); }
+    tip.textContent = el.getAttribute('data-tip'); tip.hidden = false;
+    var r = el.getBoundingClientRect(), w = tip.offsetWidth;
+    tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px';
+    tip.style.top = (r.top - tip.offsetHeight - 8 < 8 ? r.bottom + 8 : r.top - tip.offsetHeight - 8) + 'px';
+  }
+  function hideTip() { if (tip) tip.hidden = true; }
+  root.querySelectorAll('[data-tip]').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { showTip(el); });
+    el.addEventListener('focus', function () { showTip(el); });
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('blur', hideTip);
+  });
+  window.addEventListener('scroll', hideTip, { passive: true });
 
   applySort();
   render();

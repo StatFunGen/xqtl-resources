@@ -38,6 +38,8 @@
   --topbar: 56px;
   --r: 6px;
   --r2: 8px;
+  /* Molecular modality colours: one fixed categorical order, checked for colour-blind and normal-vision separation (dataviz validator) */
+  --m-eQTL: #2a78d6; --m-sQTL: #eb6834; --m-tpQTL: #7d3c98; --m-mQTL: #1baf7a; --m-caQTL: #eda100; --m-haQTL: #e87ba4; --m-metQTL: #008300; --m-pQTL: #6250d6; --m-glycoQTL: #e34948;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -46,6 +48,7 @@
     --ink: #e4e9ee; --ink2: #a9b5bf; --ink3: #9aa7b2; --ln: #3a4a57; --ln2: #4a5a67;
     --on-pr: #1c2630; --acs: #273a4d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
     --code: #1f2a34; --empty: #33424e; --dim: #435360; --next: #1d1f1a; --mk-ink: #dfe7ee; --mk-mute: #4a5661;
+    --m-eQTL: #3987e5; --m-sQTL: #d95926; --m-tpQTL: #a05cc0; --m-mQTL: #199e70; --m-caQTL: #c98500; --m-haQTL: #d55181; --m-metQTL: #2b9a2b; --m-pQTL: #9085e9; --m-glycoQTL: #e66767;
     color-scheme: dark;
   }
 }
@@ -54,6 +57,7 @@
   --ink: #e4e9ee; --ink2: #a9b5bf; --ink3: #9aa7b2; --ln: #3a4a57; --ln2: #4a5a67;
   --on-pr: #1c2630; --acs: #273a4d; --okb: #1b3324; --okf: #8fd6a8; --stb: #3a2f17; --stf: #f0cf86;
   --code: #1f2a34; --empty: #33424e; --dim: #435360; --next: #1d1f1a; --mk-ink: #dfe7ee; --mk-mute: #4a5661;
+  --m-eQTL: #3987e5; --m-sQTL: #d95926; --m-tpQTL: #a05cc0; --m-mQTL: #199e70; --m-caQTL: #c98500; --m-haQTL: #d55181; --m-metQTL: #2b9a2b; --m-pQTL: #9085e9; --m-glycoQTL: #e66767;
   color-scheme: dark;
 }
 
@@ -975,3 +979,44 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .gettable__syn { display: block; margin-bottom: 6px; }
 .linkbtn { background: none; border: 0; padding: 0 2px; color: var(--teal); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; }
 @media (max-width: 640px) { .gettable thead { display: none; } .gettable tr { display: block; border-bottom: 1px solid var(--ln); padding: 8px 0; } .gettable th[scope=row], .gettable td { display: block; width: auto; border: 0; padding: 4px 12px; } .gettable td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); } .gettable tr { padding: 4px 0 10px; } }
+
+/* Sample size per QTL dataset: strip plot on a log scale, one row per modality, dots in the modality colour */
+.sizes__plot { padding: 6px 0 2px; }
+.sizes__plot { --lab: 72px; }
+.sizes__axis { position: relative; height: 18px; margin-left: var(--lab); margin-right: 12px; }
+.sizes__tick { position: absolute; bottom: 3px; transform: translateX(-50%); font: 500 11.5px var(--mono); color: var(--ink2); }
+.sizes__rows { position: relative; list-style: none; margin: 0; padding: 0; }
+.sizes__grid { position: absolute; top: 0; bottom: 0; left: var(--lab); right: 12px; pointer-events: none; }
+.sizes__grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--ln); }
+.sizes__row { display: grid; grid-template-columns: var(--lab) 1fr; align-items: center; min-height: 28px; border-bottom: 1px solid var(--ln); }
+.sizes__row:last-child { border-bottom: 0; }
+.sizes__label { font: 600 13px var(--sans); color: var(--ink); }
+.sizes__track { position: relative; height: 28px; margin-right: 12px; background: linear-gradient(var(--ln), var(--ln)) 0 50% / 100% 1px no-repeat; }
+.sizes__dot { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px var(--sf); }
+.sizes__dot:hover, .sizes__dot:focus-visible { box-shadow: 0 0 0 2px var(--sf), 0 0 0 4px var(--ink); outline: none; z-index: 1; }
+.sizes__table { margin-top: 8px; font-size: 13px; }
+.sizes__table > summary { cursor: pointer; color: var(--ac); font-weight: 500; }
+.sizes__table .dtable { margin-top: 6px; }
+/* Open download by modality: two steps of the accent hue, open copy darker */
+.opencopy { --oc-open: var(--ac); --oc-syn: color-mix(in oklab, var(--ac) 32%, var(--sf)); }
+.opencopy__key { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 4px 4px 8px; font-size: 12.5px; color: var(--ink2); }
+.opencopy__key span { display: inline-flex; align-items: center; gap: 6px; }
+.opencopy__sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.opencopy__sw--open { background: var(--oc-open); }
+.opencopy__sw--syn { background: var(--oc-syn); }
+.opencopy__row { grid-template-columns: 5.5em 1fr 6.5em; }
+.opencopy__bar { display: flex; gap: 2px; height: 10px; min-width: 12px; }
+.opencopy__seg { border-radius: 2px; }
+.opencopy__seg:first-child { border-radius: 4px 2px 2px 4px; }
+.opencopy__seg:last-child { border-radius: 2px 4px 4px 2px; }
+.opencopy__seg:only-child { border-radius: 4px; }
+.opencopy__seg--open { background: var(--oc-open); }
+.opencopy__seg--syn { background: var(--oc-syn); }
+/* Chart tooltip (catalog.js): shown on hover or keyboard focus of any [data-tip] mark */
+.viz-tip { position: fixed; z-index: 60; pointer-events: none; padding: 5px 8px; border-radius: var(--r); background: var(--ink); color: var(--sf); font: 500 12.5px/1.35 var(--sans); white-space: nowrap; box-shadow: 0 4px 14px rgb(0 0 0 / .18); }
+@media print { .sizes__table, .viz-tip { display: none; } }
+/* Narrowest phones: the brand keeps "FunGen-xQTL" and drops the "Resources" suffix visually (screen readers still read it), so it never runs under the search and theme buttons */
+.brand__name { overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 380px) {
+  .brand__sub { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}

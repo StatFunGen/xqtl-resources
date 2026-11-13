@@ -28,7 +28,7 @@
     <div class="qmods__key" role="group" aria-label="Filter by molecular trait">
       {{- range $m := $x.modalities }}
       {{- $nm := len (where $qtl "family" $m.family) }}
-      <button type="button" class="qchip qchip--key" data-matrix-col="{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" title="{{ $m.what }}"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}<span class="qchip__n">{{ $nm }}</span></button>
+      <button type="button" class="qchip qchip--key" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}<span class="qchip__n">{{ $nm }}</span></button>
       {{- end }}
     </div>
     {{- $cmax := 1 }}{{ range $x.cohorts }}{{ $k := len (where $qtl "cohort" .name) }}{{ if gt $k $cmax }}{{ $cmax = $k }}{{ end }}{{ end }}
@@ -40,13 +40,13 @@
         <button type="button" class="qmods__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="qmods__total">{{ len $cr }} result {{ if eq (len $cr) 1 }}page{{ else }}pages{{ end }} · {{ $nt }} {{ if eq $nt 1 }}trait{{ else }}traits{{ end }}</span></button>
         <span class="qmods__body">
         <span class="qmods__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $cr) 100.0) $cmax) }}%">
-          {{- range $m := $x.modalities }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<span class="qmods__seg" style="flex:{{ $n }};--c:oklch(0.6 0.13 {{ $m.hue }})" title="{{ $m.id }}: {{ $n }}"></span>{{ end }}{{ end -}}
+          {{- range $m := $x.modalities }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<span class="qmods__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-tip="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}"></span>{{ end }}{{ end -}}
         </span>
         <span class="qmods__chips">
           {{- range $m := $x.modalities }}
           {{- $n := len (where $cr "family" $m.family) }}
           {{- if $n }}
-          <button type="button" class="qchip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:oklch(0.6 0.13 {{ $m.hue }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}{{ if gt $n 1 }}<span class="qchip__n">{{ $n }}</span>{{ end }}</button>
+          <button type="button" class="qchip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}{{ if gt $n 1 }}<span class="qchip__n">{{ $n }}</span>{{ end }}</button>
           {{- end }}
           {{- end }}
         </span>
@@ -134,6 +134,79 @@
       {{- end }}
     </ul>
   </section>
+
+  {{- /* Sample size per QTL dataset: one dot per dataset on a log scale, one row per modality.
+    Only pages that record a sample size are drawn; the rest are counted in the note. */ -}}
+  {{- $lo := math.Log 50 }}{{ $hi := math.Log 1000 -}}
+  {{- $sized := slice }}{{ range $qds }}{{ if .n }}{{ $sized = $sized | append . }}{{ end }}{{ end -}}
+  {{- $withN := len $sized -}}
+  <section class="card progress sizes" aria-labelledby="sizes-title">
+    <div class="matrix__head">
+      <h2 id="sizes-title">Sample size per QTL dataset</h2>
+      <span class="muted">Each dot is one dataset, coloured by modality, on a log scale. {{ $withN }} of the {{ $total }} QTL datasets record a sample size; the others are not drawn.</span>
+    </div>
+    <div class="sizes__plot">
+      <div class="sizes__axis" aria-hidden="true">
+        {{- range slice 50 100 200 500 1000 }}<span class="sizes__tick" style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%">{{ lang.FormatNumberCustom 0 . }}</span>{{ end -}}
+      </div>
+      <ul class="sizes__rows">
+        <li class="sizes__grid" aria-hidden="true">{{ range slice 50 100 200 500 1000 }}<i style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%"></i>{{ end }}</li>
+      {{- range $m := $x.modalities }}
+        {{- $ds := where $sized "family" $m.family -}}
+        {{- if $ds }}
+        <li class="sizes__row">
+          <span class="sizes__label">{{ $m.id }}</span>
+          <span class="sizes__track">
+          {{- range $ds }}
+            {{- $nm := .short }}{{ if not (strings.Contains .short .label) }}{{ $nm = printf "%s %s" .short .label }}{{ end }}
+            {{- $pos := div (mul (sub (math.Log (float .n)) $lo) 100.0) (sub $hi $lo) }}{{ $pos = math.Max 0 (math.Min 100 $pos) -}}
+            <a class="sizes__dot" href="{{ .href }}" style="left:{{ printf "%.2f" $pos }}%;--c:var(--m-{{ $m.id }})" aria-label="{{ $nm }}: {{ lang.FormatNumberCustom 0 .n }} samples" data-tip="{{ $nm }} · N {{ lang.FormatNumberCustom 0 .n }}"></a>
+          {{- end }}
+          </span>
+        </li>
+        {{- end }}
+      {{- end }}
+      </ul>
+    </div>
+    <details class="sizes__table">
+      <summary>Show as a table</summary>
+      <table class="dtable">
+        <thead><tr><th scope="col">Dataset</th><th scope="col">Modality</th><th scope="col" class="r">N</th></tr></thead>
+        <tbody>
+        {{- range sort $sized "n" "desc" }}
+          <tr><td><a href="{{ .href }}">{{ .short }}{{ if not (strings.Contains .short .label) }} {{ .label }}{{ end }}</a></td><td>{{ .label }}</td><td class="r mono">{{ lang.FormatNumberCustom 0 .n }}</td></tr>
+        {{- end }}
+        </tbody>
+      </table>
+    </details>
+  </section>
+
+  {{- /* How each modality can be downloaded: QTL datasets with an open NIAGADS copy (NG00184) versus
+    AD Knowledge Portal (Synapse) only. Two steps of one hue, counts as text. */ -}}
+  <section class="card progress opencopy" aria-labelledby="open-title">
+    <div class="matrix__head">
+      <h2 id="open-title">Open download by modality</h2>
+      <span class="muted">QTL datasets with an open copy on NIAGADS (NG00184, no application) and those on the AD Knowledge Portal only (free Synapse account and data use certificate).</span>
+    </div>
+    <div class="opencopy__key" aria-hidden="true"><span><i class="opencopy__sw opencopy__sw--open"></i>Open on NIAGADS too</span><span><i class="opencopy__sw opencopy__sw--syn"></i>AD Knowledge Portal only</span></div>
+    {{- $omax := 1 }}{{ range $x.modalities }}{{ $k := len (where $qds "family" .family) }}{{ if gt $k $omax }}{{ $omax = $k }}{{ end }}{{ end }}
+    <ul class="progress__list">
+      {{- range $m := $x.modalities }}
+      {{- $all := where $qds "family" $m.family -}}
+      {{- if $all }}
+      {{- $o := len (where $all "ng" true) }}{{ $c := sub (len $all) $o }}
+      <li class="progress__row opencopy__row" title="{{ $m.id }}: {{ $o }} open on NIAGADS, {{ $c }} AD Knowledge Portal only">
+        <span class="progress__label">{{ $m.id }}</span>
+        <span class="opencopy__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $all) 100.0) $omax) }}%">
+          {{- if $o }}<span class="opencopy__seg opencopy__seg--open" style="flex:{{ $o }}"></span>{{ end -}}
+          {{- if $c }}<span class="opencopy__seg opencopy__seg--syn" style="flex:{{ $c }}"></span>{{ end -}}
+        </span>
+        <span class="progress__val"><strong>{{ $o }}</strong> open <span class="muted">of {{ len $all }}</span></span>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
   </div>
   </details>
 
@@ -150,7 +223,7 @@
         {{- range slice "AD GWAS" "ADSP" }}{{ partial "site/facet-opt.html" (dict "facet" "cohort" "value" . "label" .) }}{{ end }}
       </div>
       <div class="facet"><div class="facet__title">Modality</div>
-        {{- range $x.modalities }}{{ partial "site/facet-opt.html" (dict "facet" "family" "value" .family "label" (printf "%s · %s" .id .family) "mark" (dict "color" (printf "oklch(0.6 0.13 %v)" .hue) "mark" "fill")) }}{{ end }}
+        {{- range $x.modalities }}{{ partial "site/facet-opt.html" (dict "facet" "family" "value" .family "label" (printf "%s · %s" .id .family) "mark" (dict "color" (printf "var(--m-%s)" .id) "mark" "fill")) }}{{ end }}
         {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Genotype" "label" "Genotype / WGS" "mark" (dict "color" "#8d959f" "mark" "fill")) }}
         {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "GWAS" "label" "GWAS") }}
         {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Reference" "label" "Reference") }}
@@ -160,11 +233,9 @@
         {{- range $rows }}{{ with .context }}{{ $t := index (split . ",") 0 | strings.TrimSpace }}{{ if not (in $tissues $t) }}{{ $tissues = $tissues | append $t }}{{ end }}{{ end }}{{ end -}}
         {{- range sort $tissues }}{{ partial "site/facet-opt.html" (dict "facet" "tissue" "value" . "label" (strings.FirstUpper .)) }}{{ end }}
       </div>
-      <div class="facet"><div class="facet__title">Status</div>
-        {{- range $k, $v := $x.status }}{{ if ne $k "deprecated" }}{{ partial "site/facet-opt.html" (dict "facet" "status" "value" $k "label" $v.label) }}{{ end }}{{ end }}
-      </div>
-      <div class="facet"><div class="facet__title">Access</div>
-        {{- range slice "open" "controlled" "requested" }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $x.access .).label "acc" .) }}{{ end }}
+      <div class="facet"><div class="facet__title">How to download</div>
+        {{- $alab := dict "open" "Open download (no application)" "controlled" "AD Knowledge Portal (Synapse)" "requested" "On request" }}
+        {{- range slice "open" "controlled" "requested" }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $alab .) "acc" .) }}{{ end }}
       </div>
     </aside>
 
@@ -185,21 +256,19 @@
           <th scope="col" aria-sort="none"><button type="button" class="sort" data-sort="type">Type</button></th>
           <th scope="col">Tissue / cell</th>
           <th scope="col" class="r" aria-sort="none"><button type="button" class="sort" data-sort="n" title="Sample size, where the dataset page records one">N</button></th>
-          <th scope="col">Status</th>
           <th scope="col">Access</th>
           <th scope="col">Location</th>
         </tr></thead>
         <tbody>
         {{- range $rows }}
           {{- $tissue := "" }}{{ with .context }}{{ $tissue = index (split . ",") 0 | strings.TrimSpace }}{{ end }}
-          <tr data-row data-title="{{ lower .title }}" data-type="{{ lower .label }}" data-n="{{ .n }}" data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-status="{{ .status }}" data-access="{{ .access }}"
+          <tr data-row data-title="{{ lower .title }}" data-type="{{ lower .label }}" data-n="{{ .n }}" data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-access="{{ .access }}{{ if and .ng (ne .access "open") }} open{{ end }}"
               data-search="{{ lower (delimit (slice .title .context (delimit .analysts " ") .loc .label .cohort .kindLabel) " ") }}">
             <td class="c-name"><a href="{{ .href }}">{{ .title }}</a></td>
             <td class="c-cohort">{{ .cohort }}</td>
             <td class="c-type">{{ partial "ui/mark.html" . }}{{ .label }}</td>
             <td class="c-tissue">{{ .context }}</td>
             <td class="c-n r mono">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
-            <td class="c-status">{{ with .status }}{{ partial "ui/status.html" . }}{{ end }}</td>
             <td class="c-access">{{ with .access }}{{ partial "ui/access.html" . }}{{ end }}</td>
             <td class="c-loc"><span class="mono accent">{{ .loc | default "—" }}</span>{{ if .ng }}<span class="mono subtle">+ NG00184 open</span>{{ end }}</td>
           </tr>

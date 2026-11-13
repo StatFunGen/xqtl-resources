@@ -662,7 +662,8 @@ python scripts/hugo_generator.py --build --minify
         try:
             os.chdir(self.website_dir)
             
-            cmd = ['hugo']
+            # The --base-url option decides canonical links and alias redirects, not only the README
+            cmd = ['hugo', '--baseURL', self.base_url]
             if minify:
                 cmd.append('--minify')
             
@@ -691,7 +692,7 @@ python scripts/hugo_generator.py --build --minify
         try:
             os.chdir(self.website_dir)
             
-            cmd = ['hugo', 'server']
+            cmd = ['hugo', 'server', '--baseURL', self.base_url]
             if port != 1313:
                 cmd.extend(['--port', str(port)])
             

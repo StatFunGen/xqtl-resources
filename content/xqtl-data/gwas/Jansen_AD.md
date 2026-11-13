@@ -9,7 +9,7 @@ lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
 
-# Alzheimer's Disease GWAS Summary Data (Jansen)
+# Alzheimer's disease GWAS: Jansen et al. 2019
 
 SNP-level association summary statistics for Alzheimer's disease (AD) from [Jansen et al. 2019](https://doi.org/10.1038/s41588-018-0311-9) in *Nature Genetics*. The study uses proxy AD individuals from the UK Biobank.
 
