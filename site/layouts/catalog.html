@@ -120,6 +120,18 @@
       {{- end }}
     </ul>
     <p class="dlr__sum"><span><strong>{{ $nOpen }}</strong> with an open copy</span><span><strong>{{ $nPortal }}</strong> AD Knowledge Portal only</span> <a href="{{ "how_to_get_data/" | relURL }}">How to get the data</a></p>
+    <details class="dlr__table">
+      <summary>Show as a table</summary>
+      <table class="dtable">
+        <caption class="sr-only">QTL datasets by modality and download route</caption>
+        <thead><tr><th scope="col">Modality</th><th scope="col" class="r">Open on NIAGADS</th><th scope="col" class="r">AD Knowledge Portal only</th><th scope="col" class="r">All</th></tr></thead>
+        <tbody>
+        {{- range $m := $mods }}{{ $all := where $qds "family" $m.family }}{{ $o := len (where $all "ng" true) }}
+          <tr><th scope="row">{{ $m.id }}</th><td class="r mono">{{ $o }}</td><td class="r mono">{{ sub (len $all) $o }}</td><td class="r mono">{{ len $all }}</td></tr>
+        {{- end }}
+        </tbody>
+      </table>
+    </details>
   </section>
 
   </div>
