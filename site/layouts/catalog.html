@@ -16,55 +16,129 @@
     </div>
   </header>
 
-  {{- /* Summary charts. On narrow screens they collapse to one row above the dataset list (catalog.js),
-    so the reading and focus order stays search, charts, list at every width. */ -}}
+  {{- /* Summary charts (compact layout). Coverage matrix and download routes are always shown; sample size,
+    recorded methods and multi-context datasets sit under "More charts". On narrow screens the whole block
+    collapses to one row above the dataset list (catalog.js), so the order stays search, charts, list. */ -}}
+  {{- $qds := slice }}{{ range $qtl }}{{ if ne .short "Protocol toy data" }}{{ $qds = $qds | append . }}{{ end }}{{ end -}}
+  {{- $total := len $qds -}}
+  {{- $mods := slice }}{{ range $x.modalities }}{{ if where $qds "family" .family }}{{ $mods = $mods | append . }}{{ end }}{{ end -}}
   <details class="catalog__charts" open data-charts>
-  <summary class="catalog__charts-sum">Summary charts<span class="muted">QTL results by cohort, analysis progress, tissues and cohorts</span></summary>
-  <section class="card matrix qmods" aria-labelledby="matrix-title">
+  <summary class="catalog__charts-sum">Summary charts<span class="muted">Cohorts by modality, download routes, sample sizes and methods</span></summary>
+
+  {{- /* Coverage matrix: cohort x modality counts of QTL dataset pages. Every count, cohort and modality filters the list. */ -}}
+  <section class="card cmx" aria-labelledby="cmx-title">
     <div class="matrix__head">
-      <h2 id="matrix-title">QTL results by cohort</h2>
-      <span class="muted">Bar length is the number of QTL result pages for the cohort, split by molecular trait. Select a chip, a cohort or a trait to filter the dataset list below.</span>
+      <h2 id="cmx-title">Which cohorts cover each modality?</h2>
+      <span class="muted">Counts of QTL dataset pages. Select a count, a cohort or a modality to filter the dataset list below.</span>
     </div>
-    <div class="qmods__key" role="group" aria-label="Filter by molecular trait">
-      {{- range $m := $x.modalities }}
-      {{- $nm := len (where $qtl "family" $m.family) }}
-      <button type="button" class="qchip qchip--key" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}<span class="qchip__n">{{ $nm }}</span></button>
-      {{- end }}
-    </div>
-    {{- $cmax := 1 }}{{ range $x.cohorts }}{{ $k := len (where $qtl "cohort" .name) }}{{ if gt $k $cmax }}{{ $cmax = $k }}{{ end }}{{ end }}
-    <ul class="qmods__rows">
+    <div class="cmx__wrap">
+    <table class="cmx__table">
+      <caption class="sr-only">QTL dataset pages by cohort and modality</caption>
+      <thead><tr>
+        <th scope="col" class="cmx__corner">Cohort</th>
+        {{- range $m := $mods }}
+        <th scope="col"><button type="button" class="cmx__col" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}</button></th>
+        {{- end }}
+        <th scope="col" class="cmx__all">All</th>
+      </tr></thead>
+      <tbody>
       {{- range $c := $x.cohorts }}
-      {{- $cr := where $qtl "cohort" $c.name -}}
-      {{- $nt := 0 }}{{ range $x.modalities }}{{ if where $cr "family" .family }}{{ $nt = add $nt 1 }}{{ end }}{{ end -}}
-      <li class="qmods__row" data-matrix-row="{{ $c.name }}">
-        <button type="button" class="qmods__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="qmods__total">{{ len $cr }} result {{ if eq (len $cr) 1 }}page{{ else }}pages{{ end }} · {{ $nt }} {{ if eq $nt 1 }}trait{{ else }}traits{{ end }}</span></button>
-        <span class="qmods__body">
-        <span class="qmods__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $cr) 100.0) $cmax) }}%">
-          {{- range $m := $x.modalities }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<span class="qmods__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-tip="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}"></span>{{ end }}{{ end -}}
-        </span>
-        <span class="qmods__chips">
-          {{- range $m := $x.modalities }}
-          {{- $n := len (where $cr "family" $m.family) }}
-          {{- if $n }}
-          <button type="button" class="qchip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} result {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false"><span class="qchip__dot" aria-hidden="true"></span>{{ $m.id }}{{ if gt $n 1 }}<span class="qchip__n">{{ $n }}</span>{{ end }}</button>
+        {{- $cr := where $qds "cohort" $c.name }}{{ if $cr }}
+        <tr data-matrix-row="{{ $c.name }}">
+          <th scope="row"><button type="button" class="cmx__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button></th>
+          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}
+          <td>{{ if $n }}<button type="button" class="cmx__cell" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false">{{ $n }}</button>{{ else }}<span class="cmx__none" aria-label="none">—</span>{{ end }}</td>
           {{- end }}
-          {{- end }}
+          <td class="cmx__all">{{ len $cr }}</td>
+        </tr>
+        {{- end }}
+      {{- end }}
+      </tbody>
+      <tfoot><tr>
+        <th scope="row">All cohorts</th>
+        {{- range $m := $mods }}<td>{{ len (where $qds "family" $m.family) }}</td>{{ end }}
+        <td class="cmx__all">{{ $total }}</td>
+      </tr></tfoot>
+    </table>
+    </div>
+    {{- /* Phones: one card per cohort with labelled counts instead of the wide table */ -}}
+    <ul class="cmx__cards">
+      {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
+      <li data-matrix-row="{{ $c.name }}">
+        <button type="button" class="cmx__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="muted">{{ len $cr }} {{ if eq (len $cr) 1 }}dataset{{ else }}datasets{{ end }}</span></button>
+        <span class="cmx__chips">
+        {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}
+          <button type="button" class="cmx__chip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-pressed="false"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }} <b>{{ $n }}</b></button>
+        {{- end }}{{ end }}
         </span>
+      </li>
+      {{- end }}{{ end }}
+    </ul>
+    <p class="cmx__note muted">A dash means no dataset page in this catalog yet; it does not mean the data do not exist.</p>
+  </section>
+
+  {{- /* Download routes per modality: open NIAGADS copy (NG00184) versus AD Knowledge Portal only.
+    Solid versus hatched segments, counts as text, one shared scale. */ -}}
+  {{- $nOpen := len (where $qds "ng" true) }}{{ $nPortal := sub $total $nOpen -}}
+  {{- $omax := 1 }}{{ range $mods }}{{ $k := len (where $qds "family" .family) }}{{ if gt $k $omax }}{{ $omax = $k }}{{ end }}{{ end }}
+  <section class="card dlr" aria-labelledby="dlr-title">
+    <div class="matrix__head">
+      <h2 id="dlr-title">Where can I download the data?</h2>
+      <span class="muted">Every QTL dataset downloads from the AD Knowledge Portal with a free Synapse account. {{ $nOpen }} of the {{ $total }} also have an open copy on NIAGADS (NG00184, no application). Bars share a 0–{{ $omax }} scale.</span>
+    </div>
+    <div class="dlr__key" aria-hidden="true"><span><i class="dlr__sw dlr__sw--open"></i>Open copy on NIAGADS</span><span><i class="dlr__sw dlr__sw--syn"></i>AD Knowledge Portal only</span></div>
+    <ul class="dlr__list">
+      {{- range $m := $mods }}
+      {{- $all := where $qds "family" $m.family }}{{ $o := len (where $all "ng" true) }}{{ $c := sub (len $all) $o }}
+      <li class="dlr__item">
+        <span class="dlr__top"><button type="button" class="dlr__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}</button><span class="dlr__val">{{ $o }} open · {{ $c }} portal only</span></span>
+        <span class="dlr__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $all) 100.0) $omax) }}%">
+          {{- if $o }}<span class="dlr__seg dlr__seg--open" style="flex:{{ $o }}"></span>{{ end -}}
+          {{- if $c }}<span class="dlr__seg dlr__seg--syn" style="flex:{{ $c }}"></span>{{ end -}}
         </span>
       </li>
       {{- end }}
     </ul>
+    <p class="dlr__sum"><span><strong>{{ $nOpen }}</strong> with an open copy</span><span><strong>{{ $nPortal }}</strong> AD Knowledge Portal only</span> <a href="{{ "how_to_get_data/" | relURL }}">How to get the data</a></p>
   </section>
+
+  <details class="card more" data-more>
+  <summary class="more__sum">More charts<span class="muted">Sample size per dataset, recorded methods, datasets with several tissues or cell types</span></summary>
   <div class="glance">
 
-  {{- /* Analysis progress: for each xQTL protocol method, how many QTL result pages record it as done.
-    Same source as the coverage grid (the `methods:` map in each page header). */ -}}
-  {{- $qds := slice }}{{ range $qtl }}{{ if ne .short "Protocol toy data" }}{{ $qds = $qds | append . }}{{ end }}{{ end -}}
-  {{- $total := len $qds -}}
+  {{- /* Sample size: one row per dataset, constant dots on a shared log scale, N as text. */ -}}
+  {{- $lo := math.Log 50 }}{{ $hi := math.Log 1000 -}}
+  {{- $sized := slice }}{{ range $qds }}{{ if .n }}{{ $sized = $sized | append . }}{{ end }}{{ end -}}
+  {{- $withN := len $sized -}}
+  <section class="card progress sizes" aria-labelledby="sizes-title">
+    <div class="matrix__head">
+      <h2 id="sizes-title">Sample size per QTL dataset</h2>
+      <span class="muted"><strong>Only {{ $withN }} of the {{ $total }} QTL datasets record a sample size</strong>; the others are not drawn. Log scale; dot colour is the modality.</span>
+    </div>
+    <div class="sizes__plot">
+      <div class="sizes__axis" aria-hidden="true">
+        {{- range slice 50 100 200 500 1000 }}<span class="sizes__tick" style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%">{{ lang.FormatNumberCustom 0 . }}</span>{{ end -}}
+      </div>
+      <ul class="sizes__rows">
+        <li class="sizes__grid" aria-hidden="true">{{ range slice 50 100 200 500 1000 }}<i style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%"></i>{{ end }}</li>
+      {{- range sort $sized "n" "desc" }}
+        {{- $nm := .short }}{{ if not (strings.Contains .short .label) }}{{ $nm = printf "%s %s" .short .label }}{{ end }}
+        {{- $pos := div (mul (sub (math.Log (float .n)) $lo) 100.0) (sub $hi $lo) }}{{ $pos = math.Max 0 (math.Min 100 $pos) -}}
+        <li class="sizes__row">
+          <a class="sizes__label" href="{{ .href }}">{{ $nm }}</a>
+          <span class="sizes__track"><span class="sizes__dot" style="left:{{ printf "%.2f" $pos }}%;--c:{{ .color | safeCSS }}" aria-hidden="true"></span></span>
+          <span class="sizes__n">{{ lang.FormatNumberCustom 0 .n }}</span>
+        </li>
+      {{- end }}
+      </ul>
+    </div>
+  </section>
+
+  {{- /* Recorded methods: for each xQTL protocol method, how many QTL dataset pages list it as done. */ -}}
   <section class="card progress" aria-labelledby="progress-title">
     <div class="matrix__head">
-      <h2 id="progress-title">Analysis progress by method</h2>
-      <span class="muted">QTL result pages that record each method as done, out of {{ $total }}. Select a row to list its datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
+      <h2 id="progress-title">Which methods are recorded?</h2>
+      <span class="muted">QTL dataset pages that list each method as done, out of {{ $total }}. "Not recorded" means no page lists it yet, not that it was not run. Select a row to list its datasets. <a href="{{ "coverage/" | relURL }}">Full coverage grid</a></span>
     </div>
     <ul class="progress__list">
       {{- range $m := $x.methods }}
@@ -87,19 +161,18 @@
     </ul>
   </section>
 
-  {{- /* Contexts per dataset: tissues or cell types covered, read from the context field
-    ("4 brain regions", "DLPFC, 7 cell types"; a single named tissue counts as one). */ -}}
+  {{- /* Contexts per dataset: tissues or cell types covered, read from the context field. */ -}}
   {{- $multi := slice }}{{ $single := 0 -}}
   {{- range $qds -}}
     {{- $k := 1 }}{{ with findRESubmatch `(\d+) (?:brain regions|regions|cell types)` .context 1 }}{{ $k = int (index (index . 0) 1) }}{{ end -}}
-    {{- if gt $k 1 }}{{ $multi = $multi | append (dict "short" .short "label" .label "href" .href "color" .color "k" $k "context" .context) }}{{ else }}{{ $single = add $single 1 }}{{ end -}}
+    {{- if gt $k 1 }}{{ $multi = $multi | append (dict "short" .short "label" .label "href" .href "k" $k "context" .context) }}{{ else }}{{ $single = add $single 1 }}{{ end -}}
   {{- end -}}
   {{- $multi = sort $multi "k" "desc" -}}
   {{- $max := 1 }}{{ range $multi }}{{ if gt .k $max }}{{ $max = .k }}{{ end }}{{ end -}}
   <section class="card progress contexts" aria-labelledby="contexts-title">
     <div class="matrix__head">
-      <h2 id="contexts-title">Tissues and cell types per dataset</h2>
-      <span class="muted">QTL datasets that cover more than one brain region or cell type. The other {{ $single }} cover one each.</span>
+      <h2 id="contexts-title">Datasets with several tissues or cell types</h2>
+      <span class="muted">{{ len $multi }} QTL datasets cover more than one brain region or cell type; the other {{ $single }} cover one each.</span>
     </div>
     <ul class="progress__list">
       {{- range $multi }}
@@ -111,134 +184,8 @@
       {{- end }}
     </ul>
   </section>
-
-  {{- /* QTL datasets by cohort, as ranked bars on one scale (every cohort, largest first). */ -}}
-  {{- $groups := slice -}}
-  {{- range uniq (apply $qds "index" "." "cohort") -}}
-    {{- $groups = $groups | append (dict "name" . "n" (len (where $qds "cohort" .))) -}}
-  {{- end -}}
-  {{- $groups = sort $groups "n" "desc" -}}
-  {{- $gmax := 1 }}{{ range $groups }}{{ if gt .n $gmax }}{{ $gmax = .n }}{{ end }}{{ end -}}
-  <section class="card progress cohorts" aria-labelledby="cohorts-title">
-    <div class="matrix__head">
-      <h2 id="cohorts-title">QTL datasets by cohort</h2>
-      <span class="muted">How many of the {{ $total }} QTL datasets come from each cohort.</span>
-    </div>
-    <ul class="progress__list">
-      {{- range $groups }}
-      <li class="progress__row" title="{{ .name }}: {{ .n }} of {{ $total }}">
-        <span class="progress__label">{{ .name }}</span>
-        <span class="progress__track" aria-hidden="true"><span class="progress__bar" style="width:{{ printf "%.1f" (div (mul .n 100.0) $gmax) }}%"></span></span>
-        <span class="progress__val"><strong>{{ .n }}</strong> <span class="muted">{{ printf "%.0f" (div (mul .n 100.0) $total) }}%</span></span>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
-
-  {{- /* Sample size per QTL dataset: one dot per dataset on a log scale, one row per modality.
-    Only pages that record a sample size are drawn; the rest are counted in the note. */ -}}
-  {{- $lo := math.Log 50 }}{{ $hi := math.Log 1000 -}}
-  {{- $sized := slice }}{{ range $qds }}{{ if .n }}{{ $sized = $sized | append . }}{{ end }}{{ end -}}
-  {{- $withN := len $sized -}}
-  <section class="card progress sizes" aria-labelledby="sizes-title">
-    <div class="matrix__head">
-      <h2 id="sizes-title">Sample size per QTL dataset</h2>
-      <span class="muted">Each dot is one dataset, coloured by modality; its position (log scale) and its size both show the sample size. {{ $withN }} of the {{ $total }} QTL datasets record a sample size; the others are not drawn.</span>
-    </div>
-    <div class="sizes__plot">
-      <div class="sizes__axis" aria-hidden="true">
-        {{- range slice 50 100 200 500 1000 }}<span class="sizes__tick" style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%">{{ lang.FormatNumberCustom 0 . }}</span>{{ end -}}
-      </div>
-      <ul class="sizes__rows">
-        <li class="sizes__grid" aria-hidden="true">{{ range slice 50 100 200 500 1000 }}<i style="left:{{ printf "%.2f" (div (mul (sub (math.Log (float .)) $lo) 100.0) (sub $hi $lo)) }}%"></i>{{ end }}</li>
-      {{- range $m := $x.modalities }}
-        {{- $ds := where $sized "family" $m.family -}}
-        {{- if $ds }}
-        <li class="sizes__row">
-          <span class="sizes__label">{{ $m.id }}</span>
-          <span class="sizes__track">
-          {{- range $ds }}
-            {{- $nm := .short }}{{ if not (strings.Contains .short .label) }}{{ $nm = printf "%s %s" .short .label }}{{ end }}
-            {{- $pos := div (mul (sub (math.Log (float .n)) $lo) 100.0) (sub $hi $lo) }}{{ $pos = math.Max 0 (math.Min 100 $pos) -}}
-            {{- /* dot area grows with N as well, 8 px at 50 samples to 22 px at 1,000 */ -}}
-            {{- $d := add 8.0 (mul 14.0 (math.Sqrt (math.Max 0 (math.Min 1 (div (sub (float .n) 50.0) 950.0))))) -}}
-            <a class="sizes__dot" href="{{ .href }}" style="left:{{ printf "%.2f" $pos }}%;--d:{{ printf "%.1f" $d }}px;--c:var(--m-{{ $m.id }})" aria-label="{{ $nm }}: {{ lang.FormatNumberCustom 0 .n }} samples" data-tip="{{ $nm }} · N {{ lang.FormatNumberCustom 0 .n }}"></a>
-          {{- end }}
-          </span>
-        </li>
-        {{- end }}
-      {{- end }}
-      </ul>
-    </div>
-    <details class="sizes__table">
-      <summary>Show as a table</summary>
-      <table class="dtable">
-        <thead><tr><th scope="col">Dataset</th><th scope="col">Modality</th><th scope="col" class="r">N</th></tr></thead>
-        <tbody>
-        {{- range sort $sized "n" "desc" }}
-          <tr><td><a href="{{ .href }}">{{ .short }}{{ if not (strings.Contains .short .label) }} {{ .label }}{{ end }}</a></td><td>{{ .label }}</td><td class="r mono">{{ lang.FormatNumberCustom 0 .n }}</td></tr>
-        {{- end }}
-        </tbody>
-      </table>
-    </details>
-  </section>
-
-  {{- /* How each modality can be downloaded: QTL datasets with an open NIAGADS copy (NG00184) versus
-    AD Knowledge Portal (Synapse) only. Two steps of one hue, counts as text. */ -}}
-  <section class="card progress opencopy" aria-labelledby="open-title">
-    <div class="matrix__head">
-      <h2 id="open-title">Open download by modality</h2>
-      <span class="muted">QTL datasets with an open copy on NIAGADS (NG00184, no application) and those on the AD Knowledge Portal only (free Synapse account and data use certificate).</span>
-    </div>
-    <div class="opencopy__key" aria-hidden="true"><span><i class="opencopy__sw opencopy__sw--open"></i>Open on NIAGADS too</span><span><i class="opencopy__sw opencopy__sw--syn"></i>AD Knowledge Portal only</span></div>
-    {{- $omax := 1 }}{{ range $x.modalities }}{{ $k := len (where $qds "family" .family) }}{{ if gt $k $omax }}{{ $omax = $k }}{{ end }}{{ end }}
-    <ul class="progress__list">
-      {{- range $m := $x.modalities }}
-      {{- $all := where $qds "family" $m.family -}}
-      {{- if $all }}
-      {{- $o := len (where $all "ng" true) }}{{ $c := sub (len $all) $o }}
-      <li class="progress__row opencopy__row" title="{{ $m.id }}: {{ $o }} open on NIAGADS, {{ $c }} AD Knowledge Portal only">
-        <span class="progress__label">{{ $m.id }}</span>
-        <span class="opencopy__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $all) 100.0) $omax) }}%">
-          {{- if $o }}<span class="opencopy__seg opencopy__seg--open" style="flex:{{ $o }}"></span>{{ end -}}
-          {{- if $c }}<span class="opencopy__seg opencopy__seg--syn" style="flex:{{ $c }}"></span>{{ end -}}
-        </span>
-        <span class="progress__val"><strong>{{ $o }}</strong> open <span class="muted">of {{ len $all }}</span></span>
-      </li>
-      {{- end }}
-      {{- end }}
-    </ul>
-  </section>
-
-  {{- /* QTL datasets by modality as a donut: modalities with one dataset fold into Other so the ring stays readable.
-    Drawn with a conic gradient, with a short surface-coloured gap between slices; the legend carries the numbers. */ -}}
-  {{- $parts := slice }}{{ $other := slice }}{{ $nOther := 0 -}}
-  {{- range $x.modalities }}{{ $k := len (where $qds "family" .family) }}{{ if gt $k 1 }}{{ $parts = $parts | append (dict "id" .id "family" .family "n" $k "c" (printf "var(--m-%s)" .id)) }}{{ else if eq $k 1 }}{{ $other = $other | append .id }}{{ $nOther = add $nOther 1 }}{{ end }}{{ end -}}
-  {{- $parts = sort $parts "n" "desc" -}}
-  {{- if $nOther }}{{ $parts = $parts | append (dict "id" "Other" "family" "" "n" $nOther "c" "var(--ink3)") }}{{ end -}}
-  {{- $stops := slice }}{{ $acc := 0.0 }}{{ $gap := 1.2 -}}
-  {{- range $parts }}{{ $sw := div (mul (float .n) 360.0) (float $total) }}{{ $stops = $stops | append (printf "%s %.2fdeg %.2fdeg, var(--sf) %.2fdeg %.2fdeg" .c $acc (sub (add $acc $sw) $gap) (sub (add $acc $sw) $gap) (add $acc $sw)) }}{{ $acc = add $acc $sw }}{{ end }}
-  <section class="card progress modshare" aria-labelledby="modshare-title">
-    <div class="matrix__head">
-      <h2 id="modshare-title">QTL datasets by modality</h2>
-      <span class="muted">Share of the {{ $total }} QTL datasets.{{ with $other }} {{ delimit . ", " " and " }} have one dataset each and are grouped as Other.{{ end }} Select a modality to filter the dataset list.</span>
-    </div>
-    <div class="modshare__body">
-      <div class="modshare__ring" role="img" aria-label="{{ range $i, $p := $parts }}{{ if $i }}, {{ end }}{{ $p.id }} {{ $p.n }}{{ end }} of {{ $total }} QTL datasets" style="background:conic-gradient({{ delimit $stops ", " | safeCSS }})">
-        <span class="modshare__total"><strong>{{ $total }}</strong>QTL datasets</span>
-      </div>
-      <ul class="modshare__legend">
-        {{- range $parts }}
-        <li>
-          {{- if .family }}<button type="button" class="modshare__item" data-matrix-col="{{ .family }}" data-tip="{{ .id }}: {{ .n }} of {{ $total }}">{{ else }}<span class="modshare__item">{{ end -}}
-          <i style="background:{{ .c | safeCSS }}"></i><span class="modshare__name">{{ .id }}</span><b>{{ .n }}</b><em>{{ printf "%.0f" (div (mul (float .n) 100.0) (float $total)) }}%</em>
-          {{- if .family }}</button>{{ else }}</span>{{ end }}
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-  </section>
   </div>
+  </details>
   </details>
 
   <div class="catalog__body">
