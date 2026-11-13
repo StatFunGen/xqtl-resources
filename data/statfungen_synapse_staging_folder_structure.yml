@@ -518,7 +518,7 @@ xQTL_GWAS_models: #syn69670588
               - Metabrain.*.univariate_susie_rss.rds
         MiGA_eQTL: #syn70095505
           export: #syn70095506
-            batch{1..5}: #syn78566204, syn78580438, syn78592024, syn78609685, syn78624654
+            batch{1..9}: #syn78566204, syn78580438, syn78592024, syn78609685, syn78624654, syn78638645, syn78650797, syn78664400, syn78675955
               - MiGA_eQTL.*.cis_results_db.export.rds
               - MiGA_eQTL.*.cis_results_db.export.rds.md5
               - MiGA_eQTL.*.cis_results_db.export_sumstats.rds

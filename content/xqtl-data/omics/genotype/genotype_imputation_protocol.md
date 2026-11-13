@@ -1,17 +1,14 @@
 ---
-type: gwas
-short_title: ADGC imputation protocol
-status: staged
-access:
-release:
-synapse_ids: []
+type: other
+short_title: Genotype imputation protocol
+aliases: [/xqtl-data/gwas/ADGC_GWAS_imputation_protocol/]
 lead_analysts: [Xuanhe Chen]
 last_verified:
 ---
 
-# ADGC GWAS imputation protocol
+# Genotype imputation protocol
 
-This protocol is adapted from the [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/). It generates imputed genotype data for xQTL analysis in some cohorts.
+This is a method page, not a dataset. It describes how genotype-array data for some cohorts were quality-controlled and imputed to hg38 with the TOPMed imputation server before xQTL mapping. The steps are adapted from the [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/). Each [genotype page](../) says how its cohort was imputed.
 
 ## Contact
 

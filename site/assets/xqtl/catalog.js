@@ -154,6 +154,11 @@
     });
   });
 
+  // Phones: the charts sit below the dataset list, so a chart selection brings the list back into view
+  var results = root.querySelector('.catalog__results');
+  function toResults() {
+    if (results && window.matchMedia('(max-width: 900px)').matches) results.scrollIntoView({ block: 'start' });
+  }
   root.querySelectorAll('[data-matrix-cell]').forEach(function (b) {
     b.addEventListener('click', function () {
       var cf = b.dataset.matrixCell.split('|');
@@ -161,21 +166,21 @@
       state.cohort = on ? null : cf[0];
       state.family = on ? null : cf[1];
       state.kind = on ? null : 'qtl';
-      render();
+      render(); toResults();
     });
   });
   root.querySelectorAll('[data-matrix-row-btn]').forEach(function (b) {
     b.addEventListener('click', function () {
       var c = b.dataset.matrixRowBtn, on = state.cohort === c && !state.family;
       state.cohort = on ? null : c; state.family = null;
-      render();
+      render(); toResults();
     });
   });
   root.querySelectorAll('[data-matrix-col]').forEach(function (b) {
     b.addEventListener('click', function () {
       var f = b.dataset.matrixCol, on = state.family === f && !state.cohort;
       state.family = on ? null : f; state.cohort = null;
-      render();
+      render(); toResults();
     });
   });
 
@@ -194,12 +199,4 @@
 
   applySort();
   render();
-
-  // Arriving with a search or filter (for example from the home-page search): on phones the
-  // dashboards come first, so bring the results into view
-  var hasQuery = state.q || KEYS.some(function (k) { return state[k]; });
-  var results = root.querySelector('.catalog__results');
-  if (hasQuery && results && window.matchMedia('(max-width: 900px)').matches) {
-    results.scrollIntoView({ block: 'start' });
-  }
 })();

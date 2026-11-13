@@ -31,7 +31,7 @@ HUGO_BOOK_THEME_URL = 'https://github.com/alex-shpak/hugo-book/archive/refs/head
 # Site layouts, styles and data that override hugo-book (copied into the website directory)
 DEFAULT_SITE_DIR = 'site'
 # Header keys that are Hugo page settings rather than dataset metadata
-HUGO_KEYS = {'layout', 'weight', 'description', 'linkTitle', 'bookHidden', 'bookToc'}
+HUGO_KEYS = {'layout', 'weight', 'description', 'linkTitle', 'bookHidden', 'bookToc', 'aliases'}
 # Pages that use a dedicated layout, by source path relative to the content directory
 PAGE_LAYOUTS = {'xqtl-data/README.md': 'catalog'}
 

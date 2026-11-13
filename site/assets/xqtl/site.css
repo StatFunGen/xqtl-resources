@@ -739,6 +739,14 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .glance > .progress { margin: 0; max-width: none; padding: 4px 16px 12px; }
 .glance .contexts .progress__row { grid-template-columns: minmax(8em, 13em) 1fr auto; }
 @media (max-width: 900px) { .glance { margin: 12px 16px 0; grid-template-columns: 1fr; } }
+/* Phones and small tablets: the dataset list comes straight after the search box, and the summary charts follow it */
+@media (max-width: 900px) {
+  .catalog__body { order: 1; }
+  .catalog > .matrix { order: 2; margin-top: 16px; }
+  .glance { order: 3; }
+  .catalog > .az { order: 4; }
+  .catalog__results { scroll-margin-top: var(--topbar); }
+}
 
 /* Home: on phones the search comes sooner; the Atlas pointer stays in the task cards and top bar */
 @media (max-width: 640px) { .home__lead-more { display: none; } }

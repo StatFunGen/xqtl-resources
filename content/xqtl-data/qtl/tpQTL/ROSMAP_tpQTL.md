@@ -25,13 +25,19 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Samples
 
-Genotype-matched participants per region, from the FunGen-xQTL sample table.
+The Torino paper used 1,193 RNA-seq samples from 729 ROSMAP participants across the three regions. Not every sample has a matching genotype, so the tpQTL mapping uses fewer participants per region.
 
-| Region | Participants | Female | Male |
-|--------|-------------:|-------:|-----:|
-| Dorsolateral prefrontal cortex (DLPFC) | 91 | 62 | 29 |
-| Posterior cingulate cortex (PCC) | 370 | 228 | 142 |
-| Anterior caudate nucleus (AC) | 537 | 352 | 185 |
+| Region | RNA-seq samples (Torino paper) | Genotype-matched participants | Female | Male |
+|--------|-------------:|-------------:|-------:|-----:|
+| Dorsolateral prefrontal cortex (DLPFC) | 118 | 91 | 62 | 29 |
+| Posterior cingulate cortex (PCC) | 444 | 370 | 228 | 142 |
+| Anterior caudate nucleus (AC) | 631 | 537 | 352 | 185 |
+
+Genotype-matched counts come from the FunGen-xQTL sample table.
+
+## How the tpQTL were mapped
+
+Torino was run twice on 12,297 protein-coding genes, once with three patterns per gene (K3) and once with five (K5). tpQTL were mapped separately in each region with TensorQTL, using cis windows from the FunGen-xQTL TAD boundaries (at least 1 Mb around each gene). Covariates were sex, age at death, post-mortem interval, 15 genotype principal components and hidden factors estimated from the pattern data. The paper reports 45 genes whose tpQTL colocalize with AD risk variants, including KNOP1 (intron retention) and CISD1 (alternative polyadenylation).
 
 ## Analyses
 
