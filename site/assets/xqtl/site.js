@@ -95,4 +95,18 @@
       rs.forEach(function (r) { if (r.scope.indexOf(base) === 0) r.unregister(); });
     }).catch(function () {});
   }
+
+  // Header search: the result list closes when focus or a click leaves the search box, and comes back
+  // when the box is used again; after Back navigation the box starts empty
+  var sbox = document.querySelector('.topbar .search'), sin = document.getElementById('book-search-input'),
+      sres = document.getElementById('book-search-results');
+  if (sbox && sin && sres) {
+    var hideRes = function () { sbox.classList.add('is-closed'); };
+    var showRes = function () { sbox.classList.remove('is-closed'); };
+    document.addEventListener('click', function (e) { if (!sbox.contains(e.target)) hideRes(); });
+    sbox.addEventListener('focusout', function (e) { if (!sbox.contains(e.relatedTarget)) hideRes(); });
+    sin.addEventListener('focus', showRes);
+    sin.addEventListener('input', showRes);
+    window.addEventListener('pageshow', function (e) { if (e.persisted) { sin.value = ''; sres.innerHTML = ''; } });
+  }
 })();

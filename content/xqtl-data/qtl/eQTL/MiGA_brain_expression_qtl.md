@@ -6,6 +6,7 @@ cohort: MiGA
 context: microglia
 sample_size: 255
 access: controlled
+niagads: NG00184
 status: staged
 release:
 synapse_ids: [syn70095505, syn70095506, syn75134502, syn70094765, syn74987560, syn74986600, syn69865816]

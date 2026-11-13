@@ -61,7 +61,7 @@
   "label" $label "family" $family "color" $color "mark" $mark
   "cohort" $cohort "context" ($d.context | default "") "n" ($d.sample_size | default "") "nnote" ($d.sample_note | default "")
   "status" ($d.status | default "") "access" ($d.access | default "")
-  "analysts" $analysts "synapse" $syn "synapseIDs" $ids "ng00184" $ng
+  "analysts" $analysts "synapse" $syn "synapseIDs" $ids "ng00184" $ng "ngType" ($d.niagads_type | default "")
   "release" ($d.release | default "") "verified" ($d.last_verified | default "")
   "methods" ($d.methods | default dict)
   "short" ($p.LinkTitle | default $p.Title)

@@ -944,3 +944,19 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .sitefoot__partners .partners__logo { border-color: transparent; }
 .sitefoot__partners .partners__t { color: var(--band-ink2); }
 @media (max-width: 900px) { .sitefoot__partners { padding: 18px 16px 0; } }
+
+/* header search: results hidden while focus is elsewhere (site.js) */
+.search.is-closed .search__results { display: none; }
+
+/* Get the data: one row per kind of result */
+.gettable th[scope=row] { font-weight: 400; text-align: left; vertical-align: top; min-width: 180px; }
+.gettable th[scope=row] .meta__sub, .gettable__syn .meta__sub, .gettable td .meta__sub { display: block; white-space: normal; overflow-wrap: anywhere; }
+.gettable th, .gettable td { white-space: normal; overflow-wrap: anywhere; }
+.gettable td { vertical-align: top; }
+.gettable { table-layout: fixed; width: 100%; }
+.gettable th:nth-child(1) { width: 36%; }
+.gettable__files { display: block; font-size: 13px; line-height: 1.6; }
+.gettable__files code, .gettable .meta__sub code { background: none; padding: 0; font-size: 12.5px; overflow-wrap: anywhere; word-break: break-all; }
+.gettable__syn { display: block; margin-bottom: 6px; }
+.linkbtn { background: none; border: 0; padding: 0 2px; color: var(--teal); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; }
+@media (max-width: 640px) { .gettable thead { display: none; } .gettable tr { display: block; border-bottom: 1px solid var(--ln); padding: 8px 0; } .gettable th[scope=row], .gettable td { display: block; width: auto; border: 0; padding: 4px 12px; } .gettable td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); } .gettable tr { padding: 4px 0 10px; } }

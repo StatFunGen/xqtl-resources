@@ -32,7 +32,8 @@
   {{- $lab := "" }}
   {{- range $seg := split .at "/" }}{{ with index $what $seg }}{{ $lab = . }}{{ end }}{{ end -}}
   {{- if in .at "multi_context" }}{{ $lab = printf "%s, multi-context" $lab }}{{ end -}}
-  {{- $own = $own | append (dict "id" (index .d.id 0) "name" .d.n "what" ($lab | default (index (last 1 (split .at "/")) 0))) -}}
+  {{- $cat := "" }}{{ range $seg := split .at "/" }}{{ with index (dict "finemapping_models" "finemap" "AD_finemapping" "finemap" "TWAS_models" "twas" "colocalization_models" "coloc" "AD_xQTL_colocalization_models" "coloc") $seg }}{{ $cat = . }}{{ end }}{{ end -}}
+  {{- $own = $own | append (dict "id" (index .d.id 0) "name" .d.n "cat" $cat "what" ($lab | default (index (last 1 (split .at "/")) 0))) -}}
 {{ end }}{{ end -}}
 {{- $sid := $i.synapse -}}{{ with $own }}{{ $sid = (index . 0).id }}{{ end -}}
 <article class="page page--dataset">
@@ -110,7 +111,7 @@
   </section>
 
   <section class="ds-section" id="access">
-    <h2>Data and access</h2>
+    <h2>Get the data</h2>
     <p class="muted">
       {{- $acc := $i.access }}{{ if and (not $acc) $i.synapse }}{{ $acc = "controlled" }}{{ end }}
       {{- if eq $acc "open" }}Open access. Download from the links below without an application.
@@ -119,7 +120,36 @@
       {{- else }}Access terms for this page are not set yet.{{ end }}
       {{ with $howto }}See <a href="{{ .RelPermalink }}">How to get the data</a>.{{ end }}
     </p>
-    {{- if or $i.synapseIDs $i.ng00184 }}
+    {{- if and (eq $i.kind "qtl") (or $own $i.ng00184) }}
+    {{- /* QTL pages: one row per kind of result, with the open NIAGADS file and the controlled Synapse folder side by side */ -}}
+    {{- $nt := $i.ngType | default $i.label -}}
+    {{- $rows := slice
+      (dict "k" "sumstats" "t" "Association summary statistics" "d" "Every tested variant and molecular trait pair, or only the FDR or HMT significant ones" "ng" (slice (printf "%s.all.tar" $nt) (printf "%s.bh_significant.tar" $nt) (printf "%s.hmt_significant.tar" $nt)))
+      (dict "k" "finemap" "t" "Fine-mapping" "d" "SuSiE credible sets and posterior inclusion probabilities (PIPs)" "ng" (slice (printf "%s.single_context_finemapping_cs95.tar" $nt) (printf "%s.single_context_finemapping_all.tar" $nt)))
+      (dict "k" "twas" "t" "TWAS weights" "d" "Gene prediction weights for transcriptome-wide association" "ng" slice)
+      (dict "k" "coloc" "t" "Colocalization models" "d" "ColocBoost models across contexts and with AD GWAS" "ng" slice) -}}
+    <div class="table-card">
+      <table class="dtable gettable">
+        <caption class="sr-only">Where to get each kind of result for this dataset</caption>
+        <thead><tr><th scope="col">What you need</th><th scope="col">Open, no application<br><span class="muted">NIAGADS {{ $x.ng00184.id }}</span></th><th scope="col">Controlled access<br><span class="muted">AD Knowledge Portal (Synapse)</span></th></tr></thead>
+        <tbody>
+          {{- range $r := $rows }}
+          {{- $syn := where $own "cat" $r.k -}}
+          {{- if or $syn (and $i.ng00184 $r.ng) }}
+          <tr><th scope="row"><span class="strong">{{ $r.t }}</span><span class="meta__sub">{{ $r.d }}</span></th>
+            <td data-label="Open: NIAGADS">{{ if and $i.ng00184 $r.ng }}<span class="gettable__files">{{ range $k, $f := $r.ng }}{{ if $k }} · {{ end }}<code>{{ replace (replace $f (printf "%s." $nt) "") ".tar" "" }}</code>{{ end }}</span><span class="meta__sub">Archives <code>ADSP_FunGen_xQTL.v1.{{ $nt }}.&lt;name&gt;.tar</code></span><a href="{{ $x.ng00184.url }}" rel="noopener">Download from NIAGADS ↗</a>{{ else }}<span class="subtle">Not in the open release</span>{{ end }}</td>
+            <td data-label="Controlled: Synapse">{{ with $syn }}{{ range . }}<span class="gettable__syn"><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a> <button type="button" class="linkbtn" data-copy="{{ .id }}" aria-label="Copy Synapse ID {{ .id }}">Copy</button><span class="meta__sub">{{ .what }} · folder {{ .name }}</span></span>{{ end }}{{ else }}<span class="subtle">{{ if and $i.ng00184 $r.ng }}Use the open release{{ else }}Not staged yet{{ end }}</span>{{ end }}</td></tr>
+          {{- end }}
+          {{- end }}
+          {{- if $i.ng00184 }}
+          <tr><th scope="row"><span class="strong">Look up a gene, variant or region</span><span class="meta__sub">No download; significant associations in the browser or as a TSV</span></th>
+            <td data-label="Open"><a href="{{ site.Params.atlasURL }}" rel="noopener">xQTL Atlas ↗</a></td><td data-label="Controlled: Synapse"><span class="subtle">Not needed</span></td></tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">A Synapse ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
+    {{- else if or $i.synapseIDs $i.ng00184 }}
     <div class="table-card">
       <table class="dtable">
         <thead><tr><th>Where</th><th>ID</th><th>Access</th><th>What you get</th></tr></thead>
@@ -134,7 +164,7 @@
           {{- end }}{{ end }}
           {{- if $i.ng00184 }}
           <tr><td class="strong">NIAGADS DSS</td><td><a class="mono" href="{{ $x.ng00184.url }}" rel="noopener">{{ $x.ng00184.id }}</a></td><td>{{ partial "ui/access.html" "open" }}</td>
-            <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.label }}.*.tar</code></td></tr>
+            <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.ngType | default $i.label }}.*.tar</code></td></tr>
           {{- end }}
         </tbody>
       </table>
@@ -147,11 +177,11 @@
     {{- with $hits }}
     {{- $areas := dict "variant_gene_summary" "Variant and gene summaries" "xQTL_GWAS_models" "xQTL and AD GWAS models" "xQTL_data" "Raw QTL data" "reference_files" "Reference files" "xQTL_SCEEM_scores" "scEEMS scores" "Metadata" "Metadata" "manuscript" "Manuscript" -}}
     <div class="dsfiles">
-      <h3 class="dsfiles__title">Files on Synapse for this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
+      <h3 class="dsfiles__title">Every Synapse folder that mentions this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
       {{- range $area := slice "variant_gene_summary" "xQTL_GWAS_models" "xQTL_data" "xQTL_SCEEM_scores" "reference_files" "Metadata" "manuscript" }}
         {{- $in := slice }}{{ range $hits }}{{ if eq (index (split .at "/") 0) $area }}{{ $in = $in | append . }}{{ end }}{{ end -}}
         {{- with $in }}
-        <details class="dsfiles__area"{{ if ne $area "reference_files" }} open{{ end }}>
+        <details class="dsfiles__area">
           <summary><span class="dsfiles__name">{{ index $areas $area }}</span><span class="muted">{{ len . }}</span></summary>
           <ul class="dsfiles__list">
           {{- range $h := . }}

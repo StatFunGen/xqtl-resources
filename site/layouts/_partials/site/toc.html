@@ -1,7 +1,7 @@
 {{- /* Right-hand "On this page". Dataset pages add the generated sections around the Markdown headings. */ -}}
 {{- $p := .page -}}
 {{- $items := slice -}}
-{{- if .dataset }}{{ $items = $items | append (dict "href" "#summary" "label" "Summary") (dict "href" "#access" "label" "Data and access") }}{{ end -}}
+{{- if .dataset }}{{ $items = $items | append (dict "href" "#summary" "label" "Summary") (dict "href" "#access" "label" "Get the data") }}{{ end -}}
 {{- range findRESubmatch `<a href="(#[^"]+)">(.*?)</a>` $p.TableOfContents -}}
   {{- $items = $items | append (dict "href" (index . 1) "label" (index . 2 | plainify | htmlUnescape)) -}}
 {{- end -}}
