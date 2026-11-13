@@ -209,6 +209,21 @@
   closeBtn.addEventListener('click', function () { sheet(false); });
   facets.addEventListener('keydown', function (e) { if (e.key === 'Escape') sheet(false); });
 
+  // Stacked bar legend: pointing at (or focusing) a modality highlights its parts in every bar
+  var vbar = root.querySelector('[data-vbar]');
+  if (vbar) {
+    var hl = function (f) {
+      if (f) vbar.setAttribute('data-hl', f); else vbar.removeAttribute('data-hl');
+      vbar.querySelectorAll('.vbar__seg').forEach(function (sg) { sg.toggleAttribute('data-hl-on', !!f && sg.dataset.mod === f); });
+    };
+    vbar.querySelectorAll('[data-mod-key]').forEach(function (b) {
+      b.addEventListener('mouseenter', function () { hl(b.dataset.modKey); });
+      b.addEventListener('focus', function () { hl(b.dataset.modKey); });
+      b.addEventListener('mouseleave', function () { hl(null); });
+      b.addEventListener('blur', function () { hl(null); });
+    });
+  }
+
   // Chart tooltip for marks that carry data-tip (hover and keyboard focus)
   var tip = null;
   function showTip(el) {

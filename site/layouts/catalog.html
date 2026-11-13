@@ -33,33 +33,37 @@
   <section class="card cmx" aria-labelledby="cmx-title">
     <div class="matrix__head">
       <h2 id="cmx-title">QTL datasets by cohort and modality</h2>
-      <span class="muted">Number of QTL dataset pages per cohort, coloured by modality. Select a bar part, a cohort or a modality to filter the dataset list below.</span>
+      <span class="muted">Number of QTL dataset pages per cohort, coloured by modality. Point at a modality to highlight it; select a bar part, a cohort or a modality to filter the dataset list below.</span>
     </div>
-    <div class="cbar__key" role="group" aria-label="Filter by modality">
-      {{- range $m := $mods }}
-      <button type="button" class="cbar__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}<b>{{ len (where $qds "family" $m.family) }}</b></button>
-      {{- end }}
-    </div>
-    <div class="vbar">
+    {{- $corder := slice }}{{ range $x.cohorts }}{{ $k := len (where $qds "cohort" .name) }}{{ if $k }}{{ $corder = $corder | append (dict "name" .name "n" $k) }}{{ end }}{{ end }}{{ $corder = sort $corder "n" "desc" -}}
+    <div class="vbar" data-vbar>
+      <div class="vbar__main">
       <span class="vbar__ytitle" aria-hidden="true">QTL datasets</span>
       <div class="vbar__plot">
         <div class="vbar__grid" aria-hidden="true">
           {{- range $t := seq 0 5 $ytop }}<span class="vbar__tick" style="bottom:{{ printf "%.2f" (div (mul (float $t) 100.0) (float $ytop)) }}%"><b>{{ $t }}</b></span>{{ end -}}
         </div>
         <ul class="vbar__cols">
-        {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
-          <li class="vbar__col" data-matrix-row="{{ $c.name }}">
+        {{- range $co := $corder }}{{ $cr := where $qds "cohort" $co.name }}
+          <li class="vbar__col" data-matrix-row="{{ $co.name }}">
             <span class="vbar__area">
               <span class="vbar__stack" style="height:{{ printf "%.2f" (div (mul (float (len $cr)) 100.0) (float $ytop)) }}%">
                 <span class="vbar__total">{{ len $cr }}</span>
-                {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<button type="button" class="vbar__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" aria-pressed="false" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" data-tip="{{ $c.name }} · {{ $m.id }}: {{ $n }}"></button>{{ end }}{{ end -}}
+                {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<button type="button" class="vbar__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-mod="{{ $m.family }}" data-matrix-cell="{{ $co.name }}|{{ $m.family }}" aria-pressed="false" aria-label="{{ $co.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" data-tip="{{ $co.name }} · {{ $m.id }}: {{ $n }}">{{ if gt $n 1 }}<span class="vbar__n" aria-hidden="true">{{ $n }}</span>{{ end }}</button>{{ end }}{{ end -}}
               </span>
             </span>
-            <button type="button" class="vbar__x" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button>
+            <button type="button" class="vbar__x" data-matrix-row-btn="{{ $co.name }}">{{ $co.name }}</button>
           </li>
-        {{- end }}{{ end }}
+        {{- end }}
         </ul>
       </div>
+      </div>
+      <ul class="vbar__legend" role="group" aria-label="Modality: select to filter">
+        {{- range $m := $mods }}
+        <li><button type="button" class="vbar__mod" data-matrix-col="{{ $m.family }}" data-mod-key="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i aria-hidden="true"></i><span>{{ $m.id }}</span><b>{{ len (where $qds "family" $m.family) }}</b></button></li>
+        {{- end }}
+        <li class="vbar__legend-total"><span>All modalities</span><b>{{ $total }}</b></li>
+      </ul>
     </div>
     <details class="cbar__table">
     <summary>Show as a table</summary>
