@@ -213,28 +213,27 @@
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
       {{- $facet := dict
-        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "GWAS") (slice "reference" "Reference")) -}}
-      <div class="facet"><div class="facet__title">Result type</div>
+        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "AD GWAS") (slice "reference" "Reference panels")) -}}
+      <div class="facet"><div class="facet__title">Data type</div>
+        <p class="facet__help">QTL results link genetic variants to a molecular trait. Omics data are the measurements behind them.</p>
         {{- range index $facet "kind" }}{{ partial "site/facet-opt.html" (dict "facet" "kind" "value" (index . 0) "label" (index . 1)) }}{{ end }}
+      </div>
+      <div class="facet"><div class="facet__title">Modality</div>
+        {{- range $x.modalities }}{{ partial "site/facet-opt.html" (dict "facet" "family" "value" .family "label" .family "sub" .id "mark" (dict "color" (printf "var(--m-%s)" .id) "mark" "fill")) }}{{ end }}
+        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Genotype" "label" "Genotype" "sub" "WGS" "mark" (dict "color" "#8d959f" "mark" "fill")) }}
       </div>
       <div class="facet"><div class="facet__title">Cohort</div>
         {{- range $x.cohorts }}{{ partial "site/facet-opt.html" (dict "facet" "cohort" "value" .name "label" .name) }}{{ end }}
         {{- range slice "AD GWAS" "ADSP" }}{{ partial "site/facet-opt.html" (dict "facet" "cohort" "value" . "label" .) }}{{ end }}
       </div>
-      <div class="facet"><div class="facet__title">Modality</div>
-        {{- range $x.modalities }}{{ partial "site/facet-opt.html" (dict "facet" "family" "value" .family "label" (printf "%s · %s" .id .family) "mark" (dict "color" (printf "var(--m-%s)" .id) "mark" "fill")) }}{{ end }}
-        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Genotype" "label" "Genotype / WGS" "mark" (dict "color" "#8d959f" "mark" "fill")) }}
-        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "GWAS" "label" "GWAS") }}
-        {{ partial "site/facet-opt.html" (dict "facet" "family" "value" "Reference" "label" "Reference") }}
-      </div>
       <div class="facet"><div class="facet__title">Tissue or cell type</div>
         {{- $tissues := slice -}}
-        {{- range $rows }}{{ with .context }}{{ $t := index (split . ",") 0 | strings.TrimSpace }}{{ if not (in $tissues $t) }}{{ $tissues = $tissues | append $t }}{{ end }}{{ end }}{{ end -}}
+        {{- range $rows }}{{ with .context }}{{ $t := index (split . ",") 0 | strings.TrimSpace }}{{ if findRE `^\d+ (brain )?regions$` $t }}{{ $t = "several brain regions" }}{{ end }}{{ if not (in $tissues $t) }}{{ $tissues = $tissues | append $t }}{{ end }}{{ end }}{{ end -}}
         {{- range sort $tissues }}{{ partial "site/facet-opt.html" (dict "facet" "tissue" "value" . "label" (strings.FirstUpper .)) }}{{ end }}
       </div>
       <div class="facet"><div class="facet__title">How to download</div>
         {{- $alab := dict "open" "Open download (no application)" "controlled" "AD Knowledge Portal (Synapse)" "requested" "On request" }}
-        {{- range slice "open" "controlled" "requested" }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $alab .) "acc" .) }}{{ end }}
+        {{- range slice "open" "controlled" "requested" }}{{ $v := . }}{{ $has := 0 }}{{ range $rows }}{{ if or (eq .access $v) (and (eq $v "open") .ng) }}{{ $has = 1 }}{{ end }}{{ end }}{{ if $has }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $alab .) "acc" .) }}{{ end }}{{ end }}
       </div>
     </aside>
 
@@ -260,7 +259,7 @@
         </tr></thead>
         <tbody>
         {{- range $rows }}
-          {{- $tissue := "" }}{{ with .context }}{{ $tissue = index (split . ",") 0 | strings.TrimSpace }}{{ end }}
+          {{- $tissue := "" }}{{ with .context }}{{ $tissue = index (split . ",") 0 | strings.TrimSpace }}{{ if findRE `^\d+ (brain )?regions$` $tissue }}{{ $tissue = "several brain regions" }}{{ end }}{{ end }}
           <tr data-row data-title="{{ lower .title }}" data-type="{{ lower .label }}" data-n="{{ .n }}" data-kind="{{ .kind }}" data-cohort="{{ .cohort }}" data-family="{{ .family }}" data-tissue="{{ $tissue }}" data-access="{{ .access }}{{ if and .ng (ne .access "open") }} open{{ end }}"
               data-search="{{ lower (delimit (slice .title .context (delimit .analysts " ") .loc .label .cohort .kindLabel) " ") }}">
             <td class="c-name"><a href="{{ .href }}">{{ .title }}</a></td>

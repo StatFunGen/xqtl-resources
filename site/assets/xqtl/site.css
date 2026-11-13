@@ -393,7 +393,7 @@ code, kbd, pre { font-family: var(--mono); }
 .field:focus-within { border-color: var(--ac); box-shadow: 0 0 0 1px var(--ac); }
 .field input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: 400 16px var(--sans); color: var(--ink); }
 .field input::placeholder { color: var(--ink2); }
-.catalog__body { display: grid; grid-template-columns: 232px minmax(0, 1fr); margin: 20px 32px 0; border: 1px solid var(--ln); border-radius: var(--r2); background: var(--sf); }
+.catalog__body { display: grid; grid-template-columns: 264px minmax(0, 1fr); margin: 20px 32px 0; border: 1px solid var(--ln); border-radius: var(--r2); background: var(--sf); }
 .facets { padding: 16px 14px 28px; border-right: 1px solid var(--ln); display: flex; flex-direction: column; gap: 18px; }
 .facets__mobilehead { display: none; }
 .facet { display: flex; flex-direction: column; gap: 1px; }
@@ -1084,3 +1084,11 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .search { min-width: 0; }
 .search input { min-width: 0; }
 @media (max-width: 1100px) { .brand { width: auto; } .topbar__links { gap: 12px; font-size: 13.5px; } }
+/* Catalog filters: short help under Data type, trait name with its QTL code, and the panel stays in view while the list scrolls */
+.facet__help { margin: -2px 8px 6px; font-size: 12.5px; line-height: 1.4; color: var(--ink2); }
+.fopt__sub { margin-left: 2px; font: 500 12px var(--mono); color: var(--ink2); }
+.fopt { font-size: 14.5px; padding: 3px 8px; }
+.facets { gap: 16px; }
+@media (min-width: 901px) {
+  .facets { position: sticky; top: calc(var(--topbar) + 8px); align-self: start; max-height: calc(100vh - var(--topbar) - 16px); overflow-y: auto; overscroll-behavior: contain; }
+}
