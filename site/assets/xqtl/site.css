@@ -1114,7 +1114,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .cmx__btn { min-width: 44px; min-height: 44px; padding: 0 6px; border: 1px solid var(--ln2); border-radius: 6px; background: var(--sf); color: var(--ink); font: 600 14px var(--mono); cursor: pointer; }
 .cmx__btn:hover { border-color: var(--ac); background: var(--acs); }
 .cmx__btn[aria-pressed="true"] { border-color: var(--navy); box-shadow: 0 0 0 2px var(--navy); }
-.cmx__btn.is-dim { background: var(--sk); color: var(--ink2); border-style: dashed; }
+.cmx__btn.is-dim { background: var(--sk); color: var(--ink); border-style: dashed; }
 .cmx__btn:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
 .cmx__table td { padding: 3px 2px; }
 .cmx__table { table-layout: auto; min-width: 580px; }
@@ -1122,3 +1122,4 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .dlr__table { margin-top: 10px; font-size: 13px; }
 .dlr__table > summary { cursor: pointer; color: var(--ac); font-weight: 500; }
 .dlr__table .dtable { margin-top: 6px; }
+.cmx__wrap:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
