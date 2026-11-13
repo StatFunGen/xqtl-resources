@@ -6,6 +6,8 @@ cohort: ROSMAP
 context: "DLPFC, 7 cell types"
 sample_size: 424
 access: controlled
+niagads: NG00184
+niagads_type: snuc-eQTL
 status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]

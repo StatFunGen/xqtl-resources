@@ -1,13 +1,12 @@
 ---
-type: gwas
-short_title: AD GWAS overview
-status: staged
+type: other
+short_title: Alzheimer's disease GWAS overview
 synapse_ids: [syn69670651, syn69670652, syn69670653, syn69670656, syn69670625, syn69865805]
 lead_analysts: []
 last_verified:
 ---
 
-# AD GWAS Summary Statistics
+# Alzheimer's disease GWAS overview
 
 The FunGen-xQTL flagship study uses summary statistics from large Alzheimer's disease (AD) GWAS as the trait input for fine-mapping, TWAS and colocalization.
 
@@ -15,11 +14,11 @@ The FunGen-xQTL flagship study uses summary statistics from large Alzheimer's di
 
 ## Datasets
 
-The study used twelve datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically confirmed late-onset AD, proxy-based AD cases, and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the twelve.
+The study used twelve datasets from four AD meta-analyses: Bellenguez, Wightman, Kunkle and Jansen. They cover clinically diagnosed AD, proxy AD cases (people whose parent had dementia) and broader dementia phenotypes. Lambert et al. 2013 (IGAP stage 1) is cited as a historical reference and is not one of the twelve.
 
 | Dataset | Study | Population | N cases | N controls | Phenotype definition |
 |---|---|---|---|---|---|
-| `AD_Bellenguez_2022` | [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) *Nat Genet* | European | 111,326 | 677,663 | Clinically confirmed late-onset AD. Primary GWAS, used throughout |
+| `AD_Bellenguez_2022` | [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) *Nat Genet* | European | 111,326 | 677,663 | Clinically diagnosed AD plus proxy AD and related dementia cases (UK Biobank family history); see the `noproxy` analysis for clinical cases only. Primary GWAS, used throughout |
 | `AD_Bellenguez_EADB_2022` | Bellenguez et al. 2022, EADB subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_EADI_2022` | Bellenguez et al. 2022, EADI subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_GRACE_2022` | Bellenguez et al. 2022, GRACE cohort | European | n/a | n/a | n/a |

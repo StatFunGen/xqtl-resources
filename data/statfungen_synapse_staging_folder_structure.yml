@@ -518,6 +518,12 @@ xQTL_GWAS_models: #syn69670588
               - Metabrain.*.univariate_susie_rss.rds
         MiGA_eQTL: #syn70095505
           export: #syn70095506
+            batch{1..9}: #syn78566204, syn78580438, syn78592024, syn78609685, syn78624654, syn78638645, syn78650797, syn78664400, syn78675955
+              - MiGA_eQTL.*.cis_results_db.export.rds
+              - MiGA_eQTL.*.cis_results_db.export.rds.md5
+              - MiGA_eQTL.*.cis_results_db.export_sumstats.rds
+              - MiGA_eQTL.*.cis_results_db.export_sumstats.rds.md5
+              - MiGA_eQTL.*.pip_sum
           fine_mapping: #syn75134502
             batch{1..2}: #syn754273{39..40}
               - MiGA_eQTL.*.univariate_bvsr.rds
@@ -671,8 +677,8 @@ xQTL_GWAS_models: #syn69670588
         MetaBrain:
           - RDS_files
         MiGA_eQTL: #syn70094765
-          batch{1..4}: #syn734626{87,89..91}
-           - MiGA_eQTL.*.univariate_bvsr.rds
+          batch{1..4}: #syn78631715, syn78684072, syn78690732, syn78696754
+            - MiGA_eQTL.*.univariate_susie_twas_weights.rds
         MSBB_eQTL: #syn70094766
           batch{1..6}: #syn7346268{1..6}
             - MSBB_eQTL.*.univariate_twas_weights.rds

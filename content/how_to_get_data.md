@@ -45,6 +45,3 @@ NG00184 includes eQTL, snuc-eQTL, sQTL, pQTL, mQTL and haQTL. Each archive holds
 
 The [xQTL Atlas](https://xqtl.niagads.org/) lets you search significant associations by variant, gene or region, view them in a genome browser and download matching rows as TSV.
 
-## Release status
-
-{{< status-defs >}}

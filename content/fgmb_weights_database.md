@@ -4,6 +4,8 @@
 
 FunGen-xQTL Multi-Brain (FGMB) Atlas is a multi-context regulome-wide association study (RWAS) resource for studying genetic regulation in aging-brain-related disease traits. It provides molecular expression prediction models across brain regions, cell types, cohorts, and molecular modalities, capturing both shared and context-specific regulatory effects.  
 
+The FGMB preprint (medRxiv version 2, June 2026) describes cis-genetic prediction models for 17,901 protein-coding genes across 36 molecular datasets, 18 contexts and 3 regulatory modalities, more than 293,000 gene-level and splice-event models in all.
+
 The released prediction model database and analysis outputs are available through the AD Knowledge Portal. Supporting documentation is available through the `FGMB Atlas` manuscript resource site, the ADSP-FunGen `xQTL Resources`, the FunGen `xQTL Analysis Protocol`, and the `pecotmr` software vignettes.
 
 
@@ -69,7 +71,7 @@ All TWAS weight models are in [syn69670600](https://www.synapse.org/Synapse:syn6
 |---|---|---|
 | KNIGHT_eQTL | [syn70090844](https://www.synapse.org/Synapse:syn70090844) | `KNIGHT_eQTL.*.univariate_twas_weights.rds` |
 | KNIGHT_pQTL | [syn70090845](https://www.synapse.org/Synapse:syn70090845) | `KNIGHT_pQTL.*.univariate_twas_weights.rds` |
-| MiGA_eQTL | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_bvsr.rds` |
+| MiGA_eQTL | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_susie_twas_weights.rds` |
 | MSBB_eQTL | [syn70094766](https://www.synapse.org/Synapse:syn70094766) | `MSBB_eQTL.*.univariate_twas_weights.rds` |
 | MSBB_pQTL | [syn70090848](https://www.synapse.org/Synapse:syn70090848) | `MSBB_pQTL.*.univariate_twas_weights.rds` |
 | MSBB_sQTL | [syn70090851](https://www.synapse.org/Synapse:syn70090851) | `MSBB_sQTL.*.univariate_twas_weights.rds` |

@@ -31,7 +31,7 @@ HUGO_BOOK_THEME_URL = 'https://github.com/alex-shpak/hugo-book/archive/refs/head
 # Site layouts, styles and data that override hugo-book (copied into the website directory)
 DEFAULT_SITE_DIR = 'site'
 # Header keys that are Hugo page settings rather than dataset metadata
-HUGO_KEYS = {'layout', 'weight', 'description', 'linkTitle', 'bookHidden', 'bookToc'}
+HUGO_KEYS = {'layout', 'weight', 'description', 'linkTitle', 'bookHidden', 'bookToc', 'aliases'}
 # Pages that use a dedicated layout, by source path relative to the content directory
 PAGE_LAYOUTS = {'xqtl-data/README.md': 'catalog'}
 
@@ -134,6 +134,18 @@ class HugoSiteGenerator:
                 shutil.copy2(src, dest)
         self.log(f"Copied site layouts and styles from {site_dir}/", 'success')
         return True
+
+    def build_staging_index(self):
+        """Write data/staging.json (every staged Synapse folder and the pages that cite it) for the All Synapse folders page"""
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'staging_index.py')
+        repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        out = os.path.join(self.website_dir, 'data', 'staging.json')
+        r = subprocess.run([sys.executable, script, '--repo', repo, '--out', out], capture_output=True, text=True)
+        if r.returncode == 0:
+            self.log(f"Synapse folder index: {r.stdout.strip()}", 'success')
+            return True
+        self.log(f"Synapse folder index failed: {r.stderr.strip()[:500]}", 'error')
+        return False
 
     def create_hugo_config(self):
         """Copy Hugo configuration file from source repository"""
@@ -650,7 +662,8 @@ python scripts/hugo_generator.py --build --minify
         try:
             os.chdir(self.website_dir)
             
-            cmd = ['hugo']
+            # The --base-url option decides canonical links and alias redirects, not only the README
+            cmd = ['hugo', '--baseURL', self.base_url]
             if minify:
                 cmd.append('--minify')
             
@@ -679,7 +692,7 @@ python scripts/hugo_generator.py --build --minify
         try:
             os.chdir(self.website_dir)
             
-            cmd = ['hugo', 'server']
+            cmd = ['hugo', 'server', '--baseURL', self.base_url]
             if port != 1313:
                 cmd.extend(['--port', str(port)])
             
@@ -733,6 +746,8 @@ python scripts/hugo_generator.py --build --minify
         else:
             self.log("\nStep 2: Skipping theme download", 'info')
         self.copy_site_overlay()
+        if not self.build_staging_index():
+            success = False
 
         # Step 3: Content
         self.log("\nStep 3: Processing content files...", 'info')

@@ -14,7 +14,7 @@ eQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 |---------|--------------------------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_expression_qtl) | Dorsolateral prefrontal cortex (bulk RNA-seq) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [ROSMAP PCC](ROSMAP_PCC_expression_qtl) | Posterior cingulate cortex (bulk RNA-seq) | – |
-| [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior cingulate cortex (bulk RNA-seq) | – |
+| [ROSMAP AC](ROSMAP_AC_expression_qtl) | Anterior caudate nucleus (bulk RNA-seq) | – |
 | [ROSMAP microglia](ROSMAP_microglia_expression_qtl) | Microglia (bulk RNA-seq) | – |
 | [ROSMAP monocyte](ROSMAP_monocyte_expression_qtl) | Peripheral blood monocytes | – |
 | [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk_qtl) | Single-nucleus RNA-seq, 7 major cell types (CUIMC1 + MIT) | – |

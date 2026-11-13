@@ -12,7 +12,7 @@
 {{- range hugo.Data.next_phase -}}
   {{- $label := "" }}{{ $color := "" -}}
   {{- $o := .omics -}}
-  {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end }}{{ end }}{{ end -}}
+  {{- range $x.omics }}{{ if eq .folder $o }}{{ $label = .label }}{{ $fam := .family }}{{ range $x.modalities }}{{ if eq .family $fam }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end }}{{ end }}{{ end -}}
   {{- $rows = $rows | append (dict "name" .name "href" "" "cohort" (.cohort | default "—") "context" (.context | default "—") "label" ($label | default "—") "color" $color "mark" "ring" "n" "" "access" (.access | default "")
       "acq" .acquisition "phase" "next" "src" (.synapse | default "—") "note" (.note | default "") "ph" (not .cohort)) -}}
 {{- end -}}
@@ -43,15 +43,15 @@
       <tbody>
       {{- range $rows }}
         <tr data-row data-phase="{{ .phase }}" data-acq="{{ .acq }}"{{ if eq .phase "next" }} class="is-next"{{ end }}>
-          <td>{{ if .href }}<a class="strong" href="{{ .href }}">{{ .name }}</a>{{ else }}<span class="strong">{{ .name }}</span>{{ end }}{{ with .note }}<span class="sub">{{ . }}</span>{{ end }}</td>
-          <td class="muted">{{ .cohort }}</td>
-          <td class="muted">{{ .context }}</td>
-          <td class="nowrap">{{ partial "ui/mark.html" . }}{{ .label }}</td>
-          <td class="r mono muted">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
-          <td>{{ with .access }}{{ partial "ui/access.html" . }}{{ else }}—{{ end }}</td>
-          <td>{{ with .acq }}<span class="aq aq--{{ . }}">{{ (index $x.acquisition .).label }}</span>{{ else }}<span class="subtle">Not set</span>{{ end }}</td>
-          <td class="phase">{{ if eq .phase "v1" }}Atlas v1{{ else }}Next phase{{ end }}</td>
-          <td>{{ if hasPrefix .src "syn" }}<a class="mono accent" href="https://www.synapse.org/Synapse:{{ .src }}" rel="noopener">{{ .src }}</a>{{ else }}<span class="mono accent">{{ .src }}</span>{{ end }}</td>
+          <td class="inv-name">{{ if .href }}<a class="strong" href="{{ .href }}">{{ .name }}</a>{{ else }}<span class="strong">{{ .name }}</span>{{ end }}{{ with .note }}<span class="sub">{{ . }}</span>{{ end }}</td>
+          <td class="muted" data-label="Cohort">{{ .cohort }}</td>
+          <td class="muted" data-label="Context">{{ .context }}</td>
+          <td class="nowrap" data-label="Modality">{{ partial "ui/mark.html" . }}{{ .label }}</td>
+          <td class="r mono muted" data-label="N">{{ with .n }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+          <td data-label="Access">{{ with .access }}{{ partial "ui/access.html" . }}{{ else }}—{{ end }}</td>
+          <td data-label="Acquisition">{{ with .acq }}<span class="aq aq--{{ . }}">{{ (index $x.acquisition .).label }}</span>{{ else }}<span class="subtle">Not set</span>{{ end }}</td>
+          <td class="phase" data-label="Phase">{{ if eq .phase "v1" }}Atlas v1{{ else }}Next phase{{ end }}</td>
+          <td data-label="Source">{{ if hasPrefix .src "syn" }}<a class="mono accent" href="https://www.synapse.org/Synapse:{{ .src }}" rel="noopener">{{ .src }}</a>{{ else }}<span class="mono accent">{{ .src }}</span>{{ end }}</td>
         </tr>
       {{- end }}
       </tbody>

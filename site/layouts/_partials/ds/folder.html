@@ -1,0 +1,37 @@
+{{- /* One staged Synapse folder and everything under it. Input: (dict "n" node "d" depth).
+  Node fields come from scripts/staging_index.py: n name, id Synapse IDs, f files [name, id...],
+  p pages that cite this folder, v pages that cite a parent folder, c child folders. */ -}}
+{{- $n := .n -}}{{- $d := .d -}}
+{{- $kids := $n.c | default slice -}}{{- $files := $n.f | default slice -}}
+{{- $words := slice $n.n -}}{{- range $n.id }}{{ $words = $words | append . }}{{ end }}{{ range $files }}{{ range . }}{{ $words = $words | append . }}{{ end }}{{ end -}}
+<details class="fold" data-fold="{{ delimit $words " " | lower }}"{{ if lt $d 1 }} open{{ end }}>
+  <summary class="fold__row">
+    <span class="fold__name">{{ $n.n }}</span>
+    {{- with $n.id }}
+    <span class="fold__ids">
+      {{- $first := index . 0 -}}
+      <a class="fold__id" href="https://www.synapse.org/Synapse:{{ $first }}" rel="noopener">{{ $first }}</a>
+      {{- if gt (len .) 1 }}<span class="fold__more">+{{ sub (len .) 1 }} batch{{ if gt (len .) 2 }}es{{ end }}</span>{{ end -}}
+    </span>
+    {{- end }}
+    <span class="fold__meta">
+      {{- if $kids }}{{ len $kids }} folder{{ if ne (len $kids) 1 }}s{{ end }}{{ end -}}
+      {{- if and $kids $files }} · {{ end -}}
+      {{- if $files }}{{ len $files }} file{{ if ne (len $files) 1 }}s{{ end }}{{ end -}}
+    </span>
+    {{- with $n.p }}
+    <span class="fold__pages">{{ range $i, $pg := first 2 . }}{{ with site.GetPage $pg.g }}{{ if $i }} · {{ end }}<a href="{{ .RelPermalink }}">{{ $pg.t }}</a>{{ end }}{{ end }}{{ if gt (len .) 2 }} <span class="fold__more">+{{ sub (len .) 2 }} pages</span>{{ end }}</span>
+    {{- end }}
+  </summary>
+  <div class="fold__body">
+    {{- if gt (len $n.id) 1 }}
+    <p class="fold__batches">{{ range $i, $id := $n.id }}{{ if $i }} {{ end }}<a class="fold__id" href="https://www.synapse.org/Synapse:{{ $id }}" rel="noopener">{{ $id }}</a>{{ end }}</p>
+    {{- end }}
+    {{- with $files }}
+    <ul class="fold__files">
+      {{- range . }}<li><code>{{ index . 0 }}</code>{{ if gt (len .) 1 }} <a class="fold__id" href="https://www.synapse.org/Synapse:{{ index . 1 }}" rel="noopener">{{ index . 1 }}</a>{{ end }}</li>{{ end }}
+    </ul>
+    {{- end }}
+    {{- range $kids }}{{ partial "ds/folder.html" (dict "n" . "d" (add $d 1)) }}{{ end }}
+  </div>
+</details>

@@ -6,6 +6,7 @@ cohort: ROSMAP
 context: PCC
 sample_size:
 access: controlled
+niagads: NG00184
 status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]

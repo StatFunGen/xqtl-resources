@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{- /* All Synapse folders: every folder in data/statfungen_synapse_staging_folder_structure.yml, built into
+  data/staging.json by scripts/staging_index.py at build time, with the catalog pages that describe each one. */ -}}
+{{- $s := hugo.Data.staging -}}
+<article class="page folders">
+  <header class="folders__head">
+  {{ partial "site/breadcrumb.html" . }}
+  <h1 class="page__title">{{ .Title }}</h1>
+  {{ with .Params.lead }}<div class="page__lead">{{ $.RenderString . }}</div>{{ end }}
+  </header>
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  {{- with $s }}
+  <section class="stats folders__stats" aria-label="Folder counts">
+    <div class="stat"><span class="stat__n">{{ .folders }}</span><span class="stat__l">folders</span></div>
+    <div class="stat"><span class="stat__n">{{ .files }}</span><span class="stat__l">files and file patterns</span></div>
+    <div class="stat"><span class="stat__n">{{ .ids }}</span><span class="stat__l">Synapse IDs</span></div>
+  </section>
+  <div class="field folders__find">
+    <span class="search__icon" aria-hidden="true"></span>
+    <label class="sr-only" for="fold-q">Filter folders</label>
+    <input id="fold-q" type="search" placeholder="Filter by folder, file name or Synapse ID" autocomplete="off" data-fold-q>
+    <button type="button" class="btn" data-fold-all aria-pressed="false">Expand all</button>
+  </div>
+  <p class="note" data-fold-status aria-live="polite"></p>
+  <div class="folders__tree">
+    {{- range .tree }}{{ partial "ds/folder.html" (dict "n" . "d" 0) }}{{ end }}
+  </div>
+  {{- else }}
+  <p class="note">The folder index is built from the staging YAML when the site is generated.</p>
+  {{- end }}
+</article>
+{{ end }}
+{{ define "scripts" }}
+<script>
+(function () {
+  var q = document.querySelector('[data-fold-q]'), all = document.querySelector('[data-fold-all]'),
+      st = document.querySelector('[data-fold-status]'), folds = [].slice.call(document.querySelectorAll('.fold')),
+      files = [].slice.call(document.querySelectorAll('.fold__files li'));
+  if (!q) return;
+  function run() {
+    var t = q.value.trim().toLowerCase(), n = 0, nf = 0, firstFile = null;
+    folds.forEach(function (f) { f.hidden = false; f.classList.remove('is-hit'); });
+    files.forEach(function (li) { li.classList.remove('is-hit'); });
+    if (!t) { st.textContent = ''; return; }
+    // a folder stays visible when it, a parent or a child matches
+    folds.slice().reverse().forEach(function (f) {
+      var hit = f.getAttribute('data-fold').indexOf(t) > -1;
+      var kid = [].some.call(f.querySelectorAll(':scope > .fold__body > .fold'), function (k) { return !k.hidden; });
+      f.hidden = !(hit || kid); if (hit) { f.classList.add('is-hit'); f.open = true; n++; }
+      if (kid) f.open = true;
+    });
+    folds.forEach(function (f) { if (f.classList.contains('is-hit')) [].forEach.call(f.querySelectorAll('.fold'), function (k) { k.hidden = false; }); });
+    // file names and file IDs: highlight each matching file inside the folders shown
+    files.forEach(function (li) {
+      if (li.textContent.toLowerCase().indexOf(t) > -1 && !li.closest('.fold[hidden]')) { li.classList.add('is-hit'); nf++; if (!firstFile) firstFile = li; }
+    });
+    var parts = [];
+    if (n) parts.push(n + ' folder' + (n > 1 ? 's' : ''));
+    if (nf) parts.push(nf + ' file' + (nf > 1 ? 's' : ''));
+    st.textContent = parts.length ? parts.join(' and ') + ' match' + (n + nf === 1 ? 'es' : '') : 'Nothing matches';
+    if (firstFile) { st.appendChild(document.createTextNode(' ')); var go = document.createElement('a'); go.href = '#'; go.textContent = 'Show first file'; go.addEventListener('click', function (e) { e.preventDefault(); firstFile.scrollIntoView({ block: 'center' }); firstFile.setAttribute('tabindex', '-1'); firstFile.focus(); }); st.appendChild(go); }
+  }
+  var tm = null;
+  q.addEventListener('input', function () { clearTimeout(tm); tm = setTimeout(run, 150); });
+  all.addEventListener('click', function () {
+    var on = all.getAttribute('aria-pressed') !== 'true';
+    folds.forEach(function (f) { f.open = on; });
+    all.setAttribute('aria-pressed', on); all.textContent = on ? 'Collapse all' : 'Expand all';
+  });
+})();
+</script>
+{{ end }}

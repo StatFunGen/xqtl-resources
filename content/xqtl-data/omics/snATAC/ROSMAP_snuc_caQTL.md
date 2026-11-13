@@ -4,7 +4,7 @@ modality: snATAC
 short_title: ROSMAP snATAC-seq
 cohort: ROSMAP
 context: "DLPFC, 6 cell types"
-sample_size:
+sample_size: 92
 access: controlled
 status: staged
 synapse_ids: [syn69670592, syn69670597, syn69670630, syn69865816]
@@ -23,7 +23,8 @@ Single-nucleus ATAC-seq (snATAC-seq) data from ROSMAP, profiling chromatin acces
 - **Cohort**: ROSMAP (MIT)
 - **Brain region**: Dorsolateral prefrontal cortex (DLPFC)
 - **Data type**: Single-nucleus ATAC-seq (snATAC-seq)
-- **Cell types**: Multiple brain cell types (neurons, oligodendrocytes, astrocytes, microglia, etc.)
+- **Cell types**: Six: microglia, astrocytes, oligodendrocytes, OPCs, excitatory neurons and inhibitory neurons
+- **Donors**: 92
 
 ## Omics Data
 

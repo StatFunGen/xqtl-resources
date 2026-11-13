@@ -23,9 +23,28 @@
 {{- $cohortDesc := "" -}}
 {{- range $x.cohorts }}{{ if eq .name $i.cohort }}{{ $cohortDesc = .desc }}{{ end }}{{ end -}}
 
+{{- $key := strings.TrimSuffix ".md" (replace $p.File.Path "\\" "/") -}}
+{{- $hits := index (hugo.Data.staging.bypage | default dict) $key | default slice -}}
+{{- /* This dataset's own Synapse folders (not the shared parent): folder matches under the model and raw-data areas */ -}}
+{{- $own := slice -}}
+{{- $what := dict "finemapping_models" "Fine-mapping: cis-QTL export and SuSiE models" "colocalization_models" "Multi-context colocalization (ColocBoost)" "TWAS_models" "TWAS weights" "AD_xQTL_colocalization_models" "AD GWAS and xQTL colocalization" "AD_finemapping" "AD GWAS fine-mapping" -}}
+{{- range $hits }}{{ if and .d .d.id (not .s) (in (slice "xQTL_GWAS_models" "xQTL_data") (index (split .at "/") 0)) }}
+  {{- $lab := "" }}
+  {{- range $seg := split .at "/" }}{{ with index $what $seg }}{{ $lab = . }}{{ end }}{{ end -}}
+  {{- if in .at "multi_context" }}{{ $lab = printf "%s, multi-context" $lab }}{{ end -}}
+  {{- $cat := "" }}{{ range $seg := split .at "/" }}{{ with index (dict "finemapping_models" "finemap" "AD_finemapping" "finemap" "TWAS_models" "twas" "colocalization_models" "coloc" "AD_xQTL_colocalization_models" "coloc") $seg }}{{ $cat = . }}{{ end }}{{ end -}}
+  {{- $own = $own | append (dict "id" (index .d.id 0) "name" .d.n "cat" $cat "what" ($lab | default (index (last 1 (split .at "/")) 0))) -}}
+{{ end }}{{ end -}}
+{{- $sid := $i.synapse -}}{{ with $own }}{{ $sid = (index . 0).id }}{{ end -}}
 <article class="page page--dataset">
-  <header class="page__head">
+  <header class="page__head dshead">
     {{ partial "site/breadcrumb.html" $p }}
+    {{- $kl := $i.kindLabel | default (index (dict "study" "Study cohort" "gwas" "AD GWAS" "reference" "Reference data") $i.kind) -}}
+    {{- $eb := slice }}{{ range slice $kl (cond (ne $i.kind "study") $i.cohort "") $i.context }}{{ if and . (not (in $eb .)) (ne . $i.label) }}{{ $eb = $eb | append . }}{{ end }}{{ end }}
+    <p class="dshead__eyebrow">
+      {{- if and $i.label (ne $i.kind "study") }}<span class="dshead__tag">{{ partial "ui/mark.html" $i }}{{ $i.label }}</span>{{ end -}}
+      {{- range $eb }}<span>{{ . }}</span>{{ end -}}
+    </p>
     <h1 class="page__title">{{ $p.Title }}</h1>
     {{ with $p.Params.lead }}<div class="page__lead">{{ $p.RenderString . }}</div>{{ end }}
   </header>
@@ -41,13 +60,8 @@
       {{- with $i.context }}
       <div class="meta__row"><dt>Tissue or cell type</dt><dd>{{ . }}</dd></div>
       {{- end }}
-      {{- if or $i.n (in (slice "qtl" "omics") $i.kind) }}
-      <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}</dd></div>
-      {{- end }}
-      {{- if ne $i.kind "study" }}
-      <div class="meta__row"><dt>Release status</dt><dd>{{ with $i.status }}{{ partial "ui/status.html" . }}{{ else }}<span class="subtle">Not set</span>{{ end }}
-        {{- $sub := slice }}{{ with $i.release }}{{ $sub = $sub | append . }}{{ end }}{{ if and $i.status (not $i.verified) }}{{ $sub = $sub | append "verification pending" }}{{ end }}{{ with $i.verified }}{{ $sub = $sub | append (printf "verified %s" .) }}{{ end }}
-        {{- with $sub }}<span class="meta__sub">{{ delimit . " · " }}</span>{{ end }}</dd></div>
+      {{- if or $i.n $i.nnote (in (slice "qtl" "omics") $i.kind) }}
+      <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}{{ with $i.nnote }}{{ . }}, see Samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}{{ end }}</dd></div>
       {{- end }}
       {{- with $i.access }}
       <div class="meta__row"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}<span class="meta__sub">{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}</span></dd></div>
@@ -64,9 +78,23 @@
       </dd></div>
       {{- end }}
     </dl>
-    {{- if or $i.synapse (eq $i.kind "qtl") }}
+    {{- with $i.methods }}
+    <div class="summary__methods" id="analyses">
+      <span class="summary__label">Analyses</span>
+      <ul class="method-chips">
+        {{- range $m := $x.methods }}
+          {{- with index $i.methods $m }}
+          {{- $st := index $x.method_status . }}
+          <li class="method-chip" title="{{ with $st }}{{ .label }}{{ end }}"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span>{{ $m }}</span><span class="sr-only">{{ with $st }}{{ .label }}{{ end }}</span></li>
+          {{- end }}
+        {{- end }}
+      </ul>
+      {{ with site.GetPage "/coverage" }}<a class="summary__more" href="{{ .RelPermalink }}">All datasets</a>{{ end }}
+    </div>
+    {{- end }}
+    {{- if or $sid (eq $i.kind "qtl") }}
     <div class="actions">
-      {{- with $i.synapse }}
+      {{- with $sid }}
       <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open {{ . }} in Synapse ↗</a>
       <button type="button" class="btn" data-copy="{{ . }}" aria-label="Copy Synapse ID {{ . }}">Copy ID</button>
       {{- end }}
@@ -78,7 +106,7 @@
   </section>
 
   <section class="ds-section" id="access">
-    <h2>Access</h2>
+    <h2>Get the data</h2>
     <p class="muted">
       {{- $acc := $i.access }}{{ if and (not $acc) $i.synapse }}{{ $acc = "controlled" }}{{ end }}
       {{- if eq $acc "open" }}Open access. Download from the links below without an application.
@@ -87,30 +115,93 @@
       {{- else }}Access terms for this page are not set yet.{{ end }}
       {{ with $howto }}See <a href="{{ .RelPermalink }}">How to get the data</a>.{{ end }}
     </p>
-    {{- if or $i.synapseIDs $i.ng00184 }}
+    {{- if and (eq $i.kind "qtl") (or $own $i.ng00184) }}
+    {{- /* QTL pages: one row per kind of result, with the open NIAGADS file and the controlled Synapse folder side by side */ -}}
+    {{- $nt := $i.ngType | default $i.label -}}
+    {{- $rows := slice
+      (dict "k" "sumstats" "t" "Association summary statistics" "d" "Every tested variant and molecular trait pair, or only the FDR or HMT significant ones" "ng" (slice (printf "%s.all.tar" $nt) (printf "%s.bh_significant.tar" $nt) (printf "%s.hmt_significant.tar" $nt)))
+      (dict "k" "finemap" "t" "Fine-mapping" "d" "SuSiE credible sets and posterior inclusion probabilities (PIPs)" "ng" (slice (printf "%s.single_context_finemapping_cs95.tar" $nt) (printf "%s.single_context_finemapping_all.tar" $nt)))
+      (dict "k" "twas" "t" "TWAS weights" "d" "Gene prediction weights for transcriptome-wide association" "ng" slice)
+      (dict "k" "coloc" "t" "Colocalization models" "d" "ColocBoost models across contexts and with AD GWAS" "ng" slice) -}}
+    <div class="table-card">
+      <table class="dtable gettable">
+        <caption class="sr-only">Where to get each kind of result for this dataset</caption>
+        <thead><tr><th scope="col">What you need</th><th scope="col">Open, no application<br><span class="muted">NIAGADS {{ $x.ng00184.id }}</span></th><th scope="col">Controlled access<br><span class="muted">AD Knowledge Portal (Synapse)</span></th></tr></thead>
+        <tbody>
+          {{- range $r := $rows }}
+          {{- $syn := where $own "cat" $r.k -}}
+          {{- if or $syn (and $i.ng00184 $r.ng) }}
+          <tr><th scope="row"><span class="strong">{{ $r.t }}</span><span class="meta__sub">{{ $r.d }}</span></th>
+            <td data-label="Open: NIAGADS">{{ if and $i.ng00184 $r.ng }}<span class="gettable__files">{{ range $k, $f := $r.ng }}{{ if $k }} · {{ end }}<code>{{ replace (replace $f (printf "%s." $nt) "") ".tar" "" }}</code>{{ end }}</span><span class="meta__sub">Archives <code>ADSP_FunGen_xQTL.v1.{{ $nt }}.&lt;name&gt;.tar</code></span><a href="{{ $x.ng00184.url }}" rel="noopener">Download from NIAGADS ↗</a>{{ else }}<span class="subtle">Not in the open release</span>{{ end }}</td>
+            <td data-label="Controlled: Synapse">{{ with $syn }}{{ range . }}<span class="gettable__syn"><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a> <button type="button" class="linkbtn" data-copy="{{ .id }}" aria-label="Copy Synapse ID {{ .id }}">Copy</button><span class="meta__sub">{{ .what }} · folder {{ .name }}</span></span>{{ end }}{{ else }}<span class="subtle">{{ if and $i.ng00184 $r.ng }}Use the open release{{ else }}Not staged yet{{ end }}</span>{{ end }}</td></tr>
+          {{- end }}
+          {{- end }}
+          {{- if $i.ng00184 }}
+          <tr><th scope="row"><span class="strong">Look up a gene, variant or region</span><span class="meta__sub">No download; significant associations in the browser or as a TSV</span></th>
+            <td data-label="Open"><a href="{{ site.Params.atlasURL }}" rel="noopener">xQTL Atlas ↗</a></td><td data-label="Controlled: Synapse"><span class="subtle">Not needed</span></td></tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">A Synapse ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
+    {{- else if or $i.synapseIDs $i.ng00184 }}
     <div class="table-card">
       <table class="dtable">
         <thead><tr><th>Where</th><th>ID</th><th>Access</th><th>What you get</th></tr></thead>
         <tbody>
-          {{- with $i.synapse }}
+          {{- range $own }}
+          <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
+            <td>{{ .what }} <span class="muted">· {{ .name }}</span></td></tr>
+          {{- end }}
+          {{- with $i.synapse }}{{ if not $own }}
           <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
             <td>{{ if eq $i.kind "qtl" }}{{ if eq . "syn69670632" }}Raw QTL data folder, with the per-dataset results described below{{ else }}Results described below{{ end }}{{ else }}Files described below{{ end }}</td></tr>
-          {{- end }}
+          {{- end }}{{ end }}
           {{- if $i.ng00184 }}
           <tr><td class="strong">NIAGADS DSS</td><td><a class="mono" href="{{ $x.ng00184.url }}" rel="noopener">{{ $x.ng00184.id }}</a></td><td>{{ partial "ui/access.html" "open" }}</td>
-            <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.label }}.*.tar</code></td></tr>
+            <td>Harmonized summary statistics and SuSiE fine-mapping in <code>ADSP_FunGen_xQTL.v1.{{ $i.ngType | default $i.label }}.*.tar</code></td></tr>
           {{- end }}
         </tbody>
       </table>
     </div>
     {{- end }}
-    {{- if gt (len $i.synapseIDs) 1 }}
-    <p class="ids"><span class="label">Other Synapse IDs on this page</span>
-      {{- range after 1 $i.synapseIDs }} <a class="chip chip--mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a>{{ end }}</p>
-    {{- end }}
-    {{- with $i.synapse }}
+    {{- with $sid }}
     {{ $code := printf "pip install synapseclient\nsynapse login\nsynapse get -r %s" . }}
     {{ $p.RenderString (printf "```shell\n%s\n```" $code) }}
+    {{- end }}
+    {{- with $hits }}
+    {{- $areas := dict "variant_gene_summary" "Variant and gene summaries" "xQTL_GWAS_models" "xQTL and AD GWAS models" "xQTL_data" "Raw QTL data" "reference_files" "Reference files" "xQTL_SCEEM_scores" "scEEMS scores" "Metadata" "Metadata" "manuscript" "Manuscript" -}}
+    <div class="dsfiles">
+      <h3 class="dsfiles__title">Every Synapse folder that mentions this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
+      {{- range $area := slice "variant_gene_summary" "xQTL_GWAS_models" "xQTL_data" "xQTL_SCEEM_scores" "reference_files" "Metadata" "manuscript" }}
+        {{- $in := slice }}{{ range $hits }}{{ if eq (index (split .at "/") 0) $area }}{{ $in = $in | append . }}{{ end }}{{ end -}}
+        {{- with $in }}
+        <details class="dsfiles__area">
+          <summary><span class="dsfiles__name">{{ index $areas $area }}</span><span class="muted">{{ len . }}</span></summary>
+          <ul class="dsfiles__list">
+          {{- range $h := . }}
+            {{- $crumb := after 1 (split $h.at "/") }}
+            <li>
+              {{- with $crumb }}<span class="dsfiles__crumb" title="{{ $h.at }}">{{ delimit (last 3 .) " › " }}{{ if and $h.f $h.id }} · <a class="fold__id" href="https://www.synapse.org/Synapse:{{ index $h.id 0 }}" rel="noopener">{{ index $h.id 0 }}</a>{{ end }}</span>{{ end }}
+              {{- with $h.j }}<span class="dsfiles__joint">Joint analysis of {{ delimit . " + " }}; also listed on the other data type's pages</span>{{ end }}
+              {{- if $h.s }}<span class="dsfiles__joint">Covers all {{ $i.cohort }} data types; also listed on the cohort's other QTL pages</span>{{ end }}
+              {{- with .d }}{{ partial "ds/folder.html" (dict "n" . "d" 1) }}{{ end }}
+              {{- with .f }}
+              <div class="dsfiles__files">
+                <ul>{{ range . }}<li><code>{{ index . 0 }}</code></li>{{ end }}</ul>
+              </div>
+              {{- end }}
+            </li>
+          {{- end }}
+          </ul>
+        </details>
+        {{- end }}
+      {{- end }}
+      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue (bulk and single-nucleus data kept apart), taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All Synapse folders</a> lists everything.{{ end }}</p>
+    </div>
+    {{- end }}
+    {{- if and (eq $i.kind "omics") $counter }}
+    <p class="note">QTL results computed from this data, and their files on Synapse, are listed on {{ range $n, $c := $counter }}{{ if $n }}, {{ end }}<a href="{{ $c.page.RelPermalink }}">{{ $c.page.LinkTitle }} {{ $c.info.label }}</a>{{ end }}.</p>
     {{- end }}
   </section>
 
@@ -118,20 +209,6 @@
     {{ $p.Content }}
   </div>
 
-  {{- with $i.methods }}
-  <section class="ds-section" id="analyses">
-    <h2>Analyses</h2>
-    <ul class="method-chips">
-      {{- range $m := $x.methods }}
-        {{- with index $i.methods $m }}
-        {{- $st := index $x.method_status . }}
-        <li class="method-chip"><span class="mcell mcell--{{ . }}" aria-hidden="true">{{ with $st }}{{ .glyph }}{{ end }}</span><span>{{ $m }}</span><span class="muted">{{ with $st }}{{ .label }}{{ end }}</span></li>
-        {{- end }}
-      {{- end }}
-    </ul>
-    <p class="note">Read from the <code>methods:</code> map in this page's metadata header{{ with site.GetPage "/coverage" }}, the same data as the <a href="{{ .RelPermalink }}">analysis coverage grid</a>{{ end }}.</p>
-  </section>
-  {{- end }}
 
   {{- /* Related: counterpart, same cohort and context in other modalities, same modality in other contexts, cohort study page */ -}}
   {{- $rel := slice -}}

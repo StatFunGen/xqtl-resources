@@ -3,8 +3,8 @@
 # summary card and the home page always agree. Page-level facts live in each page's
 # metadata header (see template/metadata_header.md).
 
-# Headline numbers on the home page, as reported in the flagship paper. The modality
-# count is computed from the modalities list below.
+# Headline numbers on the home page, as reported in the flagship paper (77 datasets and
+# 2,328 participants: Supplementary Table 2 and Online Methods). Loci: AD loci release 20261102.
 home:
   datasets: "77"
   participants: "2,328"
@@ -12,18 +12,28 @@ home:
     Counts are participants. One participant can contribute several tissues,
     cell types and assays.
   updated: "November 2026"
+  loci: "226"
+  # Molecular modalities in the flagship paper. tpQTL is its own QTL type on this site
+  # but comes from RNA-seq, so the paper counts it under expression and splicing data.
+  modalities: "8"
+  # Announcement bar on the home page. Leave text empty to hide it; url is optional.
+  announce:
+    text: "Phase 1 data release coming soon on the AD Knowledge Portal"
+    tag: "Coming soon"
+    url: ""
 
 # QTL modalities, in menu order. `folder` is the folder under content/xqtl-data/qtl and
-# `omics` the matching folders under content/xqtl-data/omics. Colour: oklch(0.6 0.13 hue).
+# `omics` the matching folders under content/xqtl-data/omics. Colour: the --m-<id> token in assets/xqtl/site.css.
 modalities:
-  - {id: eQTL, family: Expression, what: Gene expression, hue: 250, omics: [expression, snRNA_seq]}
-  - {id: sQTL, family: Splicing, what: Alternative splicing, hue: 300, omics: [splicing]}
-  - {id: mQTL, family: Methylation, what: DNA methylation, hue: 350, omics: [methylation]}
-  - {id: caQTL, family: Chromatin, what: Chromatin accessibility, hue: 30, omics: [snATAC]}
-  - {id: haQTL, family: Histone acetylation, what: Histone acetylation, hue: 70, omics: [histone_ChIPSeq]}
-  - {id: metQTL, family: Metabolomics, what: Metabolite abundance, hue: 110, omics: [metabolomics]}
-  - {id: pQTL, family: Proteomics, what: Protein abundance, hue: 155, omics: [proteomics]}
-  - {id: glycoQTL, family: Glycoproteomics, what: Glycoprotein abundance, hue: 200, omics: [glycoproteomics]}
+  - {id: eQTL, family: Expression, what: Gene expression, omics: [expression, snRNA_seq]}
+  - {id: sQTL, family: Splicing, what: Alternative splicing, omics: [splicing]}
+  - {id: tpQTL, family: Transcriptomic pattern, what: Transcriptomic pattern usage (Torino), omics: []}
+  - {id: mQTL, family: Methylation, what: DNA methylation, omics: [methylation]}
+  - {id: caQTL, family: Chromatin, what: Chromatin accessibility, omics: [snATAC]}
+  - {id: haQTL, family: Histone acetylation, what: Histone acetylation, omics: [histone_ChIPSeq]}
+  - {id: metQTL, family: Metabolomics, what: Metabolite abundance, omics: [metabolomics]}
+  - {id: pQTL, family: Proteomics, what: Protein abundance, omics: [proteomics]}
+  - {id: glycoQTL, family: Glycoproteomics, what: Glycoprotein abundance, omics: [glycoproteomics]}
 
 # Omics folders, in menu order, with the label shown on the site
 omics:
@@ -54,7 +64,6 @@ gwas:
   - {page: Wightman_AD, name: Wightman et al. 2021, desc: "3 datasets: full, without 23andMe, and without UK Biobank and 23andMe"}
   - {page: Kunkle_AD, name: Kunkle et al. 2019, desc: "1 dataset: stage 1"}
   - {page: Jansen_AD, name: Jansen et al. 2019, desc: "1 dataset"}
-  - {page: ADGC_GWAS_imputation_protocol, name: ADGC imputation protocol, desc: Adapted from the ADGC GWAS QC protocol}
 
 # Release status badges
 status:
@@ -92,7 +101,7 @@ repos:
 # methods that apply to it in a `methods:` map in its metadata header.
 methods: [cis-QTL, SuSiE, fSuSiE, ColocBoost, TWAS, cTWAS, MR, LF2, scEEMS]
 method_status:
-  done: {label: Done, glyph: ""}
+  done: {label: Done, glyph: "✓"}
   running: {label: Running, glyph: ""}
   not_run: {label: Not yet run, glyph: ""}
   awaiting: {label: Awaiting data, glyph: "·"}
@@ -100,7 +109,7 @@ method_status:
 
 # Inventory acquisition stages
 acquisition:
-  in_hand: {label: In hand, desc: "Obtained and on the AD Knowledge Portal or DSS. Release status is shown on each dataset page."}
+  in_hand: {label: In hand, desc: "Obtained and on the AD Knowledge Portal or DSS. Each dataset page links to its files."}
   reviewing: {label: Reviewing, desc: "Located; checking fit and QC"}
   requested: {label: Requested, desc: "Outreach under way"}
   to_identify: {label: To identify, desc: "Candidates not yet found"}

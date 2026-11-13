@@ -9,7 +9,7 @@ lead_analysts: [Oluwatosin Olayinka, Hao Sun, Rui Dong]
 last_verified:
 ---
 
-# Alzheimer's Disease GWAS Summary Data (Bellenguez)
+# Alzheimer's disease GWAS: Bellenguez et al. 2022
 
 SNP-level association summary statistics for Alzheimer's disease (AD) from [Bellenguez et al. 2022](https://doi.org/10.1038/s41588-022-01024-z) in *Nature Genetics*. The study includes proxy AD samples from the UK Biobank (UKBB).
 

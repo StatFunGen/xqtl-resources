@@ -11,3 +11,5 @@ Whole genome sequencing (WGS) and genotype array data across cohorts, used as th
 | [Knight ADRC genotype](Knight_ADRC_genotype) | Knight ADRC | WGS / genotype array |
 | [MiGA genotype](MiGA_genotype) | MiGA | WGS / genotype array |
 | [STARNET genotype](STARNET_genotype) | STARNET | WGS / genotype array |
+
+Some genotype-array cohorts were imputed to hg38 with the TOPMed imputation server before xQTL mapping; the steps are on the [genotype imputation protocol](genotype_imputation_protocol) page. Each dataset page above says how its cohort was imputed.

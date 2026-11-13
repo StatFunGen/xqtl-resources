@@ -6,7 +6,7 @@
   var root = document.querySelector('[data-catalog]');
   if (!root) return;
 
-  var KEYS = ['kind', 'cohort', 'family', 'tissue', 'status', 'access'];
+  var KEYS = ['kind', 'cohort', 'family', 'tissue', 'access'];
   var rows = Array.prototype.slice.call(root.querySelectorAll('[data-row]'));
   var opts = Array.prototype.slice.call(root.querySelectorAll('[data-facet]'));
   var qInput = root.querySelector('[data-q]');
@@ -74,7 +74,9 @@
   function matches(row, except) {
     for (var i = 0; i < KEYS.length; i++) {
       var k = KEYS[i];
-      if (k !== except && state[k] && row.dataset[k] !== state[k]) return false;
+      if (k === except || !state[k]) continue;
+      // access lists every way to get the data (an open NIAGADS copy adds "open" to a controlled row)
+      if (k === 'access' ? (row.dataset.access || '').split(' ').indexOf(state[k]) < 0 : row.dataset[k] !== state[k]) return false;
     }
     var q = state.q.trim().toLowerCase();
     if (q) {
@@ -104,7 +106,7 @@
     opts.forEach(function (o) {
       var k = o.dataset.facet, v = o.dataset.value, on = state[k] === v;
       var n = 0;
-      rows.forEach(function (r) { if (r.dataset[k] === v && matches(r, k)) n++; });
+      rows.forEach(function (r) { var has = k === 'access' ? (r.dataset.access || '').split(' ').indexOf(v) >= 0 : r.dataset[k] === v; if (has && matches(r, k)) n++; });
       o.setAttribute('aria-pressed', on ? 'true' : 'false');
       var c = o.querySelector('[data-count-for]');
       if (c) c.textContent = n;
@@ -154,6 +156,21 @@
     });
   });
 
+  // Narrow screens: the summary charts start collapsed above the dataset list. After a chart
+  // selection, bring the list into view and move focus to its count so keyboard and screen-reader
+  // users land on the filtered results.
+  var narrow = window.matchMedia('(max-width: 900px)');
+  var charts = root.querySelector('[data-charts]');
+  function setCharts() { if (charts) charts.open = !narrow.matches; }
+  setCharts();
+  if (narrow.addEventListener) narrow.addEventListener('change', setCharts);
+  var results = root.querySelector('.catalog__results');
+  var count = root.querySelector('[data-count]');
+  function toResults() {
+    if (!results || !narrow.matches) return;
+    results.scrollIntoView({ block: 'start' });
+    if (count) count.focus({ preventScroll: true });
+  }
   root.querySelectorAll('[data-matrix-cell]').forEach(function (b) {
     b.addEventListener('click', function () {
       var cf = b.dataset.matrixCell.split('|');
@@ -161,21 +178,22 @@
       state.cohort = on ? null : cf[0];
       state.family = on ? null : cf[1];
       state.kind = on ? null : 'qtl';
-      render();
+      render(); toResults();
     });
   });
   root.querySelectorAll('[data-matrix-row-btn]').forEach(function (b) {
     b.addEventListener('click', function () {
       var c = b.dataset.matrixRowBtn, on = state.cohort === c && !state.family;
-      state.cohort = on ? null : c; state.family = null;
-      render();
+      // The charts count QTL datasets, so a chart selection lists the same QTL datasets
+      state.cohort = on ? null : c; state.family = null; state.kind = on ? null : 'qtl';
+      render(); toResults();
     });
   });
   root.querySelectorAll('[data-matrix-col]').forEach(function (b) {
     b.addEventListener('click', function () {
       var f = b.dataset.matrixCol, on = state.family === f && !state.cohort;
-      state.family = on ? null : f; state.cohort = null;
-      render();
+      state.family = on ? null : f; state.cohort = null; state.kind = on ? null : 'qtl';
+      render(); toResults();
     });
   });
 
@@ -192,14 +210,54 @@
   closeBtn.addEventListener('click', function () { sheet(false); });
   facets.addEventListener('keydown', function (e) { if (e.key === 'Escape') sheet(false); });
 
+  // Stacked bar legend: pointing at (or focusing) a modality highlights its parts in every bar
+  var vbar = root.querySelector('[data-vbar]');
+  if (vbar) {
+    var hl = function (f) {
+      if (f) vbar.setAttribute('data-hl', f); else vbar.removeAttribute('data-hl');
+      vbar.querySelectorAll('.vbar__seg').forEach(function (sg) { sg.toggleAttribute('data-hl-on', !!f && sg.dataset.mod === f); });
+    };
+    vbar.querySelectorAll('[data-mod-key]').forEach(function (b) {
+      b.addEventListener('mouseenter', function () { hl(b.dataset.modKey); });
+      b.addEventListener('focus', function () { hl(b.dataset.modKey); });
+      b.addEventListener('mouseleave', function () { hl(null); });
+      b.addEventListener('blur', function () { hl(null); });
+    });
+  }
+
+  // Chart tooltip for marks that carry data-tip. It is tied to its mark with aria-describedby,
+  // stays open while the pointer is on the mark or on the tooltip, and Escape closes it.
+  var tip = null, tipFor = null, tipTimer = null;
+  function showTip(el) {
+    clearTimeout(tipTimer);
+    if (!tip) {
+      tip = document.createElement('div'); tip.className = 'viz-tip'; tip.id = 'viz-tip'; tip.setAttribute('role', 'tooltip');
+      tip.addEventListener('mouseenter', function () { clearTimeout(tipTimer); });
+      tip.addEventListener('mouseleave', function () { hideTipSoon(); });
+      document.body.appendChild(tip);
+    }
+    if (tipFor && tipFor !== el) tipFor.removeAttribute('aria-describedby');
+    tipFor = el; el.setAttribute('aria-describedby', 'viz-tip');
+    tip.textContent = el.getAttribute('data-tip'); tip.hidden = false;
+    var r = el.getBoundingClientRect(), w = tip.offsetWidth;
+    tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px';
+    tip.style.top = (r.top - tip.offsetHeight - 6 < 8 ? r.bottom + 6 : r.top - tip.offsetHeight - 6) + 'px';
+  }
+  function hideTip() {
+    clearTimeout(tipTimer);
+    if (tip) tip.hidden = true;
+    if (tipFor) { tipFor.removeAttribute('aria-describedby'); tipFor = null; }
+  }
+  function hideTipSoon() { clearTimeout(tipTimer); tipTimer = setTimeout(hideTip, 200); }
+  root.querySelectorAll('[data-tip]').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { showTip(el); });
+    el.addEventListener('focus', function () { showTip(el); });
+    el.addEventListener('mouseleave', hideTipSoon);
+    el.addEventListener('blur', hideTip);
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && tip && !tip.hidden) hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
   applySort();
   render();
-
-  // Arriving with a search or filter (for example from the home-page search): on phones the
-  // dashboards come first, so bring the results into view
-  var hasQuery = state.q || KEYS.some(function (k) { return state[k]; });
-  var results = root.querySelector('.catalog__results');
-  if (hasQuery && results && window.matchMedia('(max-width: 900px)').matches) {
-    results.scrollIntoView({ block: 'start' });
-  }
 })();

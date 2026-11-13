@@ -6,6 +6,7 @@ cohort: ROSMAP
 context: DLPFC
 sample_size: 596
 access: controlled
+niagads: NG00184
 status: staged
 release:
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]

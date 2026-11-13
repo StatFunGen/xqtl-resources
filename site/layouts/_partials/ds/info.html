@@ -30,12 +30,12 @@
 
 {{- $label := "" -}}{{- $family := "" -}}{{- $color := "" -}}{{- $mark := "muted" -}}
 {{- if eq $kind "qtl" -}}
-  {{- range $x.modalities }}{{ if eq .id $folder }}{{ $label = .id }}{{ $family = .family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- range $x.modalities }}{{ if eq .id $folder }}{{ $label = .id }}{{ $family = .family }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end -}}
   {{- if and (eq $label "eQTL") (findRE `(?i)snRNA-seq|single-nucleus` $p.Title) }}{{ $label = "snuc-eQTL" }}{{ end -}}
   {{- if $label }}{{ $mark = "fill" }}{{ else }}{{ $label = "Protocol" }}{{ end -}}
 {{- else if eq $kind "omics" -}}
   {{- range $x.omics }}{{ if eq .folder $folder }}{{ $label = .label }}{{ $family = .family }}{{ end }}{{ end -}}
-  {{- range $x.modalities }}{{ if eq .family $family }}{{ $color = printf "oklch(0.6 0.13 %v)" .hue }}{{ end }}{{ end -}}
+  {{- range $x.modalities }}{{ if eq .family $family }}{{ $color = printf "var(--m-%s)" .id }}{{ end }}{{ end -}}
   {{- if eq $family "Genotype" }}{{ $color = "#8d959f" }}{{ end -}}
   {{- if $color }}{{ $mark = "ring" }}{{ end -}}
 {{- else if eq $kind "gwas" -}}
@@ -52,14 +52,16 @@
 {{- if and (not $cohort) (in (slice "gwas") $kind) }}{{ $cohort = "AD GWAS" }}{{ end -}}
 {{- $analysts := $d.lead_analysts | default slice -}}
 {{- $ng := false -}}
-{{- if and (eq $kind "qtl") (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort) }}{{ $ng = true }}{{ end -}}
+{{- /* NIAGADS availability is separate from the Synapse release status: a page sets niagads: NG00184 when its files are in that
+  open release, whatever its Synapse status. Released pages of the listed modalities and cohorts also get the note. */ -}}
+{{- if and (eq $kind "qtl") (or $d.niagads (and (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort))) }}{{ $ng = true }}{{ end -}}
 
 {{- return dict
   "kind" $kind "kindLabel" $kindLabel "folder" $folder
   "label" $label "family" $family "color" $color "mark" $mark
-  "cohort" $cohort "context" ($d.context | default "") "n" ($d.sample_size | default "")
+  "cohort" $cohort "context" ($d.context | default "") "n" ($d.sample_size | default "") "nnote" ($d.sample_note | default "")
   "status" ($d.status | default "") "access" ($d.access | default "")
-  "analysts" $analysts "synapse" $syn "synapseIDs" $ids "ng00184" $ng
+  "analysts" $analysts "synapse" $syn "synapseIDs" $ids "ng00184" $ng "ngType" ($d.niagads_type | default "")
   "release" ($d.release | default "") "verified" ($d.last_verified | default "")
   "methods" ($d.methods | default dict)
   "short" ($p.LinkTitle | default $p.Title)

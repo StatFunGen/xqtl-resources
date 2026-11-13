@@ -9,7 +9,7 @@ lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
 
-# Alzheimer's Disease GWAS Summary Data (Wightman)
+# Alzheimer's disease GWAS: Wightman et al. 2021
 
 SNP-level association summary statistics for Alzheimer's disease (AD) from [Wightman et al. 2021](https://doi.org/10.1038/s41588-021-00921-z) in *Nature Genetics*. This page covers three meta-analyzed sets of summary statistics: all individuals, all individuals excluding 23andMe, and all individuals excluding 23andMe and UKBB.
 

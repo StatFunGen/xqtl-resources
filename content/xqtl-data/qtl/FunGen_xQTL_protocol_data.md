@@ -1,6 +1,7 @@
 ---
 type: qtl
 short_title: Protocol toy data
+example: true
 cohort: ROSMAP
 sample_size:
 status: staged

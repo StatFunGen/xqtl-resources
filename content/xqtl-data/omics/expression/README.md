@@ -8,7 +8,7 @@ Bulk and single-cell/nucleus RNA sequencing expression datasets used for eQTL ma
 |---------|--------|-----------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_expression) | Dorsolateral prefrontal cortex | ~839 |
 | [ROSMAP PCC](ROSMAP_PCC_expression) | Posterior cingulate cortex | – |
-| [ROSMAP AC](ROSMAP_AC_expression) | Anterior cingulate cortex | – |
+| [ROSMAP AC](ROSMAP_AC_expression) | Anterior caudate nucleus | – |
 | [ROSMAP microglia](ROSMAP_microglia_expression) | Microglia (sorted) | – |
 | [ROSMAP monocyte](ROSMAP_monocyte_expression) | Peripheral blood monocytes | – |
 | [ROSMAP snRNA-seq pseudo-bulk](ROSMAP_snRNAseq_pseudo_bulk) | snRNA-seq pseudo-bulk (7 cell types) | ~530 donors |
