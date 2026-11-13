@@ -110,10 +110,10 @@
       {{- range $m := $mods }}
       {{- $all := where $qds "family" $m.family }}{{ $o := len (where $all "ng" true) }}{{ $c := sub (len $all) $o }}
       <li class="dlr__item">
-        <span class="dlr__top"><button type="button" class="dlr__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}</button><span class="dlr__val">{{ $o }} open · {{ $c }} portal only</span></span>
+        <span class="dlr__top"><button type="button" class="dlr__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}</button><span class="sr-only">: {{ $o }} with an open NIAGADS copy, {{ $c }} on the AD Knowledge Portal only</span></span>
         <span class="dlr__bar" aria-hidden="true" style="width:{{ printf "%.1f" (div (mul (len $all) 100.0) $omax) }}%">
-          {{- if $o }}<span class="dlr__seg dlr__seg--open" style="flex:{{ $o }}"></span>{{ end -}}
-          {{- if $c }}<span class="dlr__seg dlr__seg--syn" style="flex:{{ $c }}"></span>{{ end -}}
+          {{- if $o }}<span class="dlr__seg dlr__seg--open" style="flex:{{ $o }}" data-tip="{{ $m.id }}: {{ $o }} open on NIAGADS"></span>{{ end -}}
+          {{- if $c }}<span class="dlr__seg dlr__seg--syn" style="flex:{{ $c }}" data-tip="{{ $m.id }}: {{ $c }} AD Knowledge Portal only"></span>{{ end -}}
         </span>
       </li>
       {{- end }}
