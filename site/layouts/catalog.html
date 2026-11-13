@@ -25,31 +25,42 @@
   <details class="catalog__charts" open data-charts>
   <summary class="catalog__charts-sum">Summary charts<span class="muted">Cohorts by modality, download routes, sample sizes and methods</span></summary>
 
-  {{- /* QTL datasets by cohort and modality: one stacked bar per cohort on a shared scale, one part per modality.
-    Every part, cohort and modality filters the list; counts sit in surface-coloured badges so they read on any hue.
-    The same numbers are in the table under "Show as a table". */ -}}
+  {{- /* QTL datasets by cohort and modality: vertical stacked bars, cohorts along the x axis, number of
+    QTL dataset pages on the y axis, one colour per modality (legend buttons filter the list).
+    Every part and cohort filters the list too; the exact numbers are under "Show as a table". */ -}}
   {{- $cmax := 1 }}{{ range $x.cohorts }}{{ $k := len (where $qds "cohort" .name) }}{{ if gt $k $cmax }}{{ $cmax = $k }}{{ end }}{{ end }}
+  {{- $ytop := mul (math.Ceil (div (float $cmax) 5.0)) 5 }}{{ $ytop = int $ytop -}}
   <section class="card cmx" aria-labelledby="cmx-title">
     <div class="matrix__head">
       <h2 id="cmx-title">QTL datasets by cohort and modality</h2>
-      <span class="muted">Bar length is the number of QTL dataset pages for each cohort, on one shared scale; each coloured part is one modality. Select a part, a cohort or a modality to filter the dataset list below.</span>
+      <span class="muted">Number of QTL dataset pages per cohort, coloured by modality. Select a bar part, a cohort or a modality to filter the dataset list below.</span>
     </div>
     <div class="cbar__key" role="group" aria-label="Filter by modality">
       {{- range $m := $mods }}
       <button type="button" class="cbar__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}<b>{{ len (where $qds "family" $m.family) }}</b></button>
       {{- end }}
     </div>
-    <ul class="cbar__rows">
-      {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
-      <li class="cbar__row" data-matrix-row="{{ $c.name }}">
-        <button type="button" class="cmx__row cbar__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button>
-        <span class="cbar__track"><span class="cbar__bar" style="width:{{ printf "%.2f" (div (mul (len $cr) 100.0) $cmax) }}%">
-          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<button type="button" class="cbar__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" aria-pressed="false" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" data-tip="{{ $c.name }} · {{ $m.id }}: {{ $n }}"><span class="cbar__n" aria-hidden="true">{{ $n }}</span></button>{{ end }}{{ end -}}
-        </span></span>
-        <span class="cbar__total">{{ len $cr }}</span>
-      </li>
-      {{- end }}{{ end }}
-    </ul>
+    <div class="vbar">
+      <span class="vbar__ytitle" aria-hidden="true">QTL datasets</span>
+      <div class="vbar__plot">
+        <div class="vbar__grid" aria-hidden="true">
+          {{- range $t := seq 0 5 $ytop }}<span class="vbar__tick" style="bottom:{{ printf "%.2f" (div (mul (float $t) 100.0) (float $ytop)) }}%"><b>{{ $t }}</b></span>{{ end -}}
+        </div>
+        <ul class="vbar__cols">
+        {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
+          <li class="vbar__col" data-matrix-row="{{ $c.name }}">
+            <span class="vbar__area">
+              <span class="vbar__stack" style="height:{{ printf "%.2f" (div (mul (float (len $cr)) 100.0) (float $ytop)) }}%">
+                <span class="vbar__total">{{ len $cr }}</span>
+                {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<button type="button" class="vbar__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" aria-pressed="false" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" data-tip="{{ $c.name }} · {{ $m.id }}: {{ $n }}"></button>{{ end }}{{ end -}}
+              </span>
+            </span>
+            <button type="button" class="vbar__x" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button>
+          </li>
+        {{- end }}{{ end }}
+        </ul>
+      </div>
+    </div>
     <details class="cbar__table">
     <summary>Show as a table</summary>
     <div class="cmx__wrap">
