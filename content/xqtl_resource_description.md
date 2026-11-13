@@ -159,8 +159,6 @@ All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](
 | ADSP LD sketch | Privacy-preserving LD sketch panel (plink2), built from ADSP Release 4 European-ancestry whole genomes with B = 10,000 random projections | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
 | LDSC reference data | LD scores, sLDSC annotations and munged GWAS, computed from the ADSP LD reference | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | sLDSC reference data | Stratified LDSC baseline-LD v2.2 reference files | [syn75157484](https://www.synapse.org/Synapse:syn75157484) |
-| Flagship paper figure data | Data objects behind the figures of the FunGen-xQTL flagship paper, with subfolders for the metabolome colocalization ([syn76495536](https://www.synapse.org/Synapse:syn76495536)), EOO enrichment ([syn70094903](https://www.synapse.org/Synapse:syn70094903)), sLDSC ([syn70094904](https://www.synapse.org/Synapse:syn70094904)) and protein-interaction ([syn71538047](https://www.synapse.org/Synapse:syn71538047)) analyses | [syn69835233](https://www.synapse.org/Synapse:syn69835233) (in [syn69832123](https://www.synapse.org/Synapse:syn69832123)) |
-| File annotation template | Template for the Synapse file annotations used across the release | [syn69735779](https://www.synapse.org/Synapse:syn69735779) |
 
 ## Citation and Usage
 
