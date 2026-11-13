@@ -25,6 +25,7 @@
   <details class="catalog__charts" open data-charts>
   <summary class="catalog__charts-sum">Summary charts<span class="muted">Cohorts by modality, download routes, sample sizes and methods</span></summary>
 
+  <div class="charts-top">
   {{- /* QTL datasets by cohort and modality: vertical stacked bars, cohorts along the x axis, number of
     QTL dataset pages on the y axis, one colour per modality (legend buttons filter the list).
     Every part and cohort filters the list too; the exact numbers are under "Show as a table". */ -}}
@@ -119,6 +120,8 @@
     </ul>
     <p class="dlr__sum"><span><strong>{{ $nOpen }}</strong> with an open copy</span><span><strong>{{ $nPortal }}</strong> AD Knowledge Portal only</span> <a href="{{ "how_to_get_data/" | relURL }}">How to get the data</a></p>
   </section>
+
+  </div>
 
   <details class="card more" data-more>
   <summary class="more__sum">More charts<span class="muted">Sample size per dataset, recorded methods, datasets with several tissues or cell types</span></summary>

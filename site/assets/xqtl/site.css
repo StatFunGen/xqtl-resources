@@ -1047,3 +1047,40 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 @media (max-width: 900px) { .vbar { grid-template-columns: minmax(0, 1fr); } .vbar__legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 2px 8px; } .vbar__legend-total { grid-column: 1 / -1; } }
 @media (max-width: 640px) { .vbar__grid, .vbar__area { height: 220px; } .vbar__x { writing-mode: vertical-rl; transform: rotate(180deg); align-self: center; font-size: 12px; overflow-wrap: normal; padding: 4px 0; } .vbar__plot, .vbar__grid { padding-left: 0; } .vbar__plot { margin-left: 1.8em; } .vbar__grid { left: 0; } .vbar__n { min-width: 16px; padding: 0 3px; font-size: 11px; } }
 @media (prefers-reduced-motion: reduce) { .vbar__seg { transition: none; } }
+/* Compact summary: the stacked bars and download routes sit side by side; smaller plots, legend under the bars */
+.charts-top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; margin: 16px 32px 0; align-items: start; }
+.charts-top > .card { margin: 0; padding: 4px 18px 14px; }
+.charts-top .matrix__head { padding-top: 10px; }
+.charts-top .vbar { grid-template-columns: minmax(0, 1fr); gap: 6px; padding-top: 14px; }
+.charts-top .vbar__grid, .charts-top .vbar__area { height: 190px; }
+.charts-top .vbar__stack { max-width: 44px; }
+.charts-top .vbar__x { margin-top: 6px; font-size: 12.5px; }
+.charts-top .vbar__legend { display: flex; flex-direction: row; flex-wrap: wrap; gap: 2px 4px; }
+.charts-top .vbar__mod { width: auto; min-height: 28px; padding: 2px 8px; gap: 6px; grid-template-columns: 10px auto auto; font-size: 12.5px; }
+.charts-top .vbar__mod i { width: 10px; height: 10px; }
+.charts-top .vbar__legend-total { display: none; }
+.charts-top .cbar__table { margin-top: 6px; }
+.charts-top .dlr__key { padding: 4px 0 8px; }
+.charts-top .dlr__list { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+.charts-top .dlr__item { display: grid; grid-template-columns: 6.5em minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+.charts-top .dlr__top { display: contents; }
+.charts-top .dlr__mod { order: 0; font-size: 13px; }
+.charts-top .dlr__bar { order: 1; height: 12px; }
+.charts-top .dlr__val { order: 2; font-size: 12px; }
+.charts-top .dlr__sum { margin-top: 10px; padding-top: 10px; gap: 4px 18px; font-size: 13px; }
+.charts-top .dlr__sum strong { font-size: 17px; }
+.catalog__charts > .more { margin-top: 12px; }
+.more .sizes__row { min-height: 24px; }
+.more .sizes__track { height: 22px; }
+@media (max-width: 1100px) { .charts-top { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px) { .charts-top { margin: 12px 16px 0; gap: 12px; } .charts-top > .card { padding: 4px 14px 12px; } }
+@media (max-width: 640px) { .charts-top .vbar__grid, .charts-top .vbar__area { height: 170px; } .charts-top .dlr__item { grid-template-columns: 5.5em minmax(0, 1fr) auto; gap: 8px; } }
+/* Cohort and modality labels in the charts are plain text that underlines on hover (they still filter on click) */
+.vbar__x, .cmx__row, .cmx__col, .dlr__mod { text-decoration: none; }
+.vbar__x { color: var(--ink); }
+.dlr__mod { color: var(--ink); }
+.vbar__x:hover, .dlr__mod:hover, .cmx__row:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* Top bar between phone and wide layouts: the search field shrinks so the site links and theme button stay on screen */
+.search { min-width: 0; }
+.search input { min-width: 0; }
+@media (max-width: 1100px) { .brand { width: auto; } .topbar__links { gap: 12px; font-size: 13.5px; } }
