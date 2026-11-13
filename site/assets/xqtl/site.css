@@ -898,6 +898,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .fold__files code { font-size: 12.5px; background: none; padding: 0; color: var(--ink); word-break: break-all; }
 .fold__batches { margin: 2px 0 6px 19px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
 .fold.is-hit > .fold__row .fold__name { background: var(--acs); border-radius: 3px; padding: 0 3px; }
+.fold__files li.is-hit code { background: var(--acs); border-radius: 3px; padding: 0 3px; }
 @media (max-width: 900px) { .folders__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fold__body { padding-left: 10px; margin-left: 6px; } }
 .folders > p code, .folders .page__lead code, .folders .prose code { word-break: break-all; }
 .folders { gap: 14px; } .folders__head { display: flex; flex-direction: column; gap: 10px; } .folders > .prose p { margin: 0; color: var(--ink2); }

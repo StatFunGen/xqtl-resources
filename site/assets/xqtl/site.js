@@ -87,8 +87,12 @@
 
   // Dataset pages keep every section open on phones as well, so caveats are never hidden.
 
-  // The previous theme registered a service worker; remove it so pages are never stale
+  // The previous theme registered a service worker for this site; remove only that one (scope under
+  // this site's first path segment, e.g. /xqtl-resources/) so other sites on the same host keep theirs
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+    var seg = location.pathname.split('/')[1], base = location.origin + '/' + (seg ? seg + '/' : '');
+    navigator.serviceWorker.getRegistrations().then(function (rs) {
+      rs.forEach(function (r) { if (r.scope.indexOf(base) === 0) r.unregister(); });
+    }).catch(function () {});
   }
 })();

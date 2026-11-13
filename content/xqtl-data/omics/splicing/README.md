@@ -8,7 +8,7 @@ Bulk and single-nucleus RNA splicing datasets used for sQTL mapping. Bulk data u
 |---------|---------------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_splicing) | Dorsolateral prefrontal cortex (bulk) |
 | [ROSMAP PCC](ROSMAP_PCC_splicing) | Posterior cingulate cortex (bulk) |
-| [ROSMAP AC](ROSMAP_AC_splicing) | Anterior cingulate cortex (bulk) |
+| [ROSMAP AC](ROSMAP_AC_splicing) | Anterior caudate nucleus (bulk) |
 | [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing) | Single-nucleus, 7 major + 95 subcell types |
 
 ## Brain Tissue, Other Cohorts

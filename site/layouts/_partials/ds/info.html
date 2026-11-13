@@ -52,7 +52,9 @@
 {{- if and (not $cohort) (in (slice "gwas") $kind) }}{{ $cohort = "AD GWAS" }}{{ end -}}
 {{- $analysts := $d.lead_analysts | default slice -}}
 {{- $ng := false -}}
-{{- if and (eq $kind "qtl") (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort) }}{{ $ng = true }}{{ end -}}
+{{- /* NIAGADS availability is separate from the Synapse release status: a page sets niagads: NG00184 when its files are in that
+  open release, whatever its Synapse status. Released pages of the listed modalities and cohorts also get the note. */ -}}
+{{- if and (eq $kind "qtl") (or $d.niagads (and (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort))) }}{{ $ng = true }}{{ end -}}
 
 {{- return dict
   "kind" $kind "kindLabel" $kindLabel "folder" $folder

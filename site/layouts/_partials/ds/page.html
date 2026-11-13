@@ -28,7 +28,7 @@
 {{- /* This dataset's own Synapse folders (not the shared parent): folder matches under the model and raw-data areas */ -}}
 {{- $own := slice -}}
 {{- $what := dict "finemapping_models" "Fine-mapping: cis-QTL export and SuSiE models" "colocalization_models" "Multi-context colocalization (ColocBoost)" "TWAS_models" "TWAS weights" "AD_xQTL_colocalization_models" "AD GWAS and xQTL colocalization" "AD_finemapping" "AD GWAS fine-mapping" -}}
-{{- range $hits }}{{ if and .d (in (slice "xQTL_GWAS_models" "xQTL_data") (index (split .at "/") 0)) }}
+{{- range $hits }}{{ if and .d .d.id (not .s) (in (slice "xQTL_GWAS_models" "xQTL_data") (index (split .at "/") 0)) }}
   {{- $lab := "" }}
   {{- range $seg := split .at "/" }}{{ with index $what $seg }}{{ $lab = . }}{{ end }}{{ end -}}
   {{- if in .at "multi_context" }}{{ $lab = printf "%s, multi-context" $lab }}{{ end -}}
@@ -159,6 +159,7 @@
             <li>
               {{- with $crumb }}<span class="dsfiles__crumb" title="{{ $h.at }}">{{ delimit (last 3 .) " › " }}{{ if and $h.f $h.id }} · <a class="fold__id" href="https://www.synapse.org/Synapse:{{ index $h.id 0 }}" rel="noopener">{{ index $h.id 0 }}</a>{{ end }}</span>{{ end }}
               {{- with $h.j }}<span class="dsfiles__joint">Joint analysis of {{ delimit . " + " }}; also listed on the other data type's pages</span>{{ end }}
+              {{- if $h.s }}<span class="dsfiles__joint">Covers all {{ $i.cohort }} data types; also listed on the cohort's other QTL pages</span>{{ end }}
               {{- with .d }}{{ partial "ds/folder.html" (dict "n" . "d" 1) }}{{ end }}
               {{- with .f }}
               <div class="dsfiles__files">

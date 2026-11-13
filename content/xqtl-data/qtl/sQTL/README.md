@@ -14,7 +14,7 @@ sQTL mapping was performed using the [FunGen-xQTL pipeline](https://statfungen.g
 |---------|--------------------------|--------|---------|
 | [ROSMAP DLPFC](ROSMAP_DLPFC_splicing_qtl) | Dorsolateral prefrontal cortex (bulk) | LeafCutter + tensorQTL | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | [ROSMAP PCC](ROSMAP_PCC_splicing_qtl) | Posterior cingulate cortex (bulk) | LeafCutter + tensorQTL | – |
-| [ROSMAP AC](ROSMAP_AC_splicing_qtl) | Anterior cingulate cortex (bulk) | LeafCutter + tensorQTL | – |
+| [ROSMAP AC](ROSMAP_AC_splicing_qtl) | Anterior caudate nucleus (bulk) | LeafCutter + tensorQTL | – |
 | [ROSMAP snuc (ISSAC)](ROSMAP_snuc_splicing_qtl) | Single-nucleus (7 major + 95 subcell types) | ISSAC binomial GLMM | – |
 
 ### Brain Tissue, Other Cohorts

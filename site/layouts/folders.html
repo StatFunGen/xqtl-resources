@@ -34,11 +34,13 @@
 <script>
 (function () {
   var q = document.querySelector('[data-fold-q]'), all = document.querySelector('[data-fold-all]'),
-      st = document.querySelector('[data-fold-status]'), folds = [].slice.call(document.querySelectorAll('.fold'));
+      st = document.querySelector('[data-fold-status]'), folds = [].slice.call(document.querySelectorAll('.fold')),
+      files = [].slice.call(document.querySelectorAll('.fold__files li'));
   if (!q) return;
   function run() {
-    var t = q.value.trim().toLowerCase(), n = 0;
+    var t = q.value.trim().toLowerCase(), n = 0, nf = 0, firstFile = null;
     folds.forEach(function (f) { f.hidden = false; f.classList.remove('is-hit'); });
+    files.forEach(function (li) { li.classList.remove('is-hit'); });
     if (!t) { st.textContent = ''; return; }
     // a folder stays visible when it, a parent or a child matches
     folds.slice().reverse().forEach(function (f) {
@@ -48,9 +50,18 @@
       if (kid) f.open = true;
     });
     folds.forEach(function (f) { if (f.classList.contains('is-hit')) [].forEach.call(f.querySelectorAll('.fold'), function (k) { k.hidden = false; }); });
-    st.textContent = n ? n + ' matching folder' + (n > 1 ? 's' : '') : 'No folder matches';
+    // file names and file IDs: highlight each matching file inside the folders shown
+    files.forEach(function (li) {
+      if (li.textContent.toLowerCase().indexOf(t) > -1 && !li.closest('.fold[hidden]')) { li.classList.add('is-hit'); nf++; if (!firstFile) firstFile = li; }
+    });
+    var parts = [];
+    if (n) parts.push(n + ' folder' + (n > 1 ? 's' : ''));
+    if (nf) parts.push(nf + ' file' + (nf > 1 ? 's' : ''));
+    st.textContent = parts.length ? parts.join(' and ') + ' match' + (n + nf === 1 ? 'es' : '') : 'Nothing matches';
+    if (firstFile) { st.appendChild(document.createTextNode(' ')); var go = document.createElement('a'); go.href = '#'; go.textContent = 'Show first file'; go.addEventListener('click', function (e) { e.preventDefault(); firstFile.scrollIntoView({ block: 'center' }); firstFile.setAttribute('tabindex', '-1'); firstFile.focus(); }); st.appendChild(go); }
   }
-  q.addEventListener('input', run);
+  var tm = null;
+  q.addEventListener('input', function () { clearTimeout(tm); tm = setTimeout(run, 150); });
   all.addEventListener('click', function () {
     var on = all.getAttribute('aria-pressed') !== 'true';
     folds.forEach(function (f) { f.open = on; });

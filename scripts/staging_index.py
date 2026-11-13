@@ -34,6 +34,8 @@ def expand(s):
                 out += [f"{pre}{str(i).zfill(len(a))}" for i in range(int(a), int(b) + 1)]
             elif item.isdigit():
                 out.append(pre + item)
+            else:  # fail loudly on notation the parser does not know, rather than drop IDs
+                raise ValueError(f"unrecognized Synapse ID notation {pre}{br!r} (item {item!r})")
     return out
 
 def independent_ids(path):
@@ -213,14 +215,21 @@ def by_page(tree, repo):
                     hit = {"at": "/".join(path), "d": strip(c)}
                     j = sorted(qtl_of(c["name"]) or q)
                     if len(j) > 1: hit["j"] = j
+                    if spec["kind"] == "qtl" and not j: hit["s"] = 1   # no data type in the name: shared by the cohort's QTL pages
                     hits.append(hit)
                     continue
                 files = [f for f in c["files"] if match(spec, f[0], q)]
-                if files:
-                    hit = {"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": files}
-                    j = sorted({t for f in files for t in qtl_of(f[0]) if not (".*." in f[0] and qtl_of(f[0].split(".*.", 1)[1]))} | (q if len(q) > 1 else set()))
+                # files that name no data type (and sit under no typed folder) cover every data type of the cohort:
+                # list them as a separate, labelled group so they are never read as this dataset's own files
+                untyped = [f for f in files if spec["kind"] == "qtl" and not q and not qtl_of(f[0])]
+                typed = [f for f in files if f not in untyped]
+                if typed:
+                    hit = {"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": typed}
+                    j = sorted({t for f in typed for t in qtl_of(f[0]) if not (".*." in f[0] and qtl_of(f[0].split(".*.", 1)[1]))} | (q if len(q) > 1 else set()))
                     if len(j) > 1: hit["j"] = j
                     hits.append(hit)
+                if untyped:
+                    hits.append({"at": "/".join(path + [c["name"]]), "id": c["ids"][:1], "f": untyped, "s": 1})
                 walk(c, path + [c["name"]], q)
         walk(tree, [], set())
         if hits: out[rel[:-3]] = hits

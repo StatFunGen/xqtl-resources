@@ -49,7 +49,7 @@
       <a class="card" href="{{ $cat }}"><span class="card__t">Data catalog <span aria-hidden="true">→</span></span><span class="card__d">Every dataset, filtered by cohort, modality, tissue and access.</span></a>
       <a class="card" href="{{ with site.GetPage "/coverage" }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Analysis coverage <span aria-hidden="true">→</span></span><span class="card__d">Which methods have results for each QTL dataset.</span></a>
       <a class="card" href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}"><span class="card__t">TWAS weights <span aria-hidden="true">→</span></span><span class="card__d">Fitted models, one folder per dataset.</span></a>
-      <a class="card" href="{{ site.Params.protocolURL }}/"><span class="card__t">Protocol <span aria-hidden="true">→</span></span><span class="card__d">The analysis pipelines, and a builder that writes the commands for you.</span></a>
+      <a class="card" href="{{ site.Params.protocolURL }}/"><span class="card__t">Protocol <span aria-hidden="true">→</span></span><span class="card__d">The analysis pipelines, and a builder that lists the modules for your data with an example command for each.</span></a>
       <a class="card" href="{{ site.Params.explorerURL }}"><span class="card__t">AD Loci Explorer <span aria-hidden="true">→</span></span><span class="card__d">{{ $x.home.loci }} AD loci with the xQTL evidence behind each gene.</span></a>
       <a class="card" href="{{ with $howto }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Get the data <span aria-hidden="true">→</span></span><span class="card__d">Synapse, NIAGADS and controlled-access steps.</span></a>
     </nav>

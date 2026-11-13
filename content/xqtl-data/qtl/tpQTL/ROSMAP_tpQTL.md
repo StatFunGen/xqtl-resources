@@ -31,7 +31,7 @@ Genotype-matched participants per region, from the FunGen-xQTL sample table.
 |--------|-------------:|-------:|-----:|
 | Dorsolateral prefrontal cortex (DLPFC) | 91 | 62 | 29 |
 | Posterior cingulate cortex (PCC) | 370 | 228 | 142 |
-| Anterior cingulate cortex (AC) | 537 | 352 | 185 |
+| Anterior caudate nucleus (AC) | 537 | 352 | 185 |
 
 ## Analyses
 

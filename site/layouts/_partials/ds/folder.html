@@ -3,7 +3,7 @@
   p pages that cite this folder, v pages that cite a parent folder, c child folders. */ -}}
 {{- $n := .n -}}{{- $d := .d -}}
 {{- $kids := $n.c | default slice -}}{{- $files := $n.f | default slice -}}
-{{- $words := slice $n.n -}}{{- range $n.id }}{{ $words = $words | append . }}{{ end }}{{ range $files }}{{ $words = $words | append (index . 0) }}{{ end -}}
+{{- $words := slice $n.n -}}{{- range $n.id }}{{ $words = $words | append . }}{{ end }}{{ range $files }}{{ range . }}{{ $words = $words | append . }}{{ end }}{{ end -}}
 <details class="fold" data-fold="{{ delimit $words " " | lower }}"{{ if lt $d 1 }} open{{ end }}>
   <summary class="fold__row">
     <span class="fold__name">{{ $n.n }}</span>
