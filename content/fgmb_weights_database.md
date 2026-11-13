@@ -71,7 +71,7 @@ All TWAS weight models are in [syn69670600](https://www.synapse.org/Synapse:syn6
 |---|---|---|
 | KNIGHT_eQTL | [syn70090844](https://www.synapse.org/Synapse:syn70090844) | `KNIGHT_eQTL.*.univariate_twas_weights.rds` |
 | KNIGHT_pQTL | [syn70090845](https://www.synapse.org/Synapse:syn70090845) | `KNIGHT_pQTL.*.univariate_twas_weights.rds` |
-| MiGA_eQTL | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_bvsr.rds` |
+| MiGA_eQTL | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_susie_twas_weights.rds` |
 | MSBB_eQTL | [syn70094766](https://www.synapse.org/Synapse:syn70094766) | `MSBB_eQTL.*.univariate_twas_weights.rds` |
 | MSBB_pQTL | [syn70090848](https://www.synapse.org/Synapse:syn70090848) | `MSBB_pQTL.*.univariate_twas_weights.rds` |
 | MSBB_sQTL | [syn70090851](https://www.synapse.org/Synapse:syn70090851) | `MSBB_sQTL.*.univariate_twas_weights.rds` |

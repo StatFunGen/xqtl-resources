@@ -677,8 +677,8 @@ xQTL_GWAS_models: #syn69670588
         MetaBrain:
           - RDS_files
         MiGA_eQTL: #syn70094765
-          batch{1..4}: #syn734626{87,89..91}
-           - MiGA_eQTL.*.univariate_bvsr.rds
+          batch{1..4}: #syn78631715, syn78684072, syn78690732, syn78696754
+            - MiGA_eQTL.*.univariate_susie_twas_weights.rds
         MSBB_eQTL: #syn70094766
           batch{1..6}: #syn7346268{1..6}
             - MSBB_eQTL.*.univariate_twas_weights.rds

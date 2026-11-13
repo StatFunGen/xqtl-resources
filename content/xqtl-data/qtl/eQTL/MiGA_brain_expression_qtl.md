@@ -74,7 +74,7 @@ The flagship paper analyses on the AD Knowledge Portal are listed below.
 |---|---|---|---|
 | Fine-mapping export | [syn70095506](https://www.synapse.org/Synapse:syn70095506) | cis-QTL results and summary statistics exported for each gene | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | Fine-mapping models (SuSiE) | [syn75134502](https://www.synapse.org/Synapse:syn75134502) | `MiGA_eQTL.*.univariate_bvsr.rds` | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
-| TWAS weight models | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_bvsr.rds` | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
+| TWAS weight models | [syn70094765](https://www.synapse.org/Synapse:syn70094765) | `MiGA_eQTL.*.univariate_susie_twas_weights.rds` | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
 | Quantile TWAS (qTWAS) models | not available yet | | |
 | Multi-context colocalization models (ColocBoost) | [syn74987560](https://www.synapse.org/Synapse:syn74987560) | `MiGA.*.cb_xqtl.rds` | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |
 | AD GWAS and xQTL colocalization models | [syn74986600](https://www.synapse.org/Synapse:syn74986600) | `MiGA.*.cb_xqtl_AD_*.rds` | [syn69670630](https://www.synapse.org/Synapse:syn69670630) |
