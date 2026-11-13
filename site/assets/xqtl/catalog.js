@@ -154,10 +154,20 @@
     });
   });
 
-  // Phones: the charts sit below the dataset list, so a chart selection brings the list back into view
+  // Narrow screens: the summary charts start collapsed above the dataset list. After a chart
+  // selection, bring the list into view and move focus to its count so keyboard and screen-reader
+  // users land on the filtered results.
+  var narrow = window.matchMedia('(max-width: 900px)');
+  var charts = root.querySelector('[data-charts]');
+  function setCharts() { if (charts) charts.open = !narrow.matches; }
+  setCharts();
+  if (narrow.addEventListener) narrow.addEventListener('change', setCharts);
   var results = root.querySelector('.catalog__results');
+  var count = root.querySelector('[data-count]');
   function toResults() {
-    if (results && window.matchMedia('(max-width: 900px)').matches) results.scrollIntoView({ block: 'start' });
+    if (!results || !narrow.matches) return;
+    results.scrollIntoView({ block: 'start' });
+    if (count) count.focus({ preventScroll: true });
   }
   root.querySelectorAll('[data-matrix-cell]').forEach(function (b) {
     b.addEventListener('click', function () {

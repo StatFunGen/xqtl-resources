@@ -16,10 +16,14 @@
     </div>
   </header>
 
+  {{- /* Summary charts. On narrow screens they collapse to one row above the dataset list (catalog.js),
+    so the reading and focus order stays search, charts, list at every width. */ -}}
+  <details class="catalog__charts" open data-charts>
+  <summary class="catalog__charts-sum">Summary charts<span class="muted">QTL results by cohort, analysis progress, tissues and cohorts</span></summary>
   <section class="card matrix qmods" aria-labelledby="matrix-title">
     <div class="matrix__head">
       <h2 id="matrix-title">QTL results by cohort</h2>
-      <span class="muted">Bar length is the number of QTL result pages for the cohort, split by molecular trait. Select a chip, a cohort or a trait to filter the dataset list.</span>
+      <span class="muted">Bar length is the number of QTL result pages for the cohort, split by molecular trait. Select a chip, a cohort or a trait to filter the dataset list below.</span>
     </div>
     <div class="qmods__key" role="group" aria-label="Filter by molecular trait">
       {{- range $m := $x.modalities }}
@@ -131,6 +135,7 @@
     </ul>
   </section>
   </div>
+  </details>
 
   <div class="catalog__body">
     <aside class="facets" id="facets" aria-label="Filters">
@@ -165,7 +170,7 @@
 
     <div class="catalog__results">
       <div class="rtool" role="group" aria-label="Results">
-        <span class="rtool__count" data-count aria-live="polite">{{ len $rows }} datasets</span>
+        <span class="rtool__count" data-count aria-live="polite" tabindex="-1">{{ len $rows }} datasets</span>
         <label class="rtool__sort">Sort <select data-sort-select>
           <option value="title:asc">Dataset A–Z</option><option value="cohort:asc">Cohort A–Z</option><option value="type:asc">Type A–Z</option><option value="n:desc">N, largest first</option><option value="n:asc">N, smallest first</option>
         </select></label>
