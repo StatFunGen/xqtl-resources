@@ -143,7 +143,7 @@
   <section class="card progress sizes" aria-labelledby="sizes-title">
     <div class="matrix__head">
       <h2 id="sizes-title">Sample size per QTL dataset</h2>
-      <span class="muted">Each dot is one dataset, coloured by modality, on a log scale. {{ $withN }} of the {{ $total }} QTL datasets record a sample size; the others are not drawn.</span>
+      <span class="muted">Each dot is one dataset, coloured by modality; its position (log scale) and its size both show the sample size. {{ $withN }} of the {{ $total }} QTL datasets record a sample size; the others are not drawn.</span>
     </div>
     <div class="sizes__plot">
       <div class="sizes__axis" aria-hidden="true">
@@ -160,7 +160,9 @@
           {{- range $ds }}
             {{- $nm := .short }}{{ if not (strings.Contains .short .label) }}{{ $nm = printf "%s %s" .short .label }}{{ end }}
             {{- $pos := div (mul (sub (math.Log (float .n)) $lo) 100.0) (sub $hi $lo) }}{{ $pos = math.Max 0 (math.Min 100 $pos) -}}
-            <a class="sizes__dot" href="{{ .href }}" style="left:{{ printf "%.2f" $pos }}%;--c:var(--m-{{ $m.id }})" aria-label="{{ $nm }}: {{ lang.FormatNumberCustom 0 .n }} samples" data-tip="{{ $nm }} · N {{ lang.FormatNumberCustom 0 .n }}"></a>
+            {{- /* dot area grows with N as well, 8 px at 50 samples to 22 px at 1,000 */ -}}
+            {{- $d := add 8.0 (mul 14.0 (math.Sqrt (math.Max 0 (math.Min 1 (div (sub (float .n) 50.0) 950.0))))) -}}
+            <a class="sizes__dot" href="{{ .href }}" style="left:{{ printf "%.2f" $pos }}%;--d:{{ printf "%.1f" $d }}px;--c:var(--m-{{ $m.id }})" aria-label="{{ $nm }}: {{ lang.FormatNumberCustom 0 .n }} samples" data-tip="{{ $nm }} · N {{ lang.FormatNumberCustom 0 .n }}"></a>
           {{- end }}
           </span>
         </li>
@@ -206,6 +208,35 @@
       {{- end }}
       {{- end }}
     </ul>
+  </section>
+
+  {{- /* QTL datasets by modality as a donut: modalities with one dataset fold into Other so the ring stays readable.
+    Drawn with a conic gradient, with a short surface-coloured gap between slices; the legend carries the numbers. */ -}}
+  {{- $parts := slice }}{{ $other := slice }}{{ $nOther := 0 -}}
+  {{- range $x.modalities }}{{ $k := len (where $qds "family" .family) }}{{ if gt $k 1 }}{{ $parts = $parts | append (dict "id" .id "family" .family "n" $k "c" (printf "var(--m-%s)" .id)) }}{{ else if eq $k 1 }}{{ $other = $other | append .id }}{{ $nOther = add $nOther 1 }}{{ end }}{{ end -}}
+  {{- $parts = sort $parts "n" "desc" -}}
+  {{- if $nOther }}{{ $parts = $parts | append (dict "id" "Other" "family" "" "n" $nOther "c" "var(--ink3)") }}{{ end -}}
+  {{- $stops := slice }}{{ $acc := 0.0 }}{{ $gap := 1.2 -}}
+  {{- range $parts }}{{ $sw := div (mul (float .n) 360.0) (float $total) }}{{ $stops = $stops | append (printf "%s %.2fdeg %.2fdeg, var(--sf) %.2fdeg %.2fdeg" .c $acc (sub (add $acc $sw) $gap) (sub (add $acc $sw) $gap) (add $acc $sw)) }}{{ $acc = add $acc $sw }}{{ end }}
+  <section class="card progress modshare" aria-labelledby="modshare-title">
+    <div class="matrix__head">
+      <h2 id="modshare-title">QTL datasets by modality</h2>
+      <span class="muted">Share of the {{ $total }} QTL datasets.{{ with $other }} {{ delimit . ", " " and " }} have one dataset each and are grouped as Other.{{ end }} Select a modality to filter the dataset list.</span>
+    </div>
+    <div class="modshare__body">
+      <div class="modshare__ring" role="img" aria-label="{{ range $i, $p := $parts }}{{ if $i }}, {{ end }}{{ $p.id }} {{ $p.n }}{{ end }} of {{ $total }} QTL datasets" style="background:conic-gradient({{ delimit $stops ", " | safeCSS }})">
+        <span class="modshare__total"><strong>{{ $total }}</strong>QTL datasets</span>
+      </div>
+      <ul class="modshare__legend">
+        {{- range $parts }}
+        <li>
+          {{- if .family }}<button type="button" class="modshare__item" data-matrix-col="{{ .family }}" data-tip="{{ .id }}: {{ .n }} of {{ $total }}">{{ else }}<span class="modshare__item">{{ end -}}
+          <i style="background:{{ .c | safeCSS }}"></i><span class="modshare__name">{{ .id }}</span><b>{{ .n }}</b><em>{{ printf "%.0f" (div (mul (float .n) 100.0) (float $total)) }}%</em>
+          {{- if .family }}</button>{{ else }}</span>{{ end }}
+        </li>
+        {{- end }}
+      </ul>
+    </div>
   </section>
   </div>
   </details>
