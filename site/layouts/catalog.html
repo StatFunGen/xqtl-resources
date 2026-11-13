@@ -25,34 +25,49 @@
   <details class="catalog__charts" open data-charts>
   <summary class="catalog__charts-sum">Summary charts<span class="muted">Cohorts by modality, download routes, sample sizes and methods</span></summary>
 
-  {{- /* Coverage matrix: cohort x modality counts of QTL dataset pages. Every count, cohort and modality filters the list. */ -}}
+  {{- /* QTL datasets by cohort and modality: one stacked bar per cohort on a shared scale, one part per modality.
+    Every part, cohort and modality filters the list; counts sit in surface-coloured badges so they read on any hue.
+    The same numbers are in the table under "Show as a table". */ -}}
+  {{- $cmax := 1 }}{{ range $x.cohorts }}{{ $k := len (where $qds "cohort" .name) }}{{ if gt $k $cmax }}{{ $cmax = $k }}{{ end }}{{ end }}
   <section class="card cmx" aria-labelledby="cmx-title">
     <div class="matrix__head">
-      <h2 id="cmx-title">Which cohorts cover each modality?</h2>
-      <span class="muted">Counts of QTL dataset pages. Select a count, a cohort or a modality to filter the dataset list below.</span>
+      <h2 id="cmx-title">QTL datasets by cohort and modality</h2>
+      <span class="muted">Bar length is the number of QTL dataset pages for each cohort, on one shared scale; each coloured part is one modality. Select a part, a cohort or a modality to filter the dataset list below.</span>
     </div>
+    <div class="cbar__key" role="group" aria-label="Filter by modality">
+      {{- range $m := $mods }}
+      <button type="button" class="cbar__mod" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}<b>{{ len (where $qds "family" $m.family) }}</b></button>
+      {{- end }}
+    </div>
+    <ul class="cbar__rows">
+      {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
+      <li class="cbar__row" data-matrix-row="{{ $c.name }}">
+        <button type="button" class="cmx__row cbar__cohort" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button>
+        <span class="cbar__track"><span class="cbar__bar" style="width:{{ printf "%.2f" (div (mul (len $cr) 100.0) $cmax) }}%">
+          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}<button type="button" class="cbar__seg" style="flex:{{ $n }};--c:var(--m-{{ $m.id }})" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" aria-pressed="false" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" data-tip="{{ $c.name }} · {{ $m.id }}: {{ $n }}"><span class="cbar__n" aria-hidden="true">{{ $n }}</span></button>{{ end }}{{ end -}}
+        </span></span>
+        <span class="cbar__total">{{ len $cr }}</span>
+      </li>
+      {{- end }}{{ end }}
+    </ul>
+    <details class="cbar__table">
+    <summary>Show as a table</summary>
     <div class="cmx__wrap">
     <table class="cmx__table">
       <caption class="sr-only">QTL dataset pages by cohort and modality</caption>
       <thead><tr>
         <th scope="col" class="cmx__corner">Cohort</th>
-        {{- range $m := $mods }}
-        <th scope="col"><button type="button" class="cmx__col" data-matrix-col="{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" title="{{ $m.what }}"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }}</button></th>
-        {{- end }}
+        {{- range $m := $mods }}<th scope="col"><i class="cmx__dot" style="--c:var(--m-{{ $m.id }})" aria-hidden="true"></i> {{ $m.id }}</th>{{- end }}
         <th scope="col" class="cmx__all">All</th>
       </tr></thead>
       <tbody>
-      {{- range $c := $x.cohorts }}
-        {{- $cr := where $qds "cohort" $c.name }}{{ if $cr }}
-        <tr data-matrix-row="{{ $c.name }}">
-          <th scope="row"><button type="button" class="cmx__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}</button></th>
-          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}
-          <td>{{ if $n }}<button type="button" class="cmx__cell" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-label="{{ $c.name }} {{ $m.id }}: {{ $n }} dataset {{ if eq $n 1 }}page{{ else }}pages{{ end }}" aria-pressed="false">{{ $n }}</button>{{ else }}<span class="cmx__none" aria-label="none">—</span>{{ end }}</td>
-          {{- end }}
+      {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
+        <tr>
+          <th scope="row">{{ $c.name }}</th>
+          {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}<td>{{ if $n }}{{ $n }}{{ else }}<span class="cmx__none" aria-label="none">—</span>{{ end }}</td>{{- end }}
           <td class="cmx__all">{{ len $cr }}</td>
         </tr>
-        {{- end }}
-      {{- end }}
+      {{- end }}{{ end }}
       </tbody>
       <tfoot><tr>
         <th scope="row">All cohorts</th>
@@ -61,20 +76,8 @@
       </tr></tfoot>
     </table>
     </div>
-    {{- /* Phones: one card per cohort with labelled counts instead of the wide table */ -}}
-    <ul class="cmx__cards">
-      {{- range $c := $x.cohorts }}{{ $cr := where $qds "cohort" $c.name }}{{ if $cr }}
-      <li data-matrix-row="{{ $c.name }}">
-        <button type="button" class="cmx__row" data-matrix-row-btn="{{ $c.name }}">{{ $c.name }}<span class="muted">{{ len $cr }} {{ if eq (len $cr) 1 }}dataset{{ else }}datasets{{ end }}</span></button>
-        <span class="cmx__chips">
-        {{- range $m := $mods }}{{ $n := len (where $cr "family" $m.family) }}{{ if $n }}
-          <button type="button" class="cmx__chip" data-matrix-cell="{{ $c.name }}|{{ $m.family }}" style="--c:var(--m-{{ $m.id }})" aria-pressed="false"><i class="cmx__dot" aria-hidden="true"></i>{{ $m.id }} <b>{{ $n }}</b></button>
-        {{- end }}{{ end }}
-        </span>
-      </li>
-      {{- end }}{{ end }}
-    </ul>
     <p class="cmx__note muted">A dash means no dataset page in this catalog yet; it does not mean the data do not exist.</p>
+    </details>
   </section>
 
   {{- /* Download routes per modality: open NIAGADS copy (NG00184) versus AD Knowledge Portal only.
