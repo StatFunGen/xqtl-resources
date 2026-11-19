@@ -56,7 +56,7 @@ cohorts:
   - {name: Knight-ADRC, desc: Knight Alzheimer Disease Research Center, page: KnightADRC}
   - {name: MiGA, desc: Microglia Genomic Atlas, page: MiGA}
   - {name: STARNET, desc: "Cardiovascular tissues, macrophages", page: STARNET}
-  - {name: MetaBrain, desc: External bulk brain eQTL replication resource, url: "https://www.metabrain.nl/"}
+  - {name: MetaBrain, desc: "Published brain eQTL meta-analysis (summary statistics)", page: MetaBrain}
 
 # AD GWAS entries on the home page, by page file name under content/xqtl-data/gwas
 gwas:
