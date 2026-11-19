@@ -36,6 +36,8 @@
   </section>
   <p class="note stats__note">{{ $x.home.participants_note }} The {{ len $rows }} catalog pages also cover AD GWAS and reference data; the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> lists the loci.</p>
 
+  {{ partial "home/overview.html" . }}
+
   <form class="find" action="{{ $cat }}" method="get" role="search">
     <span class="search__icon" aria-hidden="true"></span>
     <label class="sr-only" for="home-q">Search datasets</label>
