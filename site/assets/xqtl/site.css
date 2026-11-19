@@ -254,10 +254,10 @@ code, kbd, pre { font-family: var(--mono); }
 /* ---------- Dataset summary ---------- */
 .summary { display: flex; flex-direction: column; gap: 16px; }
 .meta { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--ln); }
-.meta__row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--ln); min-width: 0; }
+.meta__row { display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--ln); min-width: 0; }
 .meta__row:nth-child(odd) { padding-right: 24px; }
 .meta__row dt { font: 500 14px/1.5 var(--sans); color: var(--ink2); }
-.meta__row dd { margin: 0; font-size: 14.5px; line-height: 1.5; overflow-wrap: anywhere; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; }
+.meta__row dd { margin: 0; font-size: 14.5px; line-height: 1.5; overflow-wrap: anywhere; display: flex; flex-wrap: wrap; align-items: baseline; align-content: flex-start; gap: 2px 8px; }
 .meta__sub { flex-basis: 100%; font-size: 13px; color: var(--ink2); }
 .meta__links { flex-direction: column; align-items: flex-start !important; }
 .meta__links a { display: inline-flex; align-items: center; }
