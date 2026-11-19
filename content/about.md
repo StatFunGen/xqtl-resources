@@ -9,7 +9,7 @@ The **[Alzheimer's Disease Sequencing Project Functional Genomics Consortium (Fu
 The FunGen-xQTL project provides comprehensive molecular quantitative trait loci (QTL) analyses across multiple molecular phenotypes, along with integrative analysis for neurodegenerative disorders particularly Alzheimer's disease. The data are on the AD Knowledge Portal and NIAGADS; the access table on the home page lists each folder and its access.
 
 * **[xQTL Analysis and xQTL-GWAS Integration Results](xqtl_resource_description)** along with **[File Format Description](xqtl_resource_format)**
-* **[Study Cohorts](xqtl-data/study_info/)**: Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA, STARNET, and MetaBrain
+* **[Study Cohorts](xqtl-data/study_info/)**: Information about participating cohorts including ROSMAP, Knight ADRC, MSBB, MiGA and STARNET, plus the published MetaBrain eQTL resource
 * **[GWAS Summary Statistics](xqtl-data/gwas/)**: Twelve Alzheimer's disease GWAS datasets from four studies (Bellenguez 2022, Kunkle 2019, Wightman 2021, Jansen 2019; the 2026 update adds the Bellenguez main, no-biobank and no-proxy analyses) and integrated AD fine-mapping and colocalization analyses
 * **[Molecular Phenotypes](xqtl-data/omics/)**: Multi-omic data including:
   - Gene expression (bulk RNA-seq: ROSMAP DLPFC/PCC/AC/microglia/monocyte, MSBB, Knight ADRC, MetaBrain, MiGA, STARNET)
