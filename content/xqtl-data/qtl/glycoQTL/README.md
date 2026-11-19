@@ -44,7 +44,7 @@ AD GWAS–glycoQTL colocalization analyses identify glycosylation-level mechanis
 
 ## Data Access
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | Fine-mapping models (glycoQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models (glycoQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
