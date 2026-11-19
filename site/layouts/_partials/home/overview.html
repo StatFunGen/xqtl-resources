@@ -1,77 +1,30 @@
-{{- /* Home page overview figure: samples and data -> QTL results by type -> what you can reuse.
-  Adapted from Figure 1 (b, d, e) of the FunGen-xQTL flagship paper and drawn with the site's own
-  colours. Numbers come from data/xqtl.yaml (home.figure); QTL types and counts come from the catalog. */ -}}
+{{- /* Compact home figure: samples and data -> QTL results by type -> what you can reuse.
+  Adapted from Figure 1 (b, d, e) of the FunGen-xQTL flagship paper, drawn with the site's colours. */ -}}
 {{- $x := hugo.Data.xqtl -}}
-{{- $f := $x.home.figure -}}
 {{- $rows := partialCached "ds/rows.html" . "rows" -}}
-{{- $qtl := where $rows "kind" "qtl" -}}
 {{- $cat := "" }}{{ with site.GetPage "/xqtl-data" }}{{ $cat = .RelPermalink }}{{ end -}}
-{{- $glyph := dict
-  "eQTL" `<path d="M3 20c5-12 9-12 14 0s9 12 14 0s6-8 6-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>`
-  "sQTL" `<rect x="2" y="15" width="10" height="9" rx="1.5" fill="currentColor"/><rect x="28" y="15" width="10" height="9" rx="1.5" fill="currentColor"/><path d="M12 15 L20 5 L28 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>`
-  "tpQTL" `<path d="M2 22h36" stroke="currentColor" stroke-width="2"/><path d="M4 22c4-14 10-14 14 0M14 22c4-12 10-12 14 0M24 22c4-10 9-10 12 0" fill="none" stroke="currentColor" stroke-width="2"/>`
-  "mQTL" `<path d="M2 24h36" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2"><path d="M9 24V11M20 24V8M31 24V13"/></g><g fill="currentColor"><circle cx="9" cy="9" r="3.5"/><circle cx="20" cy="6" r="3.5"/><circle cx="31" cy="11" r="3.5"/></g>`
-  "caQTL" `<path d="M2 16c3-9 6-9 6 0s3 9 6 0s3-9 6 0s3 9 6 0s3-9 6 0s3 9 6 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>`
-  "haQTL" `<path d="M2 18h36" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><circle cx="12" cy="18" r="7"/><circle cx="28" cy="18" r="7"/></g><g fill="currentColor"><circle cx="12" cy="6" r="2.5"/><circle cx="28" cy="6" r="2.5"/></g>`
-  "metQTL" `<path d="M13 6l7-4 7 4v8l-7 4-7-4z M20 18v4 M13 22l7 4 7-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>`
-  "pQTL" `<path d="M8 18c-5-6 0-14 7-12c4-5 13-3 14 3c6 1 8 9 3 13c1 5-6 8-11 5c-5 3-12 0-13-9z" fill="currentColor"/>`
-  "glycoQTL" `<path d="M5 20c-4-5 0-11 6-10c3-4 10-3 11 2c5 1 6 7 2 10c0 4-5 6-9 4c-4 2-9 0-10-6z" fill="currentColor"/><path d="M24 12l6-5M30 7l5 1M30 7l1-5" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><circle cx="35.5" cy="8" r="2"/><circle cx="31" cy="2.5" r="2"/></g>`
--}}
 <section class="ovf" aria-labelledby="ovf-title">
-  <div class="h2row">
-    <h2 id="ovf-title" class="h2">What the catalog holds</h2>
-    {{ with $cat }}<a class="link" href="{{ . }}">Open the catalog</a>{{ end }}
-  </div>
+  <h2 id="ovf-title" class="h2">How the resource fits together</h2>
   <div class="ovf__grid">
-
     <div class="ovf__col">
       <p class="ovf__step"><span>1</span>Samples and data</p>
-      <ul class="ovf__cohorts">
-        {{- range $x.cohorts }}
-        <li>{{ with .page }}{{ with site.GetPage (printf "/xqtl-data/study_info/%s" .) }}<a href="{{ .RelPermalink }}">{{ .Params.short_title | default .LinkTitle }}</a>{{ end }}{{ end }}</li>
-        {{- end }}
+      <p class="ovf__v">{{ $x.home.participants }} participants in {{ len (where $x.cohorts "page" "!=" "MetaBrain") }} cohorts, 15 brain regions, brain and immune cell types, plus 12 AD GWAS datasets.</p>
+      <ul class="ovf__mini">
+        {{- range $x.cohorts }}{{ with .page }}{{ with site.GetPage (printf "/xqtl-data/study_info/%s" .) }}<li><a href="{{ .RelPermalink }}">{{ .Params.short_title | default .LinkTitle }}</a></li>{{ end }}{{ end }}{{ end }}
       </ul>
-      <dl class="ovf__facts">
-        {{- range $f.facts }}<div><dt>{{ .n }}</dt><dd>{{ .l }}</dd></div>{{ end }}
-      </dl>
-      <p class="ovf__k">{{ $f.regions_n }} brain regions</p>
-      <p class="ovf__v">{{ delimit $f.regions ", " }}</p>
-      <p class="ovf__k">Cell types</p>
-      <p class="ovf__v">Brain: {{ delimit $f.brain_cells ", " }}<br>Immune: {{ delimit $f.immune_cells ", " }}</p>
-      {{ with site.GetPage "/xqtl-data/gwas/AD_GWAS" }}<p class="ovf__k">AD GWAS</p><p class="ovf__v"><a href="{{ .RelPermalink }}">{{ $f.gwas }}</a></p>{{ end }}
     </div>
-
     <div class="ovf__arrow" aria-hidden="true"></div>
-
     <div class="ovf__col">
-      <p class="ovf__step"><span>2</span>QTL results, by molecular type</p>
-      <ul class="ovf__types">
-        {{- range $x.modalities }}
-        {{- $n := len (where $qtl "family" .family) }}
-        <li><a href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" style="--c: var(--m-{{ .id }})">
-          <svg viewBox="0 0 40 28" aria-hidden="true">{{ index $glyph .id | safeHTML }}</svg>
-          <span class="ovf__tn">{{ .id }}</span><span class="ovf__td">{{ .what }}</span><span class="ovf__tc">{{ $n }} {{ cond (eq $n 1) "dataset" "datasets" }}</span>
-        </a></li>
-        {{- end }}
+      <p class="ovf__step"><span>2</span>QTL results in {{ len $x.modalities }} types</p>
+      <ul class="ovf__icons">
+        {{- range $x.modalities }}<li><a href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/qtl-glyph.html" .id }}<span>{{ .id }}</span></a></li>{{ end }}
       </ul>
-      <p class="ovf__note">Each type has cis results; some also have trans, single-nucleus, interaction or quantile results.</p>
     </div>
-
     <div class="ovf__arrow" aria-hidden="true"></div>
-
     <div class="ovf__col">
       <p class="ovf__step"><span>3</span>What you can reuse</p>
-      <ul class="ovf__reuse">
-        {{- range $f.reuse }}
-        {{- $href := .url -}}
-        {{- with .page }}{{ with site.GetPage . }}{{ $href = .RelPermalink }}{{ end }}{{ end -}}
-        {{- if eq .key "explorer" }}{{ $href = site.Params.explorerURL }}{{ else if eq .key "protocol" }}{{ $href = printf "%s/" site.Params.protocolURL }}{{ end }}
-        <li><a href="{{ $href }}"><span class="ovf__rt">{{ .t }}</span><span class="ovf__rd">{{ .d }}</span></a></li>
-        {{- end }}
-      </ul>
-      <div class="ovf__loci"><span class="ovf__ln">{{ $x.home.loci }}</span><span>AD loci; <strong>{{ $f.loci_support }}</strong> with localized xQTL support</span></div>
+      <p class="ovf__v">Fine-mapping, colocalization with AD GWAS, TWAS weights, cell-type scores and LD references, summarized for <a href="{{ site.Params.explorerURL }}">{{ $x.home.loci }} AD loci</a>.</p>
     </div>
-
   </div>
-  <p class="note">{{ $f.source }}</p>
+  <p class="note">Adapted from Figure 1 of the FunGen-xQTL flagship paper (manuscript).</p>
 </section>
