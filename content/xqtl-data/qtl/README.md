@@ -4,12 +4,12 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 
 ## Browse by Modality
 
-* [Expression QTLs (eQTL)](eQTL) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
-* [Splicing QTLs (sQTL)](sQTL) — ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
-* [Glycosylation QTLs (glycoQTL)](glycoQTL) — ROSMAP DLPFC
-* [Methylation QTLs (mQTL)](mQTL) — ROSMAP DLPFC, MSBB, Knight ADRC
-* [Histone acetylation QTLs (haQTL)](haQTL) — ROSMAP DLPFC
-* [Chromatin accessibility QTLs (caQTL)](caQTL) — ROSMAP snuc
+* [Expression QTLs (eQTL)](eQTL): ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
+* [Splicing QTLs (sQTL)](sQTL): ROSMAP (DLPFC/PCC/AC/snuc), MSBB, Knight ADRC
+* [Glycosylation QTLs (glycoQTL)](glycoQTL): ROSMAP DLPFC
+* [Methylation QTLs (mQTL)](mQTL): ROSMAP DLPFC, MSBB, Knight ADRC
+* [Histone acetylation QTLs (haQTL)](haQTL): ROSMAP DLPFC
+* [Chromatin accessibility QTLs (caQTL)](caQTL): ROSMAP snuc
 
 ## All Datasets
 
@@ -38,6 +38,7 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 * [ROSMAP PCC Expression QTL](eQTL/ROSMAP_PCC_expression_qtl)
 * [ROSMAP RNA-seq microglia gene expression QTL](eQTL/ROSMAP_microglia_expression_qtl)
 * [ROSMAP RNA-seq monocyte QTL](eQTL/ROSMAP_monocyte_expression_qtl)
+* [ROSMAP transcriptomic pattern QTL (DLPFC, PCC, AC)](tpQTL/ROSMAP_tpQTL)
 * [ROSMAP snuc chromatin accessibility QTL (caQTL)](caQTL/ROSMAP_snuc_caQTL_qtl)
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl)
 * [ROSMAP snuc splicing QTL (ISSAC)](sQTL/ROSMAP_snuc_splicing_qtl)

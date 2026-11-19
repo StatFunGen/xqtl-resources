@@ -12,7 +12,7 @@
   function apply(mode) {
     if (mode === 'auto') doc.removeAttribute('data-theme'); else doc.setAttribute('data-theme', mode);
     doc.setAttribute('data-theme-pref', mode);
-    if (btn) btn.setAttribute('aria-label', 'Colour theme: ' + (mode === 'auto' ? 'automatic' : mode));
+    if (btn) btn.setAttribute('aria-label', 'Color theme: ' + (mode === 'auto' ? 'automatic' : mode));
   }
   apply(current());
   if (btn) btn.addEventListener('click', function () {
@@ -43,11 +43,22 @@
   // Close the phone menu with Escape
   var navToggle = document.getElementById('nav-toggle');
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navToggle && navToggle.checked) navToggle.checked = false;
+    if (e.key === 'Escape' && navToggle && navToggle.checked) { navToggle.checked = false; syncMenu(); }
   });
-  document.querySelectorAll('.topbar__menu').forEach(function (l) {
+  var menuBtns = document.querySelectorAll('.topbar__menu');
+  // Tell assistive technology whether the menu is open, and offer the same button to close it
+  function syncMenu() {
+    var open = !!(navToggle && navToggle.checked);
+    menuBtns.forEach(function (l) {
+      l.setAttribute('aria-expanded', open ? 'true' : 'false');
+      l.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    document.documentElement.classList.toggle('nav-open', open);
+  }
+  if (navToggle) navToggle.addEventListener('change', syncMenu);
+  menuBtns.forEach(function (l) {
     l.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.checked = !navToggle.checked; }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.checked = !navToggle.checked; syncMenu(); }
     });
   });
 
@@ -76,8 +87,26 @@
 
   // Dataset pages keep every section open on phones as well, so caveats are never hidden.
 
-  // The previous theme registered a service worker; remove it so pages are never stale
+  // The previous theme registered a service worker for this site; remove only that one (scope under
+  // this site's first path segment, e.g. /xqtl-resources/) so other sites on the same host keep theirs
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+    var seg = location.pathname.split('/')[1], base = location.origin + '/' + (seg ? seg + '/' : '');
+    navigator.serviceWorker.getRegistrations().then(function (rs) {
+      rs.forEach(function (r) { if (r.scope.indexOf(base) === 0) r.unregister(); });
+    }).catch(function () {});
+  }
+
+  // Header search: the result list closes when focus or a click leaves the search box, and comes back
+  // when the box is used again; after Back navigation the box starts empty
+  var sbox = document.querySelector('.topbar .search'), sin = document.getElementById('book-search-input'),
+      sres = document.getElementById('book-search-results');
+  if (sbox && sin && sres) {
+    var hideRes = function () { sbox.classList.add('is-closed'); };
+    var showRes = function () { sbox.classList.remove('is-closed'); };
+    document.addEventListener('click', function (e) { if (!sbox.contains(e.target)) hideRes(); });
+    sbox.addEventListener('focusout', function (e) { if (!sbox.contains(e.relatedTarget)) hideRes(); });
+    sin.addEventListener('focus', showRes);
+    sin.addEventListener('input', showRes);
+    window.addEventListener('pageshow', function (e) { if (e.persisted) { sin.value = ''; sres.innerHTML = ''; } });
   }
 })();

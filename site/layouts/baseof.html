@@ -3,7 +3,7 @@
 <head>
   {{ partial "site/head.html" . }}
 </head>
-<body class="kind-{{ .Kind }}{{ with .Layout }} layout-{{ . }}{{ end }}{{ if in (slice "catalog" "inventory" "coverage") .Layout }} is-wide{{ end }}">
+<body class="kind-{{ .Kind }}{{ with .Layout }} layout-{{ . }}{{ end }}{{ if or .IsHome (in (slice "catalog" "inventory" "coverage") .Layout) }} is-wide{{ end }}">
   <a class="skip-link" href="#main">Skip to content</a>
   {{ partial "site/header.html" . }}
   <div class="shell">

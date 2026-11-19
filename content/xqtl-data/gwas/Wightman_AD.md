@@ -4,12 +4,12 @@ short_title: Wightman 2021
 status: staged
 access:
 release:
-synapse_ids: [syn69670625, syn69670626, syn69670630, syn69696846, syn69865816, syn70095142, syn70095143]
+synapse_ids: [syn69670625, syn69670626, syn69670630, syn69865805, syn69865816, syn70095142, syn70095143]
 lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
 
-# Alzheimer's Disease GWAS Summary Data (Wightman)
+# Alzheimer's disease GWAS: Wightman et al. 2021
 
 SNP-level association summary statistics for Alzheimer's disease (AD) from [Wightman et al. 2021](https://doi.org/10.1038/s41588-021-00921-z) in *Nature Genetics*. This page covers three meta-analyzed sets of summary statistics: all individuals, all individuals excluding 23andMe, and all individuals excluding 23andMe and UKBB.
 
@@ -24,7 +24,7 @@ The summary statistics are available from the NIAGADS FTP site. The original dat
 
 ## Path to SuSiE RSS Fine-mapping Objects
 - AD GWAS fine-mapping models (AD Knowledge Portal): [syn69670625](https://www.synapse.org/Synapse:syn69670625)
-- Additional fine-mapping objects: [syn69696846](https://www.synapse.org/Synapse:syn69696846)
+- Additional fine-mapping objects: [syn69865805](https://www.synapse.org/Synapse:syn69865805)
 
 ## AD GWAS–xQTL Integration
 

@@ -4,7 +4,7 @@ Glycoproteomics quantitative trait loci (glycoQTL) identify genetic variants tha
 
 ## Overview
 
-glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Glycopeptide abundances were normalized and regressed on covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. This represents one of the first large-scale brain glycoQTL resources integrated with AD genetics.
+glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from brain tissue, using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Glycopeptide abundances were normalized and regressed on covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. This represents one of the first large-scale brain glycoQTL resources integrated with AD genetics.
 
 ## Available Datasets
 
@@ -16,18 +16,18 @@ glycoQTL mapping was performed on glycopeptide-level mass spectrometry data from
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per glycopeptide, yielding:
 - Posterior inclusion probabilities (PIPs)
 - 95% credible sets
 - Effect sizes on glycosylation levels
 
-### Multi-Gene Fine-Mapping
+### Multi-Gene Fine-mapping
 
 Multi-gene fine-mapping for glycoQTLs jointly models co-regulated glycoproteins to resolve shared signals. Results available at [syn69670592](https://www.synapse.org/Synapse:syn69670592).
 
-### Trans-glycoQTL Fine-Mapping
+### Trans-glycoQTL Fine-mapping
 
 Genome-wide trans-glycoQTL analyses identify distant genetic influences on glycosylation patterns. Trans-glycoQTL fine-mapping results for ROSMAP DLPFC are provided at [ROSMAP DLPFC](ROSMAP_DLPFC_glycoproteomics_qtl).
 

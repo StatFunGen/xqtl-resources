@@ -12,7 +12,7 @@ lead_analysts: [FunGen-xQTL Analysis Team]
 last_verified:
 ---
 
-# ROSMAP DLPFC Brain Metabolomics QTL
+# ROSMAP DLPFC metabolomics QTL
 
 Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) brain tissue metabolomics QTL analysis.
 
@@ -36,7 +36,7 @@ FunGen-xQTL Analysis Team
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [finemapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
 
 ### Path(s) to colocalization
 

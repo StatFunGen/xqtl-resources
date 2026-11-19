@@ -10,7 +10,7 @@ lead_analysts: []
 last_verified:
 ---
 
-# MetaBrain Brain Expression
+# MetaBrain brain gene expression
 
 ## Summary
 

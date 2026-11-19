@@ -26,7 +26,7 @@ The Religious Orders Study (ROS) and the Rush Memory and Aging Project (MAP) are
 
 ## Contact
 
-Xuanhe Chen (xuanhechenxhc@163.com)
+Xuanhe Chen
 
 For questions about this page, contact the person above.
 

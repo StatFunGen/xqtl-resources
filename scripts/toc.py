@@ -23,6 +23,14 @@ A_TO_Z = '''
 | [I](#i) 	| [J](#j) 	| [K](#k) 	| [L](#l) 	| [M](#m) 	| [N](#n) 	| [O](#o) 	| [P](#p) 	| [Q](#q) 	|
 | [R](#r) 	| [S](#s) 	| [T](#t) 	| [U](#u) 	| [V](#v) 	| [W](#w) 	| [X](#x) 	| [Y](#y) 	| [Z](#z)  	|'''
 
+def a_to_z(names):
+    '''A to Z jump table. Letters with no entries are plain text, so every link has a target.'''
+    present = {'0' if re.match(r"[-+]?\d+$", n[0]) is not None else n[0].upper() for n in names}
+    cells = [('#', '0')] + [(c, c.lower()) for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+    cells = ['[{}](#{})'.format(c, a) if (a if a == '0' else c) in present else c for c, a in cells]
+    rows = ['| ' + ' \t| '.join(cells[i:i + 9]) + ' \t|' for i in range(0, 27, 9)]
+    return '\n|     |     |     |     |     |     |     |     |     |\n|:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |\n' + '\n'.join(rows)
+
 class Environment:
     def __init__(self):
         self.blob = ''
@@ -95,7 +103,7 @@ def write_toc(toc, page, title, description, contact, add_link = True):
     with open(page, 'w') as f:
         f.write('# {}\n'.format(title))
         if add_link:
-            f.write(A_TO_Z)
+            f.write(a_to_z(toc.keys()))
         if description:
             f.write('{}\n'.format(description))
         for name in toc.keys():
@@ -131,6 +139,13 @@ def write_subfolder_readmes(files):
         # Write README.md for this folder
         readme_path = os.path.join(folder, 'README.md')
         folder_name = os.path.basename(folder)
+        # Keep a hand-written folder page (anything beyond a title and a list of links);
+        # the section layout already adds the dataset table below it
+        if os.path.exists(readme_path):
+            with open(readme_path) as fh:
+                lines = [l.strip() for l in fh if l.strip()]
+            if any(not (l.startswith('# ') or re.match(r'^\* \[.*\]\(.*\)$', l)) for l in lines):
+                continue
         
         with open(readme_path, 'w') as f:
             # Use folder name as title (capitalize and replace underscores)

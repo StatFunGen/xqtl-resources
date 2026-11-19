@@ -95,6 +95,7 @@ home = [ "HTML", "RSS"]
   repoBranch = 'main'
   protocolURL = 'https://statfungen.github.io/xqtl-protocol'
   atlasURL = 'https://xqtl.niagads.org/'
+  explorerURL = 'https://xqtl.niagads.org/AD-loci-explorer/'
 
 [markup.tableOfContents]
   startLevel = 2

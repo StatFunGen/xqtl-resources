@@ -4,7 +4,7 @@ Histone acetylation quantitative trait loci (haQTL) identify genetic variants th
 
 ## Overview
 
-haQTL mapping was performed on H3K9ac ChIP-seq data from brain tissue using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/README.html). Peak-level H3K9ac read counts were normalized and adjusted for covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. Pairwise colocalization with AD GWAS fine-mapping uses a [novel epigenetic fine-mapping approach](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) developed to map chromatin-level mechanisms of AD risk variants.
+haQTL mapping was performed on H3K9ac ChIP-seq data from brain tissue using the [FunGen-xQTL pipeline](https://statfungen.github.io/xqtl-protocol/). Peak-level H3K9ac read counts were normalized and adjusted for covariates before tensorQTL-based association testing. Fine-mapping was performed using SuSiE-RSS. Pairwise colocalization with AD GWAS fine-mapping uses an [epigenetic fine-mapping approach](https://www.biorxiv.org/content/10.1101/2025.08.17.670732v1) developed to map chromatin-level mechanisms of AD risk variants.
 
 ## Available Datasets
 
@@ -16,7 +16,7 @@ haQTL mapping was performed on H3K9ac ChIP-seq data from brain tissue using the 
 
 ## Analyses Performed
 
-### Single-Context Fine-Mapping
+### Single-Context Fine-mapping
 
 Fine-mapping using **SuSiE-RSS** per H3K9ac peak, providing:
 - Posterior inclusion probabilities (PIPs)

@@ -2,20 +2,18 @@
 
 All datasets are available on the AD Knowledge Portal. Key folders: [variant & gene summary results](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
 
-|     |     |     |     |     |     |     |     |     |     |
-|:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |
-| [A](#a) | [E](#e) | [F](#f) | [K](#k) | [M](#m) | [N](#n) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
+|     |     |     |     |     |     |     |     |     |     |     |
+|:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |
+| [A](#a) | [E](#e) | [F](#f) | [G](#g) | [K](#k) | [M](#m) | [N](#n) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
 
 ## A
-* [ADGC GWAS imputation protocol](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/ADGC_GWAS_imputation_protocol.md). Adapted from [ADGC GWAS Data QC Protocol](https://bitbucket.org/wanpinglee_penn/gwas_qc/src/master/) to generate imputed genotype data for xQTL analysis in some cohorts.
-	* Lead analysts: **Xuanhe Chen.**
-* [Alzheimer's Disease GWAS Summary Data (Bellenguez)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics.
+* [Alzheimer's disease GWAS: Bellenguez et al. 2022](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka, Hao Sun and Rui Dong.**
-* [Alzheimer's Disease GWAS Summary Data (Jansen)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Jansen_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics.
+* [Alzheimer's disease GWAS: Jansen et al. 2019](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Jansen_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
-* [Alzheimer's Disease GWAS Summary Data (Kunkle)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Kunkle_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics.
+* [Alzheimer's disease GWAS: Kunkle et al. 2019](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Kunkle_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Kunkle et al 2019 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
-* [Alzheimer's Disease GWAS Summary Data (Wightman)](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics.
+* [Alzheimer's disease GWAS: Wightman et al. 2021](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Wightman_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Wightman et al 2021 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka.**
 
 ## E
@@ -28,6 +26,10 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 ## F
 * [FunGen-xQTL protocol data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/FunGen_xQTL_protocol_data.md). A toy data-set consisting of 49 de-identified samples from ROSMAP project, used to illustrates the computational protocols we developed for the detection and analysis of molecular QTLs (xQTLs).
 	* Lead analysts: **Hao Sun.**
+
+## G
+* [Genotype imputation protocol](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/genotype_imputation_protocol.md). Method page, not a dataset: how genotype-array data for some cohorts were quality-controlled and imputed with the TOPMed imputation server.
+	* Lead analysts: **Xuanhe Chen.**
 
 ## K
 * [Knight ADRC brain gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/Knight_ADRC_brain_expression.md).
@@ -113,15 +115,15 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 * [ROSMAP DLPFC alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/splicing/ROSMAP_DLPFC_splicing.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing.
 	* Lead analysts: **Xuanhe Chen; Shrishtee Kandoi.**
 * [ROSMAP DLPFC alternative splicing QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/sQTL/ROSMAP_DLPFC_splicing_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC alternative splicing.
-	* Lead analysts: **Shrishtee Kandoi and Xuanhe Chen (xuanhechenxhc@163.com).**
+	* Lead analysts: **Shrishtee Kandoi and Xuanhe Chen.**
 * [ROSMAP DLPFC gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/ROSMAP_DLPFC_expression.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC gene expression.
-	* Lead analysts: **Xuanhe Chen (xuanhechenxhc@163.com).**
+	* Lead analysts: **Xuanhe Chen.**
 * [ROSMAP DLPFC gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/ROSMAP_DLPFC_expression_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC gene expression.
 	* Lead analysts: **Shrishtee Kandoi; Frank Grenn.**
 * [ROSMAP DLPFC H3K9ac](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/histone_ChIPSeq/ROSMAP_DLPFC_ChIPSeq_H3K9ac.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac data-set.
 	* Lead analysts: **Xuanhe Chen; Hao Sun; Hans Klein.**
 * [ROSMAP DLPFC H3K9ac QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac QTL analysis using the FGC xQTL pipeline.
-	* Lead analysts: **Xuanhe Chen (xuanhechenxhc@163.com).**
+	* Lead analysts: **Xuanhe Chen.**
 * [ROSMAP DLPFC methylation](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/methylation/ROSMAP_DLPFC_methylation.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC methylation data-set.
 	* Lead analysts: **Alexandre Pelletier, Jiajun Tao.**
 * [ROSMAP DLPFC methylation QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/mQTL/ROSMAP_DLPFC_methylation_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC methylation data-set.
@@ -155,7 +157,7 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 * [ROSMAP snRNA-seq pseudo-bulk gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/ROSMAP_snRNAseq_pseudo_bulk_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) snRNA-seq from different cells in Dorsolateral Prefrontal Cortex (DLPFC).
 	* Lead analysts: **Hao Sun (eQTL), Masashi Fujita (eQTL), Haochen Sun (fine-mapping), Jiajun Tao (replication).**
 * [ROSMAP study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/ROSMAP.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) study: ROS is a longitudinal clinical-pathologic cohort study of aging and Alzheimer's disease (AD) run from Rush University that enrolled individuals from religious communities for longitudinal clinical analysis and brain donation.
-	* Lead analysts: **Xuanhe Chen (xuanhechenxhc@163.com).**
+	* Lead analysts: **Xuanhe Chen.**
 * [ROSMAP WGS data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/ROSMAP_WGS.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) whole-genome sequence data.
 	* Lead analysts: **Hao Sun and Xuanhe Chen.**
 

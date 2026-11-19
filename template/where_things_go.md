@@ -15,9 +15,9 @@ Draft for review. This page sets what each of the three places should hold so th
 | Grant, publication, acknowledgement | yes | yes (study pages) | in study annotations |
 | Data location | accession and Data Availability only | Synapse ID or public URL | yes (folder and file names) |
 | Access conditions | statement | one line (open, controlled, requested) | yes (access terms) |
-| Lead analysts | authors | name only | contributor |
+| Lead analysts | authors | name and work email | contributor |
 | Cluster, HPC and FTP file-system paths | no | no | no |
-| Personal emails and phone numbers | no | no | no |
+| Personal (non-work) emails and phone numbers | no | no | no |
 | Participant-level data, counts under 10 | no | no | controlled access only |
 | Internal staging IDs and working notes | no | `internal` front matter field only, no paths | staging project only |
 

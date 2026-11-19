@@ -1,0 +1,20 @@
+{{- $destination := .Destination -}}
+{{- if .Page.Param "BookPageLinks" | default false -}}
+{{- with .Page.GetPage $destination -}}
+  {{- $.Page.Store.Add "bookLinks" (slice .Page) -}}
+  {{-  .Page.Store.Add "bookBacklinks" (slice $.Page) -}}
+{{- end -}}
+{{- end -}}
+{{- if .Page.Site.Params.BookPortableLinks -}}
+  {{- $destination = partial "docs/links/portable-link" . -}}
+{{- end -}}
+{{- /* Links to private lab repositories get a label, since readers outside the lab cannot open them */ -}}
+{{- $private := false -}}
+{{- $d := lower (replaceRE `^https?://(www\.)?` "" .Destination) -}}
+{{- range hugo.Data.xqtl.private_repos -}}
+  {{- $p := lower . -}}
+  {{- if or (eq $d $p) (hasPrefix $d (printf "%s/" $p)) }}{{ $private = true }}{{ end -}}
+{{- end -}}
+<a href="{{ $destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- if $private }} <span class="lab-only" title="Private lab repository: you need GitHub access from the lab to open it">lab access only</span>{{ end -}}
+{{- /**/ -}}

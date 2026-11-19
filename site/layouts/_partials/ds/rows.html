@@ -9,8 +9,8 @@
     {{- if and (not $loc) (eq $i.kind "gwas") }}{{ $loc = "Public URL" }}{{ end -}}
     {{- $rows = $rows | append (dict
         "title" .Title "href" .RelPermalink "short" $i.short
-        "kind" $i.kind "kindLabel" $i.kindLabel "label" $i.label "family" ($i.family | default (cond (eq $i.kind "gwas") "GWAS" (cond (eq $i.kind "reference") "Reference" ""))) "color" $i.color "mark" $i.mark
-        "cohort" $i.cohort "context" $i.context "n" $i.n
+        "kind" (cond (index (.Params.dataset | default dict) "example" | default false) "example" $i.kind) "kindLabel" (cond (index (.Params.dataset | default dict) "example" | default false) "Protocol example data" $i.kindLabel) "label" $i.label "family" ($i.family | default (cond (eq $i.kind "gwas") "GWAS" (cond (eq $i.kind "reference") "Reference" ""))) "color" $i.color "mark" $i.mark
+        "cohort" $i.cohort "context" $i.context "n" $i.n "nnote" $i.nnote
         "status" $i.status "access" $i.access "analysts" $i.analysts
         "loc" $loc "ng" $i.ng00184 "lead" (.Params.lead | default "" | plainify | htmlUnescape | truncate 220)
         "methods" $i.methods

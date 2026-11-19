@@ -18,7 +18,7 @@ Include all the bullet points below in this exact format. They follow the NIAGAD
 - PI : Name
 - Institution : XX University
 - Grant number : #######, #######, #######
-- Contact person : Name only (no personal email or phone; use the lab or consortium contact if one exists)
+- Contact person : Name and work email (no personal email or phone; use the lab or consortium contact if one exists)
 - Publication : PMID:########
 - Acknowledgement : TEXT (can be extracted from the publication, if that is available)
 - Study name : TEXT (as PI of the study, they can provide a name they want. NIAGADS team can amend that if it overlaps with any study names they currently have)

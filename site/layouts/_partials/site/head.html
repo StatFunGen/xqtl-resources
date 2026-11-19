@@ -1,11 +1,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ or .Description .Params.lead .Summary site.Params.description | plainify | htmlUnescape | truncate 200 }}">
+<meta name="description" content="{{ or .Description (.Params.lead | default "" | markdownify) .Summary site.Params.description | plainify | htmlUnescape | truncate 200 }}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#19354A">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111417">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · FunGen-xQTL Resources{{ end }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
+{{- /* Social preview cards */}}
+{{- $desc := or .Description (.Params.lead | default "" | markdownify) .Summary site.Params.description | plainify | htmlUnescape | truncate 200 }}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FunGen-xQTL Resources">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "brand/logo_fungen.png" | absURL }}">
+<meta name="twitter:card" content="summary">
+{{- /* Dataset pages: schema.org Dataset metadata with the identifiers and access stated on the page */}}
+{{- $i := partial "ds/info.html" . }}
+{{- if and .IsPage (in (slice "qtl" "omics" "gwas" "reference") $i.kind) (not (index (.Params.dataset | default dict) "example")) }}
+{{- $ds := dict "@context" "https://schema.org" "@type" "Dataset" "name" .Title "description" $desc "url" .Permalink "isPartOf" (dict "@type" "DataCatalog" "name" "FunGen-xQTL Resources" "url" site.Home.Permalink) "creator" (dict "@type" "Organization" "name" "ADSP Functional Genomics Consortium (FunGen-AD)") }}
+{{- with $i.synapseIDs }}{{ $ids := slice }}{{ range . }}{{ $ids = $ids | append (printf "https://www.synapse.org/Synapse:%s" .) }}{{ end }}{{ $ds = merge $ds (dict "identifier" $ids) }}{{ end }}
+{{- with $i.cohort }}{{ $ds = merge $ds (dict "keywords" (slice . ($i.label | default "") "Alzheimer's disease" "xQTL")) }}{{ end }}
+{{- with $i.access }}{{ $ds = merge $ds (dict "isAccessibleForFree" true "conditionsOfAccess" (cond (eq . "open") "Open download, no application" "Free Synapse account and AD Knowledge Portal data use certificate")) }}{{ end }}
+<script type="application/ld+json">{{ $ds | jsonify | safeJS }}</script>
+{{- end }}
+
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 {{- /* Apply the stored theme before first paint so the page does not flash */}}
 <script>try{var t=localStorage.getItem('xqtl-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>

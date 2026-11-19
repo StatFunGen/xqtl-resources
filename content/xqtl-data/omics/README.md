@@ -2,14 +2,14 @@
 
 ## Browse by Data Type
 
-* [Gene Expression](expression) — ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq pseudo-bulk), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
-* [RNA Splicing](splicing) — ROSMAP (DLPFC/PCC/AC/snuc ISSAC), MSBB, Knight ADRC
-* [Glycoproteomics](glycoproteomics) — ROSMAP DLPFC
-* [DNA Methylation](methylation) — ROSMAP DLPFC, MSBB, Knight ADRC
-* [Histone ChIP-seq](histone_ChIPSeq) — ROSMAP DLPFC (H3K9ac)
-* [Single-Nucleus ATAC-seq](snATAC) — ROSMAP snuc
-* [Single-Nucleus RNA-seq](snRNA_seq) — ROSMAP (CUIMC1, MIT, Mega)
-* [Covariates](covariates) — ROSMAP
+* [Gene Expression](expression): ROSMAP (DLPFC/PCC/AC/microglia/monocyte/snRNA-seq pseudo-bulk), MSBB, MiGA, MetaBrain, Knight ADRC, STARNET
+* [RNA Splicing](splicing): ROSMAP (DLPFC/PCC/AC/snuc ISSAC), MSBB, Knight ADRC
+* [Glycoproteomics](glycoproteomics): ROSMAP DLPFC
+* [DNA Methylation](methylation): ROSMAP DLPFC, MSBB, Knight ADRC
+* [Histone ChIP-seq](histone_ChIPSeq): ROSMAP DLPFC (H3K9ac)
+* [Single-Nucleus ATAC-seq](snATAC): ROSMAP snuc
+* [Single-Nucleus RNA-seq](snRNA_seq): ROSMAP (CUIMC1, MIT, Mega)
+* [Covariates](covariates): ROSMAP
 
 ## All Datasets
 
