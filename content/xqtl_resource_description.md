@@ -120,7 +120,7 @@ All exported bed files follow standardized formats with consistent column defini
 
 All FunGen-xQTL flagship paper datasets are hosted on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/). The table below summarizes the primary resource folders.
 
-| Resource | Description | Synapse ID |
+| Resource | Description | AD Knowledge Portal ID |
 |----------|-------------|------------|
 | **Variant & gene summary results** | AD loci, xQTL loci, fine-mapping and colocalization summaries | [syn69865684](https://www.synapse.org/Synapse:syn69865684) |
 | **xQTL GWAS models** | All statistical models: fine-mapping, TWAS, colocalization, AD integration | [syn69670588](https://www.synapse.org/Synapse:syn69670588) |
