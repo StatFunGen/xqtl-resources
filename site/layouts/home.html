@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- /* Home page. Hero with the logo and two main actions, an optional announcement bar (data/xqtl.yaml home.announce),
-  headline numbers, a dataset search that opens the catalog, "Start here" cards, browse chips by cohort, modality and
-  AD GWAS, the data access summary, and a dark footer. Counts in the
+  headline numbers, a dataset search that opens the catalog, "Start here" cards, a browse figure (cohorts -> QTL types -> AD GWAS, home/overview.html) and
+  the data access summary, and a dark footer. Counts in the
   browse lists are computed from the dataset pages at build time. The About text is its own page
   (content/about.md), linked from the menu and the footer. */ -}}
 {{- $x := hugo.Data.xqtl -}}
@@ -57,38 +57,6 @@
 
   {{ partial "home/overview.html" . }}
 
-  <section class="browse" aria-label="Browse the catalog">
-    <div>
-      <h2 class="h3">By cohort</h2>
-      <ul class="chips">
-      {{- range $x.cohorts }}
-        {{- $n := len (where $rows "cohort" .name) }}
-        <li>{{ if $n }}<a class="chip" href="{{ $cat }}?cohort={{ .name }}" title="{{ .desc }}">{{ .name }} <span class="chip__n">{{ $n }}</span></a>{{ else }}<a class="chip" href="{{ .url }}" rel="noopener" title="{{ .desc }}">{{ .name }} ↗</a>{{ end }}</li>
-      {{- end }}
-      </ul>
-    </div>
-    <div>
-      <h2 class="h3">By QTL modality</h2>
-      <ul class="chips">
-      {{- range $x.modalities }}
-        {{- $n := len (where $qtl "family" .family) }}
-        <li><a class="chip" href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/mark.html" (dict "color" (printf "var(--m-%s)" .id) "mark" "fill") }}{{ .id }} <span class="chip__n">{{ $n }}</span></a></li>
-      {{- end }}
-      </ul>
-    </div>
-    <div>
-      <h2 class="h3">AD GWAS studies</h2>
-      <ul class="chips">
-      {{- range $x.gwas }}
-        {{- $g := . -}}
-        {{- with site.GetPage (printf "/xqtl-data/gwas/%s" .page) }}
-        <li><a class="chip" href="{{ .RelPermalink }}" title="{{ $g.desc }}">{{ $g.name }}</a></li>
-        {{- end }}
-      {{- end }}
-      </ul>
-    </div>
-  </section>
-  <p class="note browse__note">Counts are catalog pages. Cohort counts include QTL results and the omics data behind them; modality counts are QTL result pages.{{ with site.GetPage "/xqtl-data/gwas/AD_GWAS" }} The study uses twelve AD GWAS datasets from the four studies; the <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all twelve.{{ end }}</p>
 
   <section class="home__access" aria-labelledby="access-title">
     <div class="h2row">
