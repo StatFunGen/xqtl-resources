@@ -70,7 +70,7 @@
       {{- $mail := 0 }}
       <div class="meta__row"><dt>Lead analysts</dt><dd><span>
         {{- range $j, $a := . }}{{ if $j }}, {{ end }}{{ with index (where (hugo.Data.xqtl.analysts | default slice) "name" $a) 0 }}<a href="mailto:{{ .email }}">{{ $a }}</a>{{ $mail = add $mail 1 }}{{ else }}{{ $a }}{{ end }}{{ end -}}
-        </span><span class="meta__sub">{{ if $mail }}Select a name to email them{{ else }}Contact by name{{ end }}</span></dd></div>
+        </span>{{ if $mail }}<span class="meta__sub">Select a name to email them</span>{{ end }}</dd></div>
       {{- end }}
       {{- with $counter }}
       <div class="meta__row"><dt>{{ cond (eq $i.kind "qtl") "Source data" "QTL results" }}</dt><dd class="meta__links">
