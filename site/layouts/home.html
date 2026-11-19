@@ -29,14 +29,12 @@
 
   <div class="home__body">
   <section class="stats" aria-label="Headline numbers">
-    <div class="stat"><span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
-    <div class="stat"><span class="stat__n">{{ $x.home.modalities | default (len $x.modalities) }}</span><span class="stat__l">molecular modalities</span></div>
-    <div class="stat"><span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
-    <div class="stat"><span class="stat__n">{{ $x.home.loci }}</span><span class="stat__l">AD loci summarized</span></div>
+    <div class="stat">{{ partial "ui/stat-icon.html" "datasets" }}<span class="stat__n">{{ $x.home.datasets | default (len $rows) }}</span><span class="stat__l">molecular datasets</span></div>
+    <div class="stat">{{ partial "ui/stat-icon.html" "modalities" }}<span class="stat__n">{{ $x.home.modalities | default (len $x.modalities) }}</span><span class="stat__l">molecular modalities</span></div>
+    <div class="stat">{{ partial "ui/stat-icon.html" "participants" }}<span class="stat__n">{{ $x.home.participants }}</span><span class="stat__l">participants</span></div>
+    <div class="stat">{{ partial "ui/stat-icon.html" "loci" }}<span class="stat__n">{{ $x.home.loci }}</span><span class="stat__l">AD loci summarized</span></div>
   </section>
   <p class="note stats__note">{{ $x.home.participants_note }} The {{ len $rows }} catalog pages also cover AD GWAS and reference data; the <a href="https://www.synapse.org/Synapse:syn77822490" rel="noopener">AD loci summary workbook</a> lists the loci.</p>
-
-  {{ partial "home/overview.html" . }}
 
   <form class="find" action="{{ $cat }}" method="get" role="search">
     <span class="search__icon" aria-hidden="true"></span>
@@ -56,6 +54,8 @@
       <a class="card" href="{{ with $howto }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Get the data <span aria-hidden="true">→</span></span><span class="card__d">AD Knowledge Portal, NIAGADS and controlled-access steps.</span></a>
     </nav>
   </section>
+
+  {{ partial "home/overview.html" . }}
 
   <section class="browse" aria-label="Browse the catalog">
     <div>
