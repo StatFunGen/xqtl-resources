@@ -9,7 +9,7 @@ sample_note: 92 donors profiled; up to 84 per cell type after QC
 access: controlled
 status: staged
 synapse_ids: [syn69670592, syn69670597, syn69865816, syn69670630]
-lead_analysts: [FunGen-xQTL Analysis Team]
+lead_analysts: [Anjing Liu]
 last_verified:
 methods:
   cis-QTL: done
@@ -23,7 +23,7 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-FunGen-xQTL Analysis Team
+Anjing Liu
 
 ## Study Overview
 
