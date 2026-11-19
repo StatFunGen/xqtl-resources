@@ -10,7 +10,7 @@ access: controlled
 status: staged
 release:
 synapse_ids: [syn77650756, syn77652326, syn77827202, syn69865816]
-lead_analysts: []
+lead_analysts: [Carlos F. Buen Abad Najar, Ru Feng]
 last_verified:
 methods:
   SuSiE: done
