@@ -64,6 +64,7 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 * [LDSC Reference Data and Functional Annotations](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ldsc_reference.md). LD score regression reference files, munged AD GWAS and functional annotations, computed from the ADSP LD reference.
 
 ## M
+* [MetaBrain study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MetaBrain.md). A published meta-analysis of brain eQTL from bulk RNA-seq across five brain regions; FunGen-xQTL uses its summary statistics.
 	* Lead analysts: **Makaela Mews.**
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
 	* Lead analysts: **Makaela Mews (analyst; mxm1368@case.edu);  Dr.**
