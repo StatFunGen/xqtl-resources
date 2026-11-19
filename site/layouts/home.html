@@ -2,8 +2,8 @@
 {{- /* Home page. Hero with the logo and two main actions, an optional announcement bar (data/xqtl.yaml home.announce),
   headline numbers, a dataset search that opens the catalog, "Start here" cards, browse chips by cohort, modality and
   AD GWAS, the data access summary, and a dark footer. Counts in the
-  browse lists are computed from the dataset pages at build time. The Markdown in
-  content/README.md is shown in full under "About FunGen-AD". */ -}}
+  browse lists are computed from the dataset pages at build time. The About text is its own page
+  (content/about.md), linked from the menu and the footer. */ -}}
 {{- $x := hugo.Data.xqtl -}}
 {{- $rows := partialCached "ds/rows.html" . "rows" -}}
 {{- $qtl := where $rows "kind" "qtl" -}}
@@ -39,7 +39,7 @@
   <form class="find" action="{{ $cat }}" method="get" role="search">
     <span class="search__icon" aria-hidden="true"></span>
     <label class="sr-only" for="home-q">Search datasets</label>
-    <input id="home-q" type="search" name="q" placeholder="Find a dataset: name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
+    <input id="home-q" type="search" name="q" placeholder="Find a dataset: name, tissue, cell type, analyst or AD Knowledge Portal ID" autocomplete="off">
     <button type="submit" class="btn btn--primary">Search</button>
   </form>
 
@@ -51,7 +51,7 @@
       <a class="card" href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}"><span class="card__t">TWAS weights <span aria-hidden="true">→</span></span><span class="card__d">Fitted models, one folder per dataset.</span></a>
       <a class="card" href="{{ site.Params.protocolURL }}/"><span class="card__t">Protocol <span aria-hidden="true">→</span></span><span class="card__d">The analysis pipelines, and a builder that lists the modules for your data with an example command for each.</span></a>
       <a class="card" href="{{ site.Params.explorerURL }}"><span class="card__t">AD Loci Explorer <span aria-hidden="true">→</span></span><span class="card__d">{{ $x.home.loci }} AD loci with the xQTL evidence behind each gene.</span></a>
-      <a class="card" href="{{ with $howto }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Get the data <span aria-hidden="true">→</span></span><span class="card__d">Synapse, NIAGADS and controlled-access steps.</span></a>
+      <a class="card" href="{{ with $howto }}{{ .RelPermalink }}{{ end }}"><span class="card__t">Get the data <span aria-hidden="true">→</span></span><span class="card__d">AD Knowledge Portal, NIAGADS and controlled-access steps.</span></a>
     </nav>
   </section>
 
@@ -103,14 +103,9 @@
         </tbody>
       </table>
     </div>
-    <p class="note">Access differs by resource. The AD Knowledge Portal folders are controlled access: you need a Synapse account and data access requested on the AD Knowledge Portal. NG00184.v1 on NIAGADS DSS is open, and the xQTL Atlas is a public query site. Each dataset page states the access for its own files.</p>
+    <p class="note">Access differs by resource. The AD Knowledge Portal folders are controlled access: you need an AD Knowledge Portal account and approved data access. NG00184.v1 on NIAGADS DSS is open, and the xQTL Atlas is a public query site. Each dataset page states the access for its own files.</p>
   </section>
 
-  {{- with .Content }}
-  <section class="home__about">
-    <div class="prose">{{ . }}</div>
-  </section>
-  {{- end }}
 
   </div>
   <footer class="sitefoot">
@@ -119,7 +114,7 @@
       <div class="sitefoot__brand">{{ partial "ui/logo.html" (dict "size" 28 "id" "fxf") }}<span>FunGen<span class="brand__x">-xQTL</span></span></div>
       <div><h2>Data</h2><a href="{{ $cat }}">Catalog</a><a href="{{ with site.GetPage "/fgmb_weights_database" }}{{ .RelPermalink }}{{ end }}">TWAS weights</a><a href="{{ with $howto }}{{ .RelPermalink }}{{ end }}">Get the data</a></div>
       <div><h2>Tools</h2><a href="{{ site.Params.protocolURL }}/">Protocol</a><a href="{{ site.Params.explorerURL }}">AD Loci Explorer</a><a href="{{ site.Params.atlasURL }}" rel="noopener">NIAGADS xQTL Atlas ↗</a></div>
-      <div><h2>About</h2><a href="https://fgc.niagads.org/" rel="noopener">FunGen-AD ↗</a><a href="{{ site.Params.repoURL }}/edit/{{ site.Params.repoBranch }}/content/README.md">Edit this page on GitHub</a><span>Maintained by the FunGen-AD Analysis Working Group. Data through {{ $x.home.updated }}.</span></div>
+      <div><h2>About</h2><a href="{{ with site.GetPage "/about" }}{{ .RelPermalink }}{{ end }}">About these resources</a><a href="https://fgc.niagads.org/" rel="noopener">FunGen-AD ↗</a><span>Maintained by the FunGen-AD Analysis Working Group. Data through {{ $x.home.updated }}.</span></div>
     </div>
   </footer>
 </div>

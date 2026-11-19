@@ -12,7 +12,7 @@
     <div class="field field--lg">
       <span class="search__icon" aria-hidden="true"></span>
       <label class="sr-only" for="catalog-q">Filter datasets</label>
-      <input id="catalog-q" type="search" data-q placeholder="Filter by name, tissue, cell type, analyst or Synapse ID" autocomplete="off">
+      <input id="catalog-q" type="search" data-q placeholder="Filter by name, tissue, cell type, analyst or AD Knowledge Portal ID" autocomplete="off">
     </div>
   </header>
 
@@ -104,7 +104,7 @@
   <section class="card dlr" aria-labelledby="dlr-title">
     <div class="matrix__head">
       <h2 id="dlr-title">Where can I download the data?</h2>
-      <span class="muted">Every QTL dataset downloads from the AD Knowledge Portal with a free Synapse account. {{ $nOpen }} of the {{ $total }} also have an open copy on NIAGADS (NG00184, no application). Bars share a 0–{{ $omax }} scale.</span>
+      <span class="muted">Every QTL dataset downloads from the AD Knowledge Portal with a free account. {{ $nOpen }} of the {{ $total }} also have an open copy on NIAGADS (NG00184, no application). Bars share a 0–{{ $omax }} scale.</span>
     </div>
     <div class="dlr__key" aria-hidden="true"><span><i class="dlr__sw dlr__sw--open"></i>Open copy on NIAGADS</span><span><i class="dlr__sw dlr__sw--syn"></i>AD Knowledge Portal only</span></div>
     <ul class="dlr__list">
@@ -234,7 +234,7 @@
     <aside class="facets" id="facets" aria-label="Filters">
       <div class="facets__mobilehead"><strong>Filters</strong><button type="button" class="btn btn--sm" data-filters-close>Done</button></div>
       {{- $facet := dict
-        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "AD GWAS") (slice "reference" "Reference panels") (slice "example" "Protocol example data")) -}}
+        "kind" (slice (slice "qtl" "QTL results") (slice "omics" "Omics data") (slice "gwas" "AD GWAS") (slice "reference" "Reference data")) -}}
       <div class="facet"><div class="facet__title">Data type</div>
         <p class="facet__help">QTL results link genetic variants to a molecular trait. Omics data are the measurements behind them.</p>
         {{- range index $facet "kind" }}{{ partial "site/facet-opt.html" (dict "facet" "kind" "value" (index . 0) "label" (index . 1)) }}{{ end }}
@@ -253,7 +253,7 @@
         {{- range sort $tissues }}{{ partial "site/facet-opt.html" (dict "facet" "tissue" "value" . "label" (strings.FirstUpper .)) }}{{ end }}
       </div>
       <div class="facet"><div class="facet__title">How to download</div>
-        {{- $alab := dict "open" "Open download (no application)" "controlled" "AD Knowledge Portal (Synapse)" "requested" "On request" }}
+        {{- $alab := dict "open" "Open download (no application)" "controlled" "AD Knowledge Portal" "requested" "On request" }}
         {{- range slice "open" "controlled" "requested" }}{{ $v := . }}{{ $has := 0 }}{{ range $rows }}{{ if or (eq .access $v) (and (eq $v "open") .ng) }}{{ $has = 1 }}{{ end }}{{ end }}{{ if $has }}{{ partial "site/facet-opt.html" (dict "facet" "access" "value" . "label" (index $alab .) "acc" .) }}{{ end }}{{ end }}
       </div>
     </aside>

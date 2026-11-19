@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- /* All Synapse folders: every folder in data/statfungen_synapse_staging_folder_structure.yml, built into
+{{- /* All AD Knowledge Portal folders: every folder in data/statfungen_synapse_staging_folder_structure.yml, built into
   data/staging.json by scripts/staging_index.py at build time, with the catalog pages that describe each one. */ -}}
 {{- $s := hugo.Data.staging -}}
 <article class="page folders">
@@ -13,12 +13,12 @@
   <section class="stats folders__stats" aria-label="Folder counts">
     <div class="stat"><span class="stat__n">{{ .folders }}</span><span class="stat__l">folders</span></div>
     <div class="stat"><span class="stat__n">{{ .files }}</span><span class="stat__l">files and file patterns</span></div>
-    <div class="stat"><span class="stat__n">{{ .ids }}</span><span class="stat__l">Synapse IDs</span></div>
+    <div class="stat"><span class="stat__n">{{ .ids }}</span><span class="stat__l">AD Knowledge Portal IDs</span></div>
   </section>
   <div class="field folders__find">
     <span class="search__icon" aria-hidden="true"></span>
     <label class="sr-only" for="fold-q">Filter folders</label>
-    <input id="fold-q" type="search" placeholder="Filter by folder, file name or Synapse ID" autocomplete="off" data-fold-q>
+    <input id="fold-q" type="search" placeholder="Filter by folder, file name or AD Knowledge Portal ID" autocomplete="off" data-fold-q>
     <button type="button" class="btn" data-fold-all aria-pressed="false">Expand all</button>
   </div>
   <p class="note" data-fold-status aria-live="polite"></p>
