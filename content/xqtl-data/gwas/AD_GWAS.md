@@ -22,9 +22,9 @@ The study used twelve datasets from four AD meta-analyses: Bellenguez, Wightman,
 | `AD_Bellenguez_EADB_2022` | Bellenguez et al. 2022, EADB subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_EADI_2022` | Bellenguez et al. 2022, EADI subset | European | n/a | n/a | n/a |
 | `AD_Bellenguez_GRACE_2022` | Bellenguez et al. 2022, GRACE cohort | European | n/a | n/a | n/a |
-| `AD_Bellenguez_main_2026` | Bellenguez et al. 2026, updated meta-analysis, main analysis | European | n/a | n/a | n/a |
-| `AD_Bellenguez_noproxy_2026` | Bellenguez et al. 2026, updated meta-analysis, without proxy cases | European | n/a | n/a | n/a |
-| `AD_Bellenguez_nobiobank_2026` | Bellenguez et al. 2026, updated meta-analysis, without biobank cohorts | European | n/a | n/a | n/a |
+| `AD_Bellenguez_main_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, main analysis | European | n/a | n/a | n/a |
+| `AD_Bellenguez_noproxy_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, without proxy cases | European | n/a | n/a | n/a |
+| `AD_Bellenguez_nobiobank_2026` | EADB et al. 2026 (Nat. Genet. 58, 1214–1225), consensus meta-analysis, without biobank cohorts | European | n/a | n/a | n/a |
 | `AD_Wightman_Full_2021` | [Wightman et al. 2021](https://doi.org/10.1038/s41588-021-00921-z) *Nat Genet* | European | 90,338 | 1,036,225 | AD and proxy-AD (UK Biobank) |
 | `AD_Wightman_Excluding23andMe_2021` | Wightman et al. 2021, without 23andMe | European | n/a | n/a | AD and proxy-AD (UK Biobank) |
 | `AD_Wightman_ExcludingUKBand23andME_2021` | Wightman et al. 2021, without UK Biobank and 23andMe | European | n/a | n/a | n/a |
@@ -35,7 +35,7 @@ The study used twelve datasets from four AD meta-analyses: Bellenguez, Wightman,
 
 ## Quality control
 
-Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. The October 29 release of the AD × xQTL integration summary contains 226 AD loci.
+Summary statistics passed a QC procedure built around [SLALOM](https://www.medrxiv.org/content/10.1101/2022.03.16.22272457). Manual curation then compared single-effect regression with conditional regression outputs and removed suspicious or unstable loci. The November 2 release of the AD × xQTL integration summary contains 226 AD loci.
 
 ## LD reference panel
 

@@ -48,7 +48,7 @@ Our gene-level analyses include [transcriptome-wide association studies (TWAS) a
 
 #### **Integrated AD Summary Tables**
 
-For immediate use by researchers, we provide comprehensive summary tables in the [AD × xQTL integration summary folder](https://www.synapse.org/Synapse:syn69865823) ([syn69865823](https://www.synapse.org/Synapse:syn69865823)). The current release (October 2026) covers 195 AD loci:
+For immediate use by researchers, we provide comprehensive summary tables in the [AD × xQTL integration summary folder](https://www.synapse.org/Synapse:syn69865823) ([syn69865823](https://www.synapse.org/Synapse:syn69865823)). The current release (November 2026) covers 226 AD loci:
 - **AD loci annotated by xQTL summary workbook** (`unified_AD_loci_xQTL_summary_20261102.xlsx`) - variant-level integration of AD GWAS loci with all xQTL evidence
 - **Unified AD loci** (`AD_loci_unified_cs95orColocs.csv`) and the **variant-level table** (`AD_loci_unified_cs95orColocs_Pval1e5_variant_level.csv`)
 - **xQTL overlap table** (`xQTL_all_methods_overlap_with_AD_loci_unified_cs95orColocs_Pval1e5.csv.gz`) - every xQTL method and context overlapping each AD locus

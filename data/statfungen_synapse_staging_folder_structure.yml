@@ -232,9 +232,6 @@ variant_gene_summary: #syn69865684
       - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
       - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
       - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
-      - AD_Bellenguez_main_2026.gwas.top_loci.bed.gz
-      - AD_Bellenguez_noproxy_2026.gwas.top_loci.bed.gz
-      - AD_Bellenguez_nobiobank_2026.gwas.top_loci.bed.gz
     AD_colocalization: #syn69865814
       - AD_meta_colocboost_filtered.bed.gz
     AD_xQTL_colocalization: #syn69865816
