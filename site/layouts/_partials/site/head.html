@@ -21,7 +21,7 @@
 {{- $ds := dict "@context" "https://schema.org" "@type" "Dataset" "name" .Title "description" $desc "url" .Permalink "isPartOf" (dict "@type" "DataCatalog" "name" "FunGen-xQTL Resources" "url" site.Home.Permalink) "creator" (dict "@type" "Organization" "name" "ADSP Functional Genomics Consortium (FunGen-AD)") }}
 {{- with $i.synapseIDs }}{{ $ids := slice }}{{ range . }}{{ $ids = $ids | append (printf "https://www.synapse.org/Synapse:%s" .) }}{{ end }}{{ $ds = merge $ds (dict "identifier" $ids) }}{{ end }}
 {{- with $i.cohort }}{{ $ds = merge $ds (dict "keywords" (slice . ($i.label | default "") "Alzheimer's disease" "xQTL")) }}{{ end }}
-{{- with $i.access }}{{ $ds = merge $ds (dict "isAccessibleForFree" true "conditionsOfAccess" (cond (eq . "open") "Open download, no application" "Free Synapse account and AD Knowledge Portal data use certificate")) }}{{ end }}
+{{- with $i.access }}{{ $ds = merge $ds (dict "isAccessibleForFree" true "conditionsOfAccess" (cond (eq . "open") "Open download, no application" "Free AD Knowledge Portal account and AD Knowledge Portal data use certificate")) }}{{ end }}
 <script type="application/ld+json">{{ $ds | jsonify | safeJS }}</script>
 {{- end }}
 
