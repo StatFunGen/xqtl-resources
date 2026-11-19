@@ -21,7 +21,7 @@ MetaBrain is a large-scale meta-analysis of brain expression data across multipl
 - **Cohorts**: Multiple cohorts (see [MetaBrain.nl](https://www.metabrain.nl/))
 - **Brain regions**: Cerebellum, Cortex, Basal ganglia, Spinal cord, Hippocampus
 - **Data type**: Bulk RNA-seq
-- **Samples**: ~2,000+ samples per region (region-specific)
+- **Samples**: differ by region; see de Klein et al. 2023, *Nature Genetics* 55, 377–388
 
 ## Omics Data
 
