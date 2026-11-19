@@ -39,13 +39,13 @@ Summary statistics passed a QC procedure built around [SLALOM](https://www.medrx
 
 ## LD reference panel
 
-| Panel | N samples | Population | Build | Synapse ID |
+| Panel | N samples | Population | Build | AD Knowledge Portal ID |
 |---|---|---|---|---|
 | ADSP WGS | 16,571 | European ancestry | GRCh38 | [syn69670651](https://www.synapse.org/Synapse:syn69670651), subfolder `EUR/` ([syn69670652](https://www.synapse.org/Synapse:syn69670652)) |
 
 ## Data access
 
-| Resource | Description | Synapse ID |
+| Resource | Description | AD Knowledge Portal ID |
 |---|---|---|
 | ADSP LD reference (EUR) | LD panel for fine-mapping and colocalization | [syn69670652](https://www.synapse.org/Synapse:syn69670652) |
 | LDSC reference data | LD scores, munged GWAS, sLDSC annotations | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |

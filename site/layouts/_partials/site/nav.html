@@ -12,7 +12,7 @@
       {{ with site.GetPage "/how_to_get_data" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "How to get the data") }}{{ end }}
       {{ with site.GetPage "/inventory" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Dataset inventory") }}{{ end }}
       {{ with site.GetPage "/coverage" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "Analysis coverage") }}{{ end }}
-      {{ with site.GetPage "/synapse_folders" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "All Synapse folders") }}{{ end }}
+      {{ with site.GetPage "/synapse_folders" }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" "All AD Knowledge Portal folders") }}{{ end }}
       {{- /* The header links are hidden on phones; these keep them reachable there */}}
       <li><a class="nav-item nav-item--phone" href="{{ site.Home.RelPermalink }}" aria-current="true"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">Resources</span><span class="nav-item__hint">this site</span></a></li>
       <li><a class="nav-item nav-item--phone" href="{{ site.Params.protocolURL }}/"><span class="sq sq--none" aria-hidden="true"></span><span class="nav-item__label">Protocol</span><span class="nav-item__hint">other site</span></a></li>
@@ -83,16 +83,38 @@
   </div>
 
   <div class="nav-group">
-    <div class="nav-group__title">Reference</div>
+    <div class="nav-group__title">Reference data</div>
     <ul>
       {{- range slice
-        (slice "/xqtl-data/reference_data" "Reference data")
+        (slice "/xqtl-data/reference_data/ld_reference" "In-sample LD reference")
+        (slice "/xqtl-data/reference_data/ld_sketch" "LD sketch")
+        (slice "/xqtl-data/reference_data/ldsc_reference" "LDSC and annotations") }}
+        {{- $label := index . 1 -}}
+        {{- with site.GetPage (index . 0) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label) }}{{ end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">Models and scores</div>
+    <ul>
+      {{- range slice
+        (slice "/fgmb_weights_database" "FGMB atlas")
+        (slice "/sceems_scores" "scEEMS scores") }}
+        {{- $label := index . 1 -}}
+        {{- with site.GetPage (index . 0) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label) }}{{ end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group__title">Documentation</div>
+    <ul>
+      {{- range slice
         (slice "/xqtl_resource_description" "Resource description")
         (slice "/xqtl_resource_format" "File formats")
-        (slice "/fgmb_weights_database" "FGMB atlas")
-        (slice "/sceems_scores" "scEEMS scores")
         (slice "/companion_papers" "Companion papers")
-        (slice "/xqtl-data/qtl/FunGen_xQTL_protocol_data" "Protocol toy data") }}
+        (slice "/about" "About") }}
         {{- $label := index . 1 -}}
         {{- with site.GetPage (index . 0) }}{{ partial "site/nav-link.html" (dict "cur" $cur "page" . "label" $label) }}{{ end }}
       {{- end }}

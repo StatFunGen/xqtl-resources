@@ -10,9 +10,9 @@ This is the revised release. Its predictions come from the Weighted (Full) model
 
 ## Where to get the data
 
-All files are in the AD Knowledge Portal folder **xQTL_SCEEM_scores** ([syn77875113](https://www.synapse.org/Synapse:syn77875113)). Access is controlled: you need a Synapse account and approved data access on the AD Knowledge Portal. See [How to get the data](how_to_get_data).
+All files are in the AD Knowledge Portal folder **xQTL_SCEEM_scores** ([syn77875113](https://www.synapse.org/Synapse:syn77875113)). Access is controlled: you need an AD Knowledge Portal account and approved data access. See [How to get the data](how_to_get_data).
 
-| Folder | What it holds | Synapse ID |
+| Folder | What it holds | AD Knowledge Portal ID |
 |--------|---------------|------------|
 | Predictions | Predicted eQTL probabilities for variant-gene pairs, per cell type and chromosome (tabix-indexed TSV) | [syn77875605](https://www.synapse.org/Synapse:syn77875605) |
 | Fine-mapping | SuSiE credible sets per cell type under five priors: uniform, EMS, scEEMS Weighted (Full), scEEMS Unweighted (Full) and scEEMS Weighted (Restricted) | [syn77875116](https://www.synapse.org/Synapse:syn77875116) |

@@ -21,7 +21,7 @@ MetaBrain is a large-scale meta-analysis of brain expression data across multipl
 - **Cohorts**: Multiple cohorts (see [MetaBrain.nl](https://www.metabrain.nl/))
 - **Brain regions**: Cerebellum, Cortex, Basal ganglia, Spinal cord, Hippocampus
 - **Data type**: Bulk RNA-seq
-- **Samples**: ~2,000+ samples per region (region-specific)
+- **Samples**: differ by region; see de Klein et al. 2023, *Nature Genetics* 55, 377–388
 
 ## Omics Data
 
@@ -34,7 +34,7 @@ QTL analysis for this dataset is documented in [../../qtl/eQTL/MetaBrain_brain_e
 
 Flagship paper analyses:
 - Fine-mapping (SuSiE-RSS): [syn69670592](https://www.synapse.org/Synapse:syn69670592)
-- TWAS weight models: not currently available on Synapse for this dataset
+- TWAS weight models: not currently available on the AD Knowledge Portal for this dataset
 - Quantile TWAS (qTWAS) models: not available yet
 - Multi-context colocalization (ColocBoost): [syn69670597](https://www.synapse.org/Synapse:syn69670597)
 - AD GWAS–xQTL colocalization results: [syn69865816](https://www.synapse.org/Synapse:syn69865816)

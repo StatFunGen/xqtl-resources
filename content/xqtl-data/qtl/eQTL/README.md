@@ -72,9 +72,9 @@ The **scEEMs** model predicts cell-type-specific eQTL effects using a CatBoost b
 
 ## Data Access
 
-All fine-mapping models and TWAS weights are hosted on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/). Access requires a Synapse account and acceptance of the appropriate data use agreement.
+All fine-mapping models and TWAS weights are hosted on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/). Access requires an AD Knowledge Portal account and acceptance of the appropriate data use agreement.
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | Fine-mapping models (eQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |

@@ -52,7 +52,7 @@ Brain multi-region RNA-seq data was proccessed with the xQTL-pipeline, for analy
 
 ### Results
 
-Output files: see the Synapse IDs listed on this page.
+Output files: see the AD Knowledge Portal IDs listed on this page.
 
 
 ## sQTL analysis performed by Gao Wang's Lab and Xiaoling Zhang's lab
@@ -73,7 +73,7 @@ In this analysis we performed two methods: leafcutter and psichomics.
 
 #### leafcutter
 
-Output files: see the Synapse IDs listed on this page.
+Output files: see the AD Knowledge Portal IDs listed on this page.
 
 
 #### psichomics

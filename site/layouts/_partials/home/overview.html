@@ -1,0 +1,42 @@
+{{- /* Home browse figure: cohorts -> QTL results by type -> AD GWAS and loci, as a flow, after Figure 1 of the
+  FunGen-xQTL flagship paper. It is also the browse section: every item opens the matching catalog view. */ -}}
+{{- $x := hugo.Data.xqtl -}}
+{{- $rows := partialCached "ds/rows.html" . "rows" -}}
+{{- $qtl := where $rows "kind" "qtl" -}}
+{{- $cat := "" }}{{ with site.GetPage "/xqtl-data" }}{{ $cat = .RelPermalink }}{{ end -}}
+<section class="ovf" aria-labelledby="ovf-title">
+  <h2 id="ovf-title" class="h2">Browse the catalog</h2>
+  <div class="ovf__grid">
+    <div class="ovf__col">
+      <p class="ovf__step"><span>1</span>Cohorts</p>
+      <ul class="chips">
+      {{- range $x.cohorts }}
+        {{- $n := len (where $rows "cohort" .name) }}
+        <li><a class="chip" href="{{ $cat }}?cohort={{ .name }}" title="{{ .desc }}">{{ .name }} <span class="chip__n">{{ $n }}</span></a></li>
+      {{- end }}
+      </ul>
+    </div>
+    <div class="ovf__arrow" aria-hidden="true"></div>
+    <div class="ovf__col">
+      <p class="ovf__step"><span>2</span>QTL results, by molecular type</p>
+      <ul class="ovf__icons">
+      {{- range $x.modalities }}
+        {{- $n := len (where $qtl "family" .family) }}
+        <li><a href="{{ $cat }}?kind=qtl&amp;family={{ .family }}" title="{{ .what }}">{{ partial "ui/qtl-glyph.html" .id }}<span>{{ .id }} <span class="chip__n">{{ $n }}</span></span></a></li>
+      {{- end }}
+      </ul>
+    </div>
+    <div class="ovf__arrow" aria-hidden="true"></div>
+    <div class="ovf__col">
+      <p class="ovf__step"><span>3</span>Integrated with AD GWAS</p>
+      <ul class="chips">
+      {{- range $x.gwas }}
+        {{- $g := . -}}
+        {{- with site.GetPage (printf "/xqtl-data/gwas/%s" .page) }}<li><a class="chip" href="{{ .RelPermalink }}" title="{{ $g.desc }}">{{ $g.name }}</a></li>{{ end }}
+      {{- end }}
+      </ul>
+      <a class="ovf__out" href="{{ site.Params.explorerURL }}">{{ $x.home.loci }} AD loci with xQTL evidence <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <p class="note">Counts are catalog pages. Cohort counts include QTL results and the omics data behind them; type counts are QTL result pages.{{ with site.GetPage "/xqtl-data/gwas/AD_GWAS" }} The study uses twelve AD GWAS datasets from the four studies; the <a href="{{ .RelPermalink }}">AD GWAS overview</a> lists all twelve.{{ end }} Layout after Figure 1 of the FunGen-xQTL flagship paper.</p>
+</section>

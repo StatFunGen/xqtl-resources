@@ -33,7 +33,7 @@ Bulk haQTL–AD GWAS pairwise colocalization uses the epigenetic fine-mapping ap
 
 ## Data Access
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | Fine-mapping models (haQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | Colocalization models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |

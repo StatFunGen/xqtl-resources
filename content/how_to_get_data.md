@@ -1,6 +1,6 @@
 # How to get the data
 
-The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gives a Synapse ID or public URL, and its access label states what is needed before download.
+The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gives a AD Knowledge Portal ID or public URL, and its access label states what is needed before download.
 
 {{< access-defs >}}
 
@@ -9,10 +9,10 @@ The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gi
 Omics data, QTL results, xQTL models and reference files are on the AD Knowledge Portal. Most cohort data are controlled.
 
 {{% steps %}}
-1. **Create a Synapse account.** Register at [synapse.org](https://www.synapse.org/) and verify your profile.
-2. **Become a certified user.** Pass the short Synapse certification quiz on data governance.
+1. **Create an AD Knowledge Portal account.** Register at [synapse.org](https://www.synapse.org/) and verify your profile.
+2. **Become a certified user.** Pass the short AD Knowledge Portal certification quiz on data governance.
 3. **Request access.** For controlled data, request data access on the [AD Knowledge Portal](https://adknowledgeportal.synapse.org/).
-4. **Download.** Use the web interface, the Synapse command-line client, or the Python or R client with the Synapse ID from the dataset page.
+4. **Download.** Use the web interface, the Synapse command-line client, or the Python or R client with the AD Knowledge Portal ID from the dataset page.
 {{% /steps %}}
 
 ```python

@@ -1,17 +1,19 @@
 ---
 type: reference
-short_title: LD reference panel
+short_title: In-sample LD reference
 cohort: ADSP
 sample_size: 16571
 access: controlled
 status: staged
 release:
-synapse_ids: [syn53171227, syn69670651, syn69670652]
+synapse_ids: [syn53171227, syn69670651, syn69670652, syn75082259]
 lead_analysts: [Oluwatosin Olayinka]
 last_verified:
 ---
 
-# Non-Hispanic White Linkage Disequilibrium Reference Panel
+# ADSP In-Sample LD Reference Panel
+FunGen-xQTL provides two LD references built from the same ADSP whole genomes. This page is the in-sample panel: LD computed directly from the individual genotypes. The other is the [LD sketch](ld_sketch), a compressed panel that can be shared without individual genotype rows.
+
 LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD). Correlation matrices were calculated between SNPs within 1361 LD blocks which were obtained from [this Github page](https://github.com/jmacdon/LDblocks_GRCh38/) (generated from 1000 Genomes EUR samples).
 
 ## Contact
@@ -36,7 +38,7 @@ colnames(ld) = var_names
 ```
 
 ## Data Availability
-The generated files can be found on [Synapse](https://www.synapse.org/#!Synapse:syn53171227).
+The generated files are on the [AD Knowledge Portal](https://www.synapse.org/#!Synapse:syn53171227).
 
 ## Analysis Notebook Link
 1. Generating LD Reference Panel: https://github.com/StatFunGen/xqtl-protocol/blob/main/code/SoS/graveyard/ld_reference_generation.ipynb
@@ -49,7 +51,8 @@ The FunGen-xQTL flagship paper used a large LD reference panel derived from the 
 - **Variant call**: WGS, high-quality SNPs and indels
 - **Use**: LD reference for SuSiE-RSS fine-mapping of xQTL and AD GWAS loci
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | ADSP WGS LD reference (genotype data) | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP WGS LD reference (LD matrices) | [syn69670652](https://www.synapse.org/Synapse:syn69670652) |
+| Pre-computed in-sample LD matrices, 1,361 LD blocks | [syn75082259](https://www.synapse.org/Synapse:syn75082259) |

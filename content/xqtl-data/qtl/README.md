@@ -13,7 +13,6 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 
 ## All Datasets
 
-* [FunGen-xQTL protocol data](FunGen_xQTL_protocol_data)
 * [Knight ADRC brain gene expression QTL](eQTL/Knight_ADRC_brain_expression_qtl)
 * [Knight ADRC brain metabolomics QTL](metQTL/Knight_ADRC_brain_metabolomics_qtl)
 * [Knight ADRC brain methylation QTL](mQTL/Knight_ADRC_brain_methylation_qtl)

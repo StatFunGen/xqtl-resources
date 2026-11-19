@@ -28,7 +28,7 @@ FunGen-xQTL Analysis Team
 - Study name: MetaBrain brain expression eQTL
 - Study Description: Large-scale brain eQTL meta-analysis across five brain regions used as a validation and replication resource. All five MetaBrain contexts were used to replicate xQTL signals identified in the ROSMAP, MSBB, and MiGA cohorts.
 - Brain regions: Cerebellum, Cortex, Basal ganglia, Spinal cord, Hippocampus
-- Reference: Schipper et al. 2021, *Nature Neuroscience*. doi:10.1038/s41593-021-00976-7
+- Reference: de Klein et al. 2023, *Nature Genetics* 55, 377–388
 
 ## Analysis Details
 

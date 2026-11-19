@@ -39,7 +39,7 @@ Bulk mQTL–AD GWAS pairwise colocalization uses a [novel fine-mapping approach 
 
 ## Data Access
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | Fine-mapping models (mQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | Colocalization models | [syn69670597](https://www.synapse.org/Synapse:syn69670597) |

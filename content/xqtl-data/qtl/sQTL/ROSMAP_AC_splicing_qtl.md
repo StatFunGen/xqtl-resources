@@ -77,7 +77,7 @@ In this analysis we performed two methods: leafcutter2 and psichomics.
 
 #### leafcutter2
 
-Output files: see the Synapse IDs listed on this page.
+Output files: see the AD Knowledge Portal IDs listed on this page.
 
 
 #### psichomics

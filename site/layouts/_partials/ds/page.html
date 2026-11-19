@@ -25,7 +25,7 @@
 
 {{- $key := strings.TrimSuffix ".md" (replace $p.File.Path "\\" "/") -}}
 {{- $hits := index (hugo.Data.staging.bypage | default dict) $key | default slice -}}
-{{- /* This dataset's own Synapse folders (not the shared parent): folder matches under the model and raw-data areas */ -}}
+{{- /* This dataset's own AD Knowledge Portal folders (not the shared parent): folder matches under the model and raw-data areas */ -}}
 {{- $own := slice -}}
 {{- $what := dict "finemapping_models" "Fine-mapping: cis-QTL export and SuSiE models" "colocalization_models" "Multi-context colocalization (ColocBoost)" "TWAS_models" "TWAS weights" "AD_xQTL_colocalization_models" "AD GWAS and xQTL colocalization" "AD_finemapping" "AD GWAS fine-mapping" -}}
 {{- range $hits }}{{ if and .d .d.id (not .s) (in (slice "xQTL_GWAS_models" "xQTL_data") (index (split .at "/") 0)) }}
@@ -70,7 +70,7 @@
       {{- $mail := 0 }}
       <div class="meta__row"><dt>Lead analysts</dt><dd><span>
         {{- range $j, $a := . }}{{ if $j }}, {{ end }}{{ with index (where (hugo.Data.xqtl.analysts | default slice) "name" $a) 0 }}<a href="mailto:{{ .email }}">{{ $a }}</a>{{ $mail = add $mail 1 }}{{ else }}{{ $a }}{{ end }}{{ end -}}
-        </span><span class="meta__sub">{{ if $mail }}Select a name to email them{{ else }}Contact by name{{ end }}</span></dd></div>
+        </span>{{ if $mail }}<span class="meta__sub">Select a name to email them</span>{{ end }}</dd></div>
       {{- end }}
       {{- with $counter }}
       <div class="meta__row"><dt>{{ cond (eq $i.kind "qtl") "Source data" "QTL results" }}</dt><dd class="meta__links">
@@ -95,8 +95,8 @@
     {{- if or $sid (eq $i.kind "qtl") }}
     <div class="actions">
       {{- with $sid }}
-      <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open {{ . }} in Synapse ↗</a>
-      <button type="button" class="btn" data-copy="{{ . }}" aria-label="Copy Synapse ID {{ . }}">Copy ID</button>
+      <a class="btn btn--primary" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">Open {{ . }} on the AD Knowledge Portal ↗</a>
+      <button type="button" class="btn" data-copy="{{ . }}" aria-label="Copy AD Knowledge Portal ID {{ . }}">Copy ID</button>
       {{- end }}
       {{- if eq $i.kind "qtl" }}
       <a class="btn" href="{{ site.Params.atlasURL }}" rel="noopener">Query associations in the xQTL Atlas ↗</a>
@@ -111,12 +111,12 @@
       {{- $acc := $i.access }}{{ if and (not $acc) $i.synapse }}{{ $acc = "controlled" }}{{ end }}
       {{- if eq $acc "open" }}Open access. Download from the links below without an application.
       {{- else if eq $acc "requested" }}Shared on request from the data owner before general release.
-      {{- else if eq $acc "controlled" }}Controlled access. Request data access{{ with $i.cohort }}{{ if ne . "AD GWAS" }} for {{ . }}{{ end }}{{ end }} on the AD Knowledge Portal; you need a Synapse account.
+      {{- else if eq $acc "controlled" }}Controlled access. Request data access{{ with $i.cohort }}{{ if ne . "AD GWAS" }} for {{ . }}{{ end }}{{ end }} on the AD Knowledge Portal; you need a free account there.
       {{- else }}Access terms for this page are not set yet.{{ end }}
       {{ with $howto }}See <a href="{{ .RelPermalink }}">How to get the data</a>.{{ end }}
     </p>
     {{- if and (eq $i.kind "qtl") (or $own $i.ng00184) }}
-    {{- /* QTL pages: one row per kind of result, with the open NIAGADS file and the controlled Synapse folder side by side */ -}}
+    {{- /* QTL pages: one row per kind of result, with the open NIAGADS file and the controlled AD Knowledge Portal folder side by side */ -}}
     {{- $nt := $i.ngType | default $i.label -}}
     {{- $rows := slice
       (dict "k" "sumstats" "t" "Association summary statistics" "d" "Every tested variant and molecular trait pair, or only the FDR or HMT significant ones" "ng" (slice (printf "%s.all.tar" $nt) (printf "%s.bh_significant.tar" $nt) (printf "%s.hmt_significant.tar" $nt)))
@@ -126,35 +126,35 @@
     <div class="table-card">
       <table class="dtable gettable">
         <caption class="sr-only">Where to get each kind of result for this dataset</caption>
-        <thead><tr><th scope="col">What you need</th><th scope="col">Open, no application<br><span class="muted">NIAGADS {{ $x.ng00184.id }}</span></th><th scope="col">Controlled access<br><span class="muted">AD Knowledge Portal (Synapse)</span></th></tr></thead>
+        <thead><tr><th scope="col">What you need</th><th scope="col">Open, no application<br><span class="muted">NIAGADS {{ $x.ng00184.id }}</span></th><th scope="col">Controlled access<br><span class="muted">AD Knowledge Portal</span></th></tr></thead>
         <tbody>
           {{- range $r := $rows }}
           {{- $syn := where $own "cat" $r.k -}}
           {{- if or $syn (and $i.ng00184 $r.ng) }}
           <tr><th scope="row"><span class="strong">{{ $r.t }}</span><span class="meta__sub">{{ $r.d }}</span></th>
             <td data-label="Open: NIAGADS">{{ if and $i.ng00184 $r.ng }}<span class="gettable__files">{{ range $k, $f := $r.ng }}{{ if $k }} · {{ end }}<code>{{ replace (replace $f (printf "%s." $nt) "") ".tar" "" }}</code>{{ end }}</span><span class="meta__sub">Archives <code>ADSP_FunGen_xQTL.v1.{{ $nt }}.&lt;name&gt;.tar</code></span><a href="{{ $x.ng00184.url }}" rel="noopener">Download from NIAGADS ↗</a>{{ else }}<span class="subtle">Not in the open release</span>{{ end }}</td>
-            <td data-label="Controlled: Synapse">{{ with $syn }}{{ range . }}<span class="gettable__syn"><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a> <button type="button" class="linkbtn" data-copy="{{ .id }}" aria-label="Copy Synapse ID {{ .id }}">Copy</button><span class="meta__sub">{{ .what }} · folder {{ .name }}</span></span>{{ end }}{{ else }}<span class="subtle">{{ if and $i.ng00184 $r.ng }}Use the open release{{ else }}Not staged yet{{ end }}</span>{{ end }}</td></tr>
+            <td data-label="Controlled: AD Knowledge Portal">{{ with $syn }}{{ range . }}<span class="gettable__syn"><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a> <button type="button" class="linkbtn" data-copy="{{ .id }}" aria-label="Copy AD Knowledge Portal ID {{ .id }}">Copy</button><span class="meta__sub">{{ .what }} · folder {{ .name }}</span></span>{{ end }}{{ else }}<span class="subtle">{{ if and $i.ng00184 $r.ng }}Use the open release{{ else }}Not staged yet{{ end }}</span>{{ end }}</td></tr>
           {{- end }}
           {{- end }}
           {{- if $i.ng00184 }}
           <tr><th scope="row"><span class="strong">Look up a gene, variant or region</span><span class="meta__sub">No download; significant associations in the browser or as a TSV</span></th>
-            <td data-label="Open"><a href="{{ site.Params.atlasURL }}" rel="noopener">xQTL Atlas ↗</a></td><td data-label="Controlled: Synapse"><span class="subtle">Not needed</span></td></tr>
+            <td data-label="Open"><a href="{{ site.Params.atlasURL }}" rel="noopener">xQTL Atlas ↗</a></td><td data-label="Controlled: AD Knowledge Portal"><span class="subtle">Not needed</span></td></tr>
           {{- end }}
         </tbody>
       </table>
     </div>
-    <p class="note">A Synapse ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
+    <p class="note">A AD Knowledge Portal ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
     {{- else if or $i.synapseIDs $i.ng00184 }}
     <div class="table-card">
       <table class="dtable">
         <thead><tr><th>Where</th><th>ID</th><th>Access</th><th>What you get</th></tr></thead>
         <tbody>
           {{- range $own }}
-          <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
+          <tr><td class="strong">AD Knowledge Portal</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ .id }}" rel="noopener">{{ .id }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
             <td>{{ .what }} <span class="muted">· {{ .name }}</span></td></tr>
           {{- end }}
           {{- with $i.synapse }}{{ if not $own }}
-          <tr><td class="strong">Synapse</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
+          <tr><td class="strong">AD Knowledge Portal</td><td><a class="mono" href="https://www.synapse.org/Synapse:{{ . }}" rel="noopener">{{ . }}</a></td><td>{{ partial "ui/access.html" ($i.access | default "controlled") }}</td>
             <td>{{ if eq $i.kind "qtl" }}{{ if eq . "syn69670632" }}Raw QTL data folder, with the per-dataset results described below{{ else }}Results described below{{ end }}{{ else }}Files described below{{ end }}</td></tr>
           {{- end }}{{ end }}
           {{- if $i.ng00184 }}
@@ -172,7 +172,7 @@
     {{- with $hits }}
     {{- $areas := dict "variant_gene_summary" "Variant and gene summaries" "xQTL_GWAS_models" "xQTL and AD GWAS models" "xQTL_data" "Raw QTL data" "reference_files" "Reference files" "xQTL_SCEEM_scores" "scEEMS scores" "Metadata" "Metadata" "manuscript" "Manuscript" -}}
     <div class="dsfiles">
-      <h3 class="dsfiles__title">Every Synapse folder that mentions this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
+      <h3 class="dsfiles__title">Every AD Knowledge Portal folder that mentions this dataset <span class="muted">{{ len $hits }} location{{ if ne (len $hits) 1 }}s{{ end }}</span></h3>
       {{- range $area := slice "variant_gene_summary" "xQTL_GWAS_models" "xQTL_data" "xQTL_SCEEM_scores" "reference_files" "Metadata" "manuscript" }}
         {{- $in := slice }}{{ range $hits }}{{ if eq (index (split .at "/") 0) $area }}{{ $in = $in | append . }}{{ end }}{{ end -}}
         {{- with $in }}
@@ -197,11 +197,11 @@
         </details>
         {{- end }}
       {{- end }}
-      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue (bulk and single-nucleus data kept apart), taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All Synapse folders</a> lists everything.{{ end }}</p>
+      <p class="note">Folders and files whose names carry this dataset's cohort, data type and tissue (bulk and single-nucleus data kept apart), taken from the staging folder list. {{ with site.GetPage "/synapse_folders" }}<a href="{{ .RelPermalink }}">All AD Knowledge Portal folders</a> lists everything.{{ end }}</p>
     </div>
     {{- end }}
     {{- if and (eq $i.kind "omics") $counter }}
-    <p class="note">QTL results computed from this data, and their files on Synapse, are listed on {{ range $n, $c := $counter }}{{ if $n }}, {{ end }}<a href="{{ $c.page.RelPermalink }}">{{ $c.page.LinkTitle }} {{ $c.info.label }}</a>{{ end }}.</p>
+    <p class="note">QTL results computed from this data, and their files on the AD Knowledge Portal, are listed on {{ range $n, $c := $counter }}{{ if $n }}, {{ end }}<a href="{{ $c.page.RelPermalink }}">{{ $c.page.LinkTitle }} {{ $c.info.label }}</a>{{ end }}.</p>
     {{- end }}
   </section>
 
