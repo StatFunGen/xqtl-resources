@@ -1,5 +1,5 @@
-{{- /* One staged Synapse folder and everything under it. Input: (dict "n" node "d" depth).
-  Node fields come from scripts/staging_index.py: n name, id Synapse IDs, f files [name, id...],
+{{- /* One staged AD Knowledge Portal folder and everything under it. Input: (dict "n" node "d" depth).
+  Node fields come from scripts/staging_index.py: n name, id AD Knowledge Portal IDs, f files [name, id...],
   p pages that cite this folder, v pages that cite a parent folder, c child folders. */ -}}
 {{- $n := .n -}}{{- $d := .d -}}
 {{- $kids := $n.c | default slice -}}{{- $files := $n.f | default slice -}}

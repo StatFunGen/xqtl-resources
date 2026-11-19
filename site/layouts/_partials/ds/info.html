@@ -41,7 +41,7 @@
 {{- else if eq $kind "gwas" -}}
   {{- $label = cond (findRE `(?i)protocol` $p.Title) "Protocol" "GWAS" -}}
 {{- else if eq $kind "reference" -}}
-  {{- $label = "LD panel" -}}
+  {{- $label = cond (findRE `(?i)ldsc` $p.File.BaseFileName) "LDSC reference" "LD panel" -}}
 {{- else if eq $kind "study" -}}
   {{- $label = "Study" -}}
 {{- end -}}
@@ -52,8 +52,8 @@
 {{- if and (not $cohort) (in (slice "gwas") $kind) }}{{ $cohort = "AD GWAS" }}{{ end -}}
 {{- $analysts := $d.lead_analysts | default slice -}}
 {{- $ng := false -}}
-{{- /* NIAGADS availability is separate from the Synapse release status: a page sets niagads: NG00184 when its files are in that
-  open release, whatever its Synapse status. Released pages of the listed modalities and cohorts also get the note. */ -}}
+{{- /* NIAGADS availability is separate from the AD Knowledge Portal release status: a page sets niagads: NG00184 when its files are in that
+  open release, whatever its AD Knowledge Portal status. Released pages of the listed modalities and cohorts also get the note. */ -}}
 {{- if and (eq $kind "qtl") (or $d.niagads (and (eq $d.status "released") (in $x.ng00184.modalities $label) (in $x.ng00184.cohorts $cohort))) }}{{ $ng = true }}{{ end -}}
 
 {{- return dict
