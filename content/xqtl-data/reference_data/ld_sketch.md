@@ -7,7 +7,7 @@ access: controlled
 status: staged
 release:
 synapse_ids: [syn75082260]
-lead_analysts: []
+lead_analysts: [Jenny Anak Empawi]
 last_verified:
 ---
 
