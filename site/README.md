@@ -11,7 +11,7 @@ The files here override the hugo-book theme. `scripts/hugo_generator.py` copies 
 | `layouts/section.html` | Folder pages (eQTL, Expression ...): a table of the datasets in the folder |
 | `layouts/inventory.html`, `layouts/coverage.html` | Dataset inventory and analysis coverage grid |
 | `layouts/_partials/ds/info.html` | Works out a page's kind, modality label, colour, status and access in one place |
-| `data/xqtl.yaml` | Shared vocabulary: modality colours and labels, cohorts, status and access wording, Synapse folders, home page participant count |
+| `data/xqtl.yaml` | Shared vocabulary: modality colours and labels, cohorts, status and access wording, AD Knowledge Portal folders, home page participant count |
 | `data/next_phase.yaml` | Datasets being curated that do not have a page yet |
 | `assets/xqtl/site.css` | All styles. Colour tokens at the top (navy `#19354A`, teal `#237C78`), light and dark |
 
