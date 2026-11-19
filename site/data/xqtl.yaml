@@ -75,7 +75,7 @@ status:
 # Access labels
 access:
   open: {label: Open, desc: "Download without an application from a public URL, an open AD Knowledge Portal folder or NIAGADS DSS."}
-  controlled: {label: Controlled, desc: "Needs a Synapse account and data access requested on the AD Knowledge Portal."}
+  controlled: {label: Controlled, desc: "Needs an AD Knowledge Portal account and approved data access."}
   requested: {label: Requested, desc: "Shared on request from the data owner before general release."}
   pending: {label: Pending, desc: "Access terms are still being set."}
 
