@@ -907,11 +907,10 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 
 /* Consortium and lab logos */
 .partners { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 14px 0 2px; }
-.partners__logo { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 14px; background: #fff; border: 1px solid var(--ln); border-radius: var(--r2); }
+.partners__logo { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0; background: transparent; border: 0; }
 .partners__logo img { display: block; width: auto; }
 .partners__t { font-size: 13px; color: var(--ink2); }
 .sitefoot__partners { max-width: 1040px; margin: 0 auto; padding: 22px 32px 0; box-sizing: border-box; }
-.sitefoot__partners .partners__logo { border-color: transparent; }
 .sitefoot__partners .partners__t { color: var(--band-ink2); }
 @media (max-width: 900px) { .sitefoot__partners { padding: 18px 16px 0; } }
 
