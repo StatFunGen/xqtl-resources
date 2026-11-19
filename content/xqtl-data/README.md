@@ -2,11 +2,14 @@
 
 All datasets are available on the AD Knowledge Portal. Key folders: [variant & gene summary results](https://www.synapse.org/Synapse:syn69865684) ([syn69865684](https://www.synapse.org/Synapse:syn69865684)), [xQTL models](https://www.synapse.org/Synapse:syn69670588) ([syn69670588](https://www.synapse.org/Synapse:syn69670588)), [raw QTL data](https://www.synapse.org/Synapse:syn69670632) ([syn69670632](https://www.synapse.org/Synapse:syn69670632)), [reference files](https://www.synapse.org/Synapse:syn69670634) ([syn69670634](https://www.synapse.org/Synapse:syn69670634)).
 
-|     |     |     |     |     |     |     |     |     |     |     |
-|:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |
-| [A](#a) | [E](#e) | [F](#f) | [G](#g) | [K](#k) | [M](#m) | [N](#n) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
+|     |     |     |     |     |     |     |     |     |     |
+|:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |:-:  |
+| [A](#a) | [E](#e) | [G](#g) | [K](#k) | [L](#l) | [M](#m) | [R](#r) | [S](#s) | [T](#t) | [W](#w) |
 
 ## A
+* [ADSP In-Sample LD Reference Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_reference.md). LD matrices computed directly from whole genome sequencing data from 16,571 European-ancestry (non-Hispanic white) individuals from the Genome Center for Alzheimer's Disease (GCAD).
+	* Lead analysts: **Oluwatosin Olayinka.**
+* [ADSP LD Sketch Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_sketch.md). A compressed LD reference built from the same 16,571 ADSP whole genomes, shareable without individual genotype rows.
 * [Alzheimer's disease GWAS: Bellenguez et al. 2022](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Bellenguez_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Bellenguez et al 2022 Nature Genetics.
 	* Lead analysts: **Oluwatosin Olayinka, Hao Sun and Rui Dong.**
 * [Alzheimer's disease GWAS: Jansen et al. 2019](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/gwas/Jansen_AD.md). The SNP-level association testing summary statistics for Alzheimer's disease from Jansen et al 2019 Nature Genetics.
@@ -22,10 +25,6 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 	* Lead analysts: **Zining Qi.**
 	* Lead analysts: **Zining Qi.**
 	* Lead analysts: **Zining Qi.**
-
-## F
-* [FunGen-xQTL protocol data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/FunGen_xQTL_protocol_data.md). A toy data-set consisting of 49 de-identified samples from ROSMAP project, used to illustrates the computational protocols we developed for the detection and analysis of molecular QTLs (xQTLs).
-	* Lead analysts: **Hao Sun.**
 
 ## G
 * [Genotype imputation protocol](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/genotype_imputation_protocol.md). Method page, not a dataset: how genotype-array data for some cohorts were quality-controlled and imputed with the TOPMed imputation server.
@@ -61,6 +60,9 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 * [Knight-ADRC study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/KnightADRC.md). The Memory and Aging Project at the Charles F.
 	* Lead analysts: **Xuanhe.**
 
+## L
+* [LDSC Reference Data and Functional Annotations](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ldsc_reference.md). LD score regression reference files, munged AD GWAS and functional annotations, computed from the ADSP LD reference.
+
 ## M
 	* Lead analysts: **Makaela Mews.**
 	* Lead analysts: **Makaela Mews (analyst); Dr.**
@@ -94,10 +96,6 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 	* Lead analysts: **Minghui Wang.**
 * [MSBB WGS data](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/genotype/MSBB_WGS.md). MSBB whole-genome sequence data.
 	* Lead analysts: **Minghui Wang and Julia TCW.**
-
-## N
-* [Non-Hispanic White Linkage Disequilibrium Reference Panel](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/reference_data/ld_reference.md). LD matrices calculated from whole genome sequencing data from 16571 non-Hispanic white individuals obtained from the Genome Center for Alzheimer's Disease (GCAD).
-	* Lead analysts: **Oluwatosin Olayinka.**
 
 ## R
 * [ROSMAP AC alternative splicing](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/splicing/ROSMAP_AC_splicing.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) AC alternative splicing.
