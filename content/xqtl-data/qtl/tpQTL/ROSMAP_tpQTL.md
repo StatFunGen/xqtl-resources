@@ -41,4 +41,4 @@ Torino was run twice on 12,297 protein-coding genes, once with three patterns pe
 
 ## Analyses
 
-The Synapse folders hold two Torino runs, K3 and K5. Both have fine-mapping, cis export and TWAS weights; the ColocBoost model folder has K5 only. Colocalization with AD GWAS (Bellenguez 2022) is in the AD GWAS and xQTL colocalization folder listed above for both runs: K5 as colocalization tables and K3 as a ColocBoost output. The AD Loci Explorer counts tpQTL colocalization as xQTL support for AD loci.
+The AD Knowledge Portal folders hold two Torino runs, K3 and K5. Both have fine-mapping, cis export and TWAS weights; the ColocBoost model folder has K5 only. Colocalization with AD GWAS (Bellenguez 2022) is in the AD GWAS and xQTL colocalization folder listed above for both runs: K5 as colocalization tables and K3 as a ColocBoost output. The AD Loci Explorer counts tpQTL colocalization as xQTL support for AD loci.
