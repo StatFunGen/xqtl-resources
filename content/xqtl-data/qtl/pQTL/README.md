@@ -46,7 +46,7 @@ Pre-trained pQTL-based TWAS models for protein-level AD association analyses:
 
 ## Data Access
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | Fine-mapping models (pQTL) | [syn69670592](https://www.synapse.org/Synapse:syn69670592) |
 | TWAS weight models (pQTL) | [syn69670600](https://www.synapse.org/Synapse:syn69670600) |
