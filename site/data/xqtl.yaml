@@ -13,27 +13,6 @@ home:
     cell types and assays.
   updated: "November 2026"
   loci: "226"
-  # Home page overview figure (layouts/_partials/home/overview.html), adapted from Figure 1 b, d, e of the
-  # flagship paper. 1,769 and 87.6% are in the paper text; 3.3M nuclei and the 15 regions are from Figure 1b.
-  figure:
-    source: "Adapted from Figure 1 of the FunGen-xQTL flagship paper (manuscript). Dataset counts are catalog pages."
-    facts:
-      - {n: "1,769", l: "participants with several data types"}
-      - {n: "3.3M", l: "single nuclei"}
-    regions_n: 15
-    regions: [DLPFC, posterior cingulate, anterior caudate, hippocampus, thalamus, basal ganglia, cerebellum, spinal cord, subventricular zone, middle frontal gyrus, superior temporal gyrus, "Brodmann areas 10, 22, 36 and 44"]
-    brain_cells: [astrocytes, excitatory neurons, inhibitory neurons, microglia, oligodendrocytes, oligodendrocyte precursors]
-    immune_cells: [monocytes, microglia (MiGA), macrophages (STARNET)]
-    gwas: "12 datasets from 4 studies"
-    loci_support: "198 (87.6%)"
-    reuse:
-      - {t: Fine-mapping credible sets, d: "Likely causal variants per signal (SuSiE, fSuSiE, mvSuSiE)", page: /coverage}
-      - {t: Colocalization with AD GWAS, d: "Shared signals between xQTL and AD (ColocBoost)", page: /xqtl_resource_description}
-      - {t: TWAS weights, d: "FGMB atlas models that predict molecular traits from genotype", page: /fgmb_weights_database}
-      - {t: Cell-type eQTL scores, d: "scEEMS predictions in six brain cell types", page: /sceems_scores}
-      - {t: LD references, d: "In-sample ADSP panel, LD sketch and LDSC files", page: /xqtl-data/reference_data}
-      - {t: AD Loci Explorer, d: "The evidence behind each gene at each AD locus", key: explorer}
-      - {t: Analysis protocol, d: "The pipelines that made these results", key: protocol}
   # Molecular modalities in the flagship paper. tpQTL is its own QTL type on this site
   # but comes from RNA-seq, so the paper counts it under expression and splicing data.
   modalities: "8"
