@@ -16,7 +16,7 @@ Reference files for LD score regression (LDSC) and stratified LDSC (sLDSC), comp
 
 ## Contents
 
-| Resource | What it holds | Synapse ID |
+| Resource | What it holds | AD Knowledge Portal ID |
 |----------|---------------|------------|
 | LDSC reference data | LD scores, sLDSC annotations and munged GWAS, computed from the [in-sample LD reference panel](ld_reference) | [syn69670653](https://www.synapse.org/Synapse:syn69670653) |
 | LDSC munged GWAS | AD GWAS summary statistics, pre-processed for LDSC | [syn69670656](https://www.synapse.org/Synapse:syn69670656) |

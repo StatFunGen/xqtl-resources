@@ -51,7 +51,7 @@ The FunGen-xQTL flagship paper used a large LD reference panel derived from the 
 - **Variant call**: WGS, high-quality SNPs and indels
 - **Use**: LD reference for SuSiE-RSS fine-mapping of xQTL and AD GWAS loci
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | ADSP WGS LD reference (genotype data) | [syn69670651](https://www.synapse.org/Synapse:syn69670651) |
 | ADSP WGS LD reference (LD matrices) | [syn69670652](https://www.synapse.org/Synapse:syn69670652) |

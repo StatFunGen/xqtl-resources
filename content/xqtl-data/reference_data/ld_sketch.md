@@ -25,7 +25,7 @@ PLINK 2 genotype files (`.pgen`, `.pvar`, `.psam`) with 10,000 pseudo-samples, i
 
 ## Data Availability
 
-| Resource | Synapse ID |
+| Resource | AD Knowledge Portal ID |
 |----------|------------|
 | ADSP LD sketch (PLINK 2) | [syn75082260](https://www.synapse.org/Synapse:syn75082260) |
 
