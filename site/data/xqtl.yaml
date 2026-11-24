@@ -9,8 +9,7 @@ home:
   datasets: "77"
   participants: "2,328"
   participants_note: >-
-    Counts are participants. One participant can contribute several tissues,
-    cell types and assays.
+    One participant can contribute several tissues, cell types and assays.
   updated: "November 2026"
   loci: "226"
   # Molecular modalities: counted from the modalities list below (nine, with tpQTL as its own type).
