@@ -823,8 +823,8 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .sitefoot__brand { flex-direction: row !important; align-items: center; align-self: start; gap: 10px !important; font: 700 17px var(--sans); color: var(--band-ink); }
 .sitefoot__brand .brand__x, .sitefoot .fx-disc { color: #8FB0D0; fill: #8FB0D0; }
 @media (max-width: 900px) {
-  .hero { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 18px; padding: 32px 16px 28px; }
-  .hero .fx-mark { width: 104px; height: 104px; }
+  .hero { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 14px; padding: 20px 16px 22px; }
+  .hero .fx-mark { width: 72px; height: 72px; }
   .hero__lead { font-size: 16px; }
   .hero__title { font-size: 34px; }
   .hero__btns { justify-content: center; }
