@@ -777,7 +777,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 40px; align-items: center; max-width: 1040px; width: 100%; margin: 0 auto; padding: 56px 32px 44px; box-sizing: border-box; }
 .hero .fx-mark { width: 150px; height: 150px; }
 .hero__text { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.hero__org { margin: 0; font: 600 14px var(--sans); color: var(--teal); }
+.hero__org { margin: 0; font: 600 14px var(--sans); color: var(--teal); text-wrap: balance; }
 .hero__title { margin: 0; font: 700 clamp(36px, 5vw, 48px)/1.08 var(--sans); letter-spacing: -.02em; color: var(--navy); }
 .hero__lead { margin: 4px 0 8px; font-size: 18px; line-height: 1.55; color: var(--ink2); max-width: 640px; text-wrap: pretty; }
 .hero__btns { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -840,6 +840,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
   .sitefoot__in { grid-template-columns: 1fr 1fr; padding: 28px 16px 36px; }
   .sitefoot__brand { grid-column: 1 / -1; }
 }
+@media (max-width: 900px) { .announce { padding: 9px 16px; font-size: 14px; font-weight: 500; } .announce__tag { display: inline; margin-left: 6px; padding: 0; background: none; font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; opacity: .8; } }
 @media print { .announce, .sitefoot, .hero__btns, .find { display: none !important; } }
 
 /* ---------- All Synapse folders ---------- */
@@ -1054,7 +1055,7 @@ html:has(#nav-toggle:checked) .nav-toggle:checked ~ .sidenav { top: var(--topbar
 .charts-top .vbar__grid, .charts-top .vbar__area { height: 190px; }
 .charts-top .vbar__stack { max-width: 44px; }
 .charts-top .vbar__x { margin-top: 6px; font-size: 12.5px; }
-.charts-top .vbar__legend { display: flex; flex-direction: row; flex-wrap: wrap; gap: 2px 4px; }
+.charts-top .vbar__legend { display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; }
 .charts-top .vbar__mod { width: auto; min-height: 28px; padding: 2px 8px; gap: 6px; grid-template-columns: 10px auto auto; font-size: 12.5px; }
 .charts-top .vbar__mod i { width: 10px; height: 10px; }
 .charts-top .vbar__legend-total { display: none; }
