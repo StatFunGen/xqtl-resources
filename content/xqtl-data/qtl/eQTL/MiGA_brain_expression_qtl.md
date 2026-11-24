@@ -18,7 +18,7 @@ methods:
   TWAS: done
 ---
 
-# MiGA multi-brain region gene expression
+# MiGA microglia gene expression QTL
 
 MiGA is a genetic and transcriptomic resource of 255 primary human microglia samples, isolated ex vivo from four brain regions of 100 donors. Donors have neurodegenerative, neurological or neuropsychiatric disorders, or are unaffected controls.
 

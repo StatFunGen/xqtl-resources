@@ -1,7 +1,7 @@
 ---
 type: qtl
 modality: eQTL
-short_title: ROSMAP snuc-eQTL
+short_title: ROSMAP pseudo-bulk
 cohort: ROSMAP
 context: "DLPFC, 7 cell types"
 sample_size: 424
