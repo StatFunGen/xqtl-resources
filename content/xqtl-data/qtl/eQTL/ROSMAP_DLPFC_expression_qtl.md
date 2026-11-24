@@ -10,7 +10,7 @@ niagads: NG00184
 status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]
-lead_analysts: [Shrishtee Kandoi, Frank Grenn]
+lead_analysts: [Jenny Empawi]
 last_verified:
 methods:
   cis-QTL: done
@@ -25,11 +25,11 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-Shrishtee Kandoi; Frank Grenn
+Jenny Empawi
 
 - Contact Email : hs3163@cumc.columbia.edu; hs3393@cumc.columbia.edu; jt3386@cumc.columbia.edu
 - Contact Affiliation : Boston University; Columbia University
-- Contact Role : Shrishtee Kandoi and Hao Sun performed QTL analysis; Haochen Sun performed fine-mapping, and Jiajun Tao performed replication
+- Contact Role : Jenny Empawi and Hao Sun performed QTL analysis; Haochen Sun performed fine-mapping, and Jiajun Tao performed replication
 
 ## Study Overview
  
