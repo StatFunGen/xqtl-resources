@@ -1,6 +1,6 @@
 # How to get the data
 
-The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gives a AD Knowledge Portal ID or public URL, and its access label states what is needed before download.
+The data are hosted on the AD Knowledge Portal and NIAGADS. Each dataset page gives an AD Knowledge Portal ID or public URL, and its access label states what is needed before download.
 
 {{< access-defs >}}
 

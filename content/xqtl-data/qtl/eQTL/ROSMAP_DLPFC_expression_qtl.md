@@ -10,7 +10,7 @@ niagads: NG00184
 status: staged
 release:
 synapse_ids: [syn69670592, syn69670600, syn69670597, syn69865816, syn69670630]
-lead_analysts: [Shrishtee Kandoi, Frank Grenn]
+lead_analysts: [Jenny Empawi]
 last_verified:
 methods:
   cis-QTL: done
@@ -25,11 +25,11 @@ Please refer to [this document](../../study_info/ROSMAP.md) for an overview of t
 
 ## Contact
 
-Shrishtee Kandoi; Frank Grenn
+Jenny Empawi
 
-- Contact Email : ; hs3163@cumc.columbia.edu; hs3393@cumc.columbia.edu; jt3386@cumc.columbia.edu
+- Contact Email : jaempawi@bu.edu; hs3163@cumc.columbia.edu; hs3393@cumc.columbia.edu; jt3386@cumc.columbia.edu
 - Contact Affiliation : Boston University; Columbia University
-- Contact Role : Shrishtee Kandoi and Hao Sun performed QTL analysis; Haochen Sun performed fine-mapping, and Jiajun Tao performed replication
+- Contact Role : Jenny Empawi and Hao Sun performed QTL analysis; Haochen Sun performed fine-mapping, and Jiajun Tao performed replication
 
 ## Study Overview
  
@@ -126,19 +126,13 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 **output of genotype_qc.ipynb**
 
-### Path(s) to QTL results
-
-empirical_files:
-
-norminal_qced_files:
-
 ### Path(s) to cis-QTL association testing
 
 **output of TensorQTL.ipynb**
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) for this dataset are in the [ROSMAP_eQTL folder (syn70090830)](https://www.synapse.org/Synapse:syn70090830), inside the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592) that holds every dataset's models.
 
 ### Path(s) to TWAS models
 

@@ -64,7 +64,7 @@
       <div class="meta__row"><dt>Sample size</dt><dd>{{ with $i.n }}<span class="mono">{{ lang.FormatNumberCustom 0 . }}</span> samples{{ else }}{{ with $i.nnote }}{{ . }}, see Samples{{ else }}<span class="subtle">Not recorded on this page</span>{{ end }}{{ end }}</dd></div>
       {{- end }}
       {{- with $i.access }}
-      <div class="meta__row"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}<span class="meta__sub">{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}</span></dd></div>
+      <div class="meta__row"><dt>Access</dt><dd>{{ partial "ui/access.html" . }}<span class="meta__sub">{{ if and (eq . "controlled") $i.ng00184 }}Summary statistics open on NIAGADS; other files need a data use certificate{{ else }}{{ index (dict "open" "No application" "controlled" "Data use certificate" "requested" "Ask the data owner" "pending" "Terms being set") . }}{{ end }}</span></dd></div>
       {{- end }}
       {{- with $i.analysts }}
       {{- $mail := 0 }}
@@ -143,7 +143,7 @@
         </tbody>
       </table>
     </div>
-    <p class="note">A AD Knowledge Portal ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
+    <p class="note">An AD Knowledge Portal ID opens a folder; <code>synapse get -r</code> with that ID downloads everything in it. Open files are packaged by data type, so one NIAGADS archive holds every {{ $nt }} dataset in that release.</p>
     {{- else if or $i.synapseIDs $i.ng00184 }}
     <div class="table-card">
       <table class="dtable">

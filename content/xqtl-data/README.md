@@ -118,7 +118,7 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 * [ROSMAP DLPFC gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/ROSMAP_DLPFC_expression.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC gene expression.
 	* Lead analysts: **Xuanhe Chen.**
 * [ROSMAP DLPFC gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/ROSMAP_DLPFC_expression_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) DLPFC gene expression.
-	* Lead analysts: **Shrishtee Kandoi; Frank Grenn.**
+	* Lead analysts: **Jenny Empawi.**
 * [ROSMAP DLPFC H3K9ac](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/histone_ChIPSeq/ROSMAP_DLPFC_ChIPSeq_H3K9ac.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac data-set.
 	* Lead analysts: **Xuanhe Chen; Hao Sun; Hans Klein.**
 * [ROSMAP DLPFC H3K9ac QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/haQTL/ROSMAP_DLPFC_ChIPSeq_H3K9ac_qtl.md). Religious Orders Study (ROS) or the Rush Memory and Aging Project (MAP) h3k9ac QTL analysis using the FGC xQTL pipeline.
