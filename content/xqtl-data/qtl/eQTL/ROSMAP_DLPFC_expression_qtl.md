@@ -126,19 +126,13 @@ phenotype preprocessing and genotype preprocessing can be run in parallel but co
 
 **output of genotype_qc.ipynb**
 
-### Path(s) to QTL results
-
-empirical_files:
-
-norminal_qced_files:
-
 ### Path(s) to cis-QTL association testing
 
 **output of TensorQTL.ipynb**
 
 ### Path(s) to fine-mapping with SuSiE RSS model
 
-Fine-mapping model objects (SuSiE-RSS, `.rds`) are available in the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592).
+Fine-mapping model objects (SuSiE-RSS, `.rds`) for this dataset are in the [ROSMAP_eQTL folder (syn70090830)](https://www.synapse.org/Synapse:syn70090830), inside the [fine-mapping models folder (syn69670592)](https://www.synapse.org/Synapse:syn69670592) that holds every dataset's models.
 
 ### Path(s) to TWAS models
 
