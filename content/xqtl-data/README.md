@@ -75,7 +75,7 @@ All datasets are available on the AD Knowledge Portal. Key folders: [variant & g
 	* Lead analysts: **Travyse Edwards.**
 * [MiGA multi-brain region gene expression](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/omics/expression/MiGA_brain_expression.md). A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
 	* Lead analysts: **Travyse Edwards.**
-* [MiGA multi-brain region gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MiGA_brain_expression_qtl.md). A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
+* [MiGA microglia gene expression QTL](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/qtl/eQTL/MiGA_brain_expression_qtl.md). A genetic and transcriptomic resource comprised of 255 primary human microglia samples isolated ex vivo from four different brain regions of 100 human subjects with neurodegenerative, neurological, or neuropsychiatric disorders, as well as unaffected controls.
 	* Lead analysts: **Travyse Edwards.**
 * [MiGA study info](https://github.com/StatFunGen/xqtl-resources/tree/main/content/xqtl-data/study_info/MiGA.md). Microglia Genomic Atlas from the Netherlands Brain Bank (NBB) and the Neuropathology Brain Bank and Research CoRE at Mount Sinai Hospital.
 	* Lead analysts: **Travyse Edwards.**

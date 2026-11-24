@@ -1,6 +1,6 @@
 # Transcriptomic pattern QTL (tpQTL) Resources
 
-Transcriptomic pattern QTL (tpQTL) are variants associated with patterns of RNA-seq read coverage within a gene. Torino models coverage across each gene jointly to define the pattern traits. tpQTL come from the same RNA-seq data as eQTL and sQTL, so the FunGen-xQTL paper counts them under its eight molecular modalities.
+Transcriptomic pattern QTL (tpQTL) are variants associated with patterns of RNA-seq read coverage within a gene. Torino models coverage across each gene jointly to define the pattern traits. tpQTL come from the same RNA-seq data as eQTL and sQTL; this catalog lists them as their own modality.
 
 ## Available Datasets
 

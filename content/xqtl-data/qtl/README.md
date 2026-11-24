@@ -19,7 +19,7 @@ All QTL datasets are hosted on the AD Knowledge Portal under [xQTL_data](https:/
 * [Knight ADRC brain proteomics QTL](pQTL/Knight_ADRC_brain_proteomics_qtl)
 * [Knight ADRC brain splicing QTL](sQTL/Knight_ADRC_brain_splicing_qtl)
 * [MetaBrain multi-brain region gene expression QTL](eQTL/MetaBrain_brain_expression_qtl)
-* [MiGA multi-brain region gene expression QTL](eQTL/MiGA_brain_expression_qtl)
+* [MiGA microglia gene expression QTL](eQTL/MiGA_brain_expression_qtl)
 * [MSBB brain alternative splicing QTL](sQTL/MSBB_brain_splicing_qtl)
 * [MSBB brain gene expression QTL](eQTL/MSBB_brain_expression_qtl)
 * [MSBB brain methylation QTL](mQTL/MSBB_brain_methylation_qtl)
